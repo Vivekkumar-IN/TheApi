@@ -552,16 +552,15 @@ class TheApi:
 
         return links
 
-
     def is_nsfw(self, image_url):
         """
-    Determine if an image is NSFW based on advanced heuristics and image processing.
+        Determine if an image is NSFW based on advanced heuristics and image processing.
 
-    Args:
-        image_url (str): The URL of the image to analyze.
+        Args:
+            image_url (str): The URL of the image to analyze.
 
-    Returns:
-        bool: True if the image is determined to be NSFW, False otherwise.
+        Returns:
+            bool: True if the image is determined to be NSFW, False otherwise.
         """
         response = requests.get(image_url)
         image = Image.open(BytesIO(response.content)).convert("RGB")
@@ -579,13 +578,14 @@ class TheApi:
         total_pixels = hsv_image.shape[0] * hsv_image.shape[1]
         skin_ratio = skin_pixels / total_pixels
 
-    
-        contours, _ = cv2.findContours(skin_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        large_contours = [cnt for cnt in contours if cv2.contourArea(cnt) > 5000]  
-
+        contours, _ = cv2.findContours(
+            skin_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
+        )
+        large_contours = [cnt for cnt in contours if cv2.contourArea(cnt) > 5000]
 
         multiple_large_skin_regions = len(large_contours) > 2
 
         return skin_ratio > 0.3 or multiple_large_skin_regions
+
 
 api = TheApi()
