@@ -10,16 +10,20 @@ import tensorflow as tf
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 from telegraph import upload_file, Telegraph
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2, preprocess_input, decode_predictions
+from tensorflow.keras.applications.mobilenet_v2 import (
+    MobileNetV2,
+    preprocess_input,
+    decode_predictions,
+)
 
 
 from .errors import InvalidAmountError
 from .functions import MORSE_CODE_DICT
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
-tf.get_logger().setLevel('ERROR')
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+tf.get_logger().setLevel("ERROR")
 
-model = MobileNetV2(weights='imagenet')
+model = MobileNetV2(weights="imagenet")
 
 telegraph = Telegraph()
 
@@ -557,25 +561,23 @@ class TheApi:
 
         return links
 
-
     def is_nsfw(self, image_url):
         """
-    Determine if an image is NSFW based on its content.
+        Determine if an image is NSFW based on its content.
 
-    Args:
-        image_url (str): The URL of the image to analyze.
+        Args:
+            image_url (str): The URL of the image to analyze.
 
-    Returns:
-        bool: True if the image is determined to be NSFW, False otherwise.
+        Returns:
+            bool: True if the image is determined to be NSFW, False otherwise.
 
-    Example usage:
-        image_url = "http://example.com/image.jpg"
-        result = is_nsfw(image_url)
-        print(result)  # Outputs: True or False
+        Example usage:
+            image_url = "http://example.com/image.jpg"
+            result = is_nsfw(image_url)
+            print(result)  # Outputs: True or False
         """
         response = requests.get(image_url)
         image = Image.open(BytesIO(response.content))
-
 
         image = image.resize((224, 224))
         image_array = np.array(image)
@@ -587,11 +589,21 @@ class TheApi:
         predictions = model.predict(image_array, verbose=0)
         decoded_predictions = decode_predictions(predictions, top=10)[0]
 
-        nsfw_keywords = ['nude', 'nudity', 'porn', 'sexual', 'adult', 'erotic', 'lingerie', 'bikini']
+        nsfw_keywords = [
+            "nude",
+            "nudity",
+            "porn",
+            "sexual",
+            "adult",
+            "erotic",
+            "lingerie",
+            "bikini",
+        ]
         for _, label, _ in decoded_predictions:
             if any(keyword in label for keyword in nsfw_keywords):
                 return True
 
         return False
+
 
 api = TheApi()
