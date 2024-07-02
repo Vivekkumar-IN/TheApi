@@ -3,4 +3,4 @@ requests
 pillow==9.5.0
 telegraph
 numpy==1.23.5
-tensorflow==2.9.1
+opencv-python
