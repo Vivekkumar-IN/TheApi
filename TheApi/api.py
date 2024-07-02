@@ -1,29 +1,20 @@
 import re
 import os
+import cv2
 import inspect
 import requests
 import numpy as np
 from PIL import Image
 from io import BytesIO
 from typing import List
-import tensorflow as tf
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 from telegraph import upload_file, Telegraph
-from tensorflow.keras.applications.mobilenet_v2 import (
-    MobileNetV2,
-    preprocess_input,
-    decode_predictions,
-)
 
 
 from .errors import InvalidAmountError
 from .functions import MORSE_CODE_DICT
 
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-tf.get_logger().setLevel("ERROR")
-
-model = MobileNetV2(weights="imagenet")
 
 telegraph = Telegraph()
 
@@ -561,49 +552,40 @@ class TheApi:
 
         return links
 
+
     def is_nsfw(self, image_url):
         """
-        Determine if an image is NSFW based on its content.
+    Determine if an image is NSFW based on advanced heuristics and image processing.
 
-        Args:
-            image_url (str): The URL of the image to analyze.
+    Args:
+        image_url (str): The URL of the image to analyze.
 
-        Returns:
-            bool: True if the image is determined to be NSFW, False otherwise.
-
-        Example usage:
-            image_url = "http://example.com/image.jpg"
-            result = is_nsfw(image_url)
-            print(result)  # Outputs: True or False
+    Returns:
+        bool: True if the image is determined to be NSFW, False otherwise.
         """
         response = requests.get(image_url)
-        image = Image.open(BytesIO(response.content))
+        image = Image.open(BytesIO(response.content)).convert("RGB")
 
-        image = image.resize((224, 224))
-        image_array = np.array(image)
-        if image_array.shape[-1] == 4:
-            image_array = image_array[:, :, :3]
-        image_array = np.expand_dims(image_array, axis=0)
-        image_array = preprocess_input(image_array)
+        image_np = np.array(image)
 
-        predictions = model.predict(image_array, verbose=0)
-        decoded_predictions = decode_predictions(predictions, top=10)[0]
+        hsv_image = cv2.cvtColor(image_np, cv2.COLOR_RGB2HSV)
 
-        nsfw_keywords = [
-            "nude",
-            "nudity",
-            "porn",
-            "sexual",
-            "adult",
-            "erotic",
-            "lingerie",
-            "bikini",
-        ]
-        for _, label, _ in decoded_predictions:
-            if any(keyword in label for keyword in nsfw_keywords):
-                return True
+        lower_skin = np.array([0, 40, 70], dtype=np.uint8)
+        upper_skin = np.array([20, 255, 255], dtype=np.uint8)
 
-        return False
+        skin_mask = cv2.inRange(hsv_image, lower_skin, upper_skin)
 
+        skin_pixels = cv2.countNonZero(skin_mask)
+        total_pixels = hsv_image.shape[0] * hsv_image.shape[1]
+        skin_ratio = skin_pixels / total_pixels
+
+    
+        contours, _ = cv2.findContours(skin_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        large_contours = [cnt for cnt in contours if cv2.contourArea(cnt) > 5000]  
+
+
+        multiple_large_skin_regions = len(large_contours) > 2
+
+        return skin_ratio > 0.3 or multiple_large_skin_regions
 
 api = TheApi()
