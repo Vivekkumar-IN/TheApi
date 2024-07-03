@@ -1,9 +1,7 @@
 import re
 import os
-import cv2
 import inspect
 import requests
-import numpy as np
 from PIL import Image
 from io import BytesIO
 from typing import List
@@ -552,6 +550,5 @@ class TheApi:
 
         return links
 
- 
 
 api = TheApi()
