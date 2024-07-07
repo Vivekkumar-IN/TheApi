@@ -553,7 +553,7 @@ class TheApi:
     cache = {}
 
     def stackoverflow_search(
-        query, max_results=100, sort_type="relevance", use_cache=True
+        self, query, max_results=100, sort_type="relevance", use_cache=True
     ):
         """
         Search Stack Overflow for a given query and return results.
@@ -568,12 +568,11 @@ class TheApi:
             list: A list of search results from Stack Overflow.
 
         Example usage:
-           ```python
            from TheApi import api
 
            results = api.stackoverflow_search("flask search function", max_results=100, sort_type='votes', use_cache=False)
            for result in results:
-               print(f"Title: {result['title']}\nLink: {result['link']}\nScore: {result['score']}\nTags: {', '.join(result['tags'])}\nAnswers: {result['answer_count']}\n")```
+               print(f"Title: {result['title']}\nLink: {result['link']}\nScore: {result['score']}\nTags: {', '.join(result['tags'])}\nAnswers: {result['answer_count']}\n")
         """
         if use_cache:
             cache_key = (query, sort_type)
