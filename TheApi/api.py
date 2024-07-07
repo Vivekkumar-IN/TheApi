@@ -550,8 +550,6 @@ class TheApi:
 
         return links
 
-    cache = {}
-
     def stackoverflow_search(
         self, query, max_results=100, sort_type="relevance", use_cache=True
     ):
@@ -574,6 +572,8 @@ class TheApi:
            for result in results:
                print(f"Title: {result['title']}\nLink: {result['link']}\nScore: {result['score']}\nTags: {', '.join(result['tags'])}\nAnswers: {result['answer_count']}\n")
         """
+        cache = {}
+
         if use_cache:
             cache_key = (query, sort_type)
             if cache_key in cache:
