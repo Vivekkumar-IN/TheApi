@@ -550,5 +550,82 @@ class TheApi:
 
         return links
 
+    cache = {}
+
+    def stackoverflow_search(query, max_results=100, sort_type='relevance', use_cache=True):
+        """
+    Search Stack Overflow for a given query and return results.
+
+    Args:
+        query (str): The search query.
+        max_results (int): Maximum number of results to return. Default is 200.
+        sort_type (str): The sort type for results. Options are 'activity', 'votes', 'creation', 'relevance'. Default is 'relevance'.
+        use_cache (bool): If True, use cached results if available. Default is True.
+
+    Returns:
+        list: A list of search results from Stack Overflow.
+
+    Example usage:
+       ```python
+       from TheApi import api
+     
+       results = api.stackoverflow_search("flask search function", max_results=100, sort_type='votes', use_cache=False)
+       for result in results:
+           print(f"Title: {result['title']}\nLink: {result['link']}\nScore: {result['score']}\nTags: {', '.join(result['tags'])}\nAnswers: {result['answer_count']}\n")
+        """
+        if use_cache:
+            cache_key = (query, sort_type)
+            if cache_key in cache:
+                return cache[cache_key]
+
+        url = 'https://api.stackexchange.com/2.3/search/advanced'
+        params = {
+            'order': 'desc',
+            'sort': sort_type,
+            'q': query,
+            'site': 'stackoverflow',
+            'page': 1
+        }
+
+        all_results = []
+        while len(all_results) < max_results:
+            response = requests.get(url, params=params)
+        
+            if response.status_code != 200:
+                break
+        
+            results = response.json().get('items', [])
+            if not results:
+                break
+        
+            all_results.extend(results)
+            if len(results) < 30:
+                break
+        
+            params['page'] += 1
+
+        all_results = all_results[:max_results]
+        cache[cache_key] = all_results
+    
+    return all_results
+
+# Example usage:
+if __name__ == '__main__':
+    query = "flask search function"
+    sort_types = ['activity', 'votes', 'creation', 'relevance']
+    
+    for sort_type in sort_types:
+        print(f"\nResults sorted by {sort_type}:\n")
+        results = search_stackoverflow(query, max_results=200, sort_type=sort_type, use_cache=True)
+        for result in results:
+            title = result['title']
+            link = result['link']
+            score = result['score']
+            tags = ", ".join(result['tags'])
+            answer_count = result['answer_count']
+            
+            print(f"Title: {title}\nLink: {link}\nScore: {score}\nTags: {tags}\nAnswers: {answer_count}\n")
+
+
 
 api = TheApi()
