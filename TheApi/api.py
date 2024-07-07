@@ -573,7 +573,7 @@ class TheApi:
 
            results = api.stackoverflow_search("flask search function", max_results=100, sort_type='votes', use_cache=False)
            for result in results:
-               print(f"Title: {result['title']}\nLink: {result['link']}\nScore: {result['score']}\nTags: {', '.join(result['tags'])}\nAnswers: {result['answer_count']}\n")
+               print(f"Title: {result['title']}\nLink: {result['link']}\nScore: {result['score']}\nTags: {', '.join(result['tags'])}\nAnswers: {result['answer_count']}\n")```
         """
         if use_cache:
             cache_key = (query, sort_type)
@@ -610,28 +610,5 @@ class TheApi:
         cache[cache_key] = all_results
 
     return all_results
-
-
-# Example usage:
-if __name__ == "__main__":
-    query = "flask search function"
-    sort_types = ["activity", "votes", "creation", "relevance"]
-
-    for sort_type in sort_types:
-        print(f"\nResults sorted by {sort_type}:\n")
-        results = search_stackoverflow(
-            query, max_results=200, sort_type=sort_type, use_cache=True
-        )
-        for result in results:
-            title = result["title"]
-            link = result["link"]
-            score = result["score"]
-            tags = ", ".join(result["tags"])
-            answer_count = result["answer_count"]
-
-            print(
-                f"Title: {title}\nLink: {link}\nScore: {score}\nTags: {tags}\nAnswers: {answer_count}\n"
-            )
-
 
 api = TheApi()
