@@ -609,7 +609,7 @@ class TheApi:
         all_results = all_results[:max_results]
         cache[cache_key] = all_results
 
-    return all_results
+        return all_results
 
 
 api = TheApi()
