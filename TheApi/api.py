@@ -2,13 +2,12 @@ import re
 import os
 import inspect
 import requests
-from PIL import Image
+import textwrap
 from io import BytesIO
 from typing import List
 from bs4 import BeautifulSoup
-from PIL import Image, ImageDraw, ImageFont
 from telegraph import upload_file, Telegraph
-
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 from .errors import InvalidAmountError
 from .functions import MORSE_CODE_DICT
@@ -609,6 +608,63 @@ class TheApi:
         cache[cache_key] = all_results
 
         return all_results
+        
+    def blackpink(self, args):
+        text = args
+        font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+        initial_font_size = 100
 
+        img_width = 800
+        img_height = 600
+
+        dummy_img = Image.new("RGB", (1, 1))
+        draw_dummy = ImageDraw.Draw(dummy_img)
+
+        font_size = initial_font_size
+        padding = 50
+        max_width = img_width - 2 * padding
+        max_height = img_height - 2 * padding
+
+        font = ImageFont.truetype(font_path, font_size)
+        lines = textwrap.wrap(text, width=40)
+
+        while True:
+            text_height = sum(draw_dummy.textsize(line, font=font)[1] for line in lines)
+            if text_height <= max_height and all(draw_dummy.textsize(line, font=font)[0] <= max_width for line in lines):
+                break
+            font_size -= 1
+            font = ImageFont.truetype(font_path, font_size)
+            lines = textwrap.wrap(text, width=40)
+
+        gradient = Image.new("RGB", (img_width, img_height), "#ff94e0")
+        for i in range(img_height):
+            r = int(255 - (255 - 255) * (i / img_height))
+            g = int(148 - (148 - 105) * (i / img_height))
+            b = int(224 - (224 - 180) * (i / img_height))
+            ImageDraw.Draw(gradient).line([(0, i), (img_width, i)], fill=(r, g, b))
+
+        img = Image.new("RGB", (img_width, img_height), (0, 0, 0))
+        draw = ImageDraw.Draw(img)
+
+        y_text = (img_height - text_height) // 2
+        for line in lines:
+            line_width, line_height = draw.textsize(line, font=font)
+            draw.text(((img_width - line_width) // 2, y_text), line, fill=(255, 148, 224), font=font, align="center")
+            y_text += line_height
+
+        border_width = 28
+        img_with_border = ImageOps.expand(img, border=border_width, fill="#ff94e0")
+
+        final_img = Image.new("RGB", (img_with_border.width, img_with_border.height), (0, 0, 0))
+        final_img.paste(gradient, (0, 0))
+        final_img.paste(img_with_border, (0, 0))
+
+        temp_file_path = "temp_blackpink_image.jpg"
+        final_img.save(temp_file_path, format="JPEG")
+        response = upload_file(temp_file_path)
+
+        os.remove(temp_file_path)
+
+        return 'https://telegra.ph' + response[0]
 
 api = TheApi()
