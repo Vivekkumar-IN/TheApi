@@ -57,6 +57,32 @@ If you are feeling down, try holding a pencil between your top lip and your nose
   ```
 </details>
 
+
+
+<details>
+  <summary>BlackPink</summary>
+
+
+  ```python
+
+  from TheApi import api
+
+  text = "Radhe Radhe ji"
+
+  image = api.blackpink(text)
+  
+  print(image)
+
+  ```
+
+  Result of print(image):
+
+  ```python
+  
+https://telegra.ph/file/6cf77230287f5c6c513c0.jpg
+  ```
+</details>
+
 <details>
   <summary>Cat</summary>
 
