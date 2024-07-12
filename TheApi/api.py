@@ -208,7 +208,7 @@ class TheApi:
         ).json()["text"]
         return results
 
-    def gen_hashtag(self, text):
+    def gen_hashtag(self, text, similiar: bool = False):
         url = "https://all-hashtag.com/library/contents/ajax_generator.php"
 
         data = {
@@ -219,11 +219,13 @@ class TheApi:
         soup = BeautifulSoup(response.text, "html.parser")
         hashtags_div = soup.find("div", id="copy-hashtags")
         hashtags = hashtags_div.text.strip() if hashtags_div else ""
-        similar_hashtags_div = soup.find("div", id="copy-hashtags-similar")
-        similar_hashtags = (
-            similar_hashtags_div.text.strip() if similar_hashtags_div else ""
-        )
-        return f"Hashtags:\n{hashtags}\n\n Similar hashtags:\n{similar_hashtags}"
+        if similiar:
+            similar_hashtags_div = soup.find("div", id="copy-hashtags-similar")
+            similar_hashtags = (
+                similar_hashtags_div.text.strip() if similar_hashtags_div else ""
+            )
+            return hashtags, similar_hashtags
+        return hashtags
 
     def morse_code(self, txt):
         MORSE_CODE_DICT_REVERSED = {
