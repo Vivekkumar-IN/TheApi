@@ -226,6 +226,7 @@ Hashtags:
  similar hashtags:
 #telegramchannel #telegrama #telegramstickers #telegram0123378624 #telegramtakeover #telegramaanimado #telegrambot #telegramer #telegramstickerpack #telegramsams #telegramsam #Telegrams #telegramma #telegramgp #TelegramIsBetter
   ```
+Similiar Hashtags:
 
 ```python
   from TheApi import api
