@@ -610,7 +610,7 @@ class TheApi:
         cache[cache_key] = all_results
 
         return all_results
-        
+
     def blackpink(self, args):
         text = args
         font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
@@ -632,7 +632,9 @@ class TheApi:
 
         while True:
             text_height = sum(draw_dummy.textsize(line, font=font)[1] for line in lines)
-            if text_height <= max_height and all(draw_dummy.textsize(line, font=font)[0] <= max_width for line in lines):
+            if text_height <= max_height and all(
+                draw_dummy.textsize(line, font=font)[0] <= max_width for line in lines
+            ):
                 break
             font_size -= 1
             font = ImageFont.truetype(font_path, font_size)
@@ -651,13 +653,21 @@ class TheApi:
         y_text = (img_height - text_height) // 2
         for line in lines:
             line_width, line_height = draw.textsize(line, font=font)
-            draw.text(((img_width - line_width) // 2, y_text), line, fill=(255, 148, 224), font=font, align="center")
+            draw.text(
+                ((img_width - line_width) // 2, y_text),
+                line,
+                fill=(255, 148, 224),
+                font=font,
+                align="center",
+            )
             y_text += line_height
 
         border_width = 28
         img_with_border = ImageOps.expand(img, border=border_width, fill="#ff94e0")
 
-        final_img = Image.new("RGB", (img_with_border.width, img_with_border.height), (0, 0, 0))
+        final_img = Image.new(
+            "RGB", (img_with_border.width, img_with_border.height), (0, 0, 0)
+        )
         final_img.paste(gradient, (0, 0))
         final_img.paste(img_with_border, (0, 0))
 
@@ -667,6 +677,7 @@ class TheApi:
 
         os.remove(temp_file_path)
 
-        return 'https://telegra.ph' + response[0]
+        return "https://telegra.ph" + response[0]
+
 
 api = TheApi()
