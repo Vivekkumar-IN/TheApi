@@ -226,6 +226,31 @@ Hashtags:
  similar hashtags:
 #telegramchannel #telegrama #telegramstickers #telegram0123378624 #telegramtakeover #telegramaanimado #telegrambot #telegramer #telegramstickerpack #telegramsams #telegramsam #Telegrams #telegramma #telegramgp #TelegramIsBetter
   ```
+
+```python
+  from TheApi import api
+
+  text = "telegram"
+
+  hashtags, similar_hastags= api.gen_hashtag(text, similiar=True) #Defaults to False
+
+  print(f"Hastgas\n{hashtags}\n\nSimliar hastags\n{similar_hastags}")
+
+  ```
+Results:
+
+
+```python
+
+Hastgas
+#telegram  #telegramchannel  #telegrama  #telegramstickers  #telegram0123378624  #telegramtakeover  #telegramaanimado  #telegrambot  #telegramer  #telegramstickerpack  #telegramsams  #telegramsam  #Telegrams  #telegramma  #telegramgp  #TelegramIsBetter
+
+Simliar hastags
+#telegramchannel #telegrama #telegramstickers #telegram0123378624 #telegramtakeover #telegramaanimado #telegrambot #telegramer #telegramstickerpack #telegramsams #telegramsam #Telegrams #telegramma #telegramgp #TelegramIsBetter
+
+```
+
+
 </details>
 
 <details>
