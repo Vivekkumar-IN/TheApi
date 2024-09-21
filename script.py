@@ -15,12 +15,17 @@ def test_method(method, *args):
 def generate_api_status(methods):
     function_statuses = []
     readme_content = []
+    preface_content = []
+    function_count = 1  # Add a count prefix for each function
 
     for name, method in methods:
         if name.startswith("_") or name == "help":
             continue
 
         signature = inspect.signature(method)
+
+        # Add the function name with a hyperlink to the usage section
+        preface_content.append(f"{function_count}. [{name}](#{name.lower()})")
 
         if len(signature.parameters) == 0:
             status, result = test_method(method)
@@ -31,7 +36,6 @@ def generate_api_status(methods):
             params = []
             for param in signature.parameters.values():
                 if param.default is not param.empty:
-                    # Get the default value as a string
                     param_value = repr(param.default)
                     params.append(f"{param.name}={param_value}")
                 elif param.annotation is int:
@@ -43,7 +47,6 @@ def generate_api_status(methods):
                 method, *[eval(param.split("=")[1]) for param in params]
             )
 
-            # Create a string for the parameters
             params_str = ", ".join(params)
 
             if status == "✅":
@@ -56,11 +59,13 @@ def generate_api_status(methods):
                 )
 
         function_statuses.append((name, status))
+        function_count += 1  # Increment the count for each function
 
-    return function_statuses, readme_content
+    return preface_content, function_statuses, readme_content
 
 
 def write_api_status_to_file(
+    preface_content,
     function_statuses,
     readme_content,
     readme_file="README.md",
@@ -78,10 +83,18 @@ def write_api_status_to_file(
     else:
         pre_separator_content = existing_content
 
+    # Convert the preface content to a string with numbered functions
+    preface_str = "\n".join(preface_content)
+
     new_content = "\n".join(readme_content)
 
+    # Preface including the count of each function with hyperlinks
     preface = "# API Documentation\n\n"
-    preface += "This document provides the results of calling each function in `TheApi` class.\n\n"
+    preface += "This document provides a list of all functions in `TheApi`, along with their status and usage examples.\n\n"
+    preface += "## Function List\n\n"
+    preface += f"{preface_str}\n\n"
+
+    # API Status Table
     preface += "## API Status\n\n"
     preface += "| Function Name | Status |\n"
     preface += "|---------------|--------|\n"
@@ -102,8 +115,8 @@ def write_api_status_to_file(
 
 def main():
     methods = inspect.getmembers(api, predicate=inspect.ismethod)
-    function_statuses, readme_content = generate_api_status(methods)
-    write_api_status_to_file(function_statuses, readme_content)
+    preface_content, function_statuses, readme_content = generate_api_status(methods)
+    write_api_status_to_file(preface_content, function_statuses, readme_content)
 
 
 if __name__ == "__main__":
