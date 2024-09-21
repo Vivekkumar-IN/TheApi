@@ -14,7 +14,33 @@ pip install git+https://github.com/Vivekkumar-IN/TheApi@main
 
 # API Documentation
 
-This document provides the results of calling each function in `TheApi` class.
+This document provides a list of all functions in `TheApi`, along with their status and usage examples.
+
+## Function List
+
+1. [bing_image](#bing_image)
+2. [blackpink](#blackpink)
+3. [carbon](#carbon)
+4. [cat](#cat)
+5. [chatgpt](#chatgpt)
+6. [dog](#dog)
+7. [fox](#fox)
+8. [gen_hashtag](#gen_hashtag)
+9. [get_advice](#get_advice)
+10. [get_hindi_jokes](#get_hindi_jokes)
+11. [get_jokes](#get_jokes)
+12. [get_uselessfact](#get_uselessfact)
+13. [github_search](#github_search)
+14. [hindi_quote](#hindi_quote)
+15. [meme](#meme)
+16. [morse_code](#morse_code)
+17. [pypi](#pypi)
+18. [quote](#quote)
+19. [randomword](#randomword)
+20. [stackoverflow_search](#stackoverflow_search)
+21. [wikipedia](#wikipedia)
+22. [words](#words)
+23. [write](#write)
 
 ## API Status
 
@@ -29,7 +55,7 @@ This document provides the results of calling each function in `TheApi` class.
 | [fox](#fox) | ✅ |
 | [gen_hashtag](#gen_hashtag) | ✅ |
 | [get_advice](#get_advice) | ✅ |
-| [get_hindi_jokes](#get_hindi_jokes) | ✅ |
+| [get_hindi_jokes](#get_hindi_jokes) | ❌ |
 | [get_jokes](#get_jokes) | ✅ |
 | [get_uselessfact](#get_uselessfact) | ✅ |
 | [github_search](#github_search) | ✅ |
@@ -58,7 +84,7 @@ print(result)
 
 ```text
 # Result:
-['https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg', 'http://clipart-library.com/image_gallery2/Pokemon-Transparent.png', 'https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89']
+['https://nintendoeverything.com/wp-content/uploads/Rockruff_jpg_jpgcopy.jpg', 'http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg', 'http://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786718xxl59.png']
 ```
 
 ### blackpink
@@ -103,7 +129,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/MTc3NDk0OA.jpg
+https://cdn2.thecatapi.com/images/cfa.jpg
 ```
 
 ### chatgpt
@@ -118,7 +144,7 @@ print(result)
 
 ```text
 # Error:
-HTTPSConnectionPool(host='chatgpt.apinepdev.workers.dev', port=443): Max retries exceeded with url: /?question=pokemon (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fdfda0cbaa0>: Failed to resolve 'chatgpt.apinepdev.workers.dev' ([Errno -2] Name or service not known)"))
+HTTPSConnectionPool(host='chatgpt.apinepdev.workers.dev', port=443): Max retries exceeded with url: /?question=pokemon (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fb6e98b3890>: Failed to resolve 'chatgpt.apinepdev.workers.dev' ([Errno -2] Name or service not known)"))
 ```
 
 ### dog
@@ -133,7 +159,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/d16849b9-135d-4550-a2e5-184203284a62.gif
+https://random.dog/ea9725c1-fe38-4d2f-96c5-265d8441bf8d.mp4
 ```
 
 ### fox
@@ -148,7 +174,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=120
+https://randomfox.ca/?i=72
 ```
 
 ### gen_hashtag
@@ -178,7 +204,7 @@ print(result)
 
 ```text
 # Result:
-The more ideas that you give away, the more ideas that will come to you.
+If you have the chance, take it!
 ```
 
 ### get_hindi_jokes
@@ -193,7 +219,7 @@ print(result)
 
 ```text
 # Result:
-जितने गिरे हुए लोग मिले अगर उतने गिरे हुए पैसे मिलते तो आज अमेरिका में मेरा भी फ्लैट होता 😆🤣😋😉 
+'status'
 ```
 
 ### get_jokes
@@ -208,7 +234,7 @@ print(result)
 
 ```text
 # Result:
-I was reading a great book about an immortal dog the other day. It was impossible to put down.
+I don't know where I stand on abortion. I like killing babies, but I don't like giving women a choice.
 ```
 
 ### get_uselessfact
@@ -223,7 +249,7 @@ print(result)
 
 ```text
 # Result:
-On average, Americans` favorite smell is banana.
+There are 1,792 steps in the Eiffel Tower
 ```
 
 ### github_search
@@ -253,7 +279,7 @@ print(result)
 
 ```text
 # Result:
-अकेले ही तय करने होते हैं कुछ सफर; ज़िंदगी के हर सफर में हमसफ़र नहीं मिला करते!
+जितने का मज़ा तब आता है…जब सभी आपके हारने का इंतजार कर रहे हो..!
 ```
 
 ### meme
@@ -268,7 +294,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/vykpl94yk1qd1.png?width=640&crop=smart&auto=webp&s=5066f830b35b5446d729dede3d8ef8e8b7a90377
+https://preview.redd.it/hww6zr3ajupd1.gif?width=640&crop=smart&format=png8&s=4c649d05ef149c8a55b2039ec25b8bc484de7ff3
 ```
 
 ### morse_code
@@ -313,9 +339,9 @@ print(result)
 
 ```text
 # Result:
-Happiness does not come about only due to external circumstances; it mainly derives from inner attitudes.
+The cause is hidden. The effect is visible to all.
 
-author - Dalai Lama
+author - Ovid
 ```
 
 ### randomword
@@ -330,7 +356,7 @@ print(result)
 
 ```text
 # Result:
-nontropical
+nucleosynthetic
 ```
 
 ### stackoverflow_search
@@ -345,7 +371,7 @@ print(result)
 
 ```text
 # Result:
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1902, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['c#'], 'owner': {'account_id': 21664185, 'reputation': 43, 'user_id': 15982865, 'user_type': 'registered', 'profile_image': 'https://lh3.googleusercontent.com/a-/AOh14GiNqANr2EeHaVLi8BYrZEtJ4BD3L-XBs7aDPXoB=k-s256', 'display_name': 'user15982865', 'link': 'https://stackoverflow.com/users/15982865/user15982865'}, 'is_answered': True, 'view_count': 368, 'protected_date': 1622796455, 'answer_count': 1, 'score': -3, 'last_activity_date': 1622789829, 'creation_date': 1622181262, 'question_id': 67733551, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67733551/overriding-the-pokemon-name', 'title': 'Overriding the Pokemon name'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1902, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32548, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
 ```
 
 ### wikipedia
@@ -375,7 +401,7 @@ print(result)
 
 ```text
 # Result:
-['outbreed', 'endosome', 'feverishly', 'calcination', 'flightier']
+['oligophagous', 'danegelt', 'coagent', 'gangbuster', 'myoglobins']
 ```
 
 ### write
