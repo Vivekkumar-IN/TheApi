@@ -55,7 +55,7 @@ This document provides a list of all functions in `TheApi`, along with their sta
 | [fox](#fox) | ✅ |
 | [gen_hashtag](#gen_hashtag) | ✅ |
 | [get_advice](#get_advice) | ✅ |
-| [get_hindi_jokes](#get_hindi_jokes) | ❌ |
+| [get_hindi_jokes](#get_hindi_jokes) | ✅ |
 | [get_jokes](#get_jokes) | ✅ |
 | [get_uselessfact](#get_uselessfact) | ✅ |
 | [github_search](#github_search) | ✅ |
@@ -84,7 +84,7 @@ print(result)
 
 ```text
 # Result:
-['https://nintendoeverything.com/wp-content/uploads/Rockruff_jpg_jpgcopy.jpg', 'http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg', 'http://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786718xxl59.png']
+['http://www.animextremist.com/imagenes/pokemon/pokemon15.jpg', 'https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg', 'https://images5.alphacoders.com/130/thumb-1920-1308338.jpg']
 ```
 
 ### blackpink
@@ -114,7 +114,7 @@ print(result)
 
 ```text
 # Result:
-https://envs.sh/0Qk.png
+https://envs.sh/S.bin
 ```
 
 ### cat
@@ -129,7 +129,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/cfa.jpg
+https://cdn2.thecatapi.com/images/MTgxNzI5OQ.jpg
 ```
 
 ### chatgpt
@@ -144,7 +144,7 @@ print(result)
 
 ```text
 # Error:
-HTTPSConnectionPool(host='chatgpt.apinepdev.workers.dev', port=443): Max retries exceeded with url: /?question=pokemon (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fb6e98b3890>: Failed to resolve 'chatgpt.apinepdev.workers.dev' ([Errno -2] Name or service not known)"))
+HTTPSConnectionPool(host='chatgpt.apinepdev.workers.dev', port=443): Max retries exceeded with url: /?question=pokemon (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f3bcbfe7fe0>: Failed to resolve 'chatgpt.apinepdev.workers.dev' ([Errno -2] Name or service not known)"))
 ```
 
 ### dog
@@ -159,7 +159,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/ea9725c1-fe38-4d2f-96c5-265d8441bf8d.mp4
+https://random.dog/916446ed-7d0b-403a-a7a4-cc10c7969ea1.jpg
 ```
 
 ### fox
@@ -174,7 +174,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=72
+https://randomfox.ca/?i=5
 ```
 
 ### gen_hashtag
@@ -204,7 +204,7 @@ print(result)
 
 ```text
 # Result:
-If you have the chance, take it!
+Winter is coming.
 ```
 
 ### get_hindi_jokes
@@ -219,7 +219,7 @@ print(result)
 
 ```text
 # Result:
-'status'
+कभी कभी खेल भी लिया करो मोहब्बत के मरीजों हर समय शायरी की दुकान लगाये रहते हो 😆🤣😋😉
 ```
 
 ### get_jokes
@@ -234,7 +234,7 @@ print(result)
 
 ```text
 # Result:
-I don't know where I stand on abortion. I like killing babies, but I don't like giving women a choice.
+I bought some shoes from a drug dealer. I don't know what he laced them with, but I was tripping all day!
 ```
 
 ### get_uselessfact
@@ -249,7 +249,7 @@ print(result)
 
 ```text
 # Result:
-There are 1,792 steps in the Eiffel Tower
+A full-loaded supertanker traveling at normal speed takes at least 20 minutes to stop.
 ```
 
 ### github_search
@@ -279,7 +279,7 @@ print(result)
 
 ```text
 # Result:
-जितने का मज़ा तब आता है…जब सभी आपके हारने का इंतजार कर रहे हो..!
+यदी आप सच कहते हैं, तो आपको कुछ याद रखने की जरूरत नहीं रहती..
 ```
 
 ### meme
@@ -294,7 +294,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/hww6zr3ajupd1.gif?width=640&crop=smart&format=png8&s=4c649d05ef149c8a55b2039ec25b8bc484de7ff3
+https://preview.redd.it/c2rr6usfy0qd1.png?width=640&crop=smart&auto=webp&s=398b93a6f0bd0283b35d8fa8cfed64440c3ae531
 ```
 
 ### morse_code
@@ -339,9 +339,9 @@ print(result)
 
 ```text
 # Result:
-The cause is hidden. The effect is visible to all.
+But man is not made for defeat. A man can be destroyed but not defeated.
 
-author - Ovid
+author - Ernest Hemingway
 ```
 
 ### randomword
@@ -356,7 +356,7 @@ print(result)
 
 ```text
 # Result:
-nucleosynthetic
+crassnesses
 ```
 
 ### stackoverflow_search
@@ -386,7 +386,7 @@ print(result)
 
 ```text
 # Result:
-{'title': 'Pokémon', 'summary': 'Pokémon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pokémon, a large variety of species endowed with special powers. The franchise\'s target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pokémon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed "Pokémania". By 2002, the craze had ended, after which Pokémon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pokémon Go, an augmented reality game developed by Niantic. Pokémon has since been estimated to be the world\'s highest-grossing media franchise and one of the best-selling video game franchises.\nPokémon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pokémon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pokémon Company (TPC) in 1998 to manage the Pokémon property within Asia. The Pokémon anime series and films are co-owned by Shogakukan. Since 2009, The Pokémon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.', 'url': 'https://en.wikipedia.org/?curid=23745', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png'}
+{'title': 'Pokémon', 'summary': 'Pokémon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pokémon, a large variety of species endowed with special powers. The franchise\'s target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pokémon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed "Pokémania". By 2002, the craze had ended, after which Pokémon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pokémon Go, an augmented reality game developed by Niantic. Pokémon has since been estimated to be the world\'s highest-grossing media franchise and one of the best-selling video game franchises.\nPokémon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pokémon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pokémon Company (TPC) in 1998 to manage the Pokémon property within Asia. The Pokémon anime series and films are co-owned by Shogakukan. Since 2009, The Pokémon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n', 'url': 'https://en.wikipedia.org/?curid=23745', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png'}
 ```
 
 ### words
@@ -401,7 +401,7 @@ print(result)
 
 ```text
 # Result:
-['oligophagous', 'danegelt', 'coagent', 'gangbuster', 'myoglobins']
+['lammergeiers', 'decreers', 'maying', 'spreadability', 'flexed']
 ```
 
 ### write
