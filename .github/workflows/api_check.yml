@@ -2,6 +2,9 @@ name: API Status Script
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+    - "**.py"
   schedule:
     - cron: "0 0 * * *"
 
