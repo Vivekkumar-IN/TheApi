@@ -137,9 +137,8 @@ class TheApi:
 
     def chatgpt(self, query):
         response = requests.get(
-            f"https://chatgpt.apinepdev.workers.dev/?question={query}"
+            f"https://chatgpt.apiitzasuraa.workers.dev/?question=query}"
         )
-        # this api belongs to nep coders of @DEVSNP
         if response.status_code == 200:
             return response.json()["answer"]
 
