@@ -6,8 +6,7 @@ on:
     paths:
     - "**.py"
   schedule:
-    - cron: "0 0 * * *"
-
+    - cron: "30 18 * * *"  # This runs at 00:00 GMT+5:30
 jobs:
   run-and-commit:
     runs-on: ubuntu-latest
