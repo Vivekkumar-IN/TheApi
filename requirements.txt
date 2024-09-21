@@ -1,0 +1,6 @@
+beautifulsoup4
+requests
+pillow==9.5.0
+telegraph
+numpy>=1.24.0
+opencv-python
