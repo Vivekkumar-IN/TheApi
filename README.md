@@ -1,9 +1,3 @@
-## The reademe has upadte herself daily on the based  on the api status
-
-> [!NOTE]
-> This is for my personal use if you want yo use so you can
-
-
 ##### Installation
 
 ```sh
