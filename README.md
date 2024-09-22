@@ -51,7 +51,7 @@ This document provides a list of all functions in `TheApi`, along with their sta
 | [get_advice](#get_advice) | ✅ |
 | [get_hindi_jokes](#get_hindi_jokes) | ✅ |
 | [get_jokes](#get_jokes) | ✅ |
-| [get_uselessfact](#get_uselessfact) | ✅ |
+| [get_uselessfact](#get_uselessfact) | ❌ |
 | [github_search](#github_search) | ✅ |
 | [hindi_quote](#hindi_quote) | ✅ |
 | [meme](#meme) | ✅ |
@@ -78,7 +78,7 @@ print(result)
 
 ```text
 # Result:
-['http://www.animextremist.com/imagenes/pokemon/pokemon15.jpg', 'https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg', 'https://images5.alphacoders.com/130/thumb-1920-1308338.jpg']
+['https://wallpapercave.com/wp/wp3257098.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pokémon_logo.svg/1200px-International_Pokémon_logo.svg.png', 'https://redtri.com/wp-content/uploads/2019/02/screen-shot-2019-03-01-at-5.26.39-pm.png?resize=605']
 ```
 
 ### blackpink
@@ -123,7 +123,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/QZYN75HxN.jpg
+https://cdn2.thecatapi.com/images/78s.jpg
 ```
 
 ### chatgpt
@@ -138,7 +138,7 @@ print(result)
 
 ```text
 # Result:
-Sure! What would you like to know about Pokémon? Are you interested in specific games, Pokémon species, types, strategies, or something else?
+Sure! What would you like to know or discuss about Pokémon? There are many aspects, including games, trading cards, anime, and more!
 ```
 
 ### dog
@@ -153,7 +153,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/0a79ab14-600e-4adf-8ef1-6c24bab154e4.jpg
+https://random.dog/0afd649d-ec06-403f-aeb5-0262d1750182.jpg
 ```
 
 ### fox
@@ -168,7 +168,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=28
+https://randomfox.ca/?i=64
 ```
 
 ### gen_hashtag
@@ -198,7 +198,7 @@ print(result)
 
 ```text
 # Result:
-Take time once in a while to look up at the stars for at least 5 minutes, in order to comprehend your cosmic significance.
+Good advice is something a man gives when he is too old to set a bad example.
 ```
 
 ### get_hindi_jokes
@@ -213,7 +213,7 @@ print(result)
 
 ```text
 # Result:
-आजकल के बच्चों से तो मच्छर ज्यादा responsible है 😬😝😜 शाम होते ही घर तो आ जाते हैं 😬😝😜
+स्कूल जाने के टाइम पर जो पेट दर्द होता है ना उसका इलाज दुनिया के किसी डॉक्टर के पास नहीं है 😆🤣😋😉  
 ```
 
 ### get_jokes
@@ -228,8 +228,7 @@ print(result)
 
 ```text
 # Result:
-My grandfather says I'm too reliant on technology.
-I called him a hypocrite and unplugged his life support.
+Women are like KFC, once you're done with the breasts and thighs, you just have a greasy box to put your bone in.
 ```
 
 ### get_uselessfact
@@ -244,7 +243,7 @@ print(result)
 
 ```text
 # Result:
-When possums are playing `possum`, they are not "playing." They actually pass out from sheer terror.
+'text'
 ```
 
 ### github_search
@@ -259,7 +258,7 @@ print(result)
 
 ```text
 # Result:
-[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7533, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4725, 'forks_count': 2760}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3861, 'forks_count': 1540}]
+[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7533, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4725, 'forks_count': 2761}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3861, 'forks_count': 1540}]
 ```
 
 ### hindi_quote
@@ -274,7 +273,7 @@ print(result)
 
 ```text
 # Result:
-जिंदगी से यही गिला है मुझे तू बहुत देर से मिला है मुझे..
+ये जो ख़ामोश से अल्फ़ाज़ लिखे है ना, पढ़ना कभी ध्यान से…चीखते कमाल के हैं
 ```
 
 ### meme
@@ -289,7 +288,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/6ealkb2774qd1.png?width=320&crop=smart&auto=webp&s=c710a259e386b2296cc05bdce91497bc916515f6
+https://preview.redd.it/q8qhst0q8lpd1.png?width=1080&crop=smart&auto=webp&s=9a7ad225181a43e98c55a09057f94fae53757ddd
 ```
 
 ### morse_code
@@ -334,9 +333,9 @@ print(result)
 
 ```text
 # Result:
-I will not be concerned at other men's not knowing me; I will be concerned at my own want of ability.
+There is nothing in a caterpillar that tells you it's going to be a butterfly.
 
-author - Confucius
+author - Buckminster Fuller
 ```
 
 ### randomword
@@ -351,7 +350,7 @@ print(result)
 
 ```text
 # Result:
-picketboats
+joisting
 ```
 
 ### stackoverflow_search
@@ -366,7 +365,7 @@ print(result)
 
 ```text
 # Result:
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1902, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32548, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1903, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['c#'], 'owner': {'account_id': 21664185, 'reputation': 43, 'user_id': 15982865, 'user_type': 'registered', 'profile_image': 'https://lh3.googleusercontent.com/a-/AOh14GiNqANr2EeHaVLi8BYrZEtJ4BD3L-XBs7aDPXoB=k-s256', 'display_name': 'user15982865', 'link': 'https://stackoverflow.com/users/15982865/user15982865'}, 'is_answered': True, 'view_count': 368, 'protected_date': 1622796455, 'answer_count': 1, 'score': -3, 'last_activity_date': 1622789829, 'creation_date': 1622181262, 'question_id': 67733551, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67733551/overriding-the-pokemon-name', 'title': 'Overriding the Pokemon name'}]
 ```
 
 ### wikipedia
@@ -396,7 +395,7 @@ print(result)
 
 ```text
 # Result:
-['collocations', 'reneging', 'splenetics', 'fingerpicked', 'outskate']
+['thoro', 'methyl', 'tousles', 'bayonetting', 'antsinesses']
 ```
 
 ### write
