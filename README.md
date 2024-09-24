@@ -49,7 +49,7 @@ This document provides a list of all functions in `TheApi`, along with their sta
 | [fox](#fox) | ✅ |
 | [gen_hashtag](#gen_hashtag) | ✅ |
 | [get_advice](#get_advice) | ✅ |
-| [get_hindi_jokes](#get_hindi_jokes) | ✅ |
+| [get_hindi_jokes](#get_hindi_jokes) | ❌ |
 | [get_jokes](#get_jokes) | ✅ |
 | [get_uselessfact](#get_uselessfact) | ✅ |
 | [github_search](#github_search) | ✅ |
@@ -78,7 +78,7 @@ print(result)
 
 ```text
 # Result:
-['https://wallpapercave.com/wp/wp11733352.jpg', 'https://static2.gamerantimages.com/wordpress/wp-content/uploads/2020/01/Pokemon-Banner.jpg', 'http://www.animextremist.com/imagenes/pokemon/pokemon15.jpg']
+['https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg', 'https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89', 'http://clipart-library.com/image_gallery2/Pokemon-Transparent.png']
 ```
 
 ### blackpink
@@ -123,7 +123,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/3ne.gif
+https://cdn2.thecatapi.com/images/ctHlkAH3L.jpg
 ```
 
 ### chatgpt
@@ -138,7 +138,7 @@ print(result)
 
 ```text
 # Result:
-Sure! What would you like to know about Pokémon? Are you interested in games, trading cards, anime, specific Pokémon, or something else?
+Sure! What would you like to know or discuss about Pokémon? Whether it's games, cards, anime, or specific Pokémon, feel free to ask!
 ```
 
 ### dog
@@ -153,7 +153,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/65a6d063-a9d2-4bd0-97cc-87d2b3bb84e3.jpg
+https://random.dog/80f6b027-a27e-4823-a52c-1161f2cde773.jpg
 ```
 
 ### fox
@@ -168,7 +168,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=89
+https://randomfox.ca/?i=120
 ```
 
 ### gen_hashtag
@@ -198,7 +198,7 @@ print(result)
 
 ```text
 # Result:
-If it ain't broke don't fix it.
+You have as many hours in a day as the people you admire most.
 ```
 
 ### get_hindi_jokes
@@ -213,7 +213,7 @@ print(result)
 
 ```text
 # Result:
-हर सफल आदमी के पिछे एक औरत होती है!  ..और एक से ज़्यादा औरते हुई तो उस सफल आदमी की कहानी सावधान इंडिया मे दिखाते है! 😆🤣😋😉
+'status'
 ```
 
 ### get_jokes
@@ -228,7 +228,8 @@ print(result)
 
 ```text
 # Result:
-How do you make holy water? You boil the hell out of it.
+Today, my son asked "Can I have a book mark?" and I burst into tears.
+11 years old and he still doesn't know my name is Brian.
 ```
 
 ### get_uselessfact
@@ -243,7 +244,7 @@ print(result)
 
 ```text
 # Result:
-One of the reasons marijuana is illegal today is because cotton growers in the 1930s lobbied against hemp farmers they saw it as competition.
+During a severe windstorm or rainstorm the Empire State Building sways several feet to either side.
 ```
 
 ### github_search
@@ -258,7 +259,7 @@ print(result)
 
 ```text
 # Result:
-[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7533, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4729, 'forks_count': 2762}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3861, 'forks_count': 1540}]
+[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7533, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4730, 'forks_count': 2763}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3864, 'forks_count': 1540}]
 ```
 
 ### hindi_quote
@@ -273,7 +274,7 @@ print(result)
 
 ```text
 # Result:
-अपने कद का अंदाज़ा हमें भी है लाड़ले, हम परछाई देख कर गुरुर नही करते।
+तू गुज़र जाये करीब से; वो भी मुलाकात से कम नही..
 ```
 
 ### meme
@@ -288,7 +289,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/o483c7ld33qd1.png?width=640&crop=smart&auto=webp&s=5a6cca1f1e63a60f9e6e01a5acd3b68d9d078008
+https://preview.redd.it/uk7rj5br35qd1.png?width=640&crop=smart&auto=webp&s=a0cb7802a36cf7ece8ebf66290bd02bc4be99740
 ```
 
 ### morse_code
@@ -333,9 +334,9 @@ print(result)
 
 ```text
 # Result:
-In the sweetness of friendship let there be laughter and sharing of pleasures. For in the dew of little things the heart finds its morning and is refreshed.
+Wisdom is the reward you get for a lifetime of listening when you'd have preferred to talk.
 
-author - Kahlil Gibran
+author - Doug Larson
 ```
 
 ### randomword
@@ -350,7 +351,7 @@ print(result)
 
 ```text
 # Result:
-justificatory
+None
 ```
 
 ### stackoverflow_search
@@ -365,7 +366,7 @@ print(result)
 
 ```text
 # Result:
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1904, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32550, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1906, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32550, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
 ```
 
 ### wikipedia
@@ -395,7 +396,7 @@ print(result)
 
 ```text
 # Result:
-['whitter', 'lutea', 'attunes', 'xylidines', 'continuous']
+[]
 ```
 
 ### write
