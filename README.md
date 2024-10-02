@@ -78,7 +78,7 @@ print(result)
 
 ```text
 # Result:
-['https://assets1.ignimgs.com/2021/03/25/rayquaza-blogroll-1616713873737.jpg', 'https://staticg.sportskeeda.com/editor/2023/07/0c8e6-16887208209298-1920.jpg', 'https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg']
+['https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg', 'http://fc07.deviantart.net/fs70/f/2013/024/8/d/arceus___creatures__all_pokemon_by_greatmik-d2zjis0.png', 'https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg']
 ```
 
 ### blackpink
@@ -123,7 +123,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/bpZGfNLW1.png
+https://cdn2.thecatapi.com/images/8er.jpg
 ```
 
 ### chatgpt
@@ -138,7 +138,7 @@ print(result)
 
 ```text
 # Error:
-Expecting value: line 1 column 1 (char 0)
+'answer'
 ```
 
 ### dog
@@ -153,7 +153,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/1ac1c3b2-b1e2-4ad5-9668-95cb8183646b.jpg
+https://random.dog/70cdbfcc-ad31-4a15-a306-03b95540f6c7.jpg
 ```
 
 ### fox
@@ -168,7 +168,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=76
+https://randomfox.ca/?i=122
 ```
 
 ### gen_hashtag
@@ -198,7 +198,7 @@ print(result)
 
 ```text
 # Result:
-Taking photos with tablet devices looks weird.
+It's wrong to be right.
 ```
 
 ### get_hindi_jokes
@@ -213,7 +213,7 @@ print(result)
 
 ```text
 # Result:
-लोहा लोहे को काटता है, हीरा हीरे को काटता है, आप को भी एक दिन कुत्ता काटेगा, क़योंकि.. कुत्ता किसी को भी काट सकता है|  ...बी पॉज़िटिव यार…. 😆🤣😋😉
+इस मतलबी दुनिया में, एक पान वाला ही है, जो पूछ कर चुना लगाता है ! 😆🤣😋😉
 ```
 
 ### get_jokes
@@ -228,7 +228,9 @@ print(result)
 
 ```text
 # Result:
-To whoever stole my copy of Microsoft Office, I will find you. You have my Word!
+Doctor: "I have some news about your baby."
+Parents: "Don't tell us the gender, we want to keep it a surprise."
+Doctor: "Oh I get it, you're those type of people. Okay, well IT is not breathing."
 ```
 
 ### get_uselessfact
@@ -243,7 +245,7 @@ print(result)
 
 ```text
 # Result:
-No word in the English language rhymes with month, orange, silver and purple.
+A `jiffy` is a unit of time for 1/100th of a second.
 ```
 
 ### github_search
@@ -258,7 +260,7 @@ print(result)
 
 ```text
 # Result:
-[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7533, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4734, 'forks_count': 2767}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3864, 'forks_count': 1540}]
+[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7530, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4740, 'forks_count': 2770}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3865, 'forks_count': 1540}]
 ```
 
 ### hindi_quote
@@ -273,7 +275,7 @@ print(result)
 
 ```text
 # Result:
-कितना भी पकडलो फिसलता ज़रूर है, ये वक्त है जनाब बदलता ज़रूर है।
+मैं तो वक़्त से हारकर सर झुकाये खड़ा था और सामने खड़े लोग खुदको बादशाह समझने लगें!!
 ```
 
 ### meme
@@ -288,7 +290,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/ro1r4ssg0lrd1.png?width=640&crop=smart&auto=webp&s=de4f634c99b90e1555f8a58c20e27327ab14caa2
+https://preview.redd.it/pgs5dxbuzcsd1.png?width=1080&crop=smart&auto=webp&s=802bb85868a5cc18951f7676de5f2db9c3fa62ee
 ```
 
 ### morse_code
@@ -333,9 +335,9 @@ print(result)
 
 ```text
 # Result:
-I know but one freedom and that is the freedom of the mind.
+The superior man understands what is right; the inferior man understands what will sell.
 
-author - Antoine de Saint-Exupéry
+author - Confucius
 ```
 
 ### randomword
@@ -350,7 +352,7 @@ print(result)
 
 ```text
 # Result:
-flinted
+pacemaker
 ```
 
 ### stackoverflow_search
@@ -365,7 +367,7 @@ print(result)
 
 ```text
 # Result:
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1912, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32556, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1920, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['c#'], 'owner': {'account_id': 21664185, 'reputation': 43, 'user_id': 15982865, 'user_type': 'registered', 'profile_image': 'https://lh3.googleusercontent.com/a-/AOh14GiNqANr2EeHaVLi8BYrZEtJ4BD3L-XBs7aDPXoB=k-s256', 'display_name': 'user15982865', 'link': 'https://stackoverflow.com/users/15982865/user15982865'}, 'is_answered': True, 'view_count': 368, 'protected_date': 1622796455, 'answer_count': 1, 'score': -3, 'last_activity_date': 1622789829, 'creation_date': 1622181262, 'question_id': 67733551, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67733551/overriding-the-pokemon-name', 'title': 'Overriding the Pokemon name'}]
 ```
 
 ### wikipedia
@@ -395,7 +397,7 @@ print(result)
 
 ```text
 # Result:
-['inaptitude', 'equitablenesses', 'streamy', 'teazle', 'outpreening']
+['masculinized', 'pteridology', 'digressionary', 'earthlights', 'whapped']
 ```
 
 ### write
