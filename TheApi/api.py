@@ -700,5 +700,18 @@ class TheApi:
         else:
             raise ValueError("Error: {response.status_code}, {response.text}")
 
+    @staticmethod
+    def riddle() -> dict:
+        """
+        Fetch a random riddle from the riddles API.
+
+        Returns:
+            dict: The riddle data in JSON format.
+        """
+        response = requests.get("https://riddles-api.vercel.app/random")
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return {"error": "Could not fetch riddle"}
 
 api = TheApi()
