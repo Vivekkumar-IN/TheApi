@@ -714,4 +714,5 @@ class TheApi:
         else:
             return {"error": "Could not fetch riddle"}
 
+
 api = TheApi()
