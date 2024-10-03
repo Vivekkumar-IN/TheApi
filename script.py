@@ -114,9 +114,10 @@ def write_api_status_to_file(
 
 
 def main():
-    methods = inspect.getmembers(api, predicate=inspect.ismethod)
+    methods = inspect.getmembers(api, predicate=lambda m: inspect.ismethod(m) or inspect.isfunction(m))
     preface_content, function_statuses, readme_content = generate_api_status(methods)
     write_api_status_to_file(preface_content, function_statuses, readme_content)
+
 
 
 if __name__ == "__main__":
