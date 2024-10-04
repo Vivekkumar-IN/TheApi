@@ -82,7 +82,7 @@ print(result)
 
 ```text
 # Result:
-['https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg', 'https://staticg.sportskeeda.com/editor/2023/07/0c8e6-16887208209298-1920.jpg']
+['https://www.yourmomhatesthis.com/images/2016/12/Pokemon-Transparent.png', 'https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89', 'http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg']
 ```
 
 ### blackpink
@@ -127,7 +127,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/e75.jpg
+https://cdn2.thecatapi.com/images/_l8H9YK5_.jpg
 ```
 
 ### chatgpt
@@ -144,35 +144,47 @@ print(result)
 # Result:
 **Pokémon**
 
-**Concepto**
+Pokémon (ポケットモンスター, Poketto Monsutā, lit. "Pocket Monsters") is a media franchise created by Satoshi Tajiri in 1996. It is centered on fictional creatures called Pokémon, which humans known as Trainers catch, train, and battle against each other for sport. The franchise has since expanded into video games, anime television series, films, trading card games, toys, books, manga, and other merchandise.
 
-Pokémon es una franquicia de medios japonesa que comenzó como un videojuego de rol para Game Boy en 1996. Desde entonces, se ha expandido a una serie de otros videojuegos, series de anime, películas, manga, juguetes, juegos de cartas coleccionables y otros productos.
+**Video Games**
 
-**Pokémon**
+The Pokémon video game series is the core of the franchise. The first game, Pokémon Red and Green, was released in Japan in 1996. The series has since expanded to include over 100 games, which have been released on a variety of platforms, including the Nintendo Game Boy, Nintendo DS, Nintendo 3DS, Nintendo Switch, and mobile devices.
 
-Los Pokémon son criaturas ficticias que existen en el mundo del juego. Hay más de 1.000 especies diferentes de Pokémon, cada una con sus propias fortalezas, debilidades, habilidades y apariencia únicas.
+**Anime Television Series**
 
-Los Pokémon pueden capturar, entrenar y luchar entre sí los jugadores. También pueden intercambiarse entre jugadores.
+The Pokémon anime television series is based on the video games. The first series, Pokémon: The Original Series, premiered in Japan in 1997. The series has since aired over 1,000 episodes and has been translated into over 30 languages.
 
-**Juego**
+**Films**
 
-El juego de Pokémon gira en torno a la exploración, la captura y la lucha contra Pokémon. Los jugadores controlan a un personaje que viaja por el mundo del juego, encontrando y capturando Pokémon nuevos. Los jugadores también pueden entrenar a sus Pokémon para que se vuelvan más fuertes y luchar contra otros Pokémon en batallas por turnos.
+The Pokémon film series is based on the video games and anime television series. The first film, Pokémon: The First Movie - Mewtwo Strikes Back, was released in Japan in 1998. The series has since released 23 films, which have been translated into over 30 languages.
 
-**Series de anime**
+**Trading Card Games**
 
-La serie de anime Pokémon sigue las aventuras de Ash Ketchum, un joven entrenador Pokémon que sueña con convertirse en un Maestro Pokémon. Junto con sus amigos Misty y Brock, Ash viaja por el mundo Pokémon, conociendo nuevos Pokémon y enfrentándose a desafíos.
+The Pokémon Trading Card Game (TCG) is based on the video games and anime television series. The first TCG set was released in Japan in 1996. The TCG has since become one of the most popular trading card games in the world, with over 30 billion cards sold.
 
-**Películas**
+**Toys**
 
-Se han estrenado varias películas de Pokémon desde 1998. Las películas suelen contar historias independientes que no forman parte de la continuidad principal del juego o el anime.
+Pokémon toys have been released since the franchise's inception. The toys include action figures, plush dolls, and other collectibles.
 
-**Otros productos**
+**Books**
 
-Además de los videojuegos, la serie de anime y las películas, Pokémon también se ha expandido a una amplia gama de otros productos, incluidos manga, juguetes, juegos de cartas coleccionables y artículos de colección.
+Pokémon books have been released since the franchise's inception. The books include novelizations of the video games and anime television series, as well as original stories.
 
-**Impacto cultural**
+**Manga**
 
-Pokémon se ha convertido en una de las franquicias de medios más populares y exitosas de todos los tiempos. Ha vendido más de 380 millones de copias de videojuegos en todo el mundo y ha generado más de 100 mil millones de dólares en ingresos totales. La franquicia ha inspirado varios parques temáticos, atracciones y eventos en vivo.
+Pokémon manga has been released since the franchise's inception. The manga includes adaptations of the video games and anime television series, as well as original stories.
+
+**Other Merchandise**
+
+Pokémon merchandise includes a wide variety of products, such as clothing, accessories, food, and home goods.
+
+**Impact and Legacy**
+
+Pokémon is one of the most popular media franchises in the world. It has sold over 380 million copies of its video games, making it the second best-selling video game franchise of all time. The anime television series has been watched by over 1 billion people worldwide, making it one of the most popular anime franchises of all time. The trading card game has sold over 30 billion cards, making it one of the most popular trading card games in the world.
+
+Pokémon has had a significant impact on popular culture. It has been parodied and referenced in numerous other works of art, including films, television shows, and video games. Pokémon has also been the subject of academic study, with scholars examining its impact on children's development, the role of gender in the franchise, and its representation of Japanese culture.
+
+Pokémon is a global phenomenon that continues to entertain and inspire people of all ages. Its popularity is a testament to the timeless appeal of its characters, stories, and gameplay.
 ```
 
 ### dog
@@ -187,7 +199,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/08f5398d-7f89-47da-a5cd-1ed74967dc1f.jpg
+https://random.dog/4288af3e-a40e-495c-bd4a-1af06bee9c8c.jpg
 ```
 
 ### fox
@@ -202,7 +214,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=88
+https://randomfox.ca/?i=101
 ```
 
 ### gen_hashtag
@@ -232,7 +244,7 @@ print(result)
 
 ```text
 # Result:
-Don't assume anything is possible or impossible until you've asked the people who will be doing the work.
+Never buy cheap cling film.
 ```
 
 ### get_hindi_jokes
@@ -247,7 +259,7 @@ print(result)
 
 ```text
 # Result:
-अगर श्रीदेवी अपना एक शोरूम खोलें, तो वह कहेंगी,  अभी  ...बोनी.. का टाइम है! 😆🤣😋😉
+रास्ते पलट देते हैं हमारे नौजवान जब कोई आकर यह कह दे कि आगे पुलिस वाले चालान काट रहे हैं 😆🤣😋😉
 ```
 
 ### get_jokes
@@ -262,8 +274,7 @@ print(result)
 
 ```text
 # Result:
-My wife and I have reached the difficult decision that we do not want children.
-If anybody does, please just send me your contact details and we can drop them off tomorrow.
+To whoever stole my copy of Microsoft Office, I will find you. You have my Word!
 ```
 
 ### get_uselessfact
@@ -278,7 +289,7 @@ print(result)
 
 ```text
 # Result:
-Rubber bands last longer when refrigerated.  
+Every year 11,000 Americans injure themselves while trying out bizarre sexual positions.
 ```
 
 ### github_search
@@ -308,7 +319,7 @@ print(result)
 
 ```text
 # Result:
-सोचो तो आप बिल्कुल अकेले हो!! ठीक से सोचों तो यही सत्य है।
+जीवन की अधिकांश गलतियां जल्दबाजी में लिए गये फैंसलों के कारण होती है; सोचें, विश्लेषण करें और फिर उस पर काम करें।
 ```
 
 ### meme
@@ -323,7 +334,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/j9dowcg1dksd1.png?width=1080&crop=smart&auto=webp&s=13cc496e68fa7c05c21c02eb9fa217b007eb5de7
+https://preview.redd.it/d0flqoguufsd1.png?width=640&crop=smart&auto=webp&s=75c5209ddb1ec51ae255ba7525aa466ed4527cde
 ```
 
 ### morse_code
@@ -368,9 +379,9 @@ print(result)
 
 ```text
 # Result:
-The way we communicate with others and with ourselves ultimately determines the quality of our lives.
+Victory belongs to the most persevering.
 
-author - Tony Robbins
+author - Napoleon
 ```
 
 ### randomword
@@ -385,7 +396,7 @@ print(result)
 
 ```text
 # Result:
-cactuses
+piddling
 ```
 
 ### riddle
@@ -400,7 +411,7 @@ print(result)
 
 ```text
 # Result:
-{'riddle': 'If life gets tough, what do you have that you can always count on?', 'answer': 'Your fingers!'}
+{'riddle': "A sign on the barber's door says “I shave only those who do not shave themselves“. Does the barber shave himself?", 'answer': "There is no answer; it's a paradox. It cannot be made to work"}
 ```
 
 ### stackoverflow_search
@@ -460,7 +471,7 @@ print(result)
 
 ```text
 # Result:
-['brownnose', 'repulsing', 'koumis', 'depicts', 'pyrolyzate']
+['prickled', 'damselfishes', 'particulates', 'landmarks', 'spoofing']
 ```
 
 ### write
