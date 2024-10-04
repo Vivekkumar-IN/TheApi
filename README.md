@@ -44,14 +44,14 @@ This document provides a list of all functions in `TheApi`, along with their sta
 |---------------|--------|
 | [bing_image](#bing_image) | ✅ |
 | [blackpink](#blackpink) | ✅ |
-| [carbon](#carbon) | ✅ |
+| [carbon](#carbon) | ❌ |
 | [cat](#cat) | ✅ |
-| [chatgpt](#chatgpt) | ❌ |
+| [chatgpt](#chatgpt) | ✅ |
 | [dog](#dog) | ✅ |
 | [fox](#fox) | ✅ |
 | [gen_hashtag](#gen_hashtag) | ✅ |
 | [get_advice](#get_advice) | ✅ |
-| [get_hindi_jokes](#get_hindi_jokes) | ❌ |
+| [get_hindi_jokes](#get_hindi_jokes) | ✅ |
 | [get_jokes](#get_jokes) | ✅ |
 | [get_uselessfact](#get_uselessfact) | ✅ |
 | [github_search](#github_search) | ✅ |
@@ -66,7 +66,7 @@ This document provides a list of all functions in `TheApi`, along with their sta
 | [upload_image](#upload_image) | ❌ |
 | [wikipedia](#wikipedia) | ✅ |
 | [words](#words) | ✅ |
-| [write](#write) | ✅ |
+| [write](#write) | ❌ |
 
 ## Code Usage and Results:
 
@@ -82,7 +82,7 @@ print(result)
 
 ```text
 # Result:
-['http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg', 'https://i.pinimg.com/originals/a9/13/3b/a9133be45040e30406036a78d479bd36.png', 'https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg']
+['https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg', 'https://staticg.sportskeeda.com/editor/2023/07/0c8e6-16887208209298-1920.jpg']
 ```
 
 ### blackpink
@@ -106,13 +106,13 @@ https://envs.sh/0Ql.jpg
 # Usage:
 from TheApi import api
 
-result = api.carbon(code='pokemon')
+result = api.carbon(query='pokemon')
 print(result)
 ```
 
 ```text
-# Result:
-https://envs.sh/0Qk.png
+# Error:
+name 'self' is not defined
 ```
 
 ### cat
@@ -127,7 +127,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/eNCZ_R4yG.jpg
+https://cdn2.thecatapi.com/images/da1.jpg
 ```
 
 ### chatgpt
@@ -141,8 +141,39 @@ print(result)
 ```
 
 ```text
-# Error:
-'answer'
+# Result:
+**What is Pokémon?**
+
+Pokémon is a Japanese media franchise created by Satoshi Tajiri in 1996. It revolves around fictional creatures called "Pokémon", which can be captured, trained, and battled against each other. The franchise has grown into a global phenomenon, with video games, trading card games, animated television series, films, and various merchandise.
+
+**Pokémon Characteristics**
+
+* **Types:** Pokémon come in 18 different types, each with its own strengths and weaknesses against other types.
+* **Abilities:** Pokémon have special abilities that can affect battles, such as increasing their attack power or healing themselves.
+* **Evolutions:** Many Pokémon can evolve into more powerful forms through training or specific events.
+* **Legendary Pokémon:** Rare and powerful Pokémon that are often featured as story bosses or event rewards.
+* **Mythical Pokémon:** Similar to Legendary Pokémon, but even rarer and often associated with lore or special events.
+
+**Main Pokémon Video Games**
+
+* **Pokémon Red, Blue, and Green (1996):** The original Pokémon games for the Game Boy, which introduced the basic gameplay mechanics.
+* **Pokémon Gold, Silver, and Crystal (1999):** Sequels to Red, Blue, and Green, which introduced the second generation of Pokémon.
+* **Pokémon Ruby, Sapphire, and Emerald (2002):** Introduced the third generation of Pokémon and introduced the concept of double battles.
+* **Pokémon Diamond, Pearl, and Platinum (2006):** Set in the Sinnoh region, these games introduced the fourth generation of Pokémon.
+* **Pokémon Black, White, Black 2, and White 2 (2010-2012):** Introduced the fifth generation of Pokémon and explored themes of truth and ideals.
+* **Pokémon X and Y (2013):** Set in the Kalos region, these games introduced the sixth generation of Pokémon and featured 3D graphics for the first time.
+* **Pokémon Sun, Moon, Ultra Sun, and Ultra Moon (2016-2017):** Set in the Alola region, these games introduced the seventh generation of Pokémon and featured unique regional variants.
+* **Pokémon Sword and Shield (2019):** Set in the Galar region, these games introduced the eighth generation of Pokémon and featured the Dynamax and Gigantamax mechanics.
+
+**Other Pokémon Games**
+
+In addition to the main series, there are numerous spin-off games in the Pokémon franchise, including:
+
+* **Pokémon GO:** A mobile game that uses augmented reality technology to allow players to catch Pokémon in the real world.
+* **Pokémon Snap:** A photography game where players take pictures of Pokémon in the wild.
+* **Pokémon Stadium:** A fighting game where players can battle their Pokémon against each other.
+* **Pokémon Mystery Dungeon:** A dungeon-crawling RPG where players control Pokémon and explore randomly generated dungeons.
+* **Pokémon Masters EX:** A mobile strategy game where players team up with popular Pokémon trainers from the anime series.
 ```
 
 ### dog
@@ -157,7 +188,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/06ec5d00-6da0-46cb-ab4a-f6ea1e6a461f.gif
+https://random.dog/a38f99d2-e34b-43d9-8f7e-318bc8277a17.JPG
 ```
 
 ### fox
@@ -172,7 +203,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=17
+https://randomfox.ca/?i=5
 ```
 
 ### gen_hashtag
@@ -202,7 +233,7 @@ print(result)
 
 ```text
 # Result:
-Repeat people's names when you meet them.
+Never pay full price for a sofa at DFS.
 ```
 
 ### get_hindi_jokes
@@ -217,7 +248,7 @@ print(result)
 
 ```text
 # Result:
-'status'
+सुबह बैंक में एकाउंट खुलवाने गया बोले दो प्रतिष्ठित लोगो का रेफरेन्स दो मैंने  कहा–विजय माल्या नीरव मोदी चार लोग घसीट के बाहर तक छोड़ने आए।
 ```
 
 ### get_jokes
@@ -232,9 +263,11 @@ print(result)
 
 ```text
 # Result:
-Two reasons I don't give money to homeless people.
-1) They are going to spend it all on drugs and alcohol
-2) I am going to spend it all on drugs and alcohol.
+Four engineers get into a car. The car won't start.
+The Mechanical engineer says "It's a broken starter".
+The Electrical engineer says "Dead battery".
+The Chemical engineer says "Impurities in the gasoline".
+The IT engineer says "Hey guys, I have an idea: How about we all get out of the car and get back in".
 ```
 
 ### get_uselessfact
@@ -249,7 +282,7 @@ print(result)
 
 ```text
 # Result:
-The crack of a whip is actually a tiny sonic boom, since the tip breaks the sound barrier.
+111,111,111 x 111,111,111 = 12,345,678,987,654,321
 ```
 
 ### github_search
@@ -264,7 +297,7 @@ print(result)
 
 ```text
 # Result:
-[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7530, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4740, 'forks_count': 2771}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3864, 'forks_count': 1540}]
+[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7530, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4743, 'forks_count': 2773}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3865, 'forks_count': 1540}]
 ```
 
 ### hindi_quote
@@ -279,7 +312,7 @@ print(result)
 
 ```text
 # Result:
-बहुत करीब से अनजान बनकर गुजरा है वो, जो बहुत दूर से पहचान लिया करता था कभी..
+पसन्द आया तो दिल में… नही तो दिमाग में भी नहीं!!
 ```
 
 ### meme
@@ -294,7 +327,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/qiqlw2upd7sd1.gif?width=320&crop=smart&format=png8&s=8feb89b684b7db0de137a444d49527dd4c480780
+https://preview.redd.it/bmo1fgpioosd1.png?width=1080&crop=smart&auto=webp&s=3f6e52ba7050058891ce240bf27abcff03499984
 ```
 
 ### morse_code
@@ -339,9 +372,9 @@ print(result)
 
 ```text
 # Result:
-A short saying often contains much wisdom.
+The thing that is disliked by me is also disliked by others. Since I dislike this thing, how can I inflict it on someone else?
 
-author - Sophocles
+author - The Buddha
 ```
 
 ### randomword
@@ -356,7 +389,7 @@ print(result)
 
 ```text
 # Result:
-eventless
+hennery
 ```
 
 ### riddle
@@ -371,7 +404,7 @@ print(result)
 
 ```text
 # Result:
-{'riddle': '{ I GO UP AND DOWN.... BUT NEVER MOVE. WHO AM I?', 'answer': 'STAIRS'}
+{'riddle': 'How many of each type of animal did Moses take on the Ark?', 'answer': 'None, it was Noah'}
 ```
 
 ### stackoverflow_search
@@ -386,7 +419,7 @@ print(result)
 
 ```text
 # Result:
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1921, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32562, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1924, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32564, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
 ```
 
 ### upload_image
@@ -431,7 +464,7 @@ print(result)
 
 ```text
 # Result:
-['apicultures', 'oils', 'enablers', 'lamp', 'fawnier']
+['footloose', 'meridian', 'flexing', 'cachinnate', 'photophase']
 ```
 
 ### write
@@ -445,8 +478,8 @@ print(result)
 ```
 
 ```text
-# Result:
-https://envs.sh/0Q7.jpg
+# Error:
+name 'self' is not defined
 ```
 
 
