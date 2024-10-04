@@ -59,11 +59,11 @@ def generate_api_status(methods):
 
             if status == "✅":
                 readme_content.append(
-                    f"### {name}\n\n```python\n# Usage:\nfrom TheApi import api\n\nresult = api.{name}({params_str})\nprint(result)\n```\n\n```text\n# Result:\n{result}\n```\n"
+                    f"### {name}\n\n```python\nfrom TheApi import api\n\nresult = api.{name}({params_str})\nprint(result)\n```\n\n```text\n{result}\n```\n"
                 )
             else:
                 readme_content.append(
-                    f"### {name}\n\n```python\n# Usage:\nfrom TheApi import api\n\nresult = api.{name}({params_str})\nprint(result)\n```\n\n```text\n# Error:\n{result}\n```\n"
+                    f"### {name}\n\n```python\nfrom TheApi import api\n\nresult = api.{name}({params_str})\nprint(result)\n```\n\n```text\n# Error:\n{result}\n```\n"
                 )
 
         function_statuses.append((name, status))
