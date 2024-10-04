@@ -42,8 +42,8 @@ class TheApi:
             return response.json()[0]
         else:
             return "None"
-    @staticmethod
-    def write(text):
+
+    def write(seld, text):
         tryimg = "https://graph.org/file/1f8d00177ac2429b101b9.jpg"
         tryresp = requests.get(tryimg)
         img = Image.open(BytesIO(tryresp.content))
@@ -81,8 +81,8 @@ class TheApi:
             upload_path = self.upload_image(file)
 
             return upload_path
-    @staticmethod
-    def carbon(query):
+
+    def carbon(self, query):
         url = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x63\x61\x72\x62\x6f\x6e\x61\x72\x61\x2e\x73\x6f\x6c\x6f\x70\x6f\x76\x2e\x64\x65\x76\x2f\x61\x70\x69\x2f\x63\x6f\x6f\x6b"
 
         response = requests.post(url, json={"code": query})
