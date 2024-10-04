@@ -44,7 +44,7 @@ This document provides a list of all functions in `TheApi`, along with their sta
 |---------------|--------|
 | [bing_image](#bing_image) | ✅ |
 | [blackpink](#blackpink) | ✅ |
-| [carbon](#carbon) | ❌ |
+| [carbon](#carbon) | ✅ |
 | [cat](#cat) | ✅ |
 | [chatgpt](#chatgpt) | ✅ |
 | [dog](#dog) | ✅ |
@@ -82,7 +82,7 @@ print(result)
 
 ```text
 # Result:
-['https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg', 'https://staticg.sportskeeda.com/editor/2023/07/0c8e6-16887208209298-1920.jpg']
+['https://www.yourmomhatesthis.com/images/2016/12/Pokemon-Transparent.png', 'https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89', 'http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg']
 ```
 
 ### blackpink
@@ -111,8 +111,8 @@ print(result)
 ```
 
 ```text
-# Error:
-name 'self' is not defined
+# Result:
+https://envs.sh/0Qk.png
 ```
 
 ### cat
@@ -127,7 +127,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/da1.jpg
+https://cdn2.thecatapi.com/images/3Xe_cTMsx.jpg
 ```
 
 ### chatgpt
@@ -142,38 +142,18 @@ print(result)
 
 ```text
 # Result:
-**What is Pokémon?**
-
-Pokémon is a Japanese media franchise created by Satoshi Tajiri in 1996. It revolves around fictional creatures called "Pokémon", which can be captured, trained, and battled against each other. The franchise has grown into a global phenomenon, with video games, trading card games, animated television series, films, and various merchandise.
-
-**Pokémon Characteristics**
-
-* **Types:** Pokémon come in 18 different types, each with its own strengths and weaknesses against other types.
-* **Abilities:** Pokémon have special abilities that can affect battles, such as increasing their attack power or healing themselves.
-* **Evolutions:** Many Pokémon can evolve into more powerful forms through training or specific events.
-* **Legendary Pokémon:** Rare and powerful Pokémon that are often featured as story bosses or event rewards.
-* **Mythical Pokémon:** Similar to Legendary Pokémon, but even rarer and often associated with lore or special events.
-
-**Main Pokémon Video Games**
-
-* **Pokémon Red, Blue, and Green (1996):** The original Pokémon games for the Game Boy, which introduced the basic gameplay mechanics.
-* **Pokémon Gold, Silver, and Crystal (1999):** Sequels to Red, Blue, and Green, which introduced the second generation of Pokémon.
-* **Pokémon Ruby, Sapphire, and Emerald (2002):** Introduced the third generation of Pokémon and introduced the concept of double battles.
-* **Pokémon Diamond, Pearl, and Platinum (2006):** Set in the Sinnoh region, these games introduced the fourth generation of Pokémon.
-* **Pokémon Black, White, Black 2, and White 2 (2010-2012):** Introduced the fifth generation of Pokémon and explored themes of truth and ideals.
-* **Pokémon X and Y (2013):** Set in the Kalos region, these games introduced the sixth generation of Pokémon and featured 3D graphics for the first time.
-* **Pokémon Sun, Moon, Ultra Sun, and Ultra Moon (2016-2017):** Set in the Alola region, these games introduced the seventh generation of Pokémon and featured unique regional variants.
-* **Pokémon Sword and Shield (2019):** Set in the Galar region, these games introduced the eighth generation of Pokémon and featured the Dynamax and Gigantamax mechanics.
-
-**Other Pokémon Games**
-
-In addition to the main series, there are numerous spin-off games in the Pokémon franchise, including:
-
-* **Pokémon GO:** A mobile game that uses augmented reality technology to allow players to catch Pokémon in the real world.
-* **Pokémon Snap:** A photography game where players take pictures of Pokémon in the wild.
-* **Pokémon Stadium:** A fighting game where players can battle their Pokémon against each other.
-* **Pokémon Mystery Dungeon:** A dungeon-crawling RPG where players control Pokémon and explore randomly generated dungeons.
-* **Pokémon Masters EX:** A mobile strategy game where players team up with popular Pokémon trainers from the anime series.
+* **Bulbasaur:** A Grass/Poison-type Pokémon that resembles a small, green dinosaur. It has a bulb on its back that contains seeds, which it can use to attack enemies.
+* **Charmander:** A Fire-type Pokémon that resembles a small, orange lizard. It has a flame on its tail that it can use to attack enemies.
+* **Squirtle:** A Water-type Pokémon that resembles a small, blue turtle. It has a water gun on its back that it can use to attack enemies.
+* **Pikachu:** An Electric-type Pokémon that resembles a small, yellow mouse. It has a lightning bolt-shaped tail that it can use to attack enemies.
+* **Eevee:** A Normal-type Pokémon that resembles a small, brown fox. It has the ability to evolve into eight different forms, depending on the conditions in which it is raised.
+* **Mewtwo:** A Psychic-type Pokémon that is considered to be one of the most powerful Pokémon in existence. It is a genetically engineered Pokémon that was created by scientists.
+* **Celebi:** A Grass/Psychic-type Pokémon that resembles a small, green fairy. It is said to be able to travel through time.
+* **Jirachi:** A Steel/Psychic-type Pokémon that resembles a small, yellow star. It is said to be able to grant wishes.
+* **Deoxys:** A Psychic-type Pokémon that resembles a strange, alien-like creature. It has four different forms, each with different abilities.
+* **Uxie:** A Psychic-type Pokémon that resembles a small, green creature with a large head. It is said to be able to control minds.
+* **Mesprit:** A Psychic-type Pokémon that resembles a small, blue creature with a large head. It is said to be able to control emotions.
+* **Azelf:** A Psychic-type Pokémon that resembles a small, pink creature with a large head. It is said to be able to control willpower.
 ```
 
 ### dog
@@ -188,7 +168,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/a38f99d2-e34b-43d9-8f7e-318bc8277a17.JPG
+https://random.dog/bee1c745-f82f-4025-a3ec-728f0e7961fe.JPG
 ```
 
 ### fox
@@ -203,7 +183,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=5
+https://randomfox.ca/?i=81
 ```
 
 ### gen_hashtag
@@ -233,7 +213,7 @@ print(result)
 
 ```text
 # Result:
-Never pay full price for a sofa at DFS.
+If you are feeling down, try holding a pencil between your top lip and your nose for five minutes.
 ```
 
 ### get_hindi_jokes
@@ -248,7 +228,7 @@ print(result)
 
 ```text
 # Result:
-सुबह बैंक में एकाउंट खुलवाने गया बोले दो प्रतिष्ठित लोगो का रेफरेन्स दो मैंने  कहा–विजय माल्या नीरव मोदी चार लोग घसीट के बाहर तक छोड़ने आए।
+मोबाइल कंपनी वालों को ऐसा मोबाइल बनाना चाहिए की तीसरी बार ...और बताओ... बोलते ही कॉल काट हो जाए.. 😆🤣😋😉
 ```
 
 ### get_jokes
@@ -263,11 +243,8 @@ print(result)
 
 ```text
 # Result:
-Four engineers get into a car. The car won't start.
-The Mechanical engineer says "It's a broken starter".
-The Electrical engineer says "Dead battery".
-The Chemical engineer says "Impurities in the gasoline".
-The IT engineer says "Hey guys, I have an idea: How about we all get out of the car and get back in".
+My wife is really mad at the fact that I have no sense of direction.
+So I packed up my stuff and right.
 ```
 
 ### get_uselessfact
@@ -282,7 +259,7 @@ print(result)
 
 ```text
 # Result:
-111,111,111 x 111,111,111 = 12,345,678,987,654,321
+The average person will accidentally eat just under a pound of insects every year.
 ```
 
 ### github_search
@@ -312,7 +289,7 @@ print(result)
 
 ```text
 # Result:
-पसन्द आया तो दिल में… नही तो दिमाग में भी नहीं!!
+अपने लक्ष्य के लिए जोशीले और जुनूनी बनिए..विश्वास रखिए, परिश्रम का फल सफलता हि है…!
 ```
 
 ### meme
@@ -327,7 +304,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/bmo1fgpioosd1.png?width=1080&crop=smart&auto=webp&s=3f6e52ba7050058891ce240bf27abcff03499984
+https://preview.redd.it/pnekfgo7zmsd1.png?width=1080&crop=smart&auto=webp&s=36621f32d436a1ac1624fc583d7c1e48dc75acc4
 ```
 
 ### morse_code
@@ -372,9 +349,9 @@ print(result)
 
 ```text
 # Result:
-The thing that is disliked by me is also disliked by others. Since I dislike this thing, how can I inflict it on someone else?
+The only way to tell the truth is to speak with kindness. Only the words of a loving man can be heard.
 
-author - The Buddha
+author - Henry David Thoreau
 ```
 
 ### randomword
@@ -389,7 +366,7 @@ print(result)
 
 ```text
 # Result:
-hennery
+weeweeing
 ```
 
 ### riddle
@@ -404,7 +381,7 @@ print(result)
 
 ```text
 # Result:
-{'riddle': 'How many of each type of animal did Moses take on the Ark?', 'answer': 'None, it was Noah'}
+{'riddle': 'There is an ancient invention still used in some parts of the world today that allows people to see through walls. What is it?', 'answer': 'A window'}
 ```
 
 ### stackoverflow_search
@@ -464,7 +441,7 @@ print(result)
 
 ```text
 # Result:
-['footloose', 'meridian', 'flexing', 'cachinnate', 'photophase']
+['muddiness', 'somnolently', 'shorty', 'chroma', 'depiction']
 ```
 
 ### write
