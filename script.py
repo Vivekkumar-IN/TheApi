@@ -11,7 +11,6 @@ def test_method(method, *args):
         status = "❌"
         return status, str(e)
 
-
 def generate_api_status(methods):
     function_statuses = []
     readme_content = []
@@ -27,7 +26,16 @@ def generate_api_status(methods):
         # Add the function name with a hyperlink to the usage section
         preface_content.append(f"{function_count}. [{name}](#{name.lower()})")
 
-        if len(signature.parameters) == 0:
+        # Special case for 'upload_image' function
+        if name == "upload_image":
+            status = "✅"
+            result = "You will get the URL for the image."
+
+            # Hardcode the usage for upload_image
+            readme_content.append(
+                f"### {name}\n\n```python\n# Usage:\nfrom TheApi import api\n\nresult = api.upload_image(file_path='file/to/image')\nprint(result)\n```\n\n```text\n# Result:\n{result}\n```\n"
+            )
+        elif len(signature.parameters) == 0:
             status, result = test_method(method)
             readme_content.append(
                 f"### {name}\n\n```python\n# Usage:\nfrom TheApi import api\n\nresult = api.{name}()\nprint(result)\n```\n\n```text\n# Result:\n{result}\n```\n"
