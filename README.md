@@ -66,7 +66,7 @@ This document provides a list of all functions in `TheApi`, along with their sta
 | [upload_image](#upload_image) | ❌ |
 | [wikipedia](#wikipedia) | ✅ |
 | [words](#words) | ✅ |
-| [write](#write) | ❌ |
+| [write](#write) | ✅ |
 
 ## Code Usage and Results:
 
@@ -82,7 +82,7 @@ print(result)
 
 ```text
 # Result:
-['https://www.yourmomhatesthis.com/images/2016/12/Pokemon-Transparent.png', 'https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89', 'http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg']
+['https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg', 'https://staticg.sportskeeda.com/editor/2023/07/0c8e6-16887208209298-1920.jpg']
 ```
 
 ### blackpink
@@ -127,7 +127,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/3Xe_cTMsx.jpg
+https://cdn2.thecatapi.com/images/e75.jpg
 ```
 
 ### chatgpt
@@ -142,18 +142,37 @@ print(result)
 
 ```text
 # Result:
-* **Bulbasaur:** A Grass/Poison-type Pokémon that resembles a small, green dinosaur. It has a bulb on its back that contains seeds, which it can use to attack enemies.
-* **Charmander:** A Fire-type Pokémon that resembles a small, orange lizard. It has a flame on its tail that it can use to attack enemies.
-* **Squirtle:** A Water-type Pokémon that resembles a small, blue turtle. It has a water gun on its back that it can use to attack enemies.
-* **Pikachu:** An Electric-type Pokémon that resembles a small, yellow mouse. It has a lightning bolt-shaped tail that it can use to attack enemies.
-* **Eevee:** A Normal-type Pokémon that resembles a small, brown fox. It has the ability to evolve into eight different forms, depending on the conditions in which it is raised.
-* **Mewtwo:** A Psychic-type Pokémon that is considered to be one of the most powerful Pokémon in existence. It is a genetically engineered Pokémon that was created by scientists.
-* **Celebi:** A Grass/Psychic-type Pokémon that resembles a small, green fairy. It is said to be able to travel through time.
-* **Jirachi:** A Steel/Psychic-type Pokémon that resembles a small, yellow star. It is said to be able to grant wishes.
-* **Deoxys:** A Psychic-type Pokémon that resembles a strange, alien-like creature. It has four different forms, each with different abilities.
-* **Uxie:** A Psychic-type Pokémon that resembles a small, green creature with a large head. It is said to be able to control minds.
-* **Mesprit:** A Psychic-type Pokémon that resembles a small, blue creature with a large head. It is said to be able to control emotions.
-* **Azelf:** A Psychic-type Pokémon that resembles a small, pink creature with a large head. It is said to be able to control willpower.
+**Pokémon**
+
+**Concepto**
+
+Pokémon es una franquicia de medios japonesa que comenzó como un videojuego de rol para Game Boy en 1996. Desde entonces, se ha expandido a una serie de otros videojuegos, series de anime, películas, manga, juguetes, juegos de cartas coleccionables y otros productos.
+
+**Pokémon**
+
+Los Pokémon son criaturas ficticias que existen en el mundo del juego. Hay más de 1.000 especies diferentes de Pokémon, cada una con sus propias fortalezas, debilidades, habilidades y apariencia únicas.
+
+Los Pokémon pueden capturar, entrenar y luchar entre sí los jugadores. También pueden intercambiarse entre jugadores.
+
+**Juego**
+
+El juego de Pokémon gira en torno a la exploración, la captura y la lucha contra Pokémon. Los jugadores controlan a un personaje que viaja por el mundo del juego, encontrando y capturando Pokémon nuevos. Los jugadores también pueden entrenar a sus Pokémon para que se vuelvan más fuertes y luchar contra otros Pokémon en batallas por turnos.
+
+**Series de anime**
+
+La serie de anime Pokémon sigue las aventuras de Ash Ketchum, un joven entrenador Pokémon que sueña con convertirse en un Maestro Pokémon. Junto con sus amigos Misty y Brock, Ash viaja por el mundo Pokémon, conociendo nuevos Pokémon y enfrentándose a desafíos.
+
+**Películas**
+
+Se han estrenado varias películas de Pokémon desde 1998. Las películas suelen contar historias independientes que no forman parte de la continuidad principal del juego o el anime.
+
+**Otros productos**
+
+Además de los videojuegos, la serie de anime y las películas, Pokémon también se ha expandido a una amplia gama de otros productos, incluidos manga, juguetes, juegos de cartas coleccionables y artículos de colección.
+
+**Impacto cultural**
+
+Pokémon se ha convertido en una de las franquicias de medios más populares y exitosas de todos los tiempos. Ha vendido más de 380 millones de copias de videojuegos en todo el mundo y ha generado más de 100 mil millones de dólares en ingresos totales. La franquicia ha inspirado varios parques temáticos, atracciones y eventos en vivo.
 ```
 
 ### dog
@@ -168,7 +187,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/bee1c745-f82f-4025-a3ec-728f0e7961fe.JPG
+https://random.dog/08f5398d-7f89-47da-a5cd-1ed74967dc1f.jpg
 ```
 
 ### fox
@@ -183,7 +202,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=81
+https://randomfox.ca/?i=88
 ```
 
 ### gen_hashtag
@@ -213,7 +232,7 @@ print(result)
 
 ```text
 # Result:
-If you are feeling down, try holding a pencil between your top lip and your nose for five minutes.
+Don't assume anything is possible or impossible until you've asked the people who will be doing the work.
 ```
 
 ### get_hindi_jokes
@@ -228,7 +247,7 @@ print(result)
 
 ```text
 # Result:
-मोबाइल कंपनी वालों को ऐसा मोबाइल बनाना चाहिए की तीसरी बार ...और बताओ... बोलते ही कॉल काट हो जाए.. 😆🤣😋😉
+अगर श्रीदेवी अपना एक शोरूम खोलें, तो वह कहेंगी,  अभी  ...बोनी.. का टाइम है! 😆🤣😋😉
 ```
 
 ### get_jokes
@@ -243,8 +262,8 @@ print(result)
 
 ```text
 # Result:
-My wife is really mad at the fact that I have no sense of direction.
-So I packed up my stuff and right.
+My wife and I have reached the difficult decision that we do not want children.
+If anybody does, please just send me your contact details and we can drop them off tomorrow.
 ```
 
 ### get_uselessfact
@@ -259,7 +278,7 @@ print(result)
 
 ```text
 # Result:
-The average person will accidentally eat just under a pound of insects every year.
+Rubber bands last longer when refrigerated.  
 ```
 
 ### github_search
@@ -289,7 +308,7 @@ print(result)
 
 ```text
 # Result:
-अपने लक्ष्य के लिए जोशीले और जुनूनी बनिए..विश्वास रखिए, परिश्रम का फल सफलता हि है…!
+सोचो तो आप बिल्कुल अकेले हो!! ठीक से सोचों तो यही सत्य है।
 ```
 
 ### meme
@@ -304,7 +323,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/pnekfgo7zmsd1.png?width=1080&crop=smart&auto=webp&s=36621f32d436a1ac1624fc583d7c1e48dc75acc4
+https://preview.redd.it/j9dowcg1dksd1.png?width=1080&crop=smart&auto=webp&s=13cc496e68fa7c05c21c02eb9fa217b007eb5de7
 ```
 
 ### morse_code
@@ -349,9 +368,9 @@ print(result)
 
 ```text
 # Result:
-The only way to tell the truth is to speak with kindness. Only the words of a loving man can be heard.
+The way we communicate with others and with ourselves ultimately determines the quality of our lives.
 
-author - Henry David Thoreau
+author - Tony Robbins
 ```
 
 ### randomword
@@ -366,7 +385,7 @@ print(result)
 
 ```text
 # Result:
-weeweeing
+cactuses
 ```
 
 ### riddle
@@ -381,7 +400,7 @@ print(result)
 
 ```text
 # Result:
-{'riddle': 'There is an ancient invention still used in some parts of the world today that allows people to see through walls. What is it?', 'answer': 'A window'}
+{'riddle': 'If life gets tough, what do you have that you can always count on?', 'answer': 'Your fingers!'}
 ```
 
 ### stackoverflow_search
@@ -441,7 +460,7 @@ print(result)
 
 ```text
 # Result:
-['muddiness', 'somnolently', 'shorty', 'chroma', 'depiction']
+['brownnose', 'repulsing', 'koumis', 'depicts', 'pyrolyzate']
 ```
 
 ### write
@@ -455,8 +474,8 @@ print(result)
 ```
 
 ```text
-# Error:
-name 'self' is not defined
+# Result:
+https://envs.sh/0Q7.jpg
 ```
 
 
