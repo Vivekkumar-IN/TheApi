@@ -33,7 +33,7 @@ def generate_api_status(methods):
 
             # Hardcode the usage for upload_image
             readme_content.append(
-                f"### {name}\n\n```python\nfrom TheApi import api\n\nresult = api.upload_image(file_path='file/to/image')\nprint(result)\n```\n\n```text\n# Result:\n{result}\n```\n"
+                f"### {name}\n\n```python\nfrom TheApi import api\n\nresult = api.upload_image(file_path='file/to/image')\nprint(result)\n```\n\n```text\n{result}\n```\n"
             )
         elif len(signature.parameters) == 0:
             status, result = test_method(method)
