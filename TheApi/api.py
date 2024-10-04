@@ -20,27 +20,8 @@ class TheApi:
     def __init__(self):
         pass
 
-    def quote(self):
-        """Fetches a random quote from an API and returns it along with the author.
-
-        Returns:
-        str: A formatted string containing the quote and its author.
-
-        EXAMPLE:
-
-        from TheApi import api
-
-        quote = api.quote()
-
-        print(quote)
-
-
-        Results
-
-        Beware lest you lose the substance by grasping at the shadow.
-
-        author - Aesop"""
-
+    @staticmethod
+    def quote():
         qut = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x61\x70\x69\x2e\x71\x75\x6f\x74\x61\x62\x6c\x65\x2e\x69\x6f\x2f\x72\x61\x6e\x64\x6f\x6d"
         a = requests.get(qut, verify=False)
         b = a.json()
@@ -48,26 +29,8 @@ class TheApi:
         author = b["author"]
         return f"{quote}\n\nauthor - {author}"
 
-    def hindi_quote(self):
-        """Get a random hindi quote from
-
-                Returns:
-                str: A formatted string containing the hindi quote .
-
-                EXAMPLE:
-
-                from TheApi import api
-
-                quote = api.hindi_quote()
-
-                print(quote)
-
-
-                Results
-
-
-        माता-पिता जानते हैं कि, वो रह तो रहे हैं बेटों के घर में मगर वैसे नहीं जैसे बेटे रहते थे उनके घर में!
-        """
+    @staticmethod
+    def hindi_quote():
         response = requests.get("https://hindi-quotes.vercel.app/random")
         return response.json()["quote"]
 
@@ -79,8 +42,8 @@ class TheApi:
             return response.json()[0]
         else:
             return "None"
-
-    def write(self, text):
+    @staticmethod
+    def write(text):
         tryimg = "https://graph.org/file/1f8d00177ac2429b101b9.jpg"
         tryresp = requests.get(tryimg)
         img = Image.open(BytesIO(tryresp.content))
@@ -118,11 +81,11 @@ class TheApi:
             upload_path = self.upload_image(file)
 
             return upload_path
-
-    def carbon(self, code):
+    @staticmethod
+    def carbon(query):
         url = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x63\x61\x72\x62\x6f\x6e\x61\x72\x61\x2e\x73\x6f\x6c\x6f\x70\x6f\x76\x2e\x64\x65\x76\x2f\x61\x70\x69\x2f\x63\x6f\x6f\x6b"
 
-        response = requests.post(url, json={"code": code})
+        response = requests.post(url, json={"code": query})
         image = BytesIO(response.content)
 
         a = self.randomword()
@@ -133,16 +96,20 @@ class TheApi:
 
         if os.path.exists(image.name):
             upload_path = self.upload_image(image.name)
+            os.remove(image.name)
             return upload_path
 
-    def chatgpt(self, query):
+    @staticmethod
+    def chatgpt(query):
         response = requests.get(
-            f"https://chatgpt.apiitzasuraa.workers.dev/?question={query}"
+            f"https://gemini.apiitzasuraa.workers.dev/?prompt={query}"
         )
         if response.status_code == 200:
-            return response.json()["answer"]
+            results = response.json()
+            return results['candidates'][0]['content']['parts'][0]['text']
 
-    def get_advice(self):
+    @staticmethod
+    def get_advice():
         try:
             results = requests.get("https://api.adviceslip.com/advice").json()["slip"][
                 "advice"
@@ -151,7 +118,8 @@ class TheApi:
         except requests.exceptions.RequestException as e:
             return e
 
-    def get_jokes(self, amount=1):
+    @staticmethod
+    def get_jokes(amount=1):
         if not isinstance(amount, int):
             raise ValueError("The amount must be an integer.")
 
@@ -172,20 +140,22 @@ class TheApi:
             )
             return formatted_jokes
 
-    def get_hindi_jokes(self):
+    @staticmethod
+    def get_hindi_jokes():
         JOKE_API_ENDPOINT = "https://hindi-jokes-api.onrender.com/jokes?api_key=93eeccc9d663115eba73839b3cd9"
         response = requests.get(JOKE_API_ENDPOINT).json()
         if response["status"]:
             results = response["jokeContent"]
             return results
-
-    def get_uselessfact(self):
+    @staticmethod
+    def get_uselessfact():
         results = requests.get(
             "https://uselessfacts.jsph.pl/api/v2/facts/random"
         ).json()["text"]
         return results
 
-    def gen_hashtag(self, text, similiar: bool = False):
+    @staticmethod
+    def gen_hashtag(text, similiar: bool = False):
         url = "https://all-hashtag.com/library/contents/ajax_generator.php"
 
         data = {
