@@ -43,7 +43,7 @@ class TheApi:
         else:
             return "None"
 
-    def write(seld, text):
+    def write(self, text):
         tryimg = "https://graph.org/file/1f8d00177ac2429b101b9.jpg"
         tryresp = requests.get(tryimg)
         img = Image.open(BytesIO(tryresp.content))
