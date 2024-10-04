@@ -63,7 +63,7 @@ This document provides a list of all functions in `TheApi`, along with their sta
 | [randomword](#randomword) | ✅ |
 | [riddle](#riddle) | ✅ |
 | [stackoverflow_search](#stackoverflow_search) | ✅ |
-| [upload_image](#upload_image) | ❌ |
+| [upload_image](#upload_image) | ✅ |
 | [wikipedia](#wikipedia) | ✅ |
 | [words](#words) | ✅ |
 | [write](#write) | ✅ |
@@ -127,7 +127,7 @@ print(result)
 
 ```text
 # Result:
-https://cdn2.thecatapi.com/images/_l8H9YK5_.jpg
+https://cdn2.thecatapi.com/images/MTkzMTc2OA.jpg
 ```
 
 ### chatgpt
@@ -142,49 +142,88 @@ print(result)
 
 ```text
 # Result:
-**Pokémon**
+**Types:**
 
-Pokémon (ポケットモンスター, Poketto Monsutā, lit. "Pocket Monsters") is a media franchise created by Satoshi Tajiri in 1996. It is centered on fictional creatures called Pokémon, which humans known as Trainers catch, train, and battle against each other for sport. The franchise has since expanded into video games, anime television series, films, trading card games, toys, books, manga, and other merchandise.
+* Normal
+* Fire
+* Water
+* Grass
+* Electric
+* Psychic
+* Fighting
+* Rock
+* Ground
+* Flying
+* Ice
+* Dragon
+* Ghost
+* Steel
+* Dark
+* Fairy
 
-**Video Games**
+**Generations:**
 
-The Pokémon video game series is the core of the franchise. The first game, Pokémon Red and Green, was released in Japan in 1996. The series has since expanded to include over 100 games, which have been released on a variety of platforms, including the Nintendo Game Boy, Nintendo DS, Nintendo 3DS, Nintendo Switch, and mobile devices.
+* Generation I (Red, Blue, Green, Yellow)
+* Generation II (Gold, Silver, Crystal)
+* Generation III (Ruby, Sapphire, Emerald, FireRed, LeafGreen)
+* Generation IV (Diamond, Pearl, Platinum, HeartGold, SoulSilver)
+* Generation V (Black, White, Black 2, White 2)
+* Generation VI (X, Y)
+* Generation VII (Sun, Moon, Ultra Sun, Ultra Moon)
+* Generation VIII (Sword, Shield)
+* Generation IX (Scarlet, Violet)
 
-**Anime Television Series**
+**Legendary Pokemon:**
 
-The Pokémon anime television series is based on the video games. The first series, Pokémon: The Original Series, premiered in Japan in 1997. The series has since aired over 1,000 episodes and has been translated into over 30 languages.
+* Mewtwo
+* Mew
+* Lugia
+* Ho-Oh
+* Groudon
+* Kyogre
+* Rayquaza
+* Deoxys
+* Celebi
+* Jirachi
+* Regirock
+* Regice
+* Registeel
+* Latios
+* Latias
+* Kyurem
+* Reshiram
+* Zekrom
+* Xerneas
+* Yveltal
+* Zygarde
+* Necrozma
+* Eternatus
+* Calyrex
+* Glastrier
+* Spectrier
+* Koraidon
+* Miraidon
 
-**Films**
+**Starter Pokemon:**
 
-The Pokémon film series is based on the video games and anime television series. The first film, Pokémon: The First Movie - Mewtwo Strikes Back, was released in Japan in 1998. The series has since released 23 films, which have been translated into over 30 languages.
+* **Generation I:** Charmander, Squirtle, Bulbasaur
+* **Generation II:** Cyndaquil, Totodile, Chikorita
+* **Generation III:** Torchic, Mudkip, Treecko
+* **Generation IV:** Piplup, Chimchar, Turtwig
+* **Generation V:** Oshawott, Snivy, Tepig
+* **Generation VI:** Fennekin, Froakie, Chespin
+* **Generation VII:** Rowlet, Litten, Popplio
+* **Generation VIII:** Scorbunny, Sobble, Grookey
+* **Generation IX:** Sprigatito, Fuecoco, Quaxly
 
-**Trading Card Games**
+**Notable Features:**
 
-The Pokémon Trading Card Game (TCG) is based on the video games and anime television series. The first TCG set was released in Japan in 1996. The TCG has since become one of the most popular trading card games in the world, with over 30 billion cards sold.
-
-**Toys**
-
-Pokémon toys have been released since the franchise's inception. The toys include action figures, plush dolls, and other collectibles.
-
-**Books**
-
-Pokémon books have been released since the franchise's inception. The books include novelizations of the video games and anime television series, as well as original stories.
-
-**Manga**
-
-Pokémon manga has been released since the franchise's inception. The manga includes adaptations of the video games and anime television series, as well as original stories.
-
-**Other Merchandise**
-
-Pokémon merchandise includes a wide variety of products, such as clothing, accessories, food, and home goods.
-
-**Impact and Legacy**
-
-Pokémon is one of the most popular media franchises in the world. It has sold over 380 million copies of its video games, making it the second best-selling video game franchise of all time. The anime television series has been watched by over 1 billion people worldwide, making it one of the most popular anime franchises of all time. The trading card game has sold over 30 billion cards, making it one of the most popular trading card games in the world.
-
-Pokémon has had a significant impact on popular culture. It has been parodied and referenced in numerous other works of art, including films, television shows, and video games. Pokémon has also been the subject of academic study, with scholars examining its impact on children's development, the role of gender in the franchise, and its representation of Japanese culture.
-
-Pokémon is a global phenomenon that continues to entertain and inspire people of all ages. Its popularity is a testament to the timeless appeal of its characters, stories, and gameplay.
+* Turn-based combat system
+* Type advantages and disadvantages
+* Ability to catch and train Pokemon
+* Breeding and evolution of Pokemon
+* Trading and battling with other players
+* Diverse regions to explore, each with its own unique ecosystem and Pokemon species
 ```
 
 ### dog
@@ -199,7 +238,7 @@ print(result)
 
 ```text
 # Result:
-https://random.dog/4288af3e-a40e-495c-bd4a-1af06bee9c8c.jpg
+https://random.dog/50cd9b61-fbb7-41aa-a69a-e474d8c5095d.jpg
 ```
 
 ### fox
@@ -214,7 +253,7 @@ print(result)
 
 ```text
 # Result:
-https://randomfox.ca/?i=101
+https://randomfox.ca/?i=77
 ```
 
 ### gen_hashtag
@@ -244,7 +283,7 @@ print(result)
 
 ```text
 # Result:
-Never buy cheap cling film.
+Don't take life too seriously.
 ```
 
 ### get_hindi_jokes
@@ -259,7 +298,8 @@ print(result)
 
 ```text
 # Result:
-रास्ते पलट देते हैं हमारे नौजवान जब कोई आकर यह कह दे कि आगे पुलिस वाले चालान काट रहे हैं 😆🤣😋😉
+एक दिन मुझसे लिपटकर, समय भी रोयेगा !.. 
+कहेगा :  तू तो बंदा सही था, मैं ही खराब चल रहा था ।
 ```
 
 ### get_jokes
@@ -274,7 +314,7 @@ print(result)
 
 ```text
 # Result:
-To whoever stole my copy of Microsoft Office, I will find you. You have my Word!
+I went to the zoo the other day. There was only a dog in it – it was a shihtzu.
 ```
 
 ### get_uselessfact
@@ -289,7 +329,7 @@ print(result)
 
 ```text
 # Result:
-Every year 11,000 Americans injure themselves while trying out bizarre sexual positions.
+In a test performed by Canadian scientists, using various different styles of music, it was determined that chickens lay the most eggs when pop music was played.
 ```
 
 ### github_search
@@ -319,7 +359,7 @@ print(result)
 
 ```text
 # Result:
-जीवन की अधिकांश गलतियां जल्दबाजी में लिए गये फैंसलों के कारण होती है; सोचें, विश्लेषण करें और फिर उस पर काम करें।
+तू गुज़र जाये करीब से; वो भी मुलाकात से कम नही..
 ```
 
 ### meme
@@ -334,7 +374,7 @@ print(result)
 
 ```text
 # Result:
-https://preview.redd.it/d0flqoguufsd1.png?width=640&crop=smart&auto=webp&s=75c5209ddb1ec51ae255ba7525aa466ed4527cde
+https://preview.redd.it/yg01u8gpphsd1.png?width=640&crop=smart&auto=webp&s=d6c4bba154b5b5ca4a9f660577c21fc64570850b
 ```
 
 ### morse_code
@@ -379,9 +419,9 @@ print(result)
 
 ```text
 # Result:
-Victory belongs to the most persevering.
+Constant kindness can accomplish much. As the sun makes ice melt, kindness causes misunderstanding, mistrust, and hostility to evaporate.
 
-author - Napoleon
+author - Albert Schweitzer
 ```
 
 ### randomword
@@ -396,7 +436,7 @@ print(result)
 
 ```text
 # Result:
-piddling
+tithable
 ```
 
 ### riddle
@@ -411,7 +451,7 @@ print(result)
 
 ```text
 # Result:
-{'riddle': "A sign on the barber's door says “I shave only those who do not shave themselves“. Does the barber shave himself?", 'answer': "There is no answer; it's a paradox. It cannot be made to work"}
+{'riddle': 'Joe bets Tony $100 that he can predict the score of the football game before it starts. Tony agrees, but loses the bet. Why did Tony lose the bet?', 'answer': 'Joe said the score would be 0-0 and he was right. “Before”any football game starts, the score is always 0-0'}
 ```
 
 ### stackoverflow_search
@@ -426,7 +466,7 @@ print(result)
 
 ```text
 # Result:
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1924, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32564, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1924, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['c#'], 'owner': {'account_id': 21664185, 'reputation': 43, 'user_id': 15982865, 'user_type': 'registered', 'profile_image': 'https://lh3.googleusercontent.com/a-/AOh14GiNqANr2EeHaVLi8BYrZEtJ4BD3L-XBs7aDPXoB=k-s256', 'display_name': 'user15982865', 'link': 'https://stackoverflow.com/users/15982865/user15982865'}, 'is_answered': True, 'view_count': 368, 'protected_date': 1622796455, 'answer_count': 1, 'score': -3, 'last_activity_date': 1622789829, 'creation_date': 1622181262, 'question_id': 67733551, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67733551/overriding-the-pokemon-name', 'title': 'Overriding the Pokemon name'}]
 ```
 
 ### upload_image
@@ -435,13 +475,13 @@ print(result)
 # Usage:
 from TheApi import api
 
-result = api.upload_image(file_path='pokemon')
+result = api.upload_image(file_path='file/to/image')
 print(result)
 ```
 
 ```text
-# Error:
-File not found: 'pokemon' - Ensure the file path is correct.
+# Result:
+You will get the URL for the image.
 ```
 
 ### wikipedia
@@ -471,7 +511,7 @@ print(result)
 
 ```text
 # Result:
-['prickled', 'damselfishes', 'particulates', 'landmarks', 'spoofing']
+['plaguer', 'biked', 'zippers', 'tulipwoods', 'troupers']
 ```
 
 ### write
