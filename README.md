@@ -125,7 +125,7 @@ print(result)
 ```
 
 ```text
-https://cdn2.thecatapi.com/images/adh.jpg
+https://cdn2.thecatapi.com/images/MTg0OTAxMw.jpg
 ```
 
 ### chatgpt
@@ -140,38 +140,21 @@ print(result)
 
 ```text
 # Result:
-**Pokémon** (ポケットモンスター Poketto Monsutā) is a media franchise created by Satoshi Tajiri and Ken Sugimori. The franchise began as a pair of video games for the Game Boy in 1996 and has since expanded to include video games, anime, trading cards, toys, and other merchandise.
+Pokémon, short for Pocket Monsters, is a role-playing video game franchise created by Satoshi Tajiri for Nintendo and Game Freak. It first emerged in Japan in 1996 with the release of the Pokémon Red and Green video games for the Game Boy.
 
-The Pokémon video games revolve around the player's quest to become a Pokémon Master by capturing, training, and battling Pokémon. There are over 900 different Pokémon species, each with its own unique type and abilities. The games have been released on a variety of Nintendo platforms, including the Game Boy, Nintendo DS, and Nintendo Switch.
+The franchise has since expanded into a global phenomenon, encompassing video games, trading card games, animated television series, movies, and merchandise. Pokémon games are among the best-selling video games of all time, with over 300 million copies sold worldwide.
 
-The Pokémon anime is an animated television series that follows the adventures of Ash Ketchum, a young Pokémon trainer from Pallet Town. The anime has been airing since 1997 and has been translated into over 30 languages.
+The Pokémon franchise is based on the concept of capturing, training, and battling creatures known as Pokémon. Players take on the role of a Pokémon Trainer and travel around a fictional world, capturing and battling Pokémon with the goal of becoming the very best.
 
-The Pokémon trading card game is a collectible card game that features Pokémon from the video games and anime. The cards are used to battle against other players. The game has been released in over 70 countries and has sold over 30 billion cards worldwide.
+There are over 800 different species of Pokémon, each with its unique abilities and characteristics. Pokémon are classified into 18 different types, including Normal, Fire, Water, Grass, Electric, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Rock, Ghost, Dragon, Steel, Dark, and Fairy.
 
-Pokémon is one of the most popular media franchises in the world. The video games, anime, and trading cards have been enjoyed by millions of people around the globe.
+Pokémon games have been released on a variety of Nintendo consoles, including the Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, Nintendo 3DS, Wii, Nintendo Switch, and mobile devices.
 
-**Here are some of the most popular Pokémon:**
+The Pokémon animated television series has been airing since 1997 and has become one of the most popular animated television shows of all time. The series follows the adventures of Ash Ketchum, a young Pokémon Trainer who dreams of becoming a Pokémon Master.
 
-* Pikachu
-* Charizard
-* Mewtwo
-* Snorlax
-* Bulbasaur
-* Squirtle
-* Eevee
-* Gengar
-* Lucario
-* Greninja
+The Pokémon trading card game was first released in Japan in 1996 and has since become one of the best-selling trading card games of all time. The game is based on the video games and features cards depicting Pokémon characters and attacks.
 
-**Pokémon has also been featured in a number of other products, including:**
-
-* Toys
-* Clothing
-* Food
-* Home goods
-* Theme parks
-
-The Pokémon franchise continues to grow and evolve, with new video games, anime, and merchandise being released all the time. The franchise is a global phenomenon that has captured the imaginations of people of all ages.
+The Pokémon franchise has been praised for its innovative gameplay, captivating characters, and universal appeal. It has been credited with helping to popularize video games and anime around the world.
 ```
 
 ### dog
@@ -184,7 +167,7 @@ print(result)
 ```
 
 ```text
-https://random.dog/a38f99d2-e34b-43d9-8f7e-318bc8277a17.JPG
+https://random.dog/054dce82-51c9-49d5-bc7c-4d76e8288d33.jpg
 ```
 
 ### fox
@@ -197,7 +180,7 @@ print(result)
 ```
 
 ```text
-https://randomfox.ca/?i=37
+https://randomfox.ca/?i=5
 ```
 
 ### gen_hashtag
@@ -225,7 +208,7 @@ print(result)
 ```
 
 ```text
-Be brave. Even if you're not, pretend to be. No one can tell the difference.
+If you have the chance, take it!
 ```
 
 ### get_hindi_jokes
@@ -238,7 +221,7 @@ print(result)
 ```
 
 ```text
-लड़के किसी भी ऐप में लड़कियों से बात कर सकते है... मगर इनकी आत्मा को शांति WhatsApp number मांग कर ही मिलती है...... 
+मेरी Serious पोस्ट पर भी दांत फाड़ कर हंसने वाले  फलानो और फलानियो यमराज तुम्हें नर्क में गन्ने की मशीन से निकालेगा😆🤣😋😉 
 ```
 
 ### get_jokes
@@ -253,7 +236,7 @@ print(result)
 
 ```text
 # Result:
-Programming is 10% science, 20% ingenuity, and 70% getting the ingenuity to work with the science.
+Women are like KFC, once you're done with the breasts and thighs, you just have a greasy box to put your bone in.
 ```
 
 ### get_uselessfact
@@ -266,7 +249,7 @@ print(result)
 ```
 
 ```text
-Canada makes up 6.67 percent of the Earth`s land area
+The storage capacity of human brain exceeds 4 Terabytes.
 ```
 
 ### github_search
@@ -294,7 +277,7 @@ print(result)
 ```
 
 ```text
-अगर नियत अच्छी हो तो नसीब कभी बुरा नहीं होता..!
+तूफ़ान में कभी ताश का घर नहीं बनता रोने से कभी बिगड़ा मुक़द्दर नहीं संवरता दुनिया को जितने का हौसला रखो..एक बार हारने से कोई फ़क़िर नहीं बनता और एक बार जीतने से कोई सिकंदर नहीं बनता!!
 ```
 
 ### meme
@@ -307,7 +290,7 @@ print(result)
 ```
 
 ```text
-https://preview.redd.it/7xasqwn2sbsd1.png?width=1080&crop=smart&auto=webp&s=d7490361f3d895488447178c8929888b553e5b2e
+https://preview.redd.it/2xw6g36ampsd1.png?width=320&crop=smart&auto=webp&s=9f362f031029b27ecc15e0a4054d50feac44481c
 ```
 
 ### morse_code
@@ -350,9 +333,9 @@ print(result)
 ```
 
 ```text
-If you change the way you look at things, the things you look at change.
+The smaller the mind the greater the conceit.
 
-author - Wayne Dyer
+author - Aesop
 ```
 
 ### randomword
@@ -365,7 +348,7 @@ print(result)
 ```
 
 ```text
-triggered
+fertility
 ```
 
 ### riddle
@@ -378,7 +361,7 @@ print(result)
 ```
 
 ```text
-{'riddle': 'I am the fountain from which no one can drink. For many I am considered a necessary link. Like gold to all I am sought for, But my continued death brings wealth for all to want more. .What am I?', 'answer': 'Oil'}
+{'riddle': 'I have holes on the top and bottom. I have holes on my left and on my right. And I have holes in the middle, yet I still hold water. What am I?', 'answer': "Clean your sink I'm a Sponge"}
 ```
 
 ### stackoverflow_search
@@ -436,7 +419,7 @@ print(result)
 
 ```text
 # Result:
-['tapioca', 'overgirding', 'gargoyled', 'skylarks', 'sucker']
+['hiccuping', 'rubble', 'nonsuccesses', 'solicitant', 'megalomaniacs']
 ```
 
 ### write
