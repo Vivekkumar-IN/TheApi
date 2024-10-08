@@ -102,11 +102,11 @@ class TheApi:
     @staticmethod
     def chatgpt(query):
         response = requests.get(
-            f"https://gemini.apiitzasuraa.workers.dev/?prompt={query}"
+            f"https://chatwithai.codesearch.workers.dev/chat={query}&model=chatgpt"
         )
         if response.status_code == 200:
             results = response.json()
-            return results['candidates'][0]['content']['parts'][0]['text']
+            return results['result']
 
     @staticmethod
     def get_advice():
