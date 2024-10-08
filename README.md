@@ -80,7 +80,7 @@ print(result)
 ```
 
 ```text
-['https://www.yourmomhatesthis.com/images/2016/12/Pokemon-Transparent.png', 'https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89', 'http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg']
+['http://wallpapercave.com/wp/LTuTwOZ.jpg', 'https://assets.vg247.com/current/2016/07/pokemon_sun_an_moon_rockruff.jpg', 'https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg']
 ```
 
 ### blackpink
@@ -119,7 +119,7 @@ print(result)
 ```
 
 ```text
-https://cdn2.thecatapi.com/images/bg1.jpg
+https://cdn2.thecatapi.com/images/9st.jpg
 ```
 
 ### chatgpt
@@ -132,33 +132,29 @@ print(result)
 ```
 
 ```text
-**Pokémon**
+Pokémon is a popular media franchise created by Satoshi Tajiri and developed by Game Freak. It began in 1996 with the release of the first video games for the Nintendo Game Boy. Since then, it has grown to include:
 
-Pokémon (ポケットモンスター, Poketto Monsutā) is a Japanese media franchise created by Satoshi Tajiri for Nintendo and Game Freak. The franchise began as a pair of video games for the Game Boy, released in Japan in 1996 as Pokémon Red and Green. It has since become the second-best-selling video game franchise of all time, with over 380 million copies sold worldwide. The franchise includes video games, trading card games, anime television series, films, and merchandise.
+1. Video games: Main series RPGs and various spin-offs
+2. Anime series and movies
+3. Trading card game
+4. Manga and comics
+5. Merchandise (toys, clothing, accessories, etc.)
 
-**Gameplay**
+Key aspects of Pokémon include:
 
-The central gameplay of the Pokémon video games revolves around capturing, battling, and trading Pokémon creatures. Players control a Pokémon Trainer who travels around the game world, capturing Pokémon using Poké Balls and training them to become stronger. Pokémon can be used to battle against other Trainers' Pokémon, and can also be traded with other players.
+1. Creatures called "Pokémon" with various abilities and types
+2. Trainers who catch, train, and battle with Pokémon
+3. The goal of becoming a Pokémon Master
+4. Exploration of fictional regions
+5. Collecting and battling mechanics
 
-**Pokémon**
+Some popular Pokémon characters include:
+- Pikachu
+- Charizard
+- Mewtwo
+- Eevee
 
-There are over 1,000 different species of Pokémon, each with its own unique abilities and stats. Pokémon are divided into 18 types, which include fire, water, grass, electric, and psychic. Each type has its own strengths and weaknesses against other types.
-
-**Anime**
-
-The Pokémon anime television series has been airing in Japan since 1997 and has become one of the most popular anime series in the world. The series follows the adventures of Ash Ketchum, a young Pokémon Trainer from Pallet Town, as he travels around the world in search of becoming a Pokémon Master.
-
-**Films**
-
-There have been 23 Pokémon films released in Japan, with 22 of them receiving an English-language release. The films typically feature Ash and his friends traveling to a new region and encountering new Pokémon and characters.
-
-**Merchandise**
-
-The Pokémon franchise has generated a vast amount of merchandise, including toys, clothing, plush toys, and trading cards. The Pokémon Trading Card Game is one of the best-selling trading card games in the world, with over 25 billion cards sold worldwide.
-
-**Cultural Impact**
-
-Pokémon has had a major impact on popular culture around the world. The franchise has been credited with popularizing anime and manga outside of Japan, and has also helped to create a global community of fans. Pokémon has also been used to promote social and environmental issues, and has been cited as a source of inspiration for many people.
+The franchise has had a significant cultural impact and continues to be popular worldwide, with new games, anime seasons, and merchandise regularly released.
 ```
 
 ### dog
@@ -171,7 +167,7 @@ print(result)
 ```
 
 ```text
-https://random.dog/ea60dc85-258d-471b-8299-3fdb1c9e8319.jpg
+https://random.dog/d90f1ccb-71f8-4713-b50c-79620139278e.jpeg
 ```
 
 ### fox
@@ -184,7 +180,7 @@ print(result)
 ```
 
 ```text
-https://randomfox.ca/?i=81
+https://randomfox.ca/?i=116
 ```
 
 ### gen_hashtag
@@ -210,7 +206,7 @@ print(result)
 ```
 
 ```text
-When you're looking up at birds flying overhead, keep your mouth closed.
+Don't always rely on your comforts.
 ```
 
 ### get_hindi_jokes
@@ -223,7 +219,8 @@ print(result)
 ```
 
 ```text
-मेरी Serious पोस्ट पर भी दांत फाड़ कर हंसने वाले  फलानो और फलानियो यमराज तुम्हें नर्क में गन्ने की मशीन से निकालेगा😆🤣😋😉 
+एक क्रिकेट टीम के जब सारे प्लेयर आउट हो जाते हैं, तो सारे मच्छर भाग जाते हैं।  
+सोचो सोचो क्यों... क्योंकि टीम  ...ऑल आउट.. है न 😆🤣😋😉
 ```
 
 ### get_jokes
@@ -236,7 +233,8 @@ print(result)
 ```
 
 ```text
-Programming is 10% science, 20% ingenuity, and 70% getting the ingenuity to work with the science.
+My grandfather says I'm too reliant on technology.
+I called him a hypocrite and unplugged his life support.
 ```
 
 ### get_uselessfact
@@ -249,7 +247,7 @@ print(result)
 ```
 
 ```text
-The mask worn by Michael Myers in the original "Halloween" was actually a Captain Kirk mask painted white.
+Thomas Edison, acclaimed inventor of the light bulb, was afraid of the dark.
 ```
 
 ### github_search
@@ -262,7 +260,7 @@ print(result)
 ```
 
 ```text
-[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7530, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4743, 'forks_count': 2773}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3865, 'forks_count': 1540}]
+[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7531, 'forks_count': 2819}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4753, 'forks_count': 2779}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3864, 'forks_count': 1540}]
 ```
 
 ### hindi_quote
@@ -275,7 +273,7 @@ print(result)
 ```
 
 ```text
-किसी में कोई कमी दिखाई दे तो उससे बात करें मगर हर किसी में कमी दिखाई दें तो खुद से बात करें
+किताब के सादे पन्ने सी शख़्सियत मेरी; नज़रंदाज कर देते है अक्सर पढ़ने वालें…
 ```
 
 ### meme
@@ -288,7 +286,7 @@ print(result)
 ```
 
 ```text
-https://preview.redd.it/qtlllbx75qsd1.gif?width=1080&crop=smart&format=png8&s=e33a70a19070b727094fd615b19c203271225546
+https://preview.redd.it/rgq7ihfdcetd1.png?width=1080&crop=smart&auto=webp&s=0d7e0f522461304c7f1151329b08a059486d85eb
 ```
 
 ### morse_code
@@ -327,9 +325,9 @@ print(result)
 ```
 
 ```text
-If one does not know to which port is sailing, no wind is favorable.
+Share your smile with the world. It's a symbol of friendship and peace.
 
-author - Seneca the Younger
+author - Christie Brinkley
 ```
 
 ### randomword
@@ -342,7 +340,7 @@ print(result)
 ```
 
 ```text
-goddamndest
+agrologies
 ```
 
 ### riddle
@@ -355,7 +353,7 @@ print(result)
 ```
 
 ```text
-{'riddle': "What's the greatest worldwide use of cowhide?", 'answer': 'To cover cows'}
+{'riddle': 'As a whole, I am both safe and secure. Behead me, and I become a place of meeting. Behead me again, and I am the partner of ready. Restore me, and I become the domain of beasts. What am I?', 'answer': 'A Stable'}
 ```
 
 ### stackoverflow_search
@@ -368,7 +366,7 @@ print(result)
 ```
 
 ```text
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1924, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['c#'], 'owner': {'account_id': 21664185, 'reputation': 43, 'user_id': 15982865, 'user_type': 'registered', 'profile_image': 'https://lh3.googleusercontent.com/a-/AOh14GiNqANr2EeHaVLi8BYrZEtJ4BD3L-XBs7aDPXoB=k-s256', 'display_name': 'user15982865', 'link': 'https://stackoverflow.com/users/15982865/user15982865'}, 'is_answered': True, 'view_count': 368, 'protected_date': 1622796455, 'answer_count': 1, 'score': -3, 'last_activity_date': 1622789829, 'creation_date': 1622181262, 'question_id': 67733551, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67733551/overriding-the-pokemon-name', 'title': 'Overriding the Pokemon name'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 116, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1927, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32572, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
 ```
 
 ### upload_image
@@ -407,7 +405,7 @@ print(result)
 ```
 
 ```text
-['spacinesses', 'hints', 'homeschooled', 'movable', 'antiforeclosure']
+['grandmothers', 'disbelieve', 'phantasmagoria', 'combust', 'populaces']
 ```
 
 ### write
