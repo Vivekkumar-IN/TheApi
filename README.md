@@ -80,7 +80,7 @@ print(result)
 ```
 
 ```text
-['https://blog.looglebiz.com/wp-content/uploads/2022/10/og-default-image.jpeg', 'https://redtri.com/wp-content/uploads/2019/02/screen-shot-2019-03-01-at-5.26.39-pm.png?is-pending-load=1', 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_CA/games/switch/p/pokemon-violet-switch/hero']
+['http://wallpapercave.com/wp/LTuTwOZ.jpg', 'https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg', 'https://assets.vg247.com/current/2016/07/pokemon_sun_an_moon_rockruff.jpg']
 ```
 
 ### blackpink
@@ -119,7 +119,7 @@ print(result)
 ```
 
 ```text
-https://cdn2.thecatapi.com/images/RIRLq-8sp.jpg
+https://cdn2.thecatapi.com/images/A_G4pf_T3.jpg
 ```
 
 ### chatgpt
@@ -145,7 +145,7 @@ print(result)
 ```
 
 ```text
-https://random.dog/6f6ea89d-5144-49c8-8f2a-12ba7798b8bf.jpg
+https://random.dog/8f24262b-8d28-4dd6-8989-8868a1bab715.mp4
 ```
 
 ### fox
@@ -158,7 +158,7 @@ print(result)
 ```
 
 ```text
-https://randomfox.ca/?i=48
+https://randomfox.ca/?i=83
 ```
 
 ### gen_hashtag
@@ -184,7 +184,7 @@ print(result)
 ```
 
 ```text
-Fail. Fail again. Fail better.
+Lemon and salt works wonders on tarnished brass.
 ```
 
 ### get_hindi_jokes
@@ -197,7 +197,7 @@ print(result)
 ```
 
 ```text
-एक एयरलाइन्स ने एक योजना शुरू की आप टिकट खरीदें – साथ में आपकी पत्नी का टिकट मुफ्त ! इस योजना में भारी सफलता मिलने के बाद कम्पनी ने सारी पत्नियों को पत्र लिख कर पूछा -यात्रा कैसी रही ? सभी का एक जैसा ही जवाब आया… कौन सी यात्रा ?? 😂 😂
+अगर आपको अभी भी गर्लफ्रेंड नहीं मिली है तो हमसे संपर्क करें हम देंगे आपको चुल्लू भर पानी 😆🤣😋😉 
 ```
 
 ### get_jokes
@@ -210,7 +210,8 @@ print(result)
 ```
 
 ```text
-My ex had an accident. I told the paramedics the wrong blood type for her. She'll finally experience what rejection is really like.
+My wife and I have reached the difficult decision that we do not want children.
+If anybody does, please just send me your contact details and we can drop them off tomorrow.
 ```
 
 ### get_uselessfact
@@ -223,7 +224,7 @@ print(result)
 ```
 
 ```text
-Most collect calls are made on father`s day.
+A duck`s quack doesn`t echo, and no one knows why.
 ```
 
 ### github_search
@@ -236,7 +237,7 @@ print(result)
 ```
 
 ```text
-[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7531, 'forks_count': 2817}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4764, 'forks_count': 2783}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3864, 'forks_count': 1542}]
+[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7530, 'forks_count': 2815}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4769, 'forks_count': 2783}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3864, 'forks_count': 1542}]
 ```
 
 ### hindi_quote
@@ -249,7 +250,7 @@ print(result)
 ```
 
 ```text
-लाख दलदल हो पांव जमाए रखिए, हात खाली ही सही उपर उठाये रखिए, कौन कहता है छलनी में पानी रुक नहीं सकता, बर्फ बनने तक हौसला बनाये रखिए।
+पहचान तो सबसे है हमारी, लेकिन भरोसा सिर्फ खुद पर हैं..
 ```
 
 ### meme
@@ -262,7 +263,7 @@ print(result)
 ```
 
 ```text
-https://preview.redd.it/0lsqqxf8npud1.png?width=960&crop=smart&auto=webp&s=26a5bb5a0f031a1117e56dce59fe85135f8866c1
+https://preview.redd.it/cid23pebxavd1.gif?width=640&crop=smart&format=png8&s=50fb84efe87be7d9b5da5ce34717e48a8dca5ef0
 ```
 
 ### morse_code
@@ -301,9 +302,9 @@ print(result)
 ```
 
 ```text
-Nothing in life is to be feared. It is only to be understood.
+The extreme limit of wisdom, that's what the public calls madness.
 
-author - Marie Curie
+author - Jean Cocteau
 ```
 
 ### randomword
@@ -316,7 +317,7 @@ print(result)
 ```
 
 ```text
-None
+inheritable
 ```
 
 ### riddle
@@ -329,7 +330,7 @@ print(result)
 ```
 
 ```text
-{'riddle': 'What can be heard and caught but never seen?', 'answer': 'A Remark'}
+{'riddle': 'A pregnant lady named her children: Dominique, Regis, Michelle, Fawn, Sophie and Lara. What will she name her next child? Jessica, Katie, Abby or Tilly?', 'answer': 'Sound of music  Tilly. She seems to follow the scale Do, Re, Me, Fa, So, La, and then Ti'}
 ```
 
 ### stackoverflow_search
@@ -342,7 +343,7 @@ print(result)
 ```
 
 ```text
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 117, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1931, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32585, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 117, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1935, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32593, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
 ```
 
 ### upload_image
@@ -368,7 +369,7 @@ print(result)
 ```
 
 ```text
-{'title': 'Pokémon', 'summary': 'Pokémon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pokémon, a large variety of species endowed with special powers. The franchise\'s target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pokémon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed "Pokémania". By 2002, the craze had ended, after which Pokémon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pokémon Go, an augmented reality game developed by Niantic. Pokémon has since been estimated to be the world\'s highest-grossing media franchise and one of the best-selling video game franchises.\nPokémon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pokémon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pokémon Company (TPC) in 1998 to manage the Pokémon property within Asia. The Pokémon anime series and films are co-owned by Shogakukan. Since 2009, The Pokémon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n', 'url': 'https://en.wikipedia.org/?curid=23745', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png'}
+{'title': 'Pokémon', 'summary': 'Pokémon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pokémon, a large variety of species endowed with special powers. The franchise\'s target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pokémon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed "Pokémania". By 2002, the craze had ended, after which Pokémon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pokémon Go, an augmented reality game developed by Niantic. Pokémon has since been estimated to be the world\'s highest-grossing media franchise and one of the best-selling video game franchises.\nPokémon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pokémon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pokémon Company (TPC) in 1998 to manage the Pokémon property within Asia. The Pokémon anime series and films are co-owned by Shogakukan. Since 2009, The Pokémon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.', 'url': 'https://en.wikipedia.org/?curid=23745', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png'}
 ```
 
 ### words
@@ -381,7 +382,7 @@ print(result)
 ```
 
 ```text
-[]
+['arraigns', 'meted', 'loppers', 'patch', 'pretyping']
 ```
 
 ### write
