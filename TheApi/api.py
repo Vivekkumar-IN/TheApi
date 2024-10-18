@@ -102,7 +102,7 @@ class TheApi:
     @staticmethod
     def chatgpt(query):
         response = requests.get(
-            f"https://chatwithai.codesearch.workers.dev/chat={query}&model=chatgpt"
+            f"https://chatwithai.codesearch.workers.dev/?chat={query}&model=gpt-4o"
         )
         if response.status_code == 200:
             results = response.json()
