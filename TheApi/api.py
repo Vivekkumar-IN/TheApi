@@ -1,53 +1,252 @@
-import inspect
 import os
 import re
+import random
+import string
 import textwrap
 from io import BytesIO
-from typing import List, Union
+from typing import Union
 
+import aiohttp
 import requests
 from bs4 import BeautifulSoup
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageOps, ImageDraw, ImageFont
 
-from .errors import InvalidAmountError
-from .functions import MORSE_CODE_DICT
-import urllib3
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+from .func import FilePath
 
 
 class TheApi:
     def __init__(self):
-        pass
+        self.base_urls = {
+            "carbon": "https://carbonara.solopov.dev/api/cook",
+            "quote": "https://api.quotable.io/random",
+            "hindi_quote": "https://hindi-quotes.vercel.app/random",
+            "random_word": "https://random-word-api.herokuapp.com/word",
+            "image": "https://graph.org/file/1f8d00177ac2429b101b9.jpg",
+            "font": "https://github.com/google/fonts/raw/main/ofl/poetsenone/PoetsenOne-Regular.ttf",
+            "upload": "https://envs.sh",
+            "chatgpt": "https://chatwithai.codesearch.workers.dev/",
+            "advice": "https://api.adviceslip.com/advice",
+            "jokes": "https://v2.jokeapi.dev/joke/Any",
+            "hindi_jokes": "https://hindi-jokes-api.onrender.com/jokes?api_key=93eeccc9d663115eba73839b3cd9",
+            "useless_fact": "https://uselessfacts.jsph.pl/api/v2/facts/random",
+            "hashtag_generator": "https://all-hashtag.com/hashtag-generator.php",
+            "wikipedia_search": "https://en.wikipedia.org/w/api.php",
+            "words": "https://random-word-api.herokuapp.com/word",
+            "cat": "https://api.thecatapi.com/v1/images/search",
+            "dog": "https://random.dog/woof.json",
+            "pypi": "https://pypi.org/pypi",
+            "meme": "https://meme-api.com/gimme",
+            "fox": "https://randomfox.ca/floof/",
+            "bing_image": "https://www.bing.com/images/async",
+        }
 
-    @staticmethod
-    def quote():
-        qut = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x61\x70\x69\x2e\x71\x75\x6f\x74\x61\x62\x6c\x65\x2e\x69\x6f\x2f\x72\x61\x6e\x64\x6f\x6d"
-        a = requests.get(qut, verify=False)
-        b = a.json()
-        quote = b["content"]
-        author = b["author"]
-        return f"{quote}\n\nauthor - {author}"
+    async def _make_request(
+        self,
+        url: str,
+        method: str = "GET",
+        params: dict = None,
+        data: dict = None,
+        files: dict = None,
+        headers: dict = None,
+        verify: bool = True,
+    ) -> Union[dict, str]:
+        """
+        Makes an asynchronous HTTP request to the specified URL with optional parameters, headers, and data.
 
-    @staticmethod
-    def hindi_quote():
-        response = requests.get("https://hindi-quotes.vercel.app/random")
-        return response.json()["quote"]
+        Args:
+            url (str): The URL to which the request is sent.
+            method (str, optional): The HTTP method to use (e.g., "GET", "POST"). Defaults to "GET".
+            params (dict, optional): Query parameters to include in the request. Defaults to None.
+            data (dict, optional): Data to include in the request body (for POST requests). Defaults to None.
+            files (dict, optional): Files to upload in the request (if applicable). Defaults to None.
+            headers (dict, optional): Headers to include in the request. Defaults to None.
+            verify (bool, optional): Whether to verify SSL certificates. Defaults to True.
 
-    def randomword(self):
-        url = f"https://random-word-api.herokuapp.com/word?number=1"
-        response = requests.get(url)
+        Returns:
+            Union[dict, str]: The JSON response as a dictionary if the response is JSON-formatted,
+                              otherwise returns the response as a string.
 
-        if response.status_code == 200:
-            return response.json()[0]
+        Raises:
+            ValueError: If the request fails due to a client error.
+        """
+        async with aiohttp.ClientSession() as session:
+            try:
+                async with session.request(
+                    method=method,
+                    url=url,
+                    params=params,
+                    data=data,
+                    headers=headers,
+                    ssl=verify,
+                ) as response:
+                    response.raise_for_status()
+                    if "application/json" in response.headers.get("Content-Type", ""):
+                        return await response.json()
+                    return await response.text()
+            except aiohttp.ClientError as e:
+                raise ValueError(f"Request failed: {str(e)}")
+
+    def _rnd_str(self):
+        """
+        Generates a random string of 8 alphanumeric characters.
+
+        Returns:
+            str: A random 8-character alphanumeric string.
+        """
+        random_str = "".join(random.choices(string.ascii_letters + string.digits, k=8))
+        return random_str
+
+    async def chatgpt(self, query):
+        """
+        Sends a query to the ChatGPT API and retrieves the response.
+
+        Args:
+            query (str): The query or prompt for ChatGPT.
+
+        Returns:
+            str: The response generated by ChatGPT.
+        """
+        url = f"{self.base_urls['chatgpt']}?chat={query}&model=gpt-4o"
+        response = await self._make_request(url)
+        return response["result"]
+
+    async def get_advice(self):
+        """
+        Fetches a random piece of advice.
+
+        Returns:
+            str: A random advice message.
+        """
+        response = requests.get(self.base_urls["advice"]).json()
+        return response["slip"]["advice"]
+
+    async def get_jokes(self, amount=1):
+        """
+        Fetches a specified number of jokes.
+
+        Args:
+            amount (int, optional): The number of jokes to retrieve. Defaults to 1.
+
+        Returns:
+            str: A single joke if `amount` is 1. If `amount` > 1, returns numbered jokes as a formatted string.
+        """
+        url = self.base_urls["jokes"]
+        params = {"type": "single", "amount": amount}
+        response = await self._make_request(url, params=params)
+
+        if amount == 1:
+            return response["joke"]
         else:
+            jokes = [joke["joke"] for joke in response["jokes"]]
+            return "\n\n".join(f"{i + 1}. {joke}" for i, joke in enumerate(jokes))
+
+    async def get_hindi_jokes(self):
+        """
+        Fetches a random Hindi joke.
+
+        Returns:
+            str: A random Hindi joke if available, or "No joke found" if not available.
+        """
+        response = await self._make_request(self.base_urls["hindi_jokes"])
+        return response["jokeContent"] if response["status"] else "No joke found."
+
+    async def get_uselessfact(self):
+        """
+        Fetches a random useless fact.
+
+        Returns:
+            str: A random useless fact.
+        """
+        response = await self._make_request(self.base_urls["useless_fact"])
+        return response["text"]
+
+    async def gen_hashtag(self, text, similar: bool = False):
+        """
+        Generates hashtags based on a given keyword.
+
+        Args:
+            text (str): The keyword for generating hashtags.
+            similar (bool, optional): If True, also returns similar hashtags. Defaults to False.
+
+        Returns:
+            str or tuple: A string of top hashtags if `similar` is False.
+                          If `similar` is True, returns a tuple with top hashtags and similar hashtags.
+        """
+        url = self.base_urls["hashtag_generator"]
+        data = {"keyword": text, "filter": "top"}
+        response = await self._make_request(url, method="POST", data=data)
+
+        soup = BeautifulSoup(response, "html.parser")
+        hashtags = (
+            soup.find("div", id="copy-hashtags").text.strip()
+            if soup.find("div", id="copy-hashtags")
+            else ""
+        )
+
+        if similar:
+            similar_hashtags = soup.find("div", id="copy-hashtags-similar")
+            similar_hashtags_text = (
+                similar_hashtags.text.strip() if similar_hashtags else ""
+            )
+            return hashtags, similar_hashtags_text
+        return hashtags
+
+    async def quote(self) -> str:
+        """
+        Fetches a random quote.
+
+        Returns:
+            str: The content of a random quote followed by the author's name.
+        """
+        data = await self._make_request(self.base_urls["quote"], verify=False)
+        return f"{data['content']}\n\nauthor - {data['author']}"
+
+    async def hindi_quote(self) -> str:
+        """
+        Fetches a random Hindi quote.
+
+        Returns:
+            str: The content of a random Hindi quote.
+        """
+        data = await self._make_request(self.base_urls["hindi_quote"])
+        return data["quote"]
+
+    async def random_word(self) -> str:
+        """
+        Fetches a random word.
+
+        Returns:
+            str: A random word if available; "None" if an error occurs.
+        """
+        params = {"number": 1}
+        try:
+            data = await self._make_request(
+                self.base_urls["random_word"], params=params
+            )
+            return data[0]
+        except RequestError:
             return "None"
 
-    def write(self, text):
+    async def write(self, text):
+        """
+        Creates an image with text written on it, using a predefined template and font,
+        and uploads the image after generation.
+
+        Args:
+            text (str): The text to be written on the image. Text exceeding 55 characters
+                        per line will be wrapped, with up to 25 lines displayed.
+
+        Returns:
+            str: The URL of the uploaded image.
+
+        Notes:
+            A temporary image file is created, saved, and removed after uploading.
+        """
         tryimg = "https://graph.org/file/1f8d00177ac2429b101b9.jpg"
         tryresp = requests.get(tryimg)
         img = Image.open(BytesIO(tryresp.content))
         draw = ImageDraw.Draw(img)
+
         font_url = "https://github.com/google/fonts/raw/main/ofl/poetsenone/PoetsenOne-Regular.ttf"
         font_response = requests.get(font_url)
         font = ImageFont.truetype(BytesIO(font_response.content), 24)
@@ -74,134 +273,55 @@ class TheApi:
         for line in umm:
             draw.text((x, y), line, fill=(1, 22, 55), font=font)
             y = y + linespacing
-        a = self.randomword()
+
+        a = await self.random_word()
         file = f"write_{a}.jpg"
         img.save(file)
-        if os.path.exists(file):
-            upload_path = self.upload_image(file)
 
-            return upload_path
+        return FilePath(file)
 
-    def carbon(self, query):
-        url = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x63\x61\x72\x62\x6f\x6e\x61\x72\x61\x2e\x73\x6f\x6c\x6f\x70\x6f\x76\x2e\x64\x65\x76\x2f\x61\x70\x69\x2f\x63\x6f\x6f\x6b"
+    async def carbon(self, query):
+        """
+        Generates a code snippet image using the Carbon API, saves it to the downloads folder,
+        uploads it, and returns the URL of the uploaded image.
 
-        response = requests.post(url, json={"code": query})
-        image = BytesIO(response.content)
+        Args:
+            query (str): The code snippet to be rendered as an image.
 
-        a = self.randomword()
-        image.name = f"{a}.png"
-
-        with open(image.name, "wb") as f:
-            f.write(image.getbuffer())
-
-        if os.path.exists(image.name):
-            upload_path = self.upload_image(image.name)
-            os.remove(image.name)
-            return upload_path
-
-    @staticmethod
-    def chatgpt(query):
-        response = requests.get(
-            f"https://chatwithai.codesearch.workers.dev/?chat={query}&model=gpt-4o"
+        Returns:
+            str: The URL of the uploaded image.
+        """
+        response = await self._make_request(
+            self.base_urls["carbon"], method="POST", data={"code": query}
         )
-        if response.status_code == 200:
-            results = response.json()
-            return results['result']
 
-    @staticmethod
-    def get_advice():
-        try:
-            results = requests.get("https://api.adviceslip.com/advice").json()["slip"][
-                "advice"
-            ]
-            return results
-        except requests.exceptions.RequestException as e:
-            return e
+        downloads_folder = "downloads"
+        os.makedirs(downloads_folder, exist_ok=True)
 
-    @staticmethod
-    def get_jokes(amount=1):
-        if not isinstance(amount, int):
-            raise ValueError("The amount must be an integer.")
+        file_path = os.path.join(downloads_folder, f"{self._rnd_str()}.png")
 
-        if amount > 10 or amount < 1:
-            raise InvalidAmountError(amount)
+        with open(file_path, "wb") as f:
+            f.write(response)
 
-        response = requests.get(
-            f"https://v2.jokeapi.dev/joke/Any?type=single&amount={amount}"
-        )
-        jokes_data = response.json()
+        return FilePath(file_path)
 
-        if amount == 1:
-            return jokes_data["joke"]
-        else:
-            jokes = [joke["joke"] for joke in jokes_data["jokes"]]
-            formatted_jokes = "\n\n".join(
-                f"{i+1}. {joke}" for i, joke in enumerate(jokes)
-            )
-            return formatted_jokes
+    async def wikipedia(self, query):
+        """
+        Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.
 
-    @staticmethod
-    def get_hindi_jokes():
-        JOKE_API_ENDPOINT = "https://hindi-jokes-api.onrender.com/jokes?api_key=93eeccc9d663115eba73839b3cd9"
-        response = requests.get(JOKE_API_ENDPOINT).json()
-        if response["status"]:
-            results = response["jokeContent"]
-            return results
-    @staticmethod
-    def get_uselessfact():
-        results = requests.get(
-            "https://uselessfacts.jsph.pl/api/v2/facts/random"
-        ).json()["text"]
-        return results
+        Args:
+            query (str): The search term to look up on Wikipedia.
 
-    @staticmethod
-    def gen_hashtag(text, similiar: bool = False):
-        url = "https://all-hashtag.com/library/contents/ajax_generator.php"
+        Returns:
+            dict: A dictionary containing information about the top search result, with keys:
+                - title (str): The title of the Wikipedia article.
+                - summary (str): A brief summary of the article's content.
+                - url (str): The URL link to the full Wikipedia article.
+                - image_url (str): The URL of the article's thumbnail image, or "No image available" if none exists.
 
-        data = {
-            "keyword": text,
-            "filter": "top",
-        }
-        response = requests.post(url, data=data)
-        soup = BeautifulSoup(response.text, "html.parser")
-        hashtags_div = soup.find("div", id="copy-hashtags")
-        hashtags = hashtags_div.text.strip() if hashtags_div else ""
-        if similiar:
-            similar_hashtags_div = soup.find("div", id="copy-hashtags-similar")
-            similar_hashtags = (
-                similar_hashtags_div.text.strip() if similar_hashtags_div else ""
-            )
-            return hashtags, similar_hashtags
-        return hashtags
-
-    def morse_code(self, txt):
-        MORSE_CODE_DICT_REVERSED = {
-            value: key for key, value in MORSE_CODE_DICT.items()
-        }
-        is_morse = all(char in ".- /" for char in txt)
-
-        if is_morse:
-            decoded_message = ""
-            words = txt.split(" / ")
-            for word in words:
-                for morse_char in word.split():
-                    if morse_char in MORSE_CODE_DICT_REVERSED:
-                        decoded_message += MORSE_CODE_DICT_REVERSED[morse_char]
-                    else:
-                        return f"Error: Morse code '{morse_char}' not recognized."
-                decoded_message += " "
-            return decoded_message.strip()
-        else:
-            encoded_message = ""
-            for char in txt.upper():
-                if char in MORSE_CODE_DICT:
-                    encoded_message += MORSE_CODE_DICT[char] + " "
-                else:
-                    return f"Error: Character '{char}' cannot be encoded in Morse code."
-            return encoded_message.strip()
-
-    def wikipedia(self, query):
-        search_url = "https://en.wikipedia.org/w/api.php"
+            If no results are found, returns a dictionary with an "error" key.
+        """
+        search_url = self.base_urls["wikipedia_search"]
 
         params = {
             "action": "query",
@@ -210,67 +330,53 @@ class TheApi:
             "format": "json",
         }
 
-        response = requests.get(search_url, params=params)
+        search_response = await self._make_request(search_url, params=params)
+        search_results = search_response.get("query", {}).get("search", [])
 
-        if response.status_code == 200:
-            data = response.json()
-            search_results = data.get("query", {}).get("search", [])
+        if search_results:
+            top_result = search_results[0]
+            page_id = top_result["pageid"]
+            summary_url = (
+                f"{self.base_urls['wikipedia_search']}?action=query&prop=extracts|pageimages"
+                f"&exintro&explaintext&piprop=thumbnail&pithumbsize=500&format=json&pageids={page_id}"
+            )
 
-            if search_results:
-                top_result = search_results[0]
-                page_id = top_result["pageid"]
-                summary_url = f"https://en.wikipedia.org/w/api.php?action=query&prop=extracts|pageimages&exintro&explaintext&piprop=thumbnail&pithumbsize=500&format=json&pageids={page_id}"
-                summary_response = requests.get(summary_url)
+            summary_response = await self._make_request(summary_url)
+            pages = summary_response.get("query", {}).get("pages", {})
+            page_info = pages.get(str(page_id), {})
+            image_url = page_info.get("thumbnail", {}).get(
+                "source", "No image available"
+            )
 
-                if summary_response.status_code == 200:
-                    summary_data = summary_response.json()
-                    pages = summary_data.get("query", {}).get("pages", {})
-                    page_info = pages.get(str(page_id), {})
-                    image_url = page_info.get("thumbnail", {}).get(
-                        "source", "No image available"
-                    )
-
-                    return {
-                        "title": top_result["title"],
-                        "summary": page_info.get("extract", "No summary available."),
-                        "url": f"https://en.wikipedia.org/?curid={page_id}",
-                        "image_url": image_url,
-                    }
-                else:
-                    return {"error": "Failed to fetch the page summary"}
-            else:
-                return {"error": "No search results found"}
+            return {
+                "title": top_result["title"],
+                "summary": page_info.get("extract", "No summary available."),
+                "url": f"https://en.wikipedia.org/?curid={page_id}",
+                "image_url": image_url,
+            }
         else:
-            return {"error": "Failed to fetch search results"}
+            return {"error": "No search results found"}
 
-    def github_search(self, query, search_type="repositories", max_results=3):
+    async def github_search(self, query, search_type="repositories", max_results=3):
         """
-        Search GitHub for various types of content.
+        Searches GitHub for various types of content.
 
-        Parameters:
+        Args:
             query (str): The search query.
-            search_type (str): The type of search (default is "repositories").
-            max_results (int): The maximum number of results to return (default is 10).
+            search_type (str, optional): The type of search. Can be one of:
+                - "repositories"
+                - "users"
+                - "organizations"
+                - "issues"
+                - "pull_requests"
+                - "commits"
+                - "topics"
+
+                Defaults to "repositories".
+            max_results (int, optional): The maximum number of results to return. Defaults to 3.
 
         Returns:
             list: A list of search results or an error message.
-
-        Examples:
-            repositories = api.github_search("machine learning", api.search_type="repositories")
-
-            users = api.github_search("torvalds", search_type="users")
-
-            organization = api.github_search("github", search_type="organizations")
-
-            issues = api.github_search("bug fix", search_type="issues")
-
-            pull_requests = api.github_search("new feature", search_type="pull_requests")
-
-            commits = api.github_search("initial commit", search_type="commits")
-
-            labels = api.github_search("enhancement", search_type="labels")
-
-            topics = api.github_search("python", search_type="topics")
         """
         valid_search_types = [
             "repositories",
@@ -388,58 +494,67 @@ class TheApi:
         except Exception as e:
             return {"error": f"Unexpected error: {e}"}
 
-    def words(self, num_words: int):
-        url = f"https://random-word-api.herokuapp.com/word?number={num_words}"
-        response = requests.get(url)
-
-        if response.status_code == 200:
-            return response.json()
-        else:
-            return []
-
-    def cat(self):
-
-        r = requests.get("https://api.thecatapi.com/v1/images/search")
-        if r.status_code == 200:
-            return r.json()[0]["url"]
-
-    def dog(self):
-        r = requests.get("https://random.dog/woof.json")
-        if r.status_code == 200:
-            return r.json()["url"]
-
-    def help(self, method_name):
+    async def words(self, num_words: int):
         """
-        Provides help information for the specified method.
-
-        Parameters:
-            method_name (str): The name of the method for which to display help.
-
-        Returns:
-            str: The docstring of the specified method.
-        """
-        method = getattr(self, method_name, None)
-        if method:
-            return inspect.cleandoc(method.__doc__)
-        else:
-            return f"No method named '{method_name}' found."
-
-    def pypi(self, package_name):
-        """
-        Fetches and returns relevant information about a package from PyPI.
+        Fetches a specified number of random words.
 
         Args:
-        package_name (str): The name of the package to fetch information for.
+            num_words (int): The number of random words to retrieve.
 
         Returns:
-        dict: The relevant package information if found, otherwise None.
+            list: A list of random words if available; an empty list if no response is received.
         """
-        url = f"https://pypi.org/pypi/{package_name}/json"
-        response = requests.get(url)
+        url = f"{self.base_urls['words']}?number={num_words}"
+        response = await self._make_request(url)
+        return response if response else []
 
-        if response.status_code == 200:
-            package_info = response.json()
-            info = package_info["info"]
+    async def cat(self):
+        """
+        Fetches a random cat image URL.
+
+        Returns:
+            str or None: The URL of a random cat image if available; None if no response is received.
+        """
+        response = await self._make_request(self.base_urls["cat"])
+        return response[0]["url"] if response else None
+
+    async def dog(self):
+        """
+        Fetches a random dog image URL.
+
+        Returns:
+            str or None: The URL of a random dog image if available; None if no response is received.
+        """
+        response = await self._make_request(self.base_urls["dog"])
+        return response["url"] if response else None
+
+    async def pypi(self, package_name):
+        """
+        Retrieves metadata information about a specified Python package from the PyPI API.
+
+        Args:
+            package_name (str): The name of the package to search for on PyPI.
+
+        Returns:
+            dict or None: A dictionary with relevant package information if found, containing:
+                - name (str): Package name.
+                - version (str): Latest package version.
+                - summary (str): Short description of the package.
+                - author (str): Package author.
+                - author_email (str): Email of the package author.
+                - license (str): License type.
+                - home_page (str): URL of the package's homepage.
+                - package_url (str): URL of the package on PyPI.
+                - requires_python (str): Minimum Python version required.
+                - keywords (str): Keywords associated with the package.
+                - classifiers (list): List of PyPI classifiers.
+                - project_urls (dict): Additional project URLs (e.g., source code, documentation).
+            Returns None if the package is not found or there is an error.
+        """
+        url = f"{self.base_urls['pypi']}/{package_name}/json"
+        response = await self._make_request(url)
+        if response:
+            info = response["info"]
             relevant_info = {
                 "name": info["name"],
                 "version": info["version"],
@@ -458,25 +573,37 @@ class TheApi:
         else:
             return None
 
-    def meme(self):
-        hu = requests.get("https://meme-api.com/gimme").json()
-        return hu["preview"][-1]
-
-    def fox(self):
-        return requests.get("https://randomfox.ca/floof/").json()["link"]
-
-    def bing_image(self, query: str, limit: int = 3) -> List[str]:
+    async def meme(self):
         """
-        Fetch Bing image links based on the photo name and limit.
-
-        Parameters:
-            query (str): The search query for the image.
-            limit (int): The maximum number of image links to return.
+        Fetches a random meme image URL.
 
         Returns:
-            List[str]: A list of image URLs.
+            str or None: The URL of the meme image if available, otherwise None.
         """
+        response = await self._make_request(self.base_urls["meme"])
+        return response["preview"][-1] if response else None
 
+    async def fox(self):
+        """
+        Fetches a random fox image URL.
+
+        Returns:
+            str or None: The URL of the fox image if available, otherwise None.
+        """
+        response = await self._make_request(self.base_urls["fox"])
+        return response["link"] if response else None
+
+    async def bing_image(self, query: str, limit: int = 3):
+        """
+        Searches Bing for images based on a query and retrieves image URLs.
+
+        Args:
+            query (str): The search query string for finding images.
+            limit (int, optional): The maximum number of image URLs to return. Defaults to 3.
+
+        Returns:
+            list: A list of image URLs retrieved from the Bing search results.
+        """
         data = {
             "q": query,
             "first": 0,
@@ -484,48 +611,24 @@ class TheApi:
             "adlt": "off",
             "qft": "",
         }
+        response = await self._make_request(self.base_urls["bing_image"], params=data)
+        return re.findall(r"murl&quot;:&quot;(.*?)&quot;", response) if response else []
 
-        url = "https://www.bing.com/images/async"
-        try:
-            resp = requests.get(url, params=data)
-            resp.raise_for_status()
-        except Exception as exc:
-            raise
-        try:
-            links = re.findall(r"murl&quot;:&quot;(.*?)&quot;", resp.text)
-        except Exception as exc:
-            raise
-
-        return links
-
-    def stackoverflow_search(
-        self, query, max_results=3, sort_type="relevance", use_cache=True
-    ):
+    async def stackoverflow_search(self, query, max_results=3, sort_type="relevance"):
         """
-        Search Stack Overflow for a given query and return results.
+        Searches Stack Overflow for questions based on a query, returning results sorted by relevance or another specified criteria.
 
         Args:
-            query (str): The search query.
-            max_results (int): Maximum number of results to return. Default is 200.
-            sort_type (str): The sort type for results. Options are 'activity', 'votes', 'creation', 'relevance'. Default is 'relevance'.
-            use_cache (bool): If True, use cached results if available. Default is True.
+            query (str): The search query string.
+            max_results (int, optional): The maximum number of results to return. Defaults to 3.
+            sort_type (str, optional): The sorting criteria for the results, such as "relevance" or "votes". Defaults to "relevance".
 
         Returns:
-            list: A list of search results from Stack Overflow.
+            list: A list of search results in JSON format, with each entry containing Stack Overflow question details.
 
-        Example usage:
-           from TheApi import api
-
-           results = api.stackoverflow_search("flask search function", max_results=100, sort_type='votes', use_cache=False)
-           for result in results:
-               print(f"Title: {result['title']}\nLink: {result['link']}\nScore: {result['score']}\nTags: {', '.join(result['tags'])}\nAnswers: {result['answer_count']}\n")
+        Raises:
+            ValueError: If there is an issue with the request to the Stack Overflow API.
         """
-        cache = {}
-
-        if use_cache:
-            cache_key = (query, sort_type)
-            if cache_key in cache:
-                return cache[cache_key]
 
         url = "https://api.stackexchange.com/2.3/search/advanced"
         params = {
@@ -541,7 +644,7 @@ class TheApi:
             response = requests.get(url, params=params)
 
             if response.status_code != 200:
-                break
+                raise ValueError("Failed to retrieve results from Stack Overflow API")
 
             results = response.json().get("items", [])
             if not results:
@@ -553,13 +656,23 @@ class TheApi:
 
             params["page"] += 1
 
-        all_results = all_results[:max_results]
-        cache[cache_key] = all_results
+        return all_results[:max_results]
 
-        return all_results
+    async def blackpink(self, query, color="#ff94e0", border_color=None):
+        """
+        Creates a stylized "Blackpink"-themed image with custom text, color, and optional border.
 
-    def blackpink(self, args, color="#ff94e0", border_color=None):
-        text = args
+        Args:
+            query (str): The text to display on the image.
+            color (str, optional): The primary color of the text and gradient background in hex format.
+                Defaults to "#ff94e0" (a pink shade).
+            border_color (str, optional): The color of the image border in hex format.
+                If not provided, defaults to the value of `color`.
+
+        Returns:
+            FilePath: The file path of the generated image with delete attribute.
+        """
+        text = query
         font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
         initial_font_size = 100
 
@@ -586,6 +699,7 @@ class TheApi:
             font_size -= 1
             font = ImageFont.truetype(font_path, font_size)
             lines = textwrap.wrap(text, width=40)
+
         gradient = Image.new("RGB", (img_width, img_height), color)
         for i in range(img_height):
             r = int(255 - (255 - int(color[1:3], 16)) * (i / img_height))
@@ -618,33 +732,26 @@ class TheApi:
         final_img.paste(gradient, (0, 0))
         final_img.paste(img_with_border, (0, 0))
 
-        temp_file_path = "temp_blackpink_image.jpg"
+        temp_file_path = f"{self._rnd_str()}_blackpink_image.jpg"
         final_img.save(temp_file_path, format="JPEG")
-        response = self.upload_image(temp_file_path)
 
-        return response
+        return FilePath(temp_file_path)
 
-    @staticmethod
-    def upload_image(file_path: Union[str, bytes]) -> str:
+    async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> str:
         """
-        Uploads an image to a specified URL.
-
-        This method accepts a file path (as a string) or binary data (as bytes)
-        and uploads the image to a remote server. If the file path is provided,
-        the file is read and uploaded. If binary data is provided, it is directly
-        uploaded. The method returns the response from the server if successful,
-        or an error message if not.
+        Uploads an image to https://envs.sh.
 
         Args:
-            file_path (Union[str, bytes]): The file path of the image to be uploaded
-                                           or binary data of the image.
+            file_path (Union[str, bytes, BytesIO]): The image file to upload.
+                Can be a file path (str), binary data (bytes), or a BytesIO object.
 
         Returns:
-            str: The response text from the server if the upload is successful,
-                 or an error message if the upload fails.
+            str: The URL or confirmation message of the uploaded image if the upload is successful.
+                Returns "Unexpected response format" if the response format is not as expected.
 
         Raises:
-            ValueError: If the file path is incorrect or the input type is invalid.
+            ValueError: If the file is not found, the input type is invalid,
+                or the upload request fails.
         """
         if isinstance(file_path, str):
             try:
@@ -654,26 +761,38 @@ class TheApi:
                 raise ValueError(
                     f"File not found: '{file_path}' - Ensure the file path is correct."
                 )
-        elif isinstance(file_path, bytes):
-            image_bytes = file_path
+        elif isinstance(file_path, bytes) or isinstance(file_path, BytesIO):
+            image_bytes = (
+                file_path if isinstance(file_path, bytes) else file_path.getvalue()
+            )
         else:
             raise ValueError(
-                "Invalid input type - Expected a file path (str) or binary data (bytes)."
+                "Invalid input type - Expected a file path (str), binary data (bytes), or BytesIO object."
             )
 
-        url = "https://envs.sh"
-        files = {"file": image_bytes}
-        response = requests.post(f"{url}/", files=files)  # Corrected typo
+        url = self.base_urls["upload"]
+        files = {
+            "file": (
+                file_path.name if isinstance(file_path, BytesIO) else "image.png",
+                image_bytes,
+                "image/png",
+            )
+        }
 
-        if response.status_code == 200:
-            return response.text.strip()
-        else:
-            raise ValueError("Error: {response.status_code}, {response.text}")
+        try:
+            response = await self._make_request(url=url, method="POST", files=files)
+            return (
+                response.strip()
+                if isinstance(response, str)
+                else "Unexpected response format"
+            )
+        except ValueError as e:
+            raise ValueError(f"Upload failed: {str(e)}")
 
     @staticmethod
-    def riddle() -> dict:
+    async def riddle() -> dict:
         """
-        Fetch a random riddle from the riddles API.
+        Fetches a random riddle from the Riddles API.
 
         Returns:
             dict: The riddle data in JSON format.

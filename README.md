@@ -8,7 +8,12 @@ pip install git+https://github.com/Vivekkumar-IN/TheApi@main
 
 # API Documentation
 
-This document provides a list of all functions in `TheApi`, along with their status and usage examples.
+This API provides both synchronous and asynchronous usage:
+
+- **Sync**: `from TheApi.sync import api`
+- **Async**: `from TheApi import api`
+
+The following examples use the **async** version.
 
 ## Function List
 
@@ -27,16 +32,15 @@ This document provides a list of all functions in `TheApi`, along with their sta
 13. [github_search](#github_search)
 14. [hindi_quote](#hindi_quote)
 15. [meme](#meme)
-16. [morse_code](#morse_code)
-17. [pypi](#pypi)
-18. [quote](#quote)
-19. [randomword](#randomword)
-20. [riddle](#riddle)
-21. [stackoverflow_search](#stackoverflow_search)
-22. [upload_image](#upload_image)
-23. [wikipedia](#wikipedia)
-24. [words](#words)
-25. [write](#write)
+16. [pypi](#pypi)
+17. [quote](#quote)
+18. [random_word](#random_word)
+19. [riddle](#riddle)
+20. [stackoverflow_search](#stackoverflow_search)
+21. [upload_image](#upload_image)
+22. [wikipedia](#wikipedia)
+23. [words](#words)
+24. [write](#write)
 
 ## API Status
 
@@ -44,9 +48,9 @@ This document provides a list of all functions in `TheApi`, along with their sta
 |---------------|--------|
 | [bing_image](#bing_image) | ✅ |
 | [blackpink](#blackpink) | ✅ |
-| [carbon](#carbon) | ✅ |
+| [carbon](#carbon) | ❌ |
 | [cat](#cat) | ✅ |
-| [chatgpt](#chatgpt) | ✅ |
+| [chatgpt](#chatgpt) | ❌ |
 | [dog](#dog) | ✅ |
 | [fox](#fox) | ✅ |
 | [gen_hashtag](#gen_hashtag) | ✅ |
@@ -57,10 +61,9 @@ This document provides a list of all functions in `TheApi`, along with their sta
 | [github_search](#github_search) | ✅ |
 | [hindi_quote](#hindi_quote) | ✅ |
 | [meme](#meme) | ✅ |
-| [morse_code](#morse_code) | ✅ |
 | [pypi](#pypi) | ✅ |
 | [quote](#quote) | ✅ |
-| [randomword](#randomword) | ✅ |
+| [random_word](#random_word) | ✅ |
 | [riddle](#riddle) | ✅ |
 | [stackoverflow_search](#stackoverflow_search) | ✅ |
 | [upload_image](#upload_image) | ✅ |
@@ -75,12 +78,12 @@ This document provides a list of all functions in `TheApi`, along with their sta
 ```python
 from TheApi import api
 
-result = api.bing_image(query='pokemon', limit=3)
+result = await api.bing_image(query='pokemon', limit=3)
 print(result)
 ```
 
 ```text
-['http://wallpapercave.com/wp/LTuTwOZ.jpg', 'https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg', 'https://assets.vg247.com/current/2016/07/pokemon_sun_an_moon_rockruff.jpg']
+['https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg', 'https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg']
 ```
 
 ### blackpink
@@ -88,12 +91,12 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.blackpink(args='pokemon', color='#ff94e0', border_color=None)
+result = await api.blackpink(query='pokemon', color='#ff94e0', border_color=None)
 print(result)
 ```
 
 ```text
-https://envs.sh/0Ql.jpg
+HnrEdgba_blackpink_image.jpg
 ```
 
 ### carbon
@@ -101,12 +104,13 @@ https://envs.sh/0Ql.jpg
 ```python
 from TheApi import api
 
-result = api.carbon(query='pokemon')
+result = await api.carbon(query='pokemon')
 print(result)
 ```
 
 ```text
-https://envs.sh/0Qk.png
+# Error:
+Request failed: 400, message='Bad Request', url='https://carbonara.solopov.dev/api/cook'
 ```
 
 ### cat
@@ -114,12 +118,12 @@ https://envs.sh/0Qk.png
 ```python
 from TheApi import api
 
-result = api.cat()
+result = await api.cat()
 print(result)
 ```
 
 ```text
-https://cdn2.thecatapi.com/images/A_G4pf_T3.jpg
+https://cdn2.thecatapi.com/images/3kg.jpg
 ```
 
 ### chatgpt
@@ -127,12 +131,13 @@ https://cdn2.thecatapi.com/images/A_G4pf_T3.jpg
 ```python
 from TheApi import api
 
-result = api.chatgpt(query='pokemon')
+result = await api.chatgpt(query='pokemon')
 print(result)
 ```
 
 ```text
-None
+# Error:
+Request failed: 400, message='Bad Request', url='https://chatwithai.codesearch.workers.dev/?chat=pokemon&model=gpt-4o'
 ```
 
 ### dog
@@ -140,12 +145,12 @@ None
 ```python
 from TheApi import api
 
-result = api.dog()
+result = await api.dog()
 print(result)
 ```
 
 ```text
-https://random.dog/8f24262b-8d28-4dd6-8989-8868a1bab715.mp4
+https://random.dog/831a74df-8de4-4150-a70f-12bd984f4bb4.JPG
 ```
 
 ### fox
@@ -153,12 +158,12 @@ https://random.dog/8f24262b-8d28-4dd6-8989-8868a1bab715.mp4
 ```python
 from TheApi import api
 
-result = api.fox()
+result = await api.fox()
 print(result)
 ```
 
 ```text
-https://randomfox.ca/?i=83
+https://randomfox.ca/?i=43
 ```
 
 ### gen_hashtag
@@ -166,12 +171,12 @@ https://randomfox.ca/?i=83
 ```python
 from TheApi import api
 
-result = api.gen_hashtag(text='pokemon', similiar=False)
+result = await api.gen_hashtag(text='pokemon', similar=False)
 print(result)
 ```
 
 ```text
-#pokemon  #pokemongo  #pokemoncards  #pokemontcg  #pokemoncommunity  #pokemonsun  #pokemonsunandmoon  #pokemonmoon  #pokemonxy  #pokemonart  #pokemon20  #pokemonx  #pokemony  #pokemonmemes  #pokemontrainer  #PokemonMaster  #pokemonoras  #pokemonfanart  #pokemonfan  #pokemoncollector  #pokemonred  #pokemonmeme  #pokemoncenter  #pokemonultrasun  #pokemonblue  #pokemoncard  #pokemoncollection  #pokemonultramoon  #pokemoncardsforsale  #pokemoncosplay
+
 ```
 
 ### get_advice
@@ -179,12 +184,12 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.get_advice()
+result = await api.get_advice()
 print(result)
 ```
 
 ```text
-Lemon and salt works wonders on tarnished brass.
+When painting a room, preparation is key. The actual painting should account for about 40% of the work.
 ```
 
 ### get_hindi_jokes
@@ -192,12 +197,12 @@ Lemon and salt works wonders on tarnished brass.
 ```python
 from TheApi import api
 
-result = api.get_hindi_jokes()
+result = await api.get_hindi_jokes()
 print(result)
 ```
 
 ```text
-अगर आपको अभी भी गर्लफ्रेंड नहीं मिली है तो हमसे संपर्क करें हम देंगे आपको चुल्लू भर पानी 😆🤣😋😉 
+कुछ लड़कियाँ फोन पे बात करने मे इतनी अभ्यस्त होती है की अगर इन्हे जेनरेटर के बगल मेँ बैठा दो तो भी  ....मेला बाबू... से घण्टो बाते कर सकती है 😆🤣😋😉
 ```
 
 ### get_jokes
@@ -205,13 +210,12 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.get_jokes(amount=1)
+result = await api.get_jokes(amount=1)
 print(result)
 ```
 
 ```text
-My wife and I have reached the difficult decision that we do not want children.
-If anybody does, please just send me your contact details and we can drop them off tomorrow.
+Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says "Do you get the reference?" But Java didn't.
 ```
 
 ### get_uselessfact
@@ -219,12 +223,12 @@ If anybody does, please just send me your contact details and we can drop them o
 ```python
 from TheApi import api
 
-result = api.get_uselessfact()
+result = await api.get_uselessfact()
 print(result)
 ```
 
 ```text
-A duck`s quack doesn`t echo, and no one knows why.
+The name Wendy was made up for the book "Peter Pan."
 ```
 
 ### github_search
@@ -232,12 +236,12 @@ A duck`s quack doesn`t echo, and no one knows why.
 ```python
 from TheApi import api
 
-result = api.github_search(query='pokemon', search_type='repositories', max_results=3)
+result = await api.github_search(query='pokemon', search_type='repositories', max_results=3)
 print(result)
 ```
 
 ```text
-[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7530, 'forks_count': 2815}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4769, 'forks_count': 2783}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3864, 'forks_count': 1542}]
+[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7529, 'forks_count': 2815}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4788, 'forks_count': 2796}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3870, 'forks_count': 1543}]
 ```
 
 ### hindi_quote
@@ -245,12 +249,12 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.hindi_quote()
+result = await api.hindi_quote()
 print(result)
 ```
 
 ```text
-पहचान तो सबसे है हमारी, लेकिन भरोसा सिर्फ खुद पर हैं..
+मोहब्बत किससे और कब हो जाये अदांजा नहीं होता, ये वो घर है जिसका दरवाजा नहीं होता।
 ```
 
 ### meme
@@ -258,25 +262,12 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.meme()
+result = await api.meme()
 print(result)
 ```
 
 ```text
-https://preview.redd.it/cid23pebxavd1.gif?width=640&crop=smart&format=png8&s=50fb84efe87be7d9b5da5ce34717e48a8dca5ef0
-```
-
-### morse_code
-
-```python
-from TheApi import api
-
-result = api.morse_code(txt='pokemon')
-print(result)
-```
-
-```text
-.--. --- -.- . -- --- -.
+https://preview.redd.it/yycouv5k310e1.png?width=1080&crop=smart&auto=webp&s=1a6103d6341de4b3b3de91fef7d0f2822d96052e
 ```
 
 ### pypi
@@ -284,7 +275,7 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.pypi(package_name='pokemon')
+result = await api.pypi(package_name='pokemon')
 print(result)
 ```
 
@@ -297,27 +288,27 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.quote()
+result = await api.quote()
 print(result)
 ```
 
 ```text
-The extreme limit of wisdom, that's what the public calls madness.
+Change your life today. Don't gamble on the future, act now, without delay.
 
-author - Jean Cocteau
+author - Simone de Beauvoir
 ```
 
-### randomword
+### random_word
 
 ```python
 from TheApi import api
 
-result = api.randomword()
+result = await api.random_word()
 print(result)
 ```
 
 ```text
-inheritable
+ultrarich
 ```
 
 ### riddle
@@ -325,12 +316,12 @@ inheritable
 ```python
 from TheApi import api
 
-result = api.riddle()
+result = await api.riddle()
 print(result)
 ```
 
 ```text
-{'riddle': 'A pregnant lady named her children: Dominique, Regis, Michelle, Fawn, Sophie and Lara. What will she name her next child? Jessica, Katie, Abby or Tilly?', 'answer': 'Sound of music  Tilly. She seems to follow the scale Do, Re, Me, Fa, So, La, and then Ti'}
+{'riddle': 'You hear it speak, for it has a hard tongue. But it cannot breathe, for it has not a lung. What is it?', 'answer': 'A Bell'}
 ```
 
 ### stackoverflow_search
@@ -338,12 +329,12 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.stackoverflow_search(query='pokemon', max_results=3, sort_type='relevance', use_cache=True)
+result = await api.stackoverflow_search(query='pokemon', max_results=3, sort_type='relevance')
 print(result)
 ```
 
 ```text
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 117, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1935, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32593, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 117, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1966, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32621, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
 ```
 
 ### upload_image
@@ -351,7 +342,7 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.upload_image(file_path='file/to/image')
+result = await api.upload_image(file_path='file/to/image')
 print(result)
 ```
 
@@ -364,7 +355,7 @@ You will get the URL for the image.
 ```python
 from TheApi import api
 
-result = api.wikipedia(query='pokemon')
+result = await api.wikipedia(query='pokemon')
 print(result)
 ```
 
@@ -377,12 +368,12 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.words(num_words=5)
+result = await api.words(num_words=5)
 print(result)
 ```
 
 ```text
-['arraigns', 'meted', 'loppers', 'patch', 'pretyping']
+['euphonic', 'hognuts', 'wofuller', 'hypabyssal', 'obscurantism']
 ```
 
 ### write
@@ -390,12 +381,12 @@ print(result)
 ```python
 from TheApi import api
 
-result = api.write(text='pokemon')
+result = await api.write(text='pokemon')
 print(result)
 ```
 
 ```text
-https://envs.sh/0Q7.jpg
+write_paste.jpg
 ```
 
 
