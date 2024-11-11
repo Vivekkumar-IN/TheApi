@@ -55,7 +55,7 @@ The following examples use the **async** version.
 | [fox](#fox) | ✅ |
 | [gen_hashtag](#gen_hashtag) | ✅ |
 | [get_advice](#get_advice) | ✅ |
-| [get_hindi_jokes](#get_hindi_jokes) | ✅ |
+| [get_hindi_jokes](#get_hindi_jokes) | ❌ |
 | [get_jokes](#get_jokes) | ✅ |
 | [get_uselessfact](#get_uselessfact) | ✅ |
 | [github_search](#github_search) | ✅ |
@@ -83,7 +83,7 @@ print(result)
 ```
 
 ```text
-['https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://www.pockettactics.com/wp-content/sites/pockettactics/2023/01/Pokémon-wallpapers-5.jpg', 'https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg', 'https://media.gamestop.com/i/gamestop/11103360/New-Pokemon-Snap---Nintendo-Switch', 'https://img-eshop.cdn.nintendo.net/i/00bd7efe46ab2b3ff0774172a5d4f21a5b2f467b3e324557ce1e9a9ae12c1d3b.jpg', 'https://assets-prd.ignimgs.com/2021/03/01/new-pokemon-snap-button-1614639848584.jpg', 'https://www.gamespot.com/a/uploads/screen_kubrick/123/1239113/3801204-6238037227-screenshot02.jpg', 'https://www.nme.com/wp-content/uploads/2021/05/New-Pokemon-Snap-Credit-Bandai-Namco-HERO@2000x1270.jpg', 'https://www.rpgfan.com/wp-content/uploads/2021/01/New-Pokemon-Snap-Screenshot-044.jpg', 'https://www.videogamer.com/wp-content/uploads/01d7162d-749b-43eb-bdcc-5c0cf9e49881_New_Pokmon_Snap_Main.jpg', 'https://images.launchbox-app.com/fc92b8c7-704f-43e9-ab5a-407b712bc662.jpg', 'https://i.ytimg.com/vi/e_V9nUUP2oo/maxresdefault.jpg', 'https://i.gadgets360cdn.com/products/large/New-Pokemon-Snap-Wallpaper-1440x2560-1000x1778-1646977124.jpg', 'https://i0.wp.com/mynintendonews.com/wp-content/uploads/2021/01/new_pokemon_snap_logo.jpg?ssl=1', 'https://twinfinite.net/wp-content/uploads/2021/04/New-Pokemon-Snap-scaled.jpg', 'https://cdn.vox-cdn.com/thumbor/Lgiz7lrS_auxnKixNMsWmsx_ETE=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22473880/Switch_NewPokemonSnap_Screenshots_Feb26__9_.jpg', 'https://images.launchbox-app.com/1f06f096-8eb6-43ac-abbb-262deb1bf596.jpg', 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/products/games/switch/new-pokemon-snap/110735-switch-new-pokemon-snap-us-1200x675', 'https://webgames.host/uploads/2017/09/pokemon-snap.jpg', 'https://videogamesuncovered.com/wp-content/uploads/2021/01/new-pokemon-snap-social.jpg', 'https://media.npr.org/assets/img/2021/04/29/snap-1_wide-7c41973fe9eef7cbc49beec9a59f3bf5410187d2-s1400-c100.jpg', 'https://www.nintendo.com/sg/switch/arft/img/hero_sp.jpg', 'https://cdn.mobilesyrup.com/wp-content/uploads/2021/01/new-pokemon-snap-screenshot-2.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Pokemon_Type_Chart.svg/2048px-Pokemon_Type_Chart.svg.png', 'https://vignette.wikia.nocookie.net/pokemon/images/8/8c/PokemonTypes.png/revision/latest?cb=20170417193722', 'https://img.pokemondb.net/images/typechart.png', 'http://upload.wikimedia.org/wikipedia/commons/5/5e/Pokémon_types_(english).png', 'https://www.theloadout.com/wp-content/sites/theloadout/2023/06/pokemon-type-chart-icons.jpg', 'https://i.pinimg.com/originals/95/b2/6f/95b26f7cd39e206259faa20fd57e7b47.png', 'https://raw.githubusercontent.com/kennycason/cellular-automata-pokemon-types/master/data/pokemon_gen1_type_chart.png?raw=true', 'https://res.cloudinary.com/lmn/image/upload/e_sharpen:150,f_auto,fl_lossy,q_80/v1/gameskinnyc/p/o/k/pokemon-types-table-ad163.png', 'https://1.bp.blogspot.com/-A0NsVJu2Ay0/WGOgGNxAdTI/AAAAAAAABIY/amMTic8SsXYs7jfP_ITwBmkeVQHIAGZ-ACPcB/s1600/ENG-05-02-02-All-the-Pokemon-types.png', 'https://www.mandatory.gg/wp-content/uploads/mandatory-guide-pokemon-ecarlate-violet-table-types-forces-faiblesses.png', 'https://releasegaming.com/wp-content/uploads/2023/02/Pokemon-Type-Chart-Poster-960x850.jpg', 'https://img00.deviantart.net/2a60/i/2017/020/6/5/all_18_pokemon_types_by_pokemon_ranger_sumi-daw3v3d.jpg', 'http://fc09.deviantart.net/fs70/i/2013/318/0/f/pokemon_types_wheel_by_kamionero-d6u6o9i.png', 'https://static.wikia.nocookie.net/pokemongo/images/9/9c/Type_chart.png/revision/latest?cb=20191205150508', 'https://cdn1.vectorstock.com/i/1000x1000/03/95/pokemon-type-symbols-vector-2700395.jpg', 'https://orig00.deviantart.net/caf7/f/2014/046/7/2/pokemon_type_chart__offensive__by_lunicaura106-d76mcvb.png', 'https://videogamesuncovered.com/wp-content/uploads/2016/12/pokemon-types.jpg', 'https://i.ytimg.com/vi/H1w2VoRqmQQ/maxresdefault.jpg', 'https://pnghq.com/wp-content/uploads/pnghq.com-pokemon-types-png-3908-download-1024x987.png', 'https://i.pinimg.com/originals/91/69/dc/9169dce1568a24e4b0e0acb7f04ce728.jpg', 'https://i.etsystatic.com/21027128/r/il/fdbdba/2003255292/il_1588xN.2003255292_12o2.jpg', 'https://www.pokemoncenter.com/products/images/P2373PC/155-80156/P2373PC_155-80156_01.jpg', 'https://i.etsystatic.com/23914535/r/il/750695/2869449405/il_1588xN.2869449405_fr75.jpg', 'https://m.media-amazon.com/images/I/A1Ui8dsTSrS.jpg', 'https://www.totsafe.com/wp-content/uploads/2020/09/Gyarados-Ancient-Origins-Holo-1446x2048.jpg', 'https://i.pinimg.com/736x/83/e3/5a/83e35aead31fabb77b9bde3396d4351f.jpg', 'https://images.saymedia-content.com/.image/t_share/MTgzNzE1NDA2MDk0MDE3ODU1/best-vmax-pokemon-cards.png', 'https://i.pinimg.com/originals/18/28/97/18289747d16a23e3dc20cc36956b9b4b.jpg', 'https://pm1.narvii.com/6267/3e8dabe202aa4911724963a0eb1b1f0b0c875193_hq.jpg', 'https://i.pinimg.com/originals/d1/a5/fc/d1a5fc45abdf217f2ee641bb4975fa32.png', 'https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/06/Charizard-grade-9-mint-front.jpg', 'https://images.saymedia-content.com/.image/t_share/MTc5ODE2MjE2Mjc2NDQ0Nzgz/best-v-pokemon-cards.jpg', 'https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/1920w/products/371952/569692/pokemonevolvingskies041__83278.1630015209.jpg?c=2', 'https://cardmavin.com/wp-content/uploads/2016/11/pokemon-card.jpg', 'https://images-na.ssl-images-amazon.com/images/I/91UCqW1atmL.jpg', 'https://miro.medium.com/max/1400/1*I9DUHexc5eoKn1-dZs4g0A.jpeg', 'https://i2.wp.com/nypost.com/wp-content/uploads/sites/2/2020/12/pokemon-auction.jpg?quality=90&amp;strip=all&amp;ssl=1', 'http://images.nintendolife.com/news/2017/10/guide_getting_started_with_the_pokemon_trading_card_game/attachment/6/original.jpg', 'https://i1.wp.com/s3.amazonaws.com/media.completeset.com/stories/attachments/984/content_46-1.jpg?w=900', 'https://usercontent2.hubstatic.com/13535299_f120.jpg']
+['https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg', 'https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg']
 ```
 
 ### blackpink
@@ -96,7 +96,7 @@ print(result)
 ```
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_07rcIKNP.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_8HPRGiLZ.jpg
 ```
 
 ### carbon
@@ -109,7 +109,7 @@ print(result)
 ```
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/fcM8c2Vc.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_jpFjgrbV.png
 ```
 
 ### cat
@@ -122,7 +122,7 @@ print(result)
 ```
 
 ```text
-https://cdn2.thecatapi.com/images/Rscv6E1c5.jpg
+https://cdn2.thecatapi.com/images/dvo.jpg
 ```
 
 ### chatgpt
@@ -149,7 +149,7 @@ print(result)
 ```
 
 ```text
-https://random.dog/b85abb5b-5b9e-47d2-9938-71129cdfdb50.jpg
+https://random.dog/c8b7a017-8966-4f84-b2c6-609a739d833e.jpg
 ```
 
 ### fox
@@ -162,7 +162,7 @@ print(result)
 ```
 
 ```text
-https://randomfox.ca/?i=85
+https://randomfox.ca/?i=106
 ```
 
 ### gen_hashtag
@@ -188,7 +188,7 @@ print(result)
 ```
 
 ```text
-Don't burn bridges.
+Build something out of LEGO.
 ```
 
 ### get_hindi_jokes
@@ -201,7 +201,7 @@ print(result)
 ```
 
 ```text
-रास्ते पलट देते हैं हमारे नौजवान जब कोई आकर यह कह दे कि आगे पुलिस वाले चालान काट रहे हैं 😆🤣😋😉
+'status'
 ```
 
 ### get_jokes
@@ -214,7 +214,7 @@ print(result)
 ```
 
 ```text
-The glass is neither half-full nor half-empty, the glass is twice as big as it needs to be.
+I have a joke about trickle down economics, but 99% of you will never get it.
 ```
 
 ### get_uselessfact
@@ -227,7 +227,7 @@ print(result)
 ```
 
 ```text
-Cats urine glows under a black light.
+Facetious and abstemious contain all the vowels in the correct order, as does arsenious, meaning "containing arsenic."  
 ```
 
 ### github_search
@@ -253,7 +253,7 @@ print(result)
 ```
 
 ```text
-जिसने अपने को वश में कर लिया है, उसकी जीत को देवता भी हार में नही बदल सकते।
+कोशिश हमेशा परिणाम मिलने तक करें…क्योंकि दुनिया सिर्फ परिणामों को सलाम करती हैं, कोशिशों को नहीं!!
 ```
 
 ### meme
@@ -266,7 +266,7 @@ print(result)
 ```
 
 ```text
-https://preview.redd.it/b2zh01zs350e1.png?width=320&crop=smart&auto=webp&s=e3ca3585990e96a9a6d9b2a9b4f5e861ce9e0df6
+https://preview.redd.it/6gdq00g0250e1.png?width=1080&crop=smart&auto=webp&s=5a872892d15f479a87d74bcfb387fdb454367a39
 ```
 
 ### pypi
@@ -292,9 +292,9 @@ print(result)
 ```
 
 ```text
-We are all something, but none of us are everything.
+May our hearts garden of awakening bloom with hundreds of flowers.
 
-author - Blaise Pascal
+author - Thích Nhất Hạnh
 ```
 
 ### random_word
@@ -307,7 +307,7 @@ print(result)
 ```
 
 ```text
-eases
+genome
 ```
 
 ### riddle
@@ -320,7 +320,7 @@ print(result)
 ```
 
 ```text
-{'riddle': 'I have no legs or arms but I still eat with a fork everyday, What am I?', 'answer': 'a snake'}
+{'riddle': 'There was a green house. Inside the green house there was a white house Inside the white house there was a red house. Inside the red house there were lots of babies.', 'answer': 'This is a watermelon'}
 ```
 
 ### stackoverflow_search
@@ -333,7 +333,7 @@ print(result)
 ```
 
 ```text
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 117, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1966, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32622, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 117, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1966, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32623, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
 ```
 
 ### upload_image
@@ -372,7 +372,7 @@ print(result)
 ```
 
 ```text
-['etherealnesses', 'consignations', 'stonecrops', 'placatory', 'acylated']
+['cognizance', 'frolicking', 'shammying', 'coiffeuses', 'psychoanalyst']
 ```
 
 ### write
@@ -385,7 +385,7 @@ print(result)
 ```
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_YBJ6N1hk.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_Pt6YnPzm.jpg
 ```
 
 
