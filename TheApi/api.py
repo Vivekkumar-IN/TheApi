@@ -5,6 +5,7 @@ import string
 import textwrap
 from io import BytesIO
 from typing import Union
+from os.path import realpath
 
 import aiohttp
 import requests
@@ -274,11 +275,14 @@ class TheApi:
             draw.text((x, y), line, fill=(1, 22, 55), font=font)
             y = y + linespacing
 
-        a = await self.random_word()
-        file = f"write_{a}.jpg"
-        img.save(file)
+        downloads_folder = "downloads"
+        os.makedirs(downloads_folder, exist_ok=True)
 
-        return FilePath(file)
+        file_path = os.path.join(downloads_folder, f"write_{self._rnd_str()}.jpg")
+
+        img.save(file_path)
+
+        return FilePath(realpath(file_path))
 
     async def carbon(self, query):
         """
@@ -289,21 +293,32 @@ class TheApi:
             query (str): The code snippet to be rendered as an image.
 
         Returns:
-            str: The URL of the uploaded image.
+            FilePath: The file path of the saved image.
         """
-        response = await self._make_request(
-            self.base_urls["carbon"], method="POST", data={"code": query}
-        )
+        async with aiohttp.ClientSession(
+            headers={"Content-Type": "application/json"},
+        ) as ses:
+            params = {
+                "code": query,
+            }
+            try:
+                response = await ses.post(
+                    "https://carbonara.solopov.dev/api/cook",
+                    json=params,
+                )
+                response_data = await response.read()
+            except aiohttp.client_exceptions.ClientConnectorError:
+                raise ValueError("Can not reach the Host!")
 
-        downloads_folder = "downloads"
-        os.makedirs(downloads_folder, exist_ok=True)
+            downloads_folder = "downloads"
+            os.makedirs(downloads_folder, exist_ok=True)
 
-        file_path = os.path.join(downloads_folder, f"{self._rnd_str()}.png")
+            file_path = os.path.join(downloads_folder, f"{self._rnd_str()}.png")
 
-        with open(file_path, "wb") as f:
-            f.write(response)
+            async with aiofiles.open(file_path, "wb") as f:
+                await f.write(response_data)
 
-        return FilePath(file_path)
+            return FilePath(realpath(file_path))
 
     async def wikipedia(self, query):
         """
@@ -732,10 +747,15 @@ class TheApi:
         final_img.paste(gradient, (0, 0))
         final_img.paste(img_with_border, (0, 0))
 
-        temp_file_path = f"{self._rnd_str()}_blackpink_image.jpg"
-        final_img.save(temp_file_path, format="JPEG")
+        downloads_folder = "downloads"
+        os.makedirs(downloads_folder, exist_ok=True)
 
-        return FilePath(temp_file_path)
+        file_path = os.path.join(downloads_folder, f"blackpink_{self._rnd_str()}.jpg")
+
+        
+        final_img.save(file_path, format="JPEG")
+
+        return FilePath(realpath(file_path))
 
     async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> str:
         """
