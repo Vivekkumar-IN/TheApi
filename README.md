@@ -55,7 +55,7 @@ The following examples use the **async** version.
 | [fox](#fox) | ✅ |
 | [gen_hashtag](#gen_hashtag) | ✅ |
 | [get_advice](#get_advice) | ✅ |
-| [get_hindi_jokes](#get_hindi_jokes) | ✅ |
+| [get_hindi_jokes](#get_hindi_jokes) | ❌ |
 | [get_jokes](#get_jokes) | ✅ |
 | [get_uselessfact](#get_uselessfact) | ✅ |
 | [github_search](#github_search) | ✅ |
@@ -83,7 +83,7 @@ print(result)
 ```
 
 ```text
-['https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg', 'https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg']
+['https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg', 'https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg']
 ```
 
 ### blackpink
@@ -96,7 +96,7 @@ print(result)
 ```
 
 ```text
-HnrEdgba_blackpink_image.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_2CZijp5q.jpg
 ```
 
 ### carbon
@@ -110,7 +110,7 @@ print(result)
 
 ```text
 # Error:
-Request failed: 400, message='Bad Request', url='https://carbonara.solopov.dev/api/cook'
+name 'aiofiles' is not defined
 ```
 
 ### cat
@@ -123,7 +123,7 @@ print(result)
 ```
 
 ```text
-https://cdn2.thecatapi.com/images/3kg.jpg
+https://cdn2.thecatapi.com/images/MTcxNzUxNA.jpg
 ```
 
 ### chatgpt
@@ -150,7 +150,7 @@ print(result)
 ```
 
 ```text
-https://random.dog/831a74df-8de4-4150-a70f-12bd984f4bb4.JPG
+https://random.dog/a5a74f22-889e-42d5-8994-c3c3e499a5ca.jpg
 ```
 
 ### fox
@@ -163,7 +163,7 @@ print(result)
 ```
 
 ```text
-https://randomfox.ca/?i=43
+https://randomfox.ca/?i=93
 ```
 
 ### gen_hashtag
@@ -189,7 +189,7 @@ print(result)
 ```
 
 ```text
-When painting a room, preparation is key. The actual painting should account for about 40% of the work.
+Do not seek praise, seek criticism.
 ```
 
 ### get_hindi_jokes
@@ -202,7 +202,7 @@ print(result)
 ```
 
 ```text
-कुछ लड़कियाँ फोन पे बात करने मे इतनी अभ्यस्त होती है की अगर इन्हे जेनरेटर के बगल मेँ बैठा दो तो भी  ....मेला बाबू... से घण्टो बाते कर सकती है 😆🤣😋😉
+'status'
 ```
 
 ### get_jokes
@@ -215,7 +215,7 @@ print(result)
 ```
 
 ```text
-Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says "Do you get the reference?" But Java didn't.
+My parents raised me as an only child, which really annoyed my younger brother.
 ```
 
 ### get_uselessfact
@@ -228,7 +228,7 @@ print(result)
 ```
 
 ```text
-The name Wendy was made up for the book "Peter Pan."
+1 in every 4 Americans has appeared someway or another on television.
 ```
 
 ### github_search
@@ -241,7 +241,7 @@ print(result)
 ```
 
 ```text
-[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7529, 'forks_count': 2815}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4788, 'forks_count': 2796}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3870, 'forks_count': 1543}]
+[{'name': 'PokemonGo-Map', 'full_name': 'AHAAAAAAA/PokemonGo-Map', 'description': '🌏 Live visualization of all the pokemon in your area... and more! (shutdown)', 'url': 'https://github.com/AHAAAAAAA/PokemonGo-Map', 'language': None, 'stargazers_count': 7529, 'forks_count': 2815}, {'name': 'pokemon-showdown', 'full_name': 'smogon/pokemon-showdown', 'description': 'Pokémon battle simulator.', 'url': 'https://github.com/smogon/pokemon-showdown', 'language': 'TypeScript', 'stargazers_count': 4789, 'forks_count': 2796}, {'name': 'PokemonGo-Bot', 'full_name': 'PokemonGoF/PokemonGo-Bot', 'description': 'The Pokemon Go Bot, baking with community.', 'url': 'https://github.com/PokemonGoF/PokemonGo-Bot', 'language': 'Python', 'stargazers_count': 3870, 'forks_count': 1543}]
 ```
 
 ### hindi_quote
@@ -254,7 +254,7 @@ print(result)
 ```
 
 ```text
-मोहब्बत किससे और कब हो जाये अदांजा नहीं होता, ये वो घर है जिसका दरवाजा नहीं होता।
+आंसू वो खामोश दुआ है जो सिर्फ खुदा ही सुन सकता है।
 ```
 
 ### meme
@@ -267,7 +267,7 @@ print(result)
 ```
 
 ```text
-https://preview.redd.it/yycouv5k310e1.png?width=1080&crop=smart&auto=webp&s=1a6103d6341de4b3b3de91fef7d0f2822d96052e
+https://external-preview.redd.it/6uJp6i3t4wGROoL5JSVCvWE-GOjZBd0uE7h0lRYFfcc.jpg?width=1080&crop=smart&auto=webp&s=34c099f29742dba178df86b0878c306fb722c5fb
 ```
 
 ### pypi
@@ -293,9 +293,9 @@ print(result)
 ```
 
 ```text
-Change your life today. Don't gamble on the future, act now, without delay.
+It is not so important to know everything as to appreciate what we learn.
 
-author - Simone de Beauvoir
+author - Hannah More
 ```
 
 ### random_word
@@ -308,7 +308,7 @@ print(result)
 ```
 
 ```text
-ultrarich
+parasitoid
 ```
 
 ### riddle
@@ -321,7 +321,7 @@ print(result)
 ```
 
 ```text
-{'riddle': 'You hear it speak, for it has a hard tongue. But it cannot breathe, for it has not a lung. What is it?', 'answer': 'A Bell'}
+{'riddle': 'If you toss a die and it comes up with the number one 9 times in a row, what is the probability that it will come up with one on the next throw?', 'answer': 'One in six. A die has no memory of what it last showed'}
 ```
 
 ### stackoverflow_search
@@ -334,7 +334,7 @@ print(result)
 ```
 
 ```text
-[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 117, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1966, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32621, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
+[{'tags': ['ios', 'flutter', 'dart'], 'owner': {'account_id': 19921816, 'reputation': 3, 'user_id': 14597469, 'user_type': 'registered', 'profile_image': 'https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256', 'display_name': 'Senem Sedef', 'link': 'https://stackoverflow.com/users/14597469/senem-sedef'}, 'is_answered': False, 'view_count': 117, 'answer_count': 0, 'score': 0, 'last_activity_date': 1701515081, 'creation_date': 1622231772, 'last_edit_date': 1701515081, 'question_id': 67744802, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon', 'title': 'The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon'}, {'tags': ['reactjs', 'random', 'axios'], 'owner': {'account_id': 17931576, 'reputation': 1, 'user_id': 13028884, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2', 'display_name': 'GieGie', 'link': 'https://stackoverflow.com/users/13028884/giegie'}, 'is_answered': False, 'view_count': 1966, 'answer_count': 2, 'score': 0, 'last_activity_date': 1652730812, 'creation_date': 1642222168, 'last_edit_date': 1642223800, 'question_id': 70718940, 'content_license': 'CC BY-SA 4.0', 'link': 'https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time', 'title': 'Pokemon API request generate 5 Pok&#233;mon at a time'}, {'tags': ['java'], 'owner': {'account_id': 919945, 'reputation': 43, 'user_id': 951797, 'user_type': 'registered', 'profile_image': 'https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG', 'display_name': 'Brian', 'link': 'https://stackoverflow.com/users/951797/brian'}, 'is_answered': True, 'view_count': 32622, 'accepted_answer_id': 7942409, 'answer_count': 3, 'score': 3, 'last_activity_date': 1577442848, 'creation_date': 1319931614, 'question_id': 7942384, 'content_license': 'CC BY-SA 3.0', 'link': 'https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator', 'title': 'Simple Java Pokemon Fight Simulator'}]
 ```
 
 ### upload_image
@@ -373,7 +373,7 @@ print(result)
 ```
 
 ```text
-['euphonic', 'hognuts', 'wofuller', 'hypabyssal', 'obscurantism']
+['simnel', 'tongues', 'contiguity', 'groper', 'straitens']
 ```
 
 ### write
@@ -386,7 +386,7 @@ print(result)
 ```
 
 ```text
-write_paste.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_ND1adrXv.jpg
 ```
 
 
