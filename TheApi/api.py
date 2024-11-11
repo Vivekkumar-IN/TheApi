@@ -752,7 +752,6 @@ class TheApi:
 
         file_path = os.path.join(downloads_folder, f"blackpink_{self._rnd_str()}.jpg")
 
-        
         final_img.save(file_path, format="JPEG")
 
         return FilePath(realpath(file_path))
