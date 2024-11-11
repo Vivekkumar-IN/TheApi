@@ -8,6 +8,7 @@ from typing import Union
 from os.path import realpath
 
 import aiohttp
+import aiofiles
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image, ImageOps, ImageDraw, ImageFont
