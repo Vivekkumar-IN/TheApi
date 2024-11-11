@@ -314,7 +314,7 @@ class TheApi:
             downloads_folder = "downloads"
             os.makedirs(downloads_folder, exist_ok=True)
 
-            file_path = os.path.join(downloads_folder, f"{self._rnd_str()}.png")
+            file_path = os.path.join(downloads_folder, f"carbon_{self._rnd_str()}.png")
 
             async with aiofiles.open(file_path, "wb") as f:
                 await f.write(response_data)
