@@ -48,14 +48,14 @@ The following examples use the **async** version.
 |---------------|--------|
 | [bing_image](#bing_image) | ✅ |
 | [blackpink](#blackpink) | ✅ |
-| [carbon](#carbon) | ❌ |
+| [carbon](#carbon) | ✅ |
 | [cat](#cat) | ✅ |
 | [chatgpt](#chatgpt) | ❌ |
 | [dog](#dog) | ✅ |
 | [fox](#fox) | ✅ |
 | [gen_hashtag](#gen_hashtag) | ✅ |
 | [get_advice](#get_advice) | ✅ |
-| [get_hindi_jokes](#get_hindi_jokes) | ❌ |
+| [get_hindi_jokes](#get_hindi_jokes) | ✅ |
 | [get_jokes](#get_jokes) | ✅ |
 | [get_uselessfact](#get_uselessfact) | ✅ |
 | [github_search](#github_search) | ✅ |
@@ -83,7 +83,7 @@ print(result)
 ```
 
 ```text
-['https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg', 'https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg']
+['https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://www.pockettactics.com/wp-content/sites/pockettactics/2023/01/Pokémon-wallpapers-5.jpg', 'https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg', 'https://media.gamestop.com/i/gamestop/11103360/New-Pokemon-Snap---Nintendo-Switch', 'https://img-eshop.cdn.nintendo.net/i/00bd7efe46ab2b3ff0774172a5d4f21a5b2f467b3e324557ce1e9a9ae12c1d3b.jpg', 'https://assets-prd.ignimgs.com/2021/03/01/new-pokemon-snap-button-1614639848584.jpg', 'https://www.gamespot.com/a/uploads/screen_kubrick/123/1239113/3801204-6238037227-screenshot02.jpg', 'https://www.nme.com/wp-content/uploads/2021/05/New-Pokemon-Snap-Credit-Bandai-Namco-HERO@2000x1270.jpg', 'https://www.rpgfan.com/wp-content/uploads/2021/01/New-Pokemon-Snap-Screenshot-044.jpg', 'https://www.videogamer.com/wp-content/uploads/01d7162d-749b-43eb-bdcc-5c0cf9e49881_New_Pokmon_Snap_Main.jpg', 'https://images.launchbox-app.com/fc92b8c7-704f-43e9-ab5a-407b712bc662.jpg', 'https://i.ytimg.com/vi/e_V9nUUP2oo/maxresdefault.jpg', 'https://i.gadgets360cdn.com/products/large/New-Pokemon-Snap-Wallpaper-1440x2560-1000x1778-1646977124.jpg', 'https://i0.wp.com/mynintendonews.com/wp-content/uploads/2021/01/new_pokemon_snap_logo.jpg?ssl=1', 'https://twinfinite.net/wp-content/uploads/2021/04/New-Pokemon-Snap-scaled.jpg', 'https://cdn.vox-cdn.com/thumbor/Lgiz7lrS_auxnKixNMsWmsx_ETE=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22473880/Switch_NewPokemonSnap_Screenshots_Feb26__9_.jpg', 'https://images.launchbox-app.com/1f06f096-8eb6-43ac-abbb-262deb1bf596.jpg', 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/products/games/switch/new-pokemon-snap/110735-switch-new-pokemon-snap-us-1200x675', 'https://webgames.host/uploads/2017/09/pokemon-snap.jpg', 'https://videogamesuncovered.com/wp-content/uploads/2021/01/new-pokemon-snap-social.jpg', 'https://media.npr.org/assets/img/2021/04/29/snap-1_wide-7c41973fe9eef7cbc49beec9a59f3bf5410187d2-s1400-c100.jpg', 'https://www.nintendo.com/sg/switch/arft/img/hero_sp.jpg', 'https://cdn.mobilesyrup.com/wp-content/uploads/2021/01/new-pokemon-snap-screenshot-2.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Pokemon_Type_Chart.svg/2048px-Pokemon_Type_Chart.svg.png', 'https://vignette.wikia.nocookie.net/pokemon/images/8/8c/PokemonTypes.png/revision/latest?cb=20170417193722', 'https://img.pokemondb.net/images/typechart.png', 'http://upload.wikimedia.org/wikipedia/commons/5/5e/Pokémon_types_(english).png', 'https://www.theloadout.com/wp-content/sites/theloadout/2023/06/pokemon-type-chart-icons.jpg', 'https://i.pinimg.com/originals/95/b2/6f/95b26f7cd39e206259faa20fd57e7b47.png', 'https://raw.githubusercontent.com/kennycason/cellular-automata-pokemon-types/master/data/pokemon_gen1_type_chart.png?raw=true', 'https://res.cloudinary.com/lmn/image/upload/e_sharpen:150,f_auto,fl_lossy,q_80/v1/gameskinnyc/p/o/k/pokemon-types-table-ad163.png', 'https://1.bp.blogspot.com/-A0NsVJu2Ay0/WGOgGNxAdTI/AAAAAAAABIY/amMTic8SsXYs7jfP_ITwBmkeVQHIAGZ-ACPcB/s1600/ENG-05-02-02-All-the-Pokemon-types.png', 'https://www.mandatory.gg/wp-content/uploads/mandatory-guide-pokemon-ecarlate-violet-table-types-forces-faiblesses.png', 'https://releasegaming.com/wp-content/uploads/2023/02/Pokemon-Type-Chart-Poster-960x850.jpg', 'https://img00.deviantart.net/2a60/i/2017/020/6/5/all_18_pokemon_types_by_pokemon_ranger_sumi-daw3v3d.jpg', 'http://fc09.deviantart.net/fs70/i/2013/318/0/f/pokemon_types_wheel_by_kamionero-d6u6o9i.png', 'https://static.wikia.nocookie.net/pokemongo/images/9/9c/Type_chart.png/revision/latest?cb=20191205150508', 'https://cdn1.vectorstock.com/i/1000x1000/03/95/pokemon-type-symbols-vector-2700395.jpg', 'https://orig00.deviantart.net/caf7/f/2014/046/7/2/pokemon_type_chart__offensive__by_lunicaura106-d76mcvb.png', 'https://videogamesuncovered.com/wp-content/uploads/2016/12/pokemon-types.jpg', 'https://i.ytimg.com/vi/H1w2VoRqmQQ/maxresdefault.jpg', 'https://pnghq.com/wp-content/uploads/pnghq.com-pokemon-types-png-3908-download-1024x987.png', 'https://i.pinimg.com/originals/91/69/dc/9169dce1568a24e4b0e0acb7f04ce728.jpg', 'https://i.etsystatic.com/21027128/r/il/fdbdba/2003255292/il_1588xN.2003255292_12o2.jpg', 'https://www.pokemoncenter.com/products/images/P2373PC/155-80156/P2373PC_155-80156_01.jpg', 'https://i.etsystatic.com/23914535/r/il/750695/2869449405/il_1588xN.2869449405_fr75.jpg', 'https://m.media-amazon.com/images/I/A1Ui8dsTSrS.jpg', 'https://www.totsafe.com/wp-content/uploads/2020/09/Gyarados-Ancient-Origins-Holo-1446x2048.jpg', 'https://i.pinimg.com/736x/83/e3/5a/83e35aead31fabb77b9bde3396d4351f.jpg', 'https://images.saymedia-content.com/.image/t_share/MTgzNzE1NDA2MDk0MDE3ODU1/best-vmax-pokemon-cards.png', 'https://i.pinimg.com/originals/18/28/97/18289747d16a23e3dc20cc36956b9b4b.jpg', 'https://pm1.narvii.com/6267/3e8dabe202aa4911724963a0eb1b1f0b0c875193_hq.jpg', 'https://i.pinimg.com/originals/d1/a5/fc/d1a5fc45abdf217f2ee641bb4975fa32.png', 'https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/06/Charizard-grade-9-mint-front.jpg', 'https://images.saymedia-content.com/.image/t_share/MTc5ODE2MjE2Mjc2NDQ0Nzgz/best-v-pokemon-cards.jpg', 'https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/1920w/products/371952/569692/pokemonevolvingskies041__83278.1630015209.jpg?c=2', 'https://cardmavin.com/wp-content/uploads/2016/11/pokemon-card.jpg', 'https://images-na.ssl-images-amazon.com/images/I/91UCqW1atmL.jpg', 'https://miro.medium.com/max/1400/1*I9DUHexc5eoKn1-dZs4g0A.jpeg', 'https://i2.wp.com/nypost.com/wp-content/uploads/sites/2/2020/12/pokemon-auction.jpg?quality=90&amp;strip=all&amp;ssl=1', 'http://images.nintendolife.com/news/2017/10/guide_getting_started_with_the_pokemon_trading_card_game/attachment/6/original.jpg', 'https://i1.wp.com/s3.amazonaws.com/media.completeset.com/stories/attachments/984/content_46-1.jpg?w=900', 'https://usercontent2.hubstatic.com/13535299_f120.jpg']
 ```
 
 ### blackpink
@@ -96,7 +96,7 @@ print(result)
 ```
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_2CZijp5q.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_07rcIKNP.jpg
 ```
 
 ### carbon
@@ -109,8 +109,7 @@ print(result)
 ```
 
 ```text
-# Error:
-name 'aiofiles' is not defined
+/home/runner/work/TheApi/TheApi/downloads/fcM8c2Vc.png
 ```
 
 ### cat
@@ -123,7 +122,7 @@ print(result)
 ```
 
 ```text
-https://cdn2.thecatapi.com/images/MTcxNzUxNA.jpg
+https://cdn2.thecatapi.com/images/Rscv6E1c5.jpg
 ```
 
 ### chatgpt
@@ -150,7 +149,7 @@ print(result)
 ```
 
 ```text
-https://random.dog/a5a74f22-889e-42d5-8994-c3c3e499a5ca.jpg
+https://random.dog/b85abb5b-5b9e-47d2-9938-71129cdfdb50.jpg
 ```
 
 ### fox
@@ -163,7 +162,7 @@ print(result)
 ```
 
 ```text
-https://randomfox.ca/?i=93
+https://randomfox.ca/?i=85
 ```
 
 ### gen_hashtag
@@ -189,7 +188,7 @@ print(result)
 ```
 
 ```text
-Do not seek praise, seek criticism.
+Don't burn bridges.
 ```
 
 ### get_hindi_jokes
@@ -202,7 +201,7 @@ print(result)
 ```
 
 ```text
-'status'
+रास्ते पलट देते हैं हमारे नौजवान जब कोई आकर यह कह दे कि आगे पुलिस वाले चालान काट रहे हैं 😆🤣😋😉
 ```
 
 ### get_jokes
@@ -215,7 +214,7 @@ print(result)
 ```
 
 ```text
-My parents raised me as an only child, which really annoyed my younger brother.
+The glass is neither half-full nor half-empty, the glass is twice as big as it needs to be.
 ```
 
 ### get_uselessfact
@@ -228,7 +227,7 @@ print(result)
 ```
 
 ```text
-1 in every 4 Americans has appeared someway or another on television.
+Cats urine glows under a black light.
 ```
 
 ### github_search
@@ -254,7 +253,7 @@ print(result)
 ```
 
 ```text
-आंसू वो खामोश दुआ है जो सिर्फ खुदा ही सुन सकता है।
+जिसने अपने को वश में कर लिया है, उसकी जीत को देवता भी हार में नही बदल सकते।
 ```
 
 ### meme
@@ -267,7 +266,7 @@ print(result)
 ```
 
 ```text
-https://external-preview.redd.it/6uJp6i3t4wGROoL5JSVCvWE-GOjZBd0uE7h0lRYFfcc.jpg?width=1080&crop=smart&auto=webp&s=34c099f29742dba178df86b0878c306fb722c5fb
+https://preview.redd.it/b2zh01zs350e1.png?width=320&crop=smart&auto=webp&s=e3ca3585990e96a9a6d9b2a9b4f5e861ce9e0df6
 ```
 
 ### pypi
@@ -293,9 +292,9 @@ print(result)
 ```
 
 ```text
-It is not so important to know everything as to appreciate what we learn.
+We are all something, but none of us are everything.
 
-author - Hannah More
+author - Blaise Pascal
 ```
 
 ### random_word
@@ -308,7 +307,7 @@ print(result)
 ```
 
 ```text
-parasitoid
+eases
 ```
 
 ### riddle
@@ -321,7 +320,7 @@ print(result)
 ```
 
 ```text
-{'riddle': 'If you toss a die and it comes up with the number one 9 times in a row, what is the probability that it will come up with one on the next throw?', 'answer': 'One in six. A die has no memory of what it last showed'}
+{'riddle': 'I have no legs or arms but I still eat with a fork everyday, What am I?', 'answer': 'a snake'}
 ```
 
 ### stackoverflow_search
@@ -373,7 +372,7 @@ print(result)
 ```
 
 ```text
-['simnel', 'tongues', 'contiguity', 'groper', 'straitens']
+['etherealnesses', 'consignations', 'stonecrops', 'placatory', 'acylated']
 ```
 
 ### write
@@ -386,7 +385,7 @@ print(result)
 ```
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_ND1adrXv.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_YBJ6N1hk.jpg
 ```
 
 
