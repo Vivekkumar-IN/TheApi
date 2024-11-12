@@ -69,7 +69,7 @@ print(result)
 #### Expected Output
 
 ```text
-['https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg', 'https://images5.alphacoders.com/130/thumb-1920-1308338.jpg', 'https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg']
+['https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/150_Pokemon_from_Pokemon_Stadium.png/330px-150_Pokemon_from_Pokemon_Stadium.png', 'https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89', 'https://images5.alphacoders.com/130/thumb-1920-1308338.jpg']
 ```
 
 ### 2. Blackpink
@@ -97,7 +97,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_DSgcZPo6.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_SCq9203T.jpg
 ```
 
 ### 3. Carbon
@@ -121,7 +121,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_e4EXYXAj.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_3HcbhpOP.png
 ```
 
 ### 4. Cat
@@ -142,7 +142,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/cmi.gif
+https://cdn2.thecatapi.com/images/9sp.jpg
 ```
 
 ### 5. Chatgpt
@@ -187,7 +187,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/ac50a358-04a1-4c20-bf69-62caa63895d0.jpg
+https://random.dog/f2fd66ad-85e1-41fc-a12b-61e1ad10e9fa.mp4
 ```
 
 ### 7. Fox
@@ -208,7 +208,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=86
+https://randomfox.ca/?i=26
 ```
 
 ### 8. Gen Hashtag
@@ -255,7 +255,7 @@ print(result)
 #### Expected Output
 
 ```text
-Always block trolls.
+If you don't like the opinion you've been given, get another one.
 ```
 
 ### 10. Get Hindi Jokes
@@ -276,7 +276,7 @@ print(result)
 #### Expected Output
 
 ```text
-Girlfriend बनाने के बाद ही अधिकतर लड़कों को पता चलता हैं की 50 रूपये से ऊपर की भी Dairy Milk आती हैं
+ट्रेन के अन्दर की भीड़ के ‘चक्रव्यूह’ को तोड़ने का जो कौशल इन ...नमकीन व नारियल... बेचने वालो के पास होता है वो तो ...अभिमन्यु... के पास भी नही था। 😂😂😂
 ```
 
 ### 11. Get Jokes
@@ -300,7 +300,7 @@ print(result)
 #### Expected Output
 
 ```text
-Yo mama is so old, she knew Burger King while he was still a prince.
+Java is like Alzheimer's, it starts off slow, but eventually, your memory is gone.
 ```
 
 ### 12. Get Uselessfact
@@ -321,7 +321,7 @@ print(result)
 #### Expected Output
 
 ```text
-Facetious and abstemious contain all the vowels in the correct order, as does arsenious, meaning "containing arsenic."  
+Babies are born without kneecaps. They don`t appear until the child reaches 2-6 years of age.
 ```
 
 ### 13. Github Search
@@ -377,7 +377,7 @@ print(result)
 #### Expected Output
 
 ```text
-धनवान बनने के लिए एक-एक कण का संग्रह करना पड़ता है और गुणवान बनने के लिए एक-एक क्षण का सदुपयोग करना पड़ता है।
+आँख बंद करके चलाना खंजर हम पे, कही हमने मुस्कुरा दिया, तो कत्ल तुम्हारा ही होगा..
 ```
 
 ### 15. Meme
@@ -398,7 +398,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/zhuqprq36d0e1.png?width=1080&crop=smart&auto=webp&s=e8188462a504b6eacc19e94e6c010bcbfa503e3a
+https://preview.redd.it/iqnolxv1130e1.png?width=960&crop=smart&auto=webp&s=aac306505d37c7dbed297674f39e10973ef8ff18
 ```
 
 ### 16. Pypi
@@ -456,9 +456,9 @@ print(result)
 #### Expected Output
 
 ```text
-It isn't where you come from, it's where you're going that counts.
+The more light you allow within you, the brighter the world you live in will be.
 
-author - Ella Fitzgerald
+author - Shakti Gawain
 ```
 
 ### 18. Random Word
@@ -479,7 +479,7 @@ print(result)
 #### Expected Output
 
 ```text
-caca
+packing
 ```
 
 ### 19. Riddle
@@ -500,7 +500,7 @@ print(result)
 #### Expected Output
 
 ```text
-{'riddle': 'What fastens two people yet touches only one?', 'answer': 'A wedding ring'}
+{'riddle': "I have four wings, but cannot fly, I never laugh and never cry; On the same spot I'm always found, toiling away with little sound. What am I?", 'answer': 'Holland. A Windmill'}
 ```
 
 ### 20. Stackoverflow Search
@@ -590,7 +590,7 @@ print(result)
 #### Expected Output
 
 ```text
-{'title': 'Pokémon', 'summary': 'Pokémon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pokémon, a large variety of species endowed with special powers. The franchise\'s target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pokémon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed "Pokémania". By 2002, the craze had ended, after which Pokémon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pokémon Go, an augmented reality game developed by Niantic. Pokémon has since been estimated to be the world\'s highest-grossing media franchise and one of the best-selling video game franchises.\nPokémon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pokémon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pokémon Company (TPC) in 1998 to manage the Pokémon property within Asia. The Pokémon anime series and films are co-owned by Shogakukan. Since 2009, The Pokémon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.', 'url': 'https://en.wikipedia.org/?curid=23745', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png'}
+{'title': 'Pokémon', 'summary': 'Pokémon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pokémon, a large variety of species endowed with special powers. The franchise\'s target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pokémon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed "Pokémania". By 2002, the craze had ended, after which Pokémon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pokémon Go, an augmented reality game developed by Niantic. Pokémon has since been estimated to be the world\'s highest-grossing media franchise and one of the best-selling video game franchises.\nPokémon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pokémon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pokémon Company (TPC) in 1998 to manage the Pokémon property within Asia. The Pokémon anime series and films are co-owned by Shogakukan. Since 2009, The Pokémon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n', 'url': 'https://en.wikipedia.org/?curid=23745', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png'}
 ```
 
 ### 23. Words
@@ -614,7 +614,7 @@ print(result)
 #### Expected Output
 
 ```text
-['explanative', 'photooxidations', 'vineyardist', 'reinduct', 'ascogonium']
+['silhouetted', 'perplexers', 'apnoeas', 'uncouth', 'softened']
 ```
 
 ### 24. Write
@@ -642,7 +642,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_U1McKxMA.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_KNnbzrzd.jpg
 ```
 
 
