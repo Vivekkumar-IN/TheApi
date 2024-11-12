@@ -791,7 +791,7 @@ class TheApi:
             )
 
         url = self.base_urls["upload"]
-        files = {"file": image_bytes}  
+        files = {"file": image_bytes}
 
         try:
             response = await self._make_request(url=url, method="POST", files=files)
