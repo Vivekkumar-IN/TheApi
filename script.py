@@ -1,4 +1,5 @@
-"""I'm not deeply skilled in Python, so this script was created with AI's help.
+"""
+I'm not deeply skilled in Python, so this script was created with AI's help.
 
 The script analyzes `TheApi` methods and auto-generates documentation for them in the README, providing examples, outputs, and functionality statuses.
 
@@ -10,13 +11,21 @@ Here's a breakdown of each part:
 
 3. **generate_api_status**: Loops through the methods in `TheApi`, tests them, and organizes usage examples and status marks for each.
 
-4. **write_api_status_to_file**: Compiles the generated statuses and documentation, saving them into the README file.
+4. **format_result**: This function formats the result returned by an API method for easier readability in the README.
 
-5. **main**: Collects methods, generates documentation and statuses, and triggers the README update.
+   - If the result is a dictionary, it will be formatted as a JSON code block.
+   - If the result is a list of dictionaries, it will also be formatted as a JSON code block.
+   - If the result is a list of non-dictionary items, it will be formatted as plain text.
+   - For all other types of results, it will be formatted as plain text.
+
+5. **write_api_status_to_file**: Compiles the generated statuses and documentation, saving them into the README file.
+
+6. **main**: Collects methods, generates documentation and statuses, and triggers the README update.
 
 When you run this, the README will get an API reference with examples and statuses for easy access.
 """
 
+import json
 import asyncio
 import inspect
 
@@ -26,8 +35,6 @@ from TheApi import api
 
 
 # Helper function to test each API method
-
-
 async def test_method(method, *args):
     try:
         if inspect.iscoroutinefunction(method):
@@ -42,8 +49,6 @@ async def test_method(method, *args):
 
 
 # Formats docstring into a readable markdown format for README
-
-
 def format_docstring(docstring):
     lines = docstring.splitlines()
     formatted_lines = []
@@ -83,6 +88,20 @@ def format_docstring(docstring):
             nested_item = False
 
     return "\n".join(formatted_lines)
+
+
+def format_result(result):
+    if isinstance(result, dict):
+        json_content = json.dumps(result, indent=4)
+        return f"```json\n{json_content}\n```"
+    elif isinstance(result, list):
+        if len(result) > 0 and isinstance(result[0], dict):
+            json_content = json.dumps(result, indent=4)
+            return f"```json\n{json_content}\n```"
+        else:
+            return "```text\n" + "\n".join(map(str, result)) + "\n```"
+    else:
+        return f"```text\n{str(result)}\n```"
 
 
 # Main function to generate API status table and function documentation
@@ -139,7 +158,7 @@ async def generate_api_status(methods):
                     f"result = await api.{name}()\n"
                     f"print(result)\n```\n\n"
                     f"#### Expected Output\n\n"
-                    f"```text\n{result}\n```\n"
+                    f"{format_result(result)}\n"
                 )
             else:
                 # Handle functions with parameters
@@ -168,7 +187,7 @@ async def generate_api_status(methods):
                     f"result = await api.{name}({params_str})\n"
                     f"print(result)\n```\n\n"
                     f"#### Expected Output\n\n"
-                    f"```text\n{result}\n```\n"
+                    f"{format_result(result)}\n"
                 )
 
         # Update status table with the function's status
@@ -180,8 +199,6 @@ async def generate_api_status(methods):
 
 
 # Writes the API status and documentation to README.md
-
-
 async def write_api_status_to_file(
     status_content,
     readme_content,
@@ -228,8 +245,6 @@ async def write_api_status_to_file(
 
 
 # Main function to run the script
-
-
 async def main():
     methods = inspect.getmembers(
         api, predicate=lambda m: inspect.ismethod(m) or inspect.isfunction(m)

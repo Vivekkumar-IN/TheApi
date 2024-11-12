@@ -1,0 +1,43 @@
+name: Create Tag and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'The tag name to create'
+        required: true
+        default: ''
+      release_name:
+        description: 'The release name'
+        required: true
+        default: ''
+
+jobs:
+  create_tag_and_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create Git Tag
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git tag ${{ github.event.inputs.tag_name }}
+          git push origin ${{ github.event.inputs.tag_name }}
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -s -X POST https://api.github.com/repos/${{ github.repository }}/releases \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "tag_name": "${{ github.event.inputs.tag_name }}",
+            "name": "${{ github.event.inputs.release_name }}",
+            "body": "",
+            "draft": false,
+            "prerelease": false
+          }'
