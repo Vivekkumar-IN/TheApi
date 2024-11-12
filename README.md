@@ -1,7 +1,7 @@
 ##### Installation
 
 ```sh
-pip install git+https://github.com/Vivekkumar-IN/TheApi@main
+pip install https://github.com/Vivekkumar-IN/TheApi/archive/refs/heads/main.zip
 ```
 
 ---
