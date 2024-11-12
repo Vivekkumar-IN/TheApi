@@ -25,7 +25,7 @@ class TheApi:
             "random_word": "https://random-word-api.herokuapp.com/word",
             "image": "https://graph.org/file/1f8d00177ac2429b101b9.jpg",
             "font": "https://github.com/google/fonts/raw/main/ofl/poetsenone/PoetsenOne-Regular.ttf",
-            "upload": "https://envs.sh",
+            "upload": "https://envs.sh/",
             "chatgpt": "https://chatwithai.codesearch.workers.dev/",
             "advice": "https://api.adviceslip.com/advice",
             "jokes": "https://v2.jokeapi.dev/joke/Any",
@@ -775,8 +775,8 @@ class TheApi:
         """
         if isinstance(file_path, str):
             try:
-                with open(file_path, "rb") as f:
-                    image_bytes = f.read()
+                async with aiofiles.open(file_path, "rb") as f:
+                    image_bytes = await f.read()
             except FileNotFoundError:
                 raise ValueError(
                     f"File not found: '{file_path}' - Ensure the file path is correct."
@@ -791,13 +791,7 @@ class TheApi:
             )
 
         url = self.base_urls["upload"]
-        files = {
-            "file": (
-                file_path.name if isinstance(file_path, BytesIO) else "image.png",
-                image_bytes,
-                "image/png",
-            )
-        }
+        files = {"file": image_bytes}  
 
         try:
             response = await self._make_request(url=url, method="POST", files=files)
