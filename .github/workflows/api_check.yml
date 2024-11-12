@@ -1,6 +1,11 @@
 name: API Status Script
 
 on:
+  push:
+    paths:
+    - "**.py"
+  schedule:
+    - cron: '40 2 * * *'  # This runs the job at 8:10 AM IST (GMT+5:30)
   workflow_dispatch:
 jobs:
   run-and-commit:
