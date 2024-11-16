@@ -224,8 +224,7 @@ async def write_api_status_to_file(
 
     preface = "# 📘 API Documentation\n\n"
     preface += (
-        "Welcome to the **TheApi**! This library allows you to easily interact with the API using both **synchronous** and **asynchronous** options.\n\n"
-        "- **Sync**: `from TheApi.sync import api`\n"
+        "Welcome to the **TheApi**! This library allows you to easily interact with the API using **asynchronous** options.\n\n"
         "- **Async**: `from TheApi import api`\n\n"
         "Below, we’ll cover each function, providing examples and expected results so you can get started quickly! Let’s dive in 🚀\n\n"
         "## Status\n\n"
