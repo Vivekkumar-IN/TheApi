@@ -1,6 +1,5 @@
-import typing
-from json import dumps
 from enum import Enum
+from json import dumps
 
 
 class FilePath(str):
@@ -22,6 +21,7 @@ class FilePath(str):
         except Exception:
             pass
 
+
 class Result:
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
@@ -40,10 +40,7 @@ class Result:
             if getattr(obj, attr) is not None
         }
 
-        return {
-            "_": obj.__class__.__name__,
-            **filtered_attributes
-        }
+        return {"_": obj.__class__.__name__, **filtered_attributes}
 
     def __str__(self) -> str:
         return dumps(self, indent=4, default=Result.default, ensure_ascii=False)
@@ -80,7 +77,7 @@ class Result:
         return getattr(self, key, default)
 
     def keys(self):
-        return [key for key in self.__dict__ if not key.startswith('_')]
+        return [key for key in self.__dict__ if not key.startswith("_")]
 
     def values(self):
         return [getattr(self, key) for key in self.keys()]
