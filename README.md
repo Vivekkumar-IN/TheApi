@@ -8,9 +8,8 @@ pip install https://github.com/Vivekkumar-IN/TheApi/archive/refs/heads/main.zip
 
 # 📘 API Documentation
 
-Welcome to the **TheApi**! This library allows you to easily interact with the API using both **synchronous** and **asynchronous** options.
+Welcome to the **TheApi**! This library allows you to easily interact with the API using **asynchronous** options.
 
-- **Sync**: `from TheApi.sync import api`
 - **Async**: `from TheApi import api`
 
 Below, we’ll cover each function, providing examples and expected results so you can get started quickly! Let’s dive in 🚀
@@ -28,7 +27,7 @@ Below, we’ll cover each function, providing examples and expected results so y
 | [7. Domain Search](#7-domain-search) | ✅
 | [8. Fox](#8-fox) | ✅
 | [9. Get Advice](#9-get-advice) | ✅
-| [10. Get Hindi Jokes](#10-get-hindi-jokes) | ✅
+| [10. Get Hindi Jokes](#10-get-hindi-jokes) | ❌
 | [11. Get Jokes](#11-get-jokes) | ✅
 | [12. Get Uselessfact](#12-get-uselessfact) | ✅
 | [13. Github Search](#13-github-search) | ✅
@@ -68,14 +67,14 @@ print(result)
 
 ```json
 {
-    "content": "I placed this blade of grass in my mouth thinking I'd look cool. But it must be poison 'cause ith makinth ma mouth numb.",
+    "content": "How could I forget? He's into dead girls.",
     "anime": {
-        "id": 222,
-        "name": "Bleach"
+        "id": 218,
+        "name": "Inuyasha"
     },
     "character": {
-        "id": 2489,
-        "name": "Shunsui Ky\u014draku"
+        "id": 1811,
+        "name": "Kagome Higurashi"
     }
 }
 ```
@@ -102,69 +101,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://media.gamestop.com/i/gamestop/11103360/New-Pokemon-Snap---Nintendo-Switch
-https://assets-prd.ignimgs.com/2021/03/01/new-pokemon-snap-button-1614639848584.jpg
-https://img-eshop.cdn.nintendo.net/i/00bd7efe46ab2b3ff0774172a5d4f21a5b2f467b3e324557ce1e9a9ae12c1d3b.jpg
-https://www.nme.com/wp-content/uploads/2021/05/New-Pokemon-Snap-Credit-Bandai-Namco-HERO@2000x1270.jpg
-https://www.rpgfan.com/wp-content/uploads/2021/01/New-Pokemon-Snap-Screenshot-044.jpg
-https://www.gamespot.com/a/uploads/screen_kubrick/123/1239113/3801204-6238037227-screenshot02.jpg
-https://www.videogamer.com/wp-content/uploads/01d7162d-749b-43eb-bdcc-5c0cf9e49881_New_Pokmon_Snap_Main.jpg
-https://cdn.vox-cdn.com/thumbor/Lgiz7lrS_auxnKixNMsWmsx_ETE=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22473880/Switch_NewPokemonSnap_Screenshots_Feb26__9_.jpg
-https://media.npr.org/assets/img/2021/04/29/snap-1_wide-7c41973fe9eef7cbc49beec9a59f3bf5410187d2-s1400-c100.jpg
-https://images.launchbox-app.com/fc92b8c7-704f-43e9-ab5a-407b712bc662.jpg
-https://assets.gamepur.com/wp-content/uploads/2021/01/14074110/new-pokemon-snap-arrives-on-nintendo-switch-this-april.jpg
-https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/products/games/switch/new-pokemon-snap/110735-switch-new-pokemon-snap-us-1200x675
-https://cdn.mobilesyrup.com/wp-content/uploads/2021/01/new-pokemon-snap-screenshot-2.jpg
-https://images.launchbox-app.com/1f06f096-8eb6-43ac-abbb-262deb1bf596.jpg
-https://upload.wikimedia.org/wikipedia/en/thumb/8/84/POKEMON_SNAP_GAMEPLAY.jpg/220px-POKEMON_SNAP_GAMEPLAY.jpg
-https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/04/pokemon-snap.png
-https://videogamesuncovered.com/wp-content/uploads/2021/01/new-pokemon-snap-social.jpg
-https://i0.wp.com/mynintendonews.com/wp-content/uploads/2021/01/new_pokemon_snap_logo.jpg?ssl=1
-https://i.gadgets360cdn.com/products/large/New-Pokemon-Snap-Wallpaper-1440x2560-1000x1778-1646977124.jpg
-https://www.nintendo.com/sg/switch/arft/img/hero_sp.jpg
-https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Pokemon_Type_Chart.svg/2048px-Pokemon_Type_Chart.svg.png
-https://vignette.wikia.nocookie.net/pokemon/images/8/8c/PokemonTypes.png/revision/latest?cb=20170417193722
-https://videogamesuncovered.com/wp-content/uploads/2016/12/pokemon-types.jpg
-https://www.theloadout.com/wp-content/sites/theloadout/2023/06/pokemon-type-chart-icons.jpg
-https://i.pinimg.com/originals/c4/c7/79/c4c779a2c89ebcc0d1fa61a21e03640d.png
-https://res.cloudinary.com/lmn/image/upload/e_sharpen:150,f_auto,fl_lossy,q_80/v1/gameskinnyc/p/o/k/pokemon-types-table-ad163.png
-https://cdn1.vectorstock.com/i/1000x1000/03/95/pokemon-type-symbols-vector-2700395.jpg
-https://external-preview.redd.it/GhUNDBJN4b3NpRRIenzN9nEWV4tsuC9KI4lvj_VfbWA.png?auto=webp&amp;s=f4b4a9cf1726f3c4b785044116a245e6787877b7
-https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc175766-6e5d-4e29-a6c5-ecc6a37db16a/d8vkfwp-b481a558-5c32-44b6-b4d0-df9f1e8ed8f1.png/v1/fill/w_1600,h_1340,q_80,strp/illustrated_pokemon_type_chart_by_jojostory_d8vkfwp-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM0MCIsInBhdGgiOiJcL2ZcL2RjMTc1NzY2LTZlNWQtNGUyOS1hNmM1LWVjYzZhMzdkYjE2YVwvZDh2a2Z3cC1iNDgxYTU1OC01YzMyLTQ0YjYtYjRkMC1kZjlmMWU4ZWQ4ZjEucG5nIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.7rruD0XfA3p4nDeOv404ZBC2Wl_QB2hCOO0xsTdi1R0
-https://www.mandatory.gg/wp-content/uploads/mandatory-guide-pokemon-ecarlate-violet-table-types-forces-faiblesses.png
-https://3.bp.blogspot.com/-b8i_WR7eoI0/WV8bxYVOZBI/AAAAAAAAGck/5nEIhuF-zMASQfxBF6JhSw6SRfjVh7ocACKgBGAs/s1600/ENG-05-02-02-Pokemon-type-chart.png
-https://i.pinimg.com/originals/95/b2/6f/95b26f7cd39e206259faa20fd57e7b47.png
-https://raw.githubusercontent.com/kennycason/cellular-automata-pokemon-types/master/data/pokemon_gen1_type_chart.png?raw=true
-https://i.ytimg.com/vi/H1w2VoRqmQQ/maxresdefault.jpg
-https://releasegaming.com/wp-content/uploads/2023/02/Pokemon-Type-Chart-Poster-960x850.jpg
-http://images6.fanpop.com/image/photos/34100000/Pokemon-types-pokemon-34164928-846-1824.jpg
-https://1.bp.blogspot.com/-A0NsVJu2Ay0/WGOgGNxAdTI/AAAAAAAABIY/amMTic8SsXYs7jfP_ITwBmkeVQHIAGZ-ACPcB/s1600/ENG-05-02-02-All-the-Pokemon-types.png
-http://img.pokemondb.net/images/typechart.png
-http://fc09.deviantart.net/fs70/i/2013/318/0/f/pokemon_types_wheel_by_kamionero-d6u6o9i.png
-https://vignette3.wikia.nocookie.net/pokemonadventure/images/a/ad/Symbols.png/revision/latest?cb=20121003192408
-https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/2560w/products/175831/251398/pokemonshininglegends28__52193.1509648391.jpg?c=2
-https://images.saymedia-content.com/.image/t_share/MTc5ODE2MjE2Mjc2NDQ0Nzgz/best-v-pokemon-cards.jpg
-https://www.pokemoncenter.com/products/images/P2373PC/155-80156/P2373PC_155-80156_01.jpg
-https://i.pinimg.com/736x/83/e3/5a/83e35aead31fabb77b9bde3396d4351f.jpg
-https://i.pinimg.com/originals/18/28/97/18289747d16a23e3dc20cc36956b9b4b.jpg
-https://imgix.ranker.com/user_node_img/3181/63618188/original/blastoise-u16?fit=crop&amp;fm=pjpg&amp;q=60&amp;w=650&amp;dpr=2
-https://m.media-amazon.com/images/I/91lXJ99OooL.jpg
-https://www.totsafe.com/wp-content/uploads/2020/09/Gyarados-Ancient-Origins-Holo-1446x2048.jpg
-https://m.media-amazon.com/images/I/71p-47sRv9L.jpg
-https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/06/Charizard-grade-9-mint-front.jpg
-https://www.oldsportscards.com/wp-content/uploads/2019/12/Most-Valuable-First-Edition-Pokemon-Cards.jpg
-https://i.etsystatic.com/26687506/r/il/01dacc/2853951539/il_1588xN.2853951539_obpw.jpg
-https://i.etsystatic.com/22464198/r/il/92a686/2662042144/il_1140xN.2662042144_ns4d.jpg
-https://i.etsystatic.com/24353291/r/il/358485/2689751041/il_fullxfull.2689751041_ofmo.jpg
-https://i.etsystatic.com/22089514/r/il/ecff88/4140836231/il_1080xN.4140836231_cpmu.jpg
-https://i.redd.it/jtyx6uktb8r21.jpg
-https://images.saymedia-content.com/.image/t_share/MTgzNzE1NDA2MDk0MDE3ODU1/best-vmax-pokemon-cards.png
-https://i.etsystatic.com/22089514/r/il/c4b57e/2338029595/il_1140xN.2338029595_sei2.jpg
-https://pm1.narvii.com/6267/3e8dabe202aa4911724963a0eb1b1f0b0c875193_hq.jpg
-https://i.etsystatic.com/22089514/r/il/c9fa64/4093173358/il_1140xN.4093173358_jv87.jpg
-https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
-https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
+https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg
 ```
 
 ### 3. Blackpink
@@ -192,7 +131,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_jJsoJBVh.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_TTNx55FN.jpg
 ```
 
 ### 4. Carbon
@@ -216,7 +155,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_eGIiJdUJ.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_CIHvZcfA.png
 ```
 
 ### 5. Cat
@@ -237,7 +176,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTY3NTkxNw.jpg
+https://cdn2.thecatapi.com/images/dtv.jpg
 ```
 
 ### 6. Dog
@@ -258,7 +197,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/28f07efd-c0a8-482a-b1f6-5823256f7a71.mp4
+https://random.dog/eae02902-719d-4b1f-b9b8-6cce2682f6a5.jpg
 ```
 
 ### 7. Domain Search
@@ -1008,7 +947,7 @@ print(result)
         }
     ],
     "total": 354,
-    "time": "8",
+    "time": "84",
     "next_page": null
 }
 ```
@@ -1031,7 +970,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=47
+https://randomfox.ca/?i=9
 ```
 
 ### 9. Get Advice
@@ -1052,7 +991,7 @@ print(result)
 #### Expected Output
 
 ```text
-Everything matters, but nothing matters that much.
+Take time once in a while to look up at the stars for at least 5 minutes, in order to comprehend your cosmic significance.
 ```
 
 ### 10. Get Hindi Jokes
@@ -1073,7 +1012,7 @@ print(result)
 #### Expected Output
 
 ```text
-उम्र बढ़ती जा रही है और हरकतें सुधरने का नाम नहीं ले रही मेरी नहीं तुम सब लोगों की😆🤣😋😉 
+'status'
 ```
 
 ### 11. Get Jokes
@@ -1097,10 +1036,7 @@ print(result)
 #### Expected Output
 
 ```text
-What does the MacBook have in common with Donald Trump?
-
-I would tell you....
-But I don't compare apples to oranges.
+Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says "Do you get the reference?" But Java didn't.
 ```
 
 ### 12. Get Uselessfact
@@ -1121,7 +1057,7 @@ print(result)
 #### Expected Output
 
 ```text
-There are 293 ways to make change for a dollar.
+The average American looks at eight houses before buying one.
 ```
 
 ### 13. Github Search
@@ -1205,7 +1141,7 @@ print(result)
 #### Expected Output
 
 ```text
-जीवन में ऊँचा उठने के लिए किसी डिग्री की जरुरत नहीं। अच्छे शब्द ही इंसान को बादशाह बना देते है।
+रिश्ता उसी से बनाना जो जानता हो उसे निभाना…
 ```
 
 ### 15. Hug
@@ -1234,8 +1170,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Sword Art Online",
-        "url": "https://nekos.best/api/v2/hug/548daa04-3dff-4524-bb28-c229e5542e9f.gif"
+        "anime_name": "Darker Than Black: Ryuusei no Gemini",
+        "url": "https://nekos.best/api/v2/hug/1dcc8b20-6420-476f-888e-17c7e09a11fb.gif"
     }
 ]
 ```
@@ -1258,7 +1194,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/79p7r99mot0e1.gif?width=640&crop=smart&format=png8&s=e9a44bc18f3f1c3e224d7ade898f7e495699839f
+https://preview.redd.it/qrzbie0bsy0e1.png?width=640&crop=smart&auto=webp&s=61fe79c1c90e9c2273aff740a164978c91439731
 ```
 
 ### 17. Neko
@@ -1298,22 +1234,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/34096559",
-            "artist_name": "\u6749far-",
-            "source_url": "https://www.pixiv.net/en/artworks/87660808",
-            "url": "https://nekos.best/api/v2/neko/f66a2183-aaaf-4c30-b93f-304add2272f6.png"
+            "artist_href": "https://www.pixiv.net/en/users/46994695",
+            "artist_name": "\u6843\u7a1a\u3061\u3042",
+            "source_url": "https://www.pixiv.net/en/artworks/92250862",
+            "url": "https://nekos.best/api/v2/neko/478b1c25-dbbc-4be4-9bb9-02934c709346.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/14089200",
-            "artist_name": "\u62b9\u8336Amigo",
-            "source_url": "https://www.pixiv.net/en/artworks/93733699",
-            "url": "https://nekos.best/api/v2/neko/1b63d20d-1b51-4a93-840c-1ed00dccc442.png"
+            "artist_href": "https://www.pixiv.net/en/users/22874219",
+            "artist_name": "\u3046\u307f\u732b",
+            "source_url": "https://www.pixiv.net/en/artworks/80965395",
+            "url": "https://nekos.best/api/v2/neko/0ad42166-36ad-482e-afdc-9bb228c0812d.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/10297869",
-            "artist_name": "\u5c0f\u98af\u732b",
-            "source_url": "https://www.pixiv.net/en/artworks/80280669",
-            "url": "https://nekos.best/api/v2/neko/f44f42f1-44ce-4962-87a7-7f4552c6c3e3.png"
+            "artist_href": "https://www.pixiv.net/en/users/20352874",
+            "artist_name": "\u3080\u3089\u3055\u3081\u3057\u3093",
+            "source_url": "https://www.pixiv.net/en/artworks/86429017",
+            "url": "https://nekos.best/api/v2/neko/a7399ff5-2c6c-4e2c-bfee-e86b25c1e72e.png"
         }
     ]
 }
@@ -1389,9 +1325,9 @@ print(result)
 #### Expected Output
 
 ```text
-Never reach out your hand unless you're willing to extend an arm.
+It is with words as with sunbeams. The more they are condensed, the deeper they burn.
 
-author - Pope Paul VI
+author - Robert Southey
 ```
 
 ### 20. Random Word
@@ -1412,7 +1348,7 @@ print(result)
 #### Expected Output
 
 ```text
-rationality
+dauntlessly
 ```
 
 ### 21. Riddle
@@ -1434,8 +1370,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I am the creator, through thick and thin, My time is sunset then I begin. Worlds of men and beasts I make, to me these things are not fake. But Over and over I will kill , I am the tirent and creator but not at will. What am I?",
-    "answer": "A sleeping dreamer"
+    "riddle": "What is it that you ought to keep after you have given it to someone else?",
+    "answer": "A promise"
 }
 ```
 
@@ -1635,11 +1571,11 @@ print(result)
 #### Expected Output
 
 ```text
-journalizing
-aggrade
-redetermination
-birdings
-merit
+stonecutting
+mahuangs
+deist
+rifled
+sensitometry
 ```
 
 ### 26. Write
@@ -1667,7 +1603,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_oTHtt6s8.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_VXSNMGNw.jpg
 ```
 
 
