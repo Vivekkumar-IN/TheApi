@@ -27,7 +27,7 @@ Below, we’ll cover each function, providing examples and expected results so y
 | [7. Domain Search](#7-domain-search) | ✅
 | [8. Fox](#8-fox) | ✅
 | [9. Get Advice](#9-get-advice) | ✅
-| [10. Get Hindi Jokes](#10-get-hindi-jokes) | ❌
+| [10. Get Hindi Jokes](#10-get-hindi-jokes) | ✅
 | [11. Get Jokes](#11-get-jokes) | ✅
 | [12. Get Uselessfact](#12-get-uselessfact) | ✅
 | [13. Github Search](#13-github-search) | ✅
@@ -67,14 +67,14 @@ print(result)
 
 ```json
 {
-    "content": "How could I forget? He's into dead girls.",
+    "content": "[When she hops into the bath with Ichigo, but in cat form] What? Are you a little disappointed? Come on, be honest. You are, aren't you? You little pervert!",
     "anime": {
-        "id": 218,
-        "name": "Inuyasha"
+        "id": 222,
+        "name": "Bleach"
     },
     "character": {
-        "id": 1811,
-        "name": "Kagome Higurashi"
+        "id": 2464,
+        "name": "Shihouin Yoruichi"
     }
 }
 ```
@@ -101,9 +101,9 @@ print(result)
 #### Expected Output
 
 ```text
+https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
-https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg
 ```
 
 ### 3. Blackpink
@@ -131,7 +131,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_TTNx55FN.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_bJ322MMm.jpg
 ```
 
 ### 4. Carbon
@@ -155,7 +155,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_CIHvZcfA.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_6Y6d9kQt.png
 ```
 
 ### 5. Cat
@@ -176,7 +176,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/dtv.jpg
+https://cdn2.thecatapi.com/images/MTU2NDQ5Nw.gif
 ```
 
 ### 6. Dog
@@ -197,7 +197,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/eae02902-719d-4b1f-b9b8-6cce2682f6a5.jpg
+https://random.dog/ba2a3ac0-65e1-4955-9aea-85cfed9cc325.jpg
 ```
 
 ### 7. Domain Search
@@ -947,7 +947,7 @@ print(result)
         }
     ],
     "total": 354,
-    "time": "84",
+    "time": "8",
     "next_page": null
 }
 ```
@@ -970,7 +970,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=9
+https://randomfox.ca/?i=43
 ```
 
 ### 9. Get Advice
@@ -991,7 +991,7 @@ print(result)
 #### Expected Output
 
 ```text
-Take time once in a while to look up at the stars for at least 5 minutes, in order to comprehend your cosmic significance.
+When you're looking up at birds flying overhead, keep your mouth closed.
 ```
 
 ### 10. Get Hindi Jokes
@@ -1012,7 +1012,7 @@ print(result)
 #### Expected Output
 
 ```text
-'status'
+अर्ज़ किया है वो कहती अपने भाइयों से मेरे आशिक़ को यूँ ना पीटो ज़रा गौर फरमाइये वो कहती अपने भाइयों से मेरे आशिक़ को यूँ ना पीटो बड़ा जिद्दी है ये लफंगा इसे पहले कुत्ते की तरह घसीटो 😆🤣😋😉 
 ```
 
 ### 11. Get Jokes
@@ -1036,7 +1036,7 @@ print(result)
 #### Expected Output
 
 ```text
-Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says "Do you get the reference?" But Java didn't.
+In Soviet Russia, gay sex gets you arrested. In America, getting arrested gets you gay sex.
 ```
 
 ### 12. Get Uselessfact
@@ -1057,7 +1057,7 @@ print(result)
 #### Expected Output
 
 ```text
-The average American looks at eight houses before buying one.
+The name for Oz in the "Wizard of Oz" was thought up when the creator, Frank Baum, looked at his filing cabinet and saw A-N, and O-Z; hence the name "OZ."
 ```
 
 ### 13. Github Search
@@ -1141,7 +1141,7 @@ print(result)
 #### Expected Output
 
 ```text
-रिश्ता उसी से बनाना जो जानता हो उसे निभाना…
+जमाने में आये हो तो जिने का हुनर भी रखना, दुश्मनों का कोई खतरा नही बस अपनों पे नजर रखना…
 ```
 
 ### 15. Hug
@@ -1170,8 +1170,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Darker Than Black: Ryuusei no Gemini",
-        "url": "https://nekos.best/api/v2/hug/1dcc8b20-6420-476f-888e-17c7e09a11fb.gif"
+        "anime_name": "Princess Connect! Re:Dive",
+        "url": "https://nekos.best/api/v2/hug/7aadc12d-90e2-4e2e-933b-aa72313ccc10.gif"
     }
 ]
 ```
@@ -1194,7 +1194,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/qrzbie0bsy0e1.png?width=640&crop=smart&auto=webp&s=61fe79c1c90e9c2273aff740a164978c91439731
+https://preview.redd.it/mnwvrhk1n21e1.png?width=1080&crop=smart&auto=webp&s=c2f6878203ecc89cecbb034f989e99081749b8b1
 ```
 
 ### 17. Neko
@@ -1234,22 +1234,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/46994695",
-            "artist_name": "\u6843\u7a1a\u3061\u3042",
-            "source_url": "https://www.pixiv.net/en/artworks/92250862",
-            "url": "https://nekos.best/api/v2/neko/478b1c25-dbbc-4be4-9bb9-02934c709346.png"
+            "artist_href": "https://www.pixiv.net/en/users/25892105",
+            "artist_name": "Mellozzo",
+            "source_url": "https://www.pixiv.net/en/artworks/94568011",
+            "url": "https://nekos.best/api/v2/neko/53794e7c-77e4-4d19-bdb7-59c2fd4dc0f7.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/22874219",
-            "artist_name": "\u3046\u307f\u732b",
-            "source_url": "https://www.pixiv.net/en/artworks/80965395",
-            "url": "https://nekos.best/api/v2/neko/0ad42166-36ad-482e-afdc-9bb228c0812d.png"
+            "artist_href": "https://www.pixiv.net/en/users/71408626",
+            "artist_name": "0",
+            "source_url": "https://www.pixiv.net/en/artworks/96806591",
+            "url": "https://nekos.best/api/v2/neko/1b93b602-d2cd-46cb-a1cd-bb13c5414510.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/20352874",
-            "artist_name": "\u3080\u3089\u3055\u3081\u3057\u3093",
-            "source_url": "https://www.pixiv.net/en/artworks/86429017",
-            "url": "https://nekos.best/api/v2/neko/a7399ff5-2c6c-4e2c-bfee-e86b25c1e72e.png"
+            "artist_href": "https://www.pixiv.net/en/users/26040235",
+            "artist_name": "Noyu",
+            "source_url": "https://www.pixiv.net/en/artworks/92830475",
+            "url": "https://nekos.best/api/v2/neko/2f37bff0-4bf3-4776-94fb-6f94481f6707.png"
         }
     ]
 }
@@ -1325,9 +1325,9 @@ print(result)
 #### Expected Output
 
 ```text
-It is with words as with sunbeams. The more they are condensed, the deeper they burn.
+Time is the wisest counsellor of all.
 
-author - Robert Southey
+author - Pericles
 ```
 
 ### 20. Random Word
@@ -1348,7 +1348,7 @@ print(result)
 #### Expected Output
 
 ```text
-dauntlessly
+borked
 ```
 
 ### 21. Riddle
@@ -1370,8 +1370,8 @@ print(result)
 
 ```json
 {
-    "riddle": "What is it that you ought to keep after you have given it to someone else?",
-    "answer": "A promise"
+    "riddle": "I fly, yet I have no wings. I cry, yet I have no eyes. Darkness follows me; lower light I never see.",
+    "answer": "A cloud"
 }
 ```
 
@@ -1470,7 +1470,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32633,
+        "view_count": 32634,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1571,11 +1571,11 @@ print(result)
 #### Expected Output
 
 ```text
-stonecutting
-mahuangs
-deist
-rifled
-sensitometry
+oscitance
+bluebottle
+extirpating
+anglicising
+roadies
 ```
 
 ### 26. Write
@@ -1603,7 +1603,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_VXSNMGNw.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_MTZaXn2M.jpg
 ```
 
 
