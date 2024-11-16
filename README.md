@@ -68,14 +68,14 @@ print(result)
 
 ```json
 {
-    "content": "You asked me if I was ready to carry on. In all honesty, I am not sure of myself. But there is something that must be done now. And I will do it.",
+    "content": "I placed this blade of grass in my mouth thinking I'd look cool. But it must be poison 'cause ith makinth ma mouth numb.",
     "anime": {
-        "id": 224,
-        "name": "Noragami"
+        "id": 222,
+        "name": "Bleach"
     },
     "character": {
-        "id": 254,
-        "name": "Bishamonten"
+        "id": 2489,
+        "name": "Shunsui Ky\u014draku"
     }
 }
 ```
@@ -102,6 +102,66 @@ print(result)
 #### Expected Output
 
 ```text
+https://media.gamestop.com/i/gamestop/11103360/New-Pokemon-Snap---Nintendo-Switch
+https://assets-prd.ignimgs.com/2021/03/01/new-pokemon-snap-button-1614639848584.jpg
+https://img-eshop.cdn.nintendo.net/i/00bd7efe46ab2b3ff0774172a5d4f21a5b2f467b3e324557ce1e9a9ae12c1d3b.jpg
+https://www.nme.com/wp-content/uploads/2021/05/New-Pokemon-Snap-Credit-Bandai-Namco-HERO@2000x1270.jpg
+https://www.rpgfan.com/wp-content/uploads/2021/01/New-Pokemon-Snap-Screenshot-044.jpg
+https://www.gamespot.com/a/uploads/screen_kubrick/123/1239113/3801204-6238037227-screenshot02.jpg
+https://www.videogamer.com/wp-content/uploads/01d7162d-749b-43eb-bdcc-5c0cf9e49881_New_Pokmon_Snap_Main.jpg
+https://cdn.vox-cdn.com/thumbor/Lgiz7lrS_auxnKixNMsWmsx_ETE=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22473880/Switch_NewPokemonSnap_Screenshots_Feb26__9_.jpg
+https://media.npr.org/assets/img/2021/04/29/snap-1_wide-7c41973fe9eef7cbc49beec9a59f3bf5410187d2-s1400-c100.jpg
+https://images.launchbox-app.com/fc92b8c7-704f-43e9-ab5a-407b712bc662.jpg
+https://assets.gamepur.com/wp-content/uploads/2021/01/14074110/new-pokemon-snap-arrives-on-nintendo-switch-this-april.jpg
+https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/products/games/switch/new-pokemon-snap/110735-switch-new-pokemon-snap-us-1200x675
+https://cdn.mobilesyrup.com/wp-content/uploads/2021/01/new-pokemon-snap-screenshot-2.jpg
+https://images.launchbox-app.com/1f06f096-8eb6-43ac-abbb-262deb1bf596.jpg
+https://upload.wikimedia.org/wikipedia/en/thumb/8/84/POKEMON_SNAP_GAMEPLAY.jpg/220px-POKEMON_SNAP_GAMEPLAY.jpg
+https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/04/pokemon-snap.png
+https://videogamesuncovered.com/wp-content/uploads/2021/01/new-pokemon-snap-social.jpg
+https://i0.wp.com/mynintendonews.com/wp-content/uploads/2021/01/new_pokemon_snap_logo.jpg?ssl=1
+https://i.gadgets360cdn.com/products/large/New-Pokemon-Snap-Wallpaper-1440x2560-1000x1778-1646977124.jpg
+https://www.nintendo.com/sg/switch/arft/img/hero_sp.jpg
+https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Pokemon_Type_Chart.svg/2048px-Pokemon_Type_Chart.svg.png
+https://vignette.wikia.nocookie.net/pokemon/images/8/8c/PokemonTypes.png/revision/latest?cb=20170417193722
+https://videogamesuncovered.com/wp-content/uploads/2016/12/pokemon-types.jpg
+https://www.theloadout.com/wp-content/sites/theloadout/2023/06/pokemon-type-chart-icons.jpg
+https://i.pinimg.com/originals/c4/c7/79/c4c779a2c89ebcc0d1fa61a21e03640d.png
+https://res.cloudinary.com/lmn/image/upload/e_sharpen:150,f_auto,fl_lossy,q_80/v1/gameskinnyc/p/o/k/pokemon-types-table-ad163.png
+https://cdn1.vectorstock.com/i/1000x1000/03/95/pokemon-type-symbols-vector-2700395.jpg
+https://external-preview.redd.it/GhUNDBJN4b3NpRRIenzN9nEWV4tsuC9KI4lvj_VfbWA.png?auto=webp&amp;s=f4b4a9cf1726f3c4b785044116a245e6787877b7
+https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc175766-6e5d-4e29-a6c5-ecc6a37db16a/d8vkfwp-b481a558-5c32-44b6-b4d0-df9f1e8ed8f1.png/v1/fill/w_1600,h_1340,q_80,strp/illustrated_pokemon_type_chart_by_jojostory_d8vkfwp-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM0MCIsInBhdGgiOiJcL2ZcL2RjMTc1NzY2LTZlNWQtNGUyOS1hNmM1LWVjYzZhMzdkYjE2YVwvZDh2a2Z3cC1iNDgxYTU1OC01YzMyLTQ0YjYtYjRkMC1kZjlmMWU4ZWQ4ZjEucG5nIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.7rruD0XfA3p4nDeOv404ZBC2Wl_QB2hCOO0xsTdi1R0
+https://www.mandatory.gg/wp-content/uploads/mandatory-guide-pokemon-ecarlate-violet-table-types-forces-faiblesses.png
+https://3.bp.blogspot.com/-b8i_WR7eoI0/WV8bxYVOZBI/AAAAAAAAGck/5nEIhuF-zMASQfxBF6JhSw6SRfjVh7ocACKgBGAs/s1600/ENG-05-02-02-Pokemon-type-chart.png
+https://i.pinimg.com/originals/95/b2/6f/95b26f7cd39e206259faa20fd57e7b47.png
+https://raw.githubusercontent.com/kennycason/cellular-automata-pokemon-types/master/data/pokemon_gen1_type_chart.png?raw=true
+https://i.ytimg.com/vi/H1w2VoRqmQQ/maxresdefault.jpg
+https://releasegaming.com/wp-content/uploads/2023/02/Pokemon-Type-Chart-Poster-960x850.jpg
+http://images6.fanpop.com/image/photos/34100000/Pokemon-types-pokemon-34164928-846-1824.jpg
+https://1.bp.blogspot.com/-A0NsVJu2Ay0/WGOgGNxAdTI/AAAAAAAABIY/amMTic8SsXYs7jfP_ITwBmkeVQHIAGZ-ACPcB/s1600/ENG-05-02-02-All-the-Pokemon-types.png
+http://img.pokemondb.net/images/typechart.png
+http://fc09.deviantart.net/fs70/i/2013/318/0/f/pokemon_types_wheel_by_kamionero-d6u6o9i.png
+https://vignette3.wikia.nocookie.net/pokemonadventure/images/a/ad/Symbols.png/revision/latest?cb=20121003192408
+https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/2560w/products/175831/251398/pokemonshininglegends28__52193.1509648391.jpg?c=2
+https://images.saymedia-content.com/.image/t_share/MTc5ODE2MjE2Mjc2NDQ0Nzgz/best-v-pokemon-cards.jpg
+https://www.pokemoncenter.com/products/images/P2373PC/155-80156/P2373PC_155-80156_01.jpg
+https://i.pinimg.com/736x/83/e3/5a/83e35aead31fabb77b9bde3396d4351f.jpg
+https://i.pinimg.com/originals/18/28/97/18289747d16a23e3dc20cc36956b9b4b.jpg
+https://imgix.ranker.com/user_node_img/3181/63618188/original/blastoise-u16?fit=crop&amp;fm=pjpg&amp;q=60&amp;w=650&amp;dpr=2
+https://m.media-amazon.com/images/I/91lXJ99OooL.jpg
+https://www.totsafe.com/wp-content/uploads/2020/09/Gyarados-Ancient-Origins-Holo-1446x2048.jpg
+https://m.media-amazon.com/images/I/71p-47sRv9L.jpg
+https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/06/Charizard-grade-9-mint-front.jpg
+https://www.oldsportscards.com/wp-content/uploads/2019/12/Most-Valuable-First-Edition-Pokemon-Cards.jpg
+https://i.etsystatic.com/26687506/r/il/01dacc/2853951539/il_1588xN.2853951539_obpw.jpg
+https://i.etsystatic.com/22464198/r/il/92a686/2662042144/il_1140xN.2662042144_ns4d.jpg
+https://i.etsystatic.com/24353291/r/il/358485/2689751041/il_fullxfull.2689751041_ofmo.jpg
+https://i.etsystatic.com/22089514/r/il/ecff88/4140836231/il_1080xN.4140836231_cpmu.jpg
+https://i.redd.it/jtyx6uktb8r21.jpg
+https://images.saymedia-content.com/.image/t_share/MTgzNzE1NDA2MDk0MDE3ODU1/best-vmax-pokemon-cards.png
+https://i.etsystatic.com/22089514/r/il/c4b57e/2338029595/il_1140xN.2338029595_sei2.jpg
+https://pm1.narvii.com/6267/3e8dabe202aa4911724963a0eb1b1f0b0c875193_hq.jpg
+https://i.etsystatic.com/22089514/r/il/c9fa64/4093173358/il_1140xN.4093173358_jv87.jpg
 https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
@@ -132,7 +192,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_682LAF5i.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_jJsoJBVh.jpg
 ```
 
 ### 4. Carbon
@@ -156,7 +216,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_ISCAqZEq.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_eGIiJdUJ.png
 ```
 
 ### 5. Cat
@@ -177,7 +237,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/382.jpg
+https://cdn2.thecatapi.com/images/MTY3NTkxNw.jpg
 ```
 
 ### 6. Dog
@@ -198,7 +258,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/c5a493db-526c-4563-9e97-f12b36d592d6.jpg
+https://random.dog/28f07efd-c0a8-482a-b1f6-5823256f7a71.mp4
 ```
 
 ### 7. Domain Search
@@ -948,7 +1008,7 @@ print(result)
         }
     ],
     "total": 354,
-    "time": "4",
+    "time": "8",
     "next_page": null
 }
 ```
@@ -971,7 +1031,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=23
+https://randomfox.ca/?i=47
 ```
 
 ### 9. Get Advice
@@ -992,7 +1052,7 @@ print(result)
 #### Expected Output
 
 ```text
-Never run with scissors.
+Everything matters, but nothing matters that much.
 ```
 
 ### 10. Get Hindi Jokes
@@ -1013,7 +1073,7 @@ print(result)
 #### Expected Output
 
 ```text
-बड़े दिनों बाद हिचकियाँ आयीं है आज ऐसा लगा मानो किसी ने आई लव यू टू कहा हो
+उम्र बढ़ती जा रही है और हरकतें सुधरने का नाम नहीं ले रही मेरी नहीं तुम सब लोगों की😆🤣😋😉 
 ```
 
 ### 11. Get Jokes
@@ -1037,7 +1097,10 @@ print(result)
 #### Expected Output
 
 ```text
-Two fish in a tank. One turns to the other and says, "Do you know how to drive this thing?"
+What does the MacBook have in common with Donald Trump?
+
+I would tell you....
+But I don't compare apples to oranges.
 ```
 
 ### 12. Get Uselessfact
@@ -1058,7 +1121,7 @@ print(result)
 #### Expected Output
 
 ```text
-The average person spends about two years on the phone in a lifetime.
+There are 293 ways to make change for a dollar.
 ```
 
 ### 13. Github Search
@@ -1118,7 +1181,7 @@ print(result)
         "description": "The Pokemon Go Bot, baking with community.",
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
-        "stargazers_count": 3870,
+        "stargazers_count": 3871,
         "forks_count": 1543
     }
 ]
@@ -1142,7 +1205,7 @@ print(result)
 #### Expected Output
 
 ```text
-ज़िंदगी का सफ़र मानो तो मौज है वरना समस्या तो रोज है।
+जीवन में ऊँचा उठने के लिए किसी डिग्री की जरुरत नहीं। अच्छे शब्द ही इंसान को बादशाह बना देते है।
 ```
 
 ### 15. Hug
@@ -1171,8 +1234,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Mononoke Hime",
-        "url": "https://nekos.best/api/v2/hug/1e872929-e623-46ba-b5dc-fe05dfc61990.gif"
+        "anime_name": "Sword Art Online",
+        "url": "https://nekos.best/api/v2/hug/548daa04-3dff-4524-bb28-c229e5542e9f.gif"
     }
 ]
 ```
@@ -1195,7 +1258,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/x63wcxmbiq0e1.png?width=1080&crop=smart&auto=webp&s=166c207f47f97427ce54a873aafa1e37f84e4b8e
+https://preview.redd.it/79p7r99mot0e1.gif?width=640&crop=smart&format=png8&s=e9a44bc18f3f1c3e224d7ade898f7e495699839f
 ```
 
 ### 17. Neko
@@ -1235,22 +1298,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/35898844",
-            "artist_name": "\u68ee\u4e43\u30d2\u30b0\u30de",
-            "source_url": "https://www.pixiv.net/en/artworks/96927690",
-            "url": "https://nekos.best/api/v2/neko/f11a0506-8c32-443c-8fb7-a746ebb2a627.png"
+            "artist_href": "https://www.pixiv.net/en/users/34096559",
+            "artist_name": "\u6749far-",
+            "source_url": "https://www.pixiv.net/en/artworks/87660808",
+            "url": "https://nekos.best/api/v2/neko/f66a2183-aaaf-4c30-b93f-304add2272f6.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/12314321",
-            "artist_name": "\u30df\u30e5\u30b7\u30e3",
-            "source_url": "https://www.pixiv.net/en/artworks/86826162",
-            "url": "https://nekos.best/api/v2/neko/e7b2d0ea-8d1c-4cd8-91e5-4e20874beb00.png"
+            "artist_href": "https://www.pixiv.net/en/users/14089200",
+            "artist_name": "\u62b9\u8336Amigo",
+            "source_url": "https://www.pixiv.net/en/artworks/93733699",
+            "url": "https://nekos.best/api/v2/neko/1b63d20d-1b51-4a93-840c-1ed00dccc442.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/19143560",
-            "artist_name": "\u3072\u3068\u307f",
-            "source_url": "https://www.pixiv.net/en/artworks/93244615",
-            "url": "https://nekos.best/api/v2/neko/736b2174-9883-4a2c-b1cb-f9801028c14d.png"
+            "artist_href": "https://www.pixiv.net/en/users/10297869",
+            "artist_name": "\u5c0f\u98af\u732b",
+            "source_url": "https://www.pixiv.net/en/artworks/80280669",
+            "url": "https://nekos.best/api/v2/neko/f44f42f1-44ce-4962-87a7-7f4552c6c3e3.png"
         }
     ]
 }
@@ -1326,9 +1389,9 @@ print(result)
 #### Expected Output
 
 ```text
-In all things of nature there is something of the marvelous.
+Never reach out your hand unless you're willing to extend an arm.
 
-author - Aristotle
+author - Pope Paul VI
 ```
 
 ### 20. Random Word
@@ -1349,7 +1412,7 @@ print(result)
 #### Expected Output
 
 ```text
-acupressures
+rationality
 ```
 
 ### 21. Riddle
@@ -1371,8 +1434,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I'm so fast you can't see me, Though everyone sees straight through me, I don't stop until the day you die. What am I?",
-    "answer": "A blink of an eye"
+    "riddle": "I am the creator, through thick and thin, My time is sunset then I begin. Worlds of men and beasts I make, to me these things are not fake. But Over and over I will kill , I am the tirent and creator but not at will. What am I?",
+    "answer": "A sleeping dreamer"
 }
 ```
 
@@ -1545,7 +1608,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -1572,11 +1635,11 @@ print(result)
 #### Expected Output
 
 ```text
-diversities
-intentionality
-skipped
-ischaemias
-financiers
+journalizing
+aggrade
+redetermination
+birdings
+merit
 ```
 
 ### 26. Write
@@ -1604,7 +1667,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_aVIRpPZb.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_oTHtt6s8.jpg
 ```
 
 
