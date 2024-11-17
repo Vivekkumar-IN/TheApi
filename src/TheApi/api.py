@@ -94,8 +94,18 @@ class TheApi:
                     if "application/json" in response.headers.get("Content-Type", ""):
                         return await response.json()
                     return await response.text()
-            except aiohttp.ClientError as e:
+            except aiohttp.ClientResponseError as e:
+                if e.status == 404 and e.message == "Not Found":
+                    try:
+                        async with aiohttp.ClientSession() as session:
+                            async with session.get(url) as response:
+                                return await response.json()
+                    except Exception:
+                        raise ValueError(f"Request failed: {str(e)}")
                 raise ValueError(f"Request failed: {str(e)}")
+
+            except Exception as e:
+                raise ValueError(f"Unexpected error occurred: {str(e)}") from e
 
     def _rnd_str(self):
         """

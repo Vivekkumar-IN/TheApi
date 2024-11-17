@@ -31,7 +31,7 @@ Below, we’ll cover each function, providing examples and expected results so y
 | [11. Get Hindi Jokes](#11-get-hindi-jokes) | ✅
 | [12. Get Jokes](#12-get-jokes) | ✅
 | [13. Get Uselessfact](#13-get-uselessfact) | ✅
-| [14. Get Word Definitions](#14-get-word-definitions) | ❌
+| [14. Get Word Definitions](#14-get-word-definitions) | ✅
 | [15. Github Search](#15-github-search) | ✅
 | [16. Hindi Quote](#16-hindi-quote) | ✅
 | [17. Hug](#17-hug) | ✅
@@ -69,14 +69,14 @@ print(result)
 
 ```json
 {
-    "content": "Doesn't it ever get boring always being on the winning side?",
+    "content": "If I can't even manage a polite smile, I'll be in trouble in the real world.",
     "anime": {
-        "id": 200,
-        "name": "Vinland Saga"
+        "id": 204,
+        "name": "ReLIFE"
     },
     "character": {
-        "id": 227,
-        "name": "Thorkell"
+        "id": 303,
+        "name": "Hishiro Chizuru"
     }
 }
 ```
@@ -103,9 +103,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
+https://wallpapercave.com/wp/wp11733352.jpg
 ```
 
 ### 3. Blackpink
@@ -133,7 +133,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_4THdp6FJ.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_UeZ6lOGP.jpg
 ```
 
 ### 4. Carbon
@@ -157,7 +157,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_hSeloFJT.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_kpfFXYh0.png
 ```
 
 ### 5. Cat
@@ -178,7 +178,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/OfIuuOv07.jpg
+https://cdn2.thecatapi.com/images/kj.png
 ```
 
 ### 6. Dog
@@ -199,7 +199,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/452f58b8-084a-4262-b43f-768768a878db.JPG
+https://random.dog/ba955266-6c4d-45b5-b93c-55b4f5e4051a.png
 ```
 
 ### 7. Domain Search
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-Request failed: 524, message='', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
+Request failed: 504, message='Gateway Time-out', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
 ```
 
 ### 8. Fox
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=66
+https://randomfox.ca/?i=19
 ```
 
 ### 9. Gen Qr
@@ -271,7 +271,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/htMEmdPB_qr.png
+/home/runner/work/TheApi/TheApi/downloads/2eCQCCIN_qr.png
 ```
 
 ### 10. Get Advice
@@ -292,7 +292,7 @@ print(result)
 #### Expected Output
 
 ```text
-Pedantry is fine, unless you're on the receiving end. And not a pedant.
+Keep it simple.
 ```
 
 ### 11. Get Hindi Jokes
@@ -313,7 +313,8 @@ print(result)
 #### Expected Output
 
 ```text
-लड़के किसी भी ऐप में लड़कियों से बात कर सकते है... मगर इनकी आत्मा को शांति WhatsApp number मांग कर ही मिलती है...... 
+आज का ज्ञान   
+पेन खो जाये तो नया ले सकते हो मगर उसका ढक्कन खो जाये तो नया नहीं ले सकते इसलिये लाइफ में एक बात हमेशा याद रखना मित्रों कि पेन हमेशा टिचुक-टिचुक वाला ही लेना😆🤣😋😉 
 ```
 
 ### 12. Get Jokes
@@ -337,7 +338,7 @@ print(result)
 #### Expected Output
 
 ```text
-I have a joke about Stack Overflow, but you would say it's a duplicate.
+Yo mama is so old, she knew Burger King while he was still a prince.
 ```
 
 ### 13. Get Uselessfact
@@ -358,7 +359,7 @@ print(result)
 #### Expected Output
 
 ```text
-A family of 26 could go to the movies in Mexico city for the price of one in Tokyo.
+A dime has 118 ridges around the edge.
 ```
 
 ### 14. Get Word Definitions
@@ -384,8 +385,12 @@ print(result)
 
 #### Expected Output
 
-```text
-Request failed: 404, message='Not Found', url='https://api.dictionaryapi.dev/api/v2/entries/en/Pokemon'
+```json
+{
+    "title": "No Definitions Found",
+    "message": "Sorry pal, we couldn't find definitions for the word you were looking for.",
+    "resolution": "You can try the search again at later time or head to the web instead."
+}
 ```
 
 ### 15. Github Search
@@ -469,7 +474,7 @@ print(result)
 #### Expected Output
 
 ```text
-थोड़ा डुबूंगा, मगर मैं फिर तैर आऊंगा, ऐ ज़िंदगी, तू देख, मैं फिर जीत जाऊंगा…
+अनपढ़ सा मैं, दो लफ्ज़ लिखने लगा हूं, मोहब्बत से मैं घायल बहुत हुआ हूं।
 ```
 
 ### 17. Hug
@@ -498,8 +503,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Darling in the Franxx",
-        "url": "https://nekos.best/api/v2/hug/f6861773-08f0-4410-82cd-431711b2e2de.gif"
+        "anime_name": "Wotaku ni Koi wa Muzukashii",
+        "url": "https://nekos.best/api/v2/hug/47e30b67-b979-4dd5-9b06-720e5118f088.gif"
     }
 ]
 ```
@@ -522,7 +527,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/t9zfnkbhn91e1.gif?width=640&crop=smart&format=png8&s=869e7fc28b2ac8813f4454d1f9e881e738300669
+https://preview.redd.it/io1vcqx8x41e1.png?width=1080&crop=smart&auto=webp&s=625c76b2d3d87c6837c4fa4b8854f2b440121c34
 ```
 
 ### 19. Neko
@@ -562,22 +567,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/68506692",
-            "artist_name": "OwO",
-            "source_url": "https://www.pixiv.net/en/artworks/90120431",
-            "url": "https://nekos.best/api/v2/neko/625f5be7-2e13-4391-ad25-67fd9a42ac49.png"
+            "artist_href": "https://www.pixiv.net/en/users/7332820",
+            "artist_name": "\u767d\u4e9a\u7fd4\u5b50",
+            "source_url": "https://www.pixiv.net/en/artworks/90570937",
+            "url": "https://nekos.best/api/v2/neko/ccb65237-05b1-4efc-b5b1-00791a476659.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/12173021",
-            "artist_name": "\u30d5\u30a3\u30a2",
-            "source_url": "https://www.pixiv.net/en/artworks/99453834",
-            "url": "https://nekos.best/api/v2/neko/43ab7ed5-7630-4ea1-ba38-e1d1da8e6fd1.png"
+            "artist_href": "https://www.pixiv.net/en/users/35659926",
+            "artist_name": "\u3075\u3086\u306e\u3089",
+            "source_url": "https://www.pixiv.net/en/artworks/86663594",
+            "url": "https://nekos.best/api/v2/neko/7d56a269-8665-49f8-8354-4b36a575f67b.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/3163457",
-            "artist_name": "\u308a\u3087\u3046\u305f\u3093",
-            "source_url": "https://www.pixiv.net/en/artworks/75707226",
-            "url": "https://nekos.best/api/v2/neko/95180e93-e7ae-4659-b9ea-1020d757045b.png"
+            "artist_href": "https://twitter.com/Cmf2I",
+            "artist_name": "\u3077\u308a\u3093\u304f\u308a",
+            "source_url": "https://twitter.com/Cmf2I/status/1579038590914670592",
+            "url": "https://nekos.best/api/v2/neko/40520652-0e2e-4e2c-aef7-d6f9f66d3e3a.png"
         }
     ]
 }
@@ -653,9 +658,9 @@ print(result)
 #### Expected Output
 
 ```text
-If we learn to open our hearts, anyone, including the people who drive us crazy, can be our teacher.
+Never find fault with the absent.
 
-author - Pema Chödrön
+author - Alexander Pope
 ```
 
 ### 22. Random Word
@@ -676,7 +681,7 @@ print(result)
 #### Expected Output
 
 ```text
-ampersands
+brotherliness
 ```
 
 ### 23. Riddle
@@ -698,8 +703,8 @@ print(result)
 
 ```json
 {
-    "riddle": "They can trickle down, They can tickle too. Or make you sneeze, Or comfort you. Their rustling sound, you've rarely heard, Unless you're a pillow or a bird!  What are they?",
-    "answer": "They are feathers"
+    "riddle": "I am thought to be everywhere, and I only have one rival. He hides within himself, and stays wherever I cannot reach.  Who am I? and Who is my rival??",
+    "answer": "I am the light...... He is the dark"
 }
 ```
 
@@ -798,7 +803,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32634,
+        "view_count": 32635,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -872,7 +877,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -899,11 +904,11 @@ print(result)
 #### Expected Output
 
 ```text
-publicity
-shooing
-prepaste
-outpoll
-unpack
+gibbose
+panged
+chimneylike
+restiveness
+rhesus
 ```
 
 ### 28. Write
@@ -931,7 +936,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_ovJM3L3T.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_P8FC8VQ2.jpg
 ```
 
 

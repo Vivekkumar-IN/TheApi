@@ -12,6 +12,7 @@ def read_requirements():
 setup(
     name="TheApi",
     version="1.2",
-    packages=find_packages(),
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     install_requires=read_requirements(),
 )
