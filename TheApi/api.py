@@ -156,7 +156,6 @@ class TheApi:
         response = await self._make_request(self.base_urls["hindi_jokes"])
         return response["jokeContent"] if response["status"] else "No joke found."
 
-    
     async def gen_qr(self, query: str, file_path: str = None) -> str:
         """
         Generates a QR code and saves it to the specified file path.
@@ -171,16 +170,18 @@ class TheApi:
         """
         if file_path is None:
             file_path = os.path.join("downloads", f"{self._rnd_str()}_qr.png")
-            
+
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-        qr_content = await self._make_request(self.base_urls["qr_gen"].format(query=query), return_content=True)
+        qr_content = await self._make_request(
+            self.base_urls["qr_gen"].format(query=query), return_content=True
+        )
 
         async with aiofiles.open(file_path, "wb") as f:
             await f.write(qr_content)
-        
+
         return FilePath(realpath(file_path))
-        
+
     async def get_uselessfact(self):
         """
         Fetches a random useless fact.
