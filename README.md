@@ -31,20 +31,21 @@ Below, we’ll cover each function, providing examples and expected results so y
 | [11. Get Hindi Jokes](#11-get-hindi-jokes) | ✅
 | [12. Get Jokes](#12-get-jokes) | ✅
 | [13. Get Uselessfact](#13-get-uselessfact) | ✅
-| [14. Github Search](#14-github-search) | ✅
-| [15. Hindi Quote](#15-hindi-quote) | ✅
-| [16. Hug](#16-hug) | ✅
-| [17. Meme](#17-meme) | ✅
-| [18. Neko](#18-neko) | ✅
-| [19. Pypi](#19-pypi) | ✅
-| [20. Quote](#20-quote) | ✅
-| [21. Random Word](#21-random-word) | ✅
-| [22. Riddle](#22-riddle) | ✅
-| [23. Stackoverflow Search](#23-stackoverflow-search) | ✅
-| [24. Upload Image](#24-upload-image) | ✅
-| [25. Wikipedia](#25-wikipedia) | ✅
-| [26. Words](#26-words) | ✅
-| [27. Write](#27-write) | ✅
+| [14. Get Word Definitions](#14-get-word-definitions) | ❌
+| [15. Github Search](#15-github-search) | ✅
+| [16. Hindi Quote](#16-hindi-quote) | ✅
+| [17. Hug](#17-hug) | ✅
+| [18. Meme](#18-meme) | ✅
+| [19. Neko](#19-neko) | ✅
+| [20. Pypi](#20-pypi) | ✅
+| [21. Quote](#21-quote) | ✅
+| [22. Random Word](#22-random-word) | ✅
+| [23. Riddle](#23-riddle) | ✅
+| [24. Stackoverflow Search](#24-stackoverflow-search) | ✅
+| [25. Upload Image](#25-upload-image) | ✅
+| [26. Wikipedia](#26-wikipedia) | ✅
+| [27. Words](#27-words) | ✅
+| [28. Write](#28-write) | ✅
 
 
 ## 🎓 How to Use Each Function
@@ -68,14 +69,14 @@ print(result)
 
 ```json
 {
-    "content": "Don't underestimate me! I don't quit and I don't run! You can act tough all you want! You're not gonna scare me off! No way! I don't care if I DO get stuck as a Genin for the rest of my life! I'll still be Hokage someday!",
+    "content": "Doesn't it ever get boring always being on the winning side?",
     "anime": {
-        "id": 266,
-        "name": "Naruto"
+        "id": 200,
+        "name": "Vinland Saga"
     },
     "character": {
-        "id": 450,
-        "name": "Naruto Uzumaki"
+        "id": 227,
+        "name": "Thorkell"
     }
 }
 ```
@@ -102,9 +103,9 @@ print(result)
 #### Expected Output
 
 ```text
+https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg
-https://wallpapercave.com/wp/wp11733352.jpg
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
 ```
 
 ### 3. Blackpink
@@ -132,7 +133,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_5WLrrpU7.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_4THdp6FJ.jpg
 ```
 
 ### 4. Carbon
@@ -156,7 +157,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_C4VGWKCA.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_hSeloFJT.png
 ```
 
 ### 5. Cat
@@ -177,7 +178,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/c48.jpg
+https://cdn2.thecatapi.com/images/OfIuuOv07.jpg
 ```
 
 ### 6. Dog
@@ -198,7 +199,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/af70aa79-d0f0-4e79-922e-7139dd4e91dc.jpg
+https://random.dog/452f58b8-084a-4262-b43f-768768a878db.JPG
 ```
 
 ### 7. Domain Search
@@ -244,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=58
+https://randomfox.ca/?i=66
 ```
 
 ### 9. Gen Qr
@@ -270,7 +271,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/J2Q5KRdP_qr.png
+/home/runner/work/TheApi/TheApi/downloads/htMEmdPB_qr.png
 ```
 
 ### 10. Get Advice
@@ -291,7 +292,7 @@ print(result)
 #### Expected Output
 
 ```text
-Try to do the things that you're incapable of.
+Pedantry is fine, unless you're on the receiving end. And not a pedant.
 ```
 
 ### 11. Get Hindi Jokes
@@ -312,8 +313,7 @@ print(result)
 #### Expected Output
 
 ```text
-ट्रिंग ट्रिंग… हेल्लो Uncle…अरमान है???   
-नही बेटा जवानी में थे.. अब नही रहे..😆🤣😋😉
+लड़के किसी भी ऐप में लड़कियों से बात कर सकते है... मगर इनकी आत्मा को शांति WhatsApp number मांग कर ही मिलती है...... 
 ```
 
 ### 12. Get Jokes
@@ -337,7 +337,7 @@ print(result)
 #### Expected Output
 
 ```text
-I have a joke about trickle down economics, but 99% of you will never get it.
+I have a joke about Stack Overflow, but you would say it's a duplicate.
 ```
 
 ### 13. Get Uselessfact
@@ -358,10 +358,37 @@ print(result)
 #### Expected Output
 
 ```text
-Hot water is heavier than cold.
+A family of 26 could go to the movies in Mexico city for the price of one in Tokyo.
 ```
 
-### 14. Github Search
+### 14. Get Word Definitions
+
+**Description**:
+Fetch definitions for a word from the Dictionary API.
+
+**Args:**
+  - **word (str)**: The word to fetch definitions for.
+
+**Returns:**
+  - **list**: A list of dictionaries containing the word definitions.
+
+**Raises:**
+  - **ValueError**: If the `word` is not provided or the API request fails.
+
+```python
+from TheApi import api
+
+result = await api.get_word_definitions(word='Pokemon')
+print(result)
+```
+
+#### Expected Output
+
+```text
+Request failed: 404, message='Not Found', url='https://api.dictionaryapi.dev/api/v2/entries/en/Pokemon'
+```
+
+### 15. Github Search
 
 **Description**:
 Searches GitHub for various types of content.
@@ -424,7 +451,7 @@ print(result)
 ]
 ```
 
-### 15. Hindi Quote
+### 16. Hindi Quote
 
 **Description**:
 Fetches a random Hindi quote.
@@ -442,10 +469,10 @@ print(result)
 #### Expected Output
 
 ```text
-लफ़्ज़ों की तमहीद बाँधनी मुझे नहीं आती, शिद्दत से याद आते हो, सीधी सी बात है…
+थोड़ा डुबूंगा, मगर मैं फिर तैर आऊंगा, ऐ ज़िंदगी, तू देख, मैं फिर जीत जाऊंगा…
 ```
 
-### 16. Hug
+### 17. Hug
 
 **Description**:
 Fetches a specified number hug gif from the Nekos.Best API.
@@ -471,13 +498,13 @@ print(result)
 ```json
 [
     {
-        "anime_name": "To Love-Ru: Trouble",
-        "url": "https://nekos.best/api/v2/hug/2c898eb2-71a0-4cf2-a79c-176510764d80.gif"
+        "anime_name": "Darling in the Franxx",
+        "url": "https://nekos.best/api/v2/hug/f6861773-08f0-4410-82cd-431711b2e2de.gif"
     }
 ]
 ```
 
-### 17. Meme
+### 18. Meme
 
 **Description**:
 Fetches a random meme image URL.
@@ -495,10 +522,10 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/a9cyyea6rf1e1.png?width=960&crop=smart&auto=webp&s=310aaaffbd49ec8ea2390b9a923943f37c38ecb3
+https://preview.redd.it/t9zfnkbhn91e1.gif?width=640&crop=smart&format=png8&s=869e7fc28b2ac8813f4454d1f9e881e738300669
 ```
 
-### 18. Neko
+### 19. Neko
 
 **Description**:
 Fetches a specified number of neko images or GIFs from the Nekos.Best API.
@@ -535,28 +562,28 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/36742404",
-            "artist_name": "\u3042\u304b\u306f\u306d\u3053",
-            "source_url": "https://www.pixiv.net/en/artworks/96249133",
-            "url": "https://nekos.best/api/v2/neko/affffaa9-08b5-4d84-94ed-14cdfbc73f78.png"
+            "artist_href": "https://www.pixiv.net/en/users/68506692",
+            "artist_name": "OwO",
+            "source_url": "https://www.pixiv.net/en/artworks/90120431",
+            "url": "https://nekos.best/api/v2/neko/625f5be7-2e13-4391-ad25-67fd9a42ac49.png"
         },
         {
-            "artist_href": "https://twitter.com/MunMosh",
-            "artist_name": "\u3080\u3093\u3082\u3063\u3057\u3085",
-            "source_url": "https://twitter.com/MunMosh/status/1569276319200083970",
-            "url": "https://nekos.best/api/v2/neko/c94cd5e7-7414-43e7-8817-893442a1dff7.png"
+            "artist_href": "https://www.pixiv.net/en/users/12173021",
+            "artist_name": "\u30d5\u30a3\u30a2",
+            "source_url": "https://www.pixiv.net/en/artworks/99453834",
+            "url": "https://nekos.best/api/v2/neko/43ab7ed5-7630-4ea1-ba38-e1d1da8e6fd1.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/50646281",
-            "artist_name": "\u65e5\u5411\u9752",
-            "source_url": "https://www.pixiv.net/en/artworks/98804072",
-            "url": "https://nekos.best/api/v2/neko/8a07f8a4-7f07-4682-a6a0-dcc2f1f933a0.png"
+            "artist_href": "https://www.pixiv.net/en/users/3163457",
+            "artist_name": "\u308a\u3087\u3046\u305f\u3093",
+            "source_url": "https://www.pixiv.net/en/artworks/75707226",
+            "url": "https://nekos.best/api/v2/neko/95180e93-e7ae-4659-b9ea-1020d757045b.png"
         }
     ]
 }
 ```
 
-### 19. Pypi
+### 20. Pypi
 
 **Description**:
 Retrieves metadata information about a specified Python package from the PyPI API.
@@ -608,7 +635,7 @@ print(result)
 }
 ```
 
-### 20. Quote
+### 21. Quote
 
 **Description**:
 Fetches a random quote.
@@ -626,12 +653,12 @@ print(result)
 #### Expected Output
 
 ```text
-He who knows himself is enlightened.
+If we learn to open our hearts, anyone, including the people who drive us crazy, can be our teacher.
 
-author - Laozi
+author - Pema Chödrön
 ```
 
-### 21. Random Word
+### 22. Random Word
 
 **Description**:
 Fetches a random word.
@@ -649,10 +676,10 @@ print(result)
 #### Expected Output
 
 ```text
-quag
+ampersands
 ```
 
-### 22. Riddle
+### 23. Riddle
 
 **Description**:
 Fetches a random riddle from the Riddles API.
@@ -671,12 +698,12 @@ print(result)
 
 ```json
 {
-    "riddle": "There lived a man in a house and everytime he went to bed he turned on the light. One night, the man forgot to turn on the light. The next day he read the paper and killed himself. Why?",
-    "answer": "The man lived in a lighthouse. He forgot to turn on the light and a ship crashed. The next morning he read in the paper that the ship crashed and killed himself because he felt guilty"
+    "riddle": "They can trickle down, They can tickle too. Or make you sneeze, Or comfort you. Their rustling sound, you've rarely heard, Unless you're a pillow or a bird!  What are they?",
+    "answer": "They are feathers"
 }
 ```
 
-### 23. Stackoverflow Search
+### 24. Stackoverflow Search
 
 **Description**:
 Searches Stack Overflow for questions based on a query, returning results sorted by relevance or another specified criteria.
@@ -785,7 +812,7 @@ print(result)
 ]
 ```
 
-### 24. Upload Image
+### 25. Upload Image
 
 **Description**:
 Uploads an image to https://envs.sh.
@@ -815,7 +842,7 @@ print(result)
 You will get a URL
 ```
 
-### 25. Wikipedia
+### 26. Wikipedia
 
 **Description**:
 Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.
@@ -845,13 +872,13 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
 ```
 
-### 26. Words
+### 27. Words
 
 **Description**:
 Fetches a specified number of random words.
@@ -872,14 +899,14 @@ print(result)
 #### Expected Output
 
 ```text
-glaces
-girolles
-poultice
-distrusting
-velverets
+publicity
+shooing
+prepaste
+outpoll
+unpack
 ```
 
-### 27. Write
+### 28. Write
 
 **Description**:
 Creates an image with text written on it, using a predefined template and font, and uploads the image after generation.
@@ -904,7 +931,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_Lrtmljwi.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_ovJM3L3T.jpg
 ```
 
 
