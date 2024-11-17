@@ -4,7 +4,7 @@ import random
 import string
 import textwrap
 from io import BytesIO
-from typing import Union
+from typing import Union, List
 from os.path import realpath
 
 import aiohttp
