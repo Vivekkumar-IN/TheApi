@@ -18,29 +18,30 @@ from .func import FilePath
 class TheApi:
     def __init__(self):
         self.base_urls = {
-            "animechan": "https://animechan.io/api/v1/quotes/random",
-            "carbon": "https://carbonara.solopov.dev/api/cook",
-            "domain": "https://api.domainsdb.info/v1/domains/search?domain={domain}&zone={zone}",
-            "quote": "https://api.quotable.io/random",
-            "hindi_quote": "https://hindi-quotes.vercel.app/random",
-            "random_word": "https://random-word-api.herokuapp.com/word",
-            "image": "https://graph.org/file/1f8d00177ac2429b101b9.jpg",
-            "font": "https://github.com/google/fonts/raw/main/ofl/poetsenone/PoetsenOne-Regular.ttf",
-            "upload": "https://envs.sh/",
             "advice": "https://api.adviceslip.com/advice",
-            "jokes": "https://v2.jokeapi.dev/joke/Any",
-            "hindi_jokes": "https://hindi-jokes-api.onrender.com/jokes?api_key=93eeccc9d663115eba73839b3cd9",
-            "useless_fact": "https://uselessfacts.jsph.pl/api/v2/facts/random",
-            "wikipedia_search": "https://en.wikipedia.org/w/api.php",
-            "words": "https://random-word-api.herokuapp.com/word",
+            "animechan": "https://animechan.io/api/v1/quotes/random",
+            "bing_image": "https://www.bing.com/images/async",
+            "carbon": "https://carbonara.solopov.dev/api/cook",
             "cat": "https://api.thecatapi.com/v1/images/search",
             "dog": "https://random.dog/woof.json",
-            "pypi": "https://pypi.org/pypi",
+            "domain": "https://api.domainsdb.info/v1/domains/search?domain={domain}&zone={zone}",
+            "fox": "https://randomfox.ca/floof/",
+            "font": "https://github.com/google/fonts/raw/main/ofl/poetsenone/PoetsenOne-Regular.ttf",
+            "hindi_jokes": "https://hindi-jokes-api.onrender.com/jokes?api_key=93eeccc9d663115eba73839b3cd9",
+            "hindi_quote": "https://hindi-quotes.vercel.app/random",
+            "image": "https://graph.org/file/1f8d00177ac2429b101b9.jpg",
+            "jokes": "https://v2.jokeapi.dev/joke/Any",
             "meme": "https://meme-api.com/gimme",
             "neko_url": "https://nekos.best/api/v2/{endpoint}?amount={amount}",
             "neko_hug": "https://nekos.best/api/v2/hug?amount={}",
-            "fox": "https://randomfox.ca/floof/",
-            "bing_image": "https://www.bing.com/images/async",
+            "pypi": "https://pypi.org/pypi",
+            "qr_gen": "https://api.stakdek.de/api/qr/gen?data={query}",
+            "quote": "https://api.quotable.io/random",
+            "random_word": "https://random-word-api.herokuapp.com/word",
+            "useless_fact": "https://uselessfacts.jsph.pl/api/v2/facts/random",
+            "wikipedia_search": "https://en.wikipedia.org/w/api.php",
+            "words": "https://random-word-api.herokuapp.com/word",
+            "upload": "https://envs.sh/",
         }
 
     async def _make_request(
@@ -52,25 +53,29 @@ class TheApi:
         files: dict = None,
         headers: dict = None,
         verify: bool = True,
-    ) -> Union[dict, str]:
+        return_content: bool = False,
+    ) -> Union[dict, str, bytes]:
         """
         Makes an asynchronous HTTP request to the specified URL with optional parameters, headers, and data.
 
         Args:
-            url (str): The URL to which the request is sent.
+            url (str): The URL to send the request to.
             method (str, optional): The HTTP method to use (e.g., "GET", "POST"). Defaults to "GET".
             params (dict, optional): Query parameters to include in the request. Defaults to None.
             data (dict, optional): Data to include in the request body (for POST requests). Defaults to None.
-            files (dict, optional): Files to upload in the request (if applicable). Defaults to None.
+            files (dict, optional): Files to upload with the request, if applicable. Defaults to None.
             headers (dict, optional): Headers to include in the request. Defaults to None.
             verify (bool, optional): Whether to verify SSL certificates. Defaults to True.
+            return_content (bool, optional): If True, returns the raw content of the response. Defaults to False.
 
         Returns:
-            Union[dict, str]: The JSON response as a dictionary if the response is JSON-formatted,
-                              otherwise returns the response as a string.
+            Union[dict, str, bytes]: The response content:
+                - JSON response as a dictionary if the response is JSON-formatted.
+                - Text response as a string if the response is plain text.
+                - Raw bytes if `return_content` is True.
 
         Raises:
-            ValueError: If the request fails due to a client error.
+            ValueError: If the request fails due to a client error or invalid response.
         """
         async with aiohttp.ClientSession() as session:
             try:
@@ -83,6 +88,8 @@ class TheApi:
                     ssl=verify,
                 ) as response:
                     response.raise_for_status()
+                    if return_content:
+                        return await response.read()
                     if "application/json" in response.headers.get("Content-Type", ""):
                         return await response.json()
                     return await response.text()
@@ -149,6 +156,31 @@ class TheApi:
         response = await self._make_request(self.base_urls["hindi_jokes"])
         return response["jokeContent"] if response["status"] else "No joke found."
 
+    
+    async def gen_qr(self, query: str, file_path: str = None) -> str:
+        """
+        Generates a QR code and saves it to the specified file path.
+
+        Args:
+            query (str): The data to encode in the QR code.
+            file_path (str, optional): The file path to save the QR code.
+                                       Defaults to "downloads/{random_str}_qr.png".
+
+        Returns:
+            FilePath: The file path where the QR code was saved.
+        """
+        if file_path is None:
+            file_path = os.path.join("downloads", f"{self._rnd_str()}_qr.png")
+            
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        qr_content = await self._make_request(self.base_urls["qr_gen"].format(query=query), return_content=True)
+
+        async with aiofiles.open(file_path, "wb") as f:
+            await f.write(qr_content)
+        
+        return FilePath(realpath(file_path))
+        
     async def get_uselessfact(self):
         """
         Fetches a random useless fact.
