@@ -67,14 +67,14 @@ print(result)
 
 ```json
 {
-    "content": "[When she hops into the bath with Ichigo, but in cat form] What? Are you a little disappointed? Come on, be honest. You are, aren't you? You little pervert!",
+    "content": "Do you understand pain a little now? If you don't share someone's pain, you can never understand them. But just because you understand them doesn't mean you can come to an agreement. That's the truth",
     "anime": {
-        "id": 222,
-        "name": "Bleach"
+        "id": 266,
+        "name": "Naruto"
     },
     "character": {
-        "id": 2464,
-        "name": "Shihouin Yoruichi"
+        "id": 316,
+        "name": "Pain"
     }
 }
 ```
@@ -101,9 +101,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
-https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
+https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 ```
 
 ### 3. Blackpink
@@ -131,7 +131,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_bJ322MMm.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_CGO0KHV3.jpg
 ```
 
 ### 4. Carbon
@@ -155,7 +155,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_6Y6d9kQt.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_iePa6e3y.png
 ```
 
 ### 5. Cat
@@ -176,7 +176,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTU2NDQ5Nw.gif
+https://cdn2.thecatapi.com/images/2bh.jpg
 ```
 
 ### 6. Dog
@@ -197,7 +197,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/ba2a3ac0-65e1-4955-9aea-85cfed9cc325.jpg
+https://random.dog/968a266c-95a9-4acb-b2d6-1e02c5b4be73.mp4
 ```
 
 ### 7. Domain Search
@@ -224,6 +224,66 @@ print(result)
 ```json
 {
     "domains": [
+        {
+            "domain": "pokemon-showdown.com",
+            "create_date": "2024-11-16T21:44:25.062255",
+            "update_date": "2024-11-16T21:44:25.062258",
+            "country": "CA",
+            "isDead": "False",
+            "A": [
+                "162.0.215.28"
+            ],
+            "NS": [
+                "dns1.namecheaphosting.com",
+                "dns2.namecheaphosting.com"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "smx4.web-hosting.com",
+                    "priority": 40
+                },
+                {
+                    "exchange": "smx3.web-hosting.com",
+                    "priority": 30
+                },
+                {
+                    "exchange": "smx2.web-hosting.com",
+                    "priority": 20
+                },
+                {
+                    "exchange": "smx1.web-hosting.com",
+                    "priority": 10
+                }
+            ],
+            "TXT": [
+                "v=spf1 +a +mx +ip4:162.213.251.158 include:spf.web-hosting.com ~all"
+            ]
+        },
+        {
+            "domain": "pokemon-towerdefense3.com",
+            "create_date": "2024-11-16T21:44:25.062423",
+            "update_date": "2024-11-16T21:44:25.062425",
+            "country": "CA",
+            "isDead": "False",
+            "A": [
+                "172.96.187.228"
+            ],
+            "NS": [
+                "ns2.hawkhost.com",
+                "ns1.hawkhost.com"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "pokemon-towerdefense3.com",
+                    "priority": 0
+                }
+            ],
+            "TXT": [
+                "v=spf1 +a +mx +ip4:172.96.187.2 +include:_spf.arandomserver.com ~all"
+            ]
+        },
         {
             "domain": "pokemon-pcg-pocket.com",
             "create_date": "2024-11-13T12:59:34.788589",
@@ -920,34 +980,10 @@ print(result)
             "CNAME": null,
             "MX": null,
             "TXT": null
-        },
-        {
-            "domain": "pokemon-randomizer.com",
-            "create_date": "2024-06-01T12:10:50.445501",
-            "update_date": "2024-06-01T12:10:50.445504",
-            "country": null,
-            "isDead": "False",
-            "A": null,
-            "NS": null,
-            "CNAME": null,
-            "MX": null,
-            "TXT": null
-        },
-        {
-            "domain": "pokemon-manager.com",
-            "create_date": "2024-05-19T09:55:57.912517",
-            "update_date": "2024-05-19T09:55:57.912519",
-            "country": null,
-            "isDead": "False",
-            "A": null,
-            "NS": null,
-            "CNAME": null,
-            "MX": null,
-            "TXT": null
         }
     ],
-    "total": 354,
-    "time": "8",
+    "total": 356,
+    "time": "7",
     "next_page": null
 }
 ```
@@ -970,7 +1006,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=43
+https://randomfox.ca/?i=10
 ```
 
 ### 9. Get Advice
@@ -991,7 +1027,7 @@ print(result)
 #### Expected Output
 
 ```text
-When you're looking up at birds flying overhead, keep your mouth closed.
+Everyone has their down days. Don't take it out on innocent bystanders.
 ```
 
 ### 10. Get Hindi Jokes
@@ -1012,7 +1048,7 @@ print(result)
 #### Expected Output
 
 ```text
-अर्ज़ किया है वो कहती अपने भाइयों से मेरे आशिक़ को यूँ ना पीटो ज़रा गौर फरमाइये वो कहती अपने भाइयों से मेरे आशिक़ को यूँ ना पीटो बड़ा जिद्दी है ये लफंगा इसे पहले कुत्ते की तरह घसीटो 😆🤣😋😉 
+विवाह क्या है ? ... विवाह एक ऐसा गठबंधन है जिसमे में 2 लोग मिलकर उन समस्याओं को सुलझाने का जीवन भर प्रयास करते है जो पहले कभी थी ही नहीं 😂😂😂
 ```
 
 ### 11. Get Jokes
@@ -1036,7 +1072,7 @@ print(result)
 #### Expected Output
 
 ```text
-In Soviet Russia, gay sex gets you arrested. In America, getting arrested gets you gay sex.
+My parents raised me as an only child, which really annoyed my younger brother.
 ```
 
 ### 12. Get Uselessfact
@@ -1057,7 +1093,7 @@ print(result)
 #### Expected Output
 
 ```text
-The name for Oz in the "Wizard of Oz" was thought up when the creator, Frank Baum, looked at his filing cabinet and saw A-N, and O-Z; hence the name "OZ."
+In most advertisements, including newspapers, the time displayed on a watch is 10:10.
 ```
 
 ### 13. Github Search
@@ -1109,7 +1145,7 @@ print(result)
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
         "stargazers_count": 4796,
-        "forks_count": 2799
+        "forks_count": 2798
     },
     {
         "name": "PokemonGo-Bot",
@@ -1141,7 +1177,7 @@ print(result)
 #### Expected Output
 
 ```text
-जमाने में आये हो तो जिने का हुनर भी रखना, दुश्मनों का कोई खतरा नही बस अपनों पे नजर रखना…
+बहुत खास हो ‘तुम’…ज़िक्र हर बार ज़रुरी नहीं..
 ```
 
 ### 15. Hug
@@ -1170,8 +1206,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Princess Connect! Re:Dive",
-        "url": "https://nekos.best/api/v2/hug/7aadc12d-90e2-4e2e-933b-aa72313ccc10.gif"
+        "anime_name": "Kawaii Dake ja Nai Shikimori-san",
+        "url": "https://nekos.best/api/v2/hug/929963f4-0d6d-4d75-b93f-03f4d25c7419.gif"
     }
 ]
 ```
@@ -1194,7 +1230,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/mnwvrhk1n21e1.png?width=1080&crop=smart&auto=webp&s=c2f6878203ecc89cecbb034f989e99081749b8b1
+https://preview.redd.it/cm17kdzfa91e1.png?width=320&crop=smart&auto=webp&s=11d0cfc59ee1a1cc2ac498a178baeb82823fd30b
 ```
 
 ### 17. Neko
@@ -1234,22 +1270,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/25892105",
-            "artist_name": "Mellozzo",
-            "source_url": "https://www.pixiv.net/en/artworks/94568011",
-            "url": "https://nekos.best/api/v2/neko/53794e7c-77e4-4d19-bdb7-59c2fd4dc0f7.png"
+            "artist_href": "https://www.pixiv.net/en/users/2827964",
+            "artist_name": "\u3068\u3074\u3042",
+            "source_url": "https://www.pixiv.net/en/artworks/85717996",
+            "url": "https://nekos.best/api/v2/neko/d6d6aed9-0532-4dc6-8d80-dd3e60365375.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/71408626",
-            "artist_name": "0",
-            "source_url": "https://www.pixiv.net/en/artworks/96806591",
-            "url": "https://nekos.best/api/v2/neko/1b93b602-d2cd-46cb-a1cd-bb13c5414510.png"
+            "artist_href": "https://www.pixiv.net/en/users/6018940",
+            "artist_name": "\u306b\u3085\u3080",
+            "source_url": "https://www.pixiv.net/en/artworks/94754446",
+            "url": "https://nekos.best/api/v2/neko/f25de2b6-3708-442a-bab0-ec3aa373d4ea.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/26040235",
-            "artist_name": "Noyu",
-            "source_url": "https://www.pixiv.net/en/artworks/92830475",
-            "url": "https://nekos.best/api/v2/neko/2f37bff0-4bf3-4776-94fb-6f94481f6707.png"
+            "artist_href": "https://www.pixiv.net/en/users/27207",
+            "artist_name": "\u30a4\u30c1\u30ea",
+            "source_url": "https://www.pixiv.net/en/artworks/61439246",
+            "url": "https://nekos.best/api/v2/neko/2d67c911-8ffa-4d60-889b-faa6c3d19afa.png"
         }
     ]
 }
@@ -1325,9 +1361,9 @@ print(result)
 #### Expected Output
 
 ```text
-Time is the wisest counsellor of all.
+For every failure, there's an alternative course of action. You just have to find it. When you come to a roadblock, take a detour.
 
-author - Pericles
+author - Mary Kay Ash
 ```
 
 ### 20. Random Word
@@ -1348,7 +1384,7 @@ print(result)
 #### Expected Output
 
 ```text
-borked
+fessing
 ```
 
 ### 21. Riddle
@@ -1370,8 +1406,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I fly, yet I have no wings. I cry, yet I have no eyes. Darkness follows me; lower light I never see.",
-    "answer": "A cloud"
+    "riddle": "A man is lying drowned in a dead forest, far from water. How did this happen?",
+    "answer": "A firefighting plane filled its tanks with water from a lake, sucking a scuba-diver in (Is this an urban legend, or did I see this on the news?). He drown while the plane was in flight and was dumped onto a burning forest with the water"
 }
 ```
 
@@ -1571,11 +1607,11 @@ print(result)
 #### Expected Output
 
 ```text
-oscitance
-bluebottle
-extirpating
-anglicising
-roadies
+scleroprotein
+unleavened
+weasel
+miaows
+japing
 ```
 
 ### 26. Write
@@ -1603,7 +1639,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_MTZaXn2M.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_CzvVItA3.jpg
 ```
 
 
