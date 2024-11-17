@@ -41,6 +41,7 @@ class TheApi:
             "useless_fact": "https://uselessfacts.jsph.pl/api/v2/facts/random",
             "wikipedia_search": "https://en.wikipedia.org/w/api.php",
             "words": "https://random-word-api.herokuapp.com/word",
+            "word_info": "https://api.dictionaryapi.dev/api/v2/entries/en/{word}",
             "upload": "https://envs.sh/",
         }
 
@@ -927,5 +928,21 @@ class TheApi:
 
         return response
 
+    async def get_word_definitions(self, word: str) -> List[dict]:
+        """
+        Fetch definitions for a word from the Dictionary API.
+
+        Args:
+            word (str): The word to fetch definitions for.
+
+        Returns:
+            list: A list of dictionaries containing the word definitions.
+
+        Raises:
+            ValueError: If the `word` is not provided or the API request fails.
+        """
+        url = self.base_urls["word_info"].format(word=word)
+        response = await self._make_request(url)
+        return response
 
 api = TheApi()
