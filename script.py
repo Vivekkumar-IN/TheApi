@@ -131,8 +131,7 @@ async def generate_api_status(methods):
             inspect.getdoc(method) or "No description available."
         )
 
-        # Check if the method contains the comment "# gh-actions Don't check
-        # it"
+        # Check if the method contains the comment "# gh-actions Don't Add it's example, ignore it."
         if "# gh-actions it's Example ignore it" in source:
             # Add method to README but without Example section
             readme_content.append(
