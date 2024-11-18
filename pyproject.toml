@@ -22,9 +22,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Vivekkumar-IN/TheApi/blob/main/README.md"
+Homepage = "https://github.com/Vivekkumar-IN/TheApi"
 Issues = "https://github.com/Vivekkumar-IN/TheApi/issues"
 Source = "https://github.com/Vivekkumar-IN/TheApi"
+Community = "https://t.me/TheTeamVivek"
 
 [build-system]
 requires = ["setuptools>=42", "wheel"]
