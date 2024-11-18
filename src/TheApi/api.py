@@ -154,15 +154,21 @@ class TheApi:
             ValueError: If the provided currency is invalid or the request fails.
         """
         valid_currencies = {"eur", "usd", "gbp"}
-        url = f"{self.base_urls['btc_value']}/get_btc_value" if not currency else f"{self.base_urls['btc_value']}/get_btc_{currency.lower()}"
+        url = (
+            f"{self.base_urls['btc_value']}/get_btc_value"
+            if not currency
+            else f"{self.base_urls['btc_value']}/get_btc_{currency.lower()}"
+        )
 
         if currency and currency.lower() not in valid_currencies:
-            raise ValueError(f"Invalid currency provided: {currency}. Valid options are: {valid_currencies}")
+            raise ValueError(
+                f"Invalid currency provided: {currency}. Valid options are: {valid_currencies}"
+            )
 
         response = await self._make_request(url)
 
         return response
-        
+
     async def get_jokes(self, amount=1):
         """
         Fetches a specified number of jokes.
@@ -193,7 +199,6 @@ class TheApi:
         response = await self._make_request(self.base_urls["hindi_jokes"])
         return response["jokeContent"] if response["status"] else "No joke found."
 
-
     async def generate_pdf(
         self,
         source: str,
@@ -218,10 +223,10 @@ class TheApi:
         if from_url:
             # Validate the URL format using regex
             url_regex = re.compile(
-                r'^(https?://)?'  # http or https
-                r'(([A-Za-z0-9-]+\.)+[A-Za-z]{2,6})'  # Domain
-                r'(:[0-9]{1,5})?'  # Optional port
-                r'(/[A-Za-z0-9._%+-]*)*$',  # Path
+                r"^(https?://)?"  # http or https
+                r"(([A-Za-z0-9-]+\.)+[A-Za-z]{2,6})"  # Domain
+                r"(:[0-9]{1,5})?"  # Optional port
+                r"(/[A-Za-z0-9._%+-]*)*$",  # Path
                 re.IGNORECASE,
             )
             if not re.match(url_regex, source):
@@ -241,7 +246,7 @@ class TheApi:
             await f.write(pdf_content)
 
         return FilePath(file_path)
-        
+
     async def gen_qr(self, query: str, file_path: str = None) -> str:
         """
         Generates a QR code and saves it to the specified file path.
