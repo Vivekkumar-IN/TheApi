@@ -20,6 +20,7 @@ class TheApi:
         self.base_urls = {
             "advice": "https://api.adviceslip.com/advice",
             "animechan": "https://animechan.io/api/v1/quotes/random",
+            "btc_value": "https://api.stakdek.de/api/btc/",
             "bing_image": "https://www.bing.com/images/async",
             "carbon": "https://carbonara.solopov.dev/api/cook",
             "cat": "https://api.thecatapi.com/v1/images/search",
@@ -137,6 +138,30 @@ class TheApi:
         response = requests.get(self.base_urls["advice"]).json()
         return response["slip"]["advice"]
 
+    async def get_btc_value(self, currency: Optional[str] = None) -> dict:
+        """
+        Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.
+
+        Args:
+            currency (str, optional): The currency code (e.g., 'eur', 'usd', 'gbp').
+                                      If None, fetches BTC value for all currencies.
+
+        Returns:
+            dict: The response containing BTC value(s) for the specified currency or all currencies.
+
+        Raises:
+            ValueError: If the provided currency is invalid or the request fails.
+        """
+        valid_currencies = {"eur", "usd", "gbp"}
+        url = f"{self.base_urls["btc_value"]}/get_btc_value" if not currency else f"{self.base_urls["btc_value"]}/get_btc_{currency.lower()}"
+
+        if currency and currency.lower() not in valid_currencies:
+            raise ValueError(f"Invalid currency provided: {currency}. Valid options are: {valid_currencies}")
+
+        response = await self._make_request(url)
+
+        return response
+        
     async def get_jokes(self, amount=1):
         """
         Fetches a specified number of jokes.
