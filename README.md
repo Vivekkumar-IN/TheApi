@@ -69,14 +69,14 @@ print(result)
 
 ```json
 {
-    "content": "Other people\u2019s life choices have nothing to do with me. But when you talked about giving up, you looked sad.",
+    "content": "At that point in my life, I couldn't find any value in anything. I was a brat who may as well be dead.",
     "anime": {
-        "id": 1007,
-        "name": "Kaiju No. 8"
+        "id": 301,
+        "name": "Grisaia no Kajitsu"
     },
     "character": {
-        "id": 2583,
-        "name": "Leno Ichikawa"
+        "id": 374,
+        "name": "Yuuji Kazami"
     }
 }
 ```
@@ -104,8 +104,8 @@ print(result)
 
 ```text
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-http://wallpapercave.com/wp/tuWSYqf.jpg
-https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
+https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg
+https://wallpapercave.com/wp/wp11733352.jpg
 ```
 
 ### 3. Blackpink
@@ -133,7 +133,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_m2cXPK7E.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_8ZJYniKG.jpg
 ```
 
 ### 4. Carbon
@@ -157,7 +157,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_oDAf6SAn.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_zv6ozCXQ.png
 ```
 
 ### 5. Cat
@@ -178,7 +178,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/an7.jpg
+https://cdn2.thecatapi.com/images/8pb.jpg
 ```
 
 ### 6. Dog
@@ -199,7 +199,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/147bec18-d97b-46ac-9c31-8997a0034743.mp4
+https://random.dog/c2368558-419f-4a77-a209-140d5078789f.jpg
 ```
 
 ### 7. Domain Search
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=53
+https://randomfox.ca/?i=64
 ```
 
 ### 9. Gen Qr
@@ -271,7 +271,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/ssR2J8cg_qr.png
+/home/runner/work/TheApi/TheApi/downloads/mCMw5ZUN_qr.png
 ```
 
 ### 10. Get Advice
@@ -292,7 +292,7 @@ print(result)
 #### Expected Output
 
 ```text
-If you get stuck, try doing the opposite of what the solution requires.
+Don't waste food.
 ```
 
 ### 11. Get Hindi Jokes
@@ -313,7 +313,7 @@ print(result)
 #### Expected Output
 
 ```text
-आजकल के लोगों को सीआईडी,  सीबीआई और  ED पर भी भरोसा नहीं है  ....80 और 90 के दशक में बच्चे इतना तेज हुआ करते थे आदा पादा किसने पादा करके मिनटों में मुजरिम ढूंढ लेते थे..... 😆🤣😋😉
+नेट प्लान के सस्ते होने से चोरों का सबसे ज्यादा नुकसान हुआ हैं जिस घर में चोरी करने जाते हैं कोई न कोई जाग रहा होता हैं 😆🤣😋😉 
 ```
 
 ### 12. Get Jokes
@@ -337,7 +337,7 @@ print(result)
 #### Expected Output
 
 ```text
-Stop being homophobic and rude to the LGBTQ+ community. You should be thanking them for saving us plenty of room in heaven.
+Being a self-taught developer is almost the same as being a cut neck chicken because you have no sense of direction in the beginning.
 ```
 
 ### 13. Get Uselessfact
@@ -358,7 +358,7 @@ print(result)
 #### Expected Output
 
 ```text
-For some time Frederic Chopin, the composer and pianist, wore a beard on only one side of his face, explaining: "It does not matter, my audience sees only my right side."
+Telly Savalas and Louis Armstrong died on their birthdays.  
 ```
 
 ### 14. Get Word Definitions
@@ -473,7 +473,7 @@ print(result)
 #### Expected Output
 
 ```text
-बड़े परहेज़ वाले हो गऐ हो.. हमें याद करना भी गुनाह समझते हो!
+कौन है जिसमें कमी नहीं होती, आसमां के पास भी तो जमीं नहीं होती।
 ```
 
 ### 17. Hug
@@ -502,8 +502,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Yuru Yuri",
-        "url": "https://nekos.best/api/v2/hug/2363175c-4cda-414e-8929-a87f53fc1cc1.gif"
+        "anime_name": "Princess Connect! Re:Dive",
+        "url": "https://nekos.best/api/v2/hug/85e51199-6829-4ffd-85e3-4d1a1b9ba891.gif"
     }
 ]
 ```
@@ -526,7 +526,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/6xb7edebui1e1.png?width=1080&crop=smart&auto=webp&s=4566bd414f4c09c7b913ec0286b08cef77766aee
+https://preview.redd.it/yvgbezgi8h1e1.png?width=640&crop=smart&auto=webp&s=39180c508b06139e974e3406d4af4b5065a4ae06
 ```
 
 ### 19. Neko
@@ -566,22 +566,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/27207",
-            "artist_name": "\u30a4\u30c1\u30ea",
-            "source_url": "https://www.pixiv.net/en/artworks/61439246",
-            "url": "https://nekos.best/api/v2/neko/2d67c911-8ffa-4d60-889b-faa6c3d19afa.png"
+            "artist_href": "https://www.pixiv.net/en/users/4387210",
+            "artist_name": "\u840c\u306e\u9999 \u30c6\u30a3\u30a2",
+            "source_url": "https://www.pixiv.net/en/artworks/103084606",
+            "url": "https://nekos.best/api/v2/neko/9eb2d75c-7177-4a05-a21d-17701a6dcfda.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/41382079",
-            "artist_name": "\u7d75\u5948\u306e\u3048\u308b",
-            "source_url": "https://www.pixiv.net/en/artworks/80631773",
-            "url": "https://nekos.best/api/v2/neko/950b272f-0634-4135-b107-cf63c21da2d4.png"
+            "artist_href": "https://www.pixiv.net/en/users/45053062",
+            "artist_name": "\u767d\u30e2\u30a2\u30a4",
+            "source_url": "https://www.pixiv.net/en/artworks/93170361",
+            "url": "https://nekos.best/api/v2/neko/be6727e7-7777-4ca5-9d5e-1e82f132b9fd.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/34582180",
-            "artist_name": "\u6ab8\u6aac\u4e43\u308c\u3082\u306d",
-            "source_url": "https://www.pixiv.net/en/artworks/78913931",
-            "url": "https://nekos.best/api/v2/neko/68d1dd4f-2763-4c43-b1a1-472e1a806bc4.png"
+            "artist_href": "https://www.pixiv.net/en/users/7594805",
+            "artist_name": "AIZAWA",
+            "source_url": "https://www.pixiv.net/en/artworks/89209136",
+            "url": "https://nekos.best/api/v2/neko/878c05a6-e95c-496c-9f5c-061f4b0646fd.png"
         }
     ]
 }
@@ -657,9 +657,9 @@ print(result)
 #### Expected Output
 
 ```text
-Good advice is always certain to be ignored, but that's no reason not to give it.
+It is impossible for a man to learn what he thinks he already knows.
 
-author - Agatha Christie
+author - Epictetus
 ```
 
 ### 22. Random Word
@@ -680,7 +680,7 @@ print(result)
 #### Expected Output
 
 ```text
-ornithoses
+delectabilities
 ```
 
 ### 23. Riddle
@@ -702,8 +702,8 @@ print(result)
 
 ```json
 {
-    "riddle": "How do you make \u201cone\u201ddisappear?",
-    "answer": "Add a \u201cg\u201dto make it \u201cgone\u201dor an \u201cn\u201dto make it \u201cnone\u201c!"
+    "riddle": "Two fathers and two sons went fishing one day. They were there the whole day and only caught 3 fish. One father said, that is enough for all of us, we will have one each.  How can this be possible?",
+    "answer": "There was the father, his son, and his son's son. This equals 2 fathers and 2 sons!"
 }
 ```
 
@@ -876,7 +876,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -903,11 +903,11 @@ print(result)
 #### Expected Output
 
 ```text
-genotype
-houseperson
-precipitations
-submandibular
-marmoreal
+zincous
+blennioid
+acclimatises
+lungfuls
+toddling
 ```
 
 ### 28. Write
@@ -935,7 +935,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_SljMCtC6.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_YQOiSL7p.jpg
 ```
 
 
