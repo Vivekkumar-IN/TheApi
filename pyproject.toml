@@ -15,12 +15,11 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
 ]
 
-dependencies = [
-    "aiohttp",
-    "aiofiles",
-    "requests",
-    "pillow==9.5.0"
-]
+[project.dependencies]
+aiohttp = "*"
+aiofiles = "*"
+requests = "*"
+pillow = "9.5.0"
 
 [project.urls]
 Homepage = "https://github.com/Vivekkumar-IN/TheApi"
