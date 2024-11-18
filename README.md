@@ -108,14 +108,14 @@ print(result)
 
 ```json
 {
-    "content": "I don't trust anyone, so no one trusts me",
+    "content": "I've been wondering... There must be a purpose for people being born into this world. Why are we here? What does it mean? I've been thinking about it a lot lately. I realized that finding our purpose IS the meaning. That's why we're here. And the ones who find it... They're the only ones who are truly free.",
     "anime": {
-        "id": 555,
-        "name": "Wolf's Rain"
+        "id": 266,
+        "name": "Naruto"
     },
     "character": {
-        "id": 1570,
-        "name": "Tsume"
+        "id": 1855,
+        "name": "Kimimaro"
     }
 }
 ```
@@ -142,9 +142,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
+https://wallpapercave.com/wp/wp11733352.jpg
 ```
 
 ### 3. Blackpink
@@ -170,7 +170,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_9DU4OFVG.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_UB1XfDkl.jpg
 ```
 
 ### 4. Carbon
@@ -194,7 +194,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_lvsuyD4B.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_4ggIDW1u.png
 ```
 
 ### 5. Cat
@@ -215,7 +215,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTYwNDE0MQ.jpg
+https://cdn2.thecatapi.com/images/2n6.gif
 ```
 
 ### 6. Dog
@@ -236,7 +236,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/69b00196-1f0e-4baa-916a-d66766d57d7d.jpg
+https://random.dog/d28047c5-1bce-4b94-988a-d05d5c15d5fb.jpeg
 ```
 
 ### 7. Domain Search
@@ -1022,7 +1022,7 @@ print(result)
         }
     ],
     "total": 356,
-    "time": "10",
+    "time": "3",
     "next_page": null
 }
 ```
@@ -1045,7 +1045,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=13
+https://randomfox.ca/?i=36
 ```
 
 ### 9. Gen Qr
@@ -1071,7 +1071,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/HRskjE4w_qr.png
+/home/runner/work/TheApi/TheApi/downloads/LTvOzKsX_qr.png
 ```
 
 ### 10. Generate Pdf
@@ -1122,7 +1122,7 @@ print(result)
 #### Expected Output
 
 ```text
-Eliminate the unnecessary.
+It is easy to sit up and take notice, what's difficult is getting up and taking action.
 ```
 
 ### 12. Get Btc Value
@@ -1154,22 +1154,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "87,035.552",
-        "rate_float": 87035.5515,
+        "rate": "86,848.142",
+        "rate_float": 86848.1417,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "72,745.363",
-        "rate_float": 72745.3626,
+        "rate": "72,588.723",
+        "rate_float": 72588.7233,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "91,796.194",
-        "rate_float": 91796.1939,
+        "rate": "91,598.533",
+        "rate_float": 91598.5333,
         "symbol": "&#36;"
     }
 }
@@ -1193,8 +1193,7 @@ print(result)
 #### Expected Output
 
 ```text
-कितना रोया था वो लड़का महबूबा को मोबाइल गिफ्ट करके… जब रात 3 बजे तक वो सुनता रहा..   
-आपके द्वारा डायल नंबर दूसरी लाइन पर वयस्त है.. 😆🤣😋😉
+बिस्किट बनाने वाली कंपनियों को विनम्र निवेदन: ...पहले मारिओ वालो कृपया मारिओ बिस्किट का आकार कम कीजिये या फिर कप बनाने वाली कंपनी के लोगों से एक बार बात करके तो देखें।😂😂 ...दूसरा Parle G वालों से निवेदन है कि बिस्किट के घोल में थोडा सा अंबुजा सीमेंट भी मिला कर दें। चाय में डुबोते ही ग़श खा कर उसी कप में आत्महत्या कर लेता है।😂😝😂
 ```
 
 ### 14. Get Jokes
@@ -1218,11 +1217,7 @@ print(result)
 #### Expected Output
 
 ```text
-Two C strings walk into a bar.
-The bartender asks "What can I get ya?"
-The first string says "I'll have a gin and tonic."
-The second string thinks for a minute, then says "I'll take a tequila sunriseJF()#$JF(#)$(@J#()$@#())!*FNIN!OBN134ufh1ui34hf9813f8h8384h981h3984h5F!##@"
-The first string apologizes, "You'll have to excuse my friend, he's not null-terminated."
+My husband and I were happy for 20 years. And then we met.
 ```
 
 ### 15. Get Uselessfact
@@ -1243,7 +1238,7 @@ print(result)
 #### Expected Output
 
 ```text
-CBS` "60 Minutes" is the only TV show without a theme song/music.
+Every time you lick a stamp, you consume 1/10 of a calorie.
 ```
 
 ### 16. Get Word Definitions
@@ -1358,7 +1353,7 @@ print(result)
 #### Expected Output
 
 ```text
-दिल लगाने से अच्छा है पौधे लगाऐं, वो घाव नहीं देगे कम से कम छाँव तो देंगे..
+कितनी भी सजा दो काफी नहीं होती, कुछ गलतियां ऐसी होती है जिनकी माफी नहीं होती।
 ```
 
 ### 19. Hug
@@ -1387,8 +1382,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Assassin's Pride",
-        "url": "https://nekos.best/api/v2/hug/128079f7-88dd-42c7-a2a4-e0bd2cdb5dce.gif"
+        "anime_name": "Princess Connect! Re:Dive",
+        "url": "https://nekos.best/api/v2/hug/f7246b64-e9ae-4ebd-a1d0-bb934fd1418e.gif"
     }
 ]
 ```
@@ -1411,7 +1406,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/qniw29iiya1e1.gif?width=216&crop=smart&format=png8&s=2385dfaf39ad4a686d4ed06b60916c2871ec80cf
+https://preview.redd.it/6xb7edebui1e1.png?width=1080&crop=smart&auto=webp&s=4566bd414f4c09c7b913ec0286b08cef77766aee
 ```
 
 ### 21. Neko
@@ -1451,22 +1446,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/12126485",
-            "artist_name": "\u690e\u5948\u78a7",
-            "source_url": "https://www.pixiv.net/en/artworks/86983183",
-            "url": "https://nekos.best/api/v2/neko/3f49a294-9c3d-4e2d-8803-027b5dc5e6df.png"
+            "artist_href": "https://twitter.com/MunMosh",
+            "artist_name": "\u3080\u3093\u3082\u3063\u3057\u3085",
+            "source_url": "https://twitter.com/MunMosh/status/1569276319200083970",
+            "url": "https://nekos.best/api/v2/neko/c94cd5e7-7414-43e7-8817-893442a1dff7.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/13770035",
-            "artist_name": "\u67da\u675e\u3086\u304e\u306a",
-            "source_url": "https://www.pixiv.net/en/artworks/89551702",
-            "url": "https://nekos.best/api/v2/neko/d90da8db-cc65-4521-84b9-8ba76a5b4a2f.png"
+            "artist_href": "https://twitter.com/ryohka_jp",
+            "artist_name": "yohka_jp",
+            "source_url": "https://twitter.com/i/web/status/1108527474416050176",
+            "url": "https://nekos.best/api/v2/neko/535eb098-72f0-4c08-97d5-ba75fd871500.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/9155411",
-            "artist_name": "\u308b\u304b\u3053",
-            "source_url": "https://www.pixiv.net/en/artworks/93276717",
-            "url": "https://nekos.best/api/v2/neko/062403f7-0eb0-4b43-a9b5-706327d06977.png"
+            "artist_href": "https://www.pixiv.net/en/users/15747989",
+            "artist_name": "\u8309\u5442\u8336\u308d\u307e",
+            "source_url": "https://www.pixiv.net/en/artworks/96376140",
+            "url": "https://nekos.best/api/v2/neko/f4487ac5-e954-416f-b6ea-bbb42c4d1900.png"
         }
     ]
 }
@@ -1542,9 +1537,9 @@ print(result)
 #### Expected Output
 
 ```text
-Your friend is your needs answered.
+Cunning... is but the low mimic of wisdom.
 
-author - Kahlil Gibran
+author - Plato
 ```
 
 ### 24. Random Word
@@ -1565,7 +1560,7 @@ print(result)
 #### Expected Output
 
 ```text
-scavenging
+bimbette
 ```
 
 ### 25. Riddle
@@ -1587,8 +1582,8 @@ print(result)
 
 ```json
 {
-    "riddle": "The strangest creature you'll ever find: Two eyes in front and many many more behind.",
-    "answer": "A Peacock"
+    "riddle": "there is a man he leaves home and runs around three blocks, when he comes back home their are two masked men, who are they?",
+    "answer": "the catcher and the umpire"
 }
 ```
 
@@ -1788,8 +1783,8 @@ print(result)
 #### Expected Output
 
 ```text
-heterodyning
-enlighten
+stuntwomen
+bibliotists
 ```
 
 ### 30. Write
@@ -1817,7 +1812,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_jgjFiTcZ.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_ENWaPqrY.jpg
 ```
 
 
