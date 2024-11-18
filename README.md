@@ -22,7 +22,7 @@ Below, we’ll cover each function, providing examples and expected results so y
 | [2. Bing Image](#2-bing-image) | ✅
 | [3. Blackpink](#3-blackpink) | ✅
 | [4. Carbon](#4-carbon) | ✅
-| [5. Cat](#5-cat) | ❌
+| [5. Cat](#5-cat) | ✅
 | [6. Dog](#6-dog) | ✅
 | [7. Domain Search](#7-domain-search) | ❌
 | [8. Fox](#8-fox) | ✅
@@ -69,14 +69,14 @@ print(result)
 
 ```json
 {
-    "content": "Physical wounds will definitely bleed and may look painful \nbut over time they heal by themselves and if you apply medicine, \nthey will heal faster. What's troublesome are wounds of the heart. Nothing is harder to heal. They're a bit different from physical injuries. You can't apply medicine for one thing and sometimes, they never heal. There's only one cure for a wound of the heart. \nIt's a bit bothersome and you can only receive it from someone else. What is it? Love.",
+    "content": "Other people\u2019s life choices have nothing to do with me. But when you talked about giving up, you looked sad.",
     "anime": {
-        "id": 266,
-        "name": "Naruto"
+        "id": 1007,
+        "name": "Kaiju No. 8"
     },
     "character": {
-        "id": 418,
-        "name": "Yashamaru"
+        "id": 2583,
+        "name": "Leno Ichikawa"
     }
 }
 ```
@@ -103,9 +103,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://wallpapercave.com/wp/wp11733352.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg
+http://wallpapercave.com/wp/tuWSYqf.jpg
+https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
 ```
 
 ### 3. Blackpink
@@ -133,7 +133,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_FpaPfgyS.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_m2cXPK7E.jpg
 ```
 
 ### 4. Carbon
@@ -157,7 +157,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_orWJdEAs.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_oDAf6SAn.png
 ```
 
 ### 5. Cat
@@ -178,7 +178,7 @@ print(result)
 #### Expected Output
 
 ```text
-Request failed: 429, message='Too Many Requests', url='https://api.thecatapi.com/v1/images/search'
+https://cdn2.thecatapi.com/images/an7.jpg
 ```
 
 ### 6. Dog
@@ -199,7 +199,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/ef190011-920e-47cf-a197-9666a02749cb.jpg
+https://random.dog/147bec18-d97b-46ac-9c31-8997a0034743.mp4
 ```
 
 ### 7. Domain Search
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=57
+https://randomfox.ca/?i=53
 ```
 
 ### 9. Gen Qr
@@ -271,7 +271,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/baOVPjkw_qr.png
+/home/runner/work/TheApi/TheApi/downloads/ssR2J8cg_qr.png
 ```
 
 ### 10. Get Advice
@@ -292,7 +292,7 @@ print(result)
 #### Expected Output
 
 ```text
-The number of vampires in the average home, is directly proportional to the amount of garlic bread in the fridge.
+If you get stuck, try doing the opposite of what the solution requires.
 ```
 
 ### 11. Get Hindi Jokes
@@ -313,7 +313,7 @@ print(result)
 #### Expected Output
 
 ```text
-स्कूल जाने के टाइम पर जो पेट दर्द होता है ना उसका इलाज दुनिया के किसी डॉक्टर के पास नहीं है 😆🤣😋😉  
+आजकल के लोगों को सीआईडी,  सीबीआई और  ED पर भी भरोसा नहीं है  ....80 और 90 के दशक में बच्चे इतना तेज हुआ करते थे आदा पादा किसने पादा करके मिनटों में मुजरिम ढूंढ लेते थे..... 😆🤣😋😉
 ```
 
 ### 12. Get Jokes
@@ -337,7 +337,7 @@ print(result)
 #### Expected Output
 
 ```text
-Your momma is so fat, you need to switch to NTFS to store a picture of her.
+Stop being homophobic and rude to the LGBTQ+ community. You should be thanking them for saving us plenty of room in heaven.
 ```
 
 ### 13. Get Uselessfact
@@ -358,7 +358,7 @@ print(result)
 #### Expected Output
 
 ```text
-Thomas Edison, acclaimed inventor of the light bulb, was afraid of the dark.
+For some time Frederic Chopin, the composer and pianist, wore a beard on only one side of his face, explaining: "It does not matter, my audience sees only my right side."
 ```
 
 ### 14. Get Word Definitions
@@ -473,7 +473,7 @@ print(result)
 #### Expected Output
 
 ```text
-वो दुआ ही क्या जिसमें तुम्हारा इज़हार ना हो
+बड़े परहेज़ वाले हो गऐ हो.. हमें याद करना भी गुनाह समझते हो!
 ```
 
 ### 17. Hug
@@ -502,8 +502,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Shinmai Maou no Testament",
-        "url": "https://nekos.best/api/v2/hug/77ddc5f7-d8b8-44e9-9aee-a88532c4b051.gif"
+        "anime_name": "Yuru Yuri",
+        "url": "https://nekos.best/api/v2/hug/2363175c-4cda-414e-8929-a87f53fc1cc1.gif"
     }
 ]
 ```
@@ -526,7 +526,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/wvr5ddg5s61e1.gif?width=320&crop=smart&format=png8&s=3c3de36cfcf459b42e429aa43eec92936c9cf6fe
+https://preview.redd.it/6xb7edebui1e1.png?width=1080&crop=smart&auto=webp&s=4566bd414f4c09c7b913ec0286b08cef77766aee
 ```
 
 ### 19. Neko
@@ -566,22 +566,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/76103567",
-            "artist_name": "\u3059\u3041\u3057",
-            "source_url": "https://www.pixiv.net/en/artworks/100430398",
-            "url": "https://nekos.best/api/v2/neko/47a6dd34-5d57-4b50-8ec4-204c38996c22.png"
+            "artist_href": "https://www.pixiv.net/en/users/27207",
+            "artist_name": "\u30a4\u30c1\u30ea",
+            "source_url": "https://www.pixiv.net/en/artworks/61439246",
+            "url": "https://nekos.best/api/v2/neko/2d67c911-8ffa-4d60-889b-faa6c3d19afa.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/70194544",
-            "artist_name": "Ham",
-            "source_url": "https://www.pixiv.net/en/artworks/103077987",
-            "url": "https://nekos.best/api/v2/neko/a85811fe-04e6-4079-a7eb-965e59c290aa.png"
+            "artist_href": "https://www.pixiv.net/en/users/41382079",
+            "artist_name": "\u7d75\u5948\u306e\u3048\u308b",
+            "source_url": "https://www.pixiv.net/en/artworks/80631773",
+            "url": "https://nekos.best/api/v2/neko/950b272f-0634-4135-b107-cf63c21da2d4.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/19095613",
-            "artist_name": "\u84bc\u30a6\u30b5\u30ae",
-            "source_url": "https://www.pixiv.net/en/artworks/80455651",
-            "url": "https://nekos.best/api/v2/neko/bfdb8bab-0e26-44c2-ae73-c635702c31ce.png"
+            "artist_href": "https://www.pixiv.net/en/users/34582180",
+            "artist_name": "\u6ab8\u6aac\u4e43\u308c\u3082\u306d",
+            "source_url": "https://www.pixiv.net/en/artworks/78913931",
+            "url": "https://nekos.best/api/v2/neko/68d1dd4f-2763-4c43-b1a1-472e1a806bc4.png"
         }
     ]
 }
@@ -657,9 +657,9 @@ print(result)
 #### Expected Output
 
 ```text
-There is nothing permanent except change.
+Good advice is always certain to be ignored, but that's no reason not to give it.
 
-author - Heraclitus
+author - Agatha Christie
 ```
 
 ### 22. Random Word
@@ -680,7 +680,7 @@ print(result)
 #### Expected Output
 
 ```text
-backhand
+ornithoses
 ```
 
 ### 23. Riddle
@@ -702,8 +702,8 @@ print(result)
 
 ```json
 {
-    "riddle": "You and your three friends stay over night at a hotel it costs thirty to stay over each of you pay 10 bucks shortly after you get back the bellhop arrives and gives you 5 bucks becasue it was only 25 dollars you give the bellhop a tip of 2 bucks and your friends both a dollar   WHERE DID THE LAST DOLLAR GO !!!",
-    "answer": "I don't know"
+    "riddle": "How do you make \u201cone\u201ddisappear?",
+    "answer": "Add a \u201cg\u201dto make it \u201cgone\u201dor an \u201cn\u201dto make it \u201cnone\u201c!"
 }
 ```
 
@@ -903,11 +903,11 @@ print(result)
 #### Expected Output
 
 ```text
-hoppings
-exploded
-prases
-chugs
-gelatinizing
+genotype
+houseperson
+precipitations
+submandibular
+marmoreal
 ```
 
 ### 28. Write
@@ -935,7 +935,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_5gyHhbuQ.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_SljMCtC6.jpg
 ```
 
 
