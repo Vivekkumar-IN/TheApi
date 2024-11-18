@@ -4,7 +4,7 @@ version = "1.2.1"
 authors = [
     { name = "Vivek Kumar" }
 ]
-description = "TheApi is a Python library for asynchronous interactions with various public APIs, enabling diverse functionalities and data retrieval."
+description = "TheApix is a Python library for asynchronous interactions with various public APIs, enabling diverse functionalities and data retrieval."
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [

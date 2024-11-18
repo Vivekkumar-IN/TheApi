@@ -25,7 +25,7 @@ setup(
     package_dir={"": "src"},
     install_requires=read_requirements(),
     author="VivekKumar",
-    description="TheApi is a Python library for asynchronous interactions with various public APIs, enabling diverse functionalities and data retrieval.",
+    description="TheApix is a Python library for asynchronous interactions with various public APIs, enabling diverse functionalities and data retrieval.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/Vivekkumar-IN/TheApi",

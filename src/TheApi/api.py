@@ -204,7 +204,7 @@ class TheApi:
         source: str,
         file_path: Optional[str] = None,
         from_url: bool = True,
-    ) -> str:
+    ) -> str:  # gh-actions it's Example ignore it
         """
         Generates a PDF from a URL or an HTML string and saves it to a file.
 
@@ -847,7 +847,9 @@ class TheApi:
 
         return FilePath(realpath(file_path))
 
-    async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> str:
+    async def upload_image(
+        self, file_path: Union[str, bytes, BytesIO]
+    ) -> str:  # gh-actions it's Example ignore it
         """
         Uploads an image to https://envs.sh.
 
@@ -893,8 +895,7 @@ class TheApi:
         except ValueError as e:
             raise ValueError(f"Upload failed: {str(e)}")
 
-    @staticmethod
-    async def riddle() -> dict:
+    async def riddle(self) -> dict:
         """
         Fetches a random riddle from the Riddles API.
 

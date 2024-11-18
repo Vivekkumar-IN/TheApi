@@ -114,47 +114,40 @@ async def generate_api_status(methods):
     function_count = 1
 
     for name, method in methods:
+        # Skip private methods
         if name.startswith("_"):
-            continue  # Skip private methods
+            continue
 
-        signature = inspect.signature(method)
-        docstring = inspect.getdoc(method) or "No description available."
-        formatted_name = name.replace("_", "-").lower()
+        # Get the source code of the method
+        source = inspect.getsource(method)
 
         # Create a status table entry with a link
         status_content.append(
-            f"| [{function_count}. {name.replace('_', ' ').title()}](#{function_count}-{formatted_name}) | "
+            f"| [{function_count}. {name.replace('_', ' ').title()}](#{function_count}-{name.replace('_', '-').lower()}) | "
         )
 
         # Format the docstring for better readability
-        formatted_docstring = format_docstring(docstring)
+        formatted_docstring = format_docstring(
+            inspect.getdoc(method) or "No description available."
+        )
 
-        # Special handling for `upload_image` function
-        if name == "upload_image":
-            status = "✅"
-            params_str = ", ".join(
-                f"{param}='file/to/upload'" for param in signature.parameters
-            )
-            result = "You will get a URL"
-            # Document the `upload_image` function in README
+        # Check if the method contains the comment "# gh-actions Don't check
+        # it"
+        if "# gh-actions it's Example ignore it" in source:
+            # Add method to README but without Example section
             readme_content.append(
                 f"### {function_count}. {name.replace('_', ' ').title()}\n\n"
                 f"{formatted_docstring}\n\n"
-                f"```python\nfrom TheApi import api\n\n"
-                f"result = await api.{name}({params_str})\n"
-                f"print(result)\n```\n\n"
-                f"#### Expected Output\n\n"
-                f"```text\n{result}\n```\n"
             )
         else:
-            # Handle other functions
+            # Handle functions based on parameters
+            signature = inspect.signature(method)
             if len(signature.parameters) == 0:
                 status, result = await test_method(method)  # No params
-                # Add function documentation for no-param functions
                 readme_content.append(
                     f"### {function_count}. {name.replace('_', ' ').title()}\n\n"
                     f"{formatted_docstring}\n\n"
-                    f"```python\nfrom TheApi import api\n\n"
+                    f"```python\nfrom Pokemon import api\n\n"
                     f"result = await api.{name}()\n"
                     f"print(result)\n```\n\n"
                     f"#### Expected Output\n\n"
@@ -168,7 +161,7 @@ async def generate_api_status(methods):
                         param_value = repr(param.default)
                         params.append(f"{param.name}={param_value}")
                     elif param.annotation is int:
-                        params.append(f"{param.name}=5")
+                        params.append(f"{param.name}=2")
                     else:
                         params.append(f"{param.name}='Pokemon'")
 
@@ -178,8 +171,6 @@ async def generate_api_status(methods):
                 )
 
                 params_str = ", ".join(params)
-
-                # Document the function with parameters in README
                 readme_content.append(
                     f"### {function_count}. {name.replace('_', ' ').title()}\n\n"
                     f"{formatted_docstring}\n\n"
@@ -190,7 +181,6 @@ async def generate_api_status(methods):
                     f"{format_result(result)}\n"
                 )
 
-        # Update status table with the function's status
         status_content[-1] += status
         function_statuses.append((name, status))
         function_count += 1
@@ -224,9 +214,6 @@ async def write_api_status_to_file(
 
     preface = "# 📘 API Documentation\n\n"
     preface += (
-        "Welcome to the **TheApi**! This library allows you to easily interact with the API using **asynchronous** options.\n\n"
-        "- **Async**: `from TheApi import api`\n\n"
-        "Below, we’ll cover each function, providing examples and expected results so you can get started quickly! Let’s dive in 🚀\n\n"
         "## Status\n\n"
         "| Function           | Status |\n"
         "|--------------------|--------|\n"

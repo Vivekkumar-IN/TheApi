@@ -1,18 +1,56 @@
-##### Installation
+
+Welcome to the **TheApix!** This library allows you to easily interact with the API using asynchronous options.
+
+#### Installation
 
 ```sh
 pip install TheApix
 ```
 
+##### FilePath Class
+The `FilePath` class is a wrapper around a file path string, adding an additional `delete()` method to handle file deletion.
+
+```python
+class FilePath(str):
+    """
+    A wrapper around a file path string that provides an additional delete method.
+
+    Attributes:
+        path (str): The file path to the media file.
+
+    Methods:
+        delete(): Attempts to delete the file at the specified path.
+                  If deletion fails, it handles the exception gracefully.
+    """
+
+    def delete(self):
+        """Deletes the file at the specified path, handling exceptions if deletion fails."""
+        try:
+            os.remove(self)
+        except Exception:
+            pass
+```
+
+##### Usage Example
+
+Whenever a media path is returned, it will be wrapped in a `FilePath` object. You can then call `delete()` on that object to delete the file if it exists.
+
+```python
+from TheApi import api
+
+# Example of using the API to get a file path
+file_path = await api.blackpink(query='Pokemon')  # Returns the file path where the blackpink media is saved
+
+print(file_path)  # Print the file path
+
+file_path.delete()  # Delete the file if it exists
+```
+
+In the example above, `file_path` will be an instance of the `FilePath` class, which allows you to easily delete the file associated with the media once you are done with it.
+
 ---
 
 # 📘 API Documentation
-
-Welcome to the **TheApi**! This library allows you to easily interact with the API using **asynchronous** options.
-
-- **Async**: `from TheApi import api`
-
-Below, we’ll cover each function, providing examples and expected results so you can get started quickly! Let’s dive in 🚀
 
 ## Status
 
@@ -27,7 +65,7 @@ Below, we’ll cover each function, providing examples and expected results so y
 | [7. Domain Search](#7-domain-search) | ❌
 | [8. Fox](#8-fox) | ✅
 | [9. Gen Qr](#9-gen-qr) | ✅
-| [10. Generate Pdf](#10-generate-pdf) | ❌
+| [10. Generate Pdf](#10-generate-pdf) | ✅
 | [11. Get Advice](#11-get-advice) | ✅
 | [12. Get Btc Value](#12-get-btc-value) | ✅
 | [13. Get Hindi Jokes](#13-get-hindi-jokes) | ✅
@@ -61,7 +99,7 @@ Fetches a random anime quote from the AnimeChan API.
   - **dict**: Contains the quote content, anime name, and character details.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.animechan()
 print(result)
@@ -71,14 +109,14 @@ print(result)
 
 ```json
 {
-    "content": "If you\u2019re willing to do whatever it takes, I won\u2019t hold back.",
+    "content": "You should treat me with awe and wonder!",
     "anime": {
-        "id": 346,
-        "name": "Hunter x Hunter"
+        "id": 224,
+        "name": "Noragami"
     },
     "character": {
-        "id": 691,
-        "name": "Gon Freecss"
+        "id": 310,
+        "name": "Yato"
     }
 }
 ```
@@ -105,9 +143,53 @@ print(result)
 #### Expected Output
 
 ```text
+https://media.gamestop.com/i/gamestop/11103360/New-Pokemon-Snap---Nintendo-Switch
+https://img-eshop.cdn.nintendo.net/i/00bd7efe46ab2b3ff0774172a5d4f21a5b2f467b3e324557ce1e9a9ae12c1d3b.jpg
+https://assets-prd.ignimgs.com/2021/03/01/new-pokemon-snap-button-1614639848584.jpg
+https://www.nme.com/wp-content/uploads/2021/05/New-Pokemon-Snap-Credit-Bandai-Namco-HERO@2000x1270.jpg
+https://www.rpgfan.com/wp-content/uploads/2021/01/New-Pokemon-Snap-Screenshot-044.jpg
+https://www.videogamer.com/wp-content/uploads/01d7162d-749b-43eb-bdcc-5c0cf9e49881_New_Pokmon_Snap_Main.jpg
+https://i.gadgets360cdn.com/products/large/New-Pokemon-Snap-Wallpaper-1440x2560-1000x1778-1646977124.jpg
+https://www.nintendo.com/sg/switch/arft/img/hero_sp.jpg
+https://images.launchbox-app.com/1f06f096-8eb6-43ac-abbb-262deb1bf596.jpg
+https://webgames.host/uploads/2017/09/pokemon-snap.jpg
+https://media.npr.org/assets/img/2021/04/29/snap-1_wide-7c41973fe9eef7cbc49beec9a59f3bf5410187d2-s1400-c100.jpg
+https://www.lukiegames.com/assets/images/N64/n64_pokemon_snap_p_66pv3n.jpg
+https://vignette.wikia.nocookie.net/pokemon/images/8/8c/PokemonTypes.png/revision/latest?cb=20170417193722
+https://tecake.com/wp-content/uploads/2020/10/Pokemon.v4.jpg
+https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/472f4a44-0b68-46a9-bfd1-ffca5f5d411f/dbnh54g-993f09cd-8bc1-4653-86e3-5ca28b95e8a9.png/v1/fill/w_1024,h_724,strp/_pokemon__38_types_by_wergan_dbnh54g-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI0IiwicGF0aCI6IlwvZlwvNDcyZjRhNDQtMGI2OC00NmE5LWJmZDEtZmZjYTVmNWQ0MTFmXC9kYm5oNTRnLTk5M2YwOWNkLThiYzEtNDY1My04NmUzLTVjYTI4Yjk1ZThhOS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.8ikZ0Io3pDkjQ1bahvU_ux81ssIRvgztcDY_M3RiaIs
+https://www.mandatory.gg/wp-content/uploads/mandatory-guide-pokemon-ecarlate-violet-table-types-forces-faiblesses.png
+https://raw.githubusercontent.com/kennycason/cellular-automata-pokemon-types/master/data/pokemon_gen1_type_chart.png?raw=true
+http://res.cloudinary.com/lmn/image/upload/e_sharpen:150,f_auto,fl_lossy,q_80/v1/gameskinnyc/p/o/k/pokemon-types-table-ad163.png
+http://fc09.deviantart.net/fs70/i/2013/318/0/f/pokemon_types_wheel_by_kamionero-d6u6o9i.png
+https://videogamesuncovered.com/wp-content/uploads/2016/12/pokemon-types.jpg
+https://releasegaming.com/wp-content/uploads/2023/02/Pokemon-Type-Chart-Poster-960x850.jpg
+https://static.wikia.nocookie.net/pokemongo/images/9/9c/Type_chart.png/revision/latest?cb=20191205150508
+https://1.bp.blogspot.com/-A0NsVJu2Ay0/WGOgGNxAdTI/AAAAAAAABIY/amMTic8SsXYs7jfP_ITwBmkeVQHIAGZ-ACPcB/s1600/ENG-05-02-02-All-the-Pokemon-types.png
+http://img.pokemondb.net/images/typechart.png
+https://www.pngitem.com/pimgs/m/510-5102094_http-image-noelshack-pokemon-artefact-all-types-pokemon.png
+https://orig00.deviantart.net/a456/f/2017/356/6/a/favorite_pokemon_type_chart_by_strikerprime-dbtmr5q.jpg
+https://external-preview.redd.it/RRN_PLWmmvfT9Sn_TEMwb30kQnYa98DgdNboTgCouVY.jpg?auto=webp&amp;s=a0e508951d46d24c5b52b3c1a6fe5a7affd7cd4e
+https://pnghq.com/wp-content/uploads/pnghq.com-pokemon-types-821x1024.png
+https://www.theloadout.com/wp-content/sites/theloadout/2023/06/pokemon-type-chart-icons.jpg
+https://usercontent2.hubstatic.com/13982569_f1024.jpg
+https://cdn1.vectorstock.com/i/1000x1000/03/95/pokemon-type-symbols-vector-2700395.jpg
+https://i.imgur.com/8AKzEBt.jpg
+https://i.etsystatic.com/21027128/r/il/fdbdba/2003255292/il_1588xN.2003255292_12o2.jpg
+https://www.pokemoncenter.com/products/images/P2373PC/155-80156/P2373PC_155-80156_01.jpg
+https://i.etsystatic.com/22464198/r/il/92a686/2662042144/il_1140xN.2662042144_ns4d.jpg
+https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/1920w/products/371952/569692/pokemonevolvingskies041__83278.1630015209.jpg?c=2
+https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/2560w/products/175831/251398/pokemonshininglegends28__52193.1509648391.jpg?c=2
+https://i.pinimg.com/736x/83/e3/5a/83e35aead31fabb77b9bde3396d4351f.jpg
+https://images.saymedia-content.com/.image/t_share/MTc5ODE2MjE2Mjc2NDQ0Nzgz/best-v-pokemon-cards.jpg
+https://images.saymedia-content.com/.image/t_share/MTgzNzE1NDA2MDk0MDE3ODU1/best-vmax-pokemon-cards.png
+https://imgix.ranker.com/user_node_img/3181/63618188/original/blastoise-u16?fit=crop&amp;fm=pjpg&amp;q=60&amp;w=650&amp;dpr=2
+https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/06/Charizard-grade-9-mint-front.jpg
+https://i.etsystatic.com/23914535/r/il/750695/2869449405/il_1588xN.2869449405_fr75.jpg
+https://pm1.narvii.com/6267/3e8dabe202aa4911724963a0eb1b1f0b0c875193_hq.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-http://wallpapercave.com/wp/tuWSYqf.jpg
-https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+http://www.animextremist.com/imagenes/pokemon/pokemon97.jpg
 ```
 
 ### 3. Blackpink
@@ -135,7 +217,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_waptssww.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_1Fwr8oqY.jpg
 ```
 
 ### 4. Carbon
@@ -159,7 +241,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_AtDomF5W.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_G3M9T3BV.png
 ```
 
 ### 5. Cat
@@ -171,7 +253,7 @@ Fetches a random cat image URL.
   - **str or None**: The URL of a random cat image if available; None if no response is received.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.cat()
 print(result)
@@ -180,7 +262,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/5ot.jpg
+https://cdn2.thecatapi.com/images/viSRY7Ra0.jpg
 ```
 
 ### 6. Dog
@@ -192,7 +274,7 @@ Fetches a random dog image URL.
   - **str or None**: The URL of a random dog image if available; None if no response is received.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.dog()
 print(result)
@@ -201,7 +283,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/eb6afea1-02d9-413e-babf-b75ff2426006.jpg
+https://random.dog/ffa35fd1-fbfd-41a6-a7cd-99f9b8057ceb.jpg
 ```
 
 ### 7. Domain Search
@@ -226,7 +308,7 @@ print(result)
 #### Expected Output
 
 ```text
-Request failed: 524, message='', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
+Request failed: 502, message='Bad Gateway', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
 ```
 
 ### 8. Fox
@@ -238,7 +320,7 @@ Fetches a random fox image URL.
   - **str or None**: The URL of the fox image if available, otherwise None.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.fox()
 print(result)
@@ -247,7 +329,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=52
+https://randomfox.ca/?i=95
 ```
 
 ### 9. Gen Qr
@@ -273,7 +355,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/2AT6gCst_qr.png
+/home/runner/work/TheApi/TheApi/downloads/6nOzZZdD_qr.png
 ```
 
 ### 10. Generate Pdf
@@ -293,18 +375,6 @@ Generates a PDF from a URL or an HTML string and saves it to a file.
 **Raises:**
   - **ValueError**: If `from_url` is True and `source` is not a valid URL.
 
-```python
-from TheApi import api
-
-result = await api.generate_pdf(source='Pokemon', file_path=None, from_url=True)
-print(result)
-```
-
-#### Expected Output
-
-```text
-Invalid URL provided: Pokemon
-```
 
 ### 11. Get Advice
 
@@ -315,7 +385,7 @@ Fetches a random piece of advice.
   - **str**: A random advice message.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.get_advice()
 print(result)
@@ -324,7 +394,7 @@ print(result)
 #### Expected Output
 
 ```text
-Never buy cheap cling film.
+To improve productivity, always have a shittier task to put off.
 ```
 
 ### 12. Get Btc Value
@@ -356,22 +426,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "86,081.899",
-        "rate_float": 86081.8986,
+        "rate": "86,674.524",
+        "rate_float": 86674.5239,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "71,821.628",
-        "rate_float": 71821.6279,
+        "rate": "72,302.391",
+        "rate_float": 72302.3907,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "90,734.969",
-        "rate_float": 90734.9693,
+        "rate": "91,378.699",
+        "rate_float": 91378.6993,
         "symbol": "&#36;"
     }
 }
@@ -386,7 +456,7 @@ Fetches a random Hindi joke.
   - **str**: A random Hindi joke if available, or "No joke found" if not available.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.get_hindi_jokes()
 print(result)
@@ -395,7 +465,7 @@ print(result)
 #### Expected Output
 
 ```text
-कभी कभी खेल भी लिया करो मोहब्बत के मरीजों हर समय शायरी की दुकान लगाये रहते हो 😆🤣😋😉
+आज online तथा विविध app के वजह से लोग प्रत्यक्ष ना मिलते हुए एक आभासी जीवन जी रहे है जो रमी खेलने के बहाने मिलते थे वह भी आज कल रमी app द्वारा ही खेलते है इसलिए मैं दारु पीने के बहाने मिलने वाले लोगों का आदर करता हूँ मिल बैठने की संस्कृती इन्हीं लोगों ने जिंदा रखी है 😆🤣😋😉
 ```
 
 ### 14. Get Jokes
@@ -419,7 +489,10 @@ print(result)
 #### Expected Output
 
 ```text
-I have a fish that can breakdance! Only for 20 seconds though, and only once.
+Eight bytes walk into a bar.
+The bartender asks, "Can I get you anything?"
+"Yeah," reply the bytes.
+"Make us a double."
 ```
 
 ### 15. Get Uselessfact
@@ -431,7 +504,7 @@ Fetches a random useless fact.
   - **str**: A random useless fact.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.get_uselessfact()
 print(result)
@@ -440,7 +513,7 @@ print(result)
 #### Expected Output
 
 ```text
-Donald Duck comics were banned from Finland because he doesn`t wear pants!
+All 50 states are listed across the top of the Lincoln Memorial on the back of the $5 bill.
 ```
 
 ### 16. Get Word Definitions
@@ -522,7 +595,7 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4796,
+        "stargazers_count": 4797,
         "forks_count": 2799
     },
     {
@@ -546,7 +619,7 @@ Fetches a random Hindi quote.
   - **str**: The content of a random Hindi quote.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.hindi_quote()
 print(result)
@@ -555,7 +628,7 @@ print(result)
 #### Expected Output
 
 ```text
-अधूरा हूं तुम्हारें बिना मैं, तो पूरे तुम भी नहीं; अगर हूं मैं सच, तो ख़्वाब तुम भी नहीं…
+कोशिश करते रहिये, सफ़ल हुए तो घर वाले खुश और असफ़ल हुए तो पड़ोसी खुश!!
 ```
 
 ### 19. Hug
@@ -584,8 +657,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Princess Connect! Re:Dive",
-        "url": "https://nekos.best/api/v2/hug/7aadc12d-90e2-4e2e-933b-aa72313ccc10.gif"
+        "anime_name": "Mononoke Hime",
+        "url": "https://nekos.best/api/v2/hug/1e872929-e623-46ba-b5dc-fe05dfc61990.gif"
     }
 ]
 ```
@@ -599,7 +672,7 @@ Fetches a random meme image URL.
   - **str or None**: The URL of the meme image if available, otherwise None.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.meme()
 print(result)
@@ -608,7 +681,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/o4xrt9dtjd1e1.png?width=1080&crop=smart&auto=webp&s=c9252329e428ff789881248638cda9d7c0ecceb6
+https://preview.redd.it/t9zfnkbhn91e1.gif?width=640&crop=smart&format=png8&s=869e7fc28b2ac8813f4454d1f9e881e738300669
 ```
 
 ### 21. Neko
@@ -648,22 +721,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/6020696",
-            "artist_name": "WooGi",
-            "source_url": "https://www.pixiv.net/en/artworks/89387715",
-            "url": "https://nekos.best/api/v2/neko/3795a240-cc6b-45b1-abe1-26e61aa6a9c2.png"
+            "artist_href": "https://www.pixiv.net/en/users/67445617",
+            "artist_name": "\u4f0a\u6771\u3053\u3093\u306b\u3083\u304f",
+            "source_url": "https://www.pixiv.net/en/artworks/92229673",
+            "url": "https://nekos.best/api/v2/neko/71284360-c673-4d12-a8c2-3606bac26b30.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/53797367",
-            "artist_name": "\u3068\u306a\u305b\u304c",
-            "source_url": "https://www.pixiv.net/en/artworks/87202777",
-            "url": "https://nekos.best/api/v2/neko/f7bb8dda-d579-473d-af3a-e0db7ed41f66.png"
+            "artist_href": "https://www.pixiv.net/en/users/306422",
+            "artist_name": "Hong",
+            "source_url": "https://www.pixiv.net/en/artworks/76673075",
+            "url": "https://nekos.best/api/v2/neko/04396bfc-af6c-4aae-b388-69a594e627a9.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/92891",
-            "artist_name": "\u3042\u3081\u3068\u3086\u304d",
-            "source_url": "https://www.pixiv.net/en/artworks/61449293",
-            "url": "https://nekos.best/api/v2/neko/d11f21da-9923-406a-af43-fadec48c9cdb.png"
+            "artist_href": "https://www.pixiv.net/en/users/68328516",
+            "artist_name": "\u306b\u3057\u304d",
+            "source_url": "https://www.pixiv.net/en/artworks/95953138",
+            "url": "https://nekos.best/api/v2/neko/386a0a53-db69-4054-a49a-9b9d44ac7f74.png"
         }
     ]
 }
@@ -730,7 +803,7 @@ Fetches a random quote.
   - **str**: The content of a random quote followed by the author's name.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.quote()
 print(result)
@@ -739,9 +812,9 @@ print(result)
 #### Expected Output
 
 ```text
-Think for yourselves and let others enjoy the privilege to do so too.
+Reflect on your present blessings, of which every man has many; not on your past misfortunes, of which all men have some.
 
-author - Voltaire
+author - Charles Dickens
 ```
 
 ### 24. Random Word
@@ -753,7 +826,7 @@ Fetches a random word.
   - **str**: A random word if available; "None" if an error occurs.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.random_word()
 print(result)
@@ -762,7 +835,7 @@ print(result)
 #### Expected Output
 
 ```text
-juiciest
+grushie
 ```
 
 ### 25. Riddle
@@ -774,7 +847,7 @@ Fetches a random riddle from the Riddles API.
   - **dict**: The riddle data in JSON format.
 
 ```python
-from TheApi import api
+from Pokemon import api
 
 result = await api.riddle()
 print(result)
@@ -784,8 +857,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I never was, am always to be, No one ever saw me, nor ever will And yet I am the confidence of all To live and breathe on this terrestrial ball.",
-    "answer": "I am tomorrow - your future"
+    "riddle": "I'm the part of the bird that's not in the sky. I can swim in the ocean and yet remain dry. What am I?",
+    "answer": "A shadow"
 }
 ```
 
@@ -832,7 +905,7 @@ print(result)
             "link": "https://stackoverflow.com/users/14597469/senem-sedef"
         },
         "is_answered": false,
-        "view_count": 117,
+        "view_count": 123,
         "answer_count": 0,
         "score": 0,
         "last_activity_date": 1701515081,
@@ -859,7 +932,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 1972,
+        "view_count": 1974,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -884,7 +957,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32636,
+        "view_count": 32638,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -915,18 +988,6 @@ Uploads an image to https://envs.sh.
   - **ValueError**: If the file is not found, the input type is invalid,
     or the upload request fails.
 
-```python
-from TheApi import api
-
-result = await api.upload_image(file_path='file/to/upload')
-print(result)
-```
-
-#### Expected Output
-
-```text
-You will get a URL
-```
 
 ### 28. Wikipedia
 
@@ -958,7 +1019,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -978,18 +1039,15 @@ Fetches a specified number of random words.
 ```python
 from TheApi import api
 
-result = await api.words(num_words=5)
+result = await api.words(num_words=2)
 print(result)
 ```
 
 #### Expected Output
 
 ```text
-stepdame
-psychologists
-scalenus
-bourrides
-uncaking
+measliest
+armory
 ```
 
 ### 30. Write
@@ -1017,7 +1075,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_DxjMyLFr.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_y3xXxvW8.jpg
 ```
 
 
