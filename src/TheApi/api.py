@@ -35,6 +35,7 @@ class TheApi:
             "meme": "https://meme-api.com/gimme",
             "neko_url": "https://nekos.best/api/v2/{endpoint}?amount={amount}",
             "neko_hug": "https://nekos.best/api/v2/hug?amount={}",
+            "pdf": "https://api.stakdek.de/api",
             "pypi": "https://pypi.org/pypi",
             "qr_gen": "https://api.stakdek.de/api/qr/gen?data={query}",
             "quote": "https://api.quotable.io/random",
@@ -192,6 +193,55 @@ class TheApi:
         response = await self._make_request(self.base_urls["hindi_jokes"])
         return response["jokeContent"] if response["status"] else "No joke found."
 
+
+    async def generate_pdf(
+        self,
+        source: str,
+        file_path: Optional[str] = None,
+        from_url: bool = True,
+    ) -> str:
+        """
+        Generates a PDF from a URL or an HTML string and saves it to a file.
+
+        Args:
+            source (str): The URL of the website (if `from_url=True`) or the HTML string (if `from_url=False`).
+            file_path (str, optional): The file path to save the generated PDF.
+                                       Defaults to "downloads/<random_str>_generated.pdf".
+            from_url (bool, optional): Whether to generate the PDF from a URL (True) or an HTML string (False).
+
+        Returns:
+            FilePath: The file path where the PDF was saved.
+
+        Raises:
+            ValueError: If `from_url` is True and `source` is not a valid URL.
+        """
+        if from_url:
+            # Validate the URL format using regex
+            url_regex = re.compile(
+                r'^(https?://)?'  # http or https
+                r'(([A-Za-z0-9-]+\.)+[A-Za-z]{2,6})'  # Domain
+                r'(:[0-9]{1,5})?'  # Optional port
+                r'(/[A-Za-z0-9._%+-]*)*$',  # Path
+                re.IGNORECASE,
+            )
+            if not re.match(url_regex, source):
+                raise ValueError(f"Invalid URL provided: {source}")
+        url = self.base_urls["pdf"]
+        url = url + "/from_url" if from_url else url + "/from_html"
+        params = {"url": source} if from_url else {"html": source}
+
+        if file_path is None:
+            file_path = os.path.join("downloads", f"{self._rnd_str()}_generated.pdf")
+
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        pdf_content = await self._make_request(url, params=params)
+
+        async with aiofiles.open(file_path, "wb") as f:
+            await f.write(pdf_content)
+
+        return FilePath(file_path)
+        
     async def gen_qr(self, query: str, file_path: str = None) -> str:
         """
         Generates a QR code and saves it to the specified file path.
