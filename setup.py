@@ -19,7 +19,7 @@ def version():
 
 
 setup(
-    name="TheApi",
+    name="TheApix",
     version=version(),
     packages=find_packages(where="src"),
     package_dir={"": "src"},
