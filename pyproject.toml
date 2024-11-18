@@ -1,3 +1,25 @@
+[project]
+name = "TheApi"
+version = "1.2"
+authors = [
+    { name="VivekKumar" },
+]
+description = "TheApi is a Python library for asynchronous interactions with various public APIs, enabling diverse functionalities and data retrieval."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/Vivekkumar-IN/TheApi"
+Issues = "https://github.com/Vivekkumar-IN/TheApi/issues"
+Source = "https://github.com/Vivekkumar-IN/TheApi"
+
 [build-system]
 requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
