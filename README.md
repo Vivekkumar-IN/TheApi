@@ -69,14 +69,14 @@ print(result)
 
 ```json
 {
-    "content": "At that point in my life, I couldn't find any value in anything. I was a brat who may as well be dead.",
+    "content": "Kakarot! Dodge this next attack, if you can!.. But even if I miss you... THIS WHOLE PLANET'S GOING UP IN SMOOOOKE!",
     "anime": {
-        "id": 301,
-        "name": "Grisaia no Kajitsu"
+        "id": 912,
+        "name": "Dragon Ball"
     },
     "character": {
-        "id": 374,
-        "name": "Yuuji Kazami"
+        "id": 859,
+        "name": "Vegeta"
     }
 }
 ```
@@ -104,8 +104,8 @@ print(result)
 
 ```text
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg
-https://wallpapercave.com/wp/wp11733352.jpg
+http://wallpapercave.com/wp/tuWSYqf.jpg
+https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
 ```
 
 ### 3. Blackpink
@@ -133,7 +133,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_8ZJYniKG.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_xMqo0mnc.jpg
 ```
 
 ### 4. Carbon
@@ -157,7 +157,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_zv6ozCXQ.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_wB3RO8GR.png
 ```
 
 ### 5. Cat
@@ -178,7 +178,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/8pb.jpg
+https://cdn2.thecatapi.com/images/MTc3MDkxNw.gif
 ```
 
 ### 6. Dog
@@ -199,7 +199,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/c2368558-419f-4a77-a209-140d5078789f.jpg
+https://random.dog/a4c0bd01-b45b-4d53-bd5f-3577b9126b50.mp4
 ```
 
 ### 7. Domain Search
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=64
+https://randomfox.ca/?i=55
 ```
 
 ### 9. Gen Qr
@@ -271,7 +271,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/mCMw5ZUN_qr.png
+/home/runner/work/TheApi/TheApi/downloads/sitHlvqi_qr.png
 ```
 
 ### 10. Get Advice
@@ -292,7 +292,7 @@ print(result)
 #### Expected Output
 
 ```text
-Don't waste food.
+Try using an old idea.
 ```
 
 ### 11. Get Hindi Jokes
@@ -313,7 +313,7 @@ print(result)
 #### Expected Output
 
 ```text
-नेट प्लान के सस्ते होने से चोरों का सबसे ज्यादा नुकसान हुआ हैं जिस घर में चोरी करने जाते हैं कोई न कोई जाग रहा होता हैं 😆🤣😋😉 
+रावण के बाद अगर किसी को अपनी शक्ति पर घमंड है तो वो है एयरटेल 4g वालों को अपने नेटवर्क पर 😆🤣😋😉
 ```
 
 ### 12. Get Jokes
@@ -337,7 +337,7 @@ print(result)
 #### Expected Output
 
 ```text
-Being a self-taught developer is almost the same as being a cut neck chicken because you have no sense of direction in the beginning.
+Women are like KFC, once you're done with the breasts and thighs, you just have a greasy box to put your bone in.
 ```
 
 ### 13. Get Uselessfact
@@ -358,7 +358,7 @@ print(result)
 #### Expected Output
 
 ```text
-Telly Savalas and Louis Armstrong died on their birthdays.  
+The Vatican city registered 0 births in 1983
 ```
 
 ### 14. Get Word Definitions
@@ -473,7 +473,7 @@ print(result)
 #### Expected Output
 
 ```text
-कौन है जिसमें कमी नहीं होती, आसमां के पास भी तो जमीं नहीं होती।
+आंसू वो खामोश दुआ है जो सिर्फ खुदा ही सुन सकता है।
 ```
 
 ### 17. Hug
@@ -502,8 +502,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Princess Connect! Re:Dive",
-        "url": "https://nekos.best/api/v2/hug/85e51199-6829-4ffd-85e3-4d1a1b9ba891.gif"
+        "anime_name": "Clannad",
+        "url": "https://nekos.best/api/v2/hug/b979d171-f9ab-4eda-a002-6da7371ddd6b.gif"
     }
 ]
 ```
@@ -526,7 +526,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/yvgbezgi8h1e1.png?width=640&crop=smart&auto=webp&s=39180c508b06139e974e3406d4af4b5065a4ae06
+https://preview.redd.it/wp51fs06l41e1.png?width=640&crop=smart&auto=webp&s=d7b6fece83db2feb8e59a7a620ab120fda65badd
 ```
 
 ### 19. Neko
@@ -566,22 +566,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/4387210",
-            "artist_name": "\u840c\u306e\u9999 \u30c6\u30a3\u30a2",
-            "source_url": "https://www.pixiv.net/en/artworks/103084606",
-            "url": "https://nekos.best/api/v2/neko/9eb2d75c-7177-4a05-a21d-17701a6dcfda.png"
+            "artist_href": "https://www.pixiv.net/en/users/57758604",
+            "artist_name": "blua",
+            "source_url": "https://www.pixiv.net/en/artworks/92563823",
+            "url": "https://nekos.best/api/v2/neko/c1c6fa2e-582a-4b8c-810c-77971f40d9dd.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/45053062",
-            "artist_name": "\u767d\u30e2\u30a2\u30a4",
-            "source_url": "https://www.pixiv.net/en/artworks/93170361",
-            "url": "https://nekos.best/api/v2/neko/be6727e7-7777-4ca5-9d5e-1e82f132b9fd.png"
+            "artist_href": "https://www.pixiv.net/en/users/60073850",
+            "artist_name": "soybean",
+            "source_url": "https://www.pixiv.net/en/artworks/99064329",
+            "url": "https://nekos.best/api/v2/neko/d33acb8c-b73a-4071-a4a8-1eecf53d222c.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/7594805",
-            "artist_name": "AIZAWA",
-            "source_url": "https://www.pixiv.net/en/artworks/89209136",
-            "url": "https://nekos.best/api/v2/neko/878c05a6-e95c-496c-9f5c-061f4b0646fd.png"
+            "artist_href": "https://www.pixiv.net/en/users/46271917",
+            "artist_name": "Cynthia",
+            "source_url": "https://www.pixiv.net/en/artworks/88148474",
+            "url": "https://nekos.best/api/v2/neko/93498f13-abee-4dc4-8003-00772ba11b00.png"
         }
     ]
 }
@@ -657,9 +657,9 @@ print(result)
 #### Expected Output
 
 ```text
-It is impossible for a man to learn what he thinks he already knows.
+Friendship often ends in love, but love in friendship - never.
 
-author - Epictetus
+author - Albert Camus
 ```
 
 ### 22. Random Word
@@ -680,7 +680,7 @@ print(result)
 #### Expected Output
 
 ```text
-delectabilities
+bundts
 ```
 
 ### 23. Riddle
@@ -702,8 +702,8 @@ print(result)
 
 ```json
 {
-    "riddle": "Two fathers and two sons went fishing one day. They were there the whole day and only caught 3 fish. One father said, that is enough for all of us, we will have one each.  How can this be possible?",
-    "answer": "There was the father, his son, and his son's son. This equals 2 fathers and 2 sons!"
+    "riddle": "A man was found dead out in a field of snow. The only tracks that were left was a set of footprints between two parallel lines. Who should the police be looking for?",
+    "answer": "A man in a wheelchair"
 }
 ```
 
@@ -903,11 +903,11 @@ print(result)
 #### Expected Output
 
 ```text
-zincous
-blennioid
-acclimatises
-lungfuls
-toddling
+gooseherds
+footstool
+escars
+principle
+spelunk
 ```
 
 ### 28. Write
@@ -935,7 +935,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_YQOiSL7p.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_fXvLXHgP.jpg
 ```
 
 
