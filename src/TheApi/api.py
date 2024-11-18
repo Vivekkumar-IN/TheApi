@@ -129,7 +129,7 @@ class TheApi:
         """
         response = await self._make_request(self.base_urls["avatar"])
         return response
-        
+
     async def animechan(self):
         """
         Fetches a random anime quote from the AnimeChan API.
