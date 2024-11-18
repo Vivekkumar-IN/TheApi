@@ -1,11 +1,13 @@
 from setuptools import setup, find_packages
 
+
 def read_requirements():
     try:
         with open("requirements.txt") as f:
             return f.read().splitlines()
     except FileNotFoundError:
         return []
+
 
 def version():
     version_file = "src/TheApi/__init__.py"
@@ -15,6 +17,7 @@ def version():
                 return line.split("=")[1].strip().strip('"')
     raise ValueError("Version not found in src/TheApi/__init__.py")
 
+
 setup(
     name="TheApi",
     version=version(),
@@ -23,7 +26,7 @@ setup(
     install_requires=read_requirements(),
     author="VivekKumar",
     description="TheApi is a Python library for asynchronous interactions with various public APIs, enabling diverse functionalities and data retrieval.",
-    long_description=open('README.md').read(),
+    long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/Vivekkumar-IN/TheApi",
     classifiers=[
