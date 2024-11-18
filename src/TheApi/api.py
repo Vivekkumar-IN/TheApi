@@ -20,6 +20,7 @@ class TheApi:
         self.base_urls = {
             "advice": "https://api.adviceslip.com/advice",
             "animechan": "https://animechan.io/api/v1/quotes/random",
+            "avatar": "https://thedobby.club/api/avatars/random/",
             "btc_value": "https://api.stakdek.de/api/btc/",
             "bing_image": "https://www.bing.com/images/async",
             "carbon": "https://carbonara.solopov.dev/api/cook",
@@ -119,6 +120,16 @@ class TheApi:
         random_str = "".join(random.choices(string.ascii_letters + string.digits, k=8))
         return random_str
 
+    async def avatar(self):
+        """
+        Fetches a random avatars from the thedobby.club API.
+
+        Returns:
+            dict: Contains the file name, file type, and file URL.
+        """
+        response = await self._make_request(self.base_urls["avatar"])
+        return response
+        
     async def animechan(self):
         """
         Fetches a random anime quote from the AnimeChan API.
