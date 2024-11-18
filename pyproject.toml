@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Vivekkumar-IN/TheApi"
+Homepage = "https://github.com/Vivekkumar-IN/TheApi/blob/main/README.md"
 Issues = "https://github.com/Vivekkumar-IN/TheApi/issues"
 Source = "https://github.com/Vivekkumar-IN/TheApi"
 
