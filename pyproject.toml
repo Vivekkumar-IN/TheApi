@@ -1,8 +1,8 @@
 [project]
 name = "TheApi"
-version = "1.2"
+version = "1.2.0"
 authors = [
-    { name="VivekKumar" },
+    { name = "Vivek Kumar" }
 ]
 description = "TheApi is a Python library for asynchronous interactions with various public APIs, enabling diverse functionalities and data retrieval."
 readme = "README.md"
@@ -12,14 +12,15 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
 ]
 
 [project.dependencies]
-aiohttp = "*"
-aiofiles = "*"
-requests = "*"
-pillow = "9.5.0"
+dependencies = [
+    "aiohttp",
+    "aiofiles",
+    "requests",
+    "pillow==9.5.0"
+]
 
 [project.urls]
 Homepage = "https://github.com/Vivekkumar-IN/TheApi"
