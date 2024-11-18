@@ -64,7 +64,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [7. Domain Search](#7-domain-search) | ✅
 | [8. Fox](#8-fox) | ✅
 | [9. Gen Qr](#9-gen-qr) | ✅
-| [10. Generate Pdf](#10-generate-pdf) | ❌
+| [10. Generate Pdf](#10-generate-pdf) | ✅
 | [11. Get Advice](#11-get-advice) | ✅
 | [12. Get Btc Value](#12-get-btc-value) | ✅
 | [13. Get Hindi Jokes](#13-get-hindi-jokes) | ✅
@@ -81,7 +81,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [24. Random Word](#24-random-word) | ✅
 | [25. Riddle](#25-riddle) | ✅
 | [26. Stackoverflow Search](#26-stackoverflow-search) | ✅
-| [27. Upload Image](#27-upload-image) | ❌
+| [27. Upload Image](#27-upload-image) | ✅
 | [28. Wikipedia](#28-wikipedia) | ✅
 | [29. Words](#29-words) | ✅
 | [30. Write](#30-write) | ✅
@@ -108,14 +108,14 @@ print(result)
 
 ```json
 {
-    "content": "I've been wondering... There must be a purpose for people being born into this world. Why are we here? What does it mean? I've been thinking about it a lot lately. I realized that finding our purpose IS the meaning. That's why we're here. And the ones who find it... They're the only ones who are truly free.",
+    "content": "Humans are suspicious and jealous creatures. When they see something perfect, they wanna find a flaw.",
     "anime": {
-        "id": 266,
-        "name": "Naruto"
+        "id": 271,
+        "name": "Detective Conan"
     },
     "character": {
-        "id": 1855,
-        "name": "Kimimaro"
+        "id": 1040,
+        "name": "Hattori Heiji"
     }
 }
 ```
@@ -142,9 +142,9 @@ print(result)
 #### Expected Output
 
 ```text
+https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
-https://wallpapercave.com/wp/wp11733352.jpg
 ```
 
 ### 3. Blackpink
@@ -170,7 +170,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_UB1XfDkl.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_yeez0uqh.jpg
 ```
 
 ### 4. Carbon
@@ -194,7 +194,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_4ggIDW1u.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_RKk3PDhC.png
 ```
 
 ### 5. Cat
@@ -215,7 +215,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/2n6.gif
+https://cdn2.thecatapi.com/images/9fn.jpg
 ```
 
 ### 6. Dog
@@ -236,7 +236,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/d28047c5-1bce-4b94-988a-d05d5c15d5fb.jpeg
+https://random.dog/623d8981-6068-4a08-8e11-d57a108c8d0e.mp4
 ```
 
 ### 7. Domain Search
@@ -1045,7 +1045,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=36
+https://randomfox.ca/?i=114
 ```
 
 ### 9. Gen Qr
@@ -1071,7 +1071,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/LTvOzKsX_qr.png
+/home/runner/work/TheApi/TheApi/downloads/ocxBle8Q_qr.png
 ```
 
 ### 10. Generate Pdf
@@ -1091,18 +1091,6 @@ Generates a PDF from a URL or an HTML string and saves it to a file.
 **Raises:**
   - **ValueError**: If `from_url` is True and `source` is not a valid URL.
 
-```python
-from TheApi import api
-
-result = await api.generate_pdf(source='Pokemon', file_path=None, from_url=True)
-print(result)
-```
-
-#### Expected Output
-
-```text
-Invalid URL provided: Pokemon
-```
 
 ### 11. Get Advice
 
@@ -1122,7 +1110,7 @@ print(result)
 #### Expected Output
 
 ```text
-It is easy to sit up and take notice, what's difficult is getting up and taking action.
+Lemon and salt works wonders on tarnished brass.
 ```
 
 ### 12. Get Btc Value
@@ -1154,22 +1142,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "86,848.142",
-        "rate_float": 86848.1417,
+        "rate": "86,906.617",
+        "rate_float": 86906.6168,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "72,588.723",
-        "rate_float": 72588.7233,
+        "rate": "72,637.597",
+        "rate_float": 72637.5974,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "91,598.533",
-        "rate_float": 91598.5333,
+        "rate": "91,660.207",
+        "rate_float": 91660.2067,
         "symbol": "&#36;"
     }
 }
@@ -1193,7 +1181,7 @@ print(result)
 #### Expected Output
 
 ```text
-बिस्किट बनाने वाली कंपनियों को विनम्र निवेदन: ...पहले मारिओ वालो कृपया मारिओ बिस्किट का आकार कम कीजिये या फिर कप बनाने वाली कंपनी के लोगों से एक बार बात करके तो देखें।😂😂 ...दूसरा Parle G वालों से निवेदन है कि बिस्किट के घोल में थोडा सा अंबुजा सीमेंट भी मिला कर दें। चाय में डुबोते ही ग़श खा कर उसी कप में आत्महत्या कर लेता है।😂😝😂
+जब समय था तब अकल नहीं थी और जब अक्ल है तब समय नहीं है 😆🤣😋😉
 ```
 
 ### 14. Get Jokes
@@ -1217,7 +1205,7 @@ print(result)
 #### Expected Output
 
 ```text
-My husband and I were happy for 20 years. And then we met.
+Your momma is so fat, you need to switch to NTFS to store a picture of her.
 ```
 
 ### 15. Get Uselessfact
@@ -1238,7 +1226,7 @@ print(result)
 #### Expected Output
 
 ```text
-Every time you lick a stamp, you consume 1/10 of a calorie.
+There are more than 10 million bricks in the Empire State Building!
 ```
 
 ### 16. Get Word Definitions
@@ -1353,7 +1341,7 @@ print(result)
 #### Expected Output
 
 ```text
-कितनी भी सजा दो काफी नहीं होती, कुछ गलतियां ऐसी होती है जिनकी माफी नहीं होती।
+समझनी है जिंदगी तो पिछे देखो, जीनी है जिंदगी तो आगे देखो…
 ```
 
 ### 19. Hug
@@ -1382,8 +1370,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Princess Connect! Re:Dive",
-        "url": "https://nekos.best/api/v2/hug/f7246b64-e9ae-4ebd-a1d0-bb934fd1418e.gif"
+        "anime_name": "Kyoukai no Kanata",
+        "url": "https://nekos.best/api/v2/hug/b1136a84-2653-4c87-b80f-ea3cc0bf6ab9.gif"
     }
 ]
 ```
@@ -1406,7 +1394,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/6xb7edebui1e1.png?width=1080&crop=smart&auto=webp&s=4566bd414f4c09c7b913ec0286b08cef77766aee
+https://preview.redd.it/7lx6kq3fgb1e1.png?width=1080&crop=smart&auto=webp&s=938652c04a2a54d560277474b32d93240dfc9018
 ```
 
 ### 21. Neko
@@ -1446,22 +1434,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://twitter.com/MunMosh",
-            "artist_name": "\u3080\u3093\u3082\u3063\u3057\u3085",
-            "source_url": "https://twitter.com/MunMosh/status/1569276319200083970",
-            "url": "https://nekos.best/api/v2/neko/c94cd5e7-7414-43e7-8817-893442a1dff7.png"
+            "artist_href": "https://www.pixiv.net/en/users/27016971",
+            "artist_name": "Vol",
+            "source_url": "https://www.pixiv.net/en/artworks/87892375",
+            "url": "https://nekos.best/api/v2/neko/2da7e99f-efe9-462d-9a6e-46cca3d4363b.png"
         },
         {
-            "artist_href": "https://twitter.com/ryohka_jp",
-            "artist_name": "yohka_jp",
-            "source_url": "https://twitter.com/i/web/status/1108527474416050176",
-            "url": "https://nekos.best/api/v2/neko/535eb098-72f0-4c08-97d5-ba75fd871500.png"
+            "artist_href": "https://www.pixiv.net/en/users/220294",
+            "artist_name": "\u3082\u3082\u3057\u304d",
+            "source_url": "https://www.pixiv.net/en/artworks/100920115",
+            "url": "https://nekos.best/api/v2/neko/4ef031cc-3a22-4102-b7bd-bf08c6bcc55a.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/15747989",
-            "artist_name": "\u8309\u5442\u8336\u308d\u307e",
-            "source_url": "https://www.pixiv.net/en/artworks/96376140",
-            "url": "https://nekos.best/api/v2/neko/f4487ac5-e954-416f-b6ea-bbb42c4d1900.png"
+            "artist_href": "https://www.pixiv.net/en/users/31254299",
+            "artist_name": "\u767d\u6708\u3044\u3068",
+            "source_url": "https://www.pixiv.net/en/artworks/94288092",
+            "url": "https://nekos.best/api/v2/neko/f883d55f-0ac6-4a36-9c75-1dbfa687a765.png"
         }
     ]
 }
@@ -1537,9 +1525,9 @@ print(result)
 #### Expected Output
 
 ```text
-Cunning... is but the low mimic of wisdom.
+Myths which are believed in tend to become true.
 
-author - Plato
+author - George Orwell
 ```
 
 ### 24. Random Word
@@ -1560,7 +1548,7 @@ print(result)
 #### Expected Output
 
 ```text
-bimbette
+cursiveness
 ```
 
 ### 25. Riddle
@@ -1582,8 +1570,8 @@ print(result)
 
 ```json
 {
-    "riddle": "there is a man he leaves home and runs around three blocks, when he comes back home their are two masked men, who are they?",
-    "answer": "the catcher and the umpire"
+    "riddle": "Two fathers and two sons went fishing one day. They were there the whole day and only caught 3 fish. One father said, that is enough for all of us, we will have one each.  How can this be possible?",
+    "answer": "There was the father, his son, and his son's son. This equals 2 fathers and 2 sons!"
 }
 ```
 
@@ -1713,18 +1701,6 @@ Uploads an image to https://envs.sh.
   - **ValueError**: If the file is not found, the input type is invalid,
     or the upload request fails.
 
-```python
-from TheApi import api
-
-result = await api.upload_image(file_path='Pokemon')
-print(result)
-```
-
-#### Expected Output
-
-```text
-File not found: 'Pokemon' - Ensure the file path is correct.
-```
 
 ### 28. Wikipedia
 
@@ -1783,8 +1759,8 @@ print(result)
 #### Expected Output
 
 ```text
-stuntwomen
-bibliotists
+ornateness
+sorties
 ```
 
 ### 30. Write
@@ -1812,7 +1788,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_ENWaPqrY.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_XpSX6lMH.jpg
 ```
 
 
