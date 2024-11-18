@@ -204,7 +204,7 @@ class TheApi:
         source: str,
         file_path: Optional[str] = None,
         from_url: bool = True,
-    ) -> str:  # gh-actions it's Example ignore it
+    ) -> str:  # gh-actions Don't Add it's example, ignore it.
         """
         Generates a PDF from a URL or an HTML string and saves it to a file.
 
@@ -767,14 +767,12 @@ class TheApi:
     async def blackpink(self, query, color="#ff94e0", border_color=None):
         """
         Creates a stylized "Blackpink"-themed image with custom text, color, and optional border.
-
         Args:
             query (str): The text to display on the image.
             color (str, optional): The primary color of the text and gradient background in hex format.
                 Defaults to "#ff94e0" (a pink shade).
             border_color (str, optional): The color of the image border in hex format.
                 If not provided, defaults to the value of `color`.
-
         Returns:
             FilePath: The file path of the generated image with delete attribute.
         """
@@ -797,9 +795,14 @@ class TheApi:
         lines = textwrap.wrap(text, width=40)
 
         while True:
-            text_height = sum(draw_dummy.textsize(line, font=font)[1] for line in lines)
+            text_height = sum(
+                draw_dummy.textbbox((0, 0), line, font=font)[3]
+                - draw_dummy.textbbox((0, 0), line, font=font)[1]
+                for line in lines
+            )
             if text_height <= max_height and all(
-                draw_dummy.textsize(line, font=font)[0] <= max_width for line in lines
+                draw_dummy.textbbox((0, 0), line, font=font)[2] <= max_width
+                for line in lines
             ):
                 break
             font_size -= 1
@@ -818,7 +821,9 @@ class TheApi:
 
         y_text = (img_height - text_height) // 2
         for line in lines:
-            line_width, line_height = draw.textsize(line, font=font)
+            bbox = draw.textbbox((0, 0), line, font=font)
+            line_width = bbox[2] - bbox[0]
+            line_height = bbox[3] - bbox[1]
             draw.text(
                 ((img_width - line_width) // 2, y_text),
                 line,
@@ -846,10 +851,11 @@ class TheApi:
         final_img.save(file_path, format="JPEG")
 
         return FilePath(realpath(file_path))
+            
 
     async def upload_image(
         self, file_path: Union[str, bytes, BytesIO]
-    ) -> str:  # gh-actions it's Example ignore it
+    ) -> str:  # gh-actions Don't Add it's example, ignore it.
         """
         Uploads an image to https://envs.sh.
 
