@@ -132,7 +132,7 @@ async def generate_api_status(methods):
         )
 
         # Check if the method contains the comment "# gh-actions Don't Add it's example, ignore it."
-        if "# gh-actions it's Example ignore it" in source:
+        if "# gh-actions Don't Add it's example, ignore it." in source:
             # Add method to README but without Example section
             readme_content.append(
                 f"### {function_count}. {name.replace('_', ' ').title()}\n\n"
