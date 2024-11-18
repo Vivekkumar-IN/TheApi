@@ -3,12 +3,8 @@ name: Create Tag and Release
 on:
   workflow_dispatch:
     inputs:
-      tag_name:
-        description: 'The tag name to create'
-        required: true
-        default: ''
-      release_name:
-        description: 'The release name'
+      version:
+        description: 'The new version number (e.g., 1.2.0)'
         required: true
         default: ''
 
@@ -20,23 +16,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Create Git Tag
+      - name: Update version in __init__.py and pyproject.toml
         run: |
+          sed -i 's/__version__ = "[^"]*"/__version__ = "${{ github.event.inputs.version }}"/' src/TheApi/__init__.py
+          sed -i 's/version = "[^"]*"/version = "${{ github.event.inputs.version }}"/' pyproject.toml
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git tag ${{ github.event.inputs.tag_name }}
-          git push origin ${{ github.event.inputs.tag_name }}
+          git add src/TheApi/__init__.py pyproject.toml
+          git commit -m "Update version to ${{ github.event.inputs.version }}"
+          git push origin main
+
+      - name: Create Git Tag
+        run: |
+          tag_name="v${{ github.event.inputs.version }}"
+          git tag $tag_name
+          git push origin $tag_name
 
       - name: Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          release_name="v${{ github.event.inputs.version }} [TheApix]"
           curl -s -X POST https://api.github.com/repos/${{ github.repository }}/releases \
           -H "Authorization: token $GITHUB_TOKEN" \
           -H "Content-Type: application/json" \
           -d '{
-            "tag_name": "${{ github.event.inputs.tag_name }}",
-            "name": "${{ github.event.inputs.release_name }}",
+            "tag_name": "v${{ github.event.inputs.version }}",
+            "name": "$release_name",
             "body": "",
             "draft": false,
             "prerelease": false
