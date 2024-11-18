@@ -22,7 +22,7 @@ Below, we’ll cover each function, providing examples and expected results so y
 | [2. Bing Image](#2-bing-image) | ✅
 | [3. Blackpink](#3-blackpink) | ✅
 | [4. Carbon](#4-carbon) | ✅
-| [5. Cat](#5-cat) | ✅
+| [5. Cat](#5-cat) | ❌
 | [6. Dog](#6-dog) | ✅
 | [7. Domain Search](#7-domain-search) | ❌
 | [8. Fox](#8-fox) | ✅
@@ -69,14 +69,14 @@ print(result)
 
 ```json
 {
-    "content": "If I can't even manage a polite smile, I'll be in trouble in the real world.",
+    "content": "Physical wounds will definitely bleed and may look painful \nbut over time they heal by themselves and if you apply medicine, \nthey will heal faster. What's troublesome are wounds of the heart. Nothing is harder to heal. They're a bit different from physical injuries. You can't apply medicine for one thing and sometimes, they never heal. There's only one cure for a wound of the heart. \nIt's a bit bothersome and you can only receive it from someone else. What is it? Love.",
     "anime": {
-        "id": 204,
-        "name": "ReLIFE"
+        "id": 266,
+        "name": "Naruto"
     },
     "character": {
-        "id": 303,
-        "name": "Hishiro Chizuru"
+        "id": 418,
+        "name": "Yashamaru"
     }
 }
 ```
@@ -103,9 +103,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
 https://wallpapercave.com/wp/wp11733352.jpg
+https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
+https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg
 ```
 
 ### 3. Blackpink
@@ -133,7 +133,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_UeZ6lOGP.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_FpaPfgyS.jpg
 ```
 
 ### 4. Carbon
@@ -157,7 +157,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_kpfFXYh0.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_orWJdEAs.png
 ```
 
 ### 5. Cat
@@ -178,7 +178,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/kj.png
+Request failed: 429, message='Too Many Requests', url='https://api.thecatapi.com/v1/images/search'
 ```
 
 ### 6. Dog
@@ -199,7 +199,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/ba955266-6c4d-45b5-b93c-55b4f5e4051a.png
+https://random.dog/ef190011-920e-47cf-a197-9666a02749cb.jpg
 ```
 
 ### 7. Domain Search
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-Request failed: 504, message='Gateway Time-out', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
+Request failed: 524, message='', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
 ```
 
 ### 8. Fox
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=19
+https://randomfox.ca/?i=57
 ```
 
 ### 9. Gen Qr
@@ -271,7 +271,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/2eCQCCIN_qr.png
+/home/runner/work/TheApi/TheApi/downloads/baOVPjkw_qr.png
 ```
 
 ### 10. Get Advice
@@ -292,7 +292,7 @@ print(result)
 #### Expected Output
 
 ```text
-Keep it simple.
+The number of vampires in the average home, is directly proportional to the amount of garlic bread in the fridge.
 ```
 
 ### 11. Get Hindi Jokes
@@ -313,8 +313,7 @@ print(result)
 #### Expected Output
 
 ```text
-आज का ज्ञान   
-पेन खो जाये तो नया ले सकते हो मगर उसका ढक्कन खो जाये तो नया नहीं ले सकते इसलिये लाइफ में एक बात हमेशा याद रखना मित्रों कि पेन हमेशा टिचुक-टिचुक वाला ही लेना😆🤣😋😉 
+स्कूल जाने के टाइम पर जो पेट दर्द होता है ना उसका इलाज दुनिया के किसी डॉक्टर के पास नहीं है 😆🤣😋😉  
 ```
 
 ### 12. Get Jokes
@@ -338,7 +337,7 @@ print(result)
 #### Expected Output
 
 ```text
-Yo mama is so old, she knew Burger King while he was still a prince.
+Your momma is so fat, you need to switch to NTFS to store a picture of her.
 ```
 
 ### 13. Get Uselessfact
@@ -359,7 +358,7 @@ print(result)
 #### Expected Output
 
 ```text
-A dime has 118 ridges around the edge.
+Thomas Edison, acclaimed inventor of the light bulb, was afraid of the dark.
 ```
 
 ### 14. Get Word Definitions
@@ -442,7 +441,7 @@ print(result)
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
         "stargazers_count": 4796,
-        "forks_count": 2798
+        "forks_count": 2799
     },
     {
         "name": "PokemonGo-Bot",
@@ -450,7 +449,7 @@ print(result)
         "description": "The Pokemon Go Bot, baking with community.",
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
-        "stargazers_count": 3871,
+        "stargazers_count": 3872,
         "forks_count": 1543
     }
 ]
@@ -474,7 +473,7 @@ print(result)
 #### Expected Output
 
 ```text
-अनपढ़ सा मैं, दो लफ्ज़ लिखने लगा हूं, मोहब्बत से मैं घायल बहुत हुआ हूं।
+वो दुआ ही क्या जिसमें तुम्हारा इज़हार ना हो
 ```
 
 ### 17. Hug
@@ -503,8 +502,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Wotaku ni Koi wa Muzukashii",
-        "url": "https://nekos.best/api/v2/hug/47e30b67-b979-4dd5-9b06-720e5118f088.gif"
+        "anime_name": "Shinmai Maou no Testament",
+        "url": "https://nekos.best/api/v2/hug/77ddc5f7-d8b8-44e9-9aee-a88532c4b051.gif"
     }
 ]
 ```
@@ -527,7 +526,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/io1vcqx8x41e1.png?width=1080&crop=smart&auto=webp&s=625c76b2d3d87c6837c4fa4b8854f2b440121c34
+https://preview.redd.it/wvr5ddg5s61e1.gif?width=320&crop=smart&format=png8&s=3c3de36cfcf459b42e429aa43eec92936c9cf6fe
 ```
 
 ### 19. Neko
@@ -567,22 +566,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/7332820",
-            "artist_name": "\u767d\u4e9a\u7fd4\u5b50",
-            "source_url": "https://www.pixiv.net/en/artworks/90570937",
-            "url": "https://nekos.best/api/v2/neko/ccb65237-05b1-4efc-b5b1-00791a476659.png"
+            "artist_href": "https://www.pixiv.net/en/users/76103567",
+            "artist_name": "\u3059\u3041\u3057",
+            "source_url": "https://www.pixiv.net/en/artworks/100430398",
+            "url": "https://nekos.best/api/v2/neko/47a6dd34-5d57-4b50-8ec4-204c38996c22.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/35659926",
-            "artist_name": "\u3075\u3086\u306e\u3089",
-            "source_url": "https://www.pixiv.net/en/artworks/86663594",
-            "url": "https://nekos.best/api/v2/neko/7d56a269-8665-49f8-8354-4b36a575f67b.png"
+            "artist_href": "https://www.pixiv.net/en/users/70194544",
+            "artist_name": "Ham",
+            "source_url": "https://www.pixiv.net/en/artworks/103077987",
+            "url": "https://nekos.best/api/v2/neko/a85811fe-04e6-4079-a7eb-965e59c290aa.png"
         },
         {
-            "artist_href": "https://twitter.com/Cmf2I",
-            "artist_name": "\u3077\u308a\u3093\u304f\u308a",
-            "source_url": "https://twitter.com/Cmf2I/status/1579038590914670592",
-            "url": "https://nekos.best/api/v2/neko/40520652-0e2e-4e2c-aef7-d6f9f66d3e3a.png"
+            "artist_href": "https://www.pixiv.net/en/users/19095613",
+            "artist_name": "\u84bc\u30a6\u30b5\u30ae",
+            "source_url": "https://www.pixiv.net/en/artworks/80455651",
+            "url": "https://nekos.best/api/v2/neko/bfdb8bab-0e26-44c2-ae73-c635702c31ce.png"
         }
     ]
 }
@@ -658,9 +657,9 @@ print(result)
 #### Expected Output
 
 ```text
-Never find fault with the absent.
+There is nothing permanent except change.
 
-author - Alexander Pope
+author - Heraclitus
 ```
 
 ### 22. Random Word
@@ -681,7 +680,7 @@ print(result)
 #### Expected Output
 
 ```text
-brotherliness
+backhand
 ```
 
 ### 23. Riddle
@@ -703,8 +702,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I am thought to be everywhere, and I only have one rival. He hides within himself, and stays wherever I cannot reach.  Who am I? and Who is my rival??",
-    "answer": "I am the light...... He is the dark"
+    "riddle": "You and your three friends stay over night at a hotel it costs thirty to stay over each of you pay 10 bucks shortly after you get back the bellhop arrives and gives you 5 bucks becasue it was only 25 dollars you give the bellhop a tip of 2 bucks and your friends both a dollar   WHERE DID THE LAST DOLLAR GO !!!",
+    "answer": "I don't know"
 }
 ```
 
@@ -778,7 +777,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 1971,
+        "view_count": 1972,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -803,7 +802,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32635,
+        "view_count": 32636,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -904,11 +903,11 @@ print(result)
 #### Expected Output
 
 ```text
-gibbose
-panged
-chimneylike
-restiveness
-rhesus
+hoppings
+exploded
+prases
+chugs
+gelatinizing
 ```
 
 ### 28. Write
@@ -936,7 +935,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_P8FC8VQ2.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_5gyHhbuQ.jpg
 ```
 
 
