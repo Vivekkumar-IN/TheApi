@@ -27,25 +27,27 @@ Below, we’ll cover each function, providing examples and expected results so y
 | [7. Domain Search](#7-domain-search) | ❌
 | [8. Fox](#8-fox) | ✅
 | [9. Gen Qr](#9-gen-qr) | ✅
-| [10. Get Advice](#10-get-advice) | ✅
-| [11. Get Hindi Jokes](#11-get-hindi-jokes) | ✅
-| [12. Get Jokes](#12-get-jokes) | ✅
-| [13. Get Uselessfact](#13-get-uselessfact) | ✅
-| [14. Get Word Definitions](#14-get-word-definitions) | ✅
-| [15. Github Search](#15-github-search) | ✅
-| [16. Hindi Quote](#16-hindi-quote) | ✅
-| [17. Hug](#17-hug) | ✅
-| [18. Meme](#18-meme) | ✅
-| [19. Neko](#19-neko) | ✅
-| [20. Pypi](#20-pypi) | ✅
-| [21. Quote](#21-quote) | ✅
-| [22. Random Word](#22-random-word) | ✅
-| [23. Riddle](#23-riddle) | ✅
-| [24. Stackoverflow Search](#24-stackoverflow-search) | ✅
-| [25. Upload Image](#25-upload-image) | ✅
-| [26. Wikipedia](#26-wikipedia) | ✅
-| [27. Words](#27-words) | ✅
-| [28. Write](#28-write) | ✅
+| [10. Generate Pdf](#10-generate-pdf) | ❌
+| [11. Get Advice](#11-get-advice) | ✅
+| [12. Get Btc Value](#12-get-btc-value) | ✅
+| [13. Get Hindi Jokes](#13-get-hindi-jokes) | ✅
+| [14. Get Jokes](#14-get-jokes) | ✅
+| [15. Get Uselessfact](#15-get-uselessfact) | ✅
+| [16. Get Word Definitions](#16-get-word-definitions) | ✅
+| [17. Github Search](#17-github-search) | ✅
+| [18. Hindi Quote](#18-hindi-quote) | ✅
+| [19. Hug](#19-hug) | ✅
+| [20. Meme](#20-meme) | ✅
+| [21. Neko](#21-neko) | ✅
+| [22. Pypi](#22-pypi) | ✅
+| [23. Quote](#23-quote) | ✅
+| [24. Random Word](#24-random-word) | ✅
+| [25. Riddle](#25-riddle) | ✅
+| [26. Stackoverflow Search](#26-stackoverflow-search) | ✅
+| [27. Upload Image](#27-upload-image) | ✅
+| [28. Wikipedia](#28-wikipedia) | ✅
+| [29. Words](#29-words) | ✅
+| [30. Write](#30-write) | ✅
 
 
 ## 🎓 How to Use Each Function
@@ -69,14 +71,14 @@ print(result)
 
 ```json
 {
-    "content": "Kakarot! Dodge this next attack, if you can!.. But even if I miss you... THIS WHOLE PLANET'S GOING UP IN SMOOOOKE!",
+    "content": "If you\u2019re willing to do whatever it takes, I won\u2019t hold back.",
     "anime": {
-        "id": 912,
-        "name": "Dragon Ball"
+        "id": 346,
+        "name": "Hunter x Hunter"
     },
     "character": {
-        "id": 859,
-        "name": "Vegeta"
+        "id": 691,
+        "name": "Gon Freecss"
     }
 }
 ```
@@ -133,7 +135,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_xMqo0mnc.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_waptssww.jpg
 ```
 
 ### 4. Carbon
@@ -157,7 +159,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_wB3RO8GR.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_AtDomF5W.png
 ```
 
 ### 5. Cat
@@ -178,7 +180,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTc3MDkxNw.gif
+https://cdn2.thecatapi.com/images/5ot.jpg
 ```
 
 ### 6. Dog
@@ -199,7 +201,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/a4c0bd01-b45b-4d53-bd5f-3577b9126b50.mp4
+https://random.dog/eb6afea1-02d9-413e-babf-b75ff2426006.jpg
 ```
 
 ### 7. Domain Search
@@ -245,7 +247,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=55
+https://randomfox.ca/?i=52
 ```
 
 ### 9. Gen Qr
@@ -271,10 +273,40 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/sitHlvqi_qr.png
+/home/runner/work/TheApi/TheApi/downloads/2AT6gCst_qr.png
 ```
 
-### 10. Get Advice
+### 10. Generate Pdf
+
+**Description**:
+Generates a PDF from a URL or an HTML string and saves it to a file.
+
+**Args:**
+  - **source (str)**: The URL of the website (if `from_url=True`) or the HTML string (if `from_url=False`).
+  - **file_path (str, optional)**: The file path to save the generated PDF.
+    Defaults to "downloads/<random_str>_generated.pdf".
+  - **from_url (bool, optional)**: Whether to generate the PDF from a URL (True) or an HTML string (False).
+
+**Returns:**
+  - **FilePath**: The file path where the PDF was saved.
+
+**Raises:**
+  - **ValueError**: If `from_url` is True and `source` is not a valid URL.
+
+```python
+from TheApi import api
+
+result = await api.generate_pdf(source='Pokemon', file_path=None, from_url=True)
+print(result)
+```
+
+#### Expected Output
+
+```text
+Invalid URL provided: Pokemon
+```
+
+### 11. Get Advice
 
 **Description**:
 Fetches a random piece of advice.
@@ -292,10 +324,60 @@ print(result)
 #### Expected Output
 
 ```text
-Try using an old idea.
+Never buy cheap cling film.
 ```
 
-### 11. Get Hindi Jokes
+### 12. Get Btc Value
+
+**Description**:
+Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.
+
+**Args:**
+  - **currency (str, optional)**: The currency code (e.g., 'eur', 'usd', 'gbp').
+    If None, fetches BTC value for all currencies.
+
+**Returns:**
+  - **dict**: The response containing BTC value(s) for the specified currency or all currencies.
+
+**Raises:**
+  - **ValueError**: If the provided currency is invalid or the request fails.
+
+```python
+from TheApi import api
+
+result = await api.get_btc_value(currency=None)
+print(result)
+```
+
+#### Expected Output
+
+```json
+{
+    "EUR": {
+        "code": "EUR",
+        "description": "Euro",
+        "rate": "86,081.899",
+        "rate_float": 86081.8986,
+        "symbol": "&euro;"
+    },
+    "GBP": {
+        "code": "GBP",
+        "description": "British Pound Sterling",
+        "rate": "71,821.628",
+        "rate_float": 71821.6279,
+        "symbol": "&pound;"
+    },
+    "USD": {
+        "code": "USD",
+        "description": "United States Dollar",
+        "rate": "90,734.969",
+        "rate_float": 90734.9693,
+        "symbol": "&#36;"
+    }
+}
+```
+
+### 13. Get Hindi Jokes
 
 **Description**:
 Fetches a random Hindi joke.
@@ -313,10 +395,10 @@ print(result)
 #### Expected Output
 
 ```text
-रावण के बाद अगर किसी को अपनी शक्ति पर घमंड है तो वो है एयरटेल 4g वालों को अपने नेटवर्क पर 😆🤣😋😉
+कभी कभी खेल भी लिया करो मोहब्बत के मरीजों हर समय शायरी की दुकान लगाये रहते हो 😆🤣😋😉
 ```
 
-### 12. Get Jokes
+### 14. Get Jokes
 
 **Description**:
 Fetches a specified number of jokes.
@@ -337,10 +419,10 @@ print(result)
 #### Expected Output
 
 ```text
-Women are like KFC, once you're done with the breasts and thighs, you just have a greasy box to put your bone in.
+I have a fish that can breakdance! Only for 20 seconds though, and only once.
 ```
 
-### 13. Get Uselessfact
+### 15. Get Uselessfact
 
 **Description**:
 Fetches a random useless fact.
@@ -358,10 +440,10 @@ print(result)
 #### Expected Output
 
 ```text
-The Vatican city registered 0 births in 1983
+Donald Duck comics were banned from Finland because he doesn`t wear pants!
 ```
 
-### 14. Get Word Definitions
+### 16. Get Word Definitions
 
 **Description**:
 Fetch definitions for a word from the Dictionary API.
@@ -392,7 +474,7 @@ print(result)
 }
 ```
 
-### 15. Github Search
+### 17. Github Search
 
 **Description**:
 Searches GitHub for various types of content.
@@ -455,7 +537,7 @@ print(result)
 ]
 ```
 
-### 16. Hindi Quote
+### 18. Hindi Quote
 
 **Description**:
 Fetches a random Hindi quote.
@@ -473,10 +555,10 @@ print(result)
 #### Expected Output
 
 ```text
-आंसू वो खामोश दुआ है जो सिर्फ खुदा ही सुन सकता है।
+अधूरा हूं तुम्हारें बिना मैं, तो पूरे तुम भी नहीं; अगर हूं मैं सच, तो ख़्वाब तुम भी नहीं…
 ```
 
-### 17. Hug
+### 19. Hug
 
 **Description**:
 Fetches a specified number hug gif from the Nekos.Best API.
@@ -502,13 +584,13 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Clannad",
-        "url": "https://nekos.best/api/v2/hug/b979d171-f9ab-4eda-a002-6da7371ddd6b.gif"
+        "anime_name": "Princess Connect! Re:Dive",
+        "url": "https://nekos.best/api/v2/hug/7aadc12d-90e2-4e2e-933b-aa72313ccc10.gif"
     }
 ]
 ```
 
-### 18. Meme
+### 20. Meme
 
 **Description**:
 Fetches a random meme image URL.
@@ -526,10 +608,10 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/wp51fs06l41e1.png?width=640&crop=smart&auto=webp&s=d7b6fece83db2feb8e59a7a620ab120fda65badd
+https://preview.redd.it/o4xrt9dtjd1e1.png?width=1080&crop=smart&auto=webp&s=c9252329e428ff789881248638cda9d7c0ecceb6
 ```
 
-### 19. Neko
+### 21. Neko
 
 **Description**:
 Fetches a specified number of neko images or GIFs from the Nekos.Best API.
@@ -566,28 +648,28 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/57758604",
-            "artist_name": "blua",
-            "source_url": "https://www.pixiv.net/en/artworks/92563823",
-            "url": "https://nekos.best/api/v2/neko/c1c6fa2e-582a-4b8c-810c-77971f40d9dd.png"
+            "artist_href": "https://www.pixiv.net/en/users/6020696",
+            "artist_name": "WooGi",
+            "source_url": "https://www.pixiv.net/en/artworks/89387715",
+            "url": "https://nekos.best/api/v2/neko/3795a240-cc6b-45b1-abe1-26e61aa6a9c2.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/60073850",
-            "artist_name": "soybean",
-            "source_url": "https://www.pixiv.net/en/artworks/99064329",
-            "url": "https://nekos.best/api/v2/neko/d33acb8c-b73a-4071-a4a8-1eecf53d222c.png"
+            "artist_href": "https://www.pixiv.net/en/users/53797367",
+            "artist_name": "\u3068\u306a\u305b\u304c",
+            "source_url": "https://www.pixiv.net/en/artworks/87202777",
+            "url": "https://nekos.best/api/v2/neko/f7bb8dda-d579-473d-af3a-e0db7ed41f66.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/46271917",
-            "artist_name": "Cynthia",
-            "source_url": "https://www.pixiv.net/en/artworks/88148474",
-            "url": "https://nekos.best/api/v2/neko/93498f13-abee-4dc4-8003-00772ba11b00.png"
+            "artist_href": "https://www.pixiv.net/en/users/92891",
+            "artist_name": "\u3042\u3081\u3068\u3086\u304d",
+            "source_url": "https://www.pixiv.net/en/artworks/61449293",
+            "url": "https://nekos.best/api/v2/neko/d11f21da-9923-406a-af43-fadec48c9cdb.png"
         }
     ]
 }
 ```
 
-### 20. Pypi
+### 22. Pypi
 
 **Description**:
 Retrieves metadata information about a specified Python package from the PyPI API.
@@ -639,7 +721,7 @@ print(result)
 }
 ```
 
-### 21. Quote
+### 23. Quote
 
 **Description**:
 Fetches a random quote.
@@ -657,12 +739,12 @@ print(result)
 #### Expected Output
 
 ```text
-Friendship often ends in love, but love in friendship - never.
+Think for yourselves and let others enjoy the privilege to do so too.
 
-author - Albert Camus
+author - Voltaire
 ```
 
-### 22. Random Word
+### 24. Random Word
 
 **Description**:
 Fetches a random word.
@@ -680,10 +762,10 @@ print(result)
 #### Expected Output
 
 ```text
-bundts
+juiciest
 ```
 
-### 23. Riddle
+### 25. Riddle
 
 **Description**:
 Fetches a random riddle from the Riddles API.
@@ -702,12 +784,12 @@ print(result)
 
 ```json
 {
-    "riddle": "A man was found dead out in a field of snow. The only tracks that were left was a set of footprints between two parallel lines. Who should the police be looking for?",
-    "answer": "A man in a wheelchair"
+    "riddle": "I never was, am always to be, No one ever saw me, nor ever will And yet I am the confidence of all To live and breathe on this terrestrial ball.",
+    "answer": "I am tomorrow - your future"
 }
 ```
 
-### 24. Stackoverflow Search
+### 26. Stackoverflow Search
 
 **Description**:
 Searches Stack Overflow for questions based on a query, returning results sorted by relevance or another specified criteria.
@@ -816,7 +898,7 @@ print(result)
 ]
 ```
 
-### 25. Upload Image
+### 27. Upload Image
 
 **Description**:
 Uploads an image to https://envs.sh.
@@ -846,7 +928,7 @@ print(result)
 You will get a URL
 ```
 
-### 26. Wikipedia
+### 28. Wikipedia
 
 **Description**:
 Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.
@@ -876,13 +958,13 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
 ```
 
-### 27. Words
+### 29. Words
 
 **Description**:
 Fetches a specified number of random words.
@@ -903,14 +985,14 @@ print(result)
 #### Expected Output
 
 ```text
-gooseherds
-footstool
-escars
-principle
-spelunk
+stepdame
+psychologists
+scalenus
+bourrides
+uncaking
 ```
 
-### 28. Write
+### 30. Write
 
 **Description**:
 Creates an image with text written on it, using a predefined template and font, and uploads the image after generation.
@@ -935,7 +1017,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_fXvLXHgP.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_DxjMyLFr.jpg
 ```
 
 
