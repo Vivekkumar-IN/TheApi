@@ -154,7 +154,7 @@ class TheApi:
             ValueError: If the provided currency is invalid or the request fails.
         """
         valid_currencies = {"eur", "usd", "gbp"}
-        url = f"{self.base_urls["btc_value"]}/get_btc_value" if not currency else f"{self.base_urls["btc_value"]}/get_btc_{currency.lower()}"
+        url = f"{self.base_urls['btc_value']}/get_btc_value" if not currency else f"{self.base_urls['btc_value']}/get_btc_{currency.lower()}"
 
         if currency and currency.lower() not in valid_currencies:
             raise ValueError(f"Invalid currency provided: {currency}. Valid options are: {valid_currencies}")
