@@ -851,7 +851,6 @@ class TheApi:
         final_img.save(file_path, format="JPEG")
 
         return FilePath(realpath(file_path))
-            
 
     async def upload_image(
         self, file_path: Union[str, bytes, BytesIO]
