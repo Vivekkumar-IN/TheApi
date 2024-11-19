@@ -63,29 +63,33 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [6. Cat](#6-cat) | ✅
 | [7. Dog](#7-dog) | ✅
 | [8. Domain Search](#8-domain-search) | ✅
-| [9. Fox](#9-fox) | ✅
-| [10. Gen Qr](#10-gen-qr) | ✅
-| [11. Generate Pdf](#11-generate-pdf) | ✅
-| [12. Get Advice](#12-get-advice) | ✅
-| [13. Get Btc Value](#13-get-btc-value) | ✅
-| [14. Get Hindi Jokes](#14-get-hindi-jokes) | ❌
-| [15. Get Jokes](#15-get-jokes) | ✅
-| [16. Get Uselessfact](#16-get-uselessfact) | ✅
-| [17. Get Word Definitions](#17-get-word-definitions) | ✅
-| [18. Github Search](#18-github-search) | ✅
-| [19. Hindi Quote](#19-hindi-quote) | ✅
-| [20. Hug](#20-hug) | ✅
-| [21. Meme](#21-meme) | ✅
-| [22. Neko](#22-neko) | ✅
-| [23. Pypi](#23-pypi) | ✅
-| [24. Quote](#24-quote) | ✅
-| [25. Random Word](#25-random-word) | ✅
-| [26. Riddle](#26-riddle) | ✅
-| [27. Stackoverflow Search](#27-stackoverflow-search) | ✅
-| [28. Upload Image](#28-upload-image) | ✅
-| [29. Wikipedia](#29-wikipedia) | ✅
-| [30. Words](#30-words) | ✅
-| [31. Write](#31-write) | ✅
+| [9. Fakerapi](#9-fakerapi) | ✅
+| [10. Fox](#10-fox) | ✅
+| [11. Gen Qr](#11-gen-qr) | ✅
+| [12. Generate Pdf](#12-generate-pdf) | ✅
+| [13. Get Advice](#13-get-advice) | ✅
+| [14. Get Btc Value](#14-get-btc-value) | ✅
+| [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
+| [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
+| [17. Get Fake Images](#17-get-fake-images) | ✅
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
+| [19. Get Jokes](#19-get-jokes) | ✅
+| [20. Get Uselessfact](#20-get-uselessfact) | ✅
+| [21. Get Word Definitions](#21-get-word-definitions) | ✅
+| [22. Github Search](#22-github-search) | ✅
+| [23. Hindi Quote](#23-hindi-quote) | ✅
+| [24. Hug](#24-hug) | ✅
+| [25. Meme](#25-meme) | ✅
+| [26. Neko](#26-neko) | ✅
+| [27. Pypi](#27-pypi) | ✅
+| [28. Quote](#28-quote) | ✅
+| [29. Random Word](#29-random-word) | ✅
+| [30. Riddle](#30-riddle) | ✅
+| [31. Stackoverflow Search](#31-stackoverflow-search) | ✅
+| [32. Upload Image](#32-upload-image) | ✅
+| [33. Wikipedia](#33-wikipedia) | ✅
+| [34. Words](#34-words) | ✅
+| [35. Write](#35-write) | ✅
 
 
 ## 🎓 How to Use Each Function
@@ -109,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "Why are you acting like you're the only one hurting when you pushed him away?",
+    "content": "What exactly is the end? The end. The end. The end. I've seen the end over and over. What is the end?",
     "anime": {
-        "id": 380,
-        "name": "Aoharu x Kikanjuu"
+        "id": 307,
+        "name": "Monster"
     },
     "character": {
-        "id": 770,
-        "name": "Yukimura Tooru"
+        "id": 1002,
+        "name": "Johann Liebert"
     }
 }
 ```
@@ -140,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "simon",
+    "file_name": "gerard-mathew",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/simon.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/gerard.jpg"
 }
 ```
 
@@ -168,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pokémon_logo.svg/1200px-International_Pokémon_logo.svg.png
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg
+http://www.animextremist.com/imagenes/pokemon/pokemon97.jpg
 ```
 
 ### 4. Blackpink
@@ -196,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_eCpFUTZr.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_kiy7fyFZ.jpg
 ```
 
 ### 5. Carbon
@@ -220,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_yZAFLJ5c.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_jxlKnkZm.png
 ```
 
 ### 6. Cat
@@ -241,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/bcm.jpg
+https://cdn2.thecatapi.com/images/MTg3NjA1MA.jpg
 ```
 
 ### 7. Dog
@@ -262,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/17f8150e-12c6-4ac3-9e45-38e569359016.jpg
+https://random.dog/7b3154ef-18ea-42de-8c35-e8cd85ba9965.jpg
 ```
 
 ### 8. Domain Search
@@ -1048,12 +1052,41 @@ print(result)
         }
     ],
     "total": 356,
-    "time": "33",
+    "time": "28",
     "next_page": null
 }
 ```
 
-### 9. Fox
+### 9. Fakerapi
+
+**Description**:
+Fetch data from the FakerAPI using aiohttp.
+
+**Args:**
+  - **endpoint (str)**: The resource endpoint. Valid endpoints are:
+    - companies
+    - addresses
+    - books
+    - CreditCards
+    - images
+    - persons
+    - places
+    - products
+    - texts
+    - users
+
+**Description**:
+quantity (int, optional): Number of rows to fetch (default: 3, max: 1000). locale (str, optional): Locale for the data (default: 'en_US').  See Valid locale [from here](https://github.com/Vivekkumar-IN/TheApi/blob/main/src%2FTheApi%2Fapi.py#L191-L200) **kwargs: Additional parameters to include in the request.
+
+**Raises:**
+  - **ValueError**: If the locale is invalid, the endpoint is invalid, or the quantity
+    is outside the allowed range.
+
+**Returns:**
+  - **dict**: Response data from the API.
+
+
+### 10. Fox
 
 **Description**:
 Fetches a random fox image URL.
@@ -1071,10 +1104,10 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=81
+https://randomfox.ca/?i=52
 ```
 
-### 10. Gen Qr
+### 11. Gen Qr
 
 **Description**:
 Generates a QR code and saves it to the specified file path.
@@ -1097,10 +1130,10 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/TTf0btDN_qr.png
+/home/runner/work/TheApi/TheApi/downloads/8JeHPRdH_qr.png
 ```
 
-### 11. Generate Pdf
+### 12. Generate Pdf
 
 **Description**:
 Generates a PDF from a URL or an HTML string and saves it to a file.
@@ -1118,7 +1151,7 @@ Generates a PDF from a URL or an HTML string and saves it to a file.
   - **ValueError**: If `from_url` is True and `source` is not a valid URL.
 
 
-### 12. Get Advice
+### 13. Get Advice
 
 **Description**:
 Fetches a random piece of advice.
@@ -1136,10 +1169,10 @@ print(result)
 #### Expected Output
 
 ```text
-If you don't want something to be public, don't post it on the Internet.
+One of the top five regrets people have is that they didn't stay in contact with friends.
 ```
 
-### 13. Get Btc Value
+### 14. Get Btc Value
 
 **Description**:
 Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.
@@ -1168,28 +1201,153 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "86,089.409",
-        "rate_float": 86089.4093,
+        "rate": "87,573.387",
+        "rate_float": 87573.3869,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "71,936.53",
-        "rate_float": 71936.53,
+        "rate": "73,207.289",
+        "rate_float": 73207.2894,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "91,195.345",
-        "rate_float": 91195.3454,
+        "rate": "92,495.928",
+        "rate_float": 92495.9276,
         "symbol": "&#36;"
     }
 }
 ```
 
-### 14. Get Hindi Jokes
+### 15. Get Fake Addresses
+
+**Description**:
+Fetch fake address data from the FakerAPI.
+
+**Args:**
+  - **quantity (int, optional)**: Number of address entries to fetch (default: 1).
+  - **locale (str, optional)**: Locale for the address data (default: "en_US").
+
+**Returns:**
+  - **dict**: Response data from the API.
+
+```python
+from TheApi import api
+
+result = await api.get_fake_addresses(quantity=1, locale='en_US')
+print(result)
+```
+
+#### Expected Output
+
+```json
+{
+    "status": "OK",
+    "code": 200,
+    "locale": "en_US",
+    "seed": null,
+    "total": 1,
+    "data": [
+        {
+            "id": 1,
+            "street": "39678 Kling Island Suite 439",
+            "streetName": "Alison Islands",
+            "buildingNumber": "53169",
+            "city": "Lake Vincenza",
+            "zipcode": "75852",
+            "country": "New Zealand",
+            "country_code": "NZ",
+            "latitude": 30.960513,
+            "longitude": 25.889712
+        }
+    ]
+}
+```
+
+### 16. Get Fake Credit Cards
+
+**Description**:
+Fetch fake credit card data from the FakerAPI.
+
+**Args:**
+  - **locale (str, optional)**: Locale for the credit card data (default: "en_US").
+  - **amount (int, optional)**: Number of credit card entries to fetch (default: 1).
+
+**Returns:**
+  - **dict**: Response data from the API.
+
+```python
+from TheApi import api
+
+result = await api.get_fake_credit_cards(locale='en_US', quantity=1)
+print(result)
+```
+
+#### Expected Output
+
+```json
+{
+    "status": "OK",
+    "code": 200,
+    "locale": "en_US",
+    "seed": null,
+    "total": 1,
+    "data": [
+        {
+            "type": "MasterCard",
+            "number": "2646711941172528",
+            "expiration": "04/26",
+            "owner": "Eloisa Simonis"
+        }
+    ]
+}
+```
+
+### 17. Get Fake Images
+
+**Description**:
+Fetch fake image data from the FakerAPI.
+
+**Args:**
+  - **quantity (int, optional)**: Number of images to fetch (default: 1).
+  - **locale (str, optional)**: Locale for the images (default: "en_US").
+  - **type (str, optional)**: Type of image (e.g., 'any', 'animals', 'business', etc.; default: "any").
+  - **width (int, optional)**: Width of the images (default: 640).
+  - **height (int, optional)**: Height of the images (default: 480).
+
+**Returns:**
+  - **dict**: Response data from the API.
+
+```python
+from TheApi import api
+
+result = await api.get_fake_images(quantity=1, locale='en_US', type='any', width=640, height=480)
+print(result)
+```
+
+#### Expected Output
+
+```json
+{
+    "status": "OK",
+    "code": 200,
+    "locale": "en_US",
+    "seed": null,
+    "total": 1,
+    "data": [
+        {
+            "title": "Ut reiciendis ea nulla.",
+            "description": "Et laboriosam repellat et qui rerum. At qui quia nihil sint quibusdam praesentium voluptatem. Sunt atque tempora doloribus impedit et necessitatibus.",
+            "url": "https://picsum.photos/640/480"
+        }
+    ]
+}
+```
+
+### 18. Get Hindi Jokes
 
 **Description**:
 Fetches a random Hindi joke.
@@ -1207,10 +1365,10 @@ print(result)
 #### Expected Output
 
 ```text
-'status'
+मोहब्बत हो या डाउनलोडिंग अधूरी रह जाये तो दोनों ही तकलीफ देते है 😆🤣😋😉 
 ```
 
-### 15. Get Jokes
+### 19. Get Jokes
 
 **Description**:
 Fetches a specified number of jokes.
@@ -1231,10 +1389,10 @@ print(result)
 #### Expected Output
 
 ```text
-Java is like Alzheimer's, it starts off slow, but eventually, your memory is gone.
+Hey girl are you a school? Because I want to shoot some kids up inside of you.
 ```
 
-### 16. Get Uselessfact
+### 20. Get Uselessfact
 
 **Description**:
 Fetches a random useless fact.
@@ -1252,10 +1410,10 @@ print(result)
 #### Expected Output
 
 ```text
-Each month, there is at least one report of UFOs from each province of Canada.
+Each king in a deck of playing cards represents a great king from history. Spades - King David, Clubs - Alexander the Great, Hearts - Charlemagne, and Diamonds - Julius Caesar.
 ```
 
-### 17. Get Word Definitions
+### 21. Get Word Definitions
 
 **Description**:
 Fetch definitions for a word from the Dictionary API.
@@ -1286,7 +1444,7 @@ print(result)
 }
 ```
 
-### 18. Github Search
+### 22. Github Search
 
 **Description**:
 Searches GitHub for various types of content.
@@ -1334,7 +1492,7 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4797,
+        "stargazers_count": 4799,
         "forks_count": 2799
     },
     {
@@ -1343,13 +1501,13 @@ print(result)
         "description": "The Pokemon Go Bot, baking with community.",
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
-        "stargazers_count": 3872,
+        "stargazers_count": 3873,
         "forks_count": 1543
     }
 ]
 ```
 
-### 19. Hindi Quote
+### 23. Hindi Quote
 
 **Description**:
 Fetches a random Hindi quote.
@@ -1367,10 +1525,10 @@ print(result)
 #### Expected Output
 
 ```text
-शक से भी अक्सर ख़त्म हो जाते है कुछ रिश्ते, कसूर हर बार गलतियों का नहीं होता।
+हिम्मत इतनी थी समुन्दर भी पार कर सकते थे, मजबूर इतने हुए कि दो बूंद आँसूओं ने डुबो दिया।
 ```
 
-### 20. Hug
+### 24. Hug
 
 **Description**:
 Fetches a specified number hug gif from the Nekos.Best API.
@@ -1396,13 +1554,13 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Darling in the Franxx",
-        "url": "https://nekos.best/api/v2/hug/f6861773-08f0-4410-82cd-431711b2e2de.gif"
+        "anime_name": "Akatsuki no Yona: The Girl Standing in the Blush of Dawn",
+        "url": "https://nekos.best/api/v2/hug/2838c749-cbf0-407c-b727-ceb1ca517463.gif"
     }
 ]
 ```
 
-### 21. Meme
+### 25. Meme
 
 **Description**:
 Fetches a random meme image URL.
@@ -1420,10 +1578,10 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/d03f7izl5p1e1.png?width=640&crop=smart&auto=webp&s=a6c2eeec8b4a1b72cd2a7fc3cc31f4add86cefcd
+https://preview.redd.it/g4kmmgja9u1e1.png?width=1080&crop=smart&auto=webp&s=ca51183f9c5da176afafcd3bf6301f9d6317e05e
 ```
 
-### 22. Neko
+### 26. Neko
 
 **Description**:
 Fetches a specified number of neko images or GIFs from the Nekos.Best API.
@@ -1460,28 +1618,28 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/907371",
-            "artist_name": "\u661f\u7a7a\u3081\u3050",
-            "source_url": "https://www.pixiv.net/en/artworks/91709775",
-            "url": "https://nekos.best/api/v2/neko/87921cb0-9825-42a4-9758-2370817ce410.png"
+            "artist_href": "https://www.pixiv.net/en/users/64601982",
+            "artist_name": "\u693f\u76ee\u30b8\u30ed",
+            "source_url": "https://www.pixiv.net/en/artworks/87387963",
+            "url": "https://nekos.best/api/v2/neko/abea24f2-d2b6-4bee-9d02-5f4cb1361b86.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/41712772",
-            "artist_name": "Aihara.",
-            "source_url": "https://www.pixiv.net/en/artworks/96664120",
-            "url": "https://nekos.best/api/v2/neko/8533b10d-1445-4c3a-8108-1850e1c104f5.png"
+            "artist_href": "https://www.pixiv.net/en/users/7594805",
+            "artist_name": "AIZAWA",
+            "source_url": "https://www.pixiv.net/en/artworks/86995192",
+            "url": "https://nekos.best/api/v2/neko/539a4943-14ad-4276-a48c-78d1f9848608.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/16240887",
-            "artist_name": "ION",
-            "source_url": "https://www.pixiv.net/en/artworks/91211717",
-            "url": "https://nekos.best/api/v2/neko/f3e0eb6e-1bd3-46f4-b201-97e06ab06e84.png"
+            "artist_href": "https://www.pixiv.net/en/users/35178230",
+            "artist_name": "Tor AI",
+            "source_url": "https://www.pixiv.net/en/artworks/81345637",
+            "url": "https://nekos.best/api/v2/neko/67d4bca1-f727-4c6b-86c9-b855978ebca8.png"
         }
     ]
 }
 ```
 
-### 23. Pypi
+### 27. Pypi
 
 **Description**:
 Retrieves metadata information about a specified Python package from the PyPI API.
@@ -1533,7 +1691,7 @@ print(result)
 }
 ```
 
-### 24. Quote
+### 28. Quote
 
 **Description**:
 Fetches a random quote.
@@ -1551,12 +1709,12 @@ print(result)
 #### Expected Output
 
 ```text
-Change in all things is sweet.
+Maxim for life: You get treated in life the way you teach people to treat you.
 
-author - Aristotle
+author - Wayne Dyer
 ```
 
-### 25. Random Word
+### 29. Random Word
 
 **Description**:
 Fetches a random word.
@@ -1574,10 +1732,10 @@ print(result)
 #### Expected Output
 
 ```text
-curettement
+thruputs
 ```
 
-### 26. Riddle
+### 30. Riddle
 
 **Description**:
 Fetches a random riddle from the Riddles API.
@@ -1596,12 +1754,12 @@ print(result)
 
 ```json
 {
-    "riddle": "Weight in my belly, Trees on my back. Nails in my ribs, Feet I do lack.",
-    "answer": "I am a ship"
+    "riddle": "John was very tired after a long day of work. He went to bed at 10 p.m., wound his alarm clock and set it for noon the next day. Since John fell asleep almost immediately, how many hours of sleep did he get before the alarm woke him?",
+    "answer": "Two hours. Wind-up clocks can't be set more than 12 hours in advance"
 }
 ```
 
-### 27. Stackoverflow Search
+### 31. Stackoverflow Search
 
 **Description**:
 Searches Stack Overflow for questions based on a query, returning results sorted by relevance or another specified criteria.
@@ -1696,7 +1854,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32640,
+        "view_count": 32641,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1710,7 +1868,7 @@ print(result)
 ]
 ```
 
-### 28. Upload Image
+### 32. Upload Image
 
 **Description**:
 Uploads an image to https://envs.sh.
@@ -1728,7 +1886,7 @@ Uploads an image to https://envs.sh.
     or the upload request fails.
 
 
-### 29. Wikipedia
+### 33. Wikipedia
 
 **Description**:
 Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.
@@ -1764,7 +1922,7 @@ print(result)
 }
 ```
 
-### 30. Words
+### 34. Words
 
 **Description**:
 Fetches a specified number of random words.
@@ -1785,11 +1943,11 @@ print(result)
 #### Expected Output
 
 ```text
-bethank
-condemning
+reevaluations
+antinode
 ```
 
-### 31. Write
+### 35. Write
 
 **Description**:
 Creates an image with text written on it, using a predefined template and font, and uploads the image after generation.
@@ -1814,7 +1972,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_cucG6QSE.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_JccO4bDQ.jpg
 ```
 
 
