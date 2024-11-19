@@ -27,6 +27,7 @@ class TheApi:
             "cat": "https://api.thecatapi.com/v1/images/search",
             "dog": "https://random.dog/woof.json",
             "domain": "https://api.domainsdb.info/v1/domains/search?domain={domain}&zone={zone}",
+            "faker": "https://fakerapi.it/api/v2/",
             "fox": "https://randomfox.ca/floof/",
             "font": "https://github.com/google/fonts/raw/main/ofl/poetsenone/PoetsenOne-Regular.ttf",
             "hindi_jokes": "https://hindi-jokes-api.onrender.com/jokes?api_key=93eeccc9d663115eba73839b3cd9",
@@ -140,6 +141,142 @@ class TheApi:
         response = await self._make_request(self.base_urls["animechan"])
         return response["data"]
 
+    
+    async def fakerapi(
+        self,
+        endpoint: str,
+        quantity: int = 3,
+        locale: str = "en_US",
+        **kwargs
+    ): # gh-actions Don't Add it's example, ignore it.
+        """
+        Fetch data from the FakerAPI using aiohttp.
+
+        Args:
+            endpoint (str): The resource endpoint. Valid endpoints are:
+                - companies
+                - addresses
+                - books
+                - CreditCards
+                - images
+                - persons
+                - places
+                - products
+                - texts
+                - users
+        
+            quantity (int, optional): Number of rows to fetch (default: 3, max: 1000).
+            locale (str, optional): Locale for the data (default: 'en_US').  See Valid locale [from here](https://github.com/Vivekkumar-IN/TheApi/blob/main/src%2FTheApi%2Fapi.py#L191-L200)
+            **kwargs: Additional parameters to include in the request.
+
+        Raises:
+            ValueError: If the locale is invalid, the endpoint is invalid, or the quantity
+                is outside the allowed range.
+
+        Returns:
+            dict: Response data from the API.
+        """
+        valid_endpoints = [
+            "companies",
+            "addresses",
+            "books",
+            "CreditCards",
+            "images",
+            "persons",
+            "places",
+            "products",
+            "texts",
+            "users",
+        ]
+        valid_locales = [
+            "ar_EG", "ar_JO", "ar_SA", "at_AT", "bg_BG", "bn_BD", "cs_CZ", "da_DK", "de_AT", "de_CH",
+            "de_DE", "el_CY", "el_GR", "en_AU", "en_CA", "en_GB", "en_HK", "en_IN", "en_NG", "en_NZ",
+            "en_PH", "en_SG", "en_UG", "en_US", "en_ZA", "es_AR", "es_ES", "es_PE", "es_VE", "et_EE",
+            "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_CH", "fr_FR", "he_IL", "hr_HR", "hu_HU", "hy_AM",
+            "id_ID", "is_IS", "it_CH", "it_IT", "ja_JP", "ka_GE", "kk_KZ", "ko_KR", "lt_LT", "lv_LV",
+            "me_ME", "mn_MN", "ms_MY", "nb_NO", "ne_NP", "nl_BE", "nl_NL", "pl_PL", "pt_BR", "pt_PT",
+            "ro_MD", "ro_RO", "ru_RU", "sk_SK", "sl_SI", "sr_Cyrl_RS", "sr_Latn_RS", "sr_RS", "sv_SE",
+            "th_TH", "tr_TR", "uk_UA", "vi_VN", "zh_CN", "zh_TW"
+        ]
+        
+        if locale not in valid_locales:
+            raise ValueError(
+                f"Invalid locale '{locale}'. Must be one of {' '.join(valid_locales)}"
+            )
+        if endpoint not in valid_endpoints:
+            raise ValueError(
+                f"Invalid endpoint '{endpoint}'. Must be one of {' '.join(valid_endpoints)}"
+            )
+        if quantity < 1 or quantity > 1000:
+            raise ValueError("Quantity must be between 1 and 1000")
+
+        params = {
+            "_quantity": quantity,
+            "_locale": locale,
+            **kwargs,
+        }
+        url = f"{self.base_urls['faker']}{endpoint}"
+
+        result = await self._make_request(url, params=params)
+        return result
+
+
+    async def get_fake_images(
+        self, 
+        quantity: int = 1, 
+        locale: str = "en_US", 
+        type: str = "any", 
+        width: int = 640, 
+        height: int = 480, 
+    ):
+        """
+        Fetch fake image data from the FakerAPI.
+
+        Args:
+            quantity (int, optional): Number of images to fetch (default: 1).
+            locale (str, optional): Locale for the images (default: "en_US").
+            type (str, optional): Type of image (e.g., 'any', 'animals', 'business', etc.; default: "any").
+            width (int, optional): Width of the images (default: 640).
+            height (int, optional): Height of the images (default: 480).
+
+        Returns:
+            dict: Response data from the API.
+        """
+        return await self.fakerapi(
+            "images",
+            quantity=quantity,
+            locale=locale,
+            _type=type,
+            _width=width,
+            _height=height,
+        )
+        
+    async def get_fake_credit_cards(self, locale: str = "en_US", quantity: int = 1):
+        """
+        Fetch fake credit card data from the FakerAPI.
+
+        Args:
+            locale (str, optional): Locale for the credit card data (default: "en_US").
+            amount (int, optional): Number of credit card entries to fetch (default: 1).
+
+        Returns:
+            dict: Response data from the API.
+        """
+        return await self.fakerapi("CreditCards", quantity=quantity, locale=locale)
+        
+    async def get_fake_addresses(self, quantity: int = 1, locale: str = "en_US"):
+        """
+        Fetch fake address data from the FakerAPI.
+
+        Args:
+            quantity (int, optional): Number of address entries to fetch (default: 1).
+            locale (str, optional): Locale for the address data (default: "en_US").
+
+        Returns:
+            dict: Response data from the API.
+        """
+        return await self.fakerapi("addresses", quantity=quantity, locale=locale)
+    
     async def get_advice(self):
         """
         Fetches a random piece of advice.
