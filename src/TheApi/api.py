@@ -161,8 +161,7 @@ class TheApi:
                 - users
 
             quantity (int, optional): Number of rows to fetch (default: 3, max: 1000).
-            locale (str, optional): Locale for the data (default: 'en_US').  See Valid locale [from here](https://github.com/Vivekkumar-IN/TheApi/blob/main/src%2FTheApi%2Fapi.py#L191-L200)
-            **kwargs: Additional parameters to include in the request.
+            locale (str, optional): Locale for the data (default: 'en_US').  See Valid locale [ From Here ](https://github.com/Vivekkumar-IN/TheApi/blob/main/src%2FTheApi%2Fapi.py#L185-L261)
 
         Raises:
             ValueError: If the locale is invalid, the endpoint is invalid, or the quantity
