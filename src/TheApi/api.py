@@ -141,14 +141,9 @@ class TheApi:
         response = await self._make_request(self.base_urls["animechan"])
         return response["data"]
 
-    
     async def fakerapi(
-        self,
-        endpoint: str,
-        quantity: int = 3,
-        locale: str = "en_US",
-        **kwargs
-    ): # gh-actions Don't Add it's example, ignore it.
+        self, endpoint: str, quantity: int = 3, locale: str = "en_US", **kwargs
+    ):  # gh-actions Don't Add it's example, ignore it.
         """
         Fetch data from the FakerAPI using aiohttp.
 
@@ -164,7 +159,7 @@ class TheApi:
                 - products
                 - texts
                 - users
-        
+
             quantity (int, optional): Number of rows to fetch (default: 3, max: 1000).
             locale (str, optional): Locale for the data (default: 'en_US').  See Valid locale [from here](https://github.com/Vivekkumar-IN/TheApi/blob/main/src%2FTheApi%2Fapi.py#L191-L200)
             **kwargs: Additional parameters to include in the request.
@@ -189,16 +184,83 @@ class TheApi:
             "users",
         ]
         valid_locales = [
-            "ar_EG", "ar_JO", "ar_SA", "at_AT", "bg_BG", "bn_BD", "cs_CZ", "da_DK", "de_AT", "de_CH",
-            "de_DE", "el_CY", "el_GR", "en_AU", "en_CA", "en_GB", "en_HK", "en_IN", "en_NG", "en_NZ",
-            "en_PH", "en_SG", "en_UG", "en_US", "en_ZA", "es_AR", "es_ES", "es_PE", "es_VE", "et_EE",
-            "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_CH", "fr_FR", "he_IL", "hr_HR", "hu_HU", "hy_AM",
-            "id_ID", "is_IS", "it_CH", "it_IT", "ja_JP", "ka_GE", "kk_KZ", "ko_KR", "lt_LT", "lv_LV",
-            "me_ME", "mn_MN", "ms_MY", "nb_NO", "ne_NP", "nl_BE", "nl_NL", "pl_PL", "pt_BR", "pt_PT",
-            "ro_MD", "ro_RO", "ru_RU", "sk_SK", "sl_SI", "sr_Cyrl_RS", "sr_Latn_RS", "sr_RS", "sv_SE",
-            "th_TH", "tr_TR", "uk_UA", "vi_VN", "zh_CN", "zh_TW"
+            "ar_EG",
+            "ar_JO",
+            "ar_SA",
+            "at_AT",
+            "bg_BG",
+            "bn_BD",
+            "cs_CZ",
+            "da_DK",
+            "de_AT",
+            "de_CH",
+            "de_DE",
+            "el_CY",
+            "el_GR",
+            "en_AU",
+            "en_CA",
+            "en_GB",
+            "en_HK",
+            "en_IN",
+            "en_NG",
+            "en_NZ",
+            "en_PH",
+            "en_SG",
+            "en_UG",
+            "en_US",
+            "en_ZA",
+            "es_AR",
+            "es_ES",
+            "es_PE",
+            "es_VE",
+            "et_EE",
+            "fa_IR",
+            "fi_FI",
+            "fr_BE",
+            "fr_CA",
+            "fr_CH",
+            "fr_FR",
+            "he_IL",
+            "hr_HR",
+            "hu_HU",
+            "hy_AM",
+            "id_ID",
+            "is_IS",
+            "it_CH",
+            "it_IT",
+            "ja_JP",
+            "ka_GE",
+            "kk_KZ",
+            "ko_KR",
+            "lt_LT",
+            "lv_LV",
+            "me_ME",
+            "mn_MN",
+            "ms_MY",
+            "nb_NO",
+            "ne_NP",
+            "nl_BE",
+            "nl_NL",
+            "pl_PL",
+            "pt_BR",
+            "pt_PT",
+            "ro_MD",
+            "ro_RO",
+            "ru_RU",
+            "sk_SK",
+            "sl_SI",
+            "sr_Cyrl_RS",
+            "sr_Latn_RS",
+            "sr_RS",
+            "sv_SE",
+            "th_TH",
+            "tr_TR",
+            "uk_UA",
+            "vi_VN",
+            "zh_CN",
+            "zh_TW",
         ]
-        
+
         if locale not in valid_locales:
             raise ValueError(
                 f"Invalid locale '{locale}'. Must be one of {' '.join(valid_locales)}"
@@ -220,14 +282,13 @@ class TheApi:
         result = await self._make_request(url, params=params)
         return result
 
-
     async def get_fake_images(
-        self, 
-        quantity: int = 1, 
-        locale: str = "en_US", 
-        type: str = "any", 
-        width: int = 640, 
-        height: int = 480, 
+        self,
+        quantity: int = 1,
+        locale: str = "en_US",
+        type: str = "any",
+        width: int = 640,
+        height: int = 480,
     ):
         """
         Fetch fake image data from the FakerAPI.
@@ -250,7 +311,7 @@ class TheApi:
             _width=width,
             _height=height,
         )
-        
+
     async def get_fake_credit_cards(self, locale: str = "en_US", quantity: int = 1):
         """
         Fetch fake credit card data from the FakerAPI.
@@ -263,7 +324,7 @@ class TheApi:
             dict: Response data from the API.
         """
         return await self.fakerapi("CreditCards", quantity=quantity, locale=locale)
-        
+
     async def get_fake_addresses(self, quantity: int = 1, locale: str = "en_US"):
         """
         Fetch fake address data from the FakerAPI.
@@ -276,7 +337,7 @@ class TheApi:
             dict: Response data from the API.
         """
         return await self.fakerapi("addresses", quantity=quantity, locale=locale)
-    
+
     async def get_advice(self):
         """
         Fetches a random piece of advice.
