@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "What exactly is the end? The end. The end. The end. I've seen the end over and over. What is the end?",
+    "content": "No matter how hard you practice, \"someday\" and \"maybe\" aren't good enough. I need to know if you have ambitious goals and the will to accomplish them.",
     "anime": {
-        "id": 307,
-        "name": "Monster"
+        "id": 284,
+        "name": "Kuroko No Basket"
     },
     "character": {
-        "id": 1002,
-        "name": "Johann Liebert"
+        "id": 1485,
+        "name": "Kuroko No Basket"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "gerard-mathew",
+    "file_name": "eva",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/gerard.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/eva.jpg"
 }
 ```
 
@@ -172,8 +172,8 @@ print(result)
 #### Expected Output
 
 ```text
-http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
 http://www.animextremist.com/imagenes/pokemon/pokemon97.jpg
 ```
 
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_kiy7fyFZ.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_KG6oVAPZ.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_jxlKnkZm.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_8Po6kDNd.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTg3NjA1MA.jpg
+https://cdn2.thecatapi.com/images/a15.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/7b3154ef-18ea-42de-8c35-e8cd85ba9965.jpg
+https://random.dog/6428de50-b94b-4b1a-9cab-63495e637daa.jpg
 ```
 
 ### 8. Domain Search
@@ -1052,7 +1052,7 @@ print(result)
         }
     ],
     "total": 356,
-    "time": "28",
+    "time": "18",
     "next_page": null
 }
 ```
@@ -1076,7 +1076,7 @@ Fetch data from the FakerAPI using aiohttp.
     - users
 
 **Description**:
-quantity (int, optional): Number of rows to fetch (default: 3, max: 1000). locale (str, optional): Locale for the data (default: 'en_US').  See Valid locale [from here](https://github.com/Vivekkumar-IN/TheApi/blob/main/src%2FTheApi%2Fapi.py#L191-L200) **kwargs: Additional parameters to include in the request.
+quantity (int, optional): Number of rows to fetch (default: 3, max: 1000). locale (str, optional): Locale for the data (default: 'en_US').  See Valid locale [ From Here ](https://github.com/Vivekkumar-IN/TheApi/blob/main/src%2FTheApi%2Fapi.py#L185-L261)
 
 **Raises:**
   - **ValueError**: If the locale is invalid, the endpoint is invalid, or the quantity
@@ -1104,7 +1104,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=52
+https://randomfox.ca/?i=61
 ```
 
 ### 11. Gen Qr
@@ -1130,7 +1130,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/8JeHPRdH_qr.png
+/home/runner/work/TheApi/TheApi/downloads/XEgleD9y_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -1169,7 +1169,7 @@ print(result)
 #### Expected Output
 
 ```text
-One of the top five regrets people have is that they didn't stay in contact with friends.
+If you want to be happily married, marry a happy person.
 ```
 
 ### 14. Get Btc Value
@@ -1201,22 +1201,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "87,573.387",
-        "rate_float": 87573.3869,
+        "rate": "87,609.696",
+        "rate_float": 87609.6962,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "73,207.289",
-        "rate_float": 73207.2894,
+        "rate": "73,237.642",
+        "rate_float": 73237.6423,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "92,495.928",
-        "rate_float": 92495.9276,
+        "rate": "92,534.278",
+        "rate_float": 92534.278,
         "symbol": "&#36;"
     }
 }
@@ -1253,15 +1253,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "39678 Kling Island Suite 439",
-            "streetName": "Alison Islands",
-            "buildingNumber": "53169",
-            "city": "Lake Vincenza",
-            "zipcode": "75852",
-            "country": "New Zealand",
-            "country_code": "NZ",
-            "latitude": 30.960513,
-            "longitude": 25.889712
+            "street": "62356 Helga Bypass",
+            "streetName": "Josephine Path",
+            "buildingNumber": "3798",
+            "city": "Lake Velvaton",
+            "zipcode": "03472",
+            "country": "French Polynesia",
+            "country_code": "PF",
+            "latitude": -1.726812,
+            "longitude": -167.444181
         }
     ]
 }
@@ -1297,10 +1297,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "2646711941172528",
-            "expiration": "04/26",
-            "owner": "Eloisa Simonis"
+            "type": "Visa",
+            "number": "3589147280900228",
+            "expiration": "10/26",
+            "owner": "Ona Hoeger"
         }
     ]
 }
@@ -1339,8 +1339,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Ut reiciendis ea nulla.",
-            "description": "Et laboriosam repellat et qui rerum. At qui quia nihil sint quibusdam praesentium voluptatem. Sunt atque tempora doloribus impedit et necessitatibus.",
+            "title": "Neque minus vel ea quis iste.",
+            "description": "Quas praesentium adipisci voluptatem molestiae. Ipsam rerum aspernatur odit possimus. Magnam modi quod ex et adipisci.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -1365,7 +1365,7 @@ print(result)
 #### Expected Output
 
 ```text
-मोहब्बत हो या डाउनलोडिंग अधूरी रह जाये तो दोनों ही तकलीफ देते है 😆🤣😋😉 
+औरतों को खुश करना बड़ा ही मुश्किल है ...आदमियों का क्या औरत देखते ही ख़ुश हो जाते है. 😆🤣😋😉
 ```
 
 ### 19. Get Jokes
@@ -1389,7 +1389,11 @@ print(result)
 #### Expected Output
 
 ```text
-Hey girl are you a school? Because I want to shoot some kids up inside of you.
+Hey Girl,
+Roses are #ff0000,
+Violets are #0000ff,
+I use hex codes,
+But I'd use RGB for you.
 ```
 
 ### 20. Get Uselessfact
@@ -1410,7 +1414,7 @@ print(result)
 #### Expected Output
 
 ```text
-Each king in a deck of playing cards represents a great king from history. Spades - King David, Clubs - Alexander the Great, Hearts - Charlemagne, and Diamonds - Julius Caesar.
+The ant always falls over on its right side when intoxicated.
 ```
 
 ### 21. Get Word Definitions
@@ -1525,7 +1529,7 @@ print(result)
 #### Expected Output
 
 ```text
-हिम्मत इतनी थी समुन्दर भी पार कर सकते थे, मजबूर इतने हुए कि दो बूंद आँसूओं ने डुबो दिया।
+हर तमन्ना जब दिल से रुख़सत हो गयी, यक़ीन मानिए फुर्सत ही फुर्सत हो गयी..
 ```
 
 ### 24. Hug
@@ -1554,8 +1558,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Akatsuki no Yona: The Girl Standing in the Blush of Dawn",
-        "url": "https://nekos.best/api/v2/hug/2838c749-cbf0-407c-b727-ceb1ca517463.gif"
+        "anime_name": "Hibike! Euphonium",
+        "url": "https://nekos.best/api/v2/hug/b30aa74d-5d1c-4225-a242-30c5ed0f09f2.gif"
     }
 ]
 ```
@@ -1578,7 +1582,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/g4kmmgja9u1e1.png?width=1080&crop=smart&auto=webp&s=ca51183f9c5da176afafcd3bf6301f9d6317e05e
+https://preview.redd.it/wo968iwpal1e1.png?width=1080&crop=smart&auto=webp&s=34ae030452f3a5ba5bf63ed5759858af44700c37
 ```
 
 ### 26. Neko
@@ -1618,22 +1622,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/64601982",
-            "artist_name": "\u693f\u76ee\u30b8\u30ed",
-            "source_url": "https://www.pixiv.net/en/artworks/87387963",
-            "url": "https://nekos.best/api/v2/neko/abea24f2-d2b6-4bee-9d02-5f4cb1361b86.png"
+            "artist_href": "https://www.pixiv.net/en/users/56437899",
+            "artist_name": "\u307e\u3057\u308d\u3057\u304d",
+            "source_url": "https://www.pixiv.net/en/artworks/90473274",
+            "url": "https://nekos.best/api/v2/neko/82da987e-5e9e-47dc-993f-bbb1e008af00.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/7594805",
-            "artist_name": "AIZAWA",
-            "source_url": "https://www.pixiv.net/en/artworks/86995192",
-            "url": "https://nekos.best/api/v2/neko/539a4943-14ad-4276-a48c-78d1f9848608.png"
+            "artist_href": "https://www.pixiv.net/en/users/44882456",
+            "artist_name": "\u516b\u4ee3\u660e\u65e5\u83ef",
+            "source_url": "https://www.pixiv.net/en/artworks/94224983",
+            "url": "https://nekos.best/api/v2/neko/8da2d46e-76e7-4097-b917-561fc44cf483.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/35178230",
-            "artist_name": "Tor AI",
-            "source_url": "https://www.pixiv.net/en/artworks/81345637",
-            "url": "https://nekos.best/api/v2/neko/67d4bca1-f727-4c6b-86c9-b855978ebca8.png"
+            "artist_href": "https://www.pixiv.net/en/users/15975325",
+            "artist_name": "The Des Alizes",
+            "source_url": "https://www.pixiv.net/en/artworks/86710277",
+            "url": "https://nekos.best/api/v2/neko/bb3e2d03-7e43-419f-8bcd-f38bf83e612b.png"
         }
     ]
 }
@@ -1709,7 +1713,7 @@ print(result)
 #### Expected Output
 
 ```text
-Maxim for life: You get treated in life the way you teach people to treat you.
+You cannot be lonely if you like the person you're alone with.
 
 author - Wayne Dyer
 ```
@@ -1732,7 +1736,7 @@ print(result)
 #### Expected Output
 
 ```text
-thruputs
+showering
 ```
 
 ### 30. Riddle
@@ -1754,8 +1758,8 @@ print(result)
 
 ```json
 {
-    "riddle": "John was very tired after a long day of work. He went to bed at 10 p.m., wound his alarm clock and set it for noon the next day. Since John fell asleep almost immediately, how many hours of sleep did he get before the alarm woke him?",
-    "answer": "Two hours. Wind-up clocks can't be set more than 12 hours in advance"
+    "riddle": "One by one we come to life and side by side we wait, while our company swells in number some come early some come late. Some will bore you, some enthrill, but you can not choose between us, you must take us one and all, because we're bound together tightly and we're naught if we break free; if you want some clues about us simply answer who are we?",
+    "answer": "Chapters"
 }
 ```
 
@@ -1943,8 +1947,8 @@ print(result)
 #### Expected Output
 
 ```text
-reevaluations
-antinode
+springald
+exotics
 ```
 
 ### 35. Write
@@ -1972,7 +1976,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_JccO4bDQ.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_lQMQMT03.jpg
 ```
 
 
