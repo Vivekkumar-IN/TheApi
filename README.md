@@ -72,7 +72,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
 | [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
 | [17. Get Fake Images](#17-get-fake-images) | ✅
-| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ❌
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
 | [19. Get Jokes](#19-get-jokes) | ✅
 | [20. Get Uselessfact](#20-get-uselessfact) | ✅
 | [21. Get Word Definitions](#21-get-word-definitions) | ✅
@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "A day when everything is perfect, when everything will turn into memories, will eventually come.  But I'll probably remember over and over again you were there and everyone else was there. The day we all searched for just one thing.",
+    "content": "This is your world. As an outsider it may be out of place to say this... But I want to make one thing clear: Mere observers have no right to decide the future!",
     "anime": {
-        "id": 892,
-        "name": "Honey and Clover"
+        "id": 236,
+        "name": "Yu-Gi-Oh! Arc-V"
     },
     "character": {
-        "id": 1910,
-        "name": "Yuuta Takemoto"
+        "id": 439,
+        "name": "Reiji Akaba"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "carla",
+    "file_name": "barry",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/carla.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/barry.jpg"
 }
 ```
 
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_QG9ay6gL.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_kIa4rsnb.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_urK440Bg.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_4CitGhZA.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/con.jpg
+https://cdn2.thecatapi.com/images/e47.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/09584fb1-baa4-45b7-a801-cff37a0a4c74.jpg
+https://random.dog/e28f88eb-2ec9-4c97-923b-835d4076d5ab.mp4
 ```
 
 ### 8. Domain Search
@@ -1052,7 +1052,7 @@ print(result)
         }
     ],
     "total": 356,
-    "time": "15",
+    "time": "3",
     "next_page": null
 }
 ```
@@ -1104,7 +1104,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=10
+https://randomfox.ca/?i=115
 ```
 
 ### 11. Gen Qr
@@ -1130,7 +1130,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/q6ypiG1o_qr.png
+/home/runner/work/TheApi/TheApi/downloads/So79ifjI_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -1169,7 +1169,7 @@ print(result)
 #### Expected Output
 
 ```text
-If it ain't broke don't fix it.
+Don't ever name files or folders using the word "Final".
 ```
 
 ### 14. Get Btc Value
@@ -1201,22 +1201,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "86,544.194",
-        "rate_float": 86544.194,
+        "rate": "88,631.072",
+        "rate_float": 88631.0718,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "72,293.642",
-        "rate_float": 72293.6423,
+        "rate": "73,840.264",
+        "rate_float": 73840.2635,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "91,740.174",
-        "rate_float": 91740.1739,
+        "rate": "93,490.818",
+        "rate_float": 93490.818,
         "symbol": "&#36;"
     }
 }
@@ -1253,15 +1253,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "53731 Frida Forks",
-            "streetName": "Harber Shoal",
-            "buildingNumber": "29680",
-            "city": "Sebastianborough",
-            "zipcode": "99710",
-            "country": "Macao SAR China",
-            "country_code": "MO",
-            "latitude": 26.350899,
-            "longitude": -156.107692
+            "street": "152 Neal Burg",
+            "streetName": "Lew Summit",
+            "buildingNumber": "417",
+            "city": "New Isabelleshire",
+            "zipcode": "77943",
+            "country": "Malaysia",
+            "country_code": "MY",
+            "latitude": -60.858684,
+            "longitude": -162.360283
         }
     ]
 }
@@ -1298,9 +1298,9 @@ print(result)
     "data": [
         {
             "type": "Visa",
-            "number": "6011423572819165",
-            "expiration": "05/26",
-            "owner": "Adalberto Wilkinson"
+            "number": "4532568057666674",
+            "expiration": "04/27",
+            "owner": "Ally Wisozk"
         }
     ]
 }
@@ -1339,8 +1339,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Ut est temporibus eius vel.",
-            "description": "Facere ut tempora est laborum magnam porro. Atque omnis architecto qui alias sit optio. Placeat asperiores ut accusamus laborum laudantium. In autem autem sed tenetur totam sapiente enim.",
+            "title": "Debitis velit itaque dolor.",
+            "description": "Qui quo eaque et. Qui debitis ut et ipsa dolores officia. Deleniti magni qui id illo ullam quasi.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -1365,7 +1365,8 @@ print(result)
 #### Expected Output
 
 ```text
-'status'
+लड़का लड़की समंदर किनारे बैठे थे   
+लड़की बोली: तुम कब तक मेरे साथ रहोगे? लड़के ने अपना एक आँसू समंदर में गिराया और बोला: जब तक तुम इस आँसू को ना ढूँढ लो तब तक ये देखकर समंदर खुद बोल उठा: सालो तुम लोग इतनी हरामखोरी सीखते कहा से हो? 😆🤣😋😉 
 ```
 
 ### 19. Get Jokes
@@ -1389,8 +1390,7 @@ print(result)
 #### Expected Output
 
 ```text
-Have a great weekend!
-I hope your code behaves the same on Monday as it did on Friday.
+Two SQL tables sit at the bar. A query approaches and asks "Can I join you?"
 ```
 
 ### 20. Get Uselessfact
@@ -1411,7 +1411,7 @@ print(result)
 #### Expected Output
 
 ```text
-Former basketball superstar Michael Jordan is the most recognized face in the world, more than the pope himself.
+One of the reasons marijuana is illegal today is because cotton growers in the 1930s lobbied against hemp farmers they saw it as competition.
 ```
 
 ### 21. Get Word Definitions
@@ -1494,7 +1494,7 @@ print(result)
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
         "stargazers_count": 4803,
-        "forks_count": 2800
+        "forks_count": 2801
     },
     {
         "name": "PokemonGo-Bot",
@@ -1526,7 +1526,7 @@ print(result)
 #### Expected Output
 
 ```text
-जरा से बदमाश और जरा से नादान हो तुम, लेकिन ये भी सच है के हमारी जान से बढ़कर हो तुम।
+मैं हमदर्दी की ख़ैरातों के सिक्के मोड़ देता हूँ, जिस पर बोझ बन जाउँ, उसे मैं ख़ुद ही छोड़ देता हूँ।
 ```
 
 ### 24. Hug
@@ -1555,8 +1555,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Hotarubi no Mori e",
-        "url": "https://nekos.best/api/v2/hug/01b8d0bb-827b-49ed-a538-c109ee5883e1.gif"
+        "anime_name": "Hibike! Euphonium",
+        "url": "https://nekos.best/api/v2/hug/f8702ca1-e7d8-44e1-a2aa-221f10749498.gif"
     }
 ]
 ```
@@ -1619,22 +1619,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/18095070",
-            "artist_name": "karory",
-            "source_url": "https://yande.re/post/show/705365",
-            "url": "https://nekos.best/api/v2/neko/d3165cea-b64a-4fe3-9d7c-221401d8d871.png"
+            "artist_href": "https://www.pixiv.net/en/users/10678435",
+            "artist_name": "\u72d0\u5df3\u591c",
+            "source_url": "https://www.pixiv.net/en/artworks/97242052",
+            "url": "https://nekos.best/api/v2/neko/af3fc526-2b14-42b0-9cf4-f45e54b3f87a.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/66554161",
-            "artist_name": "\u5922\u9ce5\u516b\u91cd",
-            "source_url": "https://www.pixiv.net/en/artworks/96450863",
-            "url": "https://nekos.best/api/v2/neko/b0bbbafd-4662-4320-8410-35c537028c29.png"
+            "artist_href": "https://www.pixiv.net/en/users/5852420",
+            "artist_name": "\u5984\u60f3",
+            "source_url": "https://www.pixiv.net/en/artworks/83344243",
+            "url": "https://nekos.best/api/v2/neko/34afaaef-97f0-4c1a-804a-ab0bfa3f7cdb.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/13555516",
-            "artist_name": "\u798f\u6728\u3068\u304f\u308f",
-            "source_url": "https://www.pixiv.net/en/artworks/94389783",
-            "url": "https://nekos.best/api/v2/neko/a6348768-318e-4160-9145-a46925b641c7.png"
+            "artist_href": "https://www.pixiv.net/en/users/13590240",
+            "artist_name": "Shaffelli",
+            "source_url": "https://www.pixiv.net/en/artworks/88250081",
+            "url": "https://nekos.best/api/v2/neko/67ada678-5093-4242-be02-a02a17531699.png"
         }
     ]
 }
@@ -1710,9 +1710,9 @@ print(result)
 #### Expected Output
 
 ```text
-The road of excess leads to the palace of wisdom.
+Friendship increases in visiting friends, but in visiting them seldom.
 
-author - William Blake
+author - Francis Bacon
 ```
 
 ### 29. Random Word
@@ -1733,7 +1733,7 @@ print(result)
 #### Expected Output
 
 ```text
-epigeneses
+cockeye
 ```
 
 ### 30. Riddle
@@ -1755,8 +1755,8 @@ print(result)
 
 ```json
 {
-    "riddle": "how does the turtle with no legs cross the road????????? HINT take the f out of free and the f out of way!!!!!!!!!",
-    "answer": "There is no f in way"
+    "riddle": "I can be long, or I can be short. I can be grown, and I can be bought. I can be painted, or left bare. I can be round, or square. What am I?",
+    "answer": "Your fingernails"
 }
 ```
 
@@ -1944,8 +1944,8 @@ print(result)
 #### Expected Output
 
 ```text
-blighty
-strands
+pigweeds
+felicitousness
 ```
 
 ### 35. Write
@@ -1973,7 +1973,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_TZpwxW1t.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_KFFiv0I8.jpg
 ```
 
 
