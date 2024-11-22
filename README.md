@@ -62,8 +62,8 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [5. Carbon](#5-carbon) | ✅
 | [6. Cat](#6-cat) | ✅
 | [7. Dog](#7-dog) | ✅
-| [8. Domain Search](#8-domain-search) | ❌
-| [9. Fakerapi](#9-fakerapi) | ❌
+| [8. Domain Search](#8-domain-search) | ✅
+| [9. Fakerapi](#9-fakerapi) | ✅
 | [10. Fox](#10-fox) | ✅
 | [11. Gen Qr](#11-gen-qr) | ✅
 | [12. Generate Pdf](#12-generate-pdf) | ✅
@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "Question: The world will not change, but you can change yourself. So then, how will you change? \nAnswer: You become the god of a new world.",
+    "content": "Everything we see, everyone we meet, is caught up in a great unseen flow. But it's bigger than that. It's the entire world, the entire universe even. And compared to something as big as that, Al, you and I are tiny, not even the size of ants. Only one small part within a much greater flow. Nothing more than a fraction of the whole. But by putting all those \"ones\" together, you get one great \"All\", just like Teacher said. The flow of this universe follows laws of such magnitude that you and I can't even imagine them.",
     "anime": {
-        "id": 377,
-        "name": "Yahari Ore No Seishun Love Come Wa Machigatteiru"
+        "id": 538,
+        "name": "Fullmetal Alchemist"
     },
     "character": {
-        "id": 217,
-        "name": "Hachiman Hikigaya"
+        "id": 506,
+        "name": "Edward Elric"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "vicky",
+    "file_name": "barney",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/vicky.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/barney.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://wallpapercave.com/wp/wp11733352.jpg
-https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg
+https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pokémon_logo.svg/1200px-International_Pokémon_logo.svg.png
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/others_3/SI_Pokemon_image1280w.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_TxumgkwV.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_qtQ6V70Y.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_pJUeYGd1.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_bhyISlcS.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/bgn.jpg
+https://cdn2.thecatapi.com/images/wBbqm3pJa.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/1b0ff1c9-ca34-43f2-bfe4-182ff6760166.jpg
+https://random.dog/ef14cef7-5568-4e10-b477-1e16a73f8692.mp4
 ```
 
 ### 8. Domain Search
@@ -290,8 +290,771 @@ print(result)
 
 #### Expected Output
 
-```text
-Request failed: 524, message='', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
+```json
+{
+    "domains": [
+        {
+            "domain": "pokemon-steam.com",
+            "create_date": "2024-11-20T12:22:24.695961",
+            "update_date": "2024-11-20T12:22:24.695963",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-showdown.com",
+            "create_date": "2024-11-16T21:44:25.062255",
+            "update_date": "2024-11-16T21:44:25.062258",
+            "country": "CA",
+            "isDead": "False",
+            "A": [
+                "162.0.215.28"
+            ],
+            "NS": [
+                "dns1.namecheaphosting.com",
+                "dns2.namecheaphosting.com"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "smx4.web-hosting.com",
+                    "priority": 40
+                },
+                {
+                    "exchange": "smx3.web-hosting.com",
+                    "priority": 30
+                },
+                {
+                    "exchange": "smx2.web-hosting.com",
+                    "priority": 20
+                },
+                {
+                    "exchange": "smx1.web-hosting.com",
+                    "priority": 10
+                }
+            ],
+            "TXT": [
+                "v=spf1 +a +mx +ip4:162.213.251.158 include:spf.web-hosting.com ~all"
+            ]
+        },
+        {
+            "domain": "pokemon-towerdefense3.com",
+            "create_date": "2024-11-16T21:44:25.062423",
+            "update_date": "2024-11-16T21:44:25.062425",
+            "country": "CA",
+            "isDead": "False",
+            "A": [
+                "172.96.187.228"
+            ],
+            "NS": [
+                "ns2.hawkhost.com",
+                "ns1.hawkhost.com"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "pokemon-towerdefense3.com",
+                    "priority": 0
+                }
+            ],
+            "TXT": [
+                "v=spf1 +a +mx +ip4:172.96.187.2 +include:_spf.arandomserver.com ~all"
+            ]
+        },
+        {
+            "domain": "pokemon-pcg-pocket.com",
+            "create_date": "2024-11-13T12:59:34.788589",
+            "update_date": "2024-11-13T12:59:34.788591",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "the-pokemon-store.com",
+            "create_date": "2024-11-10T12:00:23.641438",
+            "update_date": "2024-11-10T12:00:23.641441",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-tcgp.com",
+            "create_date": "2024-11-07T08:41:00.387999",
+            "update_date": "2024-11-07T08:41:00.388001",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-collect.com",
+            "create_date": "2024-11-07T08:41:00.387827",
+            "update_date": "2024-11-07T08:41:00.387830",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-glazed.com",
+            "create_date": "2024-11-04T00:30:39.204506",
+            "update_date": "2024-11-04T00:30:39.204508",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-energy.com",
+            "create_date": "2024-11-04T00:30:39.204309",
+            "update_date": "2024-11-04T00:30:39.204312",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-italy.com",
+            "create_date": "2024-11-04T00:30:39.204707",
+            "update_date": "2024-11-04T00:30:39.204709",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-autochess.com",
+            "create_date": "2024-11-02T08:33:16.991832",
+            "update_date": "2024-11-02T08:33:16.991834",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "play-pokemon-online.com",
+            "create_date": "2024-11-02T08:33:16.825655",
+            "update_date": "2024-11-02T08:33:16.825658",
+            "country": "US",
+            "isDead": "False",
+            "A": [
+                "104.148.94.51"
+            ],
+            "NS": [
+                "jm1.dns.com",
+                "jm2.dns.com"
+            ],
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "japanese-pokemon-cards.com",
+            "create_date": "2024-11-02T08:33:00.325331",
+            "update_date": "2024-11-02T08:33:00.325336",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-peluches.com",
+            "create_date": "2024-10-24T04:12:03.540008",
+            "update_date": "2024-10-24T04:12:03.540011",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-dynasty.com",
+            "create_date": "2024-10-18T03:14:43.852622",
+            "update_date": "2024-10-18T03:14:43.852624",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-quiz.com",
+            "create_date": "2024-10-15T03:36:57.588519",
+            "update_date": "2024-10-15T03:36:57.588522",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-tcg-pocket-dex.com",
+            "create_date": "2024-10-07T13:29:47.356011",
+            "update_date": "2024-10-07T13:29:47.356013",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-mystery-boxes.com",
+            "create_date": "2024-10-07T13:29:47.355854",
+            "update_date": "2024-10-07T13:29:47.355856",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-oise.com",
+            "create_date": "2024-10-06T00:23:47.700295",
+            "update_date": "2024-10-06T00:23:47.700297",
+            "country": "BE",
+            "isDead": "False",
+            "A": [
+                "62.213.245.149"
+            ],
+            "NS": [
+                "ns3.ipower.be",
+                "ns2.ipower.be",
+                "ns1.ipower.be"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "mail.pokemon-oise.com",
+                    "priority": 10
+                }
+            ],
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-pocketdex.com",
+            "create_date": "2024-10-03T10:22:44.808048",
+            "update_date": "2024-10-03T10:22:44.808050",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-aventure.com",
+            "create_date": "2024-09-30T10:50:27.835203",
+            "update_date": "2024-09-30T10:50:27.835206",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-news.com",
+            "create_date": "2024-09-24T09:20:31.631508",
+            "update_date": "2024-09-24T09:20:31.631511",
+            "country": "US",
+            "isDead": "False",
+            "A": [
+                "198.54.114.204"
+            ],
+            "NS": [
+                "dns1.namecheaphosting.com",
+                "dns2.namecheaphosting.com"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "mail.pokemon-news.com",
+                    "priority": 0
+                }
+            ],
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-pcmaster.com",
+            "create_date": "2024-09-24T09:20:31.631693",
+            "update_date": "2024-09-24T09:20:31.631695",
+            "country": "US",
+            "isDead": "False",
+            "A": [
+                "154.221.215.205"
+            ],
+            "NS": [
+                "now1.dns.com",
+                "now2.dns.com"
+            ],
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-pokedex.com",
+            "create_date": "2024-09-21T21:40:29.481566",
+            "update_date": "2024-09-21T21:40:29.481568",
+            "country": "US",
+            "isDead": "False",
+            "A": [
+                "207.244.67.214"
+            ],
+            "NS": [
+                "ns1.dnsnuts.com",
+                "ns2.dnsnuts.com"
+            ],
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-gba.com",
+            "create_date": "2024-09-18T23:10:09.788582",
+            "update_date": "2024-09-18T23:10:09.788584",
+            "country": "JP",
+            "isDead": "False",
+            "A": [
+                "219.94.203.121"
+            ],
+            "NS": [
+                "ns5.xserver.jp",
+                "ns3.xserver.jp",
+                "ns1.xserver.jp",
+                "ns4.xserver.jp",
+                "ns2.xserver.jp"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "pokemon-gba.com",
+                    "priority": 0
+                }
+            ],
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-dp.com",
+            "create_date": "2024-09-18T23:10:09.788393",
+            "update_date": "2024-09-18T23:10:09.788395",
+            "country": "JP",
+            "isDead": "False",
+            "A": [
+                "211.5.69.234"
+            ],
+            "NS": [
+                "ns1.c008jp5381.info",
+                "ns2.c008jp5381.info"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "pokemon-dp.com",
+                    "priority": 0
+                }
+            ],
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-underground.com",
+            "create_date": "2024-09-18T23:10:09.788937",
+            "update_date": "2024-09-18T23:10:09.788939",
+            "country": "JP",
+            "isDead": "False",
+            "A": [
+                "61.198.74.245"
+            ],
+            "NS": [
+                "ns1.value-domain.com",
+                "ns2.value-domain.com"
+            ],
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-aona.com",
+            "create_date": "2024-09-18T23:10:09.788186",
+            "update_date": "2024-09-18T23:10:09.788190",
+            "country": "US",
+            "isDead": "False",
+            "A": [
+                "13.249.39.146",
+                "13.249.39.52",
+                "13.249.39.37",
+                "13.249.39.224"
+            ],
+            "NS": [
+                "ns-1376.awsdns-44.org",
+                "ns-1782.awsdns-30.co.uk",
+                "ns-394.awsdns-49.com",
+                "ns-599.awsdns-10.net"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "mx.pokemon-aona.com.cust.hostedemail.com",
+                    "priority": 10
+                }
+            ],
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-legends.com",
+            "create_date": "2024-09-08T09:54:29.699715",
+            "update_date": "2024-09-08T09:54:29.699717",
+            "country": "US",
+            "isDead": "False",
+            "A": [
+                "3.33.152.147",
+                "15.197.142.173"
+            ],
+            "NS": [
+                "ns17.domaincontrol.com",
+                "ns18.domaincontrol.com"
+            ],
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-calculation-sv.com",
+            "create_date": "2024-09-06T21:30:18.924253",
+            "update_date": "2024-09-06T21:30:18.924256",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-dimension.com",
+            "create_date": "2024-09-05T09:12:56.181647",
+            "update_date": "2024-09-05T09:12:56.181650",
+            "country": "FR",
+            "isDead": "False",
+            "A": [
+                "87.98.174.30"
+            ],
+            "NS": [
+                "dns1.e-c.com",
+                "dns2.e-c.com"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "pokemon-dimension.com",
+                    "priority": 0
+                }
+            ],
+            "TXT": [
+                "v=spf1 ip4:87.98.174.30 +a +mx +ip4:87.98.153.102 ~all"
+            ]
+        },
+        {
+            "domain": "pokemon-go-home.com",
+            "create_date": "2024-09-02T10:21:29.718289",
+            "update_date": "2024-09-02T10:21:29.718291",
+            "country": "US",
+            "isDead": "False",
+            "A": [
+                "142.91.174.104"
+            ],
+            "NS": [
+                "ns1.openprovider.nl",
+                "ns2.openprovider.be",
+                "ns3.openprovider.eu"
+            ],
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-card-artwalk.com",
+            "create_date": "2024-08-30T09:32:21.700506",
+            "update_date": "2024-08-30T09:32:21.700509",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "eternara-pokemon-auto-chess.com",
+            "create_date": "2024-08-30T09:31:51.471595",
+            "update_date": "2024-08-30T09:31:51.471600",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-sea.com",
+            "create_date": "2024-08-27T09:19:17.135535",
+            "update_date": "2024-08-27T09:19:17.135538",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-master.com",
+            "create_date": "2024-08-24T09:08:58.027448",
+            "update_date": "2024-08-24T09:08:58.027450",
+            "country": "JP",
+            "isDead": "False",
+            "A": [
+                "150.95.8.162"
+            ],
+            "NS": [
+                "01.dnsv.jp",
+                "02.dnsv.jp",
+                "03.dnsv.jp",
+                "04.dnsv.jp"
+            ],
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-rps.com",
+            "create_date": "2024-08-24T09:08:58.027988",
+            "update_date": "2024-08-24T09:08:58.027991",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-unite-matome.com",
+            "create_date": "2024-08-22T21:11:38.525011",
+            "update_date": "2024-08-22T21:11:38.525013",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-overdose.com",
+            "create_date": "2024-08-21T09:47:14.599538",
+            "update_date": "2024-08-21T09:47:14.599540",
+            "country": "US",
+            "isDead": "False",
+            "A": [
+                "104.18.49.225",
+                "104.18.48.225"
+            ],
+            "NS": [
+                "coco.ns.cloudflare.com",
+                "sri.ns.cloudflare.com"
+            ],
+            "CNAME": null,
+            "MX": [
+                {
+                    "exchange": "mail.pokemon-overdose.com",
+                    "priority": 10
+                }
+            ],
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-sprites-ethereum-blockchain-nfts-nintendo-collec.com",
+            "create_date": "2024-08-05T17:00:04.645397",
+            "update_date": "2024-08-05T17:00:04.645400",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-irl.com",
+            "create_date": "2024-07-18T17:04:27.841240",
+            "update_date": "2024-07-18T17:04:27.841243",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-event-kujisystem.com",
+            "create_date": "2024-07-18T17:04:27.841055",
+            "update_date": "2024-07-18T17:04:27.841057",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-display.com",
+            "create_date": "2024-07-11T05:39:11.089164",
+            "update_date": "2024-07-11T05:39:11.089166",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-cg-pocket22-blog.com",
+            "create_date": "2024-07-08T14:33:48.093159",
+            "update_date": "2024-07-08T14:33:48.093162",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-online-shop.com",
+            "create_date": "2024-06-29T11:03:49.095970",
+            "update_date": "2024-06-29T11:03:49.095972",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-gratuit.com",
+            "create_date": "2024-06-29T11:03:49.095786",
+            "update_date": "2024-06-29T11:03:49.095789",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-il.com",
+            "create_date": "2024-06-23T14:23:12.231846",
+            "update_date": "2024-06-23T14:23:12.231849",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-ro.com",
+            "create_date": "2024-06-17T17:54:46.884838",
+            "update_date": "2024-06-17T17:54:46.884840",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-pg.com",
+            "create_date": "2024-06-16T06:26:10.992663",
+            "update_date": "2024-06-16T06:26:10.992665",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-tcg-pocket.com",
+            "create_date": "2024-06-05T23:00:55.523220",
+            "update_date": "2024-06-05T23:00:55.523222",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        }
+    ],
+    "total": 354,
+    "time": "11",
+    "next_page": null
+}
 ```
 
 ### 9. Fakerapi
@@ -341,7 +1104,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=61
+https://randomfox.ca/?i=69
 ```
 
 ### 11. Gen Qr
@@ -367,7 +1130,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/q8QRknqH_qr.png
+/home/runner/work/TheApi/TheApi/downloads/I81PUpbk_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -406,7 +1169,7 @@ print(result)
 #### Expected Output
 
 ```text
-It's not about who likes you, it's about who you like.
+If you find yourself distressed about something, ask yourself if it will still matter tomorrow or next week or next month.
 ```
 
 ### 14. Get Btc Value
@@ -438,22 +1201,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "89,981.997",
-        "rate_float": 89981.9967,
+        "rate": "94,201.989",
+        "rate_float": 94201.989,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "74,984.412",
-        "rate_float": 74984.4121,
+        "rate": "78,364.621",
+        "rate_float": 78364.6205,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "94,893.194",
-        "rate_float": 94893.194,
+        "rate": "98,646.921",
+        "rate_float": 98646.9206,
         "symbol": "&#36;"
     }
 }
@@ -490,15 +1253,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "5817 Cummings Shore",
-            "streetName": "Osinski Station",
-            "buildingNumber": "79340",
-            "city": "Marquardttown",
-            "zipcode": "50765-8839",
-            "country": "Pakistan",
-            "country_code": "PK",
-            "latitude": -39.190581,
-            "longitude": -93.427738
+            "street": "883 Witting Rue Apt. 739",
+            "streetName": "Kaylee Run",
+            "buildingNumber": "75560",
+            "city": "South Jensenfort",
+            "zipcode": "23275",
+            "country": "Portugal",
+            "country_code": "PT",
+            "latitude": -67.938952,
+            "longitude": -39.99375
         }
     ]
 }
@@ -535,9 +1298,9 @@ print(result)
     "data": [
         {
             "type": "MasterCard",
-            "number": "4667560698420212",
-            "expiration": "01/27",
-            "owner": "Rachael Goodwin"
+            "number": "3528070621138726",
+            "expiration": "12/24",
+            "owner": "Merlin Robel"
         }
     ]
 }
@@ -576,8 +1339,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Sit dicta in nemo dolor vero.",
-            "description": "Qui reprehenderit id velit sed sunt. Rerum ad illo quaerat quas ut laborum. Iure corporis sed id fugiat eum minima harum. Vel cum tempore quam ut. Voluptatem excepturi quia dolor reprehenderit.",
+            "title": "Error qui id explicabo et.",
+            "description": "Porro molestias aut quisquam at. Consequatur aut dolorum omnis numquam ab vero. Ea porro necessitatibus vero et quo et. Quibusdam nemo possimus quo sit rerum deleniti in.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -602,7 +1365,7 @@ print(result)
 #### Expected Output
 
 ```text
-जब कुछ लोग बोलते है कि ...बुरा मत मानना... तो ऐसी बात बोल जाते है कि बुरा ही नही साथ में जूता भी मारने का मन करता है 😆🤣😋😉
+मित्र बनाने से पहले मुझे भी कागज चैक करने होते हैं...😆🤣😋😉
 ```
 
 ### 19. Get Jokes
@@ -626,8 +1389,7 @@ print(result)
 #### Expected Output
 
 ```text
-A programmer puts two glasses on his bedside table before going to sleep.
-A full one, in case he gets thirsty, and an empty one, in case he doesn't.
+Me and my Jewish friend were eating lunch and I farted. He got mad so I said "cmon man a little gas never killed anyone".
 ```
 
 ### 20. Get Uselessfact
@@ -648,7 +1410,7 @@ print(result)
 #### Expected Output
 
 ```text
-Nutmeg is extremely poisonous if injected intravenously.
+The average American looks at eight houses before buying one.
 ```
 
 ### 21. Get Word Definitions
@@ -730,8 +1492,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4805,
-        "forks_count": 2801
+        "stargazers_count": 4806,
+        "forks_count": 2800
     },
     {
         "name": "PokemonGo-Bot",
@@ -763,7 +1525,7 @@ print(result)
 #### Expected Output
 
 ```text
-अहंकार कभी सच को स्वीकार नहीं करता और सच को जानने वाला कभी अहंकार नहीं करता
+किसी की निंदा से घबराकर अपने लक्ष्य को नहीं छोड़े, क्योंकि अक्सर लक्ष्य मिलते ही निंदा करने वालों की राय बदल जाती है।
 ```
 
 ### 24. Hug
@@ -792,8 +1554,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Nagi no Asukara",
-        "url": "https://nekos.best/api/v2/hug/f88c212e-b0dc-4a44-a6ef-8f9ab761d95d.gif"
+        "anime_name": "Yuru Yuri",
+        "url": "https://nekos.best/api/v2/hug/6ffba377-796c-4157-88a1-82e4b1198340.gif"
     }
 ]
 ```
@@ -816,7 +1578,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/hxolu1g9k52e1.png?width=640&crop=smart&auto=webp&s=d1fa5af71121b0183965fa132d91d5a7b4405a41
+https://preview.redd.it/m9ksoscbzc2e1.png?width=640&crop=smart&auto=webp&s=1371558598da4fbf942a8f78f0528a415d784a73
 ```
 
 ### 26. Neko
@@ -856,22 +1618,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/21055450",
-            "artist_name": "Reolism",
-            "source_url": "https://www.pixiv.net/en/artworks/87037017",
-            "url": "https://nekos.best/api/v2/neko/46a13849-6fb9-4476-b754-5fd6f6ae333b.png"
+            "artist_href": "https://www.pixiv.net/en/users/444942",
+            "artist_name": "\u3051\u3044\u3089\u3093",
+            "source_url": "https://www.pixiv.net/en/artworks/79793389",
+            "url": "https://nekos.best/api/v2/neko/1bae7308-5822-48d6-a956-2e51b951dc58.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/55477378",
-            "artist_name": "\u51e9\u3053\u3093",
-            "source_url": "https://www.pixiv.net/en/artworks/97819506",
-            "url": "https://nekos.best/api/v2/neko/5bbb0b3c-a836-457a-8a6e-892aeb9dcea4.png"
+            "artist_href": "https://twitter.com/ink92947641",
+            "artist_name": "ink.",
+            "source_url": "https://twitter.com/ink92947641/status/1553734070450126850",
+            "url": "https://nekos.best/api/v2/neko/17b66dfd-0140-43ba-8410-fa2c1b32d7e6.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/63582612",
-            "artist_name": "\u30b9\u3064\u307f",
-            "source_url": "https://www.pixiv.net/en/artworks/90560121",
-            "url": "https://nekos.best/api/v2/neko/c7886c83-0167-40fd-851d-e1b653a018cf.png"
+            "artist_href": "https://www.pixiv.net/en/users/2550839",
+            "artist_name": "\u307f\u306a\u307f\u3055\u304d",
+            "source_url": "https://www.pixiv.net/en/artworks/87122035",
+            "url": "https://nekos.best/api/v2/neko/aea0203e-aae4-420a-97e7-62e3bb4f3261.png"
         }
     ]
 }
@@ -947,9 +1709,9 @@ print(result)
 #### Expected Output
 
 ```text
-You are a product of your environment. So choose the environment that will best develop you toward your objective. Analyze your life in terms of its environment. Are the things around you helping you toward success - or are they holding you back?
+What you get by achieving your goals is not as important as what you become by achieving your goals.
 
-author - W. Clement Stone
+author - Zig Ziglar
 ```
 
 ### 29. Random Word
@@ -970,7 +1732,7 @@ print(result)
 #### Expected Output
 
 ```text
-geophysical
+incardination
 ```
 
 ### 30. Riddle
@@ -992,8 +1754,8 @@ print(result)
 
 ```json
 {
-    "riddle": "One word in this sentence is misspelled. What word is it?",
-    "answer": "It isn't spelled wrong, the one word in this sentence misspelled is \u201cmisspelled.\u201c"
+    "riddle": "I am the fountain from which no one can drink. For many I am considered a necessary link. Like gold to all I am sought for, But my continued death brings wealth for all to want more. .What am I?",
+    "answer": "Oil"
 }
 ```
 
@@ -1067,7 +1829,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 1981,
+        "view_count": 1985,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1092,7 +1854,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32646,
+        "view_count": 32647,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1181,8 +1943,8 @@ print(result)
 #### Expected Output
 
 ```text
-behowled
-mongers
+rhesuses
+osteomalacia
 ```
 
 ### 35. Write
@@ -1210,7 +1972,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_s7Y9Te48.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_SBjE8IY0.jpg
 ```
 
 
