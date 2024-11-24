@@ -72,7 +72,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
 | [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
 | [17. Get Fake Images](#17-get-fake-images) | ✅
-| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ❌
 | [19. Get Jokes](#19-get-jokes) | ✅
 | [20. Get Uselessfact](#20-get-uselessfact) | ✅
 | [21. Get Word Definitions](#21-get-word-definitions) | ✅
@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "This is my case! I'm going to solve it!! Don't get involved!",
+    "content": "Luck of the draw isn\u2019t about luck. Luck doesn\u2019t decide a match!",
     "anime": {
-        "id": 271,
-        "name": "Detective Conan"
+        "id": 520,
+        "name": "Chihayafuru 2"
     },
     "character": {
-        "id": 1303,
-        "name": "Shinichi Kudou"
+        "id": 1102,
+        "name": "Hidehiro Harada"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "jeremy",
+    "file_name": "nancy",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/jeremy.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/nancy.jpg"
 }
 ```
 
@@ -172,69 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://media.gamestop.com/i/gamestop/11103360/New-Pokemon-Snap---Nintendo-Switch
-https://img-eshop.cdn.nintendo.net/i/00bd7efe46ab2b3ff0774172a5d4f21a5b2f467b3e324557ce1e9a9ae12c1d3b.jpg
-https://assets-prd.ignimgs.com/2021/03/01/new-pokemon-snap-button-1614639848584.jpg
-https://www.gamespot.com/a/uploads/screen_kubrick/123/1239113/3801204-6238037227-screenshot02.jpg
-https://www.rpgfan.com/wp-content/uploads/2021/01/New-Pokemon-Snap-Screenshot-044.jpg
-https://www.nme.com/wp-content/uploads/2021/05/New-Pokemon-Snap-Credit-Bandai-Namco-HERO@2000x1270.jpg
-https://www.videogamer.com/wp-content/uploads/01d7162d-749b-43eb-bdcc-5c0cf9e49881_New_Pokmon_Snap_Main.jpg
-https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/products/games/switch/new-pokemon-snap/110735-switch-new-pokemon-snap-us-1200x675
-https://i.ytimg.com/vi/e_V9nUUP2oo/maxresdefault.jpg
-https://i.gadgets360cdn.com/products/large/New-Pokemon-Snap-Wallpaper-1440x2560-1000x1778-1646977124.jpg
-https://twinfinite.net/wp-content/uploads/2021/04/New-Pokemon-Snap-scaled.jpg
-https://cdn.vox-cdn.com/thumbor/Lgiz7lrS_auxnKixNMsWmsx_ETE=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22473880/Switch_NewPokemonSnap_Screenshots_Feb26__9_.jpg
-https://i0.wp.com/mynintendonews.com/wp-content/uploads/2021/01/new_pokemon_snap_logo.jpg?ssl=1
-https://assets.gamepur.com/wp-content/uploads/2021/01/14074110/new-pokemon-snap-arrives-on-nintendo-switch-this-april.jpg
-https://webgames.host/uploads/2017/09/pokemon-snap.jpg
-https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_7/H2x1_N64_PokemonSnap_image1600w.jpg
-https://www.nintendo.com/sg/switch/arft/img/hero_sp.jpg
-https://images.launchbox-app.com/1f06f096-8eb6-43ac-abbb-262deb1bf596.jpg
-https://videogamesuncovered.com/wp-content/uploads/2021/01/new-pokemon-snap-social.jpg
-https://cdn.mobilesyrup.com/wp-content/uploads/2021/01/new-pokemon-snap-screenshot-2.jpg
-https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Pokemon_Type_Chart.svg/2048px-Pokemon_Type_Chart.svg.png
-https://vignette4.wikia.nocookie.net/pokemon/images/8/8c/PokemonTypes.png/revision/latest?cb=20170417193722
-https://img.pokemondb.net/images/typechart.png
-https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/472f4a44-0b68-46a9-bfd1-ffca5f5d411f/dbnh54g-993f09cd-8bc1-4653-86e3-5ca28b95e8a9.png/v1/fill/w_1024,h_724,strp/_pokemon__38_types_by_wergan_dbnh54g-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI0IiwicGF0aCI6IlwvZlwvNDcyZjRhNDQtMGI2OC00NmE5LWJmZDEtZmZjYTVmNWQ0MTFmXC9kYm5oNTRnLTk5M2YwOWNkLThiYzEtNDY1My04NmUzLTVjYTI4Yjk1ZThhOS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.8ikZ0Io3pDkjQ1bahvU_ux81ssIRvgztcDY_M3RiaIs
-http://upload.wikimedia.org/wikipedia/commons/5/5e/Pokémon_types_(english).png
-https://raw.githubusercontent.com/kennycason/cellular-automata-pokemon-types/master/data/pokemon_gen1_type_chart.png?raw=true
-https://www.theloadout.com/wp-content/sites/theloadout/2023/06/pokemon-type-chart-icons.jpg
-https://www.mandatory.gg/wp-content/uploads/mandatory-guide-pokemon-ecarlate-violet-table-types-forces-faiblesses.png
-https://i.pinimg.com/originals/95/b2/6f/95b26f7cd39e206259faa20fd57e7b47.png
-https://res.cloudinary.com/lmn/image/upload/e_sharpen:150,f_auto,fl_lossy,q_80/v1/gameskinnyc/p/o/k/pokemon-types-table-ad163.png
-https://1.bp.blogspot.com/-A0NsVJu2Ay0/WGOgGNxAdTI/AAAAAAAABIY/amMTic8SsXYs7jfP_ITwBmkeVQHIAGZ-ACPcB/s1600/ENG-05-02-02-All-the-Pokemon-types.png
-https://releasegaming.com/wp-content/uploads/2023/02/Pokemon-Type-Chart-Poster-960x850.jpg
-http://fc09.deviantart.net/fs70/i/2013/318/0/f/pokemon_types_wheel_by_kamionero-d6u6o9i.png
-https://static.wikia.nocookie.net/pokemongo/images/9/9c/Type_chart.png/revision/latest?cb=20191205150508
-https://img00.deviantart.net/2a60/i/2017/020/6/5/all_18_pokemon_types_by_pokemon_ranger_sumi-daw3v3d.jpg
-https://external-preview.redd.it/RRN_PLWmmvfT9Sn_TEMwb30kQnYa98DgdNboTgCouVY.jpg?auto=webp&amp;s=a0e508951d46d24c5b52b3c1a6fe5a7affd7cd4e
-https://cdn1.vectorstock.com/i/1000x1000/03/95/pokemon-type-symbols-vector-2700395.jpg
-https://pnghq.com/wp-content/uploads/pnghq.com-pokemon-types.png
-https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7b386f5f-9a3f-497c-ad22-b2b574b05b37/dfkk1g6-bb82e195-fc59-410e-9d67-88283d33d704.png/v1/fill/w_1920,h_2148/original_pokemon_type_symbols_by_adeptcharon_dfkk1g6-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjE0OCIsInBhdGgiOiJcL2ZcLzdiMzg2ZjVmLTlhM2YtNDk3Yy1hZDIyLWIyYjU3NGIwNWIzN1wvZGZrazFnNi1iYjgyZTE5NS1mYzU5LTQxMGUtOWQ2Ny04ODI4M2QzM2Q3MDQucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.EqLMXobU7LF7_CupNDFpDBYEvuGZEVc7HxZDt4y1LFA
-https://videogamesuncovered.com/wp-content/uploads/2016/12/pokemon-types.jpg
-https://i.etsystatic.com/21027128/r/il/fdbdba/2003255292/il_1588xN.2003255292_12o2.jpg
-https://www.pokemoncenter.com/products/images/P2373PC/155-80156/P2373PC_155-80156_01.jpg
-https://i.etsystatic.com/22089514/r/il/ecff88/4140836231/il_fullxfull.4140836231_cpmu.jpg
-https://i.etsystatic.com/23914535/r/il/750695/2869449405/il_1588xN.2869449405_fr75.jpg
-https://m.media-amazon.com/images/I/A1Ui8dsTSrS.jpg
-https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/2560w/products/175831/251398/pokemonshininglegends28__52193.1509648391.jpg?c=2
-https://i.etsystatic.com/33418657/r/il/6e5e21/4247655411/il_1588xN.4247655411_k060.jpg
-https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/1920w/products/371952/569692/pokemonevolvingskies041__83278.1630015209.jpg?c=2
-https://i.etsystatic.com/33418657/r/il/65cad0/4462571119/il_fullxfull.4462571119_hd3n.jpg
-https://i.pinimg.com/736x/83/e3/5a/83e35aead31fabb77b9bde3396d4351f.jpg
-https://media.gamestop.com/i/gamestop/20002524/Pokemon-Trading-Card-Game-Scarlet-and-Violet-Booster-Bundle
-https://www.totsafe.com/wp-content/uploads/2020/09/Gyarados-Ancient-Origins-Holo-1446x2048.jpg
-https://images.saymedia-content.com/.image/t_share/MTgzNzE1NDA2MDk0MDE3ODU1/best-vmax-pokemon-cards.png
-https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/1920w/products/348427/509483/pokesmboutremixpk__19804.1607375257.jpg?c=2
-https://i.etsystatic.com/22089514/r/il/c4b57e/2338029595/il_1140xN.2338029595_sei2.jpg
-https://images.saymedia-content.com/.image/t_share/MTc5ODE2MjE2Mjc2NDQ0Nzgz/best-v-pokemon-cards.jpg
-https://i.pinimg.com/originals/18/28/97/18289747d16a23e3dc20cc36956b9b4b.jpg
-https://imgix.ranker.com/user_node_img/3181/63618188/original/blastoise-u16?fit=crop&amp;fm=pjpg&amp;q=60&amp;w=650&amp;dpr=2
-https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/06/Charizard-grade-9-mint-front.jpg
-https://i.etsystatic.com/24353291/r/il/358485/2689751041/il_fullxfull.2689751041_ofmo.jpg
-https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
-https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
+https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 ```
 
 ### 4. Blackpink
@@ -260,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_4LX17Ncm.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_YvqoZCqL.jpg
 ```
 
 ### 5. Carbon
@@ -284,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_loHTz3LH.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_EOY7VRUJ.png
 ```
 
 ### 6. Cat
@@ -305,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/bgj.jpg
+https://cdn2.thecatapi.com/images/nHrt_0PV3.jpg
 ```
 
 ### 7. Dog
@@ -326,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/27058-6726-7413.jpg
+https://random.dog/ef2032c1-6d37-41de-b43f-d0cb2dc4ebd1.jpeg
 ```
 
 ### 8. Domain Search
@@ -353,6 +293,18 @@ print(result)
 ```json
 {
     "domains": [
+        {
+            "domain": "pokemon-room.com",
+            "create_date": "2024-11-23T21:12:22.020090",
+            "update_date": "2024-11-23T21:12:22.020092",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
         {
             "domain": "pokemon-steam.com",
             "create_date": "2024-11-20T12:22:24.695961",
@@ -542,18 +494,6 @@ print(result)
             "domain": "japanese-pokemon-cards.com",
             "create_date": "2024-11-02T08:33:00.325331",
             "update_date": "2024-11-02T08:33:00.325336",
-            "country": null,
-            "isDead": "False",
-            "A": null,
-            "NS": null,
-            "CNAME": null,
-            "MX": null,
-            "TXT": null
-        },
-        {
-            "domain": "pokemon-peluches.com",
-            "create_date": "2024-10-24T04:12:03.540008",
-            "update_date": "2024-10-24T04:12:03.540011",
             "country": null,
             "isDead": "False",
             "A": null,
@@ -1111,8 +1051,8 @@ print(result)
             "TXT": null
         }
     ],
-    "total": 354,
-    "time": "5",
+    "total": 353,
+    "time": "38",
     "next_page": null
 }
 ```
@@ -1164,7 +1104,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=63
+https://randomfox.ca/?i=82
 ```
 
 ### 11. Gen Qr
@@ -1190,7 +1130,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/KmXBXBzw_qr.png
+/home/runner/work/TheApi/TheApi/downloads/ICdBKIt3_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -1229,7 +1169,7 @@ print(result)
 #### Expected Output
 
 ```text
-Remember that spiders are more afraid of you, than you are of them.
+The most important thing is the thing most easily forgotten.
 ```
 
 ### 14. Get Btc Value
@@ -1261,22 +1201,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "94,104.527",
-        "rate_float": 94104.5272,
+        "rate": "94,013.66",
+        "rate_float": 94013.6598,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "78,244.946",
-        "rate_float": 78244.9461,
+        "rate": "78,164.06",
+        "rate_float": 78164.0598,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "98,040.868",
-        "rate_float": 98040.868,
+        "rate": "97,943.445",
+        "rate_float": 97943.4447,
         "symbol": "&#36;"
     }
 }
@@ -1313,15 +1253,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "557 Bogan Manor Suite 093",
-            "streetName": "Dianna Greens",
-            "buildingNumber": "2293",
-            "city": "North Aida",
-            "zipcode": "02995",
-            "country": "St. Lucia",
-            "country_code": "LC",
-            "latitude": 24.473538,
-            "longitude": 82.98423
+            "street": "39946 Ruby Crossing",
+            "streetName": "Orin Pines",
+            "buildingNumber": "2776",
+            "city": "Romaineland",
+            "zipcode": "33624-8476",
+            "country": "South Sudan",
+            "country_code": "SS",
+            "latitude": -81.202807,
+            "longitude": 74.190444
         }
     ]
 }
@@ -1357,10 +1297,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "2488708606870223",
-            "expiration": "02/27",
-            "owner": "Adriana Jaskolski"
+            "type": "Visa",
+            "number": "6011384370272611",
+            "expiration": "01/27",
+            "owner": "Hanna Connelly"
         }
     ]
 }
@@ -1399,8 +1339,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Et et vero dolorem doloribus.",
-            "description": "Placeat illo ut sequi voluptatum consequatur quibusdam aspernatur voluptatem. Et dolores enim minima. Similique reiciendis necessitatibus cupiditate.",
+            "title": "Aut debitis nam qui.",
+            "description": "Qui velit quo repellendus nemo enim beatae. Enim iusto perspiciatis atque nisi. Consequatur ipsum earum accusamus sunt. Ut et voluptas aspernatur est et nihil. Voluptatem eum numquam accusantium et.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -1425,8 +1365,7 @@ print(result)
 #### Expected Output
 
 ```text
- आज की जनरेशन\nचेटिंग चेटिंग, येस पापा\nगर्लफ्रेंड सेटिंग, नो पापा\nटेलिंग लाइस, नो पापा\nओपन योर वॉट्सऐप\nहा हा हा... "
-आज की जनरेशन\nचेटिंग चेटिंग, येस पापा\nगर्लफ्रेंड सेटिंग, नो पापा\nटेलिंग लाइस, नो पापा\nओपन योर वॉट्सऐप\nहा हा हा...
+'status'
 ```
 
 ### 19. Get Jokes
@@ -1450,11 +1389,7 @@ print(result)
 #### Expected Output
 
 ```text
-Two C strings walk into a bar.
-The bartender asks "What can I get ya?"
-The first string says "I'll have a gin and tonic."
-The second string thinks for a minute, then says "I'll take a tequila sunriseJF()#$JF(#)$(@J#()$@#())!*FNIN!OBN134ufh1ui34hf9813f8h8384h981h3984h5F!##@"
-The first string apologizes, "You'll have to excuse my friend, he's not null-terminated."
+Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says "Do you get the reference?" But Java didn't.
 ```
 
 ### 20. Get Uselessfact
@@ -1475,7 +1410,7 @@ print(result)
 #### Expected Output
 
 ```text
-The first CD pressed in the US was Bruce Springsteen`s `Born in the USA`
+The most common name in world is Mohammed.
 ```
 
 ### 21. Get Word Definitions
@@ -1557,8 +1492,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4806,
-        "forks_count": 2800
+        "stargazers_count": 4807,
+        "forks_count": 2801
     },
     {
         "name": "PokemonGo-Bot",
@@ -1567,7 +1502,7 @@ print(result)
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
         "stargazers_count": 3874,
-        "forks_count": 1542
+        "forks_count": 1543
     }
 ]
 ```
@@ -1590,7 +1525,7 @@ print(result)
 #### Expected Output
 
 ```text
-इस बार मिलने की शर्त ये रखेंगे, दोनों अपनी घड़ियां उतार फैकेंगे !!
+रो-रो के इश्क को ना तमाशा बनाईये जीने की आरज़ू है तो धोखे भी खाईये!
 ```
 
 ### 24. Hug
@@ -1619,8 +1554,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Nagi no Asukara",
-        "url": "https://nekos.best/api/v2/hug/f88c212e-b0dc-4a44-a6ef-8f9ab761d95d.gif"
+        "anime_name": "Karneval",
+        "url": "https://nekos.best/api/v2/hug/76d225e6-6494-4c23-a4f8-9117afc5edf9.gif"
     }
 ]
 ```
@@ -1643,7 +1578,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/iidaj9tyii2e1.gif?width=320&crop=smart&format=png8&s=ba270c7beaa65676f466b4b532a9b07fd957c44b
+https://preview.redd.it/0kxzyu1ejm2e1.png?width=640&crop=smart&auto=webp&s=414482b050f154f64d87cfc9f0de98212d15ff1b
 ```
 
 ### 26. Neko
@@ -1683,22 +1618,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/26040235",
-            "artist_name": "Noyu",
-            "source_url": "https://www.pixiv.net/en/artworks/86643968",
-            "url": "https://nekos.best/api/v2/neko/48dcffea-132a-4620-bcab-7b43d3b7bf71.png"
+            "artist_href": "https://www.pixiv.net/en/users/15461810",
+            "artist_name": "\u3057\u308d\u304f\u307e",
+            "source_url": "https://www.pixiv.net/en/artworks/88380373",
+            "url": "https://nekos.best/api/v2/neko/da2a6a68-8d41-4978-b1e8-e95563329c3d.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/8159347",
-            "artist_name": "\u30d5\u4e8c\u30a3",
-            "source_url": "https://www.pixiv.net/en/artworks/83150105",
-            "url": "https://nekos.best/api/v2/neko/cc9177ad-8224-4e94-a0c1-007caba531b8.png"
+            "artist_href": "https://www.pixiv.net/en/users/36742404",
+            "artist_name": "\u3042\u304b\u306f\u306d\u3053",
+            "source_url": "https://www.pixiv.net/en/artworks/96249133",
+            "url": "https://nekos.best/api/v2/neko/affffaa9-08b5-4d84-94ed-14cdfbc73f78.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/13735243",
-            "artist_name": "RONOPU",
-            "source_url": "https://www.pixiv.net/en/artworks/91446707",
-            "url": "https://nekos.best/api/v2/neko/dc650bea-8d1a-4034-980d-75afc365c42f.png"
+            "artist_href": "https://www.pixiv.net/en/users/7063469",
+            "artist_name": "Rin",
+            "source_url": "https://www.pixiv.net/en/artworks/89718079",
+            "url": "https://nekos.best/api/v2/neko/981d61b6-239e-4556-af64-25994ade3c1f.png"
         }
     ]
 }
@@ -1774,9 +1709,9 @@ print(result)
 #### Expected Output
 
 ```text
-Quality is never an accident; it is always the result of intelligent effort.
+Nature takes away any faculty that is not used.
 
-author - John Ruskin
+author - William Inge
 ```
 
 ### 29. Random Word
@@ -1797,7 +1732,7 @@ print(result)
 #### Expected Output
 
 ```text
-sestet
+reexpose
 ```
 
 ### 30. Riddle
@@ -1819,8 +1754,8 @@ print(result)
 
 ```json
 {
-    "riddle": "While on my way to St. Ives, I saw a man with 7 wives. Each wife had 7 sacks. Each sack had 7 cats. Each cat had 7 kittens. Kitten, cats, sacks, wives, How many were going to St. Ives?",
-    "answer": "Just one, me"
+    "riddle": "I know a word of letters three. Add two, and fewer there will be.",
+    "answer": "The word \u201cFew\u201c"
 }
 ```
 
@@ -1919,7 +1854,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32650,
+        "view_count": 32651,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1981,7 +1916,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -2008,8 +1943,8 @@ print(result)
 #### Expected Output
 
 ```text
-straighten
-abstracted
+vrooming
+tomorrows
 ```
 
 ### 35. Write
@@ -2037,7 +1972,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_fmBwBOBw.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_IWqxejdw.jpg
 ```
 
 
