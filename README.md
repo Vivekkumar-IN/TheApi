@@ -72,7 +72,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
 | [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
 | [17. Get Fake Images](#17-get-fake-images) | ✅
-| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ❌
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
 | [19. Get Jokes](#19-get-jokes) | ✅
 | [20. Get Uselessfact](#20-get-uselessfact) | ✅
 | [21. Get Word Definitions](#21-get-word-definitions) | ✅
@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "They often say that stupid thoughts are no better than sleeping.",
+    "content": "Even if you can't walk or stand and even if you can't have kids, I'll still marry you, I'll always stay by your side.",
     "anime": {
-        "id": 535,
-        "name": "Umineko no Naku Koro ni"
+        "id": 622,
+        "name": "Angel Beats!"
     },
     "character": {
-        "id": 961,
-        "name": "Ushiromiya Kyrie"
+        "id": 1806,
+        "name": "Hideki Hinata"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "valerie",
+    "file_name": "nancy",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/valerie.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/nancy.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
-https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
+https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/150_Pokemon_from_Pokemon_Stadium.png/330px-150_Pokemon_from_Pokemon_Stadium.png
+https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
+https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_8jNR6isT.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_6kvzauFy.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_d7vl06AX.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_yDPDvlbp.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTg5NjYzMA.jpg
+https://cdn2.thecatapi.com/images/agk.gif
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/85caa07e-48de-49f8-a990-f7705ad4e85f.JPG
+https://random.dog/5350-13889-29214.jpg
 ```
 
 ### 8. Domain Search
@@ -1052,7 +1052,7 @@ print(result)
         }
     ],
     "total": 353,
-    "time": "4",
+    "time": "9",
     "next_page": null
 }
 ```
@@ -1104,7 +1104,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=38
+https://randomfox.ca/?i=61
 ```
 
 ### 11. Gen Qr
@@ -1130,7 +1130,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/Kz8uqTC4_qr.png
+/home/runner/work/TheApi/TheApi/downloads/mdNBpucB_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -1169,7 +1169,7 @@ print(result)
 #### Expected Output
 
 ```text
-Try to not compliment people on things they don't control.
+One of the top five regrets people have is that they didn't stay in contact with friends.
 ```
 
 ### 14. Get Btc Value
@@ -1201,22 +1201,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "90,294.815",
-        "rate_float": 90294.8148,
+        "rate": "88,582.663",
+        "rate_float": 88582.6632,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "75,355.622",
-        "rate_float": 75355.622,
+        "rate": "73,873.725",
+        "rate_float": 73873.7245,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "94,385.186",
-        "rate_float": 94385.1856,
+        "rate": "92,894.062",
+        "rate_float": 92894.0624,
         "symbol": "&#36;"
     }
 }
@@ -1253,15 +1253,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "9614 Freddie Plaza Suite 900",
-            "streetName": "Myrl Port",
-            "buildingNumber": "194",
-            "city": "Bergefort",
-            "zipcode": "47178-3992",
-            "country": "Colombia",
-            "country_code": "CO",
-            "latitude": -55.09547,
-            "longitude": -32.516823
+            "street": "37240 Graham Ridge",
+            "streetName": "Mohr Pine",
+            "buildingNumber": "6514",
+            "city": "Port Eleanora",
+            "zipcode": "67501-0387",
+            "country": "Vatican City",
+            "country_code": "VA",
+            "latitude": -66.536191,
+            "longitude": 70.769641
         }
     ]
 }
@@ -1297,10 +1297,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "American Express",
-            "number": "4556275011262464",
-            "expiration": "04/27",
-            "owner": "Donato Lehner"
+            "type": "Visa",
+            "number": "4024007163300766",
+            "expiration": "10/27",
+            "owner": "Therese Rice"
         }
     ]
 }
@@ -1339,8 +1339,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Hic neque minima et in.",
-            "description": "Et enim est repudiandae qui. Amet qui autem ut molestiae qui sint. Omnis animi nesciunt aut illum et tempore. Aut quos ut aut eveniet harum.",
+            "title": "Quia aut minima harum eum.",
+            "description": "Minus veritatis et ut molestiae ea sequi itaque nostrum. Vero quo qui facilis eius similique nobis magni.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -1365,7 +1365,7 @@ print(result)
 #### Expected Output
 
 ```text
-'status'
+सुनो रे दुखी आत्माओ परेशानियों को ऐसे इग्नोर करो जैसे शादियों में खाना खाते वक़्त video वाले को करते हो😆🤣😋😉 
 ```
 
 ### 19. Get Jokes
@@ -1389,7 +1389,10 @@ print(result)
 #### Expected Output
 
 ```text
-To whoever stole my copy of Microsoft Office, I will find you. You have my Word!
+Judge: "I sentence you to the maximum punishment..."
+Me (thinking): "Please be death, please be death..."
+Judge: "Learn Java!"
+Me: "Damn."
 ```
 
 ### 20. Get Uselessfact
@@ -1410,7 +1413,7 @@ print(result)
 #### Expected Output
 
 ```text
-Barbie`s full name is Barbara Millicent Roberts.
+The citrus soda 7-UP was created in 1929; `7` was selected after the original 7-ounce containers and `UP` for the direction of the bubbles.
 ```
 
 ### 21. Get Word Definitions
@@ -1492,8 +1495,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4811,
-        "forks_count": 2802
+        "stargazers_count": 4812,
+        "forks_count": 2803
     },
     {
         "name": "PokemonGo-Bot",
@@ -1502,7 +1505,7 @@ print(result)
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
         "stargazers_count": 3874,
-        "forks_count": 1542
+        "forks_count": 1541
     }
 ]
 ```
@@ -1525,7 +1528,7 @@ print(result)
 #### Expected Output
 
 ```text
-जुबान मेरी कड़वी मगर दिल साफ है, कौन कब बदला सबका हिसाब है।
+मोहब्बत का नतीजा….. दुनिया में हमने बुरा देखा, जिन्हे दावा था वफ़ा का, उन्हें भी हमने बेवफा देखा…
 ```
 
 ### 24. Hug
@@ -1554,8 +1557,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Kantai Collection: KanColle",
-        "url": "https://nekos.best/api/v2/hug/56886a54-ef3f-4947-b069-494af839f70c.gif"
+        "anime_name": "Aikatsu Stars",
+        "url": "https://nekos.best/api/v2/hug/54243578-3314-414e-9e49-6f3f15872041.gif"
     }
 ]
 ```
@@ -1578,7 +1581,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/qtx5y92z953e1.gif?width=320&crop=smart&format=png8&s=d6476f0588c58c4bbb7f7f35297e243838f0600c
+https://preview.redd.it/l5plq33udp2e1.png?width=960&crop=smart&auto=webp&s=6147d81f93ea86de7961ebffe58f72c2646a0625
 ```
 
 ### 26. Neko
@@ -1618,22 +1621,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/52912467",
-            "artist_name": "\u3072\u3088\u308d\u3046",
-            "source_url": "https://www.pixiv.net/en/artworks/88907130",
-            "url": "https://nekos.best/api/v2/neko/2bc98490-e0b1-44d6-bb91-e3c8b014d65a.png"
+            "artist_href": "https://www.pixiv.net/en/users/2414926",
+            "artist_name": "Aimu",
+            "source_url": "https://www.pixiv.net/en/artworks/81941021",
+            "url": "https://nekos.best/api/v2/neko/7fc33522-8fce-452b-851a-c2a5a6de8447.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/4364096",
-            "artist_name": "\u3082\u3061",
-            "source_url": "https://www.pixiv.net/en/artworks/82562547",
-            "url": "https://nekos.best/api/v2/neko/25fa2ca9-20dc-429c-8c11-34a9cac33cde.png"
+            "artist_href": "https://www.pixiv.net/en/users/23209228",
+            "artist_name": "\u305f\u3053\u304f\u3089\u3052",
+            "source_url": "https://www.pixiv.net/en/artworks/94171062",
+            "url": "https://nekos.best/api/v2/neko/b6901d66-ae0e-4b6f-a9c5-f228fe191cd7.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/41052795",
-            "artist_name": "\u306f\u306a\u3056\u308f",
-            "source_url": "https://www.pixiv.net/en/artworks/95363911",
-            "url": "https://nekos.best/api/v2/neko/ac8ed386-a1b1-4d3d-9d68-052c12108687.png"
+            "artist_href": "https://www.pixiv.net/en/users/27062290",
+            "artist_name": "Yuja",
+            "source_url": "https://www.pixiv.net/en/artworks/91828114",
+            "url": "https://nekos.best/api/v2/neko/4e7de653-b635-4f61-9a40-ab6400a43019.png"
         }
     ]
 }
@@ -1709,9 +1712,9 @@ print(result)
 #### Expected Output
 
 ```text
-Trouble is only opportunity in work clothes.
+None knows the weight of another's burden.
 
-author - Henry J. Kaiser
+author - George Herbert
 ```
 
 ### 29. Random Word
@@ -1754,8 +1757,8 @@ print(result)
 
 ```json
 {
-    "riddle": "Weight in my belly, Trees on my back. Nails in my ribs, Feet I do lack.",
-    "answer": "I am a ship"
+    "riddle": "What can go up and come down without moving?",
+    "answer": "The temperature"
 }
 ```
 
@@ -1802,7 +1805,7 @@ print(result)
             "link": "https://stackoverflow.com/users/14597469/senem-sedef"
         },
         "is_answered": false,
-        "view_count": 124,
+        "view_count": 125,
         "answer_count": 0,
         "score": 0,
         "last_activity_date": 1701515081,
@@ -1829,7 +1832,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 1988,
+        "view_count": 1989,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1854,7 +1857,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32655,
+        "view_count": 32656,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1971,7 +1974,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_h6t63brJ.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_UEtT1F7Z.jpg
 ```
 
 
