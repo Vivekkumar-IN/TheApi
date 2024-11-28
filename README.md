@@ -72,7 +72,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
 | [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
 | [17. Get Fake Images](#17-get-fake-images) | ✅
-| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ❌
 | [19. Get Jokes](#19-get-jokes) | ✅
 | [20. Get Uselessfact](#20-get-uselessfact) | ✅
 | [21. Get Word Definitions](#21-get-word-definitions) | ✅
@@ -83,12 +83,12 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [26. Neko](#26-neko) | ✅
 | [27. Pypi](#27-pypi) | ✅
 | [28. Quote](#28-quote) | ✅
-| [29. Random Word](#29-random-word) | ❌
+| [29. Random Word](#29-random-word) | ✅
 | [30. Riddle](#30-riddle) | ✅
 | [31. Stackoverflow Search](#31-stackoverflow-search) | ✅
 | [32. Upload Image](#32-upload-image) | ✅
 | [33. Wikipedia](#33-wikipedia) | ✅
-| [34. Words](#34-words) | ❌
+| [34. Words](#34-words) | ✅
 | [35. Write](#35-write) | ✅
 
 
@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "Even if you can't walk or stand and even if you can't have kids, I'll still marry you, I'll always stay by your side.",
+    "content": "It\u2019ll be fine. I\u2019m the strongest there is, after all.",
     "anime": {
-        "id": 622,
-        "name": "Angel Beats!"
+        "id": 988,
+        "name": "Jujutsu Kaisen"
     },
     "character": {
-        "id": 1806,
-        "name": "Hideki Hinata"
+        "id": 2534,
+        "name": "Satoru Gojo"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "nancy",
+    "file_name": "april",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/nancy.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/april.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/150_Pokemon_from_Pokemon_Stadium.png/330px-150_Pokemon_from_Pokemon_Stadium.png
 https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
-https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/150_Pokemon_from_Pokemon_Stadium.png/330px-150_Pokemon_from_Pokemon_Stadium.png
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_6kvzauFy.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_4Yz9UaZA.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_yDPDvlbp.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_tbf6pwqM.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/agk.gif
+https://cdn2.thecatapi.com/images/JYLVJkyq_.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/5350-13889-29214.jpg
+https://random.dog/1ac1c3b2-b1e2-4ad5-9668-95cb8183646b.jpg
 ```
 
 ### 8. Domain Search
@@ -293,6 +293,18 @@ print(result)
 ```json
 {
     "domains": [
+        {
+            "domain": "pokemon-battle-arena.com",
+            "create_date": "2024-11-27T09:08:01.526222",
+            "update_date": "2024-11-27T09:08:01.526225",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
         {
             "domain": "pokemon-room.com",
             "create_date": "2024-11-23T21:12:22.020090",
@@ -1037,22 +1049,10 @@ print(result)
             "CNAME": null,
             "MX": null,
             "TXT": null
-        },
-        {
-            "domain": "pokemon-tcg-pocket.com",
-            "create_date": "2024-06-05T23:00:55.523220",
-            "update_date": "2024-06-05T23:00:55.523222",
-            "country": null,
-            "isDead": "False",
-            "A": null,
-            "NS": null,
-            "CNAME": null,
-            "MX": null,
-            "TXT": null
         }
     ],
-    "total": 353,
-    "time": "9",
+    "total": 354,
+    "time": "3",
     "next_page": null
 }
 ```
@@ -1104,7 +1104,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=61
+https://randomfox.ca/?i=98
 ```
 
 ### 11. Gen Qr
@@ -1130,7 +1130,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/mdNBpucB_qr.png
+/home/runner/work/TheApi/TheApi/downloads/2HphzEh5_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -1169,7 +1169,7 @@ print(result)
 #### Expected Output
 
 ```text
-One of the top five regrets people have is that they didn't stay in contact with friends.
+The best nights out are when people around you are simply having fun.
 ```
 
 ### 14. Get Btc Value
@@ -1201,22 +1201,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "88,582.663",
-        "rate_float": 88582.6632,
+        "rate": "90,417.746",
+        "rate_float": 90417.7463,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "73,873.725",
-        "rate_float": 73873.7245,
+        "rate": "75,325.052",
+        "rate_float": 75325.0521,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "92,894.062",
-        "rate_float": 92894.0624,
+        "rate": "95,461.15",
+        "rate_float": 95461.1497,
         "symbol": "&#36;"
     }
 }
@@ -1253,15 +1253,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "37240 Graham Ridge",
-            "streetName": "Mohr Pine",
-            "buildingNumber": "6514",
-            "city": "Port Eleanora",
-            "zipcode": "67501-0387",
-            "country": "Vatican City",
-            "country_code": "VA",
-            "latitude": -66.536191,
-            "longitude": 70.769641
+            "street": "563 Shaun Ports Suite 185",
+            "streetName": "Crist Expressway",
+            "buildingNumber": "27943",
+            "city": "Lake Stacy",
+            "zipcode": "92814-1482",
+            "country": "Guernsey",
+            "country_code": "GG",
+            "latitude": 79.391277,
+            "longitude": 39.411257
         }
     ]
 }
@@ -1297,10 +1297,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "Visa",
-            "number": "4024007163300766",
-            "expiration": "10/27",
-            "owner": "Therese Rice"
+            "type": "MasterCard",
+            "number": "5298326173907485",
+            "expiration": "05/27",
+            "owner": "Lelia Schamberger"
         }
     ]
 }
@@ -1339,8 +1339,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Quia aut minima harum eum.",
-            "description": "Minus veritatis et ut molestiae ea sequi itaque nostrum. Vero quo qui facilis eius similique nobis magni.",
+            "title": "Molestiae sed velit et.",
+            "description": "Corrupti consequatur consequuntur eum ea voluptatem earum. Nostrum culpa esse aperiam voluptas perferendis. Quas dolores sed molestiae distinctio et doloremque et.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -1365,7 +1365,7 @@ print(result)
 #### Expected Output
 
 ```text
-सुनो रे दुखी आत्माओ परेशानियों को ऐसे इग्नोर करो जैसे शादियों में खाना खाते वक़्त video वाले को करते हो😆🤣😋😉 
+'status'
 ```
 
 ### 19. Get Jokes
@@ -1389,10 +1389,7 @@ print(result)
 #### Expected Output
 
 ```text
-Judge: "I sentence you to the maximum punishment..."
-Me (thinking): "Please be death, please be death..."
-Judge: "Learn Java!"
-Me: "Damn."
+Algorithm: A word used by programmers when they don't want to explain how their code works.
 ```
 
 ### 20. Get Uselessfact
@@ -1413,7 +1410,7 @@ print(result)
 #### Expected Output
 
 ```text
-The citrus soda 7-UP was created in 1929; `7` was selected after the original 7-ounce containers and `UP` for the direction of the bubbles.
+The top 3 health-related searches on the Internet are (in this order): Depression, Allergies, & Cancer.
 ```
 
 ### 21. Get Word Definitions
@@ -1496,7 +1493,7 @@ print(result)
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
         "stargazers_count": 4812,
-        "forks_count": 2803
+        "forks_count": 2804
     },
     {
         "name": "PokemonGo-Bot",
@@ -1528,7 +1525,7 @@ print(result)
 #### Expected Output
 
 ```text
-मोहब्बत का नतीजा….. दुनिया में हमने बुरा देखा, जिन्हे दावा था वफ़ा का, उन्हें भी हमने बेवफा देखा…
+कमी नहीं दिखेगी कभी दुसरों की शान में; जिस दिन झांकेगा अपने गिरेबान में…
 ```
 
 ### 24. Hug
@@ -1557,8 +1554,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Aikatsu Stars",
-        "url": "https://nekos.best/api/v2/hug/54243578-3314-414e-9e49-6f3f15872041.gif"
+        "anime_name": "Wotaku ni Koi wa Muzukashii",
+        "url": "https://nekos.best/api/v2/hug/47e30b67-b979-4dd5-9b06-720e5118f088.gif"
     }
 ]
 ```
@@ -1581,7 +1578,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/l5plq33udp2e1.png?width=960&crop=smart&auto=webp&s=6147d81f93ea86de7961ebffe58f72c2646a0625
+https://preview.redd.it/wym36nrgdi3e1.png?width=320&crop=smart&auto=webp&s=7d6634d5ae6921ecb4244f803f5b99c356b1f4f5
 ```
 
 ### 26. Neko
@@ -1621,22 +1618,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/2414926",
-            "artist_name": "Aimu",
-            "source_url": "https://www.pixiv.net/en/artworks/81941021",
-            "url": "https://nekos.best/api/v2/neko/7fc33522-8fce-452b-851a-c2a5a6de8447.png"
+            "artist_href": "https://www.pixiv.net/en/users/9155411",
+            "artist_name": "\u308b\u304b\u3053",
+            "source_url": "https://www.pixiv.net/en/artworks/94554340",
+            "url": "https://nekos.best/api/v2/neko/1c560d0d-bec1-47b9-b063-45fa2b5d5f87.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/23209228",
-            "artist_name": "\u305f\u3053\u304f\u3089\u3052",
-            "source_url": "https://www.pixiv.net/en/artworks/94171062",
-            "url": "https://nekos.best/api/v2/neko/b6901d66-ae0e-4b6f-a9c5-f228fe191cd7.png"
+            "artist_href": "https://www.pixiv.net/en/users/10635423",
+            "artist_name": "\u305f\u3089\u3082\u3055\u3089\u3060",
+            "source_url": "https://www.pixiv.net/en/artworks/87469506",
+            "url": "https://nekos.best/api/v2/neko/b0491c9d-c82c-4de4-b4db-ea23c94c35f5.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/27062290",
-            "artist_name": "Yuja",
-            "source_url": "https://www.pixiv.net/en/artworks/91828114",
-            "url": "https://nekos.best/api/v2/neko/4e7de653-b635-4f61-9a40-ab6400a43019.png"
+            "artist_href": "https://www.pixiv.net/en/users/14063448",
+            "artist_name": "\u3080\u3089\u306e",
+            "source_url": "https://www.pixiv.net/en/artworks/99779597",
+            "url": "https://nekos.best/api/v2/neko/0e305691-a100-4dfc-92f9-9e0123e28e23.png"
         }
     ]
 }
@@ -1712,9 +1709,9 @@ print(result)
 #### Expected Output
 
 ```text
-None knows the weight of another's burden.
+Our most intimate friend is not he to whom we show the worst, but the best of our nature.
 
-author - George Herbert
+author - Nathaniel Hawthorne
 ```
 
 ### 29. Random Word
@@ -1735,7 +1732,7 @@ print(result)
 #### Expected Output
 
 ```text
-name 'RequestError' is not defined
+joinable
 ```
 
 ### 30. Riddle
@@ -1757,8 +1754,8 @@ print(result)
 
 ```json
 {
-    "riddle": "What can go up and come down without moving?",
-    "answer": "The temperature"
+    "riddle": "What never gets any wetter, no matter how much it rains?",
+    "answer": "The sea"
 }
 ```
 
@@ -1832,7 +1829,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 1989,
+        "view_count": 1993,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1857,7 +1854,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32656,
+        "view_count": 32657,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1946,7 +1943,8 @@ print(result)
 #### Expected Output
 
 ```text
-Request failed: 500, message='Internal Server Error', url='https://random-word-api.herokuapp.com/word?number=2'
+bimethyl
+antifashions
 ```
 
 ### 35. Write
@@ -1974,7 +1972,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_UEtT1F7Z.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_Y3uWSVco.jpg
 ```
 
 
