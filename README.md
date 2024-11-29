@@ -72,7 +72,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
 | [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
 | [17. Get Fake Images](#17-get-fake-images) | ✅
-| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ❌
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
 | [19. Get Jokes](#19-get-jokes) | ✅
 | [20. Get Uselessfact](#20-get-uselessfact) | ✅
 | [21. Get Word Definitions](#21-get-word-definitions) | ✅
@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "It\u2019ll be fine. I\u2019m the strongest there is, after all.",
+    "content": "I am a single bullet. It has no heart. Therefore, it does not think. It just flies straight towards its target.",
     "anime": {
-        "id": 988,
-        "name": "Jujutsu Kaisen"
+        "id": 961,
+        "name": "Hidan no Aria"
     },
     "character": {
-        "id": 2534,
-        "name": "Satoru Gojo"
+        "id": 2251,
+        "name": "Kanzaki H Aria"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "april",
+    "file_name": "cally",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/april.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/cally.jpg"
 }
 ```
 
@@ -173,8 +173,8 @@ print(result)
 
 ```text
 https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
-http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
-https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/150_Pokemon_from_Pokemon_Stadium.png/330px-150_Pokemon_from_Pokemon_Stadium.png
+http://images6.fanpop.com/image/photos/39400000/1st-generation-pokemon-39423803-4724-2835.jpg
+https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_4Yz9UaZA.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_QqyzQxhT.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_tbf6pwqM.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_8vVqtheI.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/JYLVJkyq_.jpg
+https://cdn2.thecatapi.com/images/a2i.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/1ac1c3b2-b1e2-4ad5-9668-95cb8183646b.jpg
+https://random.dog/xnBQd3u.mp4
 ```
 
 ### 8. Domain Search
@@ -293,6 +293,49 @@ print(result)
 ```json
 {
     "domains": [
+        {
+            "domain": "pokemon-insurgence.com",
+            "create_date": "2024-11-28T23:57:45.053478",
+            "update_date": "2024-11-28T23:57:45.053481",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-cheats.com",
+            "create_date": "2024-11-28T23:57:45.053290",
+            "update_date": "2024-11-28T23:57:45.053292",
+            "country": null,
+            "isDead": "False",
+            "A": null,
+            "NS": null,
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
+        {
+            "domain": "pokemon-worlds.com",
+            "create_date": "2024-11-28T23:57:45.053698",
+            "update_date": "2024-11-28T23:57:45.053700",
+            "country": "CA",
+            "isDead": "False",
+            "A": [
+                "23.227.38.70"
+            ],
+            "NS": [
+                "ns-cloud-b1.googledomains.com",
+                "ns-cloud-b2.googledomains.com",
+                "ns-cloud-b3.googledomains.com",
+                "ns-cloud-b4.googledomains.com"
+            ],
+            "CNAME": null,
+            "MX": null,
+            "TXT": null
+        },
         {
             "domain": "pokemon-battle-arena.com",
             "create_date": "2024-11-27T09:08:01.526222",
@@ -1013,46 +1056,10 @@ print(result)
             "CNAME": null,
             "MX": null,
             "TXT": null
-        },
-        {
-            "domain": "pokemon-il.com",
-            "create_date": "2024-06-23T14:23:12.231846",
-            "update_date": "2024-06-23T14:23:12.231849",
-            "country": null,
-            "isDead": "False",
-            "A": null,
-            "NS": null,
-            "CNAME": null,
-            "MX": null,
-            "TXT": null
-        },
-        {
-            "domain": "pokemon-ro.com",
-            "create_date": "2024-06-17T17:54:46.884838",
-            "update_date": "2024-06-17T17:54:46.884840",
-            "country": null,
-            "isDead": "False",
-            "A": null,
-            "NS": null,
-            "CNAME": null,
-            "MX": null,
-            "TXT": null
-        },
-        {
-            "domain": "pokemon-pg.com",
-            "create_date": "2024-06-16T06:26:10.992663",
-            "update_date": "2024-06-16T06:26:10.992665",
-            "country": null,
-            "isDead": "False",
-            "A": null,
-            "NS": null,
-            "CNAME": null,
-            "MX": null,
-            "TXT": null
         }
     ],
-    "total": 354,
-    "time": "3",
+    "total": 357,
+    "time": "23",
     "next_page": null
 }
 ```
@@ -1104,7 +1111,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=98
+https://randomfox.ca/?i=76
 ```
 
 ### 11. Gen Qr
@@ -1130,7 +1137,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/2HphzEh5_qr.png
+/home/runner/work/TheApi/TheApi/downloads/raBDOr6A_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -1169,7 +1176,7 @@ print(result)
 #### Expected Output
 
 ```text
-The best nights out are when people around you are simply having fun.
+Only those who attempt the impossible can achieve the absurd.
 ```
 
 ### 14. Get Btc Value
@@ -1201,22 +1208,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "90,417.746",
-        "rate_float": 90417.7463,
+        "rate": "91,496.957",
+        "rate_float": 91496.9573,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "75,325.052",
-        "rate_float": 75325.0521,
+        "rate": "76,065.851",
+        "rate_float": 76065.8508,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "95,461.15",
-        "rate_float": 95461.1497,
+        "rate": "96,620.144",
+        "rate_float": 96620.1438,
         "symbol": "&#36;"
     }
 }
@@ -1253,15 +1260,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "563 Shaun Ports Suite 185",
-            "streetName": "Crist Expressway",
-            "buildingNumber": "27943",
-            "city": "Lake Stacy",
-            "zipcode": "92814-1482",
-            "country": "Guernsey",
-            "country_code": "GG",
-            "latitude": 79.391277,
-            "longitude": 39.411257
+            "street": "287 Jakubowski Freeway Suite 218",
+            "streetName": "Gusikowski Inlet",
+            "buildingNumber": "4526",
+            "city": "Port Arielchester",
+            "zipcode": "34497",
+            "country": "Costa Rica",
+            "country_code": "CR",
+            "latitude": -86.01364,
+            "longitude": -115.609995
         }
     ]
 }
@@ -1297,10 +1304,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "5298326173907485",
-            "expiration": "05/27",
-            "owner": "Lelia Schamberger"
+            "type": "Visa",
+            "number": "2430458981775493",
+            "expiration": "12/26",
+            "owner": "Jamison Fadel"
         }
     ]
 }
@@ -1339,8 +1346,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Molestiae sed velit et.",
-            "description": "Corrupti consequatur consequuntur eum ea voluptatem earum. Nostrum culpa esse aperiam voluptas perferendis. Quas dolores sed molestiae distinctio et doloremque et.",
+            "title": "Sint harum iure libero nihil.",
+            "description": "Laboriosam et impedit illum autem corrupti debitis. Accusamus expedita ea nisi accusamus incidunt dicta enim minima. Sed et ipsa laudantium voluptatibus eius magnam et.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -1365,7 +1372,7 @@ print(result)
 #### Expected Output
 
 ```text
-'status'
+नेट प्लान के सस्ते होने से चोरों का सबसे ज्यादा नुकसान हुआ हैं जिस घर में चोरी करने जाते हैं कोई न कोई जाग रहा होता हैं 😆🤣😋😉 
 ```
 
 ### 19. Get Jokes
@@ -1389,7 +1396,11 @@ print(result)
 #### Expected Output
 
 ```text
-Algorithm: A word used by programmers when they don't want to explain how their code works.
+Two C strings walk into a bar.
+The bartender asks "What can I get ya?"
+The first string says "I'll have a gin and tonic."
+The second string thinks for a minute, then says "I'll take a tequila sunriseJF()#$JF(#)$(@J#()$@#())!*FNIN!OBN134ufh1ui34hf9813f8h8384h981h3984h5F!##@"
+The first string apologizes, "You'll have to excuse my friend, he's not null-terminated."
 ```
 
 ### 20. Get Uselessfact
@@ -1410,7 +1421,7 @@ print(result)
 #### Expected Output
 
 ```text
-The top 3 health-related searches on the Internet are (in this order): Depression, Allergies, & Cancer.
+The mask worn by Michael Myers in the original "Halloween" was actually a Captain Kirk mask painted white.
 ```
 
 ### 21. Get Word Definitions
@@ -1492,8 +1503,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4812,
-        "forks_count": 2804
+        "stargazers_count": 4815,
+        "forks_count": 2806
     },
     {
         "name": "PokemonGo-Bot",
@@ -1501,7 +1512,7 @@ print(result)
         "description": "The Pokemon Go Bot, baking with community.",
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
-        "stargazers_count": 3874,
+        "stargazers_count": 3875,
         "forks_count": 1541
     }
 ]
@@ -1525,7 +1536,7 @@ print(result)
 #### Expected Output
 
 ```text
-कमी नहीं दिखेगी कभी दुसरों की शान में; जिस दिन झांकेगा अपने गिरेबान में…
+चुप रहना ताक़त हैं मेरी कमज़ोरी नहीं, अकेले रहना आदत हैं मेरी मजबूरी नहीं…
 ```
 
 ### 24. Hug
@@ -1554,8 +1565,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Wotaku ni Koi wa Muzukashii",
-        "url": "https://nekos.best/api/v2/hug/47e30b67-b979-4dd5-9b06-720e5118f088.gif"
+        "anime_name": "Hibike! Euphonium",
+        "url": "https://nekos.best/api/v2/hug/b30aa74d-5d1c-4225-a242-30c5ed0f09f2.gif"
     }
 ]
 ```
@@ -1578,7 +1589,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/wym36nrgdi3e1.png?width=320&crop=smart&auto=webp&s=7d6634d5ae6921ecb4244f803f5b99c356b1f4f5
+https://preview.redd.it/2m0hjvmylp3e1.gif?width=640&crop=smart&format=png8&s=d45a0b5d003e2d53c4c8669453538667dadba3fc
 ```
 
 ### 26. Neko
@@ -1618,22 +1629,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/9155411",
-            "artist_name": "\u308b\u304b\u3053",
-            "source_url": "https://www.pixiv.net/en/artworks/94554340",
-            "url": "https://nekos.best/api/v2/neko/1c560d0d-bec1-47b9-b063-45fa2b5d5f87.png"
+            "artist_href": "https://www.pixiv.net/en/users/53305649",
+            "artist_name": "\u307f\u306a\u3082",
+            "source_url": "https://www.pixiv.net/en/artworks/91330454",
+            "url": "https://nekos.best/api/v2/neko/dfe2c6a3-460b-47aa-b8eb-ac4c80631ba7.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/10635423",
-            "artist_name": "\u305f\u3089\u3082\u3055\u3089\u3060",
-            "source_url": "https://www.pixiv.net/en/artworks/87469506",
-            "url": "https://nekos.best/api/v2/neko/b0491c9d-c82c-4de4-b4db-ea23c94c35f5.png"
+            "artist_href": "https://www.pixiv.net/en/users/56437899",
+            "artist_name": "\u307e\u3057\u308d\u3057\u304d",
+            "source_url": "https://www.pixiv.net/en/artworks/90473274",
+            "url": "https://nekos.best/api/v2/neko/82da987e-5e9e-47dc-993f-bbb1e008af00.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/14063448",
-            "artist_name": "\u3080\u3089\u306e",
-            "source_url": "https://www.pixiv.net/en/artworks/99779597",
-            "url": "https://nekos.best/api/v2/neko/0e305691-a100-4dfc-92f9-9e0123e28e23.png"
+            "artist_href": "https://www.pixiv.net/en/users/15975325",
+            "artist_name": "The Des Alizes",
+            "source_url": "https://www.pixiv.net/en/artworks/86710277",
+            "url": "https://nekos.best/api/v2/neko/bb3e2d03-7e43-419f-8bcd-f38bf83e612b.png"
         }
     ]
 }
@@ -1709,9 +1720,9 @@ print(result)
 #### Expected Output
 
 ```text
-Our most intimate friend is not he to whom we show the worst, but the best of our nature.
+Don't talk about what you have done or what you are going to do.
 
-author - Nathaniel Hawthorne
+author - Thomas Jefferson
 ```
 
 ### 29. Random Word
@@ -1732,7 +1743,7 @@ print(result)
 #### Expected Output
 
 ```text
-joinable
+beading
 ```
 
 ### 30. Riddle
@@ -1754,8 +1765,8 @@ print(result)
 
 ```json
 {
-    "riddle": "What never gets any wetter, no matter how much it rains?",
-    "answer": "The sea"
+    "riddle": "I know a word of letters three. Add two, and fewer there will be.",
+    "answer": "The word \u201cFew\u201c"
 }
 ```
 
@@ -1829,7 +1840,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 1993,
+        "view_count": 1996,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1943,8 +1954,8 @@ print(result)
 #### Expected Output
 
 ```text
-bimethyl
-antifashions
+lunately
+gestured
 ```
 
 ### 35. Write
@@ -1972,7 +1983,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_Y3uWSVco.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_PqFYVLa9.jpg
 ```
 
 
