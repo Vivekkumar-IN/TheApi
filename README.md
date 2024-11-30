@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "Don't you think it's beautiful? That rosy red that spreads only where the body is wounded. Shall I paint you in that lovely red... little boy?",
+    "content": "A man who raises his hands on a woman is trash. If I have to become trash in order to survive... It'll be just like dying.",
     "anime": {
-        "id": 571,
-        "name": "Claymore"
+        "id": 222,
+        "name": "Bleach"
     },
     "character": {
-        "id": 959,
-        "name": "Ophelia"
+        "id": 2236,
+        "name": "Abarai Renji"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "burglar",
+    "file_name": "driver",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/burglar.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/driver.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
 https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
-https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
+https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_UQY7THDr.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_YFSm8FMs.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_YsfUICPo.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_VOB0WjSF.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/ui.jpg
+https://cdn2.thecatapi.com/images/a4g.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/716dcfc1-284a-4e41-8305-91bd2eb61280.gif
+https://random.dog/42e97d6a-c825-4191-9434-32cea191fc21.jpeg
 ```
 
 ### 8. Domain Search
@@ -1059,7 +1059,7 @@ print(result)
         }
     ],
     "total": 357,
-    "time": "3",
+    "time": "4",
     "next_page": null
 }
 ```
@@ -1111,7 +1111,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=62
+https://randomfox.ca/?i=64
 ```
 
 ### 11. Gen Qr
@@ -1140,7 +1140,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/ou1bIzsT_qr.png
+/home/runner/work/TheApi/TheApi/downloads/bjwRoLCP_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -1179,7 +1179,7 @@ print(result)
 #### Expected Output
 
 ```text
-Identify sources of happiness.
+Everyone has their down days. Don't take it out on innocent bystanders.
 ```
 
 ### 14. Get Btc Value
@@ -1211,22 +1211,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "91,188.979",
-        "rate_float": 91188.9789,
+        "rate": "91,216.364",
+        "rate_float": 91216.364,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "75,769.016",
-        "rate_float": 75769.0159,
+        "rate": "75,791.77",
+        "rate_float": 75791.7702,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "96,476.672",
-        "rate_float": 96476.6724,
+        "rate": "96,505.645",
+        "rate_float": 96505.6454,
         "symbol": "&#36;"
     }
 }
@@ -1263,15 +1263,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "38849 Brekke Bypass",
-            "streetName": "Nitzsche Views",
-            "buildingNumber": "784",
-            "city": "Evangelineport",
-            "zipcode": "64958-4133",
-            "country": "El Salvador",
-            "country_code": "SV",
-            "latitude": -74.708122,
-            "longitude": 35.851033
+            "street": "740 Gleason Dam",
+            "streetName": "Bruen Inlet",
+            "buildingNumber": "125",
+            "city": "Rodville",
+            "zipcode": "90752",
+            "country": "Madagascar",
+            "country_code": "MG",
+            "latitude": 49.378333,
+            "longitude": -126.438744
         }
     ]
 }
@@ -1307,10 +1307,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "JCB",
-            "number": "4916076465749682",
-            "expiration": "12/26",
-            "owner": "Omer Lind"
+            "type": "American Express",
+            "number": "2221151383909249",
+            "expiration": "11/25",
+            "owner": "Agustin Terry"
         }
     ]
 }
@@ -1349,8 +1349,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Numquam sunt tenetur alias.",
-            "description": "Ipsam quia quis qui. Similique cupiditate tenetur commodi quas. Omnis facere deleniti quasi odio nihil doloribus. Tempore quis asperiores quo tempora.",
+            "title": "Dolore laudantium qui quia.",
+            "description": "Dolores tempore est nihil cum molestias vel consequatur. Maxime modi aliquam necessitatibus ut neque omnis. Sit natus omnis omnis odit quasi assumenda et.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -1375,7 +1375,7 @@ print(result)
 #### Expected Output
 
 ```text
-सभी लड़कियों से अनुरोध हैं कि कृपया लंबे लंबे स्लोगन लिखे हुए टी-शर्ट ना पहने दरअसल वो स्लोगन पढ़ने में हम लड़कों को समय लगता हैं और लोगों को लगता हैं कि हम उन्हें घूर रहे हैं लड़कियां ताड़ रहे हैं😆🤣😋😉 
+एक मोटरसाइकिल वाले ने  पता पूछने के लिए संता से पूछा : Excuse me मुझे लाल किला जाना है  संता : तो जा ना भाई ऐसे हर किसी को बताते बताते जायेगा तो पहुँचेगा कब? 😆🤣😋😉 
 ```
 
 ### 19. Get Jokes
@@ -1399,7 +1399,11 @@ print(result)
 #### Expected Output
 
 ```text
-I have a fish that can breakdance! Only for 20 seconds though, and only once.
+Four engineers get into a car. The car won't start.
+The Mechanical engineer says "It's a broken starter".
+The Electrical engineer says "Dead battery".
+The Chemical engineer says "Impurities in the gasoline".
+The IT engineer says "Hey guys, I have an idea: How about we all get out of the car and get back in".
 ```
 
 ### 20. Get Uselessfact
@@ -1420,7 +1424,7 @@ print(result)
 #### Expected Output
 
 ```text
-It has NEVER rained in Calama, a town in the Atacama Desert of Chile.
+Oak trees do not produce acorns until they are fifty years of age or older.
 ```
 
 ### 21. Get Word Definitions
@@ -1535,7 +1539,7 @@ print(result)
 #### Expected Output
 
 ```text
-हम इतने खूबसूरत तो नही है, मगर हाँ..जिसे आँख भर के देख ले उसे उलझन में ड़ाल देते हैं।
+ये रोटी भी सस्ती नहीं है यारो, कोई इसे कमाने को दौड़ता है तो कोई इसे पचाने को..
 ```
 
 ### 24. Hug
@@ -1564,8 +1568,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Kawaii Dake ja Nai Shikimori-san",
-        "url": "https://nekos.best/api/v2/hug/929963f4-0d6d-4d75-b93f-03f4d25c7419.gif"
+        "anime_name": "Original (???)",
+        "url": "https://nekos.best/api/v2/hug/e93c3408-fa92-43ea-a6ff-106a5d88de85.gif"
     }
 ]
 ```
@@ -1588,7 +1592,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/vxzxrhtjku3e1.png?width=1080&crop=smart&auto=webp&s=7b1ddd98ef68c32ad544b6c730159eceb6045249
+https://preview.redd.it/h49jx3u77n3e1.png?width=1080&crop=smart&auto=webp&s=85f7d646c43e4306d1448d915a29214f6ec24999
 ```
 
 ### 26. Neko
@@ -1628,22 +1632,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/40927409",
-            "artist_name": "\u5922\u898b\u308b\u96f2",
-            "source_url": "https://www.pixiv.net/en/artworks/86938618",
-            "url": "https://nekos.best/api/v2/neko/a31b5a01-e9e3-4203-afd8-1a6b70511ef1.png"
+            "artist_href": "https://www.pixiv.net/en/users/46271917",
+            "artist_name": "Cynthia",
+            "source_url": "https://www.pixiv.net/en/artworks/88148474",
+            "url": "https://nekos.best/api/v2/neko/93498f13-abee-4dc4-8003-00772ba11b00.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/341818",
-            "artist_name": "motto",
-            "source_url": "https://www.pixiv.net/en/artworks/88209827",
-            "url": "https://nekos.best/api/v2/neko/615308b8-2d3f-40f4-98d4-14a414bf65fb.png"
+            "artist_href": "https://www.pixiv.net/en/users/16643815",
+            "artist_name": "\u30b7\u30e5\u30f4\u30a3",
+            "source_url": "https://www.pixiv.net/en/artworks/91790338",
+            "url": "https://nekos.best/api/v2/neko/27191713-b5f9-4902-94c6-76ac7faea9f0.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/65617238",
-            "artist_name": "izure",
-            "source_url": "https://www.pixiv.net/en/artworks/94148434",
-            "url": "https://nekos.best/api/v2/neko/86cb202b-ba87-4ef1-b76a-a061b70b75ec.png"
+            "artist_href": "https://www.pixiv.net/en/users/7321921",
+            "artist_name": "Nami",
+            "source_url": "https://www.pixiv.net/en/artworks/83870090",
+            "url": "https://nekos.best/api/v2/neko/b1d29e53-9cd4-4bb2-b591-edd7e8c866bc.png"
         }
     ]
 }
@@ -1719,9 +1723,9 @@ print(result)
 #### Expected Output
 
 ```text
-We are Divine enough to ask and we are important enough to receive.
+Important principles may, and must, be inflexible.
 
-author - Wayne Dyer
+author - Abraham Lincoln
 ```
 
 ### 29. Random Word
@@ -1742,7 +1746,7 @@ print(result)
 #### Expected Output
 
 ```text
-defeaters
+gawkishnesses
 ```
 
 ### 30. Riddle
@@ -1764,8 +1768,8 @@ print(result)
 
 ```json
 {
-    "riddle": "A king decided to let a prisoner try to escape the prison with his life. The king placed 2 marbles in a jar that was glued to a table. One of the marbles was supposed to be black, and one was supposed to be blue.  If the prisoner could pick the blue marble, he would escape the prison with his life. If he picked the black marble, he would be executed. However, the king was very mean, and he wickedly placed 2 black marbles in the jars and no blue marbles. The prisoner witnessed the king only putting 2 black marbles in the jars.  If the jar was not see-through and the jar was glued to the table and that the prisoner was mute so he could not say anything, how did he escape with his life?",
-    "answer": "The prisoner grabbed one of the marbles from the jar and concealed it in his hand. He then swallowed it, and picked up the other marble and showed everyone. The marble was black, and since the other marble was swallowed, it was assumed to be the blue one. So the mean king had to set him free"
+    "riddle": "I'm as big as an elephant, but lighter than a feather. What am I?",
+    "answer": "The Wind"
 }
 ```
 
@@ -1953,8 +1957,8 @@ print(result)
 #### Expected Output
 
 ```text
-decolonizes
-analyse
+craterlike
+commonweal
 ```
 
 ### 35. Write
@@ -1982,7 +1986,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_Dqmcnk5N.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_hfajMfzb.jpg
 ```
 
 
