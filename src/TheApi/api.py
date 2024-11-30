@@ -39,7 +39,7 @@ class TheApi:
             "neko_hug": "https://nekos.best/api/v2/hug?amount={}",
             "pdf": "https://api.stakdek.de/api",
             "pypi": "https://pypi.org/pypi",
-            "qr_gen": "https://api.stakdek.de/api/qr/gen?data={query}",
+            "qr_gen": "https://api.qrserver.com/v1",
             "quote": "https://api.quotable.io/random",
             "random_word": "https://random-word-api.herokuapp.com/word",
             "useless_fact": "https://uselessfacts.jsph.pl/api/v2/facts/random",
@@ -455,12 +455,15 @@ class TheApi:
 
         return FilePath(file_path)
 
-    async def gen_qr(self, query: str, file_path: str = None) -> str:
+    async def gen_qr(self, data: str, size: str = "150x150", foreground_color: str = "000000", background_color: str = "FFFFFF", file_path: str = None) -> str:
         """
-        Generates a QR code and saves it to the specified file path.
-
+        Generate a QR code using api.qrserver.com and save it as a PNG file.
+        
         Args:
-            query (str): The data to encode in the QR code.
+            data (str): The content for the QR code.
+            size (str): The size of the QR code in the format 'WIDTHxHEIGHT' (default: '150x150').
+            foreground_color (str): The color of the QR code (default: '000000' - black).
+            background_color (str): The background color of the QR code (default: 'FFFFFF' - white).
             file_path (str, optional): The file path to save the QR code.
                                        Defaults to "downloads/{random_str}_qr.png".
 
@@ -472,8 +475,18 @@ class TheApi:
 
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
+        url = f"{self.base_urls["qr_gen"]}/create-qr-code/"
+        params = {
+            "size": size,
+            "data": data,
+            "color": foreground_color,
+            "bgcolor": background_color
+        }
         qr_content = await self._make_request(
-            self.base_urls["qr_gen"].format(query=query), return_content=True
+            url=url,
+            method="GET",
+            params=params,
+            return_content=True,
         )
 
         async with aiofiles.open(file_path, "wb") as f:
