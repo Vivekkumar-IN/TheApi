@@ -475,7 +475,7 @@ class TheApi:
 
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-        url = f"{self.base_urls["qr_gen"]}/create-qr-code/"
+        url = f"{self.base_urls['qr_gen']}/create-qr-code/"
         params = {
             "size": size,
             "data": data,
