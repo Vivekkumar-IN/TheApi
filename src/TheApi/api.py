@@ -455,10 +455,17 @@ class TheApi:
 
         return FilePath(file_path)
 
-    async def gen_qr(self, data: str, size: str = "150x150", foreground_color: str = "000000", background_color: str = "FFFFFF", file_path: str = None) -> str:
+    async def gen_qr(
+        self,
+        data: str,
+        size: str = "150x150",
+        foreground_color: str = "000000",
+        background_color: str = "FFFFFF",
+        file_path: str = None,
+    ) -> str:
         """
         Generate a QR code using api.qrserver.com and save it as a PNG file.
-        
+
         Args:
             data (str): The content for the QR code.
             size (str): The size of the QR code in the format 'WIDTHxHEIGHT' (default: '150x150').
@@ -480,7 +487,7 @@ class TheApi:
             "size": size,
             "data": data,
             "color": foreground_color,
-            "bgcolor": background_color
+            "bgcolor": background_color,
         }
         qr_content = await self._make_request(
             url=url,
