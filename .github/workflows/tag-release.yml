@@ -32,18 +32,3 @@ jobs:
           git tag $tag_name
           git push origin $tag_name
 
-      - name: Create GitHub Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          release_name="Release v${{ github.event.inputs.version }}"
-          curl -s -X POST https://api.github.com/repos/${{ github.repository }}/releases \
-          -H "Authorization: token $GITHUB_TOKEN" \
-          -H "Content-Type: application/json" \
-          -d '{
-            "tag_name": "v${{ github.event.inputs.version }}",
-            "name": "'"${release_name}"'",
-            "body": "",
-            "draft": false,
-            "prerelease": false
-          }'
