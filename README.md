@@ -72,7 +72,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
 | [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
 | [17. Get Fake Images](#17-get-fake-images) | ✅
-| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ❌
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
 | [19. Get Jokes](#19-get-jokes) | ✅
 | [20. Get Uselessfact](#20-get-uselessfact) | ✅
 | [21. Get Word Definitions](#21-get-word-definitions) | ✅
@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "Failing to act, for fear of the risk, is no different than a living death. No matter what world you\u2019re in.",
+    "content": "Don't you think it's beautiful? That rosy red that spreads only where the body is wounded. Shall I paint you in that lovely red... little boy?",
     "anime": {
-        "id": 191,
-        "name": "Log Horizon"
+        "id": 571,
+        "name": "Claymore"
     },
     "character": {
-        "id": 1722,
-        "name": "Crusty"
+        "id": 959,
+        "name": "Ophelia"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "barry",
+    "file_name": "burglar",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/barry.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/burglar.jpg"
 }
 ```
 
@@ -173,8 +173,8 @@ print(result)
 
 ```text
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-http://images6.fanpop.com/image/photos/39400000/1st-generation-pokemon-39423803-4724-2835.jpg
-https://cdn.vox-cdn.com/thumbor/QIQOM2GPYSvWa-wZ30hJQWh95R8=/0x0:2040x1360/1520x1013/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/71393382/jlee_220920_1001_pkmnscvi_dex.0.jpg
+https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
+https://otakukart.com/wp-content/uploads/2023/04/Captain-Picachu-In-The-Rising-Vortechers-Airship-Pokemon-Horizons-The-Series-Trailer.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_ZapTcNKx.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_UQY7THDr.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_qajC5Eic.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_YsfUICPo.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/Rx_gYvR2e.jpg
+https://cdn2.thecatapi.com/images/ui.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/65bf4e16-3d69-4115-b116-f1bda1b9de6b.jpg
+https://random.dog/716dcfc1-284a-4e41-8305-91bd2eb61280.gif
 ```
 
 ### 8. Domain Search
@@ -1059,7 +1059,7 @@ print(result)
         }
     ],
     "total": 357,
-    "time": "296",
+    "time": "3",
     "next_page": null
 }
 ```
@@ -1111,16 +1111,19 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=66
+https://randomfox.ca/?i=62
 ```
 
 ### 11. Gen Qr
 
 **Description**:
-Generates a QR code and saves it to the specified file path.
+Generate a QR code using api.qrserver.com and save it as a PNG file.
 
 **Args:**
-  - **query (str)**: The data to encode in the QR code.
+  - **data (str)**: The content for the QR code.
+  - **size (str)**: The size of the QR code in the format 'WIDTHxHEIGHT' (default: '150x150').
+  - **foreground_color (str)**: The color of the QR code (default: '000000' - black).
+  - **background_color (str)**: The background color of the QR code (default: 'FFFFFF' - white).
   - **file_path (str, optional)**: The file path to save the QR code.
     Defaults to "downloads/{random_str}_qr.png".
 
@@ -1130,14 +1133,14 @@ Generates a QR code and saves it to the specified file path.
 ```python
 from TheApi import api
 
-result = await api.gen_qr(query='Pokemon', file_path=None)
+result = await api.gen_qr(data='Pokemon', size='150x150', foreground_color='000000', background_color='FFFFFF', file_path=None)
 print(result)
 ```
 
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/twCGhW8V_qr.png
+/home/runner/work/TheApi/TheApi/downloads/ou1bIzsT_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -1176,7 +1179,7 @@ print(result)
 #### Expected Output
 
 ```text
-Walking is a perfectly valid solution to traffic congestion problems.
+Identify sources of happiness.
 ```
 
 ### 14. Get Btc Value
@@ -1208,22 +1211,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "91,362.529",
-        "rate_float": 91362.529,
+        "rate": "91,188.979",
+        "rate_float": 91188.9789,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "75,913.219",
-        "rate_float": 75913.2188,
+        "rate": "75,769.016",
+        "rate_float": 75769.0159,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "96,660.286",
-        "rate_float": 96660.2859,
+        "rate": "96,476.672",
+        "rate_float": 96476.6724,
         "symbol": "&#36;"
     }
 }
@@ -1260,15 +1263,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "56883 Glover Grove",
-            "streetName": "Steuber Gateway",
-            "buildingNumber": "3576",
-            "city": "North Lucianotown",
-            "zipcode": "39168-5325",
-            "country": "Finland",
-            "country_code": "FI",
-            "latitude": 15.245831,
-            "longitude": 124.148616
+            "street": "38849 Brekke Bypass",
+            "streetName": "Nitzsche Views",
+            "buildingNumber": "784",
+            "city": "Evangelineport",
+            "zipcode": "64958-4133",
+            "country": "El Salvador",
+            "country_code": "SV",
+            "latitude": -74.708122,
+            "longitude": 35.851033
         }
     ]
 }
@@ -1304,10 +1307,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "Visa",
-            "number": "2375284808846854",
-            "expiration": "01/25",
-            "owner": "Cyrus Kihn"
+            "type": "JCB",
+            "number": "4916076465749682",
+            "expiration": "12/26",
+            "owner": "Omer Lind"
         }
     ]
 }
@@ -1346,8 +1349,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Et adipisci unde iusto rerum.",
-            "description": "Saepe reprehenderit eum eveniet voluptas aut nostrum. Dolores numquam enim unde voluptas fuga. Nam alias autem ab praesentium hic. Ab sit nulla ut odit quibusdam sed cumque.",
+            "title": "Numquam sunt tenetur alias.",
+            "description": "Ipsam quia quis qui. Similique cupiditate tenetur commodi quas. Omnis facere deleniti quasi odio nihil doloribus. Tempore quis asperiores quo tempora.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -1372,7 +1375,7 @@ print(result)
 #### Expected Output
 
 ```text
-'status'
+सभी लड़कियों से अनुरोध हैं कि कृपया लंबे लंबे स्लोगन लिखे हुए टी-शर्ट ना पहने दरअसल वो स्लोगन पढ़ने में हम लड़कों को समय लगता हैं और लोगों को लगता हैं कि हम उन्हें घूर रहे हैं लड़कियां ताड़ रहे हैं😆🤣😋😉 
 ```
 
 ### 19. Get Jokes
@@ -1396,7 +1399,7 @@ print(result)
 #### Expected Output
 
 ```text
-Two SQL tables sit at the bar. A query approaches and asks "Can I join you?"
+I have a fish that can breakdance! Only for 20 seconds though, and only once.
 ```
 
 ### 20. Get Uselessfact
@@ -1417,7 +1420,7 @@ print(result)
 #### Expected Output
 
 ```text
-The shape of plant collenchyma’s cells and the shape of the bubbles in beer foam are the same - they are orthotetrachidecahedrons.
+It has NEVER rained in Calama, a town in the Atacama Desert of Chile.
 ```
 
 ### 21. Get Word Definitions
@@ -1532,7 +1535,7 @@ print(result)
 #### Expected Output
 
 ```text
-आईने के सामने खड़े होके खुद से ही माफ़ी माँग ली मैंने…सबसे ज़्यादा अपना ही दिल दुखाया मैंने, औरों को ख़ुश करत करते।
+हम इतने खूबसूरत तो नही है, मगर हाँ..जिसे आँख भर के देख ले उसे उलझन में ड़ाल देते हैं।
 ```
 
 ### 24. Hug
@@ -1561,8 +1564,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Nagi no Asukara",
-        "url": "https://nekos.best/api/v2/hug/f88c212e-b0dc-4a44-a6ef-8f9ab761d95d.gif"
+        "anime_name": "Kawaii Dake ja Nai Shikimori-san",
+        "url": "https://nekos.best/api/v2/hug/929963f4-0d6d-4d75-b93f-03f4d25c7419.gif"
     }
 ]
 ```
@@ -1585,7 +1588,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/1p1wn7devm3e1.gif?width=640&crop=smart&format=png8&s=9c6ad245957ed076a6b8ab442b3cfbb448d3b2c5
+https://preview.redd.it/vxzxrhtjku3e1.png?width=1080&crop=smart&auto=webp&s=7b1ddd98ef68c32ad544b6c730159eceb6045249
 ```
 
 ### 26. Neko
@@ -1625,22 +1628,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/13227608",
-            "artist_name": "\u4fe1\u665a",
-            "source_url": "https://www.pixiv.net/en/artworks/81829524",
-            "url": "https://nekos.best/api/v2/neko/0ff779a0-d6b3-4a62-85c4-f5513d14a53c.png"
+            "artist_href": "https://www.pixiv.net/en/users/40927409",
+            "artist_name": "\u5922\u898b\u308b\u96f2",
+            "source_url": "https://www.pixiv.net/en/artworks/86938618",
+            "url": "https://nekos.best/api/v2/neko/a31b5a01-e9e3-4203-afd8-1a6b70511ef1.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/16217269",
-            "artist_name": "\u3057\u3087\u3053\u3089\u3066",
-            "source_url": "https://www.pixiv.net/en/artworks/92829934",
-            "url": "https://nekos.best/api/v2/neko/03b7bf91-db45-4605-a6ab-893030b9e286.png"
+            "artist_href": "https://www.pixiv.net/en/users/341818",
+            "artist_name": "motto",
+            "source_url": "https://www.pixiv.net/en/artworks/88209827",
+            "url": "https://nekos.best/api/v2/neko/615308b8-2d3f-40f4-98d4-14a414bf65fb.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/67941142",
-            "artist_name": "\u3059\u305a\u68ee",
-            "source_url": "https://www.pixiv.net/en/artworks/101931577",
-            "url": "https://nekos.best/api/v2/neko/946ae02c-b5bf-4908-9285-b6936e658f93.png"
+            "artist_href": "https://www.pixiv.net/en/users/65617238",
+            "artist_name": "izure",
+            "source_url": "https://www.pixiv.net/en/artworks/94148434",
+            "url": "https://nekos.best/api/v2/neko/86cb202b-ba87-4ef1-b76a-a061b70b75ec.png"
         }
     ]
 }
@@ -1716,9 +1719,9 @@ print(result)
 #### Expected Output
 
 ```text
-Technology… the knack of so arranging the world that we don't have to experience it.
+We are Divine enough to ask and we are important enough to receive.
 
-author - Max Frisch
+author - Wayne Dyer
 ```
 
 ### 29. Random Word
@@ -1739,7 +1742,7 @@ print(result)
 #### Expected Output
 
 ```text
-republicanisms
+defeaters
 ```
 
 ### 30. Riddle
@@ -1761,8 +1764,8 @@ print(result)
 
 ```json
 {
-    "riddle": "At the sound of me, men may dream, Or stamp their feet. At the sound of me, women may laugh, Or sometimes weep.",
-    "answer": "I am Music!"
+    "riddle": "A king decided to let a prisoner try to escape the prison with his life. The king placed 2 marbles in a jar that was glued to a table. One of the marbles was supposed to be black, and one was supposed to be blue.  If the prisoner could pick the blue marble, he would escape the prison with his life. If he picked the black marble, he would be executed. However, the king was very mean, and he wickedly placed 2 black marbles in the jars and no blue marbles. The prisoner witnessed the king only putting 2 black marbles in the jars.  If the jar was not see-through and the jar was glued to the table and that the prisoner was mute so he could not say anything, how did he escape with his life?",
+    "answer": "The prisoner grabbed one of the marbles from the jar and concealed it in his hand. He then swallowed it, and picked up the other marble and showed everyone. The marble was black, and since the other marble was swallowed, it was assumed to be the blue one. So the mean king had to set him free"
 }
 ```
 
@@ -1950,8 +1953,8 @@ print(result)
 #### Expected Output
 
 ```text
-grimaces
-transmittal
+decolonizes
+analyse
 ```
 
 ### 35. Write
@@ -1979,7 +1982,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_uqpXQg48.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_Dqmcnk5N.jpg
 ```
 
 
