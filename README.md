@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "The main reason I got stronger was so I\u2019d be able to survive.",
+    "content": "Ha, you're too naive, Kami-yan. I have a wide range of acceptance when it comes to women: not just fallen female main characters, but also foster sisters, foster mothers, foster daughters, twins, widows, senpais, fellow classmates, teachers, childhood friends, ojousamas, blondes, brunettes, brown-haired, silver-haired, long-haired, medium-haired, short-haired, girls wearing bobby pins, wavy-haired, twintails, ponytails, one-sided ponytails, twin braids, ahoges, curly-haired, girls in sailor clothes, blazers, kindergarten nurses, maids, policewomen, witches, shrine maidens, nuns, military women, secretaries, lolis, shotas, tsunderes, cheerleaders, stewardesses, waitresses, goth girls wearing black, goth girls wearing white, girls in China dresses, frail girls, albino girls, fantasists, girls with split personalities, queens, princesses, thigh-high socks, garterbelts, girls who cross-dress as guys, girls who wear glasses, girls who wear an eye-patch, girls who wear bandages, girls in school swimsuits, one-piece swimsuits, bikinis, V-shaped bikinis, bikinis that barely cover anything, ghosts, animal-eared girls, etc.- any female is within my area of acceptance.",
     "anime": {
-        "id": 627,
-        "name": "Sword Art Online"
+        "id": 408,
+        "name": "Toaru Majutsu no Index"
     },
     "character": {
-        "id": 1074,
-        "name": "Kazuto Kirigaya"
+        "id": 2103,
+        "name": "Pierce Aogami"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "barbara",
+    "file_name": "cally",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/barbara.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/cally.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
+https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/150_Pokemon_from_Pokemon_Stadium.png/330px-150_Pokemon_from_Pokemon_Stadium.png
+https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
-https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
-http://www.animextremist.com/imagenes/pokemon/pokemon97.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_qqQzIZt0.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_WU5EmfGY.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_11jJD5Ts.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_4kDARuTh.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTk3MTcwNw.jpg
+https://cdn2.thecatapi.com/images/MTc0Njg1MQ.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/8b336a6b-10cb-4c08-9b4c-756ea25ac0e8.gif
+https://random.dog/83c0da38-3fa4-4c85-b031-6de5231f104a.mp4
 ```
 
 ### 8. Domain Search
@@ -1059,7 +1059,7 @@ print(result)
         }
     ],
     "total": 357,
-    "time": "27",
+    "time": "66",
     "next_page": null
 }
 ```
@@ -1111,7 +1111,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=10
+https://randomfox.ca/?i=41
 ```
 
 ### 11. Gen Qr
@@ -1140,7 +1140,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/O9obkS5h_qr.png
+/home/runner/work/TheApi/TheApi/downloads/WiYgKILt_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -1179,7 +1179,7 @@ print(result)
 #### Expected Output
 
 ```text
-To improve productivity, always have a shittier task to put off.
+Don't burn bridges.
 ```
 
 ### 14. Get Btc Value
@@ -1211,22 +1211,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "90,911.865",
-        "rate_float": 90911.8646,
+        "rate": "92,656.024",
+        "rate_float": 92656.024,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "75,498.763",
-        "rate_float": 75498.7628,
+        "rate": "76,857.18",
+        "rate_float": 76857.1796,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "96,166.6",
-        "rate_float": 96166.6,
+        "rate": "97,519.517",
+        "rate_float": 97519.5174,
         "symbol": "&#36;"
     }
 }
@@ -1263,15 +1263,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "23101 Kristofer Stream",
-            "streetName": "Spencer Wall",
-            "buildingNumber": "8603",
-            "city": "New Toney",
-            "zipcode": "31301",
-            "country": "Georgia",
-            "country_code": "GE",
-            "latitude": 75.853513,
-            "longitude": -172.031807
+            "street": "25219 Hickle Courts Suite 558",
+            "streetName": "Lauriane Tunnel",
+            "buildingNumber": "4460",
+            "city": "West Trishatown",
+            "zipcode": "95060",
+            "country": "Laos",
+            "country_code": "LA",
+            "latitude": 69.283196,
+            "longitude": 128.353754
         }
     ]
 }
@@ -1307,10 +1307,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "Visa",
-            "number": "4485874555571409",
-            "expiration": "11/27",
-            "owner": "Annie Lowe"
+            "type": "Discover Card",
+            "number": "4539721652485767",
+            "expiration": "05/25",
+            "owner": "Denis Reynolds"
         }
     ]
 }
@@ -1349,8 +1349,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Non velit quos corrupti et.",
-            "description": "Iste voluptate et voluptatem accusantium saepe amet et. Officiis soluta libero sunt minima. Laboriosam laborum illum deleniti. Libero atque voluptatem rerum fugiat.",
+            "title": "Amet enim voluptas quo est.",
+            "description": "Ut corporis non ratione voluptatem. Recusandae totam aliquam ea delectus iure beatae. Beatae et aut qui veniam quaerat illum iusto. Quibusdam ab praesentium corrupti et ipsum.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -1375,8 +1375,7 @@ print(result)
 #### Expected Output
 
 ```text
-गर्मी शुरू हो गई है। कृपया जब भी फ्रिज से पानी निकाल कर पियें, तो वापस भर के रख दें...
-नहीं तो लेक्चर पानी से शुरू होगा और मोबाइल, पढ़ाई, बेरोजगारी पर जाके खत्म होगा!
+शायरी न मरती है और ना ही डिलीट होती है  ये सिर्फ पहली वाली गर्लफ्रेंड से दूसरी वाली में शिफ्ट हो जाती है
 ```
 
 ### 19. Get Jokes
@@ -1400,7 +1399,7 @@ print(result)
 #### Expected Output
 
 ```text
-The generation of random numbers is too important to be left to chance.
+Saying that Java is nice because it works on every OS is like saying that anal sex is nice because it works on every gender.
 ```
 
 ### 20. Get Uselessfact
@@ -1421,7 +1420,7 @@ print(result)
 #### Expected Output
 
 ```text
-"Dreamt" is the only English word that ends in the letters "mt."
+Most Egyptians died by the time they were 30 about 300 years ago,
 ```
 
 ### 21. Get Word Definitions
@@ -1503,7 +1502,7 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4816,
+        "stargazers_count": 4818,
         "forks_count": 2807
     },
     {
@@ -1536,7 +1535,7 @@ print(result)
 #### Expected Output
 
 ```text
-वो रब ही जाने क्यूं तुम हाथों पे मेहंदी लगाती हो, बड़ी ना-समझ हो.. फूलों पर पत्तों के रंग चढ़ाती हो
+हज़ारों उलझनें राहों में और कोशिशें बेहिसाब, इसी का नाम है ज़िंदगी चलते रहिए जनाब- गुलज़ार
 ```
 
 ### 24. Hug
@@ -1565,8 +1564,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Princess Connect! Re:Dive",
-        "url": "https://nekos.best/api/v2/hug/7aadc12d-90e2-4e2e-933b-aa72313ccc10.gif"
+        "anime_name": "Happy Sugar Life",
+        "url": "https://nekos.best/api/v2/hug/1613322e-52e3-44a6-8dd7-a57b6dac48ba.gif"
     }
 ]
 ```
@@ -1589,7 +1588,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/at8hbfqvp44e1.png?width=1080&crop=smart&auto=webp&s=21335cee1058d72ff1157a7bfa0597c2729833f1
+https://preview.redd.it/ws66f9vzj94e1.png?width=640&crop=smart&auto=webp&s=881b6e816d67478441930551f379bc8f9273e3eb
 ```
 
 ### 26. Neko
@@ -1629,22 +1628,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/24958490",
-            "artist_name": "\u6c70",
-            "source_url": "https://www.pixiv.net/en/artworks/95282300",
-            "url": "https://nekos.best/api/v2/neko/cc291271-6ecc-4967-9d17-7c581a0db0ce.png"
+            "artist_href": "https://www.pixiv.net/en/users/502358",
+            "artist_name": "\u548c\u9306",
+            "source_url": "https://www.pixiv.net/en/artworks/78424876",
+            "url": "https://nekos.best/api/v2/neko/ef970b3a-491d-4727-8be6-8139b48970a6.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/63280554",
-            "artist_name": "\u5317\u6cb3\u305d\u3089",
-            "source_url": "https://www.pixiv.net/en/artworks/96506591",
-            "url": "https://nekos.best/api/v2/neko/684b1ae4-b1ca-44da-b5ae-f5ca2ba8801f.png"
+            "artist_href": "https://www.pixiv.net/en/users/6697432",
+            "artist_name": "Lena",
+            "source_url": "https://www.pixiv.net/en/artworks/97495942",
+            "url": "https://nekos.best/api/v2/neko/830b153a-a0c0-47ef-8f0b-31c91eae9df6.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/564736",
-            "artist_name": "Mauve",
-            "source_url": "https://www.pixiv.net/en/artworks/78361718",
-            "url": "https://nekos.best/api/v2/neko/3a9a82d2-e8b5-4d8c-b560-3a78049a21dd.png"
+            "artist_href": "https://www.pixiv.net/en/users/15461810",
+            "artist_name": "\u3057\u308d\u304f\u307e",
+            "source_url": "https://www.pixiv.net/en/artworks/88380373",
+            "url": "https://nekos.best/api/v2/neko/da2a6a68-8d41-4978-b1e8-e95563329c3d.png"
         }
     ]
 }
@@ -1720,9 +1719,9 @@ print(result)
 #### Expected Output
 
 ```text
-We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.
+The beginning of knowledge is the discovery of something we do not understand.
 
-author - Sam Keen
+author - Frank Herbert
 ```
 
 ### 29. Random Word
@@ -1743,7 +1742,7 @@ print(result)
 #### Expected Output
 
 ```text
-basify
+marliest
 ```
 
 ### 30. Riddle
@@ -1765,8 +1764,8 @@ print(result)
 
 ```json
 {
-    "riddle": "We are little creatures; all of us have different features. One of us in glass is set; one of us you'll find in jet. Another you may see in tin, and the fourth is boxed within . If the fifth you should pursue, it can never fly from you. What are we?",
-    "answer": "We are vowels"
+    "riddle": "A sign on the barber's door says \u201cI shave only those who do not shave themselves\u201c. Does the barber shave himself?",
+    "answer": "There is no answer; it's a paradox. It cannot be made to work"
 }
 ```
 
@@ -1840,7 +1839,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2001,
+        "view_count": 2002,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1865,7 +1864,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32659,
+        "view_count": 32660,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1927,7 +1926,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -1954,8 +1953,8 @@ print(result)
 #### Expected Output
 
 ```text
-tippytoed
-loggets
+antipredator
+sodomize
 ```
 
 ### 35. Write
@@ -1983,7 +1982,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_F5fcWAPN.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_004llX2e.jpg
 ```
 
 
