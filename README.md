@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "Death is like being born, but backwards. It only hurts for a little while, then a new life begins. A life with no sorrow, no pain, a glorious new beginning. A beginning that will last an eternity.",
+    "content": "You are defeated yet you will not step back, why not?",
     "anime": {
-        "id": 425,
-        "name": "Kuroshitsuji"
+        "id": 229,
+        "name": "One Piece"
     },
     "character": {
-        "id": 630,
-        "name": "Ciel Phantomhive"
+        "id": 514,
+        "name": "Dracule Mihawk"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "karen",
+    "file_name": "matt",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/karen.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/matt.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/150_Pokemon_from_Pokemon_Stadium.png/330px-150_Pokemon_from_Pokemon_Stadium.png
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_wHXyZYeK.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_ubZ1b1r7.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_nMlg8fUw.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_sflxKq0m.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/6md.jpg
+https://cdn2.thecatapi.com/images/7ba.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/bc21dfb7-db3b-4d66-93d8-7bb4809ec1b8.jpg
+https://random.dog/0d3995ae-4b84-43f9-bd01-4e58e3b548d5.jpg
 ```
 
 ### 8. Domain Search
@@ -291,7 +291,7 @@ print(result)
 #### Expected Output
 
 ```text
-Request failed: 524, message='', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
+Request failed: 500, message='INTERNAL SERVER ERROR', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
 ```
 
 ### 9. Fakerapi
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=44
+https://randomfox.ca/?i=72
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/kbvqqVhj_qr.png
+/home/runner/work/TheApi/TheApi/downloads/gSZYhWiH_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Try using an old idea.
+Don't cross the streams.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "92,117.3",
-        "rate_float": 92117.3004,
+        "rate": "94,176.886",
+        "rate_float": 94176.8856,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "76,391.443",
-        "rate_float": 76391.4429,
+        "rate": "78,146.604",
+        "rate_float": 78146.6036,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "97,356.851",
-        "rate_float": 97356.8514,
+        "rate": "99,597.9",
+        "rate_float": 99597.8996,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "8794 Forest Glens",
-            "streetName": "Strosin Knoll",
-            "buildingNumber": "8845",
-            "city": "Lake Kaylahchester",
-            "zipcode": "90002-7712",
-            "country": "Malta",
-            "country_code": "MT",
-            "latitude": 22.424699,
-            "longitude": -119.103112
+            "street": "449 Bret Plains Apt. 181",
+            "streetName": "Cathy River",
+            "buildingNumber": "5683",
+            "city": "O'Haratown",
+            "zipcode": "14718",
+            "country": "San Marino",
+            "country_code": "SM",
+            "latitude": 4.177359,
+            "longitude": 17.387732
         }
     ]
 }
@@ -538,9 +538,9 @@ print(result)
     "data": [
         {
             "type": "MasterCard",
-            "number": "2435506703768769",
+            "number": "4916884347527956",
             "expiration": "02/25",
-            "owner": "Willis Gutkowski"
+            "owner": "Melyna Schmeler"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Id in dignissimos omnis.",
-            "description": "Aut et laborum deserunt labore quia. Ex harum deserunt sed doloremque ut ab enim. Est iure rerum deleniti.",
+            "title": "Natus quia est corporis.",
+            "description": "Alias nisi deleniti maiores dignissimos vero voluptate et molestias. Officia earum et est explicabo. Ut laboriosam placeat exercitationem blanditiis.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-हम मध्यम वर्ग वाले धनतेरस के दिन झाड़ू और बर्तन खरीदने के बाद मन मे ये सोचते है कि ...अगले साल गाड़ी घोड़ा जरूर खरीदेंगें ...
+अगर आप अपने घर में कचरा नहीं रख सकते; तो दिमाग में कचरा क्यों रखते हो ??
 ```
 
 ### 19. Get Jokes
@@ -629,11 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-Two C strings walk into a bar.
-The bartender asks "What can I get ya?"
-The first string says "I'll have a gin and tonic."
-The second string thinks for a minute, then says "I'll take a tequila sunriseJF()#$JF(#)$(@J#()$@#())!*FNIN!OBN134ufh1ui34hf9813f8h8384h981h3984h5F!##@"
-The first string apologizes, "You'll have to excuse my friend, he's not null-terminated."
+Hey girl are you a school? Because I want to shoot some kids up inside of you.
 ```
 
 ### 20. Get Uselessfact
@@ -654,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-In Aspen Colorado, you can have a maximum income of $104,000 and still receive government subsidized housing.
+All 50 states are listed across the top of the Lincoln Memorial on the back of the $5 bill.
 ```
 
 ### 21. Get Word Definitions
@@ -736,7 +732,7 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4821,
+        "stargazers_count": 4820,
         "forks_count": 2812
     },
     {
@@ -769,7 +765,7 @@ print(result)
 #### Expected Output
 
 ```text
-एक दुआ तुम्हारें दिल को सुकूँ मिले, एक ख्वाहिश हमारे सिवा कहीं और न मिले..
+यूं गुमसूम मत बैठो पराये लगते हो, मिठी बातें नहीं है तो चलो झगड़ा ही कर लो;
 ```
 
 ### 24. Hug
@@ -798,8 +794,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Darling in the Franxx",
-        "url": "https://nekos.best/api/v2/hug/f6861773-08f0-4410-82cd-431711b2e2de.gif"
+        "anime_name": "Noragami OAD",
+        "url": "https://nekos.best/api/v2/hug/c08992e3-ec9c-4cf4-88d0-6ca921d3ef64.gif"
     }
 ]
 ```
@@ -822,7 +818,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/crd0r4i9qv4e1.png?width=1080&crop=smart&auto=webp&s=69e8376c28c8844aa1f8f9f700c6c68db4e9b78e
+https://preview.redd.it/9w9sus7de75e1.png?width=1080&crop=smart&auto=webp&s=ae9d923670d01375b008678ef3a88f36b67d4782
 ```
 
 ### 26. Neko
@@ -862,22 +858,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/545486",
-            "artist_name": "\u3048\u308a\u3093",
-            "source_url": "https://www.pixiv.net/en/artworks/102799374",
-            "url": "https://nekos.best/api/v2/neko/4c3f1fdb-8721-4a49-a0d7-242e20c7287b.png"
+            "artist_href": "https://www.pixiv.net/en/users/92891",
+            "artist_name": "\u3042\u3081\u3068\u3086\u304d",
+            "source_url": "https://www.pixiv.net/en/artworks/66089420",
+            "url": "https://nekos.best/api/v2/neko/d5c12774-05b5-4303-9ac2-80a773559998.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/13975382",
-            "artist_name": "okiq",
-            "source_url": "https://www.pixiv.net/en/artworks/98023902",
-            "url": "https://nekos.best/api/v2/neko/aabb8e4e-a4d1-4459-b113-466cb2d5bfed.png"
+            "artist_href": "https://www.pixiv.net/en/users/2417964",
+            "artist_name": "\u3072\u306a\u866b",
+            "source_url": "https://www.pixiv.net/en/artworks/69496105",
+            "url": "https://nekos.best/api/v2/neko/bc7b308b-fcf4-453e-aafe-c46bc20f04d9.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/45053062",
-            "artist_name": "\u767d\u30e2\u30a2\u30a4",
-            "source_url": "https://www.pixiv.net/en/artworks/88655077",
-            "url": "https://nekos.best/api/v2/neko/c28139b8-1322-4671-b039-773d9a444e52.png"
+            "artist_href": "https://www.pixiv.net/en/users/22024153",
+            "artist_name": "\u30b3\u30b3\u590f",
+            "source_url": "https://www.pixiv.net/en/artworks/72070444",
+            "url": "https://nekos.best/api/v2/neko/35dc51aa-7225-4790-82a6-8eb6ca04da9e.png"
         }
     ]
 }
@@ -953,9 +949,9 @@ print(result)
 #### Expected Output
 
 ```text
-I am not bothered by the fact that I am unknown. I am bothered when I do not know others.
+Happiness is the reward we get for living to the highest right we know.
 
-author - Confucius
+author - Richard Bach
 ```
 
 ### 29. Random Word
@@ -976,7 +972,7 @@ print(result)
 #### Expected Output
 
 ```text
-diastases
+unreluctant
 ```
 
 ### 30. Riddle
@@ -998,8 +994,8 @@ print(result)
 
 ```json
 {
-    "riddle": "Alice is walking throught the forest of forgetfulness. She wants to know what day of the week it is. She stops and asks a lion and a unicorn. Now the lion lies all of the time on Monday, Tuesday, and Wednesday. The unicorn always lies on Thursday, Friday and Saturday.  Alice asks the lion what day it is, he says, \u201cWell, yesterday was one of my lying days.\u201dAlice can't figure it out just from the lion's answer so she asks the unicorn and the unicorn says, \u201cYesterday was also one of my lying days.\u201dWhat day is it?",
-    "answer": "Thursday"
+    "riddle": "I soar without wings, I see without eyes. I've traveled the universe to and fro. I've conquered the world, yet I've never been anywhere but home. Who am I?",
+    "answer": "I'm your imagination"
 }
 ```
 
@@ -1073,7 +1069,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2011,
+        "view_count": 2012,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1098,7 +1094,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32676,
+        "view_count": 32677,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1187,8 +1183,8 @@ print(result)
 #### Expected Output
 
 ```text
-stingy
-escarole
+straiter
+phosphine
 ```
 
 ### 35. Write
@@ -1216,7 +1212,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_1kuvcZI0.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_Tsg35HXD.jpg
 ```
 
 
