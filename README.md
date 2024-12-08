@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "You are defeated yet you will not step back, why not?",
+    "content": "What a lovely voice! But I have to wonder though... is that voice a result of fiddling around with her genes?",
     "anime": {
-        "id": 229,
-        "name": "One Piece"
+        "id": 575,
+        "name": "Mobile Suit Gundam SEED"
     },
     "character": {
-        "id": 514,
-        "name": "Dracule Mihawk"
+        "id": 2369,
+        "name": "Sai Argyle"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "matt",
+    "file_name": "party-crasher",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/matt.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/party-crasher.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
+https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
-https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/150_Pokemon_from_Pokemon_Stadium.png/330px-150_Pokemon_from_Pokemon_Stadium.png
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_ubZ1b1r7.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_lemMix9f.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_sflxKq0m.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_eUopTUNF.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/7ba.jpg
+https://cdn2.thecatapi.com/images/4on.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/0d3995ae-4b84-43f9-bd01-4e58e3b548d5.jpg
+https://random.dog/9033ba8f-357f-4912-be0f-e30ae94ee560.png
 ```
 
 ### 8. Domain Search
@@ -291,7 +291,7 @@ print(result)
 #### Expected Output
 
 ```text
-Request failed: 500, message='INTERNAL SERVER ERROR', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
+Request failed: 524, message='', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
 ```
 
 ### 9. Fakerapi
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=72
+https://randomfox.ca/?i=27
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/gSZYhWiH_qr.png
+/home/runner/work/TheApi/TheApi/downloads/XfSZbdIJ_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Don't cross the streams.
+Identify sources of happiness.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "94,176.886",
-        "rate_float": 94176.8856,
+        "rate": "94,575.042",
+        "rate_float": 94575.0417,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "78,146.604",
-        "rate_float": 78146.6036,
+        "rate": "78,460.588",
+        "rate_float": 78460.5884,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "99,597.9",
-        "rate_float": 99597.8996,
+        "rate": "99,970.552",
+        "rate_float": 99970.5524,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "449 Bret Plains Apt. 181",
-            "streetName": "Cathy River",
-            "buildingNumber": "5683",
-            "city": "O'Haratown",
-            "zipcode": "14718",
-            "country": "San Marino",
-            "country_code": "SM",
-            "latitude": 4.177359,
-            "longitude": 17.387732
+            "street": "878 Damon Estate Apt. 409",
+            "streetName": "Schowalter Ports",
+            "buildingNumber": "844",
+            "city": "Lake Deborah",
+            "zipcode": "59703",
+            "country": "Vatican City",
+            "country_code": "VA",
+            "latitude": 61.287701,
+            "longitude": -145.161679
         }
     ]
 }
@@ -537,10 +537,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "4916884347527956",
-            "expiration": "02/25",
-            "owner": "Melyna Schmeler"
+            "type": "Visa",
+            "number": "2720338243907721",
+            "expiration": "03/27",
+            "owner": "Kristoffer McKenzie"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Natus quia est corporis.",
-            "description": "Alias nisi deleniti maiores dignissimos vero voluptate et molestias. Officia earum et est explicabo. Ut laboriosam placeat exercitationem blanditiis.",
+            "title": "Quia consequatur est et qui.",
+            "description": "Aut sapiente dolor occaecati velit sapiente. Consectetur et ea sed quis qui qui. Et aliquid ut earum sit debitis dolore tenetur. Ad earum doloremque esse cum.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-अगर आप अपने घर में कचरा नहीं रख सकते; तो दिमाग में कचरा क्यों रखते हो ??
+दीवाली पर अलमारी खोलो तो सारे कपड़े पुराने लगते हैं और होली पर खोलो तो सारे कपड़े नए लगते हैं, अजीब समस्या है।
 ```
 
 ### 19. Get Jokes
@@ -629,7 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-Hey girl are you a school? Because I want to shoot some kids up inside of you.
+Schrödinger's cat walks into a bar and doesn't.
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-All 50 states are listed across the top of the Lincoln Memorial on the back of the $5 bill.
+`Stewardesses` is the longest word that is typed with only the left hand.
 ```
 
 ### 21. Get Word Definitions
@@ -732,7 +732,7 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4820,
+        "stargazers_count": 4821,
         "forks_count": 2812
     },
     {
@@ -741,8 +741,8 @@ print(result)
         "description": "The Pokemon Go Bot, baking with community.",
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
-        "stargazers_count": 3877,
-        "forks_count": 1541
+        "stargazers_count": 3878,
+        "forks_count": 1543
     }
 ]
 ```
@@ -765,7 +765,7 @@ print(result)
 #### Expected Output
 
 ```text
-यूं गुमसूम मत बैठो पराये लगते हो, मिठी बातें नहीं है तो चलो झगड़ा ही कर लो;
+अपनी तो ज़िंदगी है अजीब कहानी है, जिस चीज़ को चाहा वो ही बेगानी है। हँसते भी है तो दुनिया को दिखाने के लिए, वरना दुनिया डूब जाएं इन आँखों में इतना पानी है।
 ```
 
 ### 24. Hug
@@ -794,8 +794,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Noragami OAD",
-        "url": "https://nekos.best/api/v2/hug/c08992e3-ec9c-4cf4-88d0-6ca921d3ef64.gif"
+        "anime_name": "Sakurasou no Pet na Kanojo",
+        "url": "https://nekos.best/api/v2/hug/4e721d9c-420c-4487-a65c-53a9d979cfbb.gif"
     }
 ]
 ```
@@ -818,7 +818,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/9w9sus7de75e1.png?width=1080&crop=smart&auto=webp&s=ae9d923670d01375b008678ef3a88f36b67d4782
+https://preview.redd.it/31wdjpsk395e1.png?width=960&crop=smart&auto=webp&s=9105b0ae05ad26709ce95c122fd7752451158c8d
 ```
 
 ### 26. Neko
@@ -858,22 +858,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/92891",
-            "artist_name": "\u3042\u3081\u3068\u3086\u304d",
-            "source_url": "https://www.pixiv.net/en/artworks/66089420",
-            "url": "https://nekos.best/api/v2/neko/d5c12774-05b5-4303-9ac2-80a773559998.png"
+            "artist_href": "https://www.pixiv.net/en/users/42659450",
+            "artist_name": "\u6642\u96e8\u3072\u307e\u308a",
+            "source_url": "https://www.pixiv.net/en/artworks/89860406",
+            "url": "https://nekos.best/api/v2/neko/14dd867f-15bb-4e46-9cca-edf502967fd4.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/2417964",
-            "artist_name": "\u3072\u306a\u866b",
-            "source_url": "https://www.pixiv.net/en/artworks/69496105",
-            "url": "https://nekos.best/api/v2/neko/bc7b308b-fcf4-453e-aafe-c46bc20f04d9.png"
+            "artist_href": "https://www.pixiv.net/en/users/55832837",
+            "artist_name": "\u3086\u3093\u3086\u3093",
+            "source_url": "https://www.pixiv.net/en/artworks/88519811",
+            "url": "https://nekos.best/api/v2/neko/7fc63826-de31-49d3-bc58-6ea475a93d34.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/22024153",
-            "artist_name": "\u30b3\u30b3\u590f",
-            "source_url": "https://www.pixiv.net/en/artworks/72070444",
-            "url": "https://nekos.best/api/v2/neko/35dc51aa-7225-4790-82a6-8eb6ca04da9e.png"
+            "artist_href": "https://www.pixiv.net/en/users/1311751",
+            "artist_name": "\u771f\u54b2",
+            "source_url": "https://www.pixiv.net/en/artworks/80712690",
+            "url": "https://nekos.best/api/v2/neko/75e15dc6-00ed-495b-b26e-67c32059fe7b.png"
         }
     ]
 }
@@ -949,9 +949,9 @@ print(result)
 #### Expected Output
 
 ```text
-Happiness is the reward we get for living to the highest right we know.
+Meetings are indispensable when you don't want to do anything.
 
-author - Richard Bach
+author - John Kenneth Galbraith
 ```
 
 ### 29. Random Word
@@ -972,7 +972,7 @@ print(result)
 #### Expected Output
 
 ```text
-unreluctant
+gofferings
 ```
 
 ### 30. Riddle
@@ -994,8 +994,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I soar without wings, I see without eyes. I've traveled the universe to and fro. I've conquered the world, yet I've never been anywhere but home. Who am I?",
-    "answer": "I'm your imagination"
+    "riddle": "They have not flesh, nor feathers, nor scales, nor bone. Yet they have fingers and thumbs of their own. What are they?",
+    "answer": "Gloves"
 }
 ```
 
@@ -1094,7 +1094,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32677,
+        "view_count": 32678,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1183,8 +1183,8 @@ print(result)
 #### Expected Output
 
 ```text
-straiter
-phosphine
+miniski
+bioterrors
 ```
 
 ### 35. Write
@@ -1212,7 +1212,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_Tsg35HXD.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_DAKWeUQh.jpg
 ```
 
 
