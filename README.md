@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "What a lovely voice! But I have to wonder though... is that voice a result of fiddling around with her genes?",
+    "content": "Fruit doesn't grow on trees, you know!",
     "anime": {
-        "id": 575,
-        "name": "Mobile Suit Gundam SEED"
+        "id": 876,
+        "name": "Pok\u00e9mon"
     },
     "character": {
-        "id": 2369,
-        "name": "Sai Argyle"
+        "id": 2436,
+        "name": "Kojirou"
     }
 }
 ```
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
-https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+https://pluspng.com/img-png/pokemon-hd-png-image-025pikachu-pokemon-mystery-dungeon-explorers-of-sky-png-pokemon-wiki-fandom-powered-by-wikia-1377.png
+http://www.animextremist.com/imagenes/pokemon/pokemon97.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_lemMix9f.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_Uhk7pbhT.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_eUopTUNF.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_zwOiTnaT.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/4on.jpg
+https://cdn2.thecatapi.com/images/TzyZJUeIM.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/9033ba8f-357f-4912-be0f-e30ae94ee560.png
+https://random.dog/7ed0dec1-43d1-44eb-bb43-909a1298989d.jpg
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=27
+https://randomfox.ca/?i=121
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/XfSZbdIJ_qr.png
+/home/runner/work/TheApi/TheApi/downloads/GCsFOiIf_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Identify sources of happiness.
+Remedy tickly coughs with a drink of honey, lemon and water as hot as you can take.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "94,575.042",
-        "rate_float": 94575.0417,
+        "rate": "93,974.311",
+        "rate_float": 93974.3107,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "78,460.588",
-        "rate_float": 78460.5884,
+        "rate": "77,857.293",
+        "rate_float": 77857.293,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "99,970.552",
-        "rate_float": 99970.5524,
+        "rate": "99,188.973",
+        "rate_float": 99188.9726,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "878 Damon Estate Apt. 409",
-            "streetName": "Schowalter Ports",
-            "buildingNumber": "844",
-            "city": "Lake Deborah",
-            "zipcode": "59703",
-            "country": "Vatican City",
-            "country_code": "VA",
-            "latitude": 61.287701,
-            "longitude": -145.161679
+            "street": "6301 Candida Tunnel",
+            "streetName": "Connelly Vista",
+            "buildingNumber": "80627",
+            "city": "Willowshire",
+            "zipcode": "19497-6098",
+            "country": "Congo - Brazzaville",
+            "country_code": "CG",
+            "latitude": -17.634881,
+            "longitude": 12.061877
         }
     ]
 }
@@ -537,10 +537,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "Visa",
-            "number": "2720338243907721",
-            "expiration": "03/27",
-            "owner": "Kristoffer McKenzie"
+            "type": "Discover Card",
+            "number": "5441828086001104",
+            "expiration": "12/25",
+            "owner": "Ernestine Will"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Quia consequatur est et qui.",
-            "description": "Aut sapiente dolor occaecati velit sapiente. Consectetur et ea sed quis qui qui. Et aliquid ut earum sit debitis dolore tenetur. Ad earum doloremque esse cum.",
+            "title": "Enim numquam odio eius.",
+            "description": "Sunt debitis velit ab. Amet laborum sequi repudiandae enim. Aut consequuntur ratione ab nihil et blanditiis rerum.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-दीवाली पर अलमारी खोलो तो सारे कपड़े पुराने लगते हैं और होली पर खोलो तो सारे कपड़े नए लगते हैं, अजीब समस्या है।
+आजतक मुझसे किसी ने ये नहीं कहा कि तुम ही मेरी दुनिया हो हो सकता है कि शायद मैं किसी का गाँव हूँ 😆🤣😋😉
 ```
 
 ### 19. Get Jokes
@@ -629,7 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-Schrödinger's cat walks into a bar and doesn't.
+I'll never forget my Granddad's last words to me just before he died. "Are you still holding the ladder?"
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-`Stewardesses` is the longest word that is typed with only the left hand.
+60% of electrocutions occur while talking on the telephone during a thunderstorm.
 ```
 
 ### 21. Get Word Definitions
@@ -732,8 +732,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4821,
-        "forks_count": 2812
+        "stargazers_count": 4822,
+        "forks_count": 2813
     },
     {
         "name": "PokemonGo-Bot",
@@ -765,7 +765,7 @@ print(result)
 #### Expected Output
 
 ```text
-अपनी तो ज़िंदगी है अजीब कहानी है, जिस चीज़ को चाहा वो ही बेगानी है। हँसते भी है तो दुनिया को दिखाने के लिए, वरना दुनिया डूब जाएं इन आँखों में इतना पानी है।
+सच्चाई और अच्छाई कहीं भी ढूंढ..अगर तूझमें नहीं तो कहीं नहीं
 ```
 
 ### 24. Hug
@@ -818,7 +818,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/31wdjpsk395e1.png?width=960&crop=smart&auto=webp&s=9105b0ae05ad26709ce95c122fd7752451158c8d
+https://preview.redd.it/yxgbkmaf6g5e1.png?width=640&crop=smart&auto=webp&s=70dce210f4d8429b18c8e3423d2fef3ce973e80a
 ```
 
 ### 26. Neko
@@ -858,22 +858,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/42659450",
-            "artist_name": "\u6642\u96e8\u3072\u307e\u308a",
-            "source_url": "https://www.pixiv.net/en/artworks/89860406",
-            "url": "https://nekos.best/api/v2/neko/14dd867f-15bb-4e46-9cca-edf502967fd4.png"
+            "artist_href": "https://www.pixiv.net/en/users/24958490",
+            "artist_name": "\u6c70",
+            "source_url": "https://www.pixiv.net/en/artworks/95282300",
+            "url": "https://nekos.best/api/v2/neko/cc291271-6ecc-4967-9d17-7c581a0db0ce.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/55832837",
-            "artist_name": "\u3086\u3093\u3086\u3093",
-            "source_url": "https://www.pixiv.net/en/artworks/88519811",
-            "url": "https://nekos.best/api/v2/neko/7fc63826-de31-49d3-bc58-6ea475a93d34.png"
+            "artist_href": "https://www.pixiv.net/en/users/45800177",
+            "artist_name": "Catsberus",
+            "source_url": "https://www.pixiv.net/en/artworks/86074541",
+            "url": "https://nekos.best/api/v2/neko/a19705c6-48b9-4837-90b6-1bdd4db62f80.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/1311751",
-            "artist_name": "\u771f\u54b2",
-            "source_url": "https://www.pixiv.net/en/artworks/80712690",
-            "url": "https://nekos.best/api/v2/neko/75e15dc6-00ed-495b-b26e-67c32059fe7b.png"
+            "artist_href": "https://www.pixiv.net/en/users/5229572",
+            "artist_name": "\u307e\u3075\u3086",
+            "source_url": "https://www.zerochan.net/2688769",
+            "url": "https://nekos.best/api/v2/neko/b723f207-6aa3-46f4-bd1e-d6728866b8d7.png"
         }
     ]
 }
@@ -949,9 +949,9 @@ print(result)
 #### Expected Output
 
 ```text
-Meetings are indispensable when you don't want to do anything.
+It is a common experience that a problem difficult at night is resolved in the morning after the committee of sleep has worked on it.
 
-author - John Kenneth Galbraith
+author - John Steinbeck
 ```
 
 ### 29. Random Word
@@ -972,7 +972,7 @@ print(result)
 #### Expected Output
 
 ```text
-gofferings
+motored
 ```
 
 ### 30. Riddle
@@ -994,8 +994,8 @@ print(result)
 
 ```json
 {
-    "riddle": "They have not flesh, nor feathers, nor scales, nor bone. Yet they have fingers and thumbs of their own. What are they?",
-    "answer": "Gloves"
+    "riddle": "there is a man he leaves home and runs around three blocks, when he comes back home their are two masked men, who are they?",
+    "answer": "the catcher and the umpire"
 }
 ```
 
@@ -1094,7 +1094,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32678,
+        "view_count": 32679,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1183,8 +1183,8 @@ print(result)
 #### Expected Output
 
 ```text
-miniski
-bioterrors
+underwent
+disendowing
 ```
 
 ### 35. Write
@@ -1212,7 +1212,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_DAKWeUQh.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_pZjTzZ2y.jpg
 ```
 
 
