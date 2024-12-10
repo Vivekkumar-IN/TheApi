@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "Fruit doesn't grow on trees, you know!",
+    "content": "As you go through life, the might current of society is bound to get in your way and there will certainly be times that things don't go as you'd hoped. When this happens, don't look to society for a cause. Do not renounce society. Frankly, you'd be wasting your time. Instead just say, \"That's life!\" and muddle your way through with frustration. Once you're past it, consider: If society's swift current is tossing you around, how should you be swimming there in it's midst. You should have learned how, here in the E class, in this assassination classroom. You don't always have to stand and face it head-on. You can run and you can hide. If it's not against the rules, you can try a sneak attack. You can use unconventional weapons. Stay determined - not impatient nor discouraged - and with repeated trial and error, you're bound to reach a splendid outcome eventually.",
     "anime": {
-        "id": 876,
-        "name": "Pok\u00e9mon"
+        "id": 439,
+        "name": "Assassination Classroom 2nd Season"
     },
     "character": {
-        "id": 2436,
-        "name": "Kojirou"
+        "id": 676,
+        "name": "Korosensei"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "party-crasher",
+    "file_name": "jeremy",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/party-crasher.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/jeremy.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
-https://pluspng.com/img-png/pokemon-hd-png-image-025pikachu-pokemon-mystery-dungeon-explorers-of-sky-png-pokemon-wiki-fandom-powered-by-wikia-1377.png
-http://www.animextremist.com/imagenes/pokemon/pokemon97.jpg
+https://www.yourmomhatesthis.com/images/2016/12/Pokemon-Transparent.png
+https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
+https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_Uhk7pbhT.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_8c64gyQ3.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_zwOiTnaT.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_L3LSp9Cp.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/TzyZJUeIM.jpg
+https://cdn2.thecatapi.com/images/MTYzNDQ0OA.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/7ed0dec1-43d1-44eb-bb43-909a1298989d.jpg
+https://random.dog/822788f6-31bd-4b79-84a6-544ea5165d83.gif
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=121
+https://randomfox.ca/?i=106
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/GCsFOiIf_qr.png
+/home/runner/work/TheApi/TheApi/downloads/25lQ4oiS_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Remedy tickly coughs with a drink of honey, lemon and water as hot as you can take.
+Rule number 1: Try not to die. Rule number 2: Don't be a dick.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "93,974.311",
-        "rate_float": 93974.3107,
+        "rate": "91,020.114",
+        "rate_float": 91020.1139,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "77,857.293",
-        "rate_float": 77857.293,
+        "rate": "75,352.018",
+        "rate_float": 75352.0181,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "99,188.973",
-        "rate_float": 99188.9726,
+        "rate": "96,054.929",
+        "rate_float": 96054.9291,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "6301 Candida Tunnel",
-            "streetName": "Connelly Vista",
-            "buildingNumber": "80627",
-            "city": "Willowshire",
-            "zipcode": "19497-6098",
-            "country": "Congo - Brazzaville",
-            "country_code": "CG",
-            "latitude": -17.634881,
-            "longitude": 12.061877
+            "street": "314 Swaniawski Points Apt. 363",
+            "streetName": "Alena Center",
+            "buildingNumber": "13070",
+            "city": "Port Reyes",
+            "zipcode": "94791-1353",
+            "country": "South Africa",
+            "country_code": "ZA",
+            "latitude": 68.39461,
+            "longitude": -19.028841
         }
     ]
 }
@@ -537,10 +537,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "Discover Card",
-            "number": "5441828086001104",
-            "expiration": "12/25",
-            "owner": "Ernestine Will"
+            "type": "MasterCard",
+            "number": "5475584377643083",
+            "expiration": "10/26",
+            "owner": "Kendrick Feeney"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Enim numquam odio eius.",
-            "description": "Sunt debitis velit ab. Amet laborum sequi repudiandae enim. Aut consequuntur ratione ab nihil et blanditiis rerum.",
+            "title": "Natus iusto in itaque.",
+            "description": "Porro qui molestiae qui qui corporis. Voluptas voluptatibus magnam ut et. Ut est voluptate impedit quia eum minus non.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,8 @@ print(result)
 #### Expected Output
 
 ```text
-आजतक मुझसे किसी ने ये नहीं कहा कि तुम ही मेरी दुनिया हो हो सकता है कि शायद मैं किसी का गाँव हूँ 😆🤣😋😉
+संस्कार इसलिए भी आजकल कम हो गए हैं बच्चों में .....
+पहले बुजुर्गों से सीखते थे अब गूगल से ।।  😆🤣😋😉 
 ```
 
 ### 19. Get Jokes
@@ -629,7 +630,7 @@ print(result)
 #### Expected Output
 
 ```text
-I'll never forget my Granddad's last words to me just before he died. "Are you still holding the ladder?"
+Java is like Alzheimer's, it starts off slow, but eventually, your memory is gone.
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +651,7 @@ print(result)
 #### Expected Output
 
 ```text
-60% of electrocutions occur while talking on the telephone during a thunderstorm.
+All US Presidents have worn glasses; some just didn`t like being seen wearing them in public.
 ```
 
 ### 21. Get Word Definitions
@@ -723,7 +724,7 @@ print(result)
         "description": "\ud83c\udf0f Live visualization of all the pokemon in your area... and more! (shutdown)",
         "url": "https://github.com/AHAAAAAAA/PokemonGo-Map",
         "language": null,
-        "stargazers_count": 7528,
+        "stargazers_count": 7529,
         "forks_count": 2815
     },
     {
@@ -732,7 +733,7 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4822,
+        "stargazers_count": 4823,
         "forks_count": 2813
     },
     {
@@ -741,7 +742,7 @@ print(result)
         "description": "The Pokemon Go Bot, baking with community.",
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
-        "stargazers_count": 3878,
+        "stargazers_count": 3879,
         "forks_count": 1543
     }
 ]
@@ -765,7 +766,7 @@ print(result)
 #### Expected Output
 
 ```text
-सच्चाई और अच्छाई कहीं भी ढूंढ..अगर तूझमें नहीं तो कहीं नहीं
+आपको सच्चाई जाननी होगी। सत्य आपको मुक्त कर देगा..
 ```
 
 ### 24. Hug
@@ -794,8 +795,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Sakurasou no Pet na Kanojo",
-        "url": "https://nekos.best/api/v2/hug/4e721d9c-420c-4487-a65c-53a9d979cfbb.gif"
+        "anime_name": "Blend S",
+        "url": "https://nekos.best/api/v2/hug/5c28c686-38d7-4588-a259-23cf1669c07a.gif"
     }
 ]
 ```
@@ -818,7 +819,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/yxgbkmaf6g5e1.png?width=640&crop=smart&auto=webp&s=70dce210f4d8429b18c8e3423d2fef3ce973e80a
+https://preview.redd.it/3qbzg1n6cc5e1.png?width=1080&crop=smart&auto=webp&s=6fea9c4b7be331547fd56320ab96b62c6d43ab20
 ```
 
 ### 26. Neko
@@ -858,22 +859,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/24958490",
-            "artist_name": "\u6c70",
-            "source_url": "https://www.pixiv.net/en/artworks/95282300",
-            "url": "https://nekos.best/api/v2/neko/cc291271-6ecc-4967-9d17-7c581a0db0ce.png"
+            "artist_href": "https://www.pixiv.net/en/users/66902833",
+            "artist_name": "\u90e1\u30bd\u592a",
+            "source_url": "https://www.pixiv.net/en/artworks/92123940",
+            "url": "https://nekos.best/api/v2/neko/4929db18-32a8-4225-b88b-648725b2af7a.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/45800177",
-            "artist_name": "Catsberus",
-            "source_url": "https://www.pixiv.net/en/artworks/86074541",
-            "url": "https://nekos.best/api/v2/neko/a19705c6-48b9-4837-90b6-1bdd4db62f80.png"
+            "artist_href": "https://www.pixiv.net/en/users/1670478",
+            "artist_name": "\u308d\u3080\u3080",
+            "source_url": "https://www.pixiv.net/en/artworks/85861268",
+            "url": "https://nekos.best/api/v2/neko/69c91758-eff4-4df2-a7a1-f0df3a017aba.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/5229572",
-            "artist_name": "\u307e\u3075\u3086",
-            "source_url": "https://www.zerochan.net/2688769",
-            "url": "https://nekos.best/api/v2/neko/b723f207-6aa3-46f4-bd1e-d6728866b8d7.png"
+            "artist_href": "https://www.pixiv.net/en/users/322375",
+            "artist_name": "FLIPPER",
+            "source_url": "https://www.pixiv.net/en/artworks/93665810",
+            "url": "https://nekos.best/api/v2/neko/224e47bc-181d-4a17-ad0b-6556bfeabc29.png"
         }
     ]
 }
@@ -949,9 +950,9 @@ print(result)
 #### Expected Output
 
 ```text
-It is a common experience that a problem difficult at night is resolved in the morning after the committee of sleep has worked on it.
+Whoever is happy will make others happy, too.
 
-author - John Steinbeck
+author - Mark Twain
 ```
 
 ### 29. Random Word
@@ -972,7 +973,7 @@ print(result)
 #### Expected Output
 
 ```text
-motored
+choppy
 ```
 
 ### 30. Riddle
@@ -994,8 +995,8 @@ print(result)
 
 ```json
 {
-    "riddle": "there is a man he leaves home and runs around three blocks, when he comes back home their are two masked men, who are they?",
-    "answer": "the catcher and the umpire"
+    "riddle": "There are four girls, and four apples in a basket. Every girl takes an apple, Yet one apple remains in the basket. How is this possible?",
+    "answer": "One girl took the basket. She took the last apple while it was in the basket"
 }
 ```
 
@@ -1069,7 +1070,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2012,
+        "view_count": 2015,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1094,7 +1095,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32679,
+        "view_count": 32681,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1183,8 +1184,8 @@ print(result)
 #### Expected Output
 
 ```text
-underwent
-disendowing
+chivaries
+restorative
 ```
 
 ### 35. Write
@@ -1212,7 +1213,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_pZjTzZ2y.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_12gKkdRe.jpg
 ```
 
 
