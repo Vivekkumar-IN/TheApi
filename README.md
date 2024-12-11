@@ -72,7 +72,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
 | [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
 | [17. Get Fake Images](#17-get-fake-images) | ✅
-| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ❌
 | [19. Get Jokes](#19-get-jokes) | ✅
 | [20. Get Uselessfact](#20-get-uselessfact) | ✅
 | [21. Get Word Definitions](#21-get-word-definitions) | ✅
@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "As you go through life, the might current of society is bound to get in your way and there will certainly be times that things don't go as you'd hoped. When this happens, don't look to society for a cause. Do not renounce society. Frankly, you'd be wasting your time. Instead just say, \"That's life!\" and muddle your way through with frustration. Once you're past it, consider: If society's swift current is tossing you around, how should you be swimming there in it's midst. You should have learned how, here in the E class, in this assassination classroom. You don't always have to stand and face it head-on. You can run and you can hide. If it's not against the rules, you can try a sneak attack. You can use unconventional weapons. Stay determined - not impatient nor discouraged - and with repeated trial and error, you're bound to reach a splendid outcome eventually.",
+    "content": "I will show you my own move.",
     "anime": {
-        "id": 439,
-        "name": "Assassination Classroom 2nd Season"
+        "id": 266,
+        "name": "Naruto"
     },
     "character": {
-        "id": 676,
-        "name": "Korosensei"
+        "id": 1350,
+        "name": "Hatake Kakashi"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "jeremy",
+    "file_name": "sarah",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/jeremy.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/sarah.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://www.yourmomhatesthis.com/images/2016/12/Pokemon-Transparent.png
-https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
-https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
+https://img.redbull.com/images/c_fill,g_auto,w_1500,h_1000/q_auto,f_auto/redbullcom/2016/09/20/1331818966444_2/pokémon-super-mystery-dungeon
+https://blog.looglebiz.com/wp-content/uploads/2022/10/og-default-image.jpeg
+http://images6.fanpop.com/image/photos/39400000/1st-generation-pokemon-39423803-4724-2835.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_8c64gyQ3.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_OiCBczRz.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_L3LSp9Cp.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_YfLMZMHt.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTYzNDQ0OA.jpg
+https://cdn2.thecatapi.com/images/dn3.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/822788f6-31bd-4b79-84a6-544ea5165d83.gif
+https://random.dog/e83bd9a7-e2c8-409f-be27-5faf3983c2cc.gif
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=106
+https://randomfox.ca/?i=123
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/25lQ4oiS_qr.png
+/home/runner/work/TheApi/TheApi/downloads/vdO5et9C_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Rule number 1: Try not to die. Rule number 2: Don't be a dick.
+When hugging, hug with both arms and apply reasonable, affectionate pressure.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "91,020.114",
-        "rate_float": 91020.1139,
+        "rate": "92,450.912",
+        "rate_float": 92450.9118,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "75,352.018",
-        "rate_float": 75352.0181,
+        "rate": "76,183.816",
+        "rate_float": 76183.8159,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "96,054.929",
-        "rate_float": 96054.9291,
+        "rate": "97,362.869",
+        "rate_float": 97362.8686,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "314 Swaniawski Points Apt. 363",
-            "streetName": "Alena Center",
-            "buildingNumber": "13070",
-            "city": "Port Reyes",
-            "zipcode": "94791-1353",
-            "country": "South Africa",
-            "country_code": "ZA",
-            "latitude": 68.39461,
-            "longitude": -19.028841
+            "street": "675 Korbin Junction Suite 902",
+            "streetName": "Laney Knolls",
+            "buildingNumber": "3924",
+            "city": "Jetthaven",
+            "zipcode": "69103",
+            "country": "Brazil",
+            "country_code": "BR",
+            "latitude": 37.893323,
+            "longitude": 81.723733
         }
     ]
 }
@@ -538,9 +538,9 @@ print(result)
     "data": [
         {
             "type": "MasterCard",
-            "number": "5475584377643083",
-            "expiration": "10/26",
-            "owner": "Kendrick Feeney"
+            "number": "3589507520309904",
+            "expiration": "11/26",
+            "owner": "Orie O'Reilly"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Natus iusto in itaque.",
-            "description": "Porro qui molestiae qui qui corporis. Voluptas voluptatibus magnam ut et. Ut est voluptate impedit quia eum minus non.",
+            "title": "Minima sequi ratione soluta.",
+            "description": "Quia ipsa esse explicabo aliquid. Magnam tempore est et ut.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,8 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-संस्कार इसलिए भी आजकल कम हो गए हैं बच्चों में .....
-पहले बुजुर्गों से सीखते थे अब गूगल से ।।  😆🤣😋😉 
+'status'
 ```
 
 ### 19. Get Jokes
@@ -630,7 +629,11 @@ print(result)
 #### Expected Output
 
 ```text
-Java is like Alzheimer's, it starts off slow, but eventually, your memory is gone.
+How do you tell HTML from HTML5?
+- Try it out in Internet Explorer
+- Did it work?
+- No?
+- It's HTML5.
 ```
 
 ### 20. Get Uselessfact
@@ -651,7 +654,7 @@ print(result)
 #### Expected Output
 
 ```text
-All US Presidents have worn glasses; some just didn`t like being seen wearing them in public.
+There are 1,792 steps in the Eiffel Tower
 ```
 
 ### 21. Get Word Definitions
@@ -733,8 +736,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4823,
-        "forks_count": 2813
+        "stargazers_count": 4826,
+        "forks_count": 2815
     },
     {
         "name": "PokemonGo-Bot",
@@ -766,7 +769,7 @@ print(result)
 #### Expected Output
 
 ```text
-आपको सच्चाई जाननी होगी। सत्य आपको मुक्त कर देगा..
+जो आपकी बुराई करते हैं, उन्हे करने दो क्योंकी बुराई वहीं करते हैं जो बराबरी नहीं कर सकते..!
 ```
 
 ### 24. Hug
@@ -795,8 +798,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Blend S",
-        "url": "https://nekos.best/api/v2/hug/5c28c686-38d7-4588-a259-23cf1669c07a.gif"
+        "anime_name": "Noragami OAD",
+        "url": "https://nekos.best/api/v2/hug/c08992e3-ec9c-4cf4-88d0-6ca921d3ef64.gif"
     }
 ]
 ```
@@ -819,7 +822,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/3qbzg1n6cc5e1.png?width=1080&crop=smart&auto=webp&s=6fea9c4b7be331547fd56320ab96b62c6d43ab20
+https://preview.redd.it/3nw4vm96716e1.png?width=1080&crop=smart&auto=webp&s=d932f5b1f735bbabafb923d709152024d7c1952c
 ```
 
 ### 26. Neko
@@ -859,22 +862,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/66902833",
-            "artist_name": "\u90e1\u30bd\u592a",
-            "source_url": "https://www.pixiv.net/en/artworks/92123940",
-            "url": "https://nekos.best/api/v2/neko/4929db18-32a8-4225-b88b-648725b2af7a.png"
+            "artist_href": "https://www.pixiv.net/en/users/39682115",
+            "artist_name": "Bling",
+            "source_url": "https://www.pixiv.net/en/artworks/102800818",
+            "url": "https://nekos.best/api/v2/neko/2a751033-78da-4ff5-8d48-2177fb0b2af2.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/1670478",
-            "artist_name": "\u308d\u3080\u3080",
-            "source_url": "https://www.pixiv.net/en/artworks/85861268",
-            "url": "https://nekos.best/api/v2/neko/69c91758-eff4-4df2-a7a1-f0df3a017aba.png"
+            "artist_href": "https://www.pixiv.net/en/users/7375118",
+            "artist_name": "\u308c\u3064\u3068",
+            "source_url": "https://www.pixiv.net/en/artworks/83355104",
+            "url": "https://nekos.best/api/v2/neko/e09c20d5-7ca3-4826-b0d3-0002241dfb14.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/322375",
-            "artist_name": "FLIPPER",
-            "source_url": "https://www.pixiv.net/en/artworks/93665810",
-            "url": "https://nekos.best/api/v2/neko/224e47bc-181d-4a17-ad0b-6556bfeabc29.png"
+            "artist_href": "https://www.pixiv.net/en/users/19731971",
+            "artist_name": "\u30d4\u30ed\u30ea\u83cc",
+            "source_url": "https://www.pixiv.net/en/artworks/97547885",
+            "url": "https://nekos.best/api/v2/neko/b5255243-e215-4e20-a959-01f95de735da.png"
         }
     ]
 }
@@ -950,9 +953,9 @@ print(result)
 #### Expected Output
 
 ```text
-Whoever is happy will make others happy, too.
+Action is eloquence.
 
-author - Mark Twain
+author - William Shakespeare
 ```
 
 ### 29. Random Word
@@ -973,7 +976,7 @@ print(result)
 #### Expected Output
 
 ```text
-choppy
+heavyheartedly
 ```
 
 ### 30. Riddle
@@ -995,8 +998,8 @@ print(result)
 
 ```json
 {
-    "riddle": "There are four girls, and four apples in a basket. Every girl takes an apple, Yet one apple remains in the basket. How is this possible?",
-    "answer": "One girl took the basket. She took the last apple while it was in the basket"
+    "riddle": "Who bought it doesnt need it Who needs it didnt buy it Who ever sees it makes them cry What on earth am i??",
+    "answer": "A coffin"
 }
 ```
 
@@ -1070,7 +1073,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2015,
+        "view_count": 2016,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1095,7 +1098,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32681,
+        "view_count": 32683,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1184,8 +1187,8 @@ print(result)
 #### Expected Output
 
 ```text
-chivaries
-restorative
+boucles
+bipedalisms
 ```
 
 ### 35. Write
@@ -1213,7 +1216,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_12gKkdRe.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_vEPBdOXY.jpg
 ```
 
 
