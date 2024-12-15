@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "We can no longer go back though, I\u2019m totally different from that person in the past, you too. That was just a brief reminiscing of our past, that\u2019s all.",
+    "content": "There's nothing more boring than a perfect heroine!",
     "anime": {
-        "id": 379,
-        "name": "Ao Haru Ride"
+        "id": 469,
+        "name": "Princess Tutu"
     },
     "character": {
-        "id": 528,
-        "name": "Kou Mabuchi"
+        "id": 740,
+        "name": "Drosselmeyer"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "deena",
+    "file_name": "board-member",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/deena.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/board-member.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://www.yourmomhatesthis.com/images/2016/12/Pokemon-Transparent.png
-https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
 https://img.redbull.com/images/c_fill,g_auto,w_1500,h_1000/q_auto,f_auto/redbullcom/2016/09/20/1331818966444_2/pokémon-super-mystery-dungeon
+https://pluspng.com/img-png/pokemon-hd-png-image-025pikachu-pokemon-mystery-dungeon-explorers-of-sky-png-pokemon-wiki-fandom-powered-by-wikia-1377.png
+https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_OwflYZzW.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_5CbtNsTC.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_bGJuc7Yz.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_1I3aMejk.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/3n8.jpg
+https://cdn2.thecatapi.com/images/Tj600QY1c.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/9696e69d-2327-4892-8163-6e05ec56da2f.mp4
+https://random.dog/89ea35da-8190-4161-ba4f-b41882755654.gif
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=86
+https://randomfox.ca/?i=19
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/6v2VuNeS_qr.png
+/home/runner/work/TheApi/TheApi/downloads/078MZM8F_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Try to not compliment people on things they don't control.
+When having a clear out, ask yourself if an item has any financial, practical or sentimental value. If not, chuck it.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "97,213.44",
-        "rate_float": 97213.4396,
+        "rate": "96,886.948",
+        "rate_float": 96886.9477,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "80,108.358",
-        "rate_float": 80108.3584,
+        "rate": "79,839.314",
+        "rate_float": 79839.314,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "102,378.432",
-        "rate_float": 102378.4315,
+        "rate": "102,034.593",
+        "rate_float": 102034.5929,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "709 Kuvalis Alley",
-            "streetName": "O'Conner Park",
-            "buildingNumber": "14605",
-            "city": "Port Kenton",
-            "zipcode": "78727-3371",
-            "country": "St. Vincent & Grenadines",
-            "country_code": "VC",
-            "latitude": -74.68585,
-            "longitude": -119.381986
+            "street": "42087 Kulas Extension Suite 986",
+            "streetName": "Hermina Ridge",
+            "buildingNumber": "14597",
+            "city": "Ravenfurt",
+            "zipcode": "22051",
+            "country": "Isle of Man",
+            "country_code": "IM",
+            "latitude": -55.528111,
+            "longitude": -14.778313
         }
     ]
 }
@@ -538,9 +538,9 @@ print(result)
     "data": [
         {
             "type": "Visa",
-            "number": "4803974951914248",
-            "expiration": "08/26",
-            "owner": "Mavis Weissnat"
+            "number": "4716837369214244",
+            "expiration": "06/25",
+            "owner": "Rachael Berge"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Omnis est labore sequi ut.",
-            "description": "Quibusdam et vitae dolores error et. Reprehenderit est exercitationem repellat dolorem velit voluptas ea rem. Minima praesentium voluptas magnam.",
+            "title": "Quae enim quo cumque.",
+            "description": "Corporis impedit dolorem autem unde quidem necessitatibus sunt alias. Possimus aut et eos ipsam. Error incidunt quidem et quae ut ad. Natus autem similique temporibus quam rerum. Sit qui unde omnis.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-अगर आपका बेटा  ...Hello Hello... करते हुए, रूम से बाहर निकल जाए, तो समझ जाना की, आपकी होने वाली बहु का फ़ोन है ! 😆🤣😋😉
+जब कुछ लोग बोलते है कि ...बुरा मत मानना... तो ऐसी बात बोल जाते है कि बुरा ही नही साथ में जूता भी मारने का मन करता है 😆🤣😋😉
 ```
 
 ### 19. Get Jokes
@@ -629,7 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-// This line doesn't actually do anything, but the code stops working when I delete it.
+I hate double standards. Burn a body at a crematorium, you're "being a respectful friend." Do it at home and you're "destroying evidence."
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-2,000 pounds of space dust and other space debris fall on the Earth every day.
+A horse can look forward with one eye and back with the other.
 ```
 
 ### 21. Get Word Definitions
@@ -732,8 +732,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4827,
-        "forks_count": 2818
+        "stargazers_count": 4828,
+        "forks_count": 2819
     },
     {
         "name": "PokemonGo-Bot",
@@ -742,7 +742,7 @@ print(result)
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
         "stargazers_count": 3879,
-        "forks_count": 1543
+        "forks_count": 1542
     }
 ]
 ```
@@ -765,7 +765,7 @@ print(result)
 #### Expected Output
 
 ```text
-रंग भी उसी का चढ़ा है अब तक, जिसने रंग लगाया नहीं अब तक!
+खून मे ऊबाल वो आज भी खानदानी है दुनिया हमारे शौक की नहीं, हमारे तेवर की दिवानी है!!
 ```
 
 ### 24. Hug
@@ -794,8 +794,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Sword Art Online",
-        "url": "https://nekos.best/api/v2/hug/f33d03b0-fb25-4592-b48c-4de029596488.gif"
+        "anime_name": "Hibike! Euphonium",
+        "url": "https://nekos.best/api/v2/hug/f8702ca1-e7d8-44e1-a2aa-221f10749498.gif"
     }
 ]
 ```
@@ -818,7 +818,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/7rj6bvdmbf6e1.png?width=1080&crop=smart&auto=webp&s=03f94eace6aaeb22393c6ca2e590a170126d8fe3
+https://preview.redd.it/k13646i4ml6e1.png?width=640&crop=smart&auto=webp&s=3353785739cf6c1d5c65fa4309c51458b4c5d953
 ```
 
 ### 26. Neko
@@ -858,22 +858,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://twitter.com/naco_miyasaka",
-            "artist_name": "\u5bae\u5742\u306a\u3053",
-            "source_url": "https://twitter.com/i/web/status/1238686829248786432",
-            "url": "https://nekos.best/api/v2/neko/dc9c18d0-d948-4941-b53c-452d96b26377.png"
+            "artist_href": "https://www.pixiv.net/en/users/53862745",
+            "artist_name": "\u3072\u306a\u305f",
+            "source_url": "https://www.pixiv.net/en/artworks/96001445",
+            "url": "https://nekos.best/api/v2/neko/ae8ca777-d7f6-400f-8600-69702ae26672.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/1198913",
-            "artist_name": "\u307b\u3057",
-            "source_url": "https://twitter.com/i/web/status/1190197750203215872",
-            "url": "https://nekos.best/api/v2/neko/f6a245a1-a34f-48ec-85c0-98c3ff6fef4b.png"
+            "artist_href": "https://www.pixiv.net/en/users/14172726",
+            "artist_name": "\u672a\u6765\u3078",
+            "source_url": "https://www.pixiv.net/en/artworks/97968304",
+            "url": "https://nekos.best/api/v2/neko/e4dc1604-e4b9-43ef-a8d1-25dea3e4a6df.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/16240887",
-            "artist_name": "ION",
-            "source_url": "https://www.pixiv.net/en/artworks/71238013",
-            "url": "https://nekos.best/api/v2/neko/783d72e6-a4e1-4fb0-9fb0-28f6c7ddd903.png"
+            "artist_href": "https://www.pixiv.net/en/users/65807570",
+            "artist_name": "hini_ni",
+            "source_url": "https://www.pixiv.net/en/artworks/92963091",
+            "url": "https://nekos.best/api/v2/neko/3908af6f-51a9-497d-aa51-6e7e8b40c8c4.png"
         }
     ]
 }
@@ -949,9 +949,9 @@ print(result)
 #### Expected Output
 
 ```text
-Time changes everything except something within us which is always surprised by change.
+A long habit of not thinking a thing wrong gives it a superficial appearance of being right.
 
-author - Thomas Hardy
+author - Thomas Paine
 ```
 
 ### 29. Random Word
@@ -972,7 +972,7 @@ print(result)
 #### Expected Output
 
 ```text
-sizinesses
+unclothed
 ```
 
 ### 30. Riddle
@@ -994,8 +994,8 @@ print(result)
 
 ```json
 {
-    "riddle": "What question can someone ask all day long, always get completely different answers, and yet all the answers could be correct?",
-    "answer": "\u201cWhat time is it?\u201c"
+    "riddle": "I can flutter and take your breath away. I can take a beating, but do not bruise. If I stopped you would be sure to lose. Everyday I am with you. What am I?",
+    "answer": "Your heart"
 }
 ```
 
@@ -1183,8 +1183,8 @@ print(result)
 #### Expected Output
 
 ```text
-ibuprofen
-bannet
+enlightening
+coldness
 ```
 
 ### 35. Write
@@ -1212,7 +1212,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_FoRfxCzt.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_WGenzRLj.jpg
 ```
 
 
