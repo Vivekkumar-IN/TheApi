@@ -113,14 +113,14 @@ print(result)
 
 ```json
 {
-    "content": "There's nothing more boring than a perfect heroine!",
+    "content": "[On first seeing Kyo] The ceiling... Is he hurt...? Wh-who... Well, hello, orange-head...",
     "anime": {
-        "id": 469,
-        "name": "Princess Tutu"
+        "id": 565,
+        "name": "Fruits Basket"
     },
     "character": {
-        "id": 740,
-        "name": "Drosselmeyer"
+        "id": 947,
+        "name": "Honda Tohru"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "board-member",
+    "file_name": "counsellor",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/board-member.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/counsellor.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://img.redbull.com/images/c_fill,g_auto,w_1500,h_1000/q_auto,f_auto/redbullcom/2016/09/20/1331818966444_2/pokémon-super-mystery-dungeon
+https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
 https://pluspng.com/img-png/pokemon-hd-png-image-025pikachu-pokemon-mystery-dungeon-explorers-of-sky-png-pokemon-wiki-fandom-powered-by-wikia-1377.png
-https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_5CbtNsTC.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_VmP8hhqx.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_1I3aMejk.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_vDfz98XL.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/Tj600QY1c.jpg
+https://cdn2.thecatapi.com/images/ci0.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/89ea35da-8190-4161-ba4f-b41882755654.gif
+https://random.dog/a6d0a1de-d60d-4c12-9945-5ed997b79ae3.mp4
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=19
+https://randomfox.ca/?i=60
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/078MZM8F_qr.png
+/home/runner/work/TheApi/TheApi/downloads/7iDM7SuG_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-When having a clear out, ask yourself if an item has any financial, practical or sentimental value. If not, chuck it.
+When painting a room, preparation is key. The actual painting should account for about 40% of the work.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "96,886.948",
-        "rate_float": 96886.9477,
+        "rate": "99,452.886",
+        "rate_float": 99452.886,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "79,839.314",
-        "rate_float": 79839.314,
+        "rate": "81,953.766",
+        "rate_float": 81953.7655,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "102,034.593",
-        "rate_float": 102034.5929,
+        "rate": "104,736.861",
+        "rate_float": 104736.8606,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "42087 Kulas Extension Suite 986",
-            "streetName": "Hermina Ridge",
-            "buildingNumber": "14597",
-            "city": "Ravenfurt",
-            "zipcode": "22051",
-            "country": "Isle of Man",
-            "country_code": "IM",
-            "latitude": -55.528111,
-            "longitude": -14.778313
+            "street": "481 Jaskolski Forks Suite 369",
+            "streetName": "Alejandrin Shore",
+            "buildingNumber": "87798",
+            "city": "South Melody",
+            "zipcode": "40904-7519",
+            "country": "Eritrea",
+            "country_code": "ER",
+            "latitude": 60.499623,
+            "longitude": 10.698451
         }
     ]
 }
@@ -537,10 +537,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "Visa",
-            "number": "4716837369214244",
-            "expiration": "06/25",
-            "owner": "Rachael Berge"
+            "type": "JCB",
+            "number": "4532233164246890",
+            "expiration": "09/26",
+            "owner": "Alfreda Rogahn"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Quae enim quo cumque.",
-            "description": "Corporis impedit dolorem autem unde quidem necessitatibus sunt alias. Possimus aut et eos ipsam. Error incidunt quidem et quae ut ad. Natus autem similique temporibus quam rerum. Sit qui unde omnis.",
+            "title": "Qui libero vero deleniti.",
+            "description": "Inventore sed voluptatem et sunt ipsa fuga voluptatem. Rem quaerat illo et dolores non. Cum illo nulla corporis eaque. Esse minima quam dolorem ut eveniet non eum.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-जब कुछ लोग बोलते है कि ...बुरा मत मानना... तो ऐसी बात बोल जाते है कि बुरा ही नही साथ में जूता भी मारने का मन करता है 😆🤣😋😉
+नवरात्रि में स्त्री सोचती है आज गरबा में क्या पहनू? और पुरुष सोचता है कल वाली आज भी आयेगी क्या? 😆🤣😋😉 
 ```
 
 ### 19. Get Jokes
@@ -629,7 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-I hate double standards. Burn a body at a crematorium, you're "being a respectful friend." Do it at home and you're "destroying evidence."
+If Bill Gates had a dime for every time Windows crashed ... Oh wait, he does.
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-A horse can look forward with one eye and back with the other.
+The average talker sprays about 300 microscopic saliva droplets per minute, about 2.5 droplets per word.
 ```
 
 ### 21. Get Word Definitions
@@ -732,8 +732,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4828,
-        "forks_count": 2819
+        "stargazers_count": 4829,
+        "forks_count": 2821
     },
     {
         "name": "PokemonGo-Bot",
@@ -765,7 +765,7 @@ print(result)
 #### Expected Output
 
 ```text
-खून मे ऊबाल वो आज भी खानदानी है दुनिया हमारे शौक की नहीं, हमारे तेवर की दिवानी है!!
+वसीयत अपने नाम लिखने से कुछ नही होता, ये तो उड़ान तय करती है कि आसमान किसका होगा।
 ```
 
 ### 24. Hug
@@ -794,8 +794,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Hibike! Euphonium",
-        "url": "https://nekos.best/api/v2/hug/f8702ca1-e7d8-44e1-a2aa-221f10749498.gif"
+        "anime_name": "Naruto",
+        "url": "https://nekos.best/api/v2/hug/28ba71e1-376d-4d4d-af5b-3aa3ba70943e.gif"
     }
 ]
 ```
@@ -818,7 +818,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/k13646i4ml6e1.png?width=640&crop=smart&auto=webp&s=3353785739cf6c1d5c65fa4309c51458b4c5d953
+https://preview.redd.it/d8uepkah047e1.png?width=960&crop=smart&auto=webp&s=3555500f4b2298b12b7f1ef8782ebee1d777fd19
 ```
 
 ### 26. Neko
@@ -858,22 +858,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/53862745",
-            "artist_name": "\u3072\u306a\u305f",
-            "source_url": "https://www.pixiv.net/en/artworks/96001445",
-            "url": "https://nekos.best/api/v2/neko/ae8ca777-d7f6-400f-8600-69702ae26672.png"
+            "artist_href": "https://www.pixiv.net/en/users/26040235",
+            "artist_name": "Noyu",
+            "source_url": "https://www.pixiv.net/en/artworks/86643968",
+            "url": "https://nekos.best/api/v2/neko/48dcffea-132a-4620-bcab-7b43d3b7bf71.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/14172726",
-            "artist_name": "\u672a\u6765\u3078",
-            "source_url": "https://www.pixiv.net/en/artworks/97968304",
-            "url": "https://nekos.best/api/v2/neko/e4dc1604-e4b9-43ef-a8d1-25dea3e4a6df.png"
+            "artist_href": "https://www.pixiv.net/en/users/17745241",
+            "artist_name": "\u30ca\u30ea",
+            "source_url": "https://www.pixiv.net/en/artworks/75225151",
+            "url": "https://nekos.best/api/v2/neko/a85d85ef-fb26-4674-a631-f1482cf44492.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/65807570",
-            "artist_name": "hini_ni",
-            "source_url": "https://www.pixiv.net/en/artworks/92963091",
-            "url": "https://nekos.best/api/v2/neko/3908af6f-51a9-497d-aa51-6e7e8b40c8c4.png"
+            "artist_href": "https://www.pixiv.net/en/users/64513597",
+            "artist_name": "Riri\u3002",
+            "source_url": "https://www.pixiv.net/en/artworks/93491143",
+            "url": "https://nekos.best/api/v2/neko/833e9941-ed2a-4bbc-9c9c-7d4ad3411d5d.png"
         }
     ]
 }
@@ -949,9 +949,9 @@ print(result)
 #### Expected Output
 
 ```text
-A long habit of not thinking a thing wrong gives it a superficial appearance of being right.
+What you get by achieving your goals is not as important as what you become by achieving your goals.
 
-author - Thomas Paine
+author - Zig Ziglar
 ```
 
 ### 29. Random Word
@@ -972,7 +972,7 @@ print(result)
 #### Expected Output
 
 ```text
-unclothed
+beeswax
 ```
 
 ### 30. Riddle
@@ -994,8 +994,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I can flutter and take your breath away. I can take a beating, but do not bruise. If I stopped you would be sure to lose. Everyday I am with you. What am I?",
-    "answer": "Your heart"
+    "riddle": "Which country has been hidden in the paragraph below:  The local habitat around a railway track can be very interesting. For example, supporting the track is a sleeper, under which you can find the lesser spotted great weevil.",
+    "answer": "Peru: The local habitat around a railway track can be very interesting. For example, supporting the track is a sleeper, under which you can find the lesser spotted great weevil"
 }
 ```
 
@@ -1069,7 +1069,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2018,
+        "view_count": 2021,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1094,7 +1094,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32692,
+        "view_count": 32693,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1183,8 +1183,8 @@ print(result)
 #### Expected Output
 
 ```text
-enlightening
-coldness
+necessitously
+polyandrous
 ```
 
 ### 35. Write
@@ -1212,7 +1212,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_WGenzRLj.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_41HnHIil.jpg
 ```
 
 
