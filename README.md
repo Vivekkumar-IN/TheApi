@@ -74,12 +74,12 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [17. Get Fake Images](#17-get-fake-images) | ✅
 | [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
 | [19. Get Jokes](#19-get-jokes) | ✅
-| [20. Get Uselessfact](#20-get-uselessfact) | ❌
+| [20. Get Uselessfact](#20-get-uselessfact) | ✅
 | [21. Get Word Definitions](#21-get-word-definitions) | ✅
 | [22. Github Search](#22-github-search) | ✅
 | [23. Hindi Quote](#23-hindi-quote) | ✅
 | [24. Hug](#24-hug) | ✅
-| [25. Meme](#25-meme) | ✅
+| [25. Meme](#25-meme) | ❌
 | [26. Neko](#26-neko) | ✅
 | [27. Pypi](#27-pypi) | ✅
 | [28. Quote](#28-quote) | ✅
@@ -113,15 +113,15 @@ print(result)
 
 ```json
 {
-    "content": "People who know how painful it can be to be alive, are fascinating.",
+    "content": "I don't trust anyone, so no one trusts me",
     "anime": {
-        "id": 942,
-        "name": "His and Her Circumstances",
-        "altName": "Kareshi Kanojo no Jijou"
+        "id": 555,
+        "name": "Wolf's Rain",
+        "altName": "Wolf's Rain"
     },
     "character": {
-        "id": 2154,
-        "name": "Soichiro Arima"
+        "id": 1570,
+        "name": "Tsume"
     }
 }
 ```
@@ -145,9 +145,9 @@ print(result)
 
 ```json
 {
-    "file_name": "heather",
+    "file_name": "jamie",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/heather.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/jamie.jpg"
 }
 ```
 
@@ -173,9 +173,9 @@ print(result)
 #### Expected Output
 
 ```text
+https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg
 http://www.technosamrat.com/wp-content/uploads/2012/05/Pokemon-Wallpapers-Picture.jpg
-https://www.cutepetname.com/wp-content/uploads/2018/06/pokemon_PNG112.png
-https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pokémon_logo.svg/1200px-International_Pokémon_logo.svg.png
+https://images.wallpapersden.com/image/download/pokemon-scarlet-and-violet-hd_bW1qamqUmZqaraWkpJRmbmdlrWZlbWU.jpg
 ```
 
 ### 4. Blackpink
@@ -201,7 +201,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_GSt4wnxY.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_PbpAyA3a.jpg
 ```
 
 ### 5. Carbon
@@ -225,7 +225,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_Gq8OtHNp.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_V4R6VYEN.png
 ```
 
 ### 6. Cat
@@ -246,7 +246,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/d0h.jpg
+https://cdn2.thecatapi.com/images/9fr.jpg
 ```
 
 ### 7. Dog
@@ -267,7 +267,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/f5b589f6-923b-44ef-9051-537c61b5a34f.jpg
+https://random.dog/y3u28nj.mp4
 ```
 
 ### 8. Domain Search
@@ -342,7 +342,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=106
+https://randomfox.ca/?i=25
 ```
 
 ### 11. Gen Qr
@@ -371,7 +371,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/iSmmvmUl_qr.png
+/home/runner/work/TheApi/TheApi/downloads/xxCbPm8Q_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -410,7 +410,7 @@ print(result)
 #### Expected Output
 
 ```text
-Always double check you actually attached the file to the email.
+Vinegar is a powerful cleaning agent.
 ```
 
 ### 14. Get Btc Value
@@ -442,22 +442,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "99,930.924",
-        "rate_float": 99930.9236,
+        "rate": "97,067.621",
+        "rate_float": 97067.6209,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "82,347.691",
-        "rate_float": 82347.6905,
+        "rate": "79,988.197",
+        "rate_float": 79988.1971,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "105,240.297",
-        "rate_float": 105240.2965,
+        "rate": "102,224.865",
+        "rate_float": 102224.8654,
         "symbol": "&#36;"
     }
 }
@@ -494,15 +494,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "984 Hauck Garden Apt. 292",
-            "streetName": "Harvey Square",
-            "buildingNumber": "1361",
-            "city": "East Linnieview",
-            "zipcode": "03623",
-            "country": "Vanuatu",
-            "country_code": "VU",
-            "latitude": -3.835523,
-            "longitude": 126.304619
+            "street": "27610 Kutch Springs Apt. 348",
+            "streetName": "Lea Crest",
+            "buildingNumber": "1880",
+            "city": "East Coralieton",
+            "zipcode": "97829",
+            "country": "Australia",
+            "country_code": "AU",
+            "latitude": 25.530461,
+            "longitude": 103.827429
         }
     ]
 }
@@ -538,10 +538,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "4539690797341740",
-            "expiration": "09/26",
-            "owner": "Lee Terry"
+            "type": "Visa",
+            "number": "4556168374368764",
+            "expiration": "03/25",
+            "owner": "Jesus Schaden"
         }
     ]
 }
@@ -580,8 +580,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Quis culpa id iure in non.",
-            "description": "Quae occaecati praesentium dolores. Dolores dolorum in omnis cum non error ut. Voluptate aut quam debitis consequatur dolorem voluptatem in. Et deserunt et et similique amet nihil.",
+            "title": "Rerum facere ex amet facere.",
+            "description": "Alias reprehenderit facere quia dolorum magni. Exercitationem officia eligendi accusamus voluptas aut nemo ut voluptates. Assumenda id quia dignissimos qui nesciunt est.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -606,8 +606,8 @@ print(result)
 #### Expected Output
 
 ```text
-पत्नि : सुनो मेरे मुहं मे मच्छर चला गया, अब क्या करू..?  
-पति : पगली ऑल आउट पी ले, 6 सेकेंड में काम शुरू। 😂😂😂
+मेहमान : और बताओ बेटा आगे क्या सोचा है?  
+मीना : बस अंकल आपके जाते ही बिस्किट खाऊंगी नमकीन तो आपने छोड़ी नहीं है😆🤣😋😉 
 ```
 
 ### 19. Get Jokes
@@ -631,7 +631,8 @@ print(result)
 #### Expected Output
 
 ```text
-I hate double standards. Burn a body at a crematorium, you're "being a respectful friend." Do it at home and you're "destroying evidence."
+My grandfather says I'm too reliant on technology.
+I called him a hypocrite and unplugged his life support.
 ```
 
 ### 20. Get Uselessfact
@@ -652,7 +653,7 @@ print(result)
 #### Expected Output
 
 ```text
-Request failed: 500, message='Internal Server Error', url='https://uselessfacts.jsph.pl/api/v2/facts/random'
+The average lifespan of an eyelash is five months.
 ```
 
 ### 21. Get Word Definitions
@@ -734,7 +735,7 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4831,
+        "stargazers_count": 4833,
         "forks_count": 2824
     },
     {
@@ -744,7 +745,7 @@ print(result)
         "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
         "language": "Python",
         "stargazers_count": 3879,
-        "forks_count": 1542
+        "forks_count": 1543
     }
 ]
 ```
@@ -767,7 +768,7 @@ print(result)
 #### Expected Output
 
 ```text
-वो दुआ ही क्या जिसमें तुम्हारा इज़हार ना हो
+जो अपनी गलतियों से सीखता है और दुसरे तरीकें अपनाता है; वह् सफल होता है।
 ```
 
 ### 24. Hug
@@ -796,8 +797,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Blend S",
-        "url": "https://nekos.best/api/v2/hug/5c28c686-38d7-4588-a259-23cf1669c07a.gif"
+        "anime_name": "Kaijin Kaihatsubu no Kuroitsu-san",
+        "url": "https://nekos.best/api/v2/hug/4151b575-c780-4dd4-ab7c-eaa25bfe5200.gif"
     }
 ]
 ```
@@ -820,7 +821,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/ch9v74zvsd7e1.png?width=320&crop=smart&auto=webp&s=197be5253fcb443bb13273c1b4225fee6beadd03
+Request failed: 530, message='', url='https://meme-api.com/gimme'
 ```
 
 ### 26. Neko
@@ -860,22 +861,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/8377268",
-            "artist_name": "\u3044\u304b\u3063\u3061",
-            "source_url": "https://www.pixiv.net/en/artworks/89838950",
-            "url": "https://nekos.best/api/v2/neko/a33f89a9-ca0e-4edb-b83b-072f2657e6c8.png"
+            "artist_href": "https://www.pixiv.net/en/users/28332851",
+            "artist_name": "Seno",
+            "source_url": "https://www.pixiv.net/en/artworks/84456937",
+            "url": "https://nekos.best/api/v2/neko/2ac65734-5e34-4ca9-8758-3e05768fba64.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/3036679",
-            "artist_name": "\u7518\u57ce\u306a\u3064\u304d",
-            "source_url": "https://www.pixiv.net/en/artworks/75976887",
-            "url": "https://nekos.best/api/v2/neko/50a2303d-5d88-4cf6-8b0d-f53d4c233bed.png"
+            "artist_href": "https://www.pixiv.net/en/users/4419579",
+            "artist_name": "\u671d\u6d77\u308a\u3093\u305f",
+            "source_url": "https://www.pixiv.net/en/artworks/94875888",
+            "url": "https://nekos.best/api/v2/neko/61d66b5b-de33-4b45-8b7f-b987d2db07fe.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/57758604",
-            "artist_name": "blua",
-            "source_url": "https://www.pixiv.net/en/artworks/92563823",
-            "url": "https://nekos.best/api/v2/neko/c1c6fa2e-582a-4b8c-810c-77971f40d9dd.png"
+            "artist_href": "https://www.pixiv.net/en/users/24563064",
+            "artist_name": "\u30ab\u30e1\u30ec\u30aa\u30f3",
+            "source_url": "https://www.pixiv.net/en/artworks/97964073",
+            "url": "https://nekos.best/api/v2/neko/ad1ac202-987f-4892-b7dc-dc3398a080c1.png"
         }
     ]
 }
@@ -951,9 +952,9 @@ print(result)
 #### Expected Output
 
 ```text
-There is only one success: to be able to spend your life in your own way.
+Everything has beauty, but not everyone sees it.
 
-author - Christopher Morley
+author - Confucius
 ```
 
 ### 29. Random Word
@@ -974,7 +975,7 @@ print(result)
 #### Expected Output
 
 ```text
-glibness
+luckiest
 ```
 
 ### 30. Riddle
@@ -996,8 +997,8 @@ print(result)
 
 ```json
 {
-    "riddle": "A phone rings 9 times, and no one answers it. A horse eats 9 pounds of grain. A bannana grows 9 inches evry day. and the computer gets 9 mail messages every day.  What is always in the above paragraph ^?",
-    "answer": "Letters and words"
+    "riddle": "Which triangle has a bigger area:  1. A triangle with sides measuring 300, 400, and 500. 2. A triangle with sides measuring 300, 400, and 700.",
+    "answer": "1. A triangle with sides measuring 300, 400, and 500. The other triangle cannot exist!"
 }
 ```
 
@@ -1057,6 +1058,31 @@ print(result)
     },
     {
         "tags": [
+            "java"
+        ],
+        "owner": {
+            "account_id": 919945,
+            "reputation": 43,
+            "user_id": 951797,
+            "user_type": "registered",
+            "profile_image": "https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG",
+            "display_name": "Brian",
+            "link": "https://stackoverflow.com/users/951797/brian"
+        },
+        "is_answered": true,
+        "view_count": 32697,
+        "accepted_answer_id": 7942409,
+        "answer_count": 3,
+        "score": 3,
+        "last_activity_date": 1577442848,
+        "creation_date": 1319931614,
+        "question_id": 7942384,
+        "content_license": "CC BY-SA 3.0",
+        "link": "https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator",
+        "title": "Simple Java Pokemon Fight Simulator"
+    },
+    {
+        "tags": [
             "reactjs",
             "random",
             "axios"
@@ -1071,7 +1097,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2027,
+        "view_count": 2033,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1081,31 +1107,6 @@ print(result)
         "content_license": "CC BY-SA 4.0",
         "link": "https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time",
         "title": "Pokemon API request generate 5 Pok&#233;mon at a time"
-    },
-    {
-        "tags": [
-            "java"
-        ],
-        "owner": {
-            "account_id": 919945,
-            "reputation": 43,
-            "user_id": 951797,
-            "user_type": "registered",
-            "profile_image": "https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG",
-            "display_name": "Brian",
-            "link": "https://stackoverflow.com/users/951797/brian"
-        },
-        "is_answered": true,
-        "view_count": 32695,
-        "accepted_answer_id": 7942409,
-        "answer_count": 3,
-        "score": 3,
-        "last_activity_date": 1577442848,
-        "creation_date": 1319931614,
-        "question_id": 7942384,
-        "content_license": "CC BY-SA 3.0",
-        "link": "https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator",
-        "title": "Simple Java Pokemon Fight Simulator"
     }
 ]
 ```
@@ -1185,8 +1186,8 @@ print(result)
 #### Expected Output
 
 ```text
-dipnetted
-aeromechanics
+idiomatically
+refortify
 ```
 
 ### 35. Write
@@ -1214,7 +1215,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_jXEagDCY.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_H9RWJJsQ.jpg
 ```
 
 
