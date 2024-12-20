@@ -41,14 +41,14 @@ class TheApi:
             "pypi": "https://pypi.org/pypi",
             "qr_gen": "https://api.qrserver.com/v1",
             "quote": "https://api.quotable.io/random",
-            "random_word": "https://random-word-api.herokuapp.com/word",
             "useless_fact": "https://uselessfacts.jsph.pl/api/v2/facts/random",
             "wikipedia_search": "https://en.wikipedia.org/w/api.php",
-            "words": "https://random-word-api.herokuapp.com/word",
+            "words": "https://random-word-api.vercel.app/api",
             "word_info": "https://api.dictionaryapi.dev/api/v2/entries/en/{word}",
             "upload": "https://envs.sh/",
         }
 
+    
     async def _make_request(
         self,
         url: str,
@@ -531,22 +531,6 @@ class TheApi:
         data = await self._make_request(self.base_urls["hindi_quote"])
         return data["quote"]
 
-    async def random_word(self) -> str:
-        """
-        Fetches a random word.
-
-        Returns:
-            str: A random word if available; "None" if an error occurs.
-        """
-        params = {"number": 1}
-        try:
-            data = await self._make_request(
-                self.base_urls["random_word"], params=params
-            )
-            return data[0]
-        except Exception:
-            return "None"
-
     async def write(self, text):
         """
         Creates an image with text written on it, using a predefined template and font,
@@ -828,19 +812,29 @@ class TheApi:
         except Exception as e:
             return {"error": f"Unexpected error: {e}"}
 
-    async def words(self, num_words: int):
+    async def get_words(words=10, letter=None, word_type="capitalized", alphabetize=False):
         """
-        Fetches a specified number of random words.
+        Fetch random words from the Random Word API.
 
         Args:
-            num_words (int): The number of random words to retrieve.
+            words (int): Number of words to generate (default is 10).
+            letter (str): First letter of the words (optional).
+            word_type (str): Type of words (lowercase, uppercase, capitalized; default is capitalized).
+            alphabetize (bool): Whether to alphabetize the result (default is False).
 
         Returns:
-            list: A list of random words if available; an empty list if no response is received.
+            list: A list of random words or an error message.
         """
-        url = f"{self.base_urls['words']}?number={num_words}"
-        response = await self._make_request(url)
-        return response if response else []
+        params = {
+            "words": words,
+            "type": word_type,
+            "alphabetize": str(alphabetize).lower()
+        }
+        if letter:
+            params["letter"] = letter
+
+        return await self._make_request(self.base_urls["words"], params=params)
+   
 
     async def cat(self):
         """
