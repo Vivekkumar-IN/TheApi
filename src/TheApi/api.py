@@ -48,7 +48,6 @@ class TheApi:
             "upload": "https://envs.sh/",
         }
 
-    
     async def _make_request(
         self,
         url: str,
@@ -812,7 +811,9 @@ class TheApi:
         except Exception as e:
             return {"error": f"Unexpected error: {e}"}
 
-    async def get_words(words=10, letter=None, word_type="capitalized", alphabetize=False):
+    async def get_words(
+        words=10, letter=None, word_type="capitalized", alphabetize=False
+    ):
         """
         Fetch random words from the Random Word API.
 
@@ -828,13 +829,12 @@ class TheApi:
         params = {
             "words": words,
             "type": word_type,
-            "alphabetize": str(alphabetize).lower()
+            "alphabetize": str(alphabetize).lower(),
         }
         if letter:
             params["letter"] = letter
 
         return await self._make_request(self.base_urls["words"], params=params)
-   
 
     async def cat(self):
         """
