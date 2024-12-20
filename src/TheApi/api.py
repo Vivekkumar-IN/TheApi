@@ -5,7 +5,6 @@ import string
 import textwrap
 from io import BytesIO
 from typing import List, Union, Optional
-from os.path import realpath
 
 import aiohttp
 import aiofiles
@@ -465,7 +464,7 @@ class TheApi:
         Returns:
             FilePath: The file path where the QR code was saved.
         """
-        
+
         url = f"{self.base_urls['qr_gen']}/create-qr-code/"
         params = {
             "size": size,
