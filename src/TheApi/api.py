@@ -544,7 +544,7 @@ class TheApi:
                 self.base_urls["random_word"], params=params
             )
             return data[0]
-        except RequestError:
+        except Exception:
             return "None"
 
     async def write(self, text):
