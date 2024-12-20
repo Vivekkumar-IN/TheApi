@@ -812,7 +812,7 @@ class TheApi:
             return {"error": f"Unexpected error: {e}"}
 
     async def get_words(
-        words=10, letter=None, word_type="capitalized", alphabetize=False
+        self, words=10, letter=None, word_type="capitalized", alphabetize=False
     ):
         """
         Fetch random words from the Random Word API.
