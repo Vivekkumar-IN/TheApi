@@ -1,18 +1,24 @@
-class FilePath(str):
-    """
-    A wrapper around a file path string that provides an additional delete method.
+from os.path import realpath, isabs, exists
+from os import remove
 
-    Attributes:
-        path (str): The file path to the media file.
-
-    Methods:
-        delete(): Attempts to delete the file at the specified path.
-                  If deletion fails, it handles the exception gracefully.
-    """
+class FilePath:
+    def __init__(self, path: str):
+        self.path = path
+        if not isinstance(self.path, str):
+            raise ValueError(f"Invalid path: {self.path}. Path must be a string.")
+        if not isabs(self.path):
+            self.path = realpath(self.path)
+        if not exists(self.path):
+            raise FileNotFoundError(f"File does not exist: {self.path}")
 
     def delete(self):
-        """Deletes the file at the specified path, handling exceptions if deletion fails."""
+        """
+        Deletes the file at the specified path.
+        """
         try:
-            os.remove(self)
+            remove(self.path)
         except Exception:
             pass
+            
+    def __str__(self):
+        return self.path
