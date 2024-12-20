@@ -160,7 +160,7 @@ class TheApi:
                 - users
 
             quantity (int, optional): Number of rows to fetch (default: 3, max: 1000).
-            locale (str, optional): Locale for the data (default: 'en_US').  See Valid locale [ From Here ](https://github.com/Vivekkumar-IN/TheApi/blob/main/src%2FTheApi%2Fapi.py#L185-L261)
+            locale (str, optional): Locale for the data (default: 'en_US').  [ See Valid locale ](https://fakerapi.it/#params_locale)
 
         Raises:
             ValueError: If the locale is invalid, the endpoint is invalid, or the quantity
@@ -293,7 +293,7 @@ class TheApi:
 
         Args:
             quantity (int, optional): Number of images to fetch (default: 1).
-            locale (str, optional): Locale for the images (default: "en_US").
+            locale (str, optional): Locale for the images (default: "en_US"), [ See Valid locale ](https://fakerapi.it/#params_locale).
             type (str, optional): Type of image (e.g., 'any', 'animals', 'business', etc.; default: "any").
             width (int, optional): Width of the images (default: 640).
             height (int, optional): Height of the images (default: 480).
@@ -315,7 +315,7 @@ class TheApi:
         Fetch fake credit card data from the FakerAPI.
 
         Args:
-            locale (str, optional): Locale for the credit card data (default: "en_US").
+            locale (str, optional): Locale for the credit card data (default: "en_US"), [ See Valid locale ](https://fakerapi.it/#params_locale).
             amount (int, optional): Number of credit card entries to fetch (default: 1).
 
         Returns:
@@ -329,7 +329,7 @@ class TheApi:
 
         Args:
             quantity (int, optional): Number of address entries to fetch (default: 1).
-            locale (str, optional): Locale for the address data (default: "en_US").
+            locale (str, optional): Locale for the address data (default: "en_US"), [ See Valid locale ](https://fakerapi.it/#params_locale).
 
         Returns:
             dict: Response data from the API.
