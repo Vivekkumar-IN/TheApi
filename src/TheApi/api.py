@@ -89,7 +89,9 @@ class TheApi:
             except Exception as e:
                 return self._handle_error(e)
 
-    async def _create_file(self, contents: bytes, ext: str, name: Optional[str] = None) -> FilePath:
+    async def _create_file(
+        self, contents: bytes, ext: str, name: Optional[str] = None
+    ) -> FilePath:
         """
         Creates a file in the downloads directory, writes the contents to the file, and returns the file path.
 
@@ -108,7 +110,7 @@ class TheApi:
             await f.write(contents)
 
         return FilePath(realpath(file_path))
-        
+
     def _rnd_str(self) -> str:
         random_str = "".join(random.choices(string.ascii_letters + string.digits, k=8))
         return random_str
