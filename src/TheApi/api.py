@@ -233,15 +233,15 @@ class TheApi:
         ]
 
         if locale not in valid_locales:
-            raise ValueError(
+            return self._handle_error(ValueError(
                 f"Invalid locale '{locale}'. Must be one of {' '.join(valid_locales)}"
-            )
+            ))
         if endpoint not in valid_endpoints:
-            raise ValueError(
+            return self._handle_error(ValueError(
                 f"Invalid endpoint '{endpoint}'. Must be one of {' '.join(valid_endpoints)}"
-            )
+            ))
         if quantity < 1 or quantity > 1000:
-            raise ValueError("Quantity must be between 1 and 1000")
+            return self._handle_error(ValueError("Quantity must be between 1 and 1000"))
 
         params = {
             "_quantity": quantity,
@@ -341,9 +341,9 @@ class TheApi:
         )
 
         if currency and currency.lower() not in valid_currencies:
-            raise ValueError(
+            return self._handle_error(ValueError(
                 f"Invalid currency provided: {currency}. Valid options are: {valid_currencies}"
-            )
+            ))
 
         response = await self._make_request(url)
 
@@ -410,7 +410,7 @@ class TheApi:
                 re.IGNORECASE,
             )
             if not re.match(url_regex, source):
-                raise ValueError(f"Invalid URL provided: {source}")
+                return self._handle_error(ValueError(f"Invalid URL provided: {source}"))
         url = self.base_urls["pdf"]
         url = url + "/from_url" if from_url else url + "/from_html"
         params = {"url": source} if from_url else {"html": source}
@@ -583,7 +583,7 @@ class TheApi:
                 )
                 response_data = await response.read()
             except aiohttp.client_exceptions.ClientConnectorError:
-                raise ValueError("Can not reach the Host!")
+                return self._handle_error(ValueError("Can not reach the Host!"))
 
             downloads_folder = "downloads"
             os.makedirs(downloads_folder, exist_ok=True)
@@ -645,7 +645,7 @@ class TheApi:
                 "image_url": image_url,
             }
         else:
-            return {"error": "No search results found"}
+            return self._handle_error(ValueError("No search results found"))
 
     async def github_search(self, query, search_type="repositories", max_results=3):
         """
@@ -774,15 +774,15 @@ class TheApi:
             return result_list
 
         except requests.exceptions.RequestException as e:
-            return {"error": f"Request exception: {e}"}
+            return self._handle_error(ValueError(f"Request exception: {e}"))
         except requests.exceptions.HTTPError as e:
-            return {
-                "error": f"HTTP error: {e.response.status_code} - {e.response.text}"
-            }
+            return self._handle_error(ValueError(
+                f"HTTP error: {e.response.status_code}"
+            ))
         except KeyError as e:
-            return {"error": f"Key error: {e}"}
+            return self._handle_error(ValueError(f"Key error: {e}"))
         except Exception as e:
-            return {"error": f"Unexpected error: {e}"}
+            return self._handle_error(ValueError(f"Unexpected error: {e}"))
 
     async def get_words(
         self, words=10, letter=None, word_type="capitalized", alphabetize=False
@@ -945,7 +945,7 @@ class TheApi:
             response = requests.get(url, params=params)
 
             if response.status_code != 200:
-                raise ValueError("Failed to retrieve results from Stack Overflow API")
+                return self._handle_error(ValueError("Failed to retrieve results from Stack Overflow API"))
 
             results = response.json().get("items", [])
             if not results:
@@ -1070,17 +1070,17 @@ class TheApi:
                 async with aiofiles.open(file_path, "rb") as f:
                     image_bytes = await f.read()
             except FileNotFoundError:
-                raise ValueError(
+                return self._handle_error(ValueError(
                     f"File not found: '{file_path}' - Ensure the file path is correct."
-                )
+                ))
         elif isinstance(file_path, bytes) or isinstance(file_path, BytesIO):
             image_bytes = (
                 file_path if isinstance(file_path, bytes) else file_path.getvalue()
             )
         else:
-            raise ValueError(
+            return self._handle_error(ValueError(
                 "Invalid input type - Expected a file path (str), binary data (bytes), or BytesIO object."
-            )
+            ))
 
         url = self.base_urls["upload"]
         files = {"file": image_bytes}
@@ -1093,7 +1093,7 @@ class TheApi:
                 else "Unexpected response format"
             )
         except ValueError as e:
-            raise ValueError(f"Upload failed: {str(e)}")
+            return self._handle_error(ValueError(f"Upload failed: {str(e)}"))
 
     async def riddle(self) -> dict:
         """
@@ -1106,7 +1106,7 @@ class TheApi:
         if response.status_code == 200:
             return response.json()
         else:
-            return {"error": "Could not fetch riddle"}
+            return self._handle_error(ValueError("Could not fetch riddle"))
 
     async def hug(self, amount: int = 1) -> list:
         """Fetches a specified number hug gif from the Nekos.Best API.
@@ -1193,9 +1193,9 @@ class TheApi:
         ]
 
         if endpoint not in valid_categories:
-            raise ValueError(
+            return self._handle_error(ValueError(
                 f"Invalid endpoint '{endpoint}'. Must be one of: {', '.join(valid_categories)}"
-            )
+            ))
 
         url = self.base_urls["neko_url"].format(endpoint=endpoint, amount=amount)
 
