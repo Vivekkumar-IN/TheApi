@@ -3,13 +3,13 @@ import re
 import random
 import string
 import textwrap
-import requests
 from io import BytesIO
 from typing import List, Union, Optional
 from os.path import realpath
 
 import aiohttp
 import aiofiles
+import requests
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 from .func import FilePath
