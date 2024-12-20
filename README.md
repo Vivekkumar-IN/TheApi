@@ -72,24 +72,23 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
 | [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
 | [17. Get Fake Images](#17-get-fake-images) | ✅
-| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ❌
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
 | [19. Get Jokes](#19-get-jokes) | ✅
 | [20. Get Uselessfact](#20-get-uselessfact) | ✅
 | [21. Get Word Definitions](#21-get-word-definitions) | ✅
-| [22. Github Search](#22-github-search) | ✅
-| [23. Hindi Quote](#23-hindi-quote) | ✅
-| [24. Hug](#24-hug) | ✅
-| [25. Meme](#25-meme) | ✅
-| [26. Neko](#26-neko) | ✅
-| [27. Pypi](#27-pypi) | ✅
-| [28. Quote](#28-quote) | ✅
-| [29. Random Word](#29-random-word) | ✅
+| [22. Get Words](#22-get-words) | ❌
+| [23. Github Search](#23-github-search) | ✅
+| [24. Hindi Quote](#24-hindi-quote) | ✅
+| [25. Hug](#25-hug) | ✅
+| [26. Meme](#26-meme) | ✅
+| [27. Neko](#27-neko) | ✅
+| [28. Pypi](#28-pypi) | ✅
+| [29. Quote](#29-quote) | ✅
 | [30. Riddle](#30-riddle) | ✅
 | [31. Stackoverflow Search](#31-stackoverflow-search) | ✅
 | [32. Upload Image](#32-upload-image) | ✅
 | [33. Wikipedia](#33-wikipedia) | ✅
-| [34. Words](#34-words) | ❌
-| [35. Write](#35-write) | ✅
+| [34. Write](#34-write) | ✅
 
 
 ## 🎓 How to Use Each Function
@@ -113,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "By the time I noticed, so much time had passed that even my little sister would have died naturally already.",
+    "content": "For me, despair is not a goal, or a set of principles, or a lifestyle, or even an instinct... It's what defines me as Junko Enoshima! It's just my characterization! That's why I'm able to pursue despair with such purity!",
     "anime": {
-        "id": 376,
-        "name": "Shiki",
-        "altName": "Shiki"
+        "id": 364,
+        "name": "Danganronpa: The Animation",
+        "altName": "Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation"
     },
     "character": {
-        "id": 1912,
-        "name": "Sunako Kirishiki"
+        "id": 447,
+        "name": "Junko Enoshima"
     }
 }
 ```
@@ -145,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "macleish",
+    "file_name": "student",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/macleish.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/student.jpg"
 }
 ```
 
@@ -201,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_C0un9noc.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_Zm7NcCTp.jpg
 ```
 
 ### 5. Carbon
@@ -225,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_FNqPtfWg.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_YpyN7JGa.png
 ```
 
 ### 6. Cat
@@ -246,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTk1NjgxNQ.jpg
+https://26.media.tumblr.com/tumblr_krwvziszMn1qa9hjso1_1280.jpg
 ```
 
 ### 7. Dog
@@ -267,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/440f11bf-b9d4-44de-a5c3-3f0893b04fa2.jpg
+https://random.dog/f7d8ae8c-f7ed-4fd1-89a0-781e57913a38.mp4
 ```
 
 ### 8. Domain Search
@@ -342,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=56
+https://randomfox.ca/?i=1
 ```
 
 ### 11. Gen Qr
@@ -371,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/kzVNqyhj_qr.png
+/home/runner/work/TheApi/TheApi/downloads/XaFZNtzl_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -410,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Smile and the world smiles with you. Frown and you're on your own.
+Today, do not use the words "Kind of", "Sort of" or "Maybe". It either is or it isn't.
 ```
 
 ### 14. Get Btc Value
@@ -442,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "93,782.059",
-        "rate_float": 93782.0588,
+        "rate": "93,461.895",
+        "rate_float": 93461.8954,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "77,280.742",
-        "rate_float": 77280.7424,
+        "rate": "77,016.913",
+        "rate_float": 77016.9129,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "98,764.74",
-        "rate_float": 98764.74,
+        "rate": "98,427.566",
+        "rate_float": 98427.5661,
         "symbol": "&#36;"
     }
 }
@@ -494,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "315 Sebastian Lake",
-            "streetName": "Rippin Green",
-            "buildingNumber": "40655",
-            "city": "Herzogbury",
-            "zipcode": "60660-7778",
-            "country": "Singapore",
-            "country_code": "SG",
-            "latitude": 25.887227,
-            "longitude": -169.547354
+            "street": "5948 Ward Heights",
+            "streetName": "Marquardt Alley",
+            "buildingNumber": "55669",
+            "city": "North Titusview",
+            "zipcode": "17388",
+            "country": "Croatia",
+            "country_code": "HR",
+            "latitude": -40.762303,
+            "longitude": -157.474629
         }
     ]
 }
@@ -539,9 +538,9 @@ print(result)
     "data": [
         {
             "type": "Visa",
-            "number": "2221227343082564",
-            "expiration": "11/25",
-            "owner": "Charlene Larkin"
+            "number": "2492647184459864",
+            "expiration": "11/27",
+            "owner": "Fatima Lueilwitz"
         }
     ]
 }
@@ -580,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Delectus ullam velit animi.",
-            "description": "Aut aut at iure et quo fugiat. Repudiandae quis culpa nemo molestiae accusantium laboriosam velit quis. Dolores explicabo ut cumque perspiciatis vel vel. Nam ducimus sit maiores ullam qui velit eum.",
+            "title": "Quo omnis veniam ut officia.",
+            "description": "Mollitia voluptas consequatur atque quia deleniti facere deleniti. Consequatur doloremque enim aut non. Voluptatibus unde assumenda omnis est corrupti illum. Qui ea ut ut ea consequatur.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -606,7 +605,8 @@ print(result)
 #### Expected Output
 
 ```text
-'status'
+Me- हैलो मैडम, मैं HDFC बैंक से बोल रहा हूं! आप क्रेडिट कार्ड लेना चाहेंगी?  
+She- I have a boyfriend 
 ```
 
 ### 19. Get Jokes
@@ -630,13 +630,7 @@ print(result)
 #### Expected Output
 
 ```text
-The six stages of debugging:
-1. That can't happen.
-2. That doesn't happen on my machine.
-3. That shouldn't happen.
-4. Why does that happen?
-5. Oh, I see.
-6. How did that ever work?
+My husband and I were happy for 20 years. And then we met.
 ```
 
 ### 20. Get Uselessfact
@@ -657,7 +651,7 @@ print(result)
 #### Expected Output
 
 ```text
-Caesar salad has nothing to do with any of the Caesars. It was first concocted in a bar in Tijuana, Mexico, in the 1920`s.
+Each king in a deck of playing cards represents a great king from history. Spades - King David, Clubs - Alexander the Great, Hearts - Charlemagne, and Diamonds - Julius Caesar.
 ```
 
 ### 21. Get Word Definitions
@@ -691,7 +685,34 @@ print(result)
 }
 ```
 
-### 22. Github Search
+### 22. Get Words
+
+**Description**:
+Fetch random words from the Random Word API.
+
+**Args:**
+  - **words (int)**: Number of words to generate (default is 10).
+  - **letter (str)**: First letter of the words (optional).
+  - **word_type (str)**: Type of words (lowercase, uppercase, capitalized; default is capitalized).
+  - **alphabetize (bool)**: Whether to alphabetize the result (default is False).
+
+**Returns:**
+  - **list**: A list of random words or an error message.
+
+```python
+from TheApi import api
+
+result = await api.get_words(letter=None, word_type='capitalized', alphabetize=False)
+print(result)
+```
+
+#### Expected Output
+
+```text
+name 'self' is not defined
+```
+
+### 23. Github Search
 
 **Description**:
 Searches GitHub for various types of content.
@@ -754,7 +775,7 @@ print(result)
 ]
 ```
 
-### 23. Hindi Quote
+### 24. Hindi Quote
 
 **Description**:
 Fetches a random Hindi quote.
@@ -772,10 +793,10 @@ print(result)
 #### Expected Output
 
 ```text
-वक्त सबको मिलता है ज़िंदगी बदलने के लिए, लेकिन ज़िंदगी दोबारा नहीं मिलती वक्त बदलने के लिए; अतः वक्त के साथ खुद को बदलना ही ज़िंदगी है।
+हिचकिया मेरी गवाह है, नींदे उसकी भी तबाह है!
 ```
 
-### 24. Hug
+### 25. Hug
 
 **Description**:
 Fetches a specified number hug gif from the Nekos.Best API.
@@ -801,13 +822,13 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Cuckoo no Iinazuke",
-        "url": "https://nekos.best/api/v2/hug/f45aad5e-e82f-4cac-b071-9b6f67752e0e.gif"
+        "anime_name": "Karneval",
+        "url": "https://nekos.best/api/v2/hug/76d225e6-6494-4c23-a4f8-9117afc5edf9.gif"
     }
 ]
 ```
 
-### 25. Meme
+### 26. Meme
 
 **Description**:
 Fetches a random meme image URL.
@@ -825,10 +846,10 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/n6t1blggzq7e1.png?width=1080&crop=smart&auto=webp&s=e41a918c108c46e7c644941b98ae54073bf02507
+https://preview.redd.it/ggrnni4sqg7e1.png?width=640&crop=smart&auto=webp&s=39fc3545f0ffa6fa49513a99a0821f15ca6065fa
 ```
 
-### 26. Neko
+### 27. Neko
 
 **Description**:
 Fetches a specified number of neko images or GIFs from the Nekos.Best API.
@@ -865,28 +886,28 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/2637028",
-            "artist_name": "SAHARA",
-            "source_url": "https://www.pixiv.net/en/artworks/92080261",
-            "url": "https://nekos.best/api/v2/neko/2ebb0c94-334f-4196-998c-f3b1fc50af03.png"
+            "artist_href": "https://twitter.com/mashiro_io",
+            "artist_name": "\u771f\u767d\u3044\u304a",
+            "source_url": "https://twitter.com/mashiro_io/status/1527242668182487041",
+            "url": "https://nekos.best/api/v2/neko/00ea88fb-5439-4250-91b4-754d2c50b362.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/53623053",
-            "artist_name": "\u30d1\u30f3\u30c6\u30eb",
-            "source_url": "https://www.pixiv.net/en/artworks/89553486",
-            "url": "https://nekos.best/api/v2/neko/029a0d43-2bba-49e7-aced-08217d8afa19.png"
+            "artist_href": "https://www.pixiv.net/en/users/8886572",
+            "artist_name": "nibosi",
+            "source_url": "https://www.pixiv.net/en/artworks/95202859",
+            "url": "https://nekos.best/api/v2/neko/baf1a187-a0fb-4aca-bc7f-923b5368f99e.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/125659",
-            "artist_name": "\u3064\u3091\u3075",
-            "source_url": "https://www.pixiv.net/en/artworks/76907229",
-            "url": "https://nekos.best/api/v2/neko/b7d603e7-1504-4d5b-9910-49d318df500d.png"
+            "artist_href": "https://www.pixiv.net/en/users/29029591",
+            "artist_name": "\u82b1\u7cf8Kashi",
+            "source_url": "https://www.pixiv.net/en/artworks/79565443",
+            "url": "https://nekos.best/api/v2/neko/86382615-776b-443a-b8be-7d0c7261485d.png"
         }
     ]
 }
 ```
 
-### 27. Pypi
+### 28. Pypi
 
 **Description**:
 Retrieves metadata information about a specified Python package from the PyPI API.
@@ -938,7 +959,7 @@ print(result)
 }
 ```
 
-### 28. Quote
+### 29. Quote
 
 **Description**:
 Fetches a random quote.
@@ -956,30 +977,9 @@ print(result)
 #### Expected Output
 
 ```text
-Argue for your limitations, and sure enough they're yours.
+There is no duty we so underrate as the duty of being happy. By being happy we sow anonymous benefits upon the world.
 
-author - Richard Bach
-```
-
-### 29. Random Word
-
-**Description**:
-Fetches a random word.
-
-**Returns:**
-  - **str**: A random word if available; "None" if an error occurs.
-
-```python
-from Pokemon import api
-
-result = await api.random_word()
-print(result)
-```
-
-#### Expected Output
-
-```text
-None
+author - Robert Louis Stevenson
 ```
 
 ### 30. Riddle
@@ -1001,8 +1001,8 @@ print(result)
 
 ```json
 {
-    "riddle": "A murderer is condemned to death. He has to choose between three rooms. The first is full of raging fires, the second is full of assassins with loaded guns, and the third is full of lions that haven't eaten in 3 years. Which room is safest for him?",
-    "answer": "The third. Lions that haven't eaten in three years are dead"
+    "riddle": "My thunder comes before the lightning; My lightning comes before the clouds; My rain dries all the land it touches. What am I?",
+    "answer": "A volcano"
 }
 ```
 
@@ -1169,31 +1169,7 @@ print(result)
 }
 ```
 
-### 34. Words
-
-**Description**:
-Fetches a specified number of random words.
-
-**Args:**
-  - **num_words (int)**: The number of random words to retrieve.
-
-**Returns:**
-  - **list**: A list of random words if available; an empty list if no response is received.
-
-```python
-from TheApi import api
-
-result = await api.words(num_words=2)
-print(result)
-```
-
-#### Expected Output
-
-```text
-Request failed: 500, message='Internal Server Error', url='https://random-word-api.herokuapp.com/word?number=2'
-```
-
-### 35. Write
+### 34. Write
 
 **Description**:
 Creates an image with text written on it, using a predefined template and font, and uploads the image after generation.
@@ -1218,7 +1194,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_TBbFEUPy.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_FWbntIoo.jpg
 ```
 
 
