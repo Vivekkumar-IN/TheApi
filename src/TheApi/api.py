@@ -89,7 +89,27 @@ class TheApi:
             except Exception as e:
                 return self._handle_error(e)
 
-    def _rnd_str(self):
+    async def _create_file(self, contents: bytes, ext: str, name: Optional[str] = None) -> FilePath:
+        """
+        Creates a file in the downloads directory, writes the contents to the file, and returns the file path.
+
+        Args:
+            contents (bytes): The content to write to the file.
+            ext (str): The file extension (e.g., 'txt', 'pdf').
+            name (str, optional): The base name for the file. Defaults to None.
+
+        Returns:
+            str: The file path where the contents were written.
+        """
+        file_name = f"{name or 'file'}_{self._rnd_str()}.{ext}"
+        file_path = os.path.join(self.downloads_dir, file_name)
+
+        async with aiofiles.open(file_path, "wb") as f:
+            await f.write(contents)
+
+        return FilePath(realpath(file_path))
+        
+    def _rnd_str(self) -> str:
         random_str = "".join(random.choices(string.ascii_letters + string.digits, k=8))
         return random_str
 
