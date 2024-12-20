@@ -46,4 +46,4 @@ jobs:
             "body": "",
             "draft": false,
             "prerelease": false
-
+          }'
