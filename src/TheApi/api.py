@@ -233,13 +233,17 @@ class TheApi:
         ]
 
         if locale not in valid_locales:
-            return self._handle_error(ValueError(
-                f"Invalid locale '{locale}'. Must be one of {' '.join(valid_locales)}"
-            ))
+            return self._handle_error(
+                ValueError(
+                    f"Invalid locale '{locale}'. Must be one of {' '.join(valid_locales)}"
+                )
+            )
         if endpoint not in valid_endpoints:
-            return self._handle_error(ValueError(
-                f"Invalid endpoint '{endpoint}'. Must be one of {' '.join(valid_endpoints)}"
-            ))
+            return self._handle_error(
+                ValueError(
+                    f"Invalid endpoint '{endpoint}'. Must be one of {' '.join(valid_endpoints)}"
+                )
+            )
         if quantity < 1 or quantity > 1000:
             return self._handle_error(ValueError("Quantity must be between 1 and 1000"))
 
@@ -341,9 +345,11 @@ class TheApi:
         )
 
         if currency and currency.lower() not in valid_currencies:
-            return self._handle_error(ValueError(
-                f"Invalid currency provided: {currency}. Valid options are: {valid_currencies}"
-            ))
+            return self._handle_error(
+                ValueError(
+                    f"Invalid currency provided: {currency}. Valid options are: {valid_currencies}"
+                )
+            )
 
         response = await self._make_request(url)
 
@@ -776,9 +782,9 @@ class TheApi:
         except requests.exceptions.RequestException as e:
             return self._handle_error(ValueError(f"Request exception: {e}"))
         except requests.exceptions.HTTPError as e:
-            return self._handle_error(ValueError(
-                f"HTTP error: {e.response.status_code}"
-            ))
+            return self._handle_error(
+                ValueError(f"HTTP error: {e.response.status_code}")
+            )
         except KeyError as e:
             return self._handle_error(ValueError(f"Key error: {e}"))
         except Exception as e:
@@ -945,7 +951,9 @@ class TheApi:
             response = requests.get(url, params=params)
 
             if response.status_code != 200:
-                return self._handle_error(ValueError("Failed to retrieve results from Stack Overflow API"))
+                return self._handle_error(
+                    ValueError("Failed to retrieve results from Stack Overflow API")
+                )
 
             results = response.json().get("items", [])
             if not results:
@@ -1070,17 +1078,21 @@ class TheApi:
                 async with aiofiles.open(file_path, "rb") as f:
                     image_bytes = await f.read()
             except FileNotFoundError:
-                return self._handle_error(ValueError(
-                    f"File not found: '{file_path}' - Ensure the file path is correct."
-                ))
+                return self._handle_error(
+                    ValueError(
+                        f"File not found: '{file_path}' - Ensure the file path is correct."
+                    )
+                )
         elif isinstance(file_path, bytes) or isinstance(file_path, BytesIO):
             image_bytes = (
                 file_path if isinstance(file_path, bytes) else file_path.getvalue()
             )
         else:
-            return self._handle_error(ValueError(
-                "Invalid input type - Expected a file path (str), binary data (bytes), or BytesIO object."
-            ))
+            return self._handle_error(
+                ValueError(
+                    "Invalid input type - Expected a file path (str), binary data (bytes), or BytesIO object."
+                )
+            )
 
         url = self.base_urls["upload"]
         files = {"file": image_bytes}
@@ -1193,9 +1205,11 @@ class TheApi:
         ]
 
         if endpoint not in valid_categories:
-            return self._handle_error(ValueError(
-                f"Invalid endpoint '{endpoint}'. Must be one of: {', '.join(valid_categories)}"
-            ))
+            return self._handle_error(
+                ValueError(
+                    f"Invalid endpoint '{endpoint}'. Must be one of: {', '.join(valid_categories)}"
+                )
+            )
 
         url = self.base_urls["neko_url"].format(endpoint=endpoint, amount=amount)
 
