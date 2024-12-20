@@ -1,5 +1,6 @@
-from os.path import realpath, isabs, exists
 from os import remove
+from os.path import isabs, exists, realpath
+
 
 class FilePath:
     def __init__(self, path: str):
@@ -19,6 +20,6 @@ class FilePath:
             remove(self.path)
         except Exception:
             pass
-            
+
     def __str__(self):
         return self.path
