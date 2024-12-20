@@ -109,7 +109,7 @@ class TheApi:
         async with aiofiles.open(file_path, "wb") as f:
             await f.write(contents)
 
-        return FilePath(realpath(file_path))
+        return FilePath(file_path)
 
     def _rnd_str(self) -> str:
         random_str = "".join(random.choices(string.ascii_letters + string.digits, k=8))
@@ -410,7 +410,6 @@ class TheApi:
     async def generate_pdf(
         self,
         source: str,
-        file_path: Optional[str] = None,
         from_url: bool = True,
     ) -> str:  # gh-actions Don't Add it's example, ignore it.
         """
@@ -418,8 +417,6 @@ class TheApi:
 
         Args:
             source (str): The URL of the website (if `from_url=True`) or the HTML string (if `from_url=False`).
-            file_path (str, optional): The file path to save the generated PDF.
-                                       Defaults to "downloads/<random_str>_generated.pdf".
             from_url (bool, optional): Whether to generate the PDF from a URL (True) or an HTML string (False).
 
         Returns:
@@ -443,15 +440,9 @@ class TheApi:
         url = url + "/from_url" if from_url else url + "/from_html"
         params = {"url": source} if from_url else {"html": source}
 
-        if file_path is None:
-            file_path = os.path.join("downloads", f"{self._rnd_str()}_generated.pdf")
-
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-
         pdf_content = await self._make_request(url, params=params)
 
-        async with aiofiles.open(file_path, "wb") as f:
-            await f.write(pdf_content)
+        file_path = await self._create_file(pdf_content, ext="pdf", name="pdf")
 
         return FilePath(file_path)
 
@@ -461,7 +452,6 @@ class TheApi:
         size: str = "150x150",
         foreground_color: str = "000000",
         background_color: str = "FFFFFF",
-        file_path: str = None,
     ) -> str:
         """
         Generate a QR code using api.qrserver.com and save it as a PNG file.
@@ -471,17 +461,11 @@ class TheApi:
             size (str): The size of the QR code in the format 'WIDTHxHEIGHT' (default: '150x150').
             foreground_color (str): The color of the QR code (default: '000000' - black).
             background_color (str): The background color of the QR code (default: 'FFFFFF' - white).
-            file_path (str, optional): The file path to save the QR code.
-                                       Defaults to "downloads/{random_str}_qr.png".
 
         Returns:
             FilePath: The file path where the QR code was saved.
         """
-        if file_path is None:
-            file_path = os.path.join("downloads", f"{self._rnd_str()}_qr.png")
-
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-
+        
         url = f"{self.base_urls['qr_gen']}/create-qr-code/"
         params = {
             "size": size,
@@ -496,10 +480,9 @@ class TheApi:
             return_content=True,
         )
 
-        async with aiofiles.open(file_path, "wb") as f:
-            await f.write(qr_content)
+        file_path = await self._create_file(qr_content, ext="png", name="QrCode")
 
-        return FilePath(realpath(file_path))
+        return FilePath(file_path)
 
     async def get_uselessfact(self):
         """
@@ -578,14 +561,11 @@ class TheApi:
             draw.text((x, y), line, fill=(1, 22, 55), font=font)
             y = y + linespacing
 
-        downloads_folder = "downloads"
-        os.makedirs(downloads_folder, exist_ok=True)
-
-        file_path = os.path.join(downloads_folder, f"write_{self._rnd_str()}.jpg")
+        file_path = os.path.join(self.downloads_dir, f"write_{self._rnd_str()}.jpg")
 
         img.save(file_path)
 
-        return FilePath(realpath(file_path))
+        return FilePath(file_path)
 
     async def carbon(self, query):
         """
@@ -613,15 +593,9 @@ class TheApi:
             except aiohttp.client_exceptions.ClientConnectorError:
                 return self._handle_error(ValueError("Can not reach the Host!"))
 
-            downloads_folder = "downloads"
-            os.makedirs(downloads_folder, exist_ok=True)
+            file_path = await self._create_file(response_data, ext="png", name="carbon")
 
-            file_path = os.path.join(downloads_folder, f"carbon_{self._rnd_str()}.png")
-
-            async with aiofiles.open(file_path, "wb") as f:
-                await f.write(response_data)
-
-            return FilePath(realpath(file_path))
+            return FilePath(file_path)
 
     async def wikipedia(self, query):
         """
@@ -1068,14 +1042,11 @@ class TheApi:
         final_img.paste(gradient, (0, 0))
         final_img.paste(img_with_border, (0, 0))
 
-        downloads_folder = "downloads"
-        os.makedirs(downloads_folder, exist_ok=True)
-
-        file_path = os.path.join(downloads_folder, f"blackpink_{self._rnd_str()}.jpg")
+        file_path = os.path.join(self.downloads_dir, f"blackpink_{self._rnd_str()}.jpg")
 
         final_img.save(file_path, format="JPEG")
 
-        return FilePath(realpath(file_path))
+        return FilePath(file_path)
 
     async def upload_image(
         self, file_path: Union[str, bytes, BytesIO]
