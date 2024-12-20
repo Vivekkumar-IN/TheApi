@@ -3,20 +3,20 @@ import re
 import random
 import string
 import textwrap
+import requests
 from io import BytesIO
 from typing import List, Union, Optional
 from os.path import realpath
 
 import aiohttp
 import aiofiles
-import requests
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 from .func import FilePath
 
 
 class TheApi:
-    def __init__(self):
+    def __init__(self, downloads_dir: str = "downloads", quiet: bool = False):
         self.base_urls = {
             "advice": "https://api.adviceslip.com/advice",
             "animechan": "https://animechan.io/api/v1/quotes/random",
@@ -47,6 +47,15 @@ class TheApi:
             "word_info": "https://api.dictionaryapi.dev/api/v2/entries/en/{word}",
             "upload": "https://envs.sh/",
         }
+        self.downloads_dir = downloads_dir
+        self.quiet = quiet
+
+        os.makedirs(self.downloads_dir, exist_ok=True)
+
+    def _handle_error(self, error: Exception) -> dict:
+        if self.quiet:
+            return {"error": True, "message": str(error)}
+        raise error
 
     async def _make_request(
         self,
@@ -59,28 +68,6 @@ class TheApi:
         verify: bool = True,
         return_content: bool = False,
     ) -> Union[dict, str, bytes]:
-        """
-        Makes an asynchronous HTTP request to the specified URL with optional parameters, headers, and data.
-
-        Args:
-            url (str): The URL to send the request to.
-            method (str, optional): The HTTP method to use (e.g., "GET", "POST"). Defaults to "GET".
-            params (dict, optional): Query parameters to include in the request. Defaults to None.
-            data (dict, optional): Data to include in the request body (for POST requests). Defaults to None.
-            files (dict, optional): Files to upload with the request, if applicable. Defaults to None.
-            headers (dict, optional): Headers to include in the request. Defaults to None.
-            verify (bool, optional): Whether to verify SSL certificates. Defaults to True.
-            return_content (bool, optional): If True, returns the raw content of the response. Defaults to False.
-
-        Returns:
-            Union[dict, str, bytes]: The response content:
-                - JSON response as a dictionary if the response is JSON-formatted.
-                - Text response as a string if the response is plain text.
-                - Raw bytes if `return_content` is True.
-
-        Raises:
-            ValueError: If the request fails due to a client error or invalid response.
-        """
         async with aiohttp.ClientSession() as session:
             try:
                 async with session.request(
@@ -98,25 +85,11 @@ class TheApi:
                         return await response.json()
                     return await response.text()
             except aiohttp.ClientResponseError as e:
-                if e.status == 404 and e.message == "Not Found":
-                    try:
-                        async with aiohttp.ClientSession() as session:
-                            async with session.get(url) as response:
-                                return await response.json()
-                    except Exception:
-                        raise ValueError(f"Request failed: {str(e)}")
-                raise ValueError(f"Request failed: {str(e)}")
-
+                return self._handle_error(e)
             except Exception as e:
-                raise ValueError(f"Unexpected error occurred: {str(e)}") from e
+                return self._handle_error(e)
 
     def _rnd_str(self):
-        """
-        Generates a random string of 8 alphanumeric characters.
-
-        Returns:
-            str: A random 8-character alphanumeric string.
-        """
         random_str = "".join(random.choices(string.ascii_letters + string.digits, k=8))
         return random_str
 
