@@ -51,7 +51,7 @@ class TheApi:
 
         os.makedirs(self.downloads_dir, exist_ok=True)
 
-    def _handle_error(self, error: Exception) -> dict:
+    def _handle_error(self, error: Exception) -> Union[dict, Exception]:
         if self.quiet:
             return {"error": True, "message": str(error)}
         raise error
