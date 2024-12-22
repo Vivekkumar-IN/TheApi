@@ -33,7 +33,6 @@ import aiofiles
 
 from TheApi import api
 
-
 # Helper function to test each API method
 async def test_method(method, *args):
     try:
