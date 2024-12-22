@@ -33,6 +33,7 @@ import aiofiles
 
 from TheApi.api import TheApi
 
+
 api = TheApi(quiet=True)
 
 # Helper function to test each API method
