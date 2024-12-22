@@ -33,23 +33,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # - name: Commit and Push Changes
-      #  run: |
-      #    git stash
-      #    git pull origin main
-      #    git stash pop
-      #    git add README.md
-      #    git commit -m "Update Status of TheApi"
-      #    git push
-      #  env:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Auto Commit Changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-            commit_message: "Update Status of TheApi"
-            commit_options: "--no-verify"
-            repository: .
-            commit_user_name: "github-actions[bot]"
-            commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
-            commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+       - name: Commit and Push Changes
+        run: |
+          git stash
+          git pull origin dev
+          git stash pop
+          git add README.md
+          git commit -m "Update Status of TheApi"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
