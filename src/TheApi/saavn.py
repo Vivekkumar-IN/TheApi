@@ -1,5 +1,6 @@
 import aiohttp
 
+
 class SaavnAPI:
     def __init__(self):
         """
@@ -55,7 +56,9 @@ class SaavnAPI:
             dict: The search results for songs.
         """
         url = f"{self.base_url}/api/search/songs"
-        return await self._make_request(url, params={"query": query, "page": page, "limit": limit})
+        return await self._make_request(
+            url, params={"query": query, "page": page, "limit": limit}
+        )
 
     async def search_albums(self, query: str, page: int = 0, limit: int = 10):
         """
@@ -70,7 +73,9 @@ class SaavnAPI:
             dict: The search results for albums.
         """
         url = f"{self.base_url}/api/search/albums"
-        return await self._make_request(url, params={"query": query, "page": page, "limit": limit})
+        return await self._make_request(
+            url, params={"query": query, "page": page, "limit": limit}
+        )
 
     async def search_artists(self, query: str, page: int = 0, limit: int = 10):
         """
@@ -85,7 +90,9 @@ class SaavnAPI:
             dict: The search results for artists.
         """
         url = f"{self.base_url}/api/search/artists"
-        return await self._make_request(url, params={"query": query, "page": page, "limit": limit})
+        return await self._make_request(
+            url, params={"query": query, "page": page, "limit": limit}
+        )
 
     async def search_playlists(self, query: str, page: int = 0, limit: int = 10):
         """
@@ -100,7 +107,9 @@ class SaavnAPI:
             dict: The search results for playlists.
         """
         url = f"{self.base_url}/api/search/playlists"
-        return await self._make_request(url, params={"query": query, "page": page, "limit": limit})
+        return await self._make_request(
+            url, params={"query": query, "page": page, "limit": limit}
+        )
 
     async def get_song_by_id(self, song_id: str):
         """
@@ -161,7 +170,13 @@ class SaavnAPI:
             params["link"] = album_link
         return await self._make_request(url, params=params)
 
-    async def get_playlist(self, playlist_id: str = None, playlist_link: str = None, page: int = 0, limit: int = 10):
+    async def get_playlist(
+        self,
+        playlist_id: str = None,
+        playlist_link: str = None,
+        page: int = 0,
+        limit: int = 10,
+    ):
         """
         Retrieves a playlist by its ID or link.
 
@@ -182,7 +197,15 @@ class SaavnAPI:
             params["link"] = playlist_link
         return await self._make_request(url, params=params)
 
-    async def get_artist(self, artist_id: str, page: int = 0, song_count: int = 10, album_count: int = 10, sort_by: str = "popularity", sort_order: str = "desc"):
+    async def get_artist(
+        self,
+        artist_id: str,
+        page: int = 0,
+        song_count: int = 10,
+        album_count: int = 10,
+        sort_by: str = "popularity",
+        sort_order: str = "desc",
+    ):
         """
         Retrieves an artist by their ID.
 
@@ -207,7 +230,13 @@ class SaavnAPI:
         }
         return await self._make_request(url, params=params)
 
-    async def get_artist_albums(self, artist_id: str, page: int = 0, sort_by: str = "popularity", sort_order: str = "desc"):
+    async def get_artist_albums(
+        self,
+        artist_id: str,
+        page: int = 0,
+        sort_by: str = "popularity",
+        sort_order: str = "desc",
+    ):
         """
         Retrieves a list of albums for a given artist by their ID.
 
@@ -224,7 +253,13 @@ class SaavnAPI:
         params = {"page": page, "sortBy": sort_by, "sortOrder": sort_order}
         return await self._make_request(url, params=params)
 
-    async def get_artist_songs(self, artist_id: str, page: int = 0, sort_by: str = "popularity", sort_order: str = "desc"):
+    async def get_artist_songs(
+        self,
+        artist_id: str,
+        page: int = 0,
+        sort_by: str = "popularity",
+        sort_order: str = "desc",
+    ):
         """
         Retrieves a list of songs for a given artist by their ID.
 
