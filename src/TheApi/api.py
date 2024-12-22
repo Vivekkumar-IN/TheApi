@@ -6,13 +6,13 @@ import textwrap
 from io import BytesIO
 from typing import List, Union, Optional
 
-import aiohttp
 import aiofiles
 import requests
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 from .func import FilePath
 from ._request import Request
+
 
 class TheApi(Request):
     def __init__(self, downloads_dir: str = "downloads", quiet: bool = False):
@@ -55,7 +55,7 @@ class TheApi(Request):
         if self.quiet:
             return {"error": True, "message": str(error)}
         raise error
-        
+
     async def _create_file(
         self, contents: bytes, ext: str, name: Optional[str] = None
     ) -> FilePath:
@@ -440,11 +440,7 @@ class TheApi(Request):
             "color": foreground_color,
             "bgcolor": background_color,
         }
-        qr_content = await self.get(
-            url=url,
-            params=params,
-            return_content=True
-        )
+        qr_content = await self.get(url=url, params=params, return_content=True)
 
         file_path = await self._create_file(qr_content, ext="png", name="QrCode")
 
@@ -544,14 +540,14 @@ class TheApi(Request):
         Returns:
             FilePath: The file path of the saved image.
         """
-        
+
         response = await self.post(
             "https://carbonara.solopov.dev/api/cook",
             json=params,
             return_content=True,
             headers={"Content-Type": "application/json"},
-         )
-        
+        )
+
         file_path = await self._create_file(response, ext="png", name="carbon")
 
         return FilePath(file_path)
@@ -731,7 +727,7 @@ class TheApi(Request):
                 result_list.append(item_info)
 
             return result_list
-            
+
         except Exception as e:
             return self._handle_error(ValueError(f"Unexpected error: {e}"))
 
