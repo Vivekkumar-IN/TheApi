@@ -3,6 +3,39 @@ from typing import Any, Dict, Union, Optional
 import aiohttp
 
 
+class Response:
+    def __init__(self, response: aiohttp.ClientResponse):
+        self._response = response
+        self.status_code = response.status
+        self.headers = response.headers
+        self.url = str(response.url)
+        self.reason = response.reason
+        self.ok = response.status < 400
+
+    @property
+    async def text(self) -> str:
+        """
+        Returns:
+            str: The response content as text.
+        """
+        return await self._response.text()
+
+    @property
+    async def content(self) -> bytes:
+        """
+        Returns:
+            bytes: The raw response content.
+        """
+        return await self._response.read()
+
+    async def json(self) -> Any:
+        """
+        Returns:
+            Any: The JSON-decoded response content.
+        """
+        return await self._response.json()
+
+
 class Request:
     async def _request(
         self,
@@ -16,30 +49,24 @@ class Request:
         timeout: Optional[int] = None,
         allow_redirects: bool = True,
         ssl: Optional[bool] = None,
-        return_json: bool = True,
-        return_text: bool = False,
-        return_content: bool = False,
-    ) -> Any:
+    ) -> Response:
         """
-        Make an HTTP request.
+        Sends an HTTP request.
 
         Args:
-            method (str): HTTP method (GET, POST, PUT, DELETE).
-            url (str): URL to make the request to.
-            headers (Optional[Dict[str, str]]): HTTP headers to send with the request.
-            params (Optional[Dict[str, str]]): Query string parameters to send with the request.
-            data (Optional[Union[Dict[str, Any], bytes]]): Data to send in the body of the request.
-            json (Optional[Dict[str, Any]]): JSON serializable object to send in the body of the request.
-            files (Optional[Dict[str, bytes]]): Files to send with the request.
-            timeout (Optional[int]): Request timeout.
-            allow_redirects (bool): Whether to allow redirects.
-            ssl (Optional[bool]): SSL configuration.
-            return_json (bool): Return the response as JSON.
-            return_text (bool): Return the response as text.
-            return_content (bool): Return the response as raw bytes.
+            method (str): The HTTP method (e.g., 'GET', 'POST').
+            url (str): The target URL.
+            headers (Optional[Dict[str, str]]): Optional headers to include in the request.
+            params (Optional[Dict[str, str]]): Query parameters to include in the URL.
+            data (Optional[Union[Dict[str, Any], bytes]]): Form data or raw bytes to include in the body.
+            json (Optional[Dict[str, Any]]): JSON data to include in the body.
+            files (Optional[Dict[str, bytes]]): Files to include in the body (currently unused).
+            timeout (Optional[int]): Timeout for the request in seconds.
+            allow_redirects (bool): Whether to follow redirects (default is True).
+            ssl (Optional[bool]): Whether to verify SSL certificates (default is None).
 
         Returns:
-            Any: The response data.
+            Response: A wrapper around the aiohttp response object.
         """
         async with aiohttp.ClientSession() as session:
             async with session.request(
@@ -53,19 +80,7 @@ class Request:
                 allow_redirects=allow_redirects,
                 ssl=ssl,
             ) as response:
-                if return_text:
-                    response_data = await response.text()
-                elif return_content:
-                    response_data = await response.read()
-                elif return_json:
-                    response_data = await response.json()
-                else:
-                    response_data = {
-                        "status_code": response.status,
-                        "headers": response.headers,
-                        "text": await response.text(),
-                    }
-                return response_data
+                return Response(response)
 
     async def get(
         self,
@@ -75,26 +90,20 @@ class Request:
         timeout: Optional[int] = None,
         allow_redirects: bool = True,
         ssl: Optional[bool] = None,
-        return_json: bool = True,
-        return_text: bool = False,
-        return_content: bool = False,
-    ) -> Any:
+    ) -> Response:
         """
-        Make a GET request.
+        Sends a GET request.
 
         Args:
-            url (str): URL to make the request to.
-            headers (Optional[Dict[str, str]]): HTTP headers to send with the request.
-            params (Optional[Dict[str, str]]): Query string parameters to send with the request.
-            timeout (Optional[int]): Request timeout.
-            allow_redirects (bool): Whether to allow redirects.
-            ssl (Optional[bool]): SSL configuration.
-            return_json (bool): Return the response as JSON.
-            return_text (bool): Return the response as text.
-            return_content (bool): Return the response as raw bytes.
+            url (str): The target URL.
+            headers (Optional[Dict[str, str]]): Optional headers to include in the request.
+            params (Optional[Dict[str, str]]): Query parameters to include in the URL.
+            timeout (Optional[int]): Timeout for the request in seconds.
+            allow_redirects (bool): Whether to follow redirects (default is True).
+            ssl (Optional[bool]): Whether to verify SSL certificates (default is None).
 
         Returns:
-            Any: The response data.
+            Response: A wrapper around the aiohttp response object.
         """
         return await self._request(
             "GET",
@@ -104,9 +113,6 @@ class Request:
             timeout=timeout,
             allow_redirects=allow_redirects,
             ssl=ssl,
-            return_json=return_json,
-            return_text=return_text,
-            return_content=return_content,
         )
 
     async def post(
@@ -120,29 +126,23 @@ class Request:
         timeout: Optional[int] = None,
         allow_redirects: bool = True,
         ssl: Optional[bool] = None,
-        return_json: bool = True,
-        return_text: bool = False,
-        return_content: bool = False,
-    ) -> Any:
+    ) -> Response:
         """
-        Make a POST request.
+        Sends a POST request.
 
         Args:
-            url (str): URL to make the request to.
-            headers (Optional[Dict[str, str]]): HTTP headers to send with the request.
-            params (Optional[Dict[str, str]]): Query string parameters to send with the request.
-            data (Optional[Union[Dict[str, Any], bytes]]): Data to send in the body of the request.
-            json (Optional[Dict[str, Any]]): JSON serializable object to send in the body of the request.
-            files (Optional[Dict[str, bytes]]): Files to send with the request.
-            timeout (Optional[int]): Request timeout.
-            allow_redirects (bool): Whether to allow redirects.
-            ssl (Optional[bool]): SSL configuration.
-            return_json (bool): Return the response as JSON.
-            return_text (bool): Return the response as text.
-            return_content (bool): Return the response as raw bytes.
+            url (str): The target URL.
+            headers (Optional[Dict[str, str]]): Optional headers to include in the request.
+            params (Optional[Dict[str, str]]): Query parameters to include in the URL.
+            data (Optional[Union[Dict[str, Any], bytes]]): Form data or raw bytes to include in the body.
+            json (Optional[Dict[str, Any]]): JSON data to include in the body.
+            files (Optional[Dict[str, bytes]]): Files to include in the body (currently unused).
+            timeout (Optional[int]): Timeout for the request in seconds.
+            allow_redirects (bool): Whether to follow redirects (default is True).
+            ssl (Optional[bool]): Whether to verify SSL certificates (default is None).
 
         Returns:
-            Any: The response data.
+            Response: A wrapper around the aiohttp response object.
         """
         return await self._request(
             "POST",
@@ -155,9 +155,6 @@ class Request:
             timeout=timeout,
             allow_redirects=allow_redirects,
             ssl=ssl,
-            return_json=return_json,
-            return_text=return_text,
-            return_content=return_content,
         )
 
     async def put(
@@ -170,28 +167,22 @@ class Request:
         timeout: Optional[int] = None,
         allow_redirects: bool = True,
         ssl: Optional[bool] = None,
-        return_json: bool = True,
-        return_text: bool = False,
-        return_content: bool = False,
-    ) -> Any:
+    ) -> Response:
         """
-        Make a PUT request.
+        Sends a PUT request.
 
         Args:
-            url (str): URL to make the request to.
-            headers (Optional[Dict[str, str]]): HTTP headers to send with the request.
-            params (Optional[Dict[str, str]]): Query string parameters to send with the request.
-            data (Optional[Union[Dict[str, Any], bytes]]): Data to send in the body of the request.
-            json (Optional[Dict[str, Any]]): JSON serializable object to send in the body of the request.
-            timeout (Optional[int]): Request timeout.
-            allow_redirects (bool): Whether to allow redirects.
-            ssl (Optional[bool]): SSL configuration.
-            return_json (bool): Return the response as JSON.
-            return_text (bool): Return the response as text.
-            return_content (bool): Return the response as raw bytes.
+            url (str): The target URL.
+            headers (Optional[Dict[str, str]]): Optional headers to include in the request.
+            params (Optional[Dict[str, str]]): Query parameters to include in the URL.
+            data (Optional[Union[Dict[str, Any], bytes]]): Form data or raw bytes to include in the body.
+            json (Optional[Dict[str, Any]]): JSON data to include in the body.
+            timeout (Optional[int]): Timeout for the request in seconds.
+            allow_redirects (bool): Whether to follow redirects (default is True).
+            ssl (Optional[bool]): Whether to verify SSL certificates (default is None).
 
         Returns:
-            Any: The response data.
+            Response: A wrapper around the aiohttp response object.
         """
         return await self._request(
             "PUT",
@@ -203,9 +194,6 @@ class Request:
             timeout=timeout,
             allow_redirects=allow_redirects,
             ssl=ssl,
-            return_json=return_json,
-            return_text=return_text,
-            return_content=return_content,
         )
 
     async def delete(
@@ -218,28 +206,22 @@ class Request:
         timeout: Optional[int] = None,
         allow_redirects: bool = True,
         ssl: Optional[bool] = None,
-        return_json: bool = True,
-        return_text: bool = False,
-        return_content: bool = False,
-    ) -> Any:
+    ) -> Response:
         """
-        Make a DELETE request.
+        Sends a DELETE request.
 
         Args:
-            url (str): URL to make the request to.
-            headers (Optional[Dict[str, str]]): HTTP headers to send with the request.
-            params (Optional[Dict[str, str]]): Query string parameters to send with the request.
-            data (Optional[Union[Dict[str, Any], bytes]]): Data to send in the body of the request.
-            json (Optional[Dict[str, Any]]): JSON serializable object to send in the body of the request.
-            timeout (Optional[int]): Request timeout.
-            allow_redirects (bool): Whether to allow redirects.
-            ssl (Optional[bool]): SSL configuration.
-            return_json (bool): Return the response as JSON.
-            return_text (bool): Return the response as text.
-            return_content (bool): Return the response as raw bytes.
+            url (str): The target URL.
+            headers (Optional[Dict[str, str]]): Optional headers to include in the request.
+            params (Optional[Dict[str, str]]): Query parameters to include in the URL.
+            data (Optional[Union[Dict[str, Any], bytes]]): Form data or raw bytes to include in the body.
+            json (Optional[Dict[str, Any]]): JSON data to include in the body.
+            timeout (Optional[int]): Timeout for the request in seconds.
+            allow_redirects (bool): Whether to follow redirects (default is True).
+            ssl (Optional[bool]): Whether to verify SSL certificates (default is None).
 
         Returns:
-            Any: The response data.
+            Response: A wrapper around the aiohttp response object.
         """
         return await self._request(
             "DELETE",
@@ -251,7 +233,4 @@ class Request:
             timeout=timeout,
             allow_redirects=allow_redirects,
             ssl=ssl,
-            return_json=return_json,
-            return_text=return_text,
-            return_content=return_content,
         )
