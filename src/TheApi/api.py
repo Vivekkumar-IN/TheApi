@@ -77,7 +77,7 @@ class TheApi:
         async with aiofiles.open(file_path, "wb") as f:
             await f.write(contents)
 
-        return FilePath(file_path)
+        return file_path
 
     def _rnd_str(self) -> str:
         random_str = "".join(random.choices(string.ascii_letters + string.digits, k=8))
@@ -415,7 +415,7 @@ class TheApi:
         pdf_content = response.read()
         file_path = await self._create_file(pdf_content, ext="pdf", name="pdf")
 
-        return FilePath(file_path)
+        return file_path
 
     async def gen_qr(
         self,
@@ -447,7 +447,7 @@ class TheApi:
         response = await self.request.get(url=url, params=params)
         file_path = await self._create_file(response.content, ext="png", name="QrCode")
 
-        return FilePath(file_path)
+        return file_path
 
     async def get_uselessfact(self):
         """
@@ -533,7 +533,7 @@ class TheApi:
 
         img.save(file_path)
 
-        return FilePath(file_path)
+        return file_path
 
     async def carbon(self, query):
         """
@@ -553,7 +553,7 @@ class TheApi:
         )
         file_path = await self._create_file(response.content, ext="png", name="carbon")
 
-        return FilePath(file_path)
+        return file_path
 
     async def wikipedia(self, query):
         """
@@ -975,7 +975,7 @@ class TheApi:
 
         final_img.save(file_path, format="JPEG")
 
-        return FilePath(file_path)
+        return file_path
 
     async def upload_image(
         self, file_path: Union[str, bytes, BytesIO]
