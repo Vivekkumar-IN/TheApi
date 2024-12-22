@@ -58,7 +58,7 @@ class TheApi:
 
     async def _create_file(
         self, contents: bytes, ext: str, name: Optional[str] = None
-    ) -> FilePath:
+    ) -> str:
         """
         Creates a file in the downloads directory, writes the contents to the file, and returns the file path.
 
