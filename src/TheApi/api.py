@@ -548,7 +548,7 @@ class TheApi:
         """
         response = await self.request.post(
             "https://carbonara.solopov.dev/api/cook",
-            json={ "code": query },
+            json={"code": query},
             headers={"Content-Type": "application/json"},
         )
         file_path = await self._create_file(response.content, ext="png", name="carbon")
@@ -782,7 +782,7 @@ class TheApi:
             str or None: The URL of a random dog image if available; None if no response is received.
         """
         response = await self.request.get(self.base_urls["dog"])
-        response =  response.json()
+        response = response.json()
         return response["url"] if response else None
 
     async def pypi(self, package_name):
@@ -845,7 +845,11 @@ class TheApi:
             "qft": "",
         }
         response = await self.request.get(self.base_urls["bing_image"], params=data)
-        return re.findall(r"murl&quot;:&quot;(.*?)&quot;", response.content) if response else []
+        return (
+            re.findall(r"murl&quot;:&quot;(.*?)&quot;", response.content)
+            if response
+            else []
+        )
 
     async def stackoverflow_search(self, query, max_results=3, sort_type="relevance"):
         """
