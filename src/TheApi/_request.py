@@ -44,6 +44,7 @@ class Response:
         result = await self._response.json()
         return result
 
+
 class Request:
     async def _request(
         self,
