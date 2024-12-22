@@ -89,7 +89,8 @@ class TheApi(Request):
             dict: Contains the file name, file type, and file URL.
         """
         response = await self.get(self.base_urls["avatar"])
-        return response
+        
+        return await response.json()
 
     async def animechan(self):
         """
@@ -99,7 +100,7 @@ class TheApi(Request):
             dict: Contains the quote content, anime name, and character details.
         """
         response = await self.get(self.base_urls["animechan"])
-        return response["data"]
+        return await response.json()["data"]
 
     async def fakerapi(
         self, endpoint: str, quantity: int = 3, locale: str = "en_US", **kwargs
@@ -243,7 +244,7 @@ class TheApi(Request):
         url = f"{self.base_urls['faker']}{endpoint}"
 
         result = await self.get(url, params=params)
-        return result
+        return await result.json()
 
     async def get_fake_images(
         self,
@@ -309,7 +310,7 @@ class TheApi(Request):
             str: A random advice message.
         """
         response = await self.get(self.base_urls["advice"])
-        return response["slip"]["advice"]
+        return await response.json()["slip"]["advice"]
 
     async def get_btc_value(self, currency: Optional[str] = None) -> dict:
         """
@@ -341,7 +342,7 @@ class TheApi(Request):
 
         response = await self.get(url)
 
-        return response
+        return await response.json()
 
     async def get_jokes(self, amount=1):
         """
@@ -351,18 +352,19 @@ class TheApi(Request):
             amount (int, optional): The number of jokes to retrieve. Defaults to 1.
 
         Returns:
-            str: A single joke if `amount` is 1. If `amount` > 1, returns numbered jokes as a formatted string.
+            str: A single joke if `amount` is 1. 
+            list: If `amount` > 1, returns numbered jokes.
         """
         url = self.base_urls["jokes"]
         params = {"type": "single", "amount": amount}
         response = await self.get(url, params=params)
-
+        result = await response.json()
         if amount == 1:
-            return response["joke"]
+            return result["joke"]
         else:
-            jokes = [joke["joke"] for joke in response["jokes"]]
-            return "\n\n".join(f"{i + 1}. {joke}" for i, joke in enumerate(jokes))
-
+            jokes = [joke["joke"] for joke in result["jokes"]]
+            return jokes
+            
     async def get_hindi_jokes(self):
         """
         Fetches a random Hindi joke.
@@ -371,6 +373,7 @@ class TheApi(Request):
             str: A random Hindi joke if available, or "No joke found" if not available.
         """
         response = await self.get(self.base_urls["hindi_jokes"])
+        
         return response["jokeContent"] if response["status"] else "No joke found."
 
     async def generate_pdf(
