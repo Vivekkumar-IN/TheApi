@@ -846,7 +846,7 @@ class TheApi:
         }
         response = await self.request.get(self.base_urls["bing_image"], params=data)
         return (
-            re.findall(r"murl&quot;:&quot;(.*?)&quot;", response.content)
+            re.findall(r"murl&quot;:&quot;(.*?)&quot;", response.text)
             if response
             else []
         )
