@@ -55,40 +55,44 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 
 | Function           | Status |
 |--------------------|--------|
-| [1. Animechan](#1-animechan) | ✅
-| [2. Avatar](#2-avatar) | ✅
-| [3. Bing Image](#3-bing-image) | ✅
+| [1. Animechan](#1-animechan) | ❌
+| [2. Avatar](#2-avatar) | ❌
+| [3. Bing Image](#3-bing-image) | ❌
 | [4. Blackpink](#4-blackpink) | ✅
-| [5. Carbon](#5-carbon) | ✅
-| [6. Cat](#6-cat) | ✅
-| [7. Dog](#7-dog) | ✅
-| [8. Domain Search](#8-domain-search) | ❌
-| [9. Fakerapi](#9-fakerapi) | ❌
-| [10. Fox](#10-fox) | ✅
-| [11. Gen Qr](#11-gen-qr) | ✅
-| [12. Generate Pdf](#12-generate-pdf) | ✅
-| [13. Get Advice](#13-get-advice) | ✅
-| [14. Get Btc Value](#14-get-btc-value) | ✅
-| [15. Get Fake Addresses](#15-get-fake-addresses) | ✅
-| [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ✅
-| [17. Get Fake Images](#17-get-fake-images) | ✅
-| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ✅
-| [19. Get Jokes](#19-get-jokes) | ✅
-| [20. Get Uselessfact](#20-get-uselessfact) | ✅
-| [21. Get Word Definitions](#21-get-word-definitions) | ✅
-| [22. Get Words](#22-get-words) | ✅
-| [23. Github Search](#23-github-search) | ✅
-| [24. Hindi Quote](#24-hindi-quote) | ✅
-| [25. Hug](#25-hug) | ✅
-| [26. Meme](#26-meme) | ✅
-| [27. Neko](#27-neko) | ✅
-| [28. Pypi](#28-pypi) | ✅
-| [29. Quote](#29-quote) | ✅
-| [30. Riddle](#30-riddle) | ✅
-| [31. Stackoverflow Search](#31-stackoverflow-search) | ✅
-| [32. Upload Image](#32-upload-image) | ✅
-| [33. Wikipedia](#33-wikipedia) | ✅
-| [34. Write](#34-write) | ❌
+| [5. Carbon](#5-carbon) | ❌
+| [6. Cat](#6-cat) | ❌
+| [7. Delete](#7-delete) | ❌
+| [8. Dog](#8-dog) | ❌
+| [9. Domain Search](#9-domain-search) | ❌
+| [10. Fakerapi](#10-fakerapi) | ❌
+| [11. Fox](#11-fox) | ❌
+| [12. Gen Qr](#12-gen-qr) | ❌
+| [13. Generate Pdf](#13-generate-pdf) | ❌
+| [14. Get](#14-get) | ❌
+| [15. Get Advice](#15-get-advice) | ❌
+| [16. Get Btc Value](#16-get-btc-value) | ❌
+| [17. Get Fake Addresses](#17-get-fake-addresses) | ❌
+| [18. Get Fake Credit Cards](#18-get-fake-credit-cards) | ❌
+| [19. Get Fake Images](#19-get-fake-images) | ❌
+| [20. Get Hindi Jokes](#20-get-hindi-jokes) | ❌
+| [21. Get Jokes](#21-get-jokes) | ❌
+| [22. Get Uselessfact](#22-get-uselessfact) | ❌
+| [23. Get Word Definitions](#23-get-word-definitions) | ❌
+| [24. Get Words](#24-get-words) | ❌
+| [25. Github Search](#25-github-search) | ❌
+| [26. Hindi Quote](#26-hindi-quote) | ❌
+| [27. Hug](#27-hug) | ❌
+| [28. Meme](#28-meme) | ❌
+| [29. Neko](#29-neko) | ❌
+| [30. Post](#30-post) | ❌
+| [31. Put](#31-put) | ❌
+| [32. Pypi](#32-pypi) | ❌
+| [33. Quote](#33-quote) | ❌
+| [34. Riddle](#34-riddle) | ✅
+| [35. Stackoverflow Search](#35-stackoverflow-search) | ❌
+| [36. Upload Image](#36-upload-image) | ❌
+| [37. Wikipedia](#37-wikipedia) | ❌
+| [38. Write](#38-write) | ❌
 
 
 ## 🎓 How to Use Each Function
@@ -110,19 +114,8 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "content": "I think I've found what I was looking for all this time. I, who was always alone... found comrades for the first time.",
-    "anime": {
-        "id": 811,
-        "name": "Samurai Champloo",
-        "altName": "Samurai Champloo"
-    },
-    "character": {
-        "id": 2439,
-        "name": "Jin"
-    }
-}
+```text
+'coroutine' object is not subscriptable
 ```
 
 ### 2. Avatar
@@ -142,12 +135,8 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "file_name": "mo",
-    "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/mo.jpg"
-}
+```text
+Connection closed
 ```
 
 ### 3. Bing Image
@@ -172,9 +161,7 @@ print(result)
 #### Expected Output
 
 ```text
-http://www.technosamrat.com/wp-content/uploads/2012/05/Pokemon-Wallpapers-Picture.jpg
-https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg
-http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
+Connection closed
 ```
 
 ### 4. Blackpink
@@ -200,7 +187,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_HDPc9hDY.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_MtpHtRRv.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +211,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_IxfZrdIR.png
+name 'params' is not defined
 ```
 
 ### 6. Cat
@@ -245,10 +232,41 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/mg.png
+Connection closed
 ```
 
-### 7. Dog
+### 7. Delete
+
+**Description**:
+Sends a DELETE request.
+
+**Args:**
+  - **url (str)**: The target URL.
+  - **headers (Optional[Dict[str, str]])**: Optional headers to include in the request.
+  - **params (Optional[Dict[str, str]])**: Query parameters to include in the URL.
+  - **data (Optional[Union[Dict[str, Any], bytes]])**: Form data or raw bytes to include in the body.
+  - **json (Optional[Dict[str, Any]])**: JSON data to include in the body.
+  - **timeout (Optional[int])**: Timeout for the request in seconds.
+  - **allow_redirects (bool)**: Whether to follow redirects (default is True).
+  - **ssl (Optional[bool])**: Whether to verify SSL certificates (default is None).
+
+**Returns:**
+  - **Response**: A wrapper around the aiohttp response object.
+
+```python
+from TheApi import api
+
+result = await api.delete(url='Pokemon', headers=None, params=None, data=None, json=None, timeout=None, allow_redirects=True, ssl=None)
+print(result)
+```
+
+#### Expected Output
+
+```text
+Pokemon
+```
+
+### 8. Dog
 
 **Description**:
 Fetches a random dog image URL.
@@ -266,10 +284,10 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/a70f8390-eb64-48e9-b216-00bee638d494.jpg
+Connection closed
 ```
 
-### 8. Domain Search
+### 9. Domain Search
 
 **Description**:
 Fetches domain information from the DomainsDB API.
@@ -291,10 +309,10 @@ print(result)
 #### Expected Output
 
 ```text
-Request failed: 500, message='INTERNAL SERVER ERROR', url='https://api.domainsdb.info/v1/domains/search?domain=Pokemon&zone=com'
+Connection closed
 ```
 
-### 9. Fakerapi
+### 10. Fakerapi
 
 **Description**:
 Fetch data from the FakerAPI using aiohttp.
@@ -323,7 +341,7 @@ quantity (int, optional): Number of rows to fetch (default: 3, max: 1000). local
   - **dict**: Response data from the API.
 
 
-### 10. Fox
+### 11. Fox
 
 **Description**:
 Fetches a random fox image URL.
@@ -341,10 +359,10 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=120
+Connection closed
 ```
 
-### 11. Gen Qr
+### 12. Gen Qr
 
 **Description**:
 Generate a QR code using api.qrserver.com and save it as a PNG file.
@@ -354,8 +372,6 @@ Generate a QR code using api.qrserver.com and save it as a PNG file.
   - **size (str)**: The size of the QR code in the format 'WIDTHxHEIGHT' (default: '150x150').
   - **foreground_color (str)**: The color of the QR code (default: '000000' - black).
   - **background_color (str)**: The background color of the QR code (default: 'FFFFFF' - white).
-  - **file_path (str, optional)**: The file path to save the QR code.
-    Defaults to "downloads/{random_str}_qr.png".
 
 **Returns:**
   - **FilePath**: The file path where the QR code was saved.
@@ -363,25 +379,23 @@ Generate a QR code using api.qrserver.com and save it as a PNG file.
 ```python
 from TheApi import api
 
-result = await api.gen_qr(data='Pokemon', size='150x150', foreground_color='000000', background_color='FFFFFF', file_path=None)
+result = await api.gen_qr(data='Pokemon', size='150x150', foreground_color='000000', background_color='FFFFFF')
 print(result)
 ```
 
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/65K6m9vq_qr.png
+Connection closed
 ```
 
-### 12. Generate Pdf
+### 13. Generate Pdf
 
 **Description**:
 Generates a PDF from a URL or an HTML string and saves it to a file.
 
 **Args:**
   - **source (str)**: The URL of the website (if `from_url=True`) or the HTML string (if `from_url=False`).
-  - **file_path (str, optional)**: The file path to save the generated PDF.
-    Defaults to "downloads/<random_str>_generated.pdf".
   - **from_url (bool, optional)**: Whether to generate the PDF from a URL (True) or an HTML string (False).
 
 **Returns:**
@@ -391,7 +405,36 @@ Generates a PDF from a URL or an HTML string and saves it to a file.
   - **ValueError**: If `from_url` is True and `source` is not a valid URL.
 
 
-### 13. Get Advice
+### 14. Get
+
+**Description**:
+Sends a GET request.
+
+**Args:**
+  - **url (str)**: The target URL.
+  - **headers (Optional[Dict[str, str]])**: Optional headers to include in the request.
+  - **params (Optional[Dict[str, str]])**: Query parameters to include in the URL.
+  - **timeout (Optional[int])**: Timeout for the request in seconds.
+  - **allow_redirects (bool)**: Whether to follow redirects (default is True).
+  - **ssl (Optional[bool])**: Whether to verify SSL certificates (default is None).
+
+**Returns:**
+  - **Response**: A wrapper around the aiohttp response object.
+
+```python
+from TheApi import api
+
+result = await api.get(url='Pokemon', headers=None, params=None, timeout=None, allow_redirects=True, ssl=None)
+print(result)
+```
+
+#### Expected Output
+
+```text
+Pokemon
+```
+
+### 15. Get Advice
 
 **Description**:
 Fetches a random piece of advice.
@@ -409,10 +452,10 @@ print(result)
 #### Expected Output
 
 ```text
-The most important thing is the thing most easily forgotten.
+'coroutine' object is not subscriptable
 ```
 
-### 14. Get Btc Value
+### 16. Get Btc Value
 
 **Description**:
 Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.
@@ -436,33 +479,11 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "EUR": {
-        "code": "EUR",
-        "description": "Euro",
-        "rate": "94,382.057",
-        "rate_float": 94382.0574,
-        "symbol": "&euro;"
-    },
-    "GBP": {
-        "code": "GBP",
-        "description": "British Pound Sterling",
-        "rate": "77,775.169",
-        "rate_float": 77775.1689,
-        "symbol": "&pound;"
-    },
-    "USD": {
-        "code": "USD",
-        "description": "United States Dollar",
-        "rate": "99,396.617",
-        "rate_float": 99396.6167,
-        "symbol": "&#36;"
-    }
-}
+```text
+Connection closed
 ```
 
-### 15. Get Fake Addresses
+### 17. Get Fake Addresses
 
 **Description**:
 Fetch fake address data from the FakerAPI.
@@ -483,31 +504,11 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "status": "OK",
-    "code": 200,
-    "locale": "en_US",
-    "seed": null,
-    "total": 1,
-    "data": [
-        {
-            "id": 1,
-            "street": "507 Bauch Trafficway",
-            "streetName": "Ransom Corners",
-            "buildingNumber": "630",
-            "city": "Terrychester",
-            "zipcode": "25577-3662",
-            "country": "Ireland",
-            "country_code": "IE",
-            "latitude": -15.755217,
-            "longitude": -97.116937
-        }
-    ]
-}
+```text
+Connection closed
 ```
 
-### 16. Get Fake Credit Cards
+### 18. Get Fake Credit Cards
 
 **Description**:
 Fetch fake credit card data from the FakerAPI.
@@ -528,25 +529,11 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "status": "OK",
-    "code": 200,
-    "locale": "en_US",
-    "seed": null,
-    "total": 1,
-    "data": [
-        {
-            "type": "MasterCard",
-            "number": "5143099703411289",
-            "expiration": "05/25",
-            "owner": "Luisa Herman"
-        }
-    ]
-}
+```text
+Connection closed
 ```
 
-### 17. Get Fake Images
+### 19. Get Fake Images
 
 **Description**:
 Fetch fake image data from the FakerAPI.
@@ -570,24 +557,11 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "status": "OK",
-    "code": 200,
-    "locale": "en_US",
-    "seed": null,
-    "total": 1,
-    "data": [
-        {
-            "title": "Enim autem ipsa ut illo.",
-            "description": "Natus nam magnam quae ea tempore voluptates. Magnam hic sunt sed ut. Delectus cum tempore et aut voluptates.",
-            "url": "https://picsum.photos/640/480"
-        }
-    ]
-}
+```text
+Connection closed
 ```
 
-### 18. Get Hindi Jokes
+### 20. Get Hindi Jokes
 
 **Description**:
 Fetches a random Hindi joke.
@@ -605,10 +579,10 @@ print(result)
 #### Expected Output
 
 ```text
-आजतक मुझसे किसी ने ये नहीं कहा कि तुम ही मेरी दुनिया हो हो सकता है कि शायद मैं किसी का गाँव हूँ 😆🤣😋😉
+Connection closed
 ```
 
-### 19. Get Jokes
+### 21. Get Jokes
 
 **Description**:
 Fetches a specified number of jokes.
@@ -617,7 +591,8 @@ Fetches a specified number of jokes.
   - **amount (int, optional)**: The number of jokes to retrieve. Defaults to 1.
 
 **Returns:**
-  - **str**: A single joke if `amount` is 1. If `amount` > 1, returns numbered jokes as a formatted string.
+  - **str**: A single joke if `amount` is 1.
+  - **list**: If `amount` > 1, returns numbered jokes.
 
 ```python
 from TheApi import api
@@ -629,11 +604,10 @@ print(result)
 #### Expected Output
 
 ```text
-Today, my son asked "Can I have a book mark?" and I burst into tears.
-11 years old and he still doesn't know my name is Brian.
+Connection closed
 ```
 
-### 20. Get Uselessfact
+### 22. Get Uselessfact
 
 **Description**:
 Fetches a random useless fact.
@@ -651,10 +625,10 @@ print(result)
 #### Expected Output
 
 ```text
-The average person spends about two years on the phone in a lifetime.
+Connection closed
 ```
 
-### 21. Get Word Definitions
+### 23. Get Word Definitions
 
 **Description**:
 Fetch definitions for a word from the Dictionary API.
@@ -677,15 +651,11 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "title": "No Definitions Found",
-    "message": "Sorry pal, we couldn't find definitions for the word you were looking for.",
-    "resolution": "You can try the search again at later time or head to the web instead."
-}
+```text
+Connection closed
 ```
 
-### 22. Get Words
+### 24. Get Words
 
 **Description**:
 Fetch random words from the Random Word API.
@@ -709,19 +679,10 @@ print(result)
 #### Expected Output
 
 ```text
-Mankind
-Crazy
-Declared
-Espionage
-Hatred
-Scorpion
-Good
-Diary
-Daybreak
-Effects
+Connection closed
 ```
 
-### 23. Github Search
+### 25. Github Search
 
 **Description**:
 Searches GitHub for various types of content.
@@ -752,39 +713,11 @@ print(result)
 
 #### Expected Output
 
-```json
-[
-    {
-        "name": "PokemonGo-Map",
-        "full_name": "AHAAAAAAA/PokemonGo-Map",
-        "description": "\ud83c\udf0f Live visualization of all the pokemon in your area... and more! (shutdown)",
-        "url": "https://github.com/AHAAAAAAA/PokemonGo-Map",
-        "language": null,
-        "stargazers_count": 7527,
-        "forks_count": 2815
-    },
-    {
-        "name": "pokemon-showdown",
-        "full_name": "smogon/pokemon-showdown",
-        "description": "Pok\u00e9mon battle simulator.",
-        "url": "https://github.com/smogon/pokemon-showdown",
-        "language": "TypeScript",
-        "stargazers_count": 4835,
-        "forks_count": 2825
-    },
-    {
-        "name": "PokemonGo-Bot",
-        "full_name": "PokemonGoF/PokemonGo-Bot",
-        "description": "The Pokemon Go Bot, baking with community.",
-        "url": "https://github.com/PokemonGoF/PokemonGo-Bot",
-        "language": "Python",
-        "stargazers_count": 3879,
-        "forks_count": 1543
-    }
-]
+```text
+Unexpected error: Connection closed
 ```
 
-### 24. Hindi Quote
+### 26. Hindi Quote
 
 **Description**:
 Fetches a random Hindi quote.
@@ -802,10 +735,10 @@ print(result)
 #### Expected Output
 
 ```text
-बहुत कमियाँ निकालते है हम दुसरों में अक्सर..आओ एक मुलाकात जरा आईने से भी कर लें…
+Connection closed
 ```
 
-### 25. Hug
+### 27. Hug
 
 **Description**:
 Fetches a specified number hug gif from the Nekos.Best API.
@@ -828,16 +761,11 @@ print(result)
 
 #### Expected Output
 
-```json
-[
-    {
-        "anime_name": "Hayate no Gotoku! Cuties",
-        "url": "https://nekos.best/api/v2/hug/e549230e-34a7-4834-86a9-c4c76df0531d.gif"
-    }
-]
+```text
+'coroutine' object is not subscriptable
 ```
 
-### 26. Meme
+### 28. Meme
 
 **Description**:
 Fetches a random meme image URL.
@@ -855,10 +783,10 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/jgnz61eh7w7e1.png?width=640&crop=smart&auto=webp&s=e8b420bb6db7d411f5db046009cac94f536560fe
+Connection closed
 ```
 
-### 27. Neko
+### 29. Neko
 
 **Description**:
 Fetches a specified number of neko images or GIFs from the Nekos.Best API.
@@ -891,32 +819,74 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "results": [
-        {
-            "artist_href": "https://www.pixiv.net/en/users/66588973",
-            "artist_name": "\u4e59\u5e61\u308a\u3042\u3093",
-            "source_url": "https://www.pixiv.net/en/artworks/98178014",
-            "url": "https://nekos.best/api/v2/neko/a34a48cd-9af0-4437-94ff-2b881d2b1ce7.png"
-        },
-        {
-            "artist_href": "https://www.pixiv.net/en/users/53797367",
-            "artist_name": "\u3068\u306a\u305b\u304c",
-            "source_url": "https://www.pixiv.net/en/artworks/87202777",
-            "url": "https://nekos.best/api/v2/neko/f7bb8dda-d579-473d-af3a-e0db7ed41f66.png"
-        },
-        {
-            "artist_href": "https://www.pixiv.net/en/users/15440727",
-            "artist_name": "\u79cb\u4e43\u3048\u308b",
-            "source_url": "https://www.pixiv.net/en/artworks/88207368",
-            "url": "https://nekos.best/api/v2/neko/6497c3ac-da98-4636-9a56-8a66895a642d.png"
-        }
-    ]
-}
+```text
+Connection closed
 ```
 
-### 28. Pypi
+### 30. Post
+
+**Description**:
+Sends a POST request.
+
+**Args:**
+  - **url (str)**: The target URL.
+  - **headers (Optional[Dict[str, str]])**: Optional headers to include in the request.
+  - **params (Optional[Dict[str, str]])**: Query parameters to include in the URL.
+  - **data (Optional[Union[Dict[str, Any], bytes]])**: Form data or raw bytes to include in the body.
+  - **json (Optional[Dict[str, Any]])**: JSON data to include in the body.
+  - **files (Optional[Dict[str, bytes]])**: Files to include in the body (currently unused).
+  - **timeout (Optional[int])**: Timeout for the request in seconds.
+  - **allow_redirects (bool)**: Whether to follow redirects (default is True).
+  - **ssl (Optional[bool])**: Whether to verify SSL certificates (default is None).
+
+**Returns:**
+  - **Response**: A wrapper around the aiohttp response object.
+
+```python
+from TheApi import api
+
+result = await api.post(url='Pokemon', headers=None, params=None, data=None, json=None, files=None, timeout=None, allow_redirects=True, ssl=None)
+print(result)
+```
+
+#### Expected Output
+
+```text
+Pokemon
+```
+
+### 31. Put
+
+**Description**:
+Sends a PUT request.
+
+**Args:**
+  - **url (str)**: The target URL.
+  - **headers (Optional[Dict[str, str]])**: Optional headers to include in the request.
+  - **params (Optional[Dict[str, str]])**: Query parameters to include in the URL.
+  - **data (Optional[Union[Dict[str, Any], bytes]])**: Form data or raw bytes to include in the body.
+  - **json (Optional[Dict[str, Any]])**: JSON data to include in the body.
+  - **timeout (Optional[int])**: Timeout for the request in seconds.
+  - **allow_redirects (bool)**: Whether to follow redirects (default is True).
+  - **ssl (Optional[bool])**: Whether to verify SSL certificates (default is None).
+
+**Returns:**
+  - **Response**: A wrapper around the aiohttp response object.
+
+```python
+from TheApi import api
+
+result = await api.put(url='Pokemon', headers=None, params=None, data=None, json=None, timeout=None, allow_redirects=True, ssl=None)
+print(result)
+```
+
+#### Expected Output
+
+```text
+Pokemon
+```
+
+### 32. Pypi
 
 **Description**:
 Retrieves metadata information about a specified Python package from the PyPI API.
@@ -925,19 +895,7 @@ Retrieves metadata information about a specified Python package from the PyPI AP
   - **package_name (str)**: The name of the package to search for on PyPI.
 
 **Returns:**
-  - **dict or None**: A dictionary with relevant package information if found, containing:
-    - name (str): Package name.
-    - version (str): Latest package version.
-    - summary (str): Short description of the package.
-    - author (str): Package author.
-    - author_email (str): Email of the package author.
-    - license (str): License type.
-    - home_page (str): URL of the package's homepage.
-    - package_url (str): URL of the package on PyPI.
-    - requires_python (str): Minimum Python version required.
-    - keywords (str): Keywords associated with the package.
-    - classifiers (list): List of PyPI classifiers.
-    - project_urls (dict): Additional project URLs (e.g., source code, documentation).
+  - **dict or None**: A dictionary with relevant package information if found.
     Returns None if the package is not found or there is an error.
 
 ```python
@@ -949,26 +907,11 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "name": "pokemon",
-    "version": "0.36",
-    "summary": "ascii database of pokemon... in Python!",
-    "author": "Vanessa Sochat",
-    "author_email": "vsoch@noreply.github.users.com",
-    "license": "LICENSE",
-    "home_page": "https://github.com/vsoch/pokemon",
-    "package_url": "https://pypi.org/project/pokemon/",
-    "requires_python": "",
-    "keywords": "pokemon,avatar,ascii,gravatar",
-    "classifiers": [],
-    "project_urls": {
-        "Homepage": "https://github.com/vsoch/pokemon"
-    }
-}
+```text
+Connection closed
 ```
 
-### 29. Quote
+### 33. Quote
 
 **Description**:
 Fetches a random quote.
@@ -986,12 +929,10 @@ print(result)
 #### Expected Output
 
 ```text
-The universe is transformation; our life is what our thoughts make it.
-
-author - Marcus Aurelius
+Connection closed
 ```
 
-### 30. Riddle
+### 34. Riddle
 
 **Description**:
 Fetches a random riddle from the Riddles API.
@@ -1008,14 +949,11 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "riddle": "RIDDLE ME THIS:A woman walked into an office building, looked at the guard, and said her name was Jenny. The next day she walked into the same building, looked at the same guard and said her name was Julie. What is going on?",
-    "answer": "The woman has Multiple Personality Disorder. This happens when a traumatic experience causes so much pain that they make another personality to cope with the situation"
-}
+```text
+<TheApi._request.Response object at 0x7f1fb746b110>
 ```
 
-### 31. Stackoverflow Search
+### 35. Stackoverflow Search
 
 **Description**:
 Searches Stack Overflow for questions based on a query, returning results sorted by relevance or another specified criteria.
@@ -1040,91 +978,11 @@ print(result)
 
 #### Expected Output
 
-```json
-[
-    {
-        "tags": [
-            "ios",
-            "flutter",
-            "dart"
-        ],
-        "owner": {
-            "account_id": 19921816,
-            "reputation": 3,
-            "user_id": 14597469,
-            "user_type": "registered",
-            "profile_image": "https://lh6.googleusercontent.com/-aT6u2l_JT94/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclcxb94zp_q0Q2R8DQN7b6X3kgo6w/s96-c/photo.jpg?sz=256",
-            "display_name": "Senem Sedef",
-            "link": "https://stackoverflow.com/users/14597469/senem-sedef"
-        },
-        "is_answered": false,
-        "view_count": 125,
-        "answer_count": 0,
-        "score": 0,
-        "last_activity_date": 1701515081,
-        "creation_date": 1622231772,
-        "last_edit_date": 1701515081,
-        "question_id": 67744802,
-        "content_license": "CC BY-SA 4.0",
-        "link": "https://stackoverflow.com/questions/67744802/the-getter-pokemon-was-called-on-null-receiver-null-tried-calling-pokemon",
-        "title": "The getter &#39;pokemon&#39; was called on null. Receiver: null Tried calling: pokemon"
-    },
-    {
-        "tags": [
-            "java"
-        ],
-        "owner": {
-            "account_id": 919945,
-            "reputation": 43,
-            "user_id": 951797,
-            "user_type": "registered",
-            "profile_image": "https://www.gravatar.com/avatar/26b06d5d95992fa3780383abe5f49a3d?s=256&d=identicon&r=PG",
-            "display_name": "Brian",
-            "link": "https://stackoverflow.com/users/951797/brian"
-        },
-        "is_answered": true,
-        "view_count": 32700,
-        "accepted_answer_id": 7942409,
-        "answer_count": 3,
-        "score": 3,
-        "last_activity_date": 1577442848,
-        "creation_date": 1319931614,
-        "question_id": 7942384,
-        "content_license": "CC BY-SA 3.0",
-        "link": "https://stackoverflow.com/questions/7942384/simple-java-pokemon-fight-simulator",
-        "title": "Simple Java Pokemon Fight Simulator"
-    },
-    {
-        "tags": [
-            "reactjs",
-            "random",
-            "axios"
-        ],
-        "owner": {
-            "account_id": 17931576,
-            "reputation": 1,
-            "user_id": 13028884,
-            "user_type": "registered",
-            "profile_image": "https://www.gravatar.com/avatar/7ebcdd2f784bca5dc54a1a0e17354f86?s=256&d=identicon&r=PG&f=y&so-version=2",
-            "display_name": "GieGie",
-            "link": "https://stackoverflow.com/users/13028884/giegie"
-        },
-        "is_answered": false,
-        "view_count": 2033,
-        "answer_count": 2,
-        "score": 0,
-        "last_activity_date": 1652730812,
-        "creation_date": 1642222168,
-        "last_edit_date": 1642223800,
-        "question_id": 70718940,
-        "content_license": "CC BY-SA 4.0",
-        "link": "https://stackoverflow.com/questions/70718940/pokemon-api-request-generate-5-pok%c3%a9mon-at-a-time",
-        "title": "Pokemon API request generate 5 Pok&#233;mon at a time"
-    }
-]
+```text
+Connection closed
 ```
 
-### 32. Upload Image
+### 36. Upload Image
 
 **Description**:
 Uploads an image to https://envs.sh.
@@ -1142,7 +1000,7 @@ Uploads an image to https://envs.sh.
     or the upload request fails.
 
 
-### 33. Wikipedia
+### 37. Wikipedia
 
 **Description**:
 Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.
@@ -1169,16 +1027,11 @@ print(result)
 
 #### Expected Output
 
-```json
-{
-    "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
-    "url": "https://en.wikipedia.org/?curid=23745",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
-}
+```text
+Connection closed
 ```
 
-### 34. Write
+### 38. Write
 
 **Description**:
 Creates an image with text written on it, using a predefined template and font, and uploads the image after generation.
@@ -1203,7 +1056,7 @@ print(result)
 #### Expected Output
 
 ```text
-cannot identify image file <_io.BytesIO object at 0x7fc6a3fd3bf0>
+Connection closed
 ```
 
 
