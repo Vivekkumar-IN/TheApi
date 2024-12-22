@@ -19,7 +19,8 @@ license = { text = "MIT" }
 dependencies = [
     "aiohttp",
     "aiofiles",
-    "pillow"
+    "pillow",
+    "httpx",
 ]
 
 [project.urls]
