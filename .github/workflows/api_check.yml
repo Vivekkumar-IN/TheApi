@@ -4,7 +4,6 @@ on:
   push:
     paths:
     - "**.py"
-    - "**.yml"
   schedule:
     - cron: '40 2 * * *'  # This runs the job at 8:10 AM IST (GMT+5:30)
   workflow_dispatch:
@@ -43,12 +42,3 @@ jobs:
           git push origin ${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Delete old workflow run
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          retain_days: 0
-          keep_minimum_runs: 0
-          #delete_workflow_pattern: "Upadte Docs"
