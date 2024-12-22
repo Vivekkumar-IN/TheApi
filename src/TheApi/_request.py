@@ -1,5 +1,7 @@
+from typing import Any, Dict, Union, Optional
+
 import aiohttp
-from typing import Optional, Dict, Any, Union
+
 
 class Request:
     async def _request(
@@ -16,7 +18,7 @@ class Request:
         ssl: Optional[bool] = None,
         return_json: bool = True,
         return_text: bool = False,
-        return_content: bool = False
+        return_content: bool = False,
     ) -> Any:
         """
         Make an HTTP request.
@@ -59,9 +61,9 @@ class Request:
                     response_data = await response.read()
                 else:
                     response_data = {
-                        'status_code': response.status,
-                        'headers': response.headers,
-                        'text': await response.text()
+                        "status_code": response.status,
+                        "headers": response.headers,
+                        "text": await response.text(),
                     }
                 return response_data
 
@@ -75,7 +77,7 @@ class Request:
         ssl: Optional[bool] = None,
         return_json: bool = True,
         return_text: bool = False,
-        return_content: bool = False
+        return_content: bool = False,
     ) -> Any:
         """
         Make a GET request.
@@ -95,7 +97,7 @@ class Request:
             Any: The response data.
         """
         return await self._request(
-            'GET',
+            "GET",
             url,
             headers=headers,
             params=params,
@@ -104,7 +106,7 @@ class Request:
             ssl=ssl,
             return_json=return_json,
             return_text=return_text,
-            return_content=return_content
+            return_content=return_content,
         )
 
     async def post(
@@ -120,7 +122,7 @@ class Request:
         ssl: Optional[bool] = None,
         return_json: bool = True,
         return_text: bool = False,
-        return_content: bool = False
+        return_content: bool = False,
     ) -> Any:
         """
         Make a POST request.
@@ -143,7 +145,7 @@ class Request:
             Any: The response data.
         """
         return await self._request(
-            'POST',
+            "POST",
             url,
             headers=headers,
             params=params,
@@ -155,7 +157,7 @@ class Request:
             ssl=ssl,
             return_json=return_json,
             return_text=return_text,
-            return_content=return_content
+            return_content=return_content,
         )
 
     async def put(
@@ -170,7 +172,7 @@ class Request:
         ssl: Optional[bool] = None,
         return_json: bool = True,
         return_text: bool = False,
-        return_content: bool = False
+        return_content: bool = False,
     ) -> Any:
         """
         Make a PUT request.
@@ -192,7 +194,7 @@ class Request:
             Any: The response data.
         """
         return await self._request(
-            'PUT',
+            "PUT",
             url,
             headers=headers,
             params=params,
@@ -203,7 +205,7 @@ class Request:
             ssl=ssl,
             return_json=return_json,
             return_text=return_text,
-            return_content=return_content
+            return_content=return_content,
         )
 
     async def delete(
@@ -218,7 +220,7 @@ class Request:
         ssl: Optional[bool] = None,
         return_json: bool = True,
         return_text: bool = False,
-        return_content: bool = False
+        return_content: bool = False,
     ) -> Any:
         """
         Make a DELETE request.
@@ -240,7 +242,7 @@ class Request:
             Any: The response data.
         """
         return await self._request(
-            'DELETE',
+            "DELETE",
             url,
             headers=headers,
             params=params,
@@ -251,5 +253,5 @@ class Request:
             ssl=ssl,
             return_json=return_json,
             return_text=return_text,
-            return_content=return_content
+            return_content=return_content,
         )
