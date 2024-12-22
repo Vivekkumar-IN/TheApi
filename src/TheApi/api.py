@@ -91,7 +91,8 @@ class TheApi(Request):
         """
         response = await self.get(self.base_urls["avatar"])
 
-        return await response.json()
+        result = await response.json()
+        return result
 
     async def animechan(self):
         """
