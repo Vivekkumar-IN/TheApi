@@ -9,7 +9,6 @@ from typing import List, Union, Optional
 import aiofiles
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
-from .func import FilePath
 from ._request import Request
 
 
