@@ -89,7 +89,7 @@ class TheApi(Request):
             dict: Contains the file name, file type, and file URL.
         """
         response = await self.get(self.base_urls["avatar"])
-        
+
         return await response.json()
 
     async def animechan(self):
@@ -352,7 +352,7 @@ class TheApi(Request):
             amount (int, optional): The number of jokes to retrieve. Defaults to 1.
 
         Returns:
-            str: A single joke if `amount` is 1. 
+            str: A single joke if `amount` is 1.
             list: If `amount` > 1, returns numbered jokes.
         """
         url = self.base_urls["jokes"]
@@ -364,7 +364,7 @@ class TheApi(Request):
         else:
             jokes = [joke["joke"] for joke in result["jokes"]]
             return jokes
-            
+
     async def get_hindi_jokes(self):
         """
         Fetches a random Hindi joke.
@@ -373,7 +373,7 @@ class TheApi(Request):
             str: A random Hindi joke if available, or "No joke found" if not available.
         """
         response = await self.get(self.base_urls["hindi_jokes"])
-        
+
         return response["jokeContent"] if response["status"] else "No joke found."
 
     async def generate_pdf(
