@@ -1,29 +1,7 @@
 from typing import Any, Dict, Union, Optional
 
 import httpx
-
-
-class Response:
-    def __init__(self, response: httpx.Response):
-        self._response = response
-        self.status_code = response.status_code
-        self.headers = response.headers
-        self.url = str(response.url)
-        self.reason = response.reason_phrase
-        self.ok = response.status_code < 400
-
-    async def text(self) -> str:
-        return self._response.text
-
-    async def read(self) -> bytes:
-        return self._response.content
-
-    async def content(self) -> bytes:
-        return self.read()
-
-    async def json(self) -> Any:
-        return self._response.json()
-
+from httpx import Response, AsyncClient
 
 class Request:
     async def _request(
@@ -37,9 +15,9 @@ class Request:
         files: Optional[Dict[str, bytes]] = None,
         timeout: Optional[int] = None,
         allow_redirects: bool = True,
-        ssl: Optional[bool] = None,
+        verify: Optional[bool] = None,
     ) -> Response:
-        async with httpx.AsyncClient(verify=ssl) as client:
+        async with AsyncClient(verify=verify) as client:
             response = await client.request(
                 method=method,
                 url=url,
@@ -60,7 +38,7 @@ class Request:
         params: Optional[Dict[str, str]] = None,
         timeout: Optional[int] = None,
         allow_redirects: bool = True,
-        ssl: Optional[bool] = None,
+        verify: Optional[bool] = None,
     ) -> Response:
         return await self._request(
             "GET",
@@ -69,7 +47,7 @@ class Request:
             params=params,
             timeout=timeout,
             allow_redirects=allow_redirects,
-            ssl=ssl,
+            verify=verify,
         )
 
     async def post(
@@ -82,7 +60,7 @@ class Request:
         files: Optional[Dict[str, bytes]] = None,
         timeout: Optional[int] = None,
         allow_redirects: bool = True,
-        ssl: Optional[bool] = None,
+        verify: Optional[bool] = None,
     ) -> Response:
         return await self._request(
             "POST",
@@ -94,7 +72,7 @@ class Request:
             files=files,
             timeout=timeout,
             allow_redirects=allow_redirects,
-            ssl=ssl,
+            verify=verify,
         )
 
     async def put(
@@ -117,7 +95,7 @@ class Request:
             json=json,
             timeout=timeout,
             allow_redirects=allow_redirects,
-            ssl=ssl,
+            verify=verify,
         )
 
     async def delete(
@@ -140,5 +118,5 @@ class Request:
             json=json,
             timeout=timeout,
             allow_redirects=allow_redirects,
-            ssl=ssl,
+            verify=verify,
         )
