@@ -112,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "There is no need for any proof. There is no need to create any. We just have to live every second to the fullest, and the traces of the path we lived will burn into the ground. That will serve as proof of our existence.",
+    "content": "There are times when working hard may not be enough. But those who succeed worked hard.",
     "anime": {
-        "id": 349,
-        "name": "Gintama",
-        "altName": "Gintama"
+        "id": 405,
+        "name": "Hajime no Ippo",
+        "altName": null
     },
     "character": {
-        "id": 1908,
-        "name": "Hijikata Toushirou"
+        "id": 1824,
+        "name": "Coach Kamogawa"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "ben",
+    "file_name": "megan",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/ben.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/megan.jpg"
 }
 ```
 
@@ -173,8 +173,8 @@ print(result)
 
 ```text
 http://www.technosamrat.com/wp-content/uploads/2012/05/Pokemon-Wallpapers-Picture.jpg
+http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
 https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg
-https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pokémon_logo.svg/1200px-International_Pokémon_logo.svg.png
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_xCTslAmc.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_DMjdYDbu.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_PkFMsG9z.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_2WQDPpjQ.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/9du.gif
+https://cdn2.thecatapi.com/images/3u9.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/14769-27888-18622.jpg
+https://random.dog/347b464b-31a8-4ccd-9c96-a2dfae0b7f08.jpeg
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=34
+https://randomfox.ca/?i=82
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/TdCZqGcV_qr.png
+/home/runner/work/TheApi/TheApi/downloads/vwX0kGwD_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-When you're looking up at birds flying overhead, keep your mouth closed.
+Never let your Mother cut your hair.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "93,675.218",
-        "rate_float": 93675.2178,
+        "rate": "92,905.598",
+        "rate_float": 92905.5975,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "77,785.488",
-        "rate_float": 77785.4875,
+        "rate": "77,146.415",
+        "rate_float": 77146.4147,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "97,261.038",
-        "rate_float": 97261.0377,
+        "rate": "96,461.957",
+        "rate_float": 96461.9569,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "5413 Keebler Stravenue",
-            "streetName": "Isobel Port",
-            "buildingNumber": "5247",
-            "city": "Port Amy",
-            "zipcode": "78242-7371",
-            "country": "U.S. Virgin Islands",
-            "country_code": "VI",
-            "latitude": -2.402363,
-            "longitude": 85.138604
+            "street": "22764 Kariane Lights Apt. 494",
+            "streetName": "Prohaska Creek",
+            "buildingNumber": "870",
+            "city": "Lake Kimberly",
+            "zipcode": "48692-0555",
+            "country": "Algeria",
+            "country_code": "DZ",
+            "latitude": 83.956704,
+            "longitude": -160.06449
         }
     ]
 }
@@ -537,10 +537,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "378304915310387",
-            "expiration": "01/26",
-            "owner": "Libby Kuhic"
+            "type": "Visa",
+            "number": "5115267612502159",
+            "expiration": "07/25",
+            "owner": "Lourdes Konopelski"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Sunt et velit iste.",
-            "description": "Repudiandae sunt quidem architecto nulla sequi. Pariatur est sequi qui illo autem laudantium. Quos est assumenda maxime distinctio quaerat ullam.",
+            "title": "Qui velit id corrupti.",
+            "description": "Non officia magni non eum dolores quibusdam quaerat sed. At nulla similique minima magnam cum. Commodi ducimus non quia. Eos fugiat porro esse quo expedita.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-एक कुंवारे लड़के का विज्ञापन गृह क्लेश हेतु 1 कन्या चाहिए 😆🤣😋😉 
+एक सर्वे के अनुसार GF को सामान्य दिन में खाना खिलाना ज्यादा सस्ता पड़ता है बजाय उसके जिस दिन उसने उपवास रखा हो आपकी जेब खाली हो जायेगी 😆🤣😋😉
 ```
 
 ### 19. Get Jokes
@@ -629,7 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-A perfectionist walked into a bar... apparently, the bar was not set high enough.
+Stop being homophobic and rude to the LGBTQ+ community. You should be thanking them for saving us plenty of room in heaven.
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-2,000 pounds of space dust and other space debris fall on the Earth every day.
+There are 269 steps to the top of the Leaning Tower of Pisa
 ```
 
 ### 21. Get Word Definitions
@@ -708,16 +708,16 @@ print(result)
 #### Expected Output
 
 ```text
-Denatured
-Applicant
-Mold
-Unlinked
-Salvation
-Syrup
-Slimness
-Overbuilt
-Nag
-Essential
+Shaking
+Dramatic
+Life
+Calcium
+Clapper
+Venture
+Gab
+Bulb
+Viewer
+Sketch
 ```
 
 ### 23. Github Search
@@ -768,8 +768,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4835,
-        "forks_count": 2825
+        "stargazers_count": 4836,
+        "forks_count": 2827
     },
     {
         "name": "PokemonGo-Bot",
@@ -801,7 +801,7 @@ print(result)
 #### Expected Output
 
 ```text
-ज्ञान से शब्द समझ में आते हैं और अनुभव से अर्थ!!
+सैर कर दुनिया की ग़ाफ़िल ज़िंदगानी फिर कहाँ, जिंदगी गर कुछ रहीं तो ये जवानी फिर कहाँ- ख़्वाजा मीर दर्द
 ```
 
 ### 25. Hug
@@ -830,8 +830,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Kaijin Kaihatsubu no Kuroitsu-san",
-        "url": "https://nekos.best/api/v2/hug/4151b575-c780-4dd4-ab7c-eaa25bfe5200.gif"
+        "anime_name": "Kamisama Hajimemashita",
+        "url": "https://nekos.best/api/v2/hug/6729fa94-442a-4f75-bfae-4ab5ad644d39.gif"
     }
 ]
 ```
@@ -854,7 +854,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/qm278j6w4x7e1.png?width=320&crop=smart&auto=webp&s=7dbfecf4ab2bc67cf3c60a1fb27ef9b5aa65e92d
+https://preview.redd.it/i8a0kxx4l98e1.png?width=640&crop=smart&auto=webp&s=a70118721a690aeaa9146824de415b37d07176b1
 ```
 
 ### 27. Neko
@@ -894,22 +894,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/45748005",
-            "artist_name": "\u6afb\u304b\u304a\u308b",
-            "source_url": "https://www.pixiv.net/en/artworks/102276339",
-            "url": "https://nekos.best/api/v2/neko/af3ed407-c947-44b2-a744-f0bea6e773c8.png"
+            "artist_href": "https://www.pixiv.net/en/users/52870667",
+            "artist_name": "That",
+            "source_url": "https://www.pixiv.net/en/artworks/86017168",
+            "url": "https://nekos.best/api/v2/neko/24d288b7-a8d1-481a-aa8c-337db4145b0a.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/41382079",
-            "artist_name": "\u7d75\u5948\u306e\u3048\u308b",
-            "source_url": "https://www.pixiv.net/en/artworks/80631773",
-            "url": "https://nekos.best/api/v2/neko/950b272f-0634-4135-b107-cf63c21da2d4.png"
+            "artist_href": "https://www.pixiv.net/en/users/33291197",
+            "artist_name": "\u3057\u305d\u306f",
+            "source_url": "https://www.pixiv.net/en/artworks/92844081",
+            "url": "https://nekos.best/api/v2/neko/6bcaeafd-9af8-4440-95c6-a039fc99f8e5.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/10678435",
-            "artist_name": "\u72d0\u5df3\u591c",
-            "source_url": "https://www.pixiv.net/en/artworks/93283477",
-            "url": "https://nekos.best/api/v2/neko/1b79a7fd-9809-4468-90ab-6573f08dfa94.png"
+            "artist_href": "https://www.pixiv.net/en/users/35557011",
+            "artist_name": "\u3064\u304d\u3072\u304b\u308a\u3093",
+            "source_url": "https://www.pixiv.net/en/artworks/95017023",
+            "url": "https://nekos.best/api/v2/neko/e00e96ae-685c-46e0-9278-0d4b3f133af4.png"
         }
     ]
 }
@@ -985,9 +985,9 @@ print(result)
 #### Expected Output
 
 ```text
-True friendship can afford true knowledge. It does not depend on darkness and ignorance.
+Sweet is the memory of distant friends! Like the mellow rays of the departing sun, it falls tenderly, yet sadly, on the heart.
 
-author - Henry David Thoreau
+author - Washington Irving
 ```
 
 ### 30. Riddle
@@ -1009,8 +1009,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I am the beginning of sorrow, and the end of sickness. You cannot express happiness without me, yet I am in the midst of crosses. I am always in risk, yet never in danger. You may find me in the sun, but I am never out of darkness.",
-    "answer": "The letter S"
+    "riddle": "Weight in my belly, Trees on my back. Nails in my ribs, Feet I do lack.",
+    "answer": "I am a ship"
 }
 ```
 
@@ -1082,7 +1082,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32701,
+        "view_count": 32703,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1109,7 +1109,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2034,
+        "view_count": 2035,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1202,7 +1202,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_9djIVS7z.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_pkw4LxFX.jpg
 ```
 
 
