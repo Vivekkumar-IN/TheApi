@@ -137,9 +137,9 @@ print(result)
 
 ```json
 {
-    "file_name": "sam",
+    "file_name": "vicar",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/sam.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/vicar.jpg"
 }
 ```
 
@@ -191,7 +191,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_FPAiR4Gl.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_WOg75wah.jpg
 ```
 
 ### 5. Carbon
@@ -236,7 +236,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/417.jpg
+https://cdn2.thecatapi.com/images/3ee.jpg
 ```
 
 ### 7. Delete
@@ -275,7 +275,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/59fd867b-becf-46e9-b050-604540bd2dcc.jpg
+https://random.dog/7733c91a-ec61-4c50-b423-443ef6fedf6e.jpg
 ```
 
 ### 9. Domain Search
@@ -350,7 +350,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=11
+https://randomfox.ca/?i=58
 ```
 
 ### 12. Gen Qr
@@ -377,7 +377,7 @@ print(result)
 #### Expected Output
 
 ```text
-Invalid path: /home/runner/work/TheApi/TheApi/downloads/QrCode_YZ5JTtou.png. Path must be a string.
+Invalid path: /home/runner/work/TheApi/TheApi/downloads/QrCode_Y8BVMtvv.png. Path must be a string.
 ```
 
 ### 13. Generate Pdf
@@ -464,22 +464,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "92,596.98",
-        "rate_float": 92596.9803,
+        "rate": "92,657.816",
+        "rate_float": 92657.8155,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "76,890.147",
-        "rate_float": 76890.1469,
+        "rate": "76,940.663",
+        "rate_float": 76940.6629,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "96,141.526",
-        "rate_float": 96141.5261,
+        "rate": "96,204.69",
+        "rate_float": 96204.6901,
         "symbol": "&#36;"
     }
 }
@@ -516,15 +516,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "4981 Yundt Via Apt. 481",
-            "streetName": "Raynor Plaza",
-            "buildingNumber": "728",
-            "city": "Quitzonborough",
-            "zipcode": "32045",
-            "country": "Martinique",
-            "country_code": "MQ",
-            "latitude": -23.922615,
-            "longitude": 149.969368
+            "street": "2567 Dino Ranch",
+            "streetName": "Adella Tunnel",
+            "buildingNumber": "6144",
+            "city": "East Pearline",
+            "zipcode": "62573",
+            "country": "French Polynesia",
+            "country_code": "PF",
+            "latitude": 56.603343,
+            "longitude": -19.785862
         }
     ]
 }
@@ -560,10 +560,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "2344358911592395",
-            "expiration": "02/26",
-            "owner": "Alycia Vandervort"
+            "type": "Visa",
+            "number": "4024007119047933",
+            "expiration": "06/26",
+            "owner": "Jettie Hansen"
         }
     ]
 }
@@ -602,8 +602,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Voluptate eos et quis.",
-            "description": "Qui corrupti possimus amet quae fuga. Non dignissimos in odit corrupti soluta aspernatur. Doloremque praesentium laborum et ipsum fugiat in.",
+            "title": "Rem dolor autem ut.",
+            "description": "Qui delectus quis fugiat. Et aperiam esse sunt cupiditate dolorum. Esse nostrum dolorem fugiat laborum non magnam. Quidem consequatur suscipit et nesciunt et animi.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -628,7 +628,8 @@ print(result)
 #### Expected Output
 
 ```text
-वो अपनी पतली कमर पर साड़ी बांध रही थी ऐसे सिविल इंजीनियर नदी पर पुल बांध रहा हो जैसे 😆🤣😋😉 
+पापा – आज तक तूने कोई ऐसा काम किया है जिससे मेरा सिर उँचा हुआ हो?  
+बेटा – अरे बार आपके सर के नीचे तकिया लगाया था भूल गये? 😆🤣😋😉 
 ```
 
 ### 21. Get Jokes
@@ -653,7 +654,7 @@ print(result)
 #### Expected Output
 
 ```text
-I was going to tell a dead baby joke. But I decided to abort.
+I was struggling to figure out how lightning works, but then it struck me.
 ```
 
 ### 22. Get Uselessfact
@@ -674,7 +675,7 @@ print(result)
 #### Expected Output
 
 ```text
-Nearly 80% of all animals on earth have six legs.
+Babies are born without kneecaps. They don`t appear until the child reaches 2-6 years of age.
 ```
 
 ### 23. Get Word Definitions
@@ -732,16 +733,16 @@ print(result)
 #### Expected Output
 
 ```text
-Senate
-Stout
-Scholar
-Quizzical
-Proposal
-Fax
-Answering
-Unsorted
-Headway
-Outdoors
+Mustiness
+Veneering
+Retying
+Evergreen
+Unretired
+Excusably
+Placidly
+Unblended
+Everyone
+Circus
 ```
 
 ### 25. Github Search
@@ -825,7 +826,7 @@ print(result)
 #### Expected Output
 
 ```text
-जब कोई विचार अनन्य रुप से मस्तिष्क पर अधिकार कर लेता है तब वह वास्तविक, भौतिक या मानसिक अवस्था में परिवर्तित हो जाता है!
+दिल से मिटा न पाओगे मैंने कहा था, तुम किसी और के होकर भी मेरे ही रहे।
 ```
 
 ### 27. Hug
@@ -873,7 +874,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/nxhw4jf3h28e1.png?width=640&crop=smart&auto=webp&s=8bd7a667b89090cc726b93acd4d9e6fe577d8d0b
+https://preview.redd.it/4tfstb1cp98e1.gif?width=640&crop=smart&format=png8&s=e9c24a2ebd1d8d778de2a686af9e8256df81f2fd
 ```
 
 ### 29. Neko
@@ -913,22 +914,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/9133563",
-            "artist_name": "\u4f0a\u5948",
-            "source_url": "https://www.pixiv.net/en/artworks/94887748",
-            "url": "https://nekos.best/api/v2/neko/98ef29c7-b0be-4f72-9436-88e4dac0a3fc.png"
+            "artist_href": "https://www.pixiv.net/en/users/37889769",
+            "artist_name": "\u30bf\u30f3\u5869",
+            "source_url": "https://www.pixiv.net/en/artworks/93311982",
+            "url": "https://nekos.best/api/v2/neko/1094688e-7483-44a6-b3c4-9f576196828a.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/220294",
-            "artist_name": "\u3082\u3082\u3057\u304d",
-            "source_url": "https://www.pixiv.net/en/artworks/98035200",
-            "url": "https://nekos.best/api/v2/neko/1aa8a4b0-a34a-4e88-a1ae-3f36c39fcc47.png"
+            "artist_href": "https://www.pixiv.net/en/users/15440727",
+            "artist_name": "\u79cb\u4e43\u3048\u308b",
+            "source_url": "https://www.pixiv.net/en/artworks/88207368",
+            "url": "https://nekos.best/api/v2/neko/6497c3ac-da98-4636-9a56-8a66895a642d.png"
         },
         {
-            "artist_href": "https://twitter.com/done_kanda",
-            "artist_name": "\u9928\u7530\u30c0\u30f3",
-            "source_url": "https://twitter.com/done_kanda/status/1323188100667904002",
-            "url": "https://nekos.best/api/v2/neko/f0f1af20-53fe-4eba-b07e-18a343a6b03a.png"
+            "artist_href": "https://www.pixiv.net/en/users/9155411",
+            "artist_name": "\u308b\u304b\u3053",
+            "source_url": "https://www.pixiv.net/en/artworks/93276717",
+            "url": "https://nekos.best/api/v2/neko/062403f7-0eb0-4b43-a9b5-706327d06977.png"
         }
     ]
 }
@@ -1353,7 +1354,7 @@ print(result)
 #### Expected Output
 
 ```text
-<TheApi._request.Response object at 0x7f27648c6570>
+<TheApi._request.Response object at 0x7eff160ceab0>
 ```
 
 ### 35. Stackoverflow Search
@@ -1513,7 +1514,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -1544,7 +1545,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_WqIZXfHK.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_a0CzI9wr.jpg
 ```
 
 
