@@ -1036,7 +1036,7 @@ class TheApi(Request):
         Returns:
             dict: The riddle data in JSON format.
         """
-        response = await self.get(self.base_urls['riddle'])
+        response = await self.get(self.base_urls["riddle"])
         return response
 
     async def hug(self, amount: int = 1) -> list:
@@ -1052,7 +1052,7 @@ class TheApi(Request):
                   - url (str): The URL of the GIF.
         """
         response = await self.get(self.base_urls["neko_hug"].format(amount))
-        
+
         return await response.json()["results"]
 
     async def neko(self, endpoint: str = "neko", amount: int = 3) -> dict:
