@@ -61,38 +61,34 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [4. Blackpink](#4-blackpink) | ✅
 | [5. Carbon](#5-carbon) | ❌
 | [6. Cat](#6-cat) | ❌
-| [7. Delete](#7-delete) | ❌
-| [8. Dog](#8-dog) | ❌
-| [9. Domain Search](#9-domain-search) | ❌
-| [10. Fakerapi](#10-fakerapi) | ❌
-| [11. Fox](#11-fox) | ❌
-| [12. Gen Qr](#12-gen-qr) | ❌
-| [13. Generate Pdf](#13-generate-pdf) | ❌
-| [14. Get](#14-get) | ❌
-| [15. Get Advice](#15-get-advice) | ❌
-| [16. Get Btc Value](#16-get-btc-value) | ❌
-| [17. Get Fake Addresses](#17-get-fake-addresses) | ❌
-| [18. Get Fake Credit Cards](#18-get-fake-credit-cards) | ❌
-| [19. Get Fake Images](#19-get-fake-images) | ❌
-| [20. Get Hindi Jokes](#20-get-hindi-jokes) | ❌
-| [21. Get Jokes](#21-get-jokes) | ❌
-| [22. Get Uselessfact](#22-get-uselessfact) | ❌
-| [23. Get Word Definitions](#23-get-word-definitions) | ❌
-| [24. Get Words](#24-get-words) | ❌
-| [25. Github Search](#25-github-search) | ❌
-| [26. Hindi Quote](#26-hindi-quote) | ❌
-| [27. Hug](#27-hug) | ❌
-| [28. Meme](#28-meme) | ❌
-| [29. Neko](#29-neko) | ❌
-| [30. Post](#30-post) | ❌
-| [31. Put](#31-put) | ❌
-| [32. Pypi](#32-pypi) | ❌
-| [33. Quote](#33-quote) | ❌
-| [34. Riddle](#34-riddle) | ✅
-| [35. Stackoverflow Search](#35-stackoverflow-search) | ❌
-| [36. Upload Image](#36-upload-image) | ❌
-| [37. Wikipedia](#37-wikipedia) | ❌
-| [38. Write](#38-write) | ❌
+| [7. Dog](#7-dog) | ❌
+| [8. Domain Search](#8-domain-search) | ❌
+| [9. Fakerapi](#9-fakerapi) | ❌
+| [10. Fox](#10-fox) | ❌
+| [11. Gen Qr](#11-gen-qr) | ❌
+| [12. Generate Pdf](#12-generate-pdf) | ❌
+| [13. Get Advice](#13-get-advice) | ❌
+| [14. Get Btc Value](#14-get-btc-value) | ❌
+| [15. Get Fake Addresses](#15-get-fake-addresses) | ❌
+| [16. Get Fake Credit Cards](#16-get-fake-credit-cards) | ❌
+| [17. Get Fake Images](#17-get-fake-images) | ❌
+| [18. Get Hindi Jokes](#18-get-hindi-jokes) | ❌
+| [19. Get Jokes](#19-get-jokes) | ❌
+| [20. Get Uselessfact](#20-get-uselessfact) | ❌
+| [21. Get Word Definitions](#21-get-word-definitions) | ❌
+| [22. Get Words](#22-get-words) | ❌
+| [23. Github Search](#23-github-search) | ❌
+| [24. Hindi Quote](#24-hindi-quote) | ❌
+| [25. Hug](#25-hug) | ❌
+| [26. Meme](#26-meme) | ❌
+| [27. Neko](#27-neko) | ❌
+| [28. Pypi](#28-pypi) | ❌
+| [29. Quote](#29-quote) | ❌
+| [30. Riddle](#30-riddle) | ❌
+| [31. Stackoverflow Search](#31-stackoverflow-search) | ❌
+| [32. Upload Image](#32-upload-image) | ❌
+| [33. Wikipedia](#33-wikipedia) | ❌
+| [34. Write](#34-write) | ❌
 
 
 ## 🎓 How to Use Each Function
@@ -161,7 +157,7 @@ print(result)
 #### Expected Output
 
 ```text
-object bytes can't be used in 'await' expression
+cannot use a string pattern on a bytes-like object
 ```
 
 ### 4. Blackpink
@@ -187,7 +183,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_kRnivGL5.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_Mke9tQyH.jpg
 ```
 
 ### 5. Carbon
@@ -211,7 +207,7 @@ print(result)
 #### Expected Output
 
 ```text
-name 'params' is not defined
+Invalid path: /home/runner/work/TheApi/TheApi/downloads/carbon_QJOoJHQs.png. Path must be a string.
 ```
 
 ### 6. Cat
@@ -235,25 +231,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 7. Delete
-
-**Description**:
-No description available.
-
-```python
-from TheApi import api
-
-result = await api.delete(url='Pokemon', headers=None, params=None, data=None, json=None, timeout=None, allow_redirects=True, ssl=None)
-print(result)
-```
-
-#### Expected Output
-
-```text
-name 'verify' is not defined
-```
-
-### 8. Dog
+### 7. Dog
 
 **Description**:
 Fetches a random dog image URL.
@@ -274,7 +252,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 9. Domain Search
+### 8. Domain Search
 
 **Description**:
 Fetches domain information from the DomainsDB API.
@@ -299,7 +277,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 10. Fakerapi
+### 9. Fakerapi
 
 **Description**:
 Fetch data from the FakerAPI using aiohttp.
@@ -328,7 +306,7 @@ quantity (int, optional): Number of rows to fetch (default: 3, max: 1000). local
   - **dict**: Response data from the API.
 
 
-### 11. Fox
+### 10. Fox
 
 **Description**:
 Fetches a random fox image URL.
@@ -349,7 +327,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 12. Gen Qr
+### 11. Gen Qr
 
 **Description**:
 Generate a QR code using api.qrserver.com and save it as a PNG file.
@@ -373,10 +351,10 @@ print(result)
 #### Expected Output
 
 ```text
-object bytes can't be used in 'await' expression
+Invalid path: /home/runner/work/TheApi/TheApi/downloads/QrCode_QjzL2KLZ.png. Path must be a string.
 ```
 
-### 13. Generate Pdf
+### 12. Generate Pdf
 
 **Description**:
 Generates a PDF from a URL or an HTML string and saves it to a file.
@@ -392,25 +370,7 @@ Generates a PDF from a URL or an HTML string and saves it to a file.
   - **ValueError**: If `from_url` is True and `source` is not a valid URL.
 
 
-### 14. Get
-
-**Description**:
-No description available.
-
-```python
-from TheApi import api
-
-result = await api.get(url='Pokemon', headers=None, params=None, timeout=None, allow_redirects=True, verify=None)
-print(result)
-```
-
-#### Expected Output
-
-```text
-Request URL is missing an 'http://' or 'https://' protocol.
-```
-
-### 15. Get Advice
+### 13. Get Advice
 
 **Description**:
 Fetches a random piece of advice.
@@ -431,7 +391,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 16. Get Btc Value
+### 14. Get Btc Value
 
 **Description**:
 Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.
@@ -459,7 +419,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 17. Get Fake Addresses
+### 15. Get Fake Addresses
 
 **Description**:
 Fetch fake address data from the FakerAPI.
@@ -484,7 +444,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 18. Get Fake Credit Cards
+### 16. Get Fake Credit Cards
 
 **Description**:
 Fetch fake credit card data from the FakerAPI.
@@ -509,7 +469,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 19. Get Fake Images
+### 17. Get Fake Images
 
 **Description**:
 Fetch fake image data from the FakerAPI.
@@ -537,7 +497,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 20. Get Hindi Jokes
+### 18. Get Hindi Jokes
 
 **Description**:
 Fetches a random Hindi joke.
@@ -558,7 +518,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 21. Get Jokes
+### 19. Get Jokes
 
 **Description**:
 Fetches a specified number of jokes.
@@ -583,7 +543,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 22. Get Uselessfact
+### 20. Get Uselessfact
 
 **Description**:
 Fetches a random useless fact.
@@ -604,7 +564,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 23. Get Word Definitions
+### 21. Get Word Definitions
 
 **Description**:
 Fetch definitions for a word from the Dictionary API.
@@ -631,7 +591,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 24. Get Words
+### 22. Get Words
 
 **Description**:
 Fetch random words from the Random Word API.
@@ -658,7 +618,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 25. Github Search
+### 23. Github Search
 
 **Description**:
 Searches GitHub for various types of content.
@@ -693,7 +653,7 @@ print(result)
 Unexpected error: Expecting value: line 1 column 1 (char 0)
 ```
 
-### 26. Hindi Quote
+### 24. Hindi Quote
 
 **Description**:
 Fetches a random Hindi quote.
@@ -714,7 +674,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 27. Hug
+### 25. Hug
 
 **Description**:
 Fetches a specified number hug gif from the Nekos.Best API.
@@ -741,7 +701,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 28. Meme
+### 26. Meme
 
 **Description**:
 Fetches a random meme image URL.
@@ -762,7 +722,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 29. Neko
+### 27. Neko
 
 **Description**:
 Fetches a specified number of neko images or GIFs from the Nekos.Best API.
@@ -799,43 +759,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 30. Post
-
-**Description**:
-No description available.
-
-```python
-from TheApi import api
-
-result = await api.post(url='Pokemon', headers=None, params=None, data=None, json=None, files=None, timeout=None, allow_redirects=True, verify=None)
-print(result)
-```
-
-#### Expected Output
-
-```text
-Request URL is missing an 'http://' or 'https://' protocol.
-```
-
-### 31. Put
-
-**Description**:
-No description available.
-
-```python
-from TheApi import api
-
-result = await api.put(url='Pokemon', headers=None, params=None, data=None, json=None, timeout=None, allow_redirects=True, ssl=None)
-print(result)
-```
-
-#### Expected Output
-
-```text
-name 'verify' is not defined
-```
-
-### 32. Pypi
+### 28. Pypi
 
 **Description**:
 Retrieves metadata information about a specified Python package from the PyPI API.
@@ -860,7 +784,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 33. Quote
+### 29. Quote
 
 **Description**:
 Fetches a random quote.
@@ -881,7 +805,7 @@ print(result)
 Request.get() got an unexpected keyword argument 'ssl'
 ```
 
-### 34. Riddle
+### 30. Riddle
 
 **Description**:
 Fetches a random riddle from the Riddles API.
@@ -899,10 +823,10 @@ print(result)
 #### Expected Output
 
 ```text
-<Response [<Response [200 OK]> ]>
+Expecting value: line 1 column 1 (char 0)
 ```
 
-### 35. Stackoverflow Search
+### 31. Stackoverflow Search
 
 **Description**:
 Searches Stack Overflow for questions based on a query, returning results sorted by relevance or another specified criteria.
@@ -931,7 +855,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 36. Upload Image
+### 32. Upload Image
 
 **Description**:
 Uploads an image to https://envs.sh.
@@ -949,7 +873,7 @@ Uploads an image to https://envs.sh.
     or the upload request fails.
 
 
-### 37. Wikipedia
+### 33. Wikipedia
 
 **Description**:
 Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.
@@ -980,7 +904,7 @@ print(result)
 Expecting value: line 1 column 1 (char 0)
 ```
 
-### 38. Write
+### 34. Write
 
 **Description**:
 Creates an image with text written on it, using a predefined template and font, and uploads the image after generation.
@@ -1005,7 +929,7 @@ print(result)
 #### Expected Output
 
 ```text
-object bytes can't be used in 'await' expression
+cannot identify image file <_io.BytesIO object at 0x7f5f7ceed030>
 ```
 
 
