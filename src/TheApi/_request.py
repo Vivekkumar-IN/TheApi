@@ -25,7 +25,7 @@ class Response:
             bytes: The raw response content.
         """
         return await self._response.read()
-        
+
     async def content(self) -> bytes:
         """
         Returns:
