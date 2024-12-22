@@ -29,7 +29,7 @@ class Request:
                 timeout=timeout,
                 follow_redirects=allow_redirects,
             )
-            return Response(response)
+            return response
 
     async def get(
         self,
