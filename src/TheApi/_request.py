@@ -53,12 +53,12 @@ class Request:
                 allow_redirects=allow_redirects,
                 ssl=ssl,
             ) as response:
-                if return_json:
-                    response_data = await response.json()
-                elif return_text:
+                if return_text:
                     response_data = await response.text()
                 elif return_content:
                     response_data = await response.read()
+                elif return_json:
+                    response_data = await response.json()
                 else:
                     response_data = {
                         "status_code": response.status,
