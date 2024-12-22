@@ -22,6 +22,8 @@ jobs:
 
       - name: Install dependencies
         run: |
+          echo "pip install git+https://github.com/Vivekkumar-IN/TheApi@${{ github.ref_name }}"
+
           pip install git+https://github.com/Vivekkumar-IN/TheApi@${{ github.ref_name }}
 
       - name: Run API Status Script
