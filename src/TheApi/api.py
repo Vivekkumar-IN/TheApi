@@ -7,7 +7,6 @@ from io import BytesIO
 from typing import List, Union, Optional
 
 import aiofiles
-import requests
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 from .func import FilePath
