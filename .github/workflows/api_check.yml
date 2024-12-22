@@ -35,7 +35,7 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git stash
-          git pull origin main
+          git pull origin dev 
           git stash pop
           git add README.md
           git commit -m "Update Status of TheApi"
