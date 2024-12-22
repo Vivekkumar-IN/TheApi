@@ -1,7 +1,7 @@
 from typing import Any, Dict, Union, Optional
 
-import httpx
 from httpx import Response, AsyncClient
+
 
 class Request:
     async def _request(
