@@ -1,4 +1,4 @@
-"""from typing import Any, Dict, Union, Optional
+'''from typing import Any, Dict, Union, Optional
 
 import aiohttp
 
@@ -242,7 +242,7 @@ class Request:
             timeout=timeout,
             allow_redirects=allow_redirects,
             ssl=ssl,
-        )"""
+        )'''
 
 
 from typing import Any, Dict, Union, Optional
