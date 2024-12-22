@@ -112,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "Well, if I had to give a reason for my actions, I guess it's because I love people. I guess I wanted to see the faces that mankind has to offer.",
+    "content": "One ought to experience loneliness at least once or twice in life. No, you have to experience it. The idea of being chained to another person without reprieve is far more abnormal and disquieting. One has no choice but to learn about loneliness. I\u2019m sure some things can\u2019t be experienced without it.",
     "anime": {
-        "id": 193,
-        "name": "Durarara!!",
-        "altName": "Durarara!!"
+        "id": 377,
+        "name": "Yahari Ore No Seishun Love Come Wa Machigatteiru",
+        "altName": null
     },
     "character": {
-        "id": 225,
-        "name": "Izaya Orihara"
+        "id": 217,
+        "name": "Hachiman Hikigaya"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "karen",
+    "file_name": "trish",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/karen.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/trish.jpg"
 }
 ```
 
@@ -198,7 +198,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_ZKDA7F2W.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_H37pc51V.jpg
 ```
 
 ### 5. Carbon
@@ -222,7 +222,7 @@ print(result)
 #### Expected Output
 
 ```text
-Invalid path: /home/runner/work/TheApi/TheApi/downloads/carbon_tJiPyW9G.png. Path must be a string.
+expected str, bytes or os.PathLike object, not FilePath
 ```
 
 ### 6. Cat
@@ -243,7 +243,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/8q6.jpg
+https://cdn2.thecatapi.com/images/cdt.jpg
 ```
 
 ### 7. Dog
@@ -264,7 +264,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/98e2e1f3-5d5a-4d1a-b155-a37fe304468e.mp4
+https://random.dog/35dbf413-6ad6-472b-b780-c7277909b127.jpg
 ```
 
 ### 8. Domain Search
@@ -339,7 +339,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=83
+https://randomfox.ca/?i=8
 ```
 
 ### 11. Gen Qr
@@ -366,7 +366,7 @@ print(result)
 #### Expected Output
 
 ```text
-Invalid path: /home/runner/work/TheApi/TheApi/downloads/QrCode_fdhvZLM7.png. Path must be a string.
+expected str, bytes or os.PathLike object, not FilePath
 ```
 
 ### 12. Generate Pdf
@@ -403,7 +403,7 @@ print(result)
 #### Expected Output
 
 ```text
-The person who never made a mistake never made anything.
+Never buy cheap cling film.
 ```
 
 ### 14. Get Btc Value
@@ -435,22 +435,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "93,453.924",
-        "rate_float": 93453.9239,
+        "rate": "93,494.998",
+        "rate_float": 93494.9979,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "77,601.731",
-        "rate_float": 77601.7308,
+        "rate": "77,635.838",
+        "rate_float": 77635.8376,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "97,031.273",
-        "rate_float": 97031.2729,
+        "rate": "97,073.919",
+        "rate_float": 97073.9191,
         "symbol": "&#36;"
     }
 }
@@ -487,15 +487,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "80555 Hayes Springs Apt. 620",
-            "streetName": "Wilkinson Plaza",
-            "buildingNumber": "842",
-            "city": "Lake Loraville",
-            "zipcode": "34604",
-            "country": "United States",
-            "country_code": "US",
-            "latitude": 57.155157,
-            "longitude": -9.367149
+            "street": "784 Gail Mission",
+            "streetName": "Moises Court",
+            "buildingNumber": "15092",
+            "city": "West Nathan",
+            "zipcode": "74246",
+            "country": "United Kingdom",
+            "country_code": "GB",
+            "latitude": 47.70264,
+            "longitude": 80.818032
         }
     ]
 }
@@ -531,10 +531,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "Visa",
-            "number": "4620225433777245",
-            "expiration": "11/25",
-            "owner": "Nathanael Tremblay"
+            "type": "MasterCard",
+            "number": "2563408981351950",
+            "expiration": "06/27",
+            "owner": "Hassie Hills"
         }
     ]
 }
@@ -573,8 +573,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Quibusdam ut ipsa dolorem.",
-            "description": "Expedita temporibus laborum odio voluptatem est illum. Aliquam voluptatem itaque est ut. Sapiente deserunt veniam in aut ut sed. Autem ut repellat rem sed.",
+            "title": "Fugit delectus ut sit.",
+            "description": "Natus alias voluptas aut ad quibusdam. Iusto ut nesciunt molestiae officiis occaecati pariatur consectetur. Sit ut qui quam temporibus ut. Esse aut qui delectus adipisci qui id veritatis.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -599,9 +599,7 @@ print(result)
 #### Expected Output
 
 ```text
-पत्नी- अजी सुनते हो, 2 किलो मटर ले लूं? 
-पति- हां, ले लो.  
-पत्नी- मैं राय नहीं मांग रही आपकी. पूछ रही हूं कि छील लोगे इतने या कम लूं.
+Locked profile... के साथ ...Friend Request.. मत भेजा करो....😆🤣😋😉
 ```
 
 ### 19. Get Jokes
@@ -626,7 +624,7 @@ print(result)
 #### Expected Output
 
 ```text
-The generation of random numbers is too important to be left to chance.
+How do you make holy water? You freeze it and drill holes in it.
 ```
 
 ### 20. Get Uselessfact
@@ -647,7 +645,7 @@ print(result)
 #### Expected Output
 
 ```text
-A crocodile cannot stick its tongue out.
+The word "samba" means "to rub navels together."
 ```
 
 ### 21. Get Word Definitions
@@ -705,16 +703,16 @@ print(result)
 #### Expected Output
 
 ```text
-Profusely
-Amulet
-Seclusion
-Filled
-Dislodge
-Carol
-Unscrew
-Mangy
-Usage
-Caramel
+Wrecking
+Strategic
+Headwear
+Blimp
+Bullish
+Fraternal
+Garter
+Numbness
+Clustered
+Tingly
 ```
 
 ### 23. Github Search
@@ -798,7 +796,7 @@ print(result)
 #### Expected Output
 
 ```text
-अगर न लिखते हम तो कबके राख हो गए होते, दिल के साथ साथ रूह में भी सुराख हो गए होते!!
+अगर शान्ति चाहते हैं तो लोकप्रियता से बचिए..
 ```
 
 ### 25. Hug
@@ -827,8 +825,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Darker Than Black: Ryuusei no Gemini",
-        "url": "https://nekos.best/api/v2/hug/1dcc8b20-6420-476f-888e-17c7e09a11fb.gif"
+        "anime_name": "Akatsuki no Yona: The Girl Standing in the Blush of Dawn",
+        "url": "https://nekos.best/api/v2/hug/2838c749-cbf0-407c-b727-ceb1ca517463.gif"
     }
 ]
 ```
@@ -851,7 +849,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://external-preview.redd.it/_U0MdfV-7itsidDStNs0rrgscjWBSRp2sHbbWqcTPdo.png?width=320&crop=smart&auto=webp&s=5868678acc681d00f66a13785939fb7a5c7d2db6
+https://preview.redd.it/un1klbvvs88e1.gif?width=320&crop=smart&format=png8&s=585b0ff53131829d9b87960e2d4f4ff4c9f3c0b9
 ```
 
 ### 27. Neko
@@ -891,22 +889,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/43348636",
-            "artist_name": "\u3044\u3055\u306a",
-            "source_url": "https://www.pixiv.net/en/artworks/93420198",
-            "url": "https://nekos.best/api/v2/neko/54d7faac-cc6e-4446-86e3-e2fbf98e3e0a.png"
+            "artist_href": "https://www.pixiv.net/en/users/29505537",
+            "artist_name": "\u3057\u306e\u3073",
+            "source_url": "https://www.pixiv.net/en/artworks/81355723",
+            "url": "https://nekos.best/api/v2/neko/b4dc322c-9cd3-457d-a196-fe84fe78b504.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/55030470",
-            "artist_name": "\u671d\u5009\u62d3",
-            "source_url": "https://www.pixiv.net/en/artworks/97764598",
-            "url": "https://nekos.best/api/v2/neko/8d4f83ed-36c8-444c-9572-78c7ae68e4ea.png"
+            "artist_href": "https://www.pixiv.net/en/users/15497801",
+            "artist_name": "\u767d\u6eddSEAICE",
+            "source_url": "https://www.pixiv.net/en/artworks/100729357",
+            "url": "https://nekos.best/api/v2/neko/6872ada4-6e60-4ee0-8a70-f5b0aaa7f707.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/3596363",
-            "artist_name": "\u308f\u305f\u3042\u3081",
-            "source_url": "https://www.pixiv.net/en/artworks/88030115",
-            "url": "https://nekos.best/api/v2/neko/1b7fe443-efb2-4da9-b907-744d671db5e8.png"
+            "artist_href": "https://www.pixiv.net/en/users/39101202",
+            "artist_name": "Rita29",
+            "source_url": "https://www.pixiv.net/en/artworks/91387326",
+            "url": "https://nekos.best/api/v2/neko/1cb8312d-2790-4eea-8da8-a1beea4981a1.png"
         }
     ]
 }
@@ -1296,8 +1294,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I am large as a castle, yet lighter than air. 100 men and their horses cannot move me. What am I?",
-    "answer": "The castle's shadow"
+    "riddle": "I have no legs or arms but I still eat with a fork everyday, What am I?",
+    "answer": "a snake"
 }
 ```
 
@@ -1458,7 +1456,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -1489,7 +1487,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_PKr55QGP.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_aNyKHtNd.jpg
 ```
 
 
