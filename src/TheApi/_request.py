@@ -12,7 +12,6 @@ class Response:
         self.reason = response.reason
         self.ok = response.status < 400
 
-    @property
     async def text(self) -> str:
         """
         Returns:
@@ -20,13 +19,19 @@ class Response:
         """
         return await self._response.text()
 
-    @property
-    async def content(self) -> bytes:
+    async def read(self) -> bytes:
         """
         Returns:
             bytes: The raw response content.
         """
         return await self._response.read()
+        
+    async def content(self) -> bytes:
+        """
+        Returns:
+            bytes: The raw response content.
+        """
+        return await self.read()
 
     async def json(self) -> Any:
         """
