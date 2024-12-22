@@ -17,42 +17,32 @@ class Response:
         Returns:
             str: The response content as text.
         """
-        return await self._response.text()
+        result = await self._response.text()
+        return result
 
     async def read(self) -> bytes:
         """
         Returns:
             bytes: The raw response content.
         """
-        return await self._response.read()
+        result = await self._response.read()
+        return result
 
     async def content(self) -> bytes:
         """
         Returns:
             bytes: The raw response content.
         """
-        return await self.read()
+        result = await self.read()
+        return result
 
     async def json(self) -> Any:
         """
         Returns:
             Any: The JSON-decoded response content.
         """
-        return await self._response.json()
-
-    async def __getitem__(self, key):
-        """
-        Allows subscripting the response to access JSON content directly.
-
-        Args:
-            key: The key to access in the JSON response.
-
-        Returns:
-            Any: The value associated with the key in the JSON response.
-        """
-        json_data = await self._response.json()
-        return json_data[key]
-
+        result = await self._response.json()
+        return result
 
 class Request:
     async def _request(
