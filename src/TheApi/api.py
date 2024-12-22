@@ -309,7 +309,7 @@ class TheApi(Request):
         Returns:
             str: A random advice message.
         """
-        response = requests.get(self.base_urls["advice"]).json()
+        response = await self.get(self.base_urls["advice"])
         return response["slip"]["advice"]
 
     async def get_btc_value(self, currency: Optional[str] = None) -> dict:
