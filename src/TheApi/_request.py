@@ -245,7 +245,9 @@ class Request:
         )'''
 
 from typing import Any, Dict, Union, Optional
+
 import httpx
+
 
 class Response:
     def __init__(self, response: httpx.Response):
@@ -267,6 +269,7 @@ class Response:
 
     async def json(self) -> Any:
         return self._response.json()
+
 
 class Request:
     async def _request(
