@@ -2,6 +2,7 @@ from typing import Any, Dict, Union, Optional
 
 import aiohttp
 
+
 class Response:
     def __init__(self, response: aiohttp.ClientResponse):
         self._response = response
@@ -42,15 +43,16 @@ class Response:
     async def __getitem__(self, key):
         """
         Allows subscripting the response to access JSON content directly.
-        
+
         Args:
             key: The key to access in the JSON response.
-        
+
         Returns:
             Any: The value associated with the key in the JSON response.
         """
         json_data = await self._response.json()
         return json_data[key]
+
 
 class Request:
     async def _request(
