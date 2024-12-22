@@ -467,7 +467,7 @@ class TheApi:
         Returns:
             str: The content of a random quote followed by the author's name.
         """
-        response = await self.request.get(self.base_urls["quote"], ssl=False)
+        response = await self.request.get(self.base_urls["quote"], verify=False)
         response = response.json()
         return f"{data['content']}\n\nauthor - {data['author']}"
 
