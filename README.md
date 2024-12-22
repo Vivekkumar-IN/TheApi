@@ -88,7 +88,7 @@ In the example above, `file_path` will be an instance of the `FilePath` class, w
 | [31. Put](#31-put) | ❌
 | [32. Pypi](#32-pypi) | ❌
 | [33. Quote](#33-quote) | ❌
-| [34. Riddle](#34-riddle) | ✅
+| [34. Riddle](#34-riddle) | ❌
 | [35. Stackoverflow Search](#35-stackoverflow-search) | ❌
 | [36. Upload Image](#36-upload-image) | ❌
 | [37. Wikipedia](#37-wikipedia) | ❌
@@ -115,7 +115,7 @@ print(result)
 #### Expected Output
 
 ```text
-'coroutine' object is not subscriptable
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 2. Avatar
@@ -136,7 +136,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 3. Bing Image
@@ -161,7 +161,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 4. Blackpink
@@ -187,7 +187,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_q073aGdg.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_SVORsgII.jpg
 ```
 
 ### 5. Carbon
@@ -232,26 +232,13 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 7. Delete
 
 **Description**:
-Sends a DELETE request.
-
-**Args:**
-  - **url (str)**: The target URL.
-  - **headers (Optional[Dict[str, str]])**: Optional headers to include in the request.
-  - **params (Optional[Dict[str, str]])**: Query parameters to include in the URL.
-  - **data (Optional[Union[Dict[str, Any], bytes]])**: Form data or raw bytes to include in the body.
-  - **json (Optional[Dict[str, Any]])**: JSON data to include in the body.
-  - **timeout (Optional[int])**: Timeout for the request in seconds.
-  - **allow_redirects (bool)**: Whether to follow redirects (default is True).
-  - **ssl (Optional[bool])**: Whether to verify SSL certificates (default is None).
-
-**Returns:**
-  - **Response**: A wrapper around the aiohttp response object.
+No description available.
 
 ```python
 from TheApi import api
@@ -263,7 +250,7 @@ print(result)
 #### Expected Output
 
 ```text
-Pokemon
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 8. Dog
@@ -284,7 +271,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 9. Domain Search
@@ -309,7 +296,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 10. Fakerapi
@@ -359,7 +346,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 12. Gen Qr
@@ -386,7 +373,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 13. Generate Pdf
@@ -408,18 +395,7 @@ Generates a PDF from a URL or an HTML string and saves it to a file.
 ### 14. Get
 
 **Description**:
-Sends a GET request.
-
-**Args:**
-  - **url (str)**: The target URL.
-  - **headers (Optional[Dict[str, str]])**: Optional headers to include in the request.
-  - **params (Optional[Dict[str, str]])**: Query parameters to include in the URL.
-  - **timeout (Optional[int])**: Timeout for the request in seconds.
-  - **allow_redirects (bool)**: Whether to follow redirects (default is True).
-  - **ssl (Optional[bool])**: Whether to verify SSL certificates (default is None).
-
-**Returns:**
-  - **Response**: A wrapper around the aiohttp response object.
+No description available.
 
 ```python
 from TheApi import api
@@ -431,7 +407,7 @@ print(result)
 #### Expected Output
 
 ```text
-Pokemon
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 15. Get Advice
@@ -452,7 +428,7 @@ print(result)
 #### Expected Output
 
 ```text
-'coroutine' object is not subscriptable
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 16. Get Btc Value
@@ -480,7 +456,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 17. Get Fake Addresses
@@ -505,7 +481,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 18. Get Fake Credit Cards
@@ -530,7 +506,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 19. Get Fake Images
@@ -558,7 +534,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 20. Get Hindi Jokes
@@ -579,7 +555,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 21. Get Jokes
@@ -604,7 +580,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 22. Get Uselessfact
@@ -625,7 +601,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 23. Get Word Definitions
@@ -652,7 +628,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 24. Get Words
@@ -679,7 +655,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 25. Github Search
@@ -714,7 +690,7 @@ print(result)
 #### Expected Output
 
 ```text
-Unexpected error: Connection closed
+Unexpected error: AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 26. Hindi Quote
@@ -735,7 +711,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 27. Hug
@@ -762,7 +738,7 @@ print(result)
 #### Expected Output
 
 ```text
-'coroutine' object is not subscriptable
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 28. Meme
@@ -783,7 +759,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 29. Neko
@@ -820,27 +796,13 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 30. Post
 
 **Description**:
-Sends a POST request.
-
-**Args:**
-  - **url (str)**: The target URL.
-  - **headers (Optional[Dict[str, str]])**: Optional headers to include in the request.
-  - **params (Optional[Dict[str, str]])**: Query parameters to include in the URL.
-  - **data (Optional[Union[Dict[str, Any], bytes]])**: Form data or raw bytes to include in the body.
-  - **json (Optional[Dict[str, Any]])**: JSON data to include in the body.
-  - **files (Optional[Dict[str, bytes]])**: Files to include in the body (currently unused).
-  - **timeout (Optional[int])**: Timeout for the request in seconds.
-  - **allow_redirects (bool)**: Whether to follow redirects (default is True).
-  - **ssl (Optional[bool])**: Whether to verify SSL certificates (default is None).
-
-**Returns:**
-  - **Response**: A wrapper around the aiohttp response object.
+No description available.
 
 ```python
 from TheApi import api
@@ -852,26 +814,13 @@ print(result)
 #### Expected Output
 
 ```text
-Pokemon
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 31. Put
 
 **Description**:
-Sends a PUT request.
-
-**Args:**
-  - **url (str)**: The target URL.
-  - **headers (Optional[Dict[str, str]])**: Optional headers to include in the request.
-  - **params (Optional[Dict[str, str]])**: Query parameters to include in the URL.
-  - **data (Optional[Union[Dict[str, Any], bytes]])**: Form data or raw bytes to include in the body.
-  - **json (Optional[Dict[str, Any]])**: JSON data to include in the body.
-  - **timeout (Optional[int])**: Timeout for the request in seconds.
-  - **allow_redirects (bool)**: Whether to follow redirects (default is True).
-  - **ssl (Optional[bool])**: Whether to verify SSL certificates (default is None).
-
-**Returns:**
-  - **Response**: A wrapper around the aiohttp response object.
+No description available.
 
 ```python
 from TheApi import api
@@ -883,7 +832,7 @@ print(result)
 #### Expected Output
 
 ```text
-Pokemon
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 32. Pypi
@@ -908,7 +857,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 33. Quote
@@ -929,7 +878,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 34. Riddle
@@ -950,7 +899,7 @@ print(result)
 #### Expected Output
 
 ```text
-<TheApi._request.Response object at 0x7fd4c6132f00>
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 35. Stackoverflow Search
@@ -979,7 +928,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 36. Upload Image
@@ -1028,7 +977,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 ### 38. Write
@@ -1056,7 +1005,7 @@ print(result)
 #### Expected Output
 
 ```text
-Connection closed
+AsyncClient.request() got an unexpected keyword argument 'verify'
 ```
 
 
