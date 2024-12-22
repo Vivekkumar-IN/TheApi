@@ -245,9 +245,7 @@ class Request:
         )'''
 
 from typing import Any, Dict, Union, Optional
-
 import httpx
-
 
 class Response:
     def __init__(self, response: httpx.Response):
@@ -270,7 +268,6 @@ class Response:
     async def json(self) -> Any:
         return self._response.json()
 
-
 class Request:
     async def _request(
         self,
@@ -285,7 +282,7 @@ class Request:
         allow_redirects: bool = True,
         ssl: Optional[bool] = None,
     ) -> Response:
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(verify=ssl) as client:
             response = await client.request(
                 method=method,
                 url=url,
@@ -296,7 +293,6 @@ class Request:
                 files=files,
                 timeout=timeout,
                 follow_redirects=allow_redirects,
-                verify=ssl,
             )
             return Response(response)
 
