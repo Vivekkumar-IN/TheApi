@@ -187,7 +187,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_SVORsgII.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_WgvmQJ37.jpg
 ```
 
 ### 5. Carbon
