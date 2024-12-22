@@ -5,8 +5,6 @@ from os.path import isabs, exists, realpath
 class FilePath:
     def __init__(self, path: str):
         self.path = path
-        if not isinstance(self.path, str):
-            raise ValueError(f"Invalid path: {self.path}. Path must be a string.")
         if not isabs(self.path):
             self.path = realpath(self.path)
         if not exists(self.path):
