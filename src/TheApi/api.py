@@ -12,9 +12,9 @@ import requests
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 from .func import FilePath
+from ._request import Request
 
-
-class TheApi:
+class TheApi(Request):
     def __init__(self, downloads_dir: str = "downloads", quiet: bool = False):
         self.base_urls = {
             "advice": "https://api.adviceslip.com/advice",
@@ -55,39 +55,7 @@ class TheApi:
         if self.quiet:
             return {"error": True, "message": str(error)}
         raise error
-
-    async def _make_request(
-        self,
-        url: str,
-        method: str = "GET",
-        params: dict = None,
-        data: dict = None,
-        files: dict = None,
-        headers: dict = None,
-        verify: bool = True,
-        return_content: bool = False,
-    ) -> Union[dict, str, bytes]:
-        async with aiohttp.ClientSession() as session:
-            try:
-                async with session.request(
-                    method=method,
-                    url=url,
-                    params=params,
-                    data=data,
-                    headers=headers,
-                    ssl=verify,
-                ) as response:
-                    response.raise_for_status()
-                    if return_content:
-                        return await response.read()
-                    if "application/json" in response.headers.get("Content-Type", ""):
-                        return await response.json()
-                    return await response.text()
-            except aiohttp.ClientResponseError as e:
-                return self._handle_error(e)
-            except Exception as e:
-                return self._handle_error(e)
-
+        
     async def _create_file(
         self, contents: bytes, ext: str, name: Optional[str] = None
     ) -> FilePath:
@@ -121,7 +89,7 @@ class TheApi:
         Returns:
             dict: Contains the file name, file type, and file URL.
         """
-        response = await self._make_request(self.base_urls["avatar"])
+        response = await self.get(self.base_urls["avatar"])
         return response
 
     async def animechan(self):
@@ -131,7 +99,7 @@ class TheApi:
         Returns:
             dict: Contains the quote content, anime name, and character details.
         """
-        response = await self._make_request(self.base_urls["animechan"])
+        response = await self.get(self.base_urls["animechan"])
         return response["data"]
 
     async def fakerapi(
@@ -275,7 +243,7 @@ class TheApi:
         }
         url = f"{self.base_urls['faker']}{endpoint}"
 
-        result = await self._make_request(url, params=params)
+        result = await self.get(url, params=params)
         return result
 
     async def get_fake_images(
@@ -372,7 +340,7 @@ class TheApi:
                 )
             )
 
-        response = await self._make_request(url)
+        response = await self.get(url)
 
         return response
 
@@ -388,7 +356,7 @@ class TheApi:
         """
         url = self.base_urls["jokes"]
         params = {"type": "single", "amount": amount}
-        response = await self._make_request(url, params=params)
+        response = await self.get(url, params=params)
 
         if amount == 1:
             return response["joke"]
@@ -403,7 +371,7 @@ class TheApi:
         Returns:
             str: A random Hindi joke if available, or "No joke found" if not available.
         """
-        response = await self._make_request(self.base_urls["hindi_jokes"])
+        response = await self.get(self.base_urls["hindi_jokes"])
         return response["jokeContent"] if response["status"] else "No joke found."
 
     async def generate_pdf(
@@ -439,7 +407,7 @@ class TheApi:
         url = url + "/from_url" if from_url else url + "/from_html"
         params = {"url": source} if from_url else {"html": source}
 
-        pdf_content = await self._make_request(url, params=params)
+        pdf_content = await self.get(url, params=params)
 
         file_path = await self._create_file(pdf_content, ext="pdf", name="pdf")
 
@@ -472,11 +440,10 @@ class TheApi:
             "color": foreground_color,
             "bgcolor": background_color,
         }
-        qr_content = await self._make_request(
+        qr_content = await self.get(
             url=url,
-            method="GET",
             params=params,
-            return_content=True,
+            return_content=True
         )
 
         file_path = await self._create_file(qr_content, ext="png", name="QrCode")
@@ -490,7 +457,7 @@ class TheApi:
         Returns:
             str: A random useless fact.
         """
-        response = await self._make_request(self.base_urls["useless_fact"])
+        response = await self.get(self.base_urls["useless_fact"])
         return response["text"]
 
     async def quote(self) -> str:
@@ -500,7 +467,7 @@ class TheApi:
         Returns:
             str: The content of a random quote followed by the author's name.
         """
-        data = await self._make_request(self.base_urls["quote"], verify=False)
+        data = await self.get(self.base_urls["quote"], verify=False)
         return f"{data['content']}\n\nauthor - {data['author']}"
 
     async def hindi_quote(self) -> str:
@@ -510,7 +477,7 @@ class TheApi:
         Returns:
             str: The content of a random Hindi quote.
         """
-        data = await self._make_request(self.base_urls["hindi_quote"])
+        data = await self.get(self.base_urls["hindi_quote"])
         return data["quote"]
 
     async def write(self, text):
@@ -529,13 +496,13 @@ class TheApi:
             A temporary image file is created, saved, and removed after uploading.
         """
         tryimg = "https://graph.org/file/1f8d00177ac2429b101b9.jpg"
-        tryresp = requests.get(tryimg)
-        img = Image.open(BytesIO(tryresp.content))
+        tryresp = await self.get(tryimg, return_content=True)
+        img = Image.open(BytesIO(tryresp))
         draw = ImageDraw.Draw(img)
 
         font_url = "https://github.com/google/fonts/raw/main/ofl/poetsenone/PoetsenOne-Regular.ttf"
-        font_response = requests.get(font_url)
-        font = ImageFont.truetype(BytesIO(font_response.content), 24)
+        font_response = await self.get(font_url, return_content=True)
+        font = ImageFont.truetype(BytesIO(font_response), 24)
 
         x, y = 150, 140
         lines = []
@@ -577,24 +544,17 @@ class TheApi:
         Returns:
             FilePath: The file path of the saved image.
         """
-        async with aiohttp.ClientSession(
+        
+        response = await self.post(
+            "https://carbonara.solopov.dev/api/cook",
+            json=params,
+            return_content=True,
             headers={"Content-Type": "application/json"},
-        ) as ses:
-            params = {
-                "code": query,
-            }
-            try:
-                response = await ses.post(
-                    "https://carbonara.solopov.dev/api/cook",
-                    json=params,
-                )
-                response_data = await response.read()
-            except aiohttp.client_exceptions.ClientConnectorError:
-                return self._handle_error(ValueError("Can not reach the Host!"))
+         )
+        
+        file_path = await self._create_file(response, ext="png", name="carbon")
 
-            file_path = await self._create_file(response_data, ext="png", name="carbon")
-
-            return FilePath(file_path)
+        return FilePath(file_path)
 
     async def wikipedia(self, query):
         """
@@ -621,7 +581,7 @@ class TheApi:
             "format": "json",
         }
 
-        search_response = await self._make_request(search_url, params=params)
+        search_response = await self.get(search_url, params=params)
         search_results = search_response.get("query", {}).get("search", [])
 
         if search_results:
@@ -632,7 +592,7 @@ class TheApi:
                 f"&exintro&explaintext&piprop=thumbnail&pithumbsize=500&format=json&pageids={page_id}"
             )
 
-            summary_response = await self._make_request(summary_url)
+            summary_response = await self.get(summary_url)
             pages = summary_response.get("query", {}).get("pages", {})
             page_info = pages.get(str(page_id), {})
             image_url = page_info.get("thumbnail", {}).get(
@@ -703,10 +663,8 @@ class TheApi:
         params = {"q": query, "per_page": max_results}
 
         try:
-            response = requests.get(url, headers=headers, params=params)
-            response.raise_for_status()
-            results = response.json()
-            items = results.get("items", [])
+            response = self.get(url, headers=headers, params=params)
+            items = response.get("items", [])
 
             result_list = []
 
@@ -773,15 +731,7 @@ class TheApi:
                 result_list.append(item_info)
 
             return result_list
-
-        except requests.exceptions.RequestException as e:
-            return self._handle_error(ValueError(f"Request exception: {e}"))
-        except requests.exceptions.HTTPError as e:
-            return self._handle_error(
-                ValueError(f"HTTP error: {e.response.status_code}")
-            )
-        except KeyError as e:
-            return self._handle_error(ValueError(f"Key error: {e}"))
+            
         except Exception as e:
             return self._handle_error(ValueError(f"Unexpected error: {e}"))
 
@@ -808,7 +758,7 @@ class TheApi:
         if letter:
             params["letter"] = letter
 
-        return await self._make_request(self.base_urls["words"], params=params)
+        return await self.get(self.base_urls["words"], params=params)
 
     async def cat(self):
         """
@@ -817,7 +767,7 @@ class TheApi:
         Returns:
             str or None: The URL of a random cat image if available; None if no response is received.
         """
-        response = await self._make_request(self.base_urls["cat"])
+        response = await self.get(self.base_urls["cat"])
         return response[0]["url"] if response else None
 
     async def dog(self):
@@ -827,7 +777,7 @@ class TheApi:
         Returns:
             str or None: The URL of a random dog image if available; None if no response is received.
         """
-        response = await self._make_request(self.base_urls["dog"])
+        response = await self.get(self.base_urls["dog"])
         return response["url"] if response else None
 
     async def pypi(self, package_name):
@@ -838,40 +788,13 @@ class TheApi:
             package_name (str): The name of the package to search for on PyPI.
 
         Returns:
-            dict or None: A dictionary with relevant package information if found, containing:
-                - name (str): Package name.
-                - version (str): Latest package version.
-                - summary (str): Short description of the package.
-                - author (str): Package author.
-                - author_email (str): Email of the package author.
-                - license (str): License type.
-                - home_page (str): URL of the package's homepage.
-                - package_url (str): URL of the package on PyPI.
-                - requires_python (str): Minimum Python version required.
-                - keywords (str): Keywords associated with the package.
-                - classifiers (list): List of PyPI classifiers.
-                - project_urls (dict): Additional project URLs (e.g., source code, documentation).
+            dict or None: A dictionary with relevant package information if found.
             Returns None if the package is not found or there is an error.
         """
         url = f"{self.base_urls['pypi']}/{package_name}/json"
-        response = await self._make_request(url)
+        response = await self.get(url)
         if response:
-            info = response["info"]
-            relevant_info = {
-                "name": info["name"],
-                "version": info["version"],
-                "summary": info["summary"],
-                "author": info["author"],
-                "author_email": info["author_email"],
-                "license": info["license"],
-                "home_page": info["home_page"],
-                "package_url": info["package_url"],
-                "requires_python": info["requires_python"],
-                "keywords": info["keywords"],
-                "classifiers": info["classifiers"],
-                "project_urls": info["project_urls"],
-            }
-            return relevant_info
+            return response
         else:
             return None
 
@@ -882,7 +805,7 @@ class TheApi:
         Returns:
             str or None: The URL of the meme image if available, otherwise None.
         """
-        response = await self._make_request(self.base_urls["meme"])
+        response = await self.get(self.base_urls["meme"])
         return response["preview"][-1] if response else None
 
     async def fox(self):
@@ -892,7 +815,7 @@ class TheApi:
         Returns:
             str or None: The URL of the fox image if available, otherwise None.
         """
-        response = await self._make_request(self.base_urls["fox"])
+        response = await self.get(self.base_urls["fox"])
         return response["link"] if response else None
 
     async def bing_image(self, query: str, limit: int = 3):
@@ -913,7 +836,7 @@ class TheApi:
             "adlt": "off",
             "qft": "",
         }
-        response = await self._make_request(self.base_urls["bing_image"], params=data)
+        response = await self.get(self.base_urls["bing_image"], params=data)
         return re.findall(r"murl&quot;:&quot;(.*?)&quot;", response) if response else []
 
     async def stackoverflow_search(self, query, max_results=3, sort_type="relevance"):
@@ -943,14 +866,9 @@ class TheApi:
 
         all_results = []
         while len(all_results) < max_results:
-            response = requests.get(url, params=params)
+            response = await self.get(url, params=params)
 
-            if response.status_code != 200:
-                return self._handle_error(
-                    ValueError("Failed to retrieve results from Stack Overflow API")
-                )
-
-            results = response.json().get("items", [])
+            results = response.get("items", [])
             if not results:
                 break
 
@@ -1090,7 +1008,7 @@ class TheApi:
         files = {"file": image_bytes}
 
         try:
-            response = await self._make_request(url=url, method="POST", files=files)
+            response = await self.post(url=url, files=files)
             return (
                 response.strip()
                 if isinstance(response, str)
@@ -1106,11 +1024,8 @@ class TheApi:
         Returns:
             dict: The riddle data in JSON format.
         """
-        response = requests.get("https://riddles-api.vercel.app/random")
-        if response.status_code == 200:
-            return response.json()
-        else:
-            return self._handle_error(ValueError("Could not fetch riddle"))
+        response = await self.get("https://riddles-api.vercel.app/random")
+        return response
 
     async def hug(self, amount: int = 1) -> list:
         """Fetches a specified number hug gif from the Nekos.Best API.
@@ -1124,7 +1039,7 @@ class TheApi:
                   - anime_name (str): The name of the anime.
                   - url (str): The URL of the GIF.
         """
-        response = await self._make_request(self.base_urls["neko_hug"].format(amount))
+        response = await self.get(self.base_urls["neko_hug"].format(amount))
         return response["results"]
 
     async def neko(self, endpoint: str = "neko", amount: int = 3) -> dict:
@@ -1205,7 +1120,7 @@ class TheApi:
 
         url = self.base_urls["neko_url"].format(endpoint=endpoint, amount=amount)
 
-        response = await self._make_request(url)
+        response = await self.get(url)
 
         return response
 
@@ -1221,7 +1136,7 @@ class TheApi:
         """
         url = self.base_urls["domain"].format(domain=domain, zone=zone)
 
-        response = await self._make_request(url)
+        response = await self.get(url)
 
         return response
 
@@ -1239,7 +1154,7 @@ class TheApi:
             ValueError: If the `word` is not provided or the API request fails.
         """
         url = self.base_urls["word_info"].format(word=word)
-        response = await self._make_request(url)
+        response = await self.get(url)
         return response
 
 
