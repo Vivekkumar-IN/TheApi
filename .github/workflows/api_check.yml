@@ -4,6 +4,7 @@ on:
   push:
     paths:
     - "**.py"
+    - "**.yml"
   schedule:
     - cron: '40 2 * * *'  # This runs the job at 8:10 AM IST (GMT+5:30)
   workflow_dispatch:
@@ -29,8 +30,6 @@ jobs:
       - name: Run API Status Script
         run: |
           python script.py
-
-          
 
       - name: Commit and Push Changes
         run: |
