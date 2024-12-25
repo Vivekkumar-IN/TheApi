@@ -112,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "A fight you can't win becomes an obsession",
+    "content": "You're always away during the important times and all you do is call. There are times when you are finally here, but then you disappear unexpectedly. Every time... every time... always, always, leaving me behind alone. What do you think I am? I love you Shinichi!",
     "anime": {
-        "id": 200,
-        "name": "Vinland Saga",
-        "altName": null
+        "id": 271,
+        "name": "Case Closed",
+        "altName": "Meitantei Conan"
     },
     "character": {
-        "id": 233,
-        "name": "Askeladd"
+        "id": 318,
+        "name": "Ran Mouri"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "tv",
+    "file_name": "michael",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/tv.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/michael.jpg"
 }
 ```
 
@@ -174,7 +174,7 @@ print(result)
 ```text
 http://www.technosamrat.com/wp-content/uploads/2012/05/Pokemon-Wallpapers-Picture.jpg
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
-http://images6.fanpop.com/image/photos/39400000/1st-generation-pokemon-39423803-4724-2835.jpg
+http://www.animextremist.com/imagenes/pokemon/pokemon97.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_FXhbh82Q.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_ChqFdDtd.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_9iiEk9BN.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_4x47XO6h.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/dqr.jpg
+https://cdn2.thecatapi.com/images/1ou.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/f0c16f65-6c1d-4896-a972-e63c8d34467c.jpg
+https://random.dog/71c33af4-4d09-4836-b996-816f95c10667.webm
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=36
+https://randomfox.ca/?i=54
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/ITqKAIqQ_qr.png
+/home/runner/work/TheApi/TheApi/downloads/KAXR5S1r_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Rule number 1: Try not to die. Rule number 2: Don't be a dick.
+Most things look better when you put them in a circle.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "90,296.714",
-        "rate_float": 90296.7139,
+        "rate": "94,287.323",
+        "rate_float": 94287.3231,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "74,955.592",
-        "rate_float": 74955.592,
+        "rate": "78,268.21",
+        "rate_float": 78268.2095,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "93,965.699",
-        "rate_float": 93965.6985,
+        "rate": "98,118.456",
+        "rate_float": 98118.4563,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "85670 Flavio Divide",
-            "streetName": "O'Kon Terrace",
-            "buildingNumber": "9035",
-            "city": "Port Tadborough",
-            "zipcode": "03970-1567",
-            "country": "Australia",
-            "country_code": "AU",
-            "latitude": 1.58751,
-            "longitude": 86.585927
+            "street": "96681 Brando Island Apt. 093",
+            "streetName": "Terry Corner",
+            "buildingNumber": "5785",
+            "city": "Avisview",
+            "zipcode": "38626-3710",
+            "country": "Guernsey",
+            "country_code": "GG",
+            "latitude": 39.478462,
+            "longitude": 159.539125
         }
     ]
 }
@@ -537,10 +537,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "4485747078384791",
-            "expiration": "06/27",
-            "owner": "Sabina Cronin"
+            "type": "American Express",
+            "number": "6011044577887534",
+            "expiration": "11/27",
+            "owner": "Janie Smitham"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Et eos illum consectetur.",
-            "description": "In commodi placeat optio quia. Iure et doloremque veritatis itaque in similique. Non cupiditate et quidem.",
+            "title": "Aut modi et error.",
+            "description": "Adipisci qui quis natus dicta voluptate corporis et. Ea corporis est accusamus est occaecati. Illo odit laudantium id nihil vel.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-बड़ा अच्छा लगता है जब  ..सोनी..  का फोन हैंग होता है, क्योंकि-  ...सोनी के नखरे सोणे लग दे मैनू.. 😆🤣😋😉
+कुछ लड़कियाँ फोन पे बात करने मे इतनी अभ्यस्त होती है की अगर इन्हे जेनरेटर के बगल मेँ बैठा दो तो भी  ....मेला बाबू... से घण्टो बाते कर सकती है 😆🤣😋😉
 ```
 
 ### 19. Get Jokes
@@ -629,8 +629,11 @@ print(result)
 #### Expected Output
 
 ```text
-My wife is really mad at the fact that I have no sense of direction.
-So I packed up my stuff and right.
+Four engineers get into a car. The car won't start.
+The Mechanical engineer says "It's a broken starter".
+The Electrical engineer says "Dead battery".
+The Chemical engineer says "Impurities in the gasoline".
+The IT engineer says "Hey guys, I have an idea: How about we all get out of the car and get back in".
 ```
 
 ### 20. Get Uselessfact
@@ -651,7 +654,7 @@ print(result)
 #### Expected Output
 
 ```text
-The only real person to ever to appear on a pez dispenser was Betsy Ross.
+If one places a tiny amount of liquor on a scorpion, it will instantly go mad and sting itself to death.
 ```
 
 ### 21. Get Word Definitions
@@ -709,16 +712,16 @@ print(result)
 #### Expected Output
 
 ```text
-Relieving
-Turf
-Palm
-Visor
-Laborer
-Hatchback
-Thrash
-Ferocity
-Feline
-Prodigy
+Gong
+Trimming
+Gnarly
+Surgery
+Placard
+Musket
+Deflate
+Prototype
+Skid
+Nearby
 ```
 
 ### 23. Github Search
@@ -802,7 +805,7 @@ print(result)
 #### Expected Output
 
 ```text
-अपने कद का अंदाज़ा हमें भी है लाड़ले, हम परछाई देख कर गुरुर नही करते।
+जिंदगी में कुछ नेक काम ऐसे भी करने चाहिए जिनका, उस ऊपर वालें के सिवा कोई दुसरा गवाह ना हो।
 ```
 
 ### 25. Hug
@@ -831,8 +834,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Yuru Yuri",
-        "url": "https://nekos.best/api/v2/hug/6ffba377-796c-4157-88a1-82e4b1198340.gif"
+        "anime_name": "Aikatsu Stars",
+        "url": "https://nekos.best/api/v2/hug/54243578-3314-414e-9e49-6f3f15872041.gif"
     }
 ]
 ```
@@ -855,7 +858,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/7bmfzzayam8e1.png?width=1080&crop=smart&auto=webp&s=34c4314cb405800664f07f2de47f98b996eed648
+https://preview.redd.it/uj778z8hcw8e1.png?width=960&crop=smart&auto=webp&s=5805319fd5c3227f67be57665697b9f80a9510cd
 ```
 
 ### 27. Neko
@@ -895,22 +898,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/15433523",
-            "artist_name": "\u30ab\u30ce\u30c1",
-            "source_url": "https://www.pixiv.net/en/artworks/89580619",
-            "url": "https://nekos.best/api/v2/neko/95c7b410-a9cc-4a01-90e3-6f25e89a66fa.png"
+            "artist_href": "https://www.pixiv.net/en/users/27867295",
+            "artist_name": "M.\u3068\u30fc\u3053\u3064",
+            "source_url": "https://www.pixiv.net/en/artworks/88285936",
+            "url": "https://nekos.best/api/v2/neko/daacae55-c63b-474b-98d6-2b5f64a44b1b.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/40264129",
-            "artist_name": "\u304b\u3073\u308b\u3093",
-            "source_url": "https://www.pixiv.net/en/artworks/99439336",
-            "url": "https://nekos.best/api/v2/neko/cce32597-7f70-4c61-a7d3-0bb4f652b538.png"
+            "artist_href": "https://www.pixiv.net/en/users/40927409",
+            "artist_name": "\u5922\u898b\u308b\u96f2",
+            "source_url": "https://www.pixiv.net/en/artworks/86938618",
+            "url": "https://nekos.best/api/v2/neko/a31b5a01-e9e3-4203-afd8-1a6b70511ef1.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/29754062",
-            "artist_name": "\u3064\u3086\u305e\u3089",
-            "source_url": "https://www.pixiv.net/en/artworks/87093868",
-            "url": "https://nekos.best/api/v2/neko/cec784d3-e1b2-4493-92ac-21a5435f1d28.png"
+            "artist_href": "https://www.pixiv.net/en/users/47242802",
+            "artist_name": "\u771f\u591c\u6708",
+            "source_url": "https://www.pixiv.net/en/artworks/87386891",
+            "url": "https://nekos.best/api/v2/neko/92a954eb-b212-4b7d-83e1-5880afe435a2.png"
         }
     ]
 }
@@ -986,9 +989,9 @@ print(result)
 #### Expected Output
 
 ```text
-Loyalty and friendship, which is to me the same, created all the wealth that I've ever thought I'd have.
+Take rest; a field that has rested gives a bountiful crop.
 
-author - Ernie Banks
+author - Ovid
 ```
 
 ### 30. Riddle
@@ -1010,8 +1013,8 @@ print(result)
 
 ```json
 {
-    "riddle": "What word doesn't belong in this group? That, hat, what, mat, cat, sat, pat, or chat?",
-    "answer": "What. It's pronounced differently; all of the others rhyme"
+    "riddle": "Four cars come to a four way stop, all coming from a different direction. They can't decide who got there first, so they all go forward at the same time. They do not crash into each other, but all four cars go. How is this possible?",
+    "answer": "They all made right-hand turns"
 }
 ```
 
@@ -1110,7 +1113,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2035,
+        "view_count": 2036,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1172,7 +1175,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -1203,7 +1206,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_dGooDqIr.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_jnrgVvr5.jpg
 ```
 
 
