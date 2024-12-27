@@ -112,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "I am who I am now because of everything that's happened. If I try to deny my past, I'm denying the person I've become. I don't want to do that.",
+    "content": "I always wanted to become stronger. At first it was to protect myself. Next, it was to protect Hak, who gave up everything for me. Now, it's to repay my friends, who enabled me to live.",
     "anime": {
-        "id": 549,
-        "name": "Kokoro Connect",
-        "altName": "Kokoro Connect"
+        "id": 327,
+        "name": "Yona of the Dawn",
+        "altName": "Akatsuki no Yona"
     },
     "character": {
-        "id": 910,
-        "name": "Iori Nagase"
+        "id": 415,
+        "name": "Yona"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "tony",
+    "file_name": "sara",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/tony.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/sara.jpg"
 }
 ```
 
@@ -172,9 +172,69 @@ print(result)
 #### Expected Output
 
 ```text
+https://assets-prd.ignimgs.com/2021/03/01/new-pokemon-snap-button-1614639848584.jpg
+https://img-eshop.cdn.nintendo.net/i/00bd7efe46ab2b3ff0774172a5d4f21a5b2f467b3e324557ce1e9a9ae12c1d3b.jpg
+https://assets.rpgsite.net/images/images/000/096/196/original/New-Pokemon-Snap_20210226_07.jpg
+https://images.launchbox-app.com/1f06f096-8eb6-43ac-abbb-262deb1bf596.jpg
+https://media.gamestop.com/i/gamestop/11103360/New-Pokemon-Snap---Nintendo-Switch
+https://www.nme.com/wp-content/uploads/2021/05/New-Pokemon-Snap-Credit-Bandai-Namco-HERO@2000x1270.jpg
+https://cdn.mobilesyrup.com/wp-content/uploads/2021/01/new-pokemon-snap-screenshot-2.jpg
+https://cdn.vox-cdn.com/thumbor/Lgiz7lrS_auxnKixNMsWmsx_ETE=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22473880/Switch_NewPokemonSnap_Screenshots_Feb26__9_.jpg
+https://webgames.host/uploads/2017/09/pokemon-snap.jpg
+https://www.videogamer.com/wp-content/uploads/01d7162d-749b-43eb-bdcc-5c0cf9e49881_New_Pokmon_Snap_Main.jpg
+https://cdn.mos.cms.futurecdn.net/4QhbnUhVrk8GG8uUGDZASd.jpg
+https://media.npr.org/assets/img/2021/04/29/snap-1_wide-7c41973fe9eef7cbc49beec9a59f3bf5410187d2-s1400-c100.jpg
+https://www.lukiegames.com/assets/images/N64/n64_pokemon_snap_p_66pv3n.jpg
+https://www.gamespot.com/a/uploads/screen_kubrick/123/1239113/3801204-6238037227-screenshot02.jpg
+https://www.nme.com/wp-content/uploads/2022/06/Pokemon-Snap-64-2000x1270-1.jpg
+https://i.gadgets360cdn.com/products/large/New-Pokemon-Snap-Wallpaper-1440x2560-1000x1778-1646977124.jpg
+https://www.weplay.cl/pub/media/catalog/product/cache/3f1b140c3c9f36fbf6b01dffb521c246/p/r/producto24286_1.jpg
+https://www.nintendo.com/sg/switch/arft/img/hero_sp.jpg
+https://images.launchbox-app.com/fc92b8c7-704f-43e9-ab5a-407b712bc662.jpg
+https://www.gamespot.com/a/uploads/original/1552/15524586/3824788-ahtqudcvxe2lb3q8kqx55m.jpeg
+https://twinfinite.net/wp-content/uploads/2019/09/PokemonTypes.png
+https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Pokemon_Type_Chart.svg/2048px-Pokemon_Type_Chart.svg.png
+https://pokeguide.neocities.org/Pic/pokemontype.png
+https://releasegaming.com/wp-content/uploads/2023/02/Pokemon-Type-Chart-Poster-960x850.jpg
+http://res.cloudinary.com/lmn/image/upload/e_sharpen:150,f_auto,fl_lossy,q_80/v1/gameskinnyc/p/o/k/pokemon-types-table-ad163.png
+https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/472f4a44-0b68-46a9-bfd1-ffca5f5d411f/dbnh54g-993f09cd-8bc1-4653-86e3-5ca28b95e8a9.png/v1/fill/w_1024,h_724/_pokemon__38_types_by_wergan_dbnh54g-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI0IiwicGF0aCI6IlwvZlwvNDcyZjRhNDQtMGI2OC00NmE5LWJmZDEtZmZjYTVmNWQ0MTFmXC9kYm5oNTRnLTk5M2YwOWNkLThiYzEtNDY1My04NmUzLTVjYTI4Yjk1ZThhOS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.8ikZ0Io3pDkjQ1bahvU_ux81ssIRvgztcDY_M3RiaIs
+https://videogamesuncovered.com/wp-content/uploads/2016/12/pokemon-types.jpg
+https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7b386f5f-9a3f-497c-ad22-b2b574b05b37/dfdt5ai-9bb7a5ee-e8a4-4c02-8054-d2cad2c6587c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiMzg2ZjVmLTlhM2YtNDk3Yy1hZDIyLWIyYjU3NGIwNWIzN1wvZGZkdDVhaS05YmI3YTVlZS1lOGE0LTRjMDItODA1NC1kMmNhZDJjNjU4N2MucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.FLSo4mjTVTJlbSUvakBka2x4IQduRxJYNS9rfwHrPnk
+http://img.pokemondb.net/images/typechart.png
+https://cdn1.vectorstock.com/i/1000x1000/03/95/pokemon-type-symbols-vector-2700395.jpg
+https://www.mandatory.gg/wp-content/uploads/mandatory-guide-pokemon-ecarlate-violet-table-types-forces-faiblesses.png
+https://raw.githubusercontent.com/kennycason/cellular-automata-pokemon-types/master/data/pokemon_gen1_type_chart.png?raw=true
+https://www.theloadout.com/wp-content/sites/theloadout/2023/06/pokemon-type-chart-icons.jpg
+https://img00.deviantart.net/4c45/i/2012/137/8/6/pokemon_type_chart_by_the_bent_one-d30zwry.png
+https://1.bp.blogspot.com/-A0NsVJu2Ay0/WGOgGNxAdTI/AAAAAAAABIY/amMTic8SsXYs7jfP_ITwBmkeVQHIAGZ-ACPcB/s1600/ENG-05-02-02-All-the-Pokemon-types.png
+https://www.pngitem.com/pimgs/m/510-5102094_http-image-noelshack-pokemon-artefact-all-types-pokemon.png
+http://1.bp.blogspot.com/-m_64koMO6IU/VWM8SWNwUBI/AAAAAAAAAfQ/r33Sbq0xJtg/s1600/pokemon_types_wheel_by_kamionero-d6u6o9i.png
+https://i.pinimg.com/originals/3c/56/1d/3c561dc2733cad1da67f39c5cf7718f2.png
+http://i.imgur.com/OdoUgES.jpg
+https://vignette3.wikia.nocookie.net/pokemonadventure/images/a/ad/Symbols.png/revision/latest?cb=20121003192408
+https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/06/Charizard-grade-9-mint-front.jpg
+https://images.saymedia-content.com/.image/t_share/MTc5ODE2MjE2Mjc2NDQ0Nzgz/best-v-pokemon-cards.jpg
+https://imgix.ranker.com/user_node_img/3181/63618188/original/blastoise-u16?fit=crop&amp;fm=pjpg&amp;q=60&amp;w=650&amp;dpr=2
+https://i.etsystatic.com/22464198/r/il/92a686/2662042144/il_1140xN.2662042144_ns4d.jpg
+https://images.saymedia-content.com/.image/t_share/MTgzNzE1NDA2MDk0MDE3ODU1/best-vmax-pokemon-cards.png
+https://i.pinimg.com/736x/83/e3/5a/83e35aead31fabb77b9bde3396d4351f.jpg
+https://i.etsystatic.com/21027128/r/il/fdbdba/2003255292/il_1588xN.2003255292_12o2.jpg
+https://www.oldsportscards.com/wp-content/uploads/2019/12/Most-Valuable-First-Edition-Pokemon-Cards.jpg
+https://www.pokemoncenter.com/products/images/P2373PC/155-80156/P2373PC_155-80156_01.jpg
+https://i.etsystatic.com/23914535/r/il/750695/2869449405/il_1588xN.2869449405_fr75.jpg
+https://pm1.narvii.com/6267/3e8dabe202aa4911724963a0eb1b1f0b0c875193_hq.jpg
+https://i.pinimg.com/originals/71/ef/f5/71eff5e6a94ac98d3d6c39c8f9d0221d.jpg
+https://i.etsystatic.com/24353291/r/il/358485/2689751041/il_fullxfull.2689751041_ofmo.jpg
+https://i2.wp.com/nypost.com/wp-content/uploads/sites/2/2020/12/pokemon-auction.jpg?quality=90&amp;strip=all&amp;ssl=1
+https://miro.medium.com/max/1400/1*I9DUHexc5eoKn1-dZs4g0A.jpeg
+https://m.media-amazon.com/images/I/91lXJ99OooL.jpg
+https://cdn11.bigcommerce.com/s-0kvv9/images/stencil/1920w/products/371952/569692/pokemonevolvingskies041__83278.1630015209.jpg?c=2
+https://i.etsystatic.com/22089514/r/il/ecff88/4140836231/il_fullxfull.4140836231_cpmu.jpg
+https://www.printablee.com/postpic/2014/04/rare-pokemon-cards-printable_23606.jpg
+https://www.printablee.com/postpic/2013/12/rare-pokemon-cards-printable_23336.jpg
+https://townsquare.media/site/622/files/2016/08/poke-feat.jpg?w=1200&amp;h=0&amp;zc=1&amp;s=0&amp;a=t&amp;q=89
 https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg
-http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
-https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg
+https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/150_Pokemon_from_Pokemon_Stadium.png/330px-150_Pokemon_from_Pokemon_Stadium.png
 ```
 
 ### 4. Blackpink
@@ -200,7 +260,7 @@ print(result)
 #### Expected Output
 
 ```text
-downloads/blackpink_0SsJRkh1.jpg
+downloads/blackpink_LhKiupWu.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +284,7 @@ print(result)
 #### Expected Output
 
 ```text
-downloads/carbon_D4GzPpTL.png
+downloads/carbon_z67Yr46Y.png
 ```
 
 ### 6. Cat
@@ -245,7 +305,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/81b.gif
+https://cdn2.thecatapi.com/images/MTk2OTMyNw.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +326,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/9e60224f-0401-42d2-a44a-043109fe3832.jpg
+https://random.dog/98e2e1f3-5d5a-4d1a-b155-a37fe304468e.mp4
 ```
 
 ### 8. Domain Search
@@ -341,7 +401,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=12
+https://randomfox.ca/?i=25
 ```
 
 ### 11. Gen Qr
@@ -368,7 +428,7 @@ print(result)
 #### Expected Output
 
 ```text
-downloads/QrCode_pmm3VLiq.png
+downloads/QrCode_EujjawDn.png
 ```
 
 ### 12. Generate Pdf
@@ -405,7 +465,7 @@ print(result)
 #### Expected Output
 
 ```text
-Never write in an email to someone, something which you wouldn't say to that person's face.
+Mercy is the better part of justice.
 ```
 
 ### 14. Get Btc Value
@@ -437,22 +497,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "92,265.855",
-        "rate_float": 92265.8549,
+        "rate": "92,473.505",
+        "rate_float": 92473.5054,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "76,696.267",
-        "rate_float": 76696.2666,
+        "rate": "76,868.877",
+        "rate_float": 76868.8767,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "96,173.279",
-        "rate_float": 96173.2791,
+        "rate": "96,389.724",
+        "rate_float": 96389.7235,
         "symbol": "&#36;"
     }
 }
@@ -489,15 +549,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "598 Ariel Terrace",
-            "streetName": "Mollie Knoll",
-            "buildingNumber": "331",
-            "city": "Ubaldoside",
-            "zipcode": "90531",
-            "country": "France",
-            "country_code": "FR",
-            "latitude": 57.409805,
-            "longitude": -121.895524
+            "street": "1834 Zola Centers",
+            "streetName": "Keeling Roads",
+            "buildingNumber": "740",
+            "city": "New Mortonberg",
+            "zipcode": "20104-0885",
+            "country": "Puerto Rico",
+            "country_code": "PR",
+            "latitude": -76.438733,
+            "longitude": 58.468418
         }
     ]
 }
@@ -533,10 +593,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "JCB",
-            "number": "341714144432972",
+            "type": "Visa",
+            "number": "4929349768578",
             "expiration": "01/25",
-            "owner": "Gus Jacobi"
+            "owner": "Leanna Trantow"
         }
     ]
 }
@@ -575,8 +635,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Est autem est ullam eum quas.",
-            "description": "Vel tempore sed aut harum. Reprehenderit blanditiis modi aut ut aut sed qui. Quis esse hic fugit maiores. Consectetur quia voluptatibus est et est optio consequatur.",
+            "title": "Eaque qui facere rerum dicta.",
+            "description": "Deserunt quis et cupiditate at odio. Nemo qui ipsa ab officiis rerum debitis consequatur. Sit molestiae velit atque dolores repudiandae. Et perferendis autem minus quas omnis esse ut suscipit.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -601,8 +661,7 @@ print(result)
 #### Expected Output
 
 ```text
-एक बार पति-पत्नी में झगड़ा हो रहा था जब झगड़ा बहुत ही बढ़ गया तो पति ने गुस्से में कहा कि अब तुम एक शब्द भी मत बोलना वरना मेरे अंदर का जानवर जाग जाएगा  
-पत्नी बोली– जागने दो तुम्हारे अंदर के जानवर को भला चूहे से भी कोई डरता है 😆🤣😋😉 
+पति को बाजार जाते हुए देख पत्नी ने पैसे देकर कहा  कुछ ऐसी चीज़ लाना जिस से मैं सुन्दर दिखूं  👗👓💄👠🎀 पति खुद के लिए Whisky की दो बोतल ले आया। 😜😃
 ```
 
 ### 19. Get Jokes
@@ -627,7 +686,7 @@ print(result)
 #### Expected Output
 
 ```text
-If you're here for the yodeling lesson, please form an orderly orderly orderly queue.
+Stop being homophobic and rude to the LGBTQ+ community. You should be thanking them for saving us plenty of room in heaven.
 ```
 
 ### 20. Get Uselessfact
@@ -648,7 +707,7 @@ print(result)
 #### Expected Output
 
 ```text
-There are 1,575 steps from the ground floor to the top of the Empire State building.
+The Vatican city registered 0 births in 1983
 ```
 
 ### 21. Get Word Definitions
@@ -706,16 +765,16 @@ print(result)
 #### Expected Output
 
 ```text
-Bullfrog
-Hungry
-Veal
-Sinuous
-Brush
-Causation
-Chaffing
-Snore
-Dosage
-Sketch
+Attic
+Patronize
+Commerce
+Thriving
+Unloved
+Bullseye
+Coaster
+Kerosene
+Prepaid
+Handwoven
 ```
 
 ### 23. Github Search
@@ -799,7 +858,7 @@ print(result)
 #### Expected Output
 
 ```text
-भाग्य से जितना अधिक उम्मीद करेंगे वह उतना ही निराश करेगा, कर्म में विश्वास रखो आपको अपनी अपेक्षाओं से सदैव अधिक मिलेगा।
+राह संघर्ष की जो चलता है; वो ही संसार को बदलता है, जिसने रातों से जंग जीती, सूर्य बनकर वहीं निकलता है।
 ```
 
 ### 25. Hug
@@ -828,8 +887,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Kantai Collection: KanColle",
-        "url": "https://nekos.best/api/v2/hug/56886a54-ef3f-4947-b069-494af839f70c.gif"
+        "anime_name": "Princess Connect! Re:Dive",
+        "url": "https://nekos.best/api/v2/hug/85e51199-6829-4ffd-85e3-4d1a1b9ba891.gif"
     }
 ]
 ```
@@ -852,7 +911,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/jpa5sg0va39e1.png?width=640&crop=smart&auto=webp&s=d46eef09ec766dd185ebd54bc76236dca64a23ed
+https://preview.redd.it/81hs67rzos8e1.png?width=640&crop=smart&auto=webp&s=93b9abc898aa141bcda00df1d5d04ac070c78766
 ```
 
 ### 27. Neko
@@ -892,22 +951,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/2453632",
-            "artist_name": "Punepuni",
-            "source_url": "https://www.pixiv.net/en/artworks/58957320",
-            "url": "https://nekos.best/api/v2/neko/29953a66-c55a-4c4d-88d8-aacc0d9bebb3.png"
+            "artist_href": "https://www.pixiv.net/en/users/82002228",
+            "artist_name": "\u3042\u305a\u8449",
+            "source_url": "https://www.pixiv.net/en/artworks/99961696",
+            "url": "https://nekos.best/api/v2/neko/7e7d91ae-d984-42be-9e5a-92a3eb64574f.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/32753294",
-            "artist_name": "\u5341\u795e\u4e43",
-            "source_url": "https://www.pixiv.net/en/artworks/95147043",
-            "url": "https://nekos.best/api/v2/neko/46e4bff3-6e4b-44dd-8999-4c44e0c6f9de.png"
+            "artist_href": "https://twitter.com/ameto_y",
+            "artist_name": "ameto_y",
+            "source_url": "https://twitter.com/i/web/status/943392983172263936",
+            "url": "https://nekos.best/api/v2/neko/f47ec074-ba04-4215-be17-a5b7ee4f2c15.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/33291197",
-            "artist_name": "\u3057\u305d\u306f",
-            "source_url": "https://www.pixiv.net/en/artworks/91857458",
-            "url": "https://nekos.best/api/v2/neko/a8106c8c-53cb-4991-9e70-ab61db395f3b.png"
+            "artist_href": "https://www.pixiv.net/en/users/979076",
+            "artist_name": "Chloette",
+            "source_url": "https://www.pixiv.net/en/artworks/100313351",
+            "url": "https://nekos.best/api/v2/neko/f0740af8-4dcb-44d4-8b8a-1e9545f62735.png"
         }
     ]
 }
@@ -1275,9 +1334,9 @@ print(result)
 #### Expected Output
 
 ```text
-To be aware of a single shortcoming in oneself is more useful than to be aware of a thousand in someone else.
+The wisest men follow their own direction.
 
-author - Dalai Lama
+author - Euripides
 ```
 
 ### 30. Riddle
@@ -1299,8 +1358,8 @@ print(result)
 
 ```json
 {
-    "riddle": "The strangest creature you'll ever find: Two eyes in front and many many more behind.",
-    "answer": "A Peacock"
+    "riddle": "Until I am measured, I am not known. Yet how you miss me, When I have flown.  What am I?",
+    "answer": "Time"
 }
 ```
 
@@ -1492,7 +1551,7 @@ print(result)
 #### Expected Output
 
 ```text
-downloads/write_jekXl8qQ.jpg
+downloads/write_MuENbUyI.jpg
 ```
 
 
