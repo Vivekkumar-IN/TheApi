@@ -1,0 +1,38 @@
+name: Gen Docs
+
+on:
+  push:
+    paths:
+    - "**.py"
+  workflow_dispatch:
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pdoc
+        pip install git+https://github.com/Vivekkumar-IN/TheApi@dev
+
+    - name: Generate documentation
+      run: |
+        pdoc --html --output-dir docs -f TheApi
+        mv docs/TheApi/* docs/
+        rmdir docs/TheApi
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs
+        
