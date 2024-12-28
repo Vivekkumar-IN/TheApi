@@ -27,7 +27,7 @@ jobs:
 
     - name: Generate documentation
       run: |
-        pdoc --html --output-dir docs -f TheApi
+        pdoc --html -o docs -f TheApi
         mv docs/TheApi/* docs/
         rmdir docs/TheApi
 
