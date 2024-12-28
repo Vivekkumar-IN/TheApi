@@ -27,7 +27,7 @@ jobs:
 
     - name: Generate documentation
       run: |
-        pdoc --html -o docs -f TheApi
+        pdoc --html -o docs -f --template-dir ./templates TheApi
         mv docs/TheApi/* docs/
         rmdir docs/TheApi
 
@@ -36,4 +36,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: docs
-        
