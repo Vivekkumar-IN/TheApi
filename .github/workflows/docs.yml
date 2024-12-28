@@ -27,7 +27,7 @@ jobs:
     - name: Generate Documentation
       run: |
         ls
-        pdoc --html -o docs -f --template-dir templates src/TheApi
+        pdoc --html -o docs -f --config show_source_code=False src/TheApi
         mv docs/TheApi/* docs/
         rmdir docs/TheApi
 
