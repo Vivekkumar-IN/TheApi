@@ -27,7 +27,7 @@ jobs:
 
     - name: Generate Documentation
       run: |
-        pdoc --html -o docs -f --template-dir=templates src/TheApi
+        pdoc --html -o docs -f --template-dir=tem src/TheApi
         mv docs/TheApi/* docs/
         rmdir docs/TheApi
 
