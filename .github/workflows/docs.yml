@@ -5,6 +5,7 @@ on:
     paths:
     - "**.py"
     - "**.yml"
+    - "**.mako" 
   workflow_dispatch:
 jobs:
   build-and-deploy:
