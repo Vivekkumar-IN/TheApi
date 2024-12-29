@@ -2,7 +2,7 @@ Welcome to TheApix!
 ===================
 
 .. toctree::
-   :maxdepth: 2
+   :hidden:
    :caption: Contents:
 
    intro
