@@ -15,8 +15,8 @@ extensions = [
 
 templates_path = ['_templates']
 exclude_patterns = []
-html_title = "TheApix"
 
+html_title = "TheApix"
 html_theme = "furo"
 html_copy_source = False
 html_static_path = ['_static']
@@ -65,3 +65,6 @@ html_theme_options = {
         },
     ]
 }
+
+pygments_style = "default"
+pygments_dark_style = "native"
