@@ -2,11 +2,10 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath('../..'))
-from TheApi import __version__
 
 project = 'TheApix'
 author = 'Vivekkumar-IN'
-release = __version__
+release = '1.2.7'
 copyright = "2024-present, Vivek"
 
 extensions = [
