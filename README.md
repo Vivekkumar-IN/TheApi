@@ -112,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "I didn't come here to fight! I came here to hack at you violently!",
+    "content": "I want to hear it again, yet I don't want to hear it again. I want to see her, yet I don't want to see her. What do you call this kind of feeling again?",
     "anime": {
-        "id": 222,
-        "name": "Bleach",
-        "altName": "Bleach"
+        "id": 372,
+        "name": "Your Lie in April",
+        "altName": "Shigatsu Wa Kimi No Uso"
     },
     "character": {
-        "id": 2428,
-        "name": "Toushirou Hitsugaya"
+        "id": 518,
+        "name": "Kousei Arima"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "joe",
+    "file_name": "eva",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/joe.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/eva.jpg"
 }
 ```
 
@@ -172,9 +172,9 @@ print(result)
 #### Expected Output
 
 ```text
-https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg
 http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
-https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg
+https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg
+http://images6.fanpop.com/image/photos/39400000/1st-generation-pokemon-39423803-4724-2835.jpg
 ```
 
 ### 4. Blackpink
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_sF67XLRL.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_IJKRfbL4.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_CA2EiuVW.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_v9TmooOz.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTk3NzI4OQ.jpg
+https://cdn2.thecatapi.com/images/df3.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/6b41dccd-90ca-4ce8-a0e2-800e9ab92aa7.jpg
+https://random.dog/d28047c5-1bce-4b94-988a-d05d5c15d5fb.jpeg
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=89
+https://randomfox.ca/?i=5
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/vVMOC6oH_qr.png
+/home/runner/work/TheApi/TheApi/downloads/r51A6Pp4_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-YOLO
+If you cannot unscrew the lid of a jar, try placing a rubber band around its circumference for extra grip.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "90,459.181",
-        "rate_float": 90459.1811,
+        "rate": "90,966.926",
+        "rate_float": 90966.9258,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "75,194.464",
-        "rate_float": 75194.4636,
+        "rate": "75,616.528",
+        "rate_float": 75616.5279,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "94,290.093",
-        "rate_float": 94290.0933,
+        "rate": "94,819.341",
+        "rate_float": 94819.3408,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "90905 Margarette Pike Apt. 090",
-            "streetName": "Reichel Fall",
-            "buildingNumber": "5838",
-            "city": "Smithbury",
-            "zipcode": "73934-4406",
-            "country": "Slovenia",
-            "country_code": "SI",
-            "latitude": 38.969152,
-            "longitude": -85.287957
+            "street": "661 Angel Lane Apt. 908",
+            "streetName": "O'Kon Court",
+            "buildingNumber": "973",
+            "city": "New Ethantown",
+            "zipcode": "16714",
+            "country": "Argentina",
+            "country_code": "AR",
+            "latitude": -51.010964,
+            "longitude": 45.879623
         }
     ]
 }
@@ -537,10 +537,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "6011801434819434",
-            "expiration": "10/25",
-            "owner": "Loy Kilback"
+            "type": "Visa",
+            "number": "2572888635591961",
+            "expiration": "11/27",
+            "owner": "Shaylee Sporer"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Et velit alias officia eos.",
-            "description": "Sint ex quo vel quasi ea nemo et. Aut et id repellat dolorem ea veniam eaque. Qui voluptas dolorem voluptas eius. Dolores dolorem corrupti et officia commodi nemo porro.",
+            "title": "Ut et vel magnam et ut.",
+            "description": "Omnis accusamus adipisci rem qui. Non minus suscipit autem quia officiis labore. Reiciendis quis quaerat rem et sit expedita commodi.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-एक बिल्ली पानी में गिर गयी, तो उसके पास बैठी दुसरी बिल्ली क्या बोलेगी..? वैज्ञानिकों की तरह ज्यादा मत सोचो ?  वो म्याऊँ…म्याऊँ ही बोलेगी ??
+इतिहास गवाह हैं कि टमाटर हो या प्याज जब जब इनकी कीमतें बढ़ी हैं तब तब इनको खाने की दिल में तीव्र इच्छा जागृत हुई हैं😆🤣😋😉 
 ```
 
 ### 19. Get Jokes
@@ -629,7 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-Dark humor is like food, not everyone gets it.
+Two SQL tables sit at the bar. A query approaches and asks "Can I join you?"
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-The longest recorded flight of a chicken is thirteen seconds.
+No word in the English language rhymes with month, orange, silver and purple.
 ```
 
 ### 21. Get Word Definitions
@@ -708,16 +708,16 @@ print(result)
 #### Expected Output
 
 ```text
-Canned
-Rearview
-Crafty
-Cycle
-Tastiness
-Mushy
-Exclusion
-Shrubbery
-Clumsily
-Antiviral
+Unpaved
+Anthill
+Whoops
+Abiding
+Saline
+Doodle
+Gratitude
+Algorithm
+Dimple
+Blip
 ```
 
 ### 23. Github Search
@@ -769,7 +769,7 @@ print(result)
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
         "stargazers_count": 4840,
-        "forks_count": 2828
+        "forks_count": 2829
     },
     {
         "name": "PokemonGo-Bot",
@@ -801,7 +801,7 @@ print(result)
 #### Expected Output
 
 ```text
-ऊपर वाले मेरी तक़दीर सम्भाले रखना, ज़मीन के सारे खुदाओं से उलझ बैंठा हूं मैं।
+रूह पर “मैं” का दाग आ जाता है, जब दिलों में दिमाग आ जाता है।
 ```
 
 ### 25. Hug
@@ -854,7 +854,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/gw9r0n54fg9e1.png?width=1080&crop=smart&auto=webp&s=85f069eb9224aba2b2d8baf5a328206ff2e31d05
+https://preview.redd.it/ic8jspx5em9e1.png?width=1080&crop=smart&auto=webp&s=328f9337f83c903c477c23d129af6b3733019796
 ```
 
 ### 27. Neko
@@ -894,22 +894,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/5521975",
-            "artist_name": "\u85e4\u6cb3",
-            "source_url": "https://www.pixiv.net/en/artworks/86012741",
-            "url": "https://nekos.best/api/v2/neko/2a81d26d-6059-4855-b5bb-a0d9ecd9c44c.png"
+            "artist_href": "https://twitter.com/amanagiel",
+            "artist_name": "amanagiel",
+            "source_url": "https://twitter.com/i/web/status/1343043691972231168",
+            "url": "https://nekos.best/api/v2/neko/f6c3d68d-e35b-45e9-8a54-4b7a376cfd28.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/38135486",
-            "artist_name": "\u9ed2\u5bae\u304b\u307c\u3059",
-            "source_url": "https://www.pixiv.net/en/artworks/100558592",
-            "url": "https://nekos.best/api/v2/neko/41150c9c-19ca-4dfb-8807-5cf4f5deb2fb.png"
+            "artist_href": "https://www.pixiv.net/en/users/3480188",
+            "artist_name": "kutata",
+            "source_url": "https://www.pixiv.net/en/artworks/75494184",
+            "url": "https://nekos.best/api/v2/neko/206b513e-1d80-4d23-af06-29bdbb2fed1e.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/37889769",
-            "artist_name": "\u30bf\u30f3\u5869",
-            "source_url": "https://www.pixiv.net/en/artworks/89459198",
-            "url": "https://nekos.best/api/v2/neko/66ea3f1d-d07e-45ab-a7e5-e8e77772209c.png"
+            "artist_href": "https://www.pixiv.net/en/users/31317880",
+            "artist_name": "\u3086\u30fc\u308a\u304b",
+            "source_url": "https://www.pixiv.net/en/artworks/83306340",
+            "url": "https://nekos.best/api/v2/neko/b0197e41-f873-4dd8-bf3f-8f004fa5e9f2.png"
         }
     ]
 }
@@ -985,9 +985,9 @@ print(result)
 #### Expected Output
 
 ```text
-If you can't feed a hundred people, then feed just one.
+If you do not express your own original ideas, if you do not listen to your own being, you will have betrayed yourself.
 
-author - Mother Teresa
+author - Rollo May
 ```
 
 ### 30. Riddle
@@ -1009,8 +1009,8 @@ print(result)
 
 ```json
 {
-    "riddle": "What starts with a T, ends with a T, and has T in it?",
-    "answer": "A teapot"
+    "riddle": "In a pond there are some flowers with some bees hovering over the flowers. How many flowers and bees are there if both the following statements are true:  1. If each bee lands on a flower, one bee doesn't get a flower. 2. If two bees share each flower, there is one flower left out.",
+    "answer": "4 bees and 3 flowers"
 }
 ```
 
@@ -1171,7 +1171,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's primary target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's primary target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -1202,7 +1202,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_tt3ZAYCm.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_cUHRQrJl.jpg
 ```
 
 
