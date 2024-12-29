@@ -180,7 +180,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -203,6 +203,7 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Client Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#the-theapi-class-methods">The <cite>TheApi</cite> Class Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Intro Page</a></li>
 </ul>
 
@@ -234,7 +235,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -243,20 +244,31 @@
           <section id="client-reference">
 <span id="theapi-client"></span><h1>Client Reference<a class="headerlink" href="#client-reference" title="Link to this heading">¶</a></h1>
 <p>This section covers the <cite>TheApi</cite> class and its methods. <cite>TheApi</cite> serves as the primary interface for interacting with the API.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="TheApi.TheApi">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TheApi.</span></span><span class="sig-name descname"><span class="pre">TheApi</span></span><a class="headerlink" href="#TheApi.TheApi" title="Link to this definition">¶</a></dt>
-<dd><p>A class to interact with various APIs and perform operations like fetching data and generating files.</p>
+<p id="module-TheApi.TheApi">A class to interact with various APIs and perform operations like fetching data and generating files.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>downloads_dir</strong> (<em>str</em>) – Directory to save downloaded files. Defaults to “downloads”.</p></li>
-<li><p><strong>quiet</strong> (<em>bool</em>) – Whether to suppress error messages. Defaults to False.</p></li>
-</ul>
+<dt class="field-odd">param downloads_dir<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Directory to save downloaded files. Defaults to “downloads”.</p>
+</dd>
+<dt class="field-even">type downloads_dir<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param quiet<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether to suppress error messages. Defaults to False.</p>
+</dd>
+<dt class="field-even">type quiet<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
 </dd>
 </dl>
-</dd></dl>
-
+</section>
+<section id="the-theapi-class-methods">
+<h1>The <cite>TheApi</cite> Class Methods<a class="headerlink" href="#the-theapi-class-methods" title="Link to this heading">¶</a></h1>
+<p>The following are the public methods of the <cite>TheApi</cite> class:</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+</tbody>
+</table>
+</div>
 </section>
 
         </article>
@@ -306,27 +318,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Client Reference</a><ul>
-<li><a class="reference internal" href="#TheApi.TheApi"><code class="docutils literal notranslate"><span class="pre">TheApi</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
