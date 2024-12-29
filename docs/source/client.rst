@@ -16,4 +16,4 @@ The following are the public methods of the `TheApi` class:
    :toctree: _autosummary
    :nosignatures:
 
-   TheApi.TheApi()
+   TheApi.TheApi
