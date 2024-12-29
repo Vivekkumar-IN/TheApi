@@ -5,8 +5,8 @@ Welcome to TheApix!
    :hidden:
    :caption: Contents:
 
-   intro
    client
+   intro
 
 
 ------------------
