@@ -22,7 +22,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install sphinx  furo
+        pip install sphinx  furo pygments
 
 
     - name: Build documentation
