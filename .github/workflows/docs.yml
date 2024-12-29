@@ -22,7 +22,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install sphinx sphinx-autodoc sphinx-napoleon furo
+        pip install sphinx  furo
 
 
     - name: Build documentation
