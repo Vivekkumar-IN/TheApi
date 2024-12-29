@@ -11,6 +11,7 @@ release = __version__
 copyright = "2024-present, Vivek"
 
 extensions = [
+    'sphinx.ext.autosummary',
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
    # 'sphinx.ext.viewcode',
