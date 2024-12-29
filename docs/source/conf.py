@@ -19,7 +19,7 @@ exclude_patterns = []
 
 html_title = "TheApix"
 html_theme = "furo"
-html_copy_source = False
+html_copy_source = True
 html_static_path = ['_static']
 html_css_files = [
     "css/custom.css",
