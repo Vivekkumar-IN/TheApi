@@ -5,13 +5,12 @@ Client Reference
 
 This section covers the `TheApi` class and its methods. `TheApi` serves as the primary interface for interacting with the API.
 
-TheApi
-------
-
-.. automodule:: TheApi
-   :members:
+.. automodule:: TheApi.api
+    :members:
+    :undoc-members:
+    :inherited-members:
 
 .. autoclass:: TheApi.TheApi
-   :members:
-   :undoc-members:
-   :inherited-members:
+    :members:
+    :undoc-members:
+    :inherited-members:
