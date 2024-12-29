@@ -6,7 +6,7 @@ Welcome to TheApix!
    :caption: Contents:
 
    intro
-   usage
+   client
 
 
 ------------------
