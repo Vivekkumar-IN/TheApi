@@ -8,4 +8,4 @@ The following are the public methods of the `TheApi` class:
    :nosignatures:
 
    TheApi.TheApi
-   TheApi.advice
+   TheApi.TheApi.advice
