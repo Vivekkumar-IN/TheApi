@@ -1,45 +1,38 @@
-name: GitHub Pages
+name: Build and Deploy Docs
 
 on:
   push:
     branches:
-    - dev
-  workflow_dispatch:
+      - dev
 
 jobs:
-  build:
+  setup-and-build-docs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.12'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'  # Use the Python version required for your project
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install sphinx furo
+      - name: Install Sphinx and dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install sphinx
 
-    - name: Build documentation
-      run: |
-        cd docs
-        make html
+      - name: Initialize Sphinx Quickstart
+        run: |
+          cd docs
+          sphinx-quickstart --quiet --project="TheApi" --author="Vivekkumar-in" --release="1.2.7" --ext-autodoc --ext-viewcode --makefile --sep
 
-    - name: Deploy to GitHub Pages
-      if: ${{ github.ref == 'refs/heads/master' }}
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/_build/html
+      - name: List files in docs directory
+        run: ls -la docs
 
-    - name: Delete old workflow run
-      uses: Mattraks/delete-workflow-runs@v2
-      with:
-        token: ${{ github.token }}
-        repository: ${{ github.repository }}
-        retain_days: 0
-        keep_minimum_runs: 1
+      - name: Upload Sphinx HTML files as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sphinx-docs
+          path: docs/_build/html/
