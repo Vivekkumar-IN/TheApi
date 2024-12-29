@@ -48,7 +48,7 @@ html_theme_options = {
         },
         {  # Github logo
             "name": "GitHub",
-            "url": f"https://github.com/Vivekkumar-in/TheApi/tree/{commit_id}",
+            "url": f"https://github.com/Vivekkumar-in/TheApi/tree/dev",
             "html": (
                 '<svg stroke="currentColor" fill="currentColor" stroke-width="0" '
                 'viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 '
