@@ -11,9 +11,17 @@ from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 from ._request import Request
 
-
 class TheApi:
+    """A class to interact with various APIs and perform operations like fetching data and generating files."""
+
     def __init__(self, downloads_dir: str = "downloads", quiet: bool = False):
+        """
+        Initialize the TheApi class.
+
+        Args:
+            downloads_dir (str): Directory to save downloaded files. Defaults to "downloads".
+            quiet (bool): Whether to suppress error messages. Defaults to False.
+        """
         self.base_urls = {
             "advice": "https://api.adviceslip.com/advice",
             "animechan": "https://animechan.io/api/v1/quotes/random",
