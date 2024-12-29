@@ -1,0 +1,1466 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
+
+    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>TheApi.api - TheApix</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=bf2c6fc1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/c.css?v=b84cc7f6" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">TheApix</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">TheApix</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../client.html">Client Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Intro Page</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <h1>Source code for TheApi.api</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">textwrap</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">import</span> <span class="nn">aiofiles</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageOps</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFont</span>
+
+<span class="kn">from</span> <span class="nn">._request</span> <span class="kn">import</span> <span class="n">Request</span>
+
+<div class="viewcode-block" id="TheApi">
+<a class="viewcode-back" href="../../client.html#TheApi.TheApi">[docs]</a>
+<span class="k">class</span> <span class="nc">TheApi</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to interact with various APIs and perform operations like fetching data and generating files.</span>
+
+<span class="sd">    :param downloads_dir: Directory to save downloaded files. Defaults to &quot;downloads&quot;.</span>
+<span class="sd">    :type downloads_dir: str</span>
+<span class="sd">    :param quiet: Whether to suppress error messages. Defaults to False.</span>
+<span class="sd">    :type quiet: bool</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">downloads_dir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;downloads&quot;</span><span class="p">,</span> <span class="n">quiet</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;advice&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.adviceslip.com/advice&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;animechan&quot;</span><span class="p">:</span> <span class="s2">&quot;https://animechan.io/api/v1/quotes/random&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;https://thedobby.club/api/avatars/random/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;btc_value&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.stakdek.de/api/btc/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;bing_image&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.bing.com/images/async&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;carbon&quot;</span><span class="p">:</span> <span class="s2">&quot;https://carbonara.solopov.dev/api/cook&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cat&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.thecatapi.com/v1/images/search&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dog&quot;</span><span class="p">:</span> <span class="s2">&quot;https://random.dog/woof.json&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.domainsdb.info/v1/domains/search?domain=</span><span class="si">{domain}</span><span class="s2">&amp;zone=</span><span class="si">{zone}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;faker&quot;</span><span class="p">:</span> <span class="s2">&quot;https://fakerapi.it/api/v2/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fox&quot;</span><span class="p">:</span> <span class="s2">&quot;https://randomfox.ca/floof/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;font&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/google/fonts/raw/main/ofl/poetsenone/PoetsenOne-Regular.ttf&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hindi_jokes&quot;</span><span class="p">:</span> <span class="s2">&quot;https://hindi-jokes-api.onrender.com/jokes?api_key=93eeccc9d663115eba73839b3cd9&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hindi_quote&quot;</span><span class="p">:</span> <span class="s2">&quot;https://hindi-quotes.vercel.app/random&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;https://graph.org/file/1f8d00177ac2429b101b9.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;jokes&quot;</span><span class="p">:</span> <span class="s2">&quot;https://v2.jokeapi.dev/joke/Any&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;meme&quot;</span><span class="p">:</span> <span class="s2">&quot;https://meme-api.com/gimme&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;neko_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://nekos.best/api/v2/</span><span class="si">{endpoint}</span><span class="s2">?amount=</span><span class="si">{amount}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;neko_hug&quot;</span><span class="p">:</span> <span class="s2">&quot;https://nekos.best/api/v2/hug?amount=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;pdf&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.stakdek.de/api&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;pypi&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pypi.org/pypi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;qr_gen&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.qrserver.com/v1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;quote&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.quotable.io/random&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;riddle&quot;</span><span class="p">:</span> <span class="s2">&quot;https://riddles-api.vercel.app/random&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;useless_fact&quot;</span><span class="p">:</span> <span class="s2">&quot;https://uselessfacts.jsph.pl/api/v2/facts/random&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wikipedia_search&quot;</span><span class="p">:</span> <span class="s2">&quot;https://en.wikipedia.org/w/api.php&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;words&quot;</span><span class="p">:</span> <span class="s2">&quot;https://random-word-api.vercel.app/api&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;word_info&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.dictionaryapi.dev/api/v2/entries/en/</span><span class="si">{word}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;upload&quot;</span><span class="p">:</span> <span class="s2">&quot;https://envs.sh/&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request</span> <span class="o">=</span> <span class="n">Request</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">downloads_dir</span> <span class="o">=</span> <span class="n">downloads_dir</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quiet</span> <span class="o">=</span> <span class="n">quiet</span>
+
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">downloads_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_handle_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="ne">Exception</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="ne">Exception</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">quiet</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">error</span><span class="p">)}</span>
+        <span class="k">raise</span> <span class="n">error</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_create_file</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">contents</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">ext</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a file in the downloads directory, writes the contents to the file, and returns the file path.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            contents (bytes): The content to write to the file.</span>
+<span class="sd">            ext (str): The file extension (e.g., &#39;txt&#39;, &#39;pdf&#39;).</span>
+<span class="sd">            name (str, optional): The base name for the file. Defaults to None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The file path where the contents were written.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s1">&#39;file&#39;</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_rnd_str</span><span class="p">()</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">ext</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">downloads_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+
+        <span class="k">async</span> <span class="k">with</span> <span class="n">aiofiles</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">file_path</span>
+
+    <span class="k">def</span> <span class="nf">_rnd_str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">random_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">8</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">random_str</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">avatar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random avatars from the thedobby.club API.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Contains the file name, file type, and file URL.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;avatar&quot;</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">animechan</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random anime quote from the AnimeChan API.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Contains the quote content, anime name, and character details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;animechan&quot;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">fakerapi</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">quantity</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">locale</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;en_US&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">):</span>  <span class="c1"># gh-actions Don&#39;t Add it&#39;s example, ignore it.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetch data from the FakerAPI using aiohttp.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            endpoint (str): The resource endpoint. Valid endpoints are:</span>
+<span class="sd">                - companies</span>
+<span class="sd">                - addresses</span>
+<span class="sd">                - books</span>
+<span class="sd">                - CreditCards</span>
+<span class="sd">                - images</span>
+<span class="sd">                - persons</span>
+<span class="sd">                - places</span>
+<span class="sd">                - products</span>
+<span class="sd">                - texts</span>
+<span class="sd">                - users</span>
+
+<span class="sd">            quantity (int, optional): Number of rows to fetch (default: 3, max: 1000).</span>
+<span class="sd">            locale (str, optional): Locale for the data (default: &#39;en_US&#39;).  [ See Valid locale ](https://fakerapi.it/#params_locale)</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the locale is invalid, the endpoint is invalid, or the quantity</span>
+<span class="sd">                is outside the allowed range.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Response data from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">valid_endpoints</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;companies&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;addresses&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;books&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;CreditCards&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;images&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;persons&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;places&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;products&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;texts&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;users&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="n">valid_locales</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;ar_EG&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ar_JO&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ar_SA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;at_AT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;bg_BG&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;bn_BD&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cs_CZ&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;da_DK&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;de_AT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;de_CH&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;de_DE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;el_CY&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;el_GR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_AU&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_CA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_GB&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_HK&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_IN&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_NG&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_NZ&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_PH&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_SG&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_UG&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_US&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;en_ZA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;es_AR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;es_ES&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;es_PE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;es_VE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;et_EE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fa_IR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fi_FI&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fr_BE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fr_CA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fr_CH&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fr_FR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;he_IL&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hr_HR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hu_HU&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hy_AM&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id_ID&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;is_IS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;it_CH&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;it_IT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ja_JP&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ka_GE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;kk_KZ&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ko_KR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lt_LT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lv_LV&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;me_ME&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;mn_MN&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ms_MY&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nb_NO&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ne_NP&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nl_BE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nl_NL&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;pl_PL&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;pt_BR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;pt_PT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ro_MD&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ro_RO&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ru_RU&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sk_SK&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sl_SI&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sr_Cyrl_RS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sr_Latn_RS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sr_RS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sv_SE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;th_TH&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tr_TR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;uk_UA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vi_VN&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;zh_CN&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;zh_TW&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">locale</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_locales</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span>
+                <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid locale &#39;</span><span class="si">{</span><span class="n">locale</span><span class="si">}</span><span class="s2">&#39;. Must be one of </span><span class="si">{</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">valid_locales</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">endpoint</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_endpoints</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span>
+                <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid endpoint &#39;</span><span class="si">{</span><span class="n">endpoint</span><span class="si">}</span><span class="s2">&#39;. Must be one of </span><span class="si">{</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">valid_endpoints</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">quantity</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">quantity</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Quantity must be between 1 and 1000&quot;</span><span class="p">))</span>
+
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;_quantity&quot;</span><span class="p">:</span> <span class="n">quantity</span><span class="p">,</span>
+            <span class="s2">&quot;_locale&quot;</span><span class="p">:</span> <span class="n">locale</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s1">&#39;faker&#39;</span><span class="p">]</span><span class="si">}{</span><span class="n">endpoint</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_fake_images</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">quantity</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">locale</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;en_US&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;any&quot;</span><span class="p">,</span>
+        <span class="n">width</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">640</span><span class="p">,</span>
+        <span class="n">height</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">480</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetch fake image data from the FakerAPI.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            quantity (int, optional): Number of images to fetch (default: 1).</span>
+<span class="sd">            locale (str, optional): Locale for the images (default: &quot;en_US&quot;), [ See Valid locale ](https://fakerapi.it/#params_locale).</span>
+<span class="sd">            type (str, optional): Type of image (e.g., &#39;any&#39;, &#39;animals&#39;, &#39;business&#39;, etc.; default: &quot;any&quot;).</span>
+<span class="sd">            width (int, optional): Width of the images (default: 640).</span>
+<span class="sd">            height (int, optional): Height of the images (default: 480).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Response data from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">fakerapi</span><span class="p">(</span>
+            <span class="s2">&quot;images&quot;</span><span class="p">,</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">quantity</span><span class="p">,</span>
+            <span class="n">locale</span><span class="o">=</span><span class="n">locale</span><span class="p">,</span>
+            <span class="n">_type</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span>
+            <span class="n">_width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
+            <span class="n">_height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_fake_credit_cards</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">locale</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;en_US&quot;</span><span class="p">,</span> <span class="n">quantity</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetch fake credit card data from the FakerAPI.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            locale (str, optional): Locale for the credit card data (default: &quot;en_US&quot;), [ See Valid locale ](https://fakerapi.it/#params_locale).</span>
+<span class="sd">            amount (int, optional): Number of credit card entries to fetch (default: 1).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Response data from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">fakerapi</span><span class="p">(</span><span class="s2">&quot;CreditCards&quot;</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="n">quantity</span><span class="p">,</span> <span class="n">locale</span><span class="o">=</span><span class="n">locale</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_fake_addresses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantity</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">locale</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;en_US&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetch fake address data from the FakerAPI.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            quantity (int, optional): Number of address entries to fetch (default: 1).</span>
+<span class="sd">            locale (str, optional): Locale for the address data (default: &quot;en_US&quot;), [ See Valid locale ](https://fakerapi.it/#params_locale).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Response data from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">fakerapi</span><span class="p">(</span><span class="s2">&quot;addresses&quot;</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="n">quantity</span><span class="p">,</span> <span class="n">locale</span><span class="o">=</span><span class="n">locale</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_advice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random piece of advice.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A random advice message.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;advice&quot;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;slip&quot;</span><span class="p">][</span><span class="s2">&quot;advice&quot;</span><span class="p">]</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_btc_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">currency</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            currency (str, optional): The currency code (e.g., &#39;eur&#39;, &#39;usd&#39;, &#39;gbp&#39;).</span>
+<span class="sd">                                      If None, fetches BTC value for all currencies.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: The response containing BTC value(s) for the specified currency or all currencies.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the provided currency is invalid or the request fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">valid_currencies</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;eur&quot;</span><span class="p">,</span> <span class="s2">&quot;usd&quot;</span><span class="p">,</span> <span class="s2">&quot;gbp&quot;</span><span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s1">&#39;btc_value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/get_btc_value&quot;</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">currency</span>
+            <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s1">&#39;btc_value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/get_btc_</span><span class="si">{</span><span class="n">currency</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">currency</span> <span class="ow">and</span> <span class="n">currency</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_currencies</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span>
+                <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid currency provided: </span><span class="si">{</span><span class="n">currency</span><span class="si">}</span><span class="s2">. Valid options are: </span><span class="si">{</span><span class="n">valid_currencies</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_jokes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a specified number of jokes.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            amount (int, optional): The number of jokes to retrieve. Defaults to 1.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A single joke if `amount` is 1.</span>
+<span class="sd">            list: If `amount` &gt; 1, returns numbered jokes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;jokes&quot;</span><span class="p">]</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;single&quot;</span><span class="p">,</span> <span class="s2">&quot;amount&quot;</span><span class="p">:</span> <span class="n">amount</span><span class="p">}</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">amount</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;joke&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">jokes</span> <span class="o">=</span> <span class="p">[</span><span class="n">joke</span><span class="p">[</span><span class="s2">&quot;joke&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">joke</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;jokes&quot;</span><span class="p">]]</span>
+            <span class="k">return</span> <span class="n">jokes</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_hindi_jokes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random Hindi joke.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A random Hindi joke if available, or &quot;No joke found&quot; if not available.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;hindi_jokes&quot;</span><span class="p">])</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;jokeContent&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="k">else</span> <span class="s2">&quot;No joke found.&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">generate_pdf</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">from_url</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1"># gh-actions Don&#39;t Add it&#39;s example, ignore it.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generates a PDF from a URL or an HTML string and saves it to a file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            source (str): The URL of the website (if `from_url=True`) or the HTML string (if `from_url=False`).</span>
+<span class="sd">            from_url (bool, optional): Whether to generate the PDF from a URL (True) or an HTML string (False).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            FilePath: The file path where the PDF was saved.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If `from_url` is True and `source` is not a valid URL.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">from_url</span><span class="p">:</span>
+            <span class="c1"># Validate the URL format using regex</span>
+            <span class="n">url_regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+                <span class="sa">r</span><span class="s2">&quot;^(https?://)?&quot;</span>  <span class="c1"># http or https</span>
+                <span class="sa">r</span><span class="s2">&quot;(([A-Za-z0-9-]+\.)+[A-Za-z]{2,6})&quot;</span>  <span class="c1"># Domain</span>
+                <span class="sa">r</span><span class="s2">&quot;(:[0-9]{1,5})?&quot;</span>  <span class="c1"># Optional port</span>
+                <span class="sa">r</span><span class="s2">&quot;(/[A-Za-z0-9._%+-]*)*$&quot;</span><span class="p">,</span>  <span class="c1"># Path</span>
+                <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">url_regex</span><span class="p">,</span> <span class="n">source</span><span class="p">):</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid URL provided: </span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;pdf&quot;</span><span class="p">]</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;/from_url&quot;</span> <span class="k">if</span> <span class="n">from_url</span> <span class="k">else</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;/from_html&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">source</span><span class="p">}</span> <span class="k">if</span> <span class="n">from_url</span> <span class="k">else</span> <span class="p">{</span><span class="s2">&quot;html&quot;</span><span class="p">:</span> <span class="n">source</span><span class="p">}</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">pdf_content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_file</span><span class="p">(</span><span class="n">pdf_content</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="s2">&quot;pdf&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;pdf&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">file_path</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">gen_qr</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">size</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;150x150&quot;</span><span class="p">,</span>
+        <span class="n">foreground_color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;000000&quot;</span><span class="p">,</span>
+        <span class="n">background_color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FFFFFF&quot;</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate a QR code using api.qrserver.com and save it as a PNG file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (str): The content for the QR code.</span>
+<span class="sd">            size (str): The size of the QR code in the format &#39;WIDTHxHEIGHT&#39; (default: &#39;150x150&#39;).</span>
+<span class="sd">            foreground_color (str): The color of the QR code (default: &#39;000000&#39; - black).</span>
+<span class="sd">            background_color (str): The background color of the QR code (default: &#39;FFFFFF&#39; - white).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            FilePath: The file path where the QR code was saved.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s1">&#39;qr_gen&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/create-qr-code/&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="n">size</span><span class="p">,</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="n">foreground_color</span><span class="p">,</span>
+            <span class="s2">&quot;bgcolor&quot;</span><span class="p">:</span> <span class="n">background_color</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_file</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;QrCode&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">file_path</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_uselessfact</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random useless fact.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A random useless fact.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;useless_fact&quot;</span><span class="p">])</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">quote</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random quote.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The content of a random quote followed by the author&#39;s name.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;quote&quot;</span><span class="p">],</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">author - </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">hindi_quote</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random Hindi quote.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The content of a random Hindi quote.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;hindi_quote&quot;</span><span class="p">])</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;quote&quot;</span><span class="p">]</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates an image with text written on it, using a predefined template and font,</span>
+<span class="sd">        and uploads the image after generation.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            text (str): The text to be written on the image. Text exceeding 55 characters</span>
+<span class="sd">                        per line will be wrapped, with up to 25 lines displayed.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The URL of the uploaded image.</span>
+
+<span class="sd">        Notes:</span>
+<span class="sd">            A temporary image file is created, saved, and removed after uploading.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">tryimg</span> <span class="o">=</span> <span class="s2">&quot;https://graph.org/file/1f8d00177ac2429b101b9.jpg&quot;</span>
+        <span class="n">tryresp</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">tryimg</span><span class="p">)</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">tryresp</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+        <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+        <span class="n">font_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/google/fonts/raw/main/ofl/poetsenone/PoetsenOne-Regular.ttf&quot;</span>
+        <span class="n">font_response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">font_url</span><span class="p">)</span>
+        <span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">font_response</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="mi">24</span><span class="p">)</span>
+
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">140</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">55</span><span class="p">:</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">all_lines</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">all_lines</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">55</span><span class="p">:</span>
+                    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">k</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">//</span> <span class="mi">55</span>
+                    <span class="n">lines</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+                        <span class="n">line</span><span class="p">[((</span><span class="n">z</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">55</span><span class="p">)</span> <span class="p">:</span> <span class="p">(</span><span class="n">z</span> <span class="o">*</span> <span class="mi">55</span><span class="p">)]</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+                    <span class="p">)</span>
+
+        <span class="n">umm</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[:</span><span class="mi">25</span><span class="p">]</span>
+
+        <span class="n">line_height</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">getbbox</span><span class="p">(</span><span class="s2">&quot;hg&quot;</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">linespacing</span> <span class="o">=</span> <span class="mi">41</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">umm</span><span class="p">:</span>
+            <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">line</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">55</span><span class="p">),</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">linespacing</span>
+
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">downloads_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;write_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_rnd_str</span><span class="p">()</span><span class="si">}</span><span class="s2">.jpg&quot;</span><span class="p">)</span>
+
+        <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">file_path</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">carbon</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generates a code snippet image using the Carbon API, saves it to the downloads folder,</span>
+<span class="sd">        uploads it, and returns the URL of the uploaded image.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            query (str): The code snippet to be rendered as an image.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            FilePath: The file path of the saved image.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="s2">&quot;https://carbonara.solopov.dev/api/cook&quot;</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">},</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">},</span>
+        <span class="p">)</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_file</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;carbon&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">file_path</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">wikipedia</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Searches Wikipedia for a given query and retrieves the top result&#39;s summary, URL, and image.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            query (str): The search term to look up on Wikipedia.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: A dictionary containing information about the top search result, with keys:</span>
+<span class="sd">                - title (str): The title of the Wikipedia article.</span>
+<span class="sd">                - summary (str): A brief summary of the article&#39;s content.</span>
+<span class="sd">                - url (str): The URL link to the full Wikipedia article.</span>
+<span class="sd">                - image_url (str): The URL of the article&#39;s thumbnail image, or &quot;No image available&quot; if none exists.</span>
+
+<span class="sd">            If no results are found, returns a dictionary with an &quot;error&quot; key.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">search_url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;wikipedia_search&quot;</span><span class="p">]</span>
+
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">:</span> <span class="s2">&quot;search&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;srsearch&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span>
+            <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="n">search_response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">search_response</span> <span class="o">=</span> <span class="n">search_response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="n">search_results</span> <span class="o">=</span> <span class="n">search_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;search&quot;</span><span class="p">,</span> <span class="p">[])</span>
+
+        <span class="k">if</span> <span class="n">search_results</span><span class="p">:</span>
+            <span class="n">top_result</span> <span class="o">=</span> <span class="n">search_results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">page_id</span> <span class="o">=</span> <span class="n">top_result</span><span class="p">[</span><span class="s2">&quot;pageid&quot;</span><span class="p">]</span>
+            <span class="n">summary_url</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s1">&#39;wikipedia_search&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">?action=query&amp;prop=extracts|pageimages&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;&amp;exintro&amp;explaintext&amp;piprop=thumbnail&amp;pithumbsize=500&amp;format=json&amp;pageids=</span><span class="si">{</span><span class="n">page_id</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+            <span class="n">summary_response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">summary_url</span><span class="p">)</span>
+            <span class="n">summary_response</span> <span class="o">=</span> <span class="n">summary_response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="n">pages</span> <span class="o">=</span> <span class="n">summary_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;pages&quot;</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="n">page_info</span> <span class="o">=</span> <span class="n">pages</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">page_id</span><span class="p">),</span> <span class="p">{})</span>
+            <span class="n">image_url</span> <span class="o">=</span> <span class="n">page_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;No image available&quot;</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">top_result</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="n">page_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extract&quot;</span><span class="p">,</span> <span class="s2">&quot;No summary available.&quot;</span><span class="p">),</span>
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://en.wikipedia.org/?curid=</span><span class="si">{</span><span class="n">page_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;image_url&quot;</span><span class="p">:</span> <span class="n">image_url</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No search results found&quot;</span><span class="p">))</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">github_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">search_type</span><span class="o">=</span><span class="s2">&quot;repositories&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Searches GitHub for various types of content.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            query (str): The search query.</span>
+<span class="sd">            search_type (str, optional): The type of search. Can be one of:</span>
+<span class="sd">                - &quot;repositories&quot;</span>
+<span class="sd">                - &quot;users&quot;</span>
+<span class="sd">                - &quot;organizations&quot;</span>
+<span class="sd">                - &quot;issues&quot;</span>
+<span class="sd">                - &quot;pull_requests&quot;</span>
+<span class="sd">                - &quot;commits&quot;</span>
+<span class="sd">                - &quot;topics&quot;</span>
+
+<span class="sd">                Defaults to &quot;repositories&quot;.</span>
+<span class="sd">            max_results (int, optional): The maximum number of results to return. Defaults to 3.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: A list of search results or an error message.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">valid_search_types</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;repositories&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;users&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;organizations&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;issues&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;pull_requests&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;commits&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;topics&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">search_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_search_types</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Invalid search type. Valid types are: </span><span class="si">{</span><span class="n">valid_search_types</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">}</span>
+
+        <span class="n">url_mapping</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;pull_requests&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/search/issues&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;organizations&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/search/users&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;topics&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/search/topics&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="n">search_type</span> <span class="ow">in</span> <span class="n">url_mapping</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="n">url_mapping</span><span class="p">[</span><span class="n">search_type</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">search_type</span> <span class="o">==</span> <span class="s2">&quot;pull_requests&quot;</span><span class="p">:</span>
+                <span class="n">query</span> <span class="o">+=</span> <span class="s2">&quot; type:pr&quot;</span>
+            <span class="k">elif</span> <span class="n">search_type</span> <span class="o">==</span> <span class="s2">&quot;organizations&quot;</span><span class="p">:</span>
+                <span class="n">query</span> <span class="o">+=</span> <span class="s2">&quot; type:org&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://api.github.com/search/</span><span class="si">{</span><span class="n">search_type</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Accept&quot;</span><span class="p">:</span> <span class="s2">&quot;application/vnd.github.v3+json&quot;</span><span class="p">}</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s2">&quot;per_page&quot;</span><span class="p">:</span> <span class="n">max_results</span><span class="p">}</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="n">items</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;items&quot;</span><span class="p">,</span> <span class="p">[])</span>
+
+            <span class="n">result_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+                <span class="n">item_info</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">if</span> <span class="n">search_type</span> <span class="o">==</span> <span class="s2">&quot;repositories&quot;</span><span class="p">:</span>
+                    <span class="n">item_info</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;full_name&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;full_name&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;html_url&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;language&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;stargazers_count&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;stargazers_count&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;forks_count&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;forks_count&quot;</span><span class="p">),</span>
+                    <span class="p">}</span>
+                <span class="k">elif</span> <span class="n">search_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;users&quot;</span><span class="p">,</span> <span class="s2">&quot;organizations&quot;</span><span class="p">]:</span>
+                    <span class="n">item_info</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="s2">&quot;login&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;login&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;html_url&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;avatar_url&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;avatar_url&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;site_admin&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;site_admin&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;company&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;company&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;blog&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;blog&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;email&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;bio&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;bio&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;public_repos&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;public_repos&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;public_gists&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;public_gists&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;followers&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;followers&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;following&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;following&quot;</span><span class="p">),</span>
+                    <span class="p">}</span>
+                <span class="k">elif</span> <span class="n">search_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;issues&quot;</span><span class="p">,</span> <span class="s2">&quot;pull_requests&quot;</span><span class="p">]:</span>
+                    <span class="n">item_info</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">][</span><span class="s2">&quot;login&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;html_url&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;comments&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;comments&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;created_at&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;updated_at&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;closed_at&quot;</span><span class="p">),</span>
+                    <span class="p">}</span>
+                <span class="k">elif</span> <span class="n">search_type</span> <span class="o">==</span> <span class="s2">&quot;commits&quot;</span><span class="p">:</span>
+                    <span class="n">item_info</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="s2">&quot;sha&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;sha&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;commit_message&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;commit&quot;</span><span class="p">][</span><span class="s2">&quot;message&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;commit&quot;</span><span class="p">][</span><span class="s2">&quot;author&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;commit&quot;</span><span class="p">][</span><span class="s2">&quot;author&quot;</span><span class="p">][</span><span class="s2">&quot;date&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;html_url&quot;</span><span class="p">],</span>
+                    <span class="p">}</span>
+                <span class="k">elif</span> <span class="n">search_type</span> <span class="o">==</span> <span class="s2">&quot;topics&quot;</span><span class="p">:</span>
+                    <span class="n">item_info</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;display_name&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;short_description&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;short_description&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;created_by&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;created_by&quot;</span><span class="p">),</span>
+                        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="s2">&quot;url&quot;</span> <span class="ow">in</span> <span class="n">item</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+                    <span class="p">}</span>
+
+                <span class="n">result_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item_info</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">result_list</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_words</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">letter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">word_type</span><span class="o">=</span><span class="s2">&quot;capitalized&quot;</span><span class="p">,</span> <span class="n">alphabetize</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetch random words from the Random Word API.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            words (int): Number of words to generate (default is 10).</span>
+<span class="sd">            letter (str): First letter of the words (optional).</span>
+<span class="sd">            word_type (str): Type of words (lowercase, uppercase, capitalized; default is capitalized).</span>
+<span class="sd">            alphabetize (bool): Whether to alphabetize the result (default is False).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: A list of random words or an error message.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;words&quot;</span><span class="p">:</span> <span class="n">words</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="n">word_type</span><span class="p">,</span>
+            <span class="s2">&quot;alphabetize&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">alphabetize</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="n">letter</span><span class="p">:</span>
+            <span class="n">params</span><span class="p">[</span><span class="s2">&quot;letter&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">letter</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;words&quot;</span><span class="p">],</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">cat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random cat image URL.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str or None: The URL of a random cat image if available; None if no response is received.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">])</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;url&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">response</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">dog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random dog image URL.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str or None: The URL of a random dog image if available; None if no response is received.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;dog&quot;</span><span class="p">])</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">response</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">pypi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">package_name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieves metadata information about a specified Python package from the PyPI API.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            package_name (str): The name of the package to search for on PyPI.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict or None: A dictionary with relevant package information if found.</span>
+<span class="sd">            Returns None if the package is not found or there is an error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s1">&#39;pypi&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">package_name</span><span class="si">}</span><span class="s2">/json&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">response</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">response</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">meme</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random meme image URL.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str or None: The URL of the meme image if available, otherwise None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;meme&quot;</span><span class="p">])</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;preview&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">response</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">fox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random fox image URL.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str or None: The URL of the fox image if available, otherwise None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;fox&quot;</span><span class="p">])</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;link&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">response</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">bing_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Searches Bing for images based on a query and retrieves image URLs.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            query (str): The search query string for finding images.</span>
+<span class="sd">            limit (int, optional): The maximum number of image URLs to return. Defaults to 3.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: A list of image URLs retrieved from the Bing search results.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span>
+            <span class="s2">&quot;first&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="n">limit</span><span class="p">,</span>
+            <span class="s2">&quot;adlt&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;qft&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;bing_image&quot;</span><span class="p">],</span> <span class="n">params</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;murl&amp;quot;:&amp;quot;(.*?)&amp;quot;&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">response</span>
+            <span class="k">else</span> <span class="p">[]</span>
+        <span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">stackoverflow_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">sort_type</span><span class="o">=</span><span class="s2">&quot;relevance&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Searches Stack Overflow for questions based on a query, returning results sorted by relevance or another specified criteria.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            query (str): The search query string.</span>
+<span class="sd">            max_results (int, optional): The maximum number of results to return. Defaults to 3.</span>
+<span class="sd">            sort_type (str, optional): The sorting criteria for the results, such as &quot;relevance&quot; or &quot;votes&quot;. Defaults to &quot;relevance&quot;.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: A list of search results in JSON format, with each entry containing Stack Overflow question details.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If there is an issue with the request to the Stack Overflow API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.stackexchange.com/2.3/search/advanced&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;desc&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sort&quot;</span><span class="p">:</span> <span class="n">sort_type</span><span class="p">,</span>
+            <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span>
+            <span class="s2">&quot;site&quot;</span><span class="p">:</span> <span class="s2">&quot;stackoverflow&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;page&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="n">all_results</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_results</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">max_results</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="n">results</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;items&quot;</span><span class="p">,</span> <span class="p">[])</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">results</span><span class="p">:</span>
+                <span class="k">break</span>
+
+            <span class="n">all_results</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
+                <span class="k">break</span>
+
+            <span class="n">params</span><span class="p">[</span><span class="s2">&quot;page&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">all_results</span><span class="p">[:</span><span class="n">max_results</span><span class="p">]</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">blackpink</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff94e0&quot;</span><span class="p">,</span> <span class="n">border_color</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a stylized &quot;Blackpink&quot;-themed image with custom text, color, and optional border.</span>
+<span class="sd">        Args:</span>
+<span class="sd">            query (str): The text to display on the image.</span>
+<span class="sd">            color (str, optional): The primary color of the text and gradient background in hex format.</span>
+<span class="sd">                Defaults to &quot;#ff94e0&quot; (a pink shade).</span>
+<span class="sd">            border_color (str, optional): The color of the image border in hex format.</span>
+<span class="sd">                If not provided, defaults to the value of `color`.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            FilePath: The file path of the generated image with delete attribute.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">query</span>
+        <span class="n">font_path</span> <span class="o">=</span> <span class="s2">&quot;/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf&quot;</span>
+        <span class="n">initial_font_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+        <span class="n">img_width</span> <span class="o">=</span> <span class="mi">800</span>
+        <span class="n">img_height</span> <span class="o">=</span> <span class="mi">600</span>
+
+        <span class="n">dummy_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">draw_dummy</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">dummy_img</span><span class="p">)</span>
+
+        <span class="n">font_size</span> <span class="o">=</span> <span class="n">initial_font_size</span>
+        <span class="n">padding</span> <span class="o">=</span> <span class="mi">50</span>
+        <span class="n">max_width</span> <span class="o">=</span> <span class="n">img_width</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">padding</span>
+        <span class="n">max_height</span> <span class="o">=</span> <span class="n">img_height</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">padding</span>
+
+        <span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">font_path</span><span class="p">,</span> <span class="n">font_size</span><span class="p">)</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">textwrap</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">text_height</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+                <span class="n">draw_dummy</span><span class="o">.</span><span class="n">textbbox</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">line</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
+                <span class="o">-</span> <span class="n">draw_dummy</span><span class="o">.</span><span class="n">textbbox</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">line</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">text_height</span> <span class="o">&lt;=</span> <span class="n">max_height</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span>
+                <span class="n">draw_dummy</span><span class="o">.</span><span class="n">textbbox</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">line</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">max_width</span>
+                <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span>
+            <span class="p">):</span>
+                <span class="k">break</span>
+            <span class="n">font_size</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">font_path</span><span class="p">,</span> <span class="n">font_size</span><span class="p">)</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">textwrap</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+
+        <span class="n">gradient</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">img_width</span><span class="p">,</span> <span class="n">img_height</span><span class="p">),</span> <span class="n">color</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img_height</span><span class="p">):</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">255</span> <span class="o">-</span> <span class="p">(</span><span class="mi">255</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="mi">16</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="n">img_height</span><span class="p">))</span>
+            <span class="n">g</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">148</span> <span class="o">-</span> <span class="p">(</span><span class="mi">148</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">color</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">],</span> <span class="mi">16</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="n">img_height</span><span class="p">))</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">224</span> <span class="o">-</span> <span class="p">(</span><span class="mi">224</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">color</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">],</span> <span class="mi">16</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="n">img_height</span><span class="p">))</span>
+            <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">gradient</span><span class="p">)</span><span class="o">.</span><span class="n">line</span><span class="p">([(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="p">(</span><span class="n">img_width</span><span class="p">,</span> <span class="n">i</span><span class="p">)],</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+
+        <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">img_width</span><span class="p">,</span> <span class="n">img_height</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+        <span class="n">y_text</span> <span class="o">=</span> <span class="p">(</span><span class="n">img_height</span> <span class="o">-</span> <span class="n">text_height</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="n">bbox</span> <span class="o">=</span> <span class="n">draw</span><span class="o">.</span><span class="n">textbbox</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">line</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+            <span class="n">line_width</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">line_height</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+                <span class="p">((</span><span class="n">img_width</span> <span class="o">-</span> <span class="n">line_width</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y_text</span><span class="p">),</span>
+                <span class="n">line</span><span class="p">,</span>
+                <span class="n">fill</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+                <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">,</span>
+                <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">y_text</span> <span class="o">+=</span> <span class="n">line_height</span>
+
+        <span class="n">border_color</span> <span class="o">=</span> <span class="n">border_color</span> <span class="ow">or</span> <span class="n">color</span>
+        <span class="n">border_width</span> <span class="o">=</span> <span class="mi">28</span>
+        <span class="n">img_with_border</span> <span class="o">=</span> <span class="n">ImageOps</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">border</span><span class="o">=</span><span class="n">border_width</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">border_color</span><span class="p">)</span>
+
+        <span class="n">final_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+            <span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">img_with_border</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">img_with_border</span><span class="o">.</span><span class="n">height</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">final_img</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">gradient</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">final_img</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">img_with_border</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">downloads_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;blackpink_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_rnd_str</span><span class="p">()</span><span class="si">}</span><span class="s2">.jpg&quot;</span><span class="p">)</span>
+
+        <span class="n">final_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;JPEG&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">file_path</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">upload_image</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">BytesIO</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1"># gh-actions Don&#39;t Add it&#39;s example, ignore it.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Uploads an image to https://envs.sh.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            file_path (Union[str, bytes, BytesIO]): The image file to upload.</span>
+<span class="sd">                Can be a file path (str), binary data (bytes), or a BytesIO object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The URL or confirmation message of the uploaded image if the upload is successful.</span>
+<span class="sd">                Returns &quot;Unexpected response format&quot; if the response format is not as expected.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the file is not found, the input type is invalid,</span>
+<span class="sd">                or the upload request fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">async</span> <span class="k">with</span> <span class="n">aiofiles</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">image_bytes</span> <span class="o">=</span> <span class="k">await</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span>
+                    <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;File not found: &#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">&#39; - Ensure the file path is correct.&quot;</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">BytesIO</span><span class="p">):</span>
+            <span class="n">image_bytes</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">file_path</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)</span> <span class="k">else</span> <span class="n">file_path</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span>
+                <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Invalid input type - Expected a file path (str), binary data (bytes), or BytesIO object.&quot;</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;upload&quot;</span><span class="p">]</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="n">image_bytes</span><span class="p">}</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">(</span>
+                <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+                <span class="k">else</span> <span class="s2">&quot;Unexpected response format&quot;</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Upload failed: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">riddle</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetches a random riddle from the Riddles API.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: The riddle data in JSON format.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;riddle&quot;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">hug</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fetches a specified number hug gif from the Nekos.Best API.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            amount (int): The number of neko images to fetch. Defaults to 1.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: A list of dictionaries containing information about each fetched neko image or GIF.</span>
+<span class="sd">                  Each dictionary typically includes:</span>
+<span class="sd">                  - anime_name (str): The name of the anime.</span>
+<span class="sd">                  - url (str): The URL of the GIF.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;neko_hug&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">amount</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;results&quot;</span><span class="p">]</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">neko</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;neko&quot;</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fetches a specified number of neko images or GIFs from the Nekos.Best API.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            endpoint (str): The endpoint category to fetch content from. Default is &quot;neko&quot;.</span>
+<span class="sd">                Valid image endpoints:</span>
+<span class="sd">                - &quot;husbando&quot;, &quot;kitsune&quot;, &quot;neko&quot;, &quot;waifu&quot;</span>
+<span class="sd">                Valid GIF endpoints:</span>
+<span class="sd">                - &quot;baka&quot;, &quot;bite&quot;, &quot;blush&quot;, &quot;bored&quot;, &quot;cry&quot;, &quot;cuddle&quot;, &quot;dance&quot;, &quot;facepalm&quot;,</span>
+<span class="sd">                  &quot;feed&quot;, &quot;handhold&quot;, &quot;handshake&quot;, &quot;happy&quot;, &quot;highfive&quot;, &quot;hug&quot;, &quot;kick&quot;,</span>
+<span class="sd">                  &quot;kiss&quot;, &quot;laugh&quot;, &quot;lurk&quot;, &quot;nod&quot;, &quot;nom&quot;, &quot;nope&quot;, &quot;pat&quot;, &quot;peck&quot;, &quot;poke&quot;,</span>
+<span class="sd">                  &quot;pout&quot;, &quot;punch&quot;, &quot;shoot&quot;, &quot;shrug&quot;, &quot;slap&quot;, &quot;sleep&quot;, &quot;smile&quot;, &quot;smug&quot;,</span>
+<span class="sd">                  &quot;stare&quot;, &quot;think&quot;, &quot;thumbsup&quot;, &quot;tickle&quot;, &quot;wave&quot;, &quot;wink&quot;, &quot;yawn&quot;, &quot;yeet&quot;</span>
+<span class="sd">            amount (int): The number of items to fetch. Default is 3.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: A dictionary containing the results of the request. The dictionary has a key `&quot;results&quot;`,</span>
+<span class="sd">                  which holds a list of items.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the endpoint is not a valid category.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">valid_categories</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;husbando&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;kitsune&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;neko&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;waifu&quot;</span><span class="p">,</span>  <span class="c1"># Images</span>
+            <span class="s2">&quot;baka&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;bite&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;blush&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;bored&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cry&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cuddle&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dance&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;facepalm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;feed&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;handhold&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;handshake&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;happy&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;highfive&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hug&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;kick&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;kiss&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;laugh&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lurk&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nod&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nom&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nope&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;pat&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;peck&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;poke&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;pout&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;punch&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;shoot&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;shrug&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;slap&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sleep&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;smile&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;smug&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stare&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;think&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;thumbsup&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tickle&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wave&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wink&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;yawn&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;yeet&quot;</span><span class="p">,</span>  <span class="c1"># GIFs</span>
+        <span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">endpoint</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_categories</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span>
+                <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid endpoint &#39;</span><span class="si">{</span><span class="n">endpoint</span><span class="si">}</span><span class="s2">&#39;. Must be one of: </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">valid_categories</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;neko_url&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">endpoint</span><span class="o">=</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="n">amount</span><span class="p">)</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">domain_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">zone</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;com&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fetches domain information from the DomainsDB API.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            domain (str): The domain name to search for (e.g., &quot;facebook&quot;).</span>
+<span class="sd">            zone (str): The domain zone to search within (e.g., &quot;com&quot;).Default is &quot;com&quot;.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: A dictionary containing the results of the domain search.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">domain</span><span class="p">,</span> <span class="n">zone</span><span class="o">=</span><span class="n">zone</span><span class="p">)</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_word_definitions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetch definitions for a word from the Dictionary API.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            word (str): The word to fetch definitions for.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: A list of dictionaries containing the word definitions.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the `word` is not provided or the API request fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_urls</span><span class="p">[</span><span class="s2">&quot;word_info&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">word</span><span class="o">=</span><span class="n">word</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span></div>
+
+
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">TheApi</span><span class="p">()</span>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024-present, Vivek
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://t.me/TheTeamVivek" aria-label="Telegram Channel"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"></path></svg></a>
+              <a class="muted-link " href="https://github.com/Vivekkumar-in/TheApi/tree/dev" aria-label="GitHub"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../_static/documentation_options.js?v=c70001e7"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
+    </body>
+</html>
