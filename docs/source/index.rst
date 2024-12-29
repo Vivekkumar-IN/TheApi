@@ -8,3 +8,7 @@ Welcome to TheApix!
    intro
    usage
 
+
+------------------
+Indices and tables
+------------------
