@@ -1,11 +1,11 @@
 /* Reduce the width of the sidebar */
 .sidebar {
-    width: 220px;  /* You can adjust this value */
+    width: 300px;  /* You can adjust this value */
 }
 
 /* Adjust the content area to fill the remaining space */
 .main-content {
-    margin-left: 220px;  /* Match this value with the sidebar width */
+    margin-left: 300px;  /* Match this value with the sidebar width */
 }
 
 /* Optional: Adjust the sidebar collapse behavior */
