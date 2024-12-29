@@ -1,7 +1,7 @@
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../TheApi'))
-# sys.path.insert(0, os.path.abspath('..'))
+
+sys.path.insert(0, os.path.abspath('..'))
 
 project = 'TheApix'
 author = 'Vivekkumar-IN'
