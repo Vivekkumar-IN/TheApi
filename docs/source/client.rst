@@ -8,8 +8,4 @@ This section covers the `TheApi` class and its methods. `TheApi` serves as the p
 TheApi
 ------
 
-.. autoclass:: TheApi.TheApi
-   :members:
-   :undoc-members:
-   :inherited-members:
-   :show-inheritance:
+.. autoclass:: TheApi.TheApi()
