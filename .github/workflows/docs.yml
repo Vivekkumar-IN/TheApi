@@ -31,6 +31,16 @@ jobs:
       - name: List files in docs directory
         run: ls -la docs
 
+      - name: Auto Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+            commit_message: "Auto Code Formatting Fixes"
+            commit_options: "--no-verify"
+            repository: .
+            commit_user_name: "github-actions[bot]"
+            commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
+            commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+
       - name: Upload Sphinx HTML files as an artifact
         uses: actions/upload-artifact@v3
         with:
