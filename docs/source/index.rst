@@ -7,8 +7,3 @@ Welcome to TheApix!
 
    client
    intro
-
-
-------------------
-Indices and tables
-------------------
