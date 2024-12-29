@@ -26,7 +26,6 @@ html_css_files = [
 
 html_theme_options = {
     "navigation_with_keys": True,
-    "sidebar_hide_name": True,
     "footer_icons": [
         {
             # Telegram channel logo
