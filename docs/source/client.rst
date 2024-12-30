@@ -3,7 +3,7 @@ The `TheApi` Class Methods
    
 The following are the public methods of the `TheApi` class:
 
-.. currentmodule:: TheApi.api
+.. currentmodule:: TheApi
 
 .. autosummary::
 
@@ -16,7 +16,7 @@ The following are the public methods of the `TheApi` class:
 Details of Methods
 ==================
 
-.. autoclass:: TheApi.api.TheApi
+.. autoclass:: TheApi.TheApi()
 
    :members:
    :undoc-members:
