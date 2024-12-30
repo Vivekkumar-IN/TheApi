@@ -15,10 +15,16 @@ class TheApi:
     """
     A class to interact with various APIs and perform operations like fetching data and generating files.
 
-    :param downloads_dir: Directory to save downloaded files. Defaults to "downloads".
-    :type downloads_dir: str
-    :param quiet: Whether to suppress error messages. Defaults to False.
-    :type quiet: bool
+    Parameters:
+        downloads_dir (``str``, *optional*):
+            Directory to save downloaded files. Defaults to "downloads".
+        quiet (``bool``, *optional*):
+            Whether to suppress error messages. Defaults to False.
+        Example:
+            .. code-block:: python
+               from TheApi import TheApi
+               api = TheApi(downloads_dir="your_directory_name", quiet=True)
+               await api.some_meth()
     """
     def __init__(self, downloads_dir: str = "downloads", quiet: bool = False):
 
