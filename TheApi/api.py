@@ -18,12 +18,6 @@ class TheApi:
     Args:
         downloads_dir (``str``, *optional*): Directory to save downloaded files. Defaults to "downloads".
         quiet (``bool``, *optional*): Whether to suppress error messages. Defaults to False.
-
-    Example:
-        .. code-block:: python
-           from TheApi import TheApi
-           api = TheApi(downloads_dir="your_directory_name", quiet=True)
-           await api.some_method()
     """
     def __init__(self, downloads_dir: str = "downloads", quiet: bool = False):
 
@@ -99,9 +93,10 @@ class TheApi:
         """
         Fetches a random avatar from the thedobby.club API.
 
-        :returns: A dictionary containing the file name, file type, and file URL.
-        :rtype: dict
+        Returns:
+            ``dict``: A dictionary containing the file name, file type, and file URL.
         """
+
 
         response = await self.request.get(self.base_urls["avatar"])
 
@@ -111,8 +106,8 @@ class TheApi:
         """
         Fetches a random anime quote from the AnimeChan API.
 
-        :returns: Contains the quote content, anime name, and character details.
-        :rtype: dict
+        Returns: 
+            ``dict``: Contains the quote content, anime name, and character details.
         """
         response = await self.request.get(self.base_urls["animechan"])
         return response.json()["data"]
