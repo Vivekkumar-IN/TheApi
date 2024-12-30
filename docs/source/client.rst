@@ -13,6 +13,6 @@ Method Summary
 .. autosummary::
    :toctree: _autosummary
    :nosignatures:
+   :members:
 
-   .. autoclass:: TheApi
-      :members:
+   TheApi
