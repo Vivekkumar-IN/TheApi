@@ -115,7 +115,7 @@ class TheApi:
     async def fakerapi(
         self, endpoint: str, quantity: int = 3, locale: str = "en_US", **kwargs
     ):  # gh-actions Don't Add it's example, ignore it.
-                """
+        """
         Fetch data from the FakerAPI using aiohttp.
 
         :param endpoint: The resource endpoint. Valid endpoints are:
