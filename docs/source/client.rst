@@ -16,7 +16,7 @@ The following are the public methods of the `TheApi` class:
 Details of Methods
 ==================
 
-.. autoclass:: TheApi.TheApi()
+.. autoclass:: TheApi.TheApi
 
    :members:
    :undoc-members:
