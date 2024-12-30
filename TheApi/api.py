@@ -92,11 +92,12 @@ class TheApi:
 
     async def avatar(self):
         """
-        Fetches a random avatars from the thedobby.club API.
+        Fetches a random avatar from the thedobby.club API.
 
-        Returns:
-            dict: Contains the file name, file type, and file URL.
+        :returns: A dictionary containing the file name, file type, and file URL.
+        :rtype: dict
         """
+
         response = await self.request.get(self.base_urls["avatar"])
 
         return response.json()
@@ -105,8 +106,8 @@ class TheApi:
         """
         Fetches a random anime quote from the AnimeChan API.
 
-        Returns:
-            dict: Contains the quote content, anime name, and character details.
+        :returns: Contains the quote content, anime name, and character details.
+        :rtype: dict
         """
         response = await self.request.get(self.base_urls["animechan"])
         return response.json()["data"]
@@ -114,31 +115,31 @@ class TheApi:
     async def fakerapi(
         self, endpoint: str, quantity: int = 3, locale: str = "en_US", **kwargs
     ):  # gh-actions Don't Add it's example, ignore it.
-        """
+                """
         Fetch data from the FakerAPI using aiohttp.
 
-        Args:
-            endpoint (str): The resource endpoint. Valid endpoints are:
-                - companies
-                - addresses
-                - books
-                - CreditCards
-                - images
-                - persons
-                - places
-                - products
-                - texts
-                - users
+        :param endpoint: The resource endpoint. Valid endpoints are:
+            - companies
+            - addresses
+            - books
+            - CreditCards
+            - images
+            - persons
+            - places
+            - products
+            - texts
+            - users
+        :type endpoint: str
 
-            quantity (int, optional): Number of rows to fetch (default: 3, max: 1000).
-            locale (str, optional): Locale for the data (default: 'en_US').  [ See Valid locale ](https://fakerapi.it/#params_locale)
+        :param quantity: Number of rows to fetch (default: 3, max: 1000).
+        :type quantity: int, optional
 
-        Raises:
-            ValueError: If the locale is invalid, the endpoint is invalid, or the quantity
-                is outside the allowed range.
+        :param locale: Locale for the data (default: 'en_US').
+                       [See Valid locale](https://fakerapi.it/#params_locale)
+        :type locale: str, optional
 
-        Returns:
-            dict: Response data from the API.
+        :returns: Response data from the API.
+        :rtype: dict
         """
         valid_endpoints = [
             "companies",
@@ -266,16 +267,26 @@ class TheApi:
         """
         Fetch fake image data from the FakerAPI.
 
-        Args:
-            quantity (int, optional): Number of images to fetch (default: 1).
-            locale (str, optional): Locale for the images (default: "en_US"), [ See Valid locale ](https://fakerapi.it/#params_locale).
-            type (str, optional): Type of image (e.g., 'any', 'animals', 'business', etc.; default: "any").
-            width (int, optional): Width of the images (default: 640).
-            height (int, optional): Height of the images (default: 480).
+        :param quantity: Number of images to fetch (default: 1).
+        :type quantity: int, optional
 
-        Returns:
-            dict: Response data from the API.
+        :param locale: Locale for the images (default: "en_US").
+                       [See Valid locale](https://fakerapi.it/#params_locale)
+        :type locale: str, optional
+
+        :param type: Type of image (e.g., 'any', 'animals', 'business', etc.; default: "any").
+        :type type: str, optional
+
+        :param width: Width of the images (default: 640).
+        :type width: int, optional
+
+        :param height: Height of the images (default: 480).
+        :type height: int, optional
+
+        :returns: Response data from the API.
+        :rtype: dict
         """
+
         return await self.fakerapi(
             "images",
             quantity=quantity,
