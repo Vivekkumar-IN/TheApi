@@ -1,5 +1,5 @@
-The `TheApi` Class Methods
-=========================
+Class Methods
+=============
 
 .. currentmodule:: TheApi
 
@@ -9,8 +9,8 @@ The `TheApi` Class Methods
    :inherited-members:
    :show-inheritance:
 
-Details of Methods
-==================
+Method Summary
+--------------
 
 .. autosummary::
    :toctree: _autosummary
