@@ -14,11 +14,10 @@ The following are the public methods of the `TheApi` class:
 
 
 Details of Methods
-==================
 
+==================
 .. autoclass:: TheApi.api.TheApi
 
    :members:
    :undoc-members:
-   :inherited-members:
    :show-inheritance:
