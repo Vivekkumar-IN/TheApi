@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Intro Page" href="../intro.html" /><link rel="prev" title="The TheApi Class Methods" href="../client.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" />
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>TheApi - TheApix</title>
+        <title>TheApi.api.TheApi - TheApix</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
@@ -180,7 +180,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -201,11 +201,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../client.html">The <cite>TheApi</cite> Class Methods</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of The TheApi Class Methods</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">TheApi</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../client.html">The <cite>TheApi</cite> Class Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Intro Page</a></li>
 </ul>
 
@@ -237,14 +234,145 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="module-TheApi">
-<span id="theapi"></span><h1>TheApi<a class="headerlink" href="#module-TheApi" title="Link to this heading">¶</a></h1>
+          <section id="theapi-api-theapi">
+<h1>TheApi.api.TheApi<a class="headerlink" href="#theapi-api-theapi" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="TheApi.api.TheApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TheApi.api.</span></span><span class="sig-name descname"><span class="pre">TheApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">downloads_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downloads'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.api.TheApi" title="Link to this definition">¶</a></dt>
+<dd><p>A class to interact with various APIs and perform operations like fetching data and generating files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>downloads_dir</strong> (<em>str</em>) – Directory to save downloaded files. Defaults to “downloads”.</p></li>
+<li><p><strong>quiet</strong> (<em>bool</em>) – Whether to suppress error messages. Defaults to False.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.api.TheApi.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">downloads_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downloads'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.api.TheApi.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#TheApi.api.TheApi.__init__" title="TheApi.api.TheApi.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([downloads_dir, quiet])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">animechan</span></code>()</p></td>
+<td><p>Fetches a random anime quote from the AnimeChan API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">avatar</span></code>()</p></td>
+<td><p>Fetches a random avatars from the thedobby.club API.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bing_image</span></code>(query[, limit])</p></td>
+<td><p>Searches Bing for images based on a query and retrieves image URLs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">blackpink</span></code>(query[, color, border_color])</p></td>
+<td><p>Creates a stylized &quot;Blackpink&quot;-themed image with custom text, color, and optional border. :param query: The text to display on the image. :type query: str :param color: The primary color of the text and gradient background in hex format. Defaults to &quot;#ff94e0&quot; (a pink shade). :type color: str, optional :param border_color: The color of the image border in hex format. If not provided, defaults to the value of <cite>color</cite>. :type border_color: str, optional.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">carbon</span></code>(query)</p></td>
+<td><p>Generates a code snippet image using the Carbon API, saves it to the downloads folder, uploads it, and returns the URL of the uploaded image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cat</span></code>()</p></td>
+<td><p>Fetches a random cat image URL.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dog</span></code>()</p></td>
+<td><p>Fetches a random dog image URL.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">domain_search</span></code>(domain[, zone])</p></td>
+<td><p>Fetches domain information from the DomainsDB API.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fakerapi</span></code>(endpoint[, quantity, locale])</p></td>
+<td><p>Fetch data from the FakerAPI using aiohttp.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fox</span></code>()</p></td>
+<td><p>Fetches a random fox image URL.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">gen_qr</span></code>(data[, size, foreground_color, ...])</p></td>
+<td><p>Generate a QR code using api.qrserver.com and save it as a PNG file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_pdf</span></code>(source[, from_url])</p></td>
+<td><p>Generates a PDF from a URL or an HTML string and saves it to a file.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_advice</span></code>()</p></td>
+<td><p>Fetches a random piece of advice.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_btc_value</span></code>([currency])</p></td>
+<td><p>Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fake_addresses</span></code>([quantity, locale])</p></td>
+<td><p>Fetch fake address data from the FakerAPI.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fake_credit_cards</span></code>([locale, quantity])</p></td>
+<td><p>Fetch fake credit card data from the FakerAPI.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fake_images</span></code>([quantity, locale, type, ...])</p></td>
+<td><p>Fetch fake image data from the FakerAPI.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_hindi_jokes</span></code>()</p></td>
+<td><p>Fetches a random Hindi joke.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_jokes</span></code>([amount])</p></td>
+<td><p>Fetches a specified number of jokes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_uselessfact</span></code>()</p></td>
+<td><p>Fetches a random useless fact.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_word_definitions</span></code>(word)</p></td>
+<td><p>Fetch definitions for a word from the Dictionary API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_words</span></code>([words, letter, word_type, ...])</p></td>
+<td><p>Fetch random words from the Random Word API.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">github_search</span></code>(query[, search_type, max_results])</p></td>
+<td><p>Searches GitHub for various types of content.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">hindi_quote</span></code>()</p></td>
+<td><p>Fetches a random Hindi quote.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">hug</span></code>([amount])</p></td>
+<td><p>Fetches a specified number hug gif from the Nekos.Best API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">meme</span></code>()</p></td>
+<td><p>Fetches a random meme image URL.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">neko</span></code>([endpoint, amount])</p></td>
+<td><p>Fetches a specified number of neko images or GIFs from the Nekos.Best API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pypi</span></code>(package_name)</p></td>
+<td><p>Retrieves metadata information about a specified Python package from the PyPI API.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">quote</span></code>()</p></td>
+<td><p>Fetches a random quote.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">riddle</span></code>()</p></td>
+<td><p>Fetches a random riddle from the Riddles API.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stackoverflow_search</span></code>(query[, max_results, ...])</p></td>
+<td><p>Searches Stack Overflow for questions based on a query, returning results sorted by relevance or another specified criteria.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">upload_image</span></code>(file_path)</p></td>
+<td><p>Uploads an image to <a class="reference external" href="https://envs.sh">https://envs.sh</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wikipedia</span></code>(query)</p></td>
+<td><p>Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">write</span></code>(text)</p></td>
+<td><p>Creates an image with text written on it, using a predefined template and font, and uploads the image after generation.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd></dl>
+
 </section>
 
         </article>
@@ -252,26 +380,8 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../intro.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Intro Page</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../client.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">The <cite>TheApi</cite> Class Methods</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -294,8 +404,30 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">TheApi.api.TheApi</a><ul>
+<li><a class="reference internal" href="#TheApi.api.TheApi"><code class="docutils literal notranslate"><span class="pre">TheApi</span></code></a><ul>
+<li><a class="reference internal" href="#TheApi.api.TheApi.__init__"><code class="docutils literal notranslate"><span class="pre">TheApi.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
