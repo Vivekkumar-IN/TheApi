@@ -5,8 +5,6 @@ Class Methods
 
 .. autoclass:: TheApi.TheApi
    :members:
-   :undoc-members:
-   :inherited-members:
    :show-inheritance:
 
 Method Summary
