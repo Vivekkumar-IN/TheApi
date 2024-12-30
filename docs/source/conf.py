@@ -9,7 +9,7 @@ project = 'TheApix'
 author = 'Vivekkumar-IN'
 release = __version__
 copyright = "2024-present, Vivek"
-
+autosummary_generate = True
 extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.autodoc',
