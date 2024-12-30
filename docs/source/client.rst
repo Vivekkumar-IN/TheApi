@@ -20,4 +20,5 @@ Details of Methods
 
    :members:
    :undoc-members:
+   :inherited-members:
    :show-inheritance:
