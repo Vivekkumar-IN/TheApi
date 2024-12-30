@@ -10,8 +10,7 @@ Class Methods
 Method Summary
 --------------
 
-.. autosummary::
+.. autoclass:: TheApi
+   :members:
    :toctree: _autosummary
    :nosignatures:
-
-   TheApi
