@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'The new version number (e.g., 1.2.0)'
+        description: 'The new version number'
         required: true
         default: ''
 
@@ -18,7 +18,7 @@ jobs:
 
       - name: Update version in __init__.py and pyproject.toml
         run: |
-          sed -i 's/__version__ = "[^"]*"/__version__ = "${{ github.event.inputs.version }}"/' src/TheApi/__init__.py
+          sed -i 's/__version__ = "[^"]*"/__version__ = "${{ github.event.inputs.version }}"/' TheApi/__init__.py
           sed -i 's/version = "[^"]*"/version = "${{ github.event.inputs.version }}"/' pyproject.toml
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
