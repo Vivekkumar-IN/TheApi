@@ -1180,14 +1180,11 @@ class Client:
             word (str): The word to fetch definitions for.
 
         Returns:
-            list: A list of dictionaries containing the word definitions.
+            ``list``: A list of dictionaries containing the word definitions.
 
         Raises:
-            ValueError: If the `word` is not provided or the API request fails.
+            ``ValueError``: If the `word` is not provided or the API request fails.
         """
         url = self.base_urls["word_info"].format(word=word)
         response = await self.request.get(url)
         return response.json()
-
-
-api = TheApi()
