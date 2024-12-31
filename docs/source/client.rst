@@ -13,6 +13,5 @@ Methods
 -------
 
 .. toctree::
-   :caption: Methods:
 
    api/avatar
