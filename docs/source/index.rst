@@ -8,12 +8,6 @@ Welcome to {project}
    client
    intro
 
-.. toctree::
-   :hidden:
-   :caption: Methods:
-
-   api/avatar
-
 
 Directives
 ----------
