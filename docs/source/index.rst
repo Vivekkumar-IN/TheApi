@@ -44,7 +44,7 @@ To start using TheApix, follow these steps:
 
 .. important::
 
-   All methods of the **Client** can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
+   All methods of the :obj:`~TheApi.Clieny` can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
 
 .. note::
 
