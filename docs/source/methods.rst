@@ -13,5 +13,5 @@ The following methods are available in `TheApi.Client`:
 
 
 .. toctree::
-
-   {method_toctree}
+    :maxdepth: 1
+    {method_toctree}
