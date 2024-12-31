@@ -27,6 +27,7 @@ Homepage = "https://github.com/Vivekkumar-IN/TheApi"
 Issues = "https://github.com/Vivekkumar-IN/TheApi/issues"
 Source = "https://github.com/Vivekkumar-IN/TheApi"
 Community = "https://t.me/TheTeamVivek"
+Documentation = "https://vivekkumar-in.github.io/TheApi/"
 
 [build-system]
 requires = ["setuptools>=42", "wheel"]
