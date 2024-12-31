@@ -7,9 +7,11 @@ from TheApi import __version__
 
 project = 'TheApix'
 author = 'Vivekkumar-IN'
-release = __version__
+version = __version__
 copyright = "2024-present, Vivek"
+
 autosummary_generate = True
+
 extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.autodoc',
@@ -19,7 +21,7 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-html_title = "TheApix"
+html_title = f"TheApix {version}"
 html_theme = "furo"
 html_copy_source = False
 html_static_path = ['_static']
