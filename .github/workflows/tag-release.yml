@@ -29,7 +29,7 @@ jobs:
       - name: Create Git Tag
         run: |
           tag_name="v${{ github.event.inputs.version }}"
-          git tag $tag_name
+          git tag $tag_name ${{ github.ref_name }}
           git push origin $tag_name
 
       - name: Create GitHub Release
@@ -42,8 +42,9 @@ jobs:
           -H "Content-Type: application/json" \
           -d '{
             "tag_name": "v${{ github.event.inputs.version }}",
+            "target_commitish": "'"${{ github.ref_name }}"'",
             "name": "'"${release_name}"'",
-            "body": "",
+            "body": "Release based on branch: ${{ github.ref_name }}",
             "draft": false,
             "prerelease": false
           }'
