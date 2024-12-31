@@ -10,7 +10,7 @@ from TheApi import __version__
 project = "TheApix"
 author = "ViveKKumar-IN"
 version = __version__
-f"%Y, {author}"
+copyright = f"%Y, {author}"
 autosummary_generate = True
 
 extensions = [
