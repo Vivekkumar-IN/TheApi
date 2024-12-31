@@ -8,3 +8,10 @@ TheApi
 
 .. autoclass:: Client
    :exclude-members: __new__
+
+Methods
+-------
+
+The following methods are available in `TheApi.Client`:
+
+|client_methods|
