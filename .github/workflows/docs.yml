@@ -13,12 +13,12 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
-          fetch-depth: 0
+          fetch-depth: 1
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.12'
 
@@ -55,14 +55,9 @@ jobs:
         mv docs/build/html/* .
         rm -rf docs 
         touch .nojekyll
-        git init
-        git checkout -b gh-pages
+        git checkout --orphan gh-pages
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git add . -A
         git commit -m "DocGen: Update documentation"
-        git remote add origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git push origin gh-pages --force
-
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
