@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath("../.."))
 
-from TheApi import __version__
+from TheApi import __version__, Client
 
 
 project = "TheApix"
@@ -78,3 +78,19 @@ pygments_dark_style = "native"
 napoleon_include_special_with_doc = False
 napoleon_use_rtype = False
 autodoc_class_signature = "separated"
+
+client_methods = [
+    f"TheApi.Client.{name}" for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
+    if not name.startswith("_")
+]
+
+client_methods_rst = "\n    ".join(client_methods)
+
+rst_epilog = f"""
+.. |client_methods| replace::
+
+    .. autosummary::
+        :nosignatures:
+
+        {client_methods_rst}
+"""
