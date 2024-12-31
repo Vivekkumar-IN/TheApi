@@ -43,7 +43,7 @@ To start using TheApix, follow these steps:
       print(response)
 
 
-.. attention :: 
+.. important :: 
 
    All methods of the :obj:`~TheApi.Client` can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
 
