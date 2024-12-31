@@ -5,6 +5,7 @@ Class Methods
 
 .. autoclass:: TheApi.TheApi
    :members:
+   :member-order: groupwise
 
 Method Summary
 --------------
