@@ -11,7 +11,7 @@ from TheApi import Client, __version__
 project = "TheApix"
 author = "VivekKumar-IN"
 version = __version__
-copyright = f"%Y, {author}"
+copyright = f"2025, {author}"
 autosummary_generate = True
 
 extensions = [
