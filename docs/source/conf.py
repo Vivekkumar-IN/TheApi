@@ -80,10 +80,17 @@ napoleon_include_special_with_doc = False
 napoleon_use_rtype = False
 
 
-methods = [
-    f"Client.{name}"
+method = [
+    name
     for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
     if not name.startswith("_")
+]
+
+methods = [
+    f"Client.{name} for name in method
+]
+method_toctree = [
+    f"api/{name} for name in method
 ]
 
 client_methods = "\n    ".join(methods)
@@ -98,6 +105,7 @@ with open(client_rst_path, "r") as file:
     content = file.read()
 
 content = content.replace("{client_methods}", client_methods)
+content = content.replace("{method_toctree}", method_toctree)
 
 with open(client_rst_path, "w") as file:
     file.write(content)
