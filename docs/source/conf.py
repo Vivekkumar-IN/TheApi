@@ -88,11 +88,12 @@ client_methods = [
 
 client_methods = "\n    ".join(client_methods)
 
+client_rst_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'client.rst')
 
-with open("./docs/source/client.rst", "r") as file:
+with open(client_rst_path, "r") as file:
     content = file.read()
 
 content = content.replace("{client_methods}", client_methods)
 
-with open("./docs/source/client.rst", "w") as file:
+with open(client_rst_path, "w") as file:
     file.write(content)
