@@ -48,18 +48,14 @@ jobs:
 
     - name: Deploy to gh-pages branch
       run: |
-        mkdir -p docian
-        ls
-        mv ./docs/build/html/* docian/
-
-        cd docian
+        find . -mindepth 1 -not -name 'docs' -exec rm -rf {} +
+        mv docs/build/html/* .
+        rm -rf docs 
+        touch .nojekyll
         git init
         git checkout -b gh-pages
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-
-        git add .
-        git commit --allow-empty -m "Deploy Sphinx documentation"
-        git push --force origin gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        git add . -A
+        git commit -m "DocGen: Update documentation"
+        git push origin gh-pages --force
