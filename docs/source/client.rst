@@ -1,16 +1,12 @@
 Class Methods
 =============
 
-Hi hello
+TheApi
+------
 
+.. autoclass:: TheApi.TheApi
 
-Method Summary
---------------
+Methods
+-------
 
-.. currentmodule:: TheApi.api
-
-.. autosummary::
-   :toctree: summary
-   :members:
-
-   TheApi
+.. automethod:: TheApi.TheApi.advice
