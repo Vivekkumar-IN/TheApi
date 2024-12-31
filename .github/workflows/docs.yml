@@ -6,6 +6,9 @@ on:
       - dev
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Important: Fetch full history
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,17 +34,16 @@ jobs:
           cd docs
           make html
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          build_dir: ./docs/build/html
+          folder: ./docs/build/html
 
       - name: Push to gh-pages
         uses: peaceiris/actions-gh-pages@v3
-       with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
-         publish_dir: ./docs/build/html
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/build/html
 
       - name: Delete old workflow run
         uses: Mattraks/delete-workflow-runs@v2
