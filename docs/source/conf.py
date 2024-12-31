@@ -30,16 +30,11 @@ html_theme = "furo"
 html_copy_source = False
 html_static_path = ["_static"]
 html_css_files = ["css/pyrogram.css"]
-# html_logo = html_static_path[0] + "/img/TheTeamVivek.png"
 html_favicon = html_static_path[0] + "/img/TheTeamVivek.ico"
 
-light_logo = html_static_path[0] + "/img/white_logo.png"
-dark_logo = html_static_path[0] + "/img/black_logo.png"
 
 html_theme_options = {
     "navigation_with_keys": True,
-    "light_logo": light_logo,
-    "dark_logo": dark_logo,
     "footer_icons": [
         {
             # Telegram channel logo
