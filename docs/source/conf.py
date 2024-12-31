@@ -69,7 +69,7 @@ html_theme_options = {
             ),
             "class": "",
         },
-    ]
+    ],
 }
 
 pygments_style = "default"
