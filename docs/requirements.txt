@@ -1,2 +1,5 @@
 furo
-git+https://github.com/Vivekkumar-IN/TheApi@dev
+sphinx-copybutton
+httpx
+aiofiles
+pillow
