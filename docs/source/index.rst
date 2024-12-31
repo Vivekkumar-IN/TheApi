@@ -1,4 +1,4 @@
-Welcome to TheApix!
+Welcome to {project}
 ===================
 
 .. toctree::
