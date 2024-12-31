@@ -35,7 +35,7 @@ To start using TheApix, follow these steps:
       from TheApi import Client
       api = Client()
 
-2. Use the client to make requests to the integrated APIs:
+2. Use the Client to make requests to the integrated APIs:
 
    .. code-block:: python
 
