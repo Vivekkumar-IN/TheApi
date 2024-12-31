@@ -3,9 +3,8 @@ import sys
 import inspect
 
 
-print(sys.path)
 sys.path.insert(0, os.path.abspath("../.."))
-print(sys.path)
+
 from TheApi import Client, __version__
 
 
@@ -37,7 +36,7 @@ html_theme_options = {
         {
             # Telegram channel logo
             "name": "Telegram Channel",
-            "url": "https://Pyrogram.t.me",
+            "url": "https://t.me/TheTeamVivek",
             "html": (
                 '<svg stroke="currentColor" fill="currentColor" stroke-width="0" '
                 'viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">'
@@ -73,6 +72,15 @@ html_theme_options = {
     ],
 }
 
+def write(path, content):
+    with open(path, "w") as file:
+        file.write(content)
+
+def read(path):
+    with open(path, "f") as file:
+        return file.read()
+
+
 pygments_style = "default"
 pygments_dark_style = "native"
 
@@ -99,14 +107,12 @@ client_rst_path = os.path.join(
 
 api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api")
 
-with open(client_rst_path, "r") as file:
-    content = file.read()
+content = read(client_rst_path)
 
 content = content.replace("{client_methods}", client_methods)
 content = content.replace("{method_toctree}", method_toctree)
 
-with open(client_rst_path, "w") as file:
-    file.write(content)
+write(client_rst_path, content)
 
 for meth in methods:
     method_name = meth.split(".")[-1]
@@ -121,11 +127,4 @@ for meth in methods:
 
     text += f".. automethod:: {meth}\n\n"
 
-    with open(method_rst_path, "w") as f:
-        f.write(text)
-
-print("Method TOC Tree:")
-print(method_toctree)
-
-print("Client Methods:")
-print(client_methods)
+    write(method_rst_path, text)
