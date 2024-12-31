@@ -87,10 +87,10 @@ method = [
 ]
 
 methods = [
-    f"Client.{name} for name in method
+    f"Client.{name}" for name in method
 ]
 method_toctree = [
-    f"api/{name} for name in method
+    f"api/{name}" for name in method
 ]
 
 client_methods = "\n    ".join(methods)
