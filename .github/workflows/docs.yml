@@ -48,7 +48,7 @@ jobs:
 
     - name: Deploy to gh-pages branch
       run: |
-        find . -mindepth 1 -not -name 'docs' -exec rm -rf {} +
+        find . ! -path "./docs" ! -path "./docs/*" -mindepth 1 -delete
         ls
         mv docs/build/html/* .
         rm -rf docs 
