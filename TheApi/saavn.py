@@ -11,7 +11,6 @@ class SaavnAPI:
         """
         self.base_url = base_url
 
-
     async def search(self, query: str):
         """
         Searches globally for songs, albums, artists, and playlists.

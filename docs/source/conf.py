@@ -1,30 +1,32 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('../..'))
+
+sys.path.insert(0, os.path.abspath("../.."))
 
 from TheApi import __version__
 
-project = 'TheApix'
-author = 'Vivekkumar-IN'
+
+project = "TheApix"
+author = "Vivekkumar-IN"
 version = __version__
 copyright = "2024-present, Vivek"
 
 autosummary_generate = True
 
 extensions = [
-    'sphinx.ext.autosummary',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.napoleon',
-   # 'sphinx.ext.viewcode',
+    "sphinx.ext.autosummary",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
+    # 'sphinx.ext.viewcode',
 ]
-templates_path = ['_templates']
+templates_path = ["_templates"]
 exclude_patterns = []
 
 html_title = f"TheApix {version}"
 html_theme = "furo"
 html_copy_source = False
-html_static_path = ['_static']
+html_static_path = ["_static"]
 html_css_files = [
     "css/pyrogram.css",
 ]
@@ -68,7 +70,7 @@ html_theme_options = {
             ),
             "class": "",
         },
-    ]
+    ],
 }
 
 pygments_style = "default"

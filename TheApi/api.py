@@ -11,6 +11,7 @@ from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 from ._request import Request
 
+
 class TheApi:
     """
     A class to interact with various APIs and perform operations like fetching data and generating files.
@@ -19,6 +20,7 @@ class TheApi:
         downloads_dir (``str``, *optional*): Directory to save downloaded files. Defaults to "downloads".
         quiet (``bool``, *optional*): Whether to suppress error messages. Defaults to False.
     """
+
     def __init__(self, downloads_dir: str = "downloads", quiet: bool = False):
 
         self.base_urls = {
@@ -97,7 +99,6 @@ class TheApi:
             ``dict``: A dictionary containing the file name, file type, and file URL.
         """
 
-
         response = await self.request.get(self.base_urls["avatar"])
 
         return response.json()
@@ -106,7 +107,7 @@ class TheApi:
         """
         Fetches a random anime quote from the AnimeChan API.
 
-        Returns: 
+        Returns:
             ``dict``: Contains the quote content, anime name, and character details.
         """
         response = await self.request.get(self.base_urls["animechan"])
