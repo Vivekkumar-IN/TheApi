@@ -8,9 +8,9 @@ Welcome to TheApix!
    client
    intro
 
-==========
+
 Directives
-==========
+----------
 
 This document showcases various Sphinx directives for notes, warnings, tips, and more.
 
