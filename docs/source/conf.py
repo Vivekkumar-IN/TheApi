@@ -16,7 +16,6 @@ extensions = [
     'sphinx.ext.napoleon',
    # 'sphinx.ext.viewcode',
 ]
-
 templates_path = ['_templates']
 exclude_patterns = []
 
@@ -25,8 +24,7 @@ html_theme = "furo"
 html_copy_source = False
 html_static_path = ['_static']
 html_css_files = [
-    "css/custom.css",
-    "css/c.css",
+    "css/pyrogram.css",
 ]
 
 html_theme_options = {
@@ -73,3 +71,6 @@ html_theme_options = {
 
 pygments_style = "default"
 pygments_dark_style = "native"
+
+napoleon_include_special_with_doc = False
+napoleon_use_rtype = False
