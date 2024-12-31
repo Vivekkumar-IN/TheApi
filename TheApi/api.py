@@ -12,7 +12,7 @@ from PIL import Image, ImageOps, ImageDraw, ImageFont
 from ._request import Request
 
 
-class TheApi:
+class Client:
     """
     A class to interact with various APIs and perform operations like fetching data and generating files.
 
