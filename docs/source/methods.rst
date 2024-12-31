@@ -15,4 +15,4 @@ The following methods are available in `TheApi.Client`:
 .. toctree::
    :hidden:
 
-   {client_toctree}
+   {method_toctree}
