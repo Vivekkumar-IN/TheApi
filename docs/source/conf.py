@@ -79,7 +79,7 @@ def write(path, content):
 
 
 def read(path):
-    with open(path, "f") as file:
+    with open(path, "r") as file:
         return file.read()
 
 
