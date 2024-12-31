@@ -1,16 +1,17 @@
 import os
 import sys
-
+import datetime
 
 sys.path.insert(0, os.path.abspath("../.."))
 
 from TheApi import __version__
 
+year = (datetime.date.today()).year
 
 project = "TheApix"
-author = "Vivekkumar-IN"
+author = "ViveKKumar-IN"
 version = __version__
-copyright = "2024-present, Vivek"
+copyright = f"{year}-present, {author}"
 
 autosummary_generate = True
 
