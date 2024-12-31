@@ -50,6 +50,7 @@ jobs:
 
     - name: Deploy to gh-pages branch
       run: |
+        ls
         find . ! -path "./docs" ! -path "./docs/*" -mindepth 1 -delete
         ls
         mv docs/build/html/* .
