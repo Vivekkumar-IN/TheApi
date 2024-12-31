@@ -123,3 +123,10 @@ for meth in methods:
 
     with open(method_rst_path, "w") as f:
         f.write(text)
+
+print("Method TOC Tree:")
+print(method_toctree)
+
+print("Client Methods:")
+print(client_methods)
+
