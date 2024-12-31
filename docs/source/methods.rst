@@ -13,6 +13,5 @@ The following methods are available in `TheApi.Client`:
 
 
 .. toctree::
-   :hidden:
 
    {method_toctree}
