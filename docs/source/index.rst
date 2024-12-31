@@ -8,6 +8,12 @@ Welcome to TheApix!
    client
    intro
 
+.. toctree::
+   :hidden:
+   :caption: Methods:
+
+   api/avatar
+
 
 Directives
 ----------
