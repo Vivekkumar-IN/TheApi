@@ -2,9 +2,11 @@ import os
 import sys
 import inspect
 
+
 sys.path.insert(0, os.path.abspath("../.."))
 
 from TheApi import Client, __version__
+
 
 project = "TheApix"
 author = "VivekKumar-IN"
@@ -60,7 +62,8 @@ napoleon_include_special_with_doc = False
 napoleon_use_rtype = False
 
 client_methods = [
-    f"Client.{name}" for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
+    f"Client.{name}"
+    for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
     if not name.startswith("_")
 ]
 
@@ -68,10 +71,10 @@ client_methods = [
 client_methods = "\n    ".join(client_methods)
 
 
-with open("docs/source/client.rst", 'r') as file:
+with open("docs/source/client.rst", "r") as file:
     content = file.read()
 
 content = content.replace("{client_methods}", client_methods_str)
 
-with open("docs/source/client.rst", 'w') as file:
+with open("docs/source/client.rst", "w") as file:
     file.write(content)
