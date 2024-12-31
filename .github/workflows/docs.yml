@@ -26,8 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install aiofiles pillow httpx
-          pip install sphinx furo pygments
+          pip install -r docs/requirements.txt
 
       - name: Build documentation
         run: |
