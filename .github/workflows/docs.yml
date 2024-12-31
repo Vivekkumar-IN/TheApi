@@ -39,11 +39,11 @@ jobs:
         with:
           folder: ./docs/build/html
 
-      - name: Push to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/build/html
+      #- name: Push to gh-pages
+       # uses: peaceiris/actions-gh-pages@v3
+       # with:
+        #  github_token: ${{ secrets.GITHUB_TOKEN }}
+         # publish_dir: ./docs/build/html
 
       - name: Delete old workflow run
         uses: Mattraks/delete-workflow-runs@v2
