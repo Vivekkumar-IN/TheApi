@@ -1,10 +1,13 @@
 Class Methods
 =============
 
+Hi hello
+
+
 Method Summary
 --------------
 
-.. currentmodule:: TheApi.api
+.. currentmodule:: TheApi
 
 .. autosummary::
    :toctree: _autosummary
