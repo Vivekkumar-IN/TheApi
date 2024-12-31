@@ -24,7 +24,7 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git add TheApi/__init__.py pyproject.toml
           git commit -m "Update version to ${{ github.event.inputs.version }}"
-          git push origin main
+          git push origin ${{ github.ref_name }}
 
       - name: Create Git Tag
         run: |
