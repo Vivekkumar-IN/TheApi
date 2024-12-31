@@ -12,6 +12,6 @@ TheApi
 Methods
 -------
 
-.. automethod:: TheApi.advice
+.. automethod:: TheApi.avtar
 
 .. automethod:: TheApi.upload()
