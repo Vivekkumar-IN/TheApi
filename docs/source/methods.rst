@@ -1,5 +1,5 @@
-Methods
-=======
+TheApix Methods
+===============
 
 .. currentmodule:: TheApi
 
