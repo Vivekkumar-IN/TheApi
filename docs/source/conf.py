@@ -88,7 +88,7 @@ methods = [
 
 client_methods = "\n    ".join(methods)
 
-client_rst_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "client.rst")
+client_rst_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "methods.rst")
 
 api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api")
 
