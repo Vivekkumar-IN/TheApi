@@ -30,6 +30,8 @@ html_theme = "furo"
 html_copy_source = False
 html_static_path = ["_static"]
 html_css_files = ["css/pyrogram.css"]
+html_logo = html_static_path + "/img/TheTeamVivek.png"
+html_favicon = html_static_path + "/img/TheTeamVivek.ico"
 
 html_theme_options = {
     "navigation_with_keys": True,
