@@ -1,0 +1,1 @@
+.. automethod:: Client.avatar
