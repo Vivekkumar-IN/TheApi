@@ -48,10 +48,10 @@ jobs:
 
     - name: Deploy to gh-pages branch
       run: |
-        mkdir -p build
-        mv build/html/* build/
+        mkdir -p docian
+        mv build/html/* docian/
 
-        cd build
+        cd docian
         git init
         git checkout -b gh-pages
         git config user.name "github-actions[bot]"
