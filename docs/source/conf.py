@@ -89,6 +89,8 @@ method = [
 methods = [f"Client.{name}" for name in method]
 method_toctree = [f"api/{name}" for name in method]
 
+method_toctree = "\n    ".join(method_toctree)
+
 client_methods = "\n    ".join(methods)
 
 client_rst_path = os.path.join(
