@@ -50,7 +50,7 @@ jobs:
       run: |
         mkdir -p docian
         ls
-        mv build/html/* docian/
+        mv ./docs/build/html/* docian/
 
         cd docian
         git init
