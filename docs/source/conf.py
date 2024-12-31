@@ -8,7 +8,7 @@ from TheApi import __version__
 
 
 project = "TheApix"
-author = "ViveKKumar-IN"
+author = "VivekKumar-IN"
 version = __version__
 copyright = f"%Y, {author}"
 autosummary_generate = True
