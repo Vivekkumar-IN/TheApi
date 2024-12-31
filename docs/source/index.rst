@@ -42,10 +42,12 @@ To start using TheApix, follow these steps:
       response = await api.write("Radhe Radhe")
       print(response)
 
-.. important::
+.. admonition :: Note
+    :class: warning
 
    All methods of the :obj:`~TheApi.Client` can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
 
-.. note::
+.. admonition :: Note
+    :class: important
 
    This project is under active development. Expect frequent updates and improvements.
