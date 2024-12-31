@@ -60,3 +60,6 @@ jobs:
         git add . -A
         git commit -m "DocGen: Update documentation"
         git push origin gh-pages --force
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
