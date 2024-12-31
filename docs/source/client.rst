@@ -10,7 +10,7 @@ Method Summary
 .. currentmodule:: TheApi.api
 
 .. autosummary::
-   :toctree: TheApi
+   :toctree: summary
    :members:
 
    TheApi
