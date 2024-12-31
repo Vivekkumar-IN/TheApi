@@ -110,5 +110,3 @@ for meth in methods:
         text += f"{heading}\n\n"
         text += f".. automethod:: {meth}\n\n"
         f.write(text)
-
-    
