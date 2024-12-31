@@ -49,6 +49,7 @@ jobs:
     - name: Deploy to gh-pages branch
       run: |
         mkdir -p docian
+        ls
         mv build/html/* docian/
 
         cd docian
