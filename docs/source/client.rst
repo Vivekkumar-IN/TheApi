@@ -8,4 +8,4 @@ Method Summary
    :toctree: _autosummary
    :members:
 
-   TheApi
+   TheApi.TheApi
