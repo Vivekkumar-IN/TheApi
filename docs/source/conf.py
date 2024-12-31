@@ -79,8 +79,8 @@ pygments_dark_style = "native"
 napoleon_include_special_with_doc = False
 napoleon_use_rtype = False
 
-client_methods = [
-    f"Client.{name}"
+methods = [
+    f"TheApi.Client.{name}"
     for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
     if not name.startswith("_")
 ]
@@ -89,6 +89,9 @@ client_methods = [
 client_methods = "\n    ".join(client_methods)
 
 client_rst_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "client.rst")
+
+api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api")
+
 
 with open(client_rst_path, "r") as file:
     content = file.read()
