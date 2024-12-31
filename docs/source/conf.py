@@ -74,7 +74,7 @@ client_methods = "\n    ".join(client_methods)
 with open("docs/source/client.rst", "r") as file:
     content = file.read()
 
-content = content.replace("{client_methods}", client_methods_str)
+content = content.replace("{client_methods}", client_methods)
 
 with open("docs/source/client.rst", "w") as file:
     file.write(content)
