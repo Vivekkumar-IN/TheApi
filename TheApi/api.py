@@ -99,7 +99,7 @@ class Client:
             ``dict``: A dictionary containing the file name, file type, and file URL.
         Example:
             .. code-block:: python
-            
+
                results = await api.avatar()
         """
 
