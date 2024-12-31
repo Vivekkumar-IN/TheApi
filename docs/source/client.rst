@@ -12,4 +12,7 @@ TheApi
 Methods
 -------
 
-.. automethod:: Client.avatar
+.. toctree::
+   :caption: Methods:
+
+   api/avatar
