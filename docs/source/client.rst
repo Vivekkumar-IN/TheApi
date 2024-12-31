@@ -6,7 +6,7 @@ TheApi
 
 .. current-module:: TheApi
 
-.. autoclass:: Client
+.. autoclass:: TheApi.Client
    :exclude-members: __new__
 
 Methods
