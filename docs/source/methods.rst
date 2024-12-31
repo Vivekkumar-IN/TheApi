@@ -10,3 +10,9 @@ The following methods are available in `TheApi.Client`:
     :nosignatures:
 
     {client_methods}
+
+
+.. toctree::
+   :hidden:
+
+   {client_toctree}
