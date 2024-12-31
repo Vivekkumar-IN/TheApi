@@ -102,17 +102,16 @@ with open(client_rst_path, "w") as file:
 
 for meth in methods:
     method_name = meth.split(".")[-1]
-    
+
     method_rst_path = os.path.join(api_path, f"{method_name}.rst")
 
     text = f"{method_name}\n"
     heading = "=" * len(method_name)
     text += f"{heading}\n\n"
-    
-    text += f".. current-module:: TheApi\n\n"
-    
-    text += f".. automethod:: {meth}\n\n"
 
+    text += f".. current-module:: TheApi\n\n"
+
+    text += f".. automethod:: {meth}\n\n"
 
     with open(method_rst_path, "w") as f:
         f.write(text)
