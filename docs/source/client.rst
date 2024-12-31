@@ -13,5 +13,6 @@ Methods
 -------
 
 .. toctree::
+   :hidden:
 
    api/avatar
