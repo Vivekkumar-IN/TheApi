@@ -22,7 +22,7 @@ jobs:
           sed -i 's/version = "[^"]*"/version = "${{ github.event.inputs.version }}"/' pyproject.toml
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git add src/TheApi/__init__.py pyproject.toml
+          git add TheApi/__init__.py pyproject.toml
           git commit -m "Update version to ${{ github.event.inputs.version }}"
           git push origin main
 
