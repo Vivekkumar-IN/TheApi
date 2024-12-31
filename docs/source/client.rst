@@ -14,4 +14,8 @@ Methods
 
 The following methods are available in `TheApi.Client`:
 
-|client_methods|
+.. autosummary::
+    :nosignatures:
+
+    {client_methods}
+
