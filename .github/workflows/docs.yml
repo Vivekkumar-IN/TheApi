@@ -1,10 +1,10 @@
 name: GitHub Pages
 
-#on:
- # push:
-  #  branches:
-   # - dev
-#  workflow_dispatch:
+on:
+  push:
+    branches:
+    - dev
+  workflow_dispatch:
 
 
 jobs:
@@ -31,11 +31,11 @@ jobs:
         cd docs
         make html
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/build/html
+    #- name: Deploy to GitHub Pages
+    #  uses: peaceiris/actions-gh-pages@v3
+     # with:
+       # github_token: ${{ secrets.GITHUB_TOKEN }}
+       # publish_dir: ./docs/build/html
 
 
     - name: Delete old workflow run
@@ -45,3 +45,18 @@ jobs:
         repository: ${{ github.repository }}
         retain_days: 0
         keep_minimum_runs: 1
+
+    - name: Deploy to gh-pages branch
+      run: |
+        mkdir -p build
+        mv _build/html/* build/
+
+        cd build
+        git init
+        git checkout -b gh-pages
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+        git add .
+        git commit --allow-empty -m "Deploy Sphinx documentation"
+        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" gh-pages:gh-pages
