@@ -10,6 +10,6 @@ Method Summary
 --------------
 
 .. autosummary::
-   :toctree: _autosummary
+   :toctree: generated
 
    TheApi
