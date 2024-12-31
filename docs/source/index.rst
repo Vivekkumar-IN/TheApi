@@ -7,3 +7,7 @@ Welcome to TheApix!
 
    client
    intro
+
+.. note::
+
+   This project is under active development.
