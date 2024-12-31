@@ -4,7 +4,7 @@ Class Methods
 TheApi
 ------
 
-.. currentmodule:: TheApi.api
+.. currentmodule:: TheApi
 
 .. autoclass:: TheApi
    :exclude-members: __init__, __new__
@@ -12,6 +12,6 @@ TheApi
 Methods
 -------
 
-.. automethod:: TheApi.avtar
+.. automethod:: Client.upload
 
-.. automethod:: TheApi.upload()
+.. automethod:: Client.upload()
