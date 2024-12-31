@@ -12,6 +12,6 @@ TheApi
 Methods
 -------
 
-.. automethod:: Client.upload
+.. automethod:: Client.avatar
 
-.. automethod:: Client.upload()
+.. automethod:: Client.avatar()
