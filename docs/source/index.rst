@@ -6,7 +6,7 @@ Welcome to {project}
    :caption: Contents:
 
    client
-   intro
+   method
 
 
 Directives
