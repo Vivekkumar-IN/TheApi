@@ -79,19 +79,18 @@ pygments_dark_style = "native"
 napoleon_include_special_with_doc = False
 napoleon_use_rtype = False
 
+
 methods = [
-    f"TheApi.Client.{name}"
+    f"Client.{name}"
     for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
     if not name.startswith("_")
 ]
-
 
 client_methods = "\n    ".join(methods)
 
 client_rst_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "client.rst")
 
 api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api")
-
 
 with open(client_rst_path, "r") as file:
     content = file.read()
@@ -101,12 +100,19 @@ content = content.replace("{client_methods}", client_methods)
 with open(client_rst_path, "w") as file:
     file.write(content)
 
-
 for meth in methods:
-    with open(f"{api_path}/{meth}.rst", "w") as f:
-        met = meth.split(".")[-1]
-        text = f"{met}\n"
-        heading = ["=" for i in range(len(met))]
-        text += f"{heading}\n\n"
-        text += f".. automethod:: {meth}\n\n"
+    method_name = meth.split(".")[-1]
+    
+    method_rst_path = os.path.join(api_path, f"{method_name}.rst")
+
+    text = f"{method_name}\n"
+    heading = "=" * len(method_name)
+    text += f"{heading}\n\n"
+    
+    text += f".. current-module:: TheApi\n\n"
+    
+    text += f".. automethod:: {meth}\n\n"
+
+
+    with open(method_rst_path, "w") as f:
         f.write(text)
