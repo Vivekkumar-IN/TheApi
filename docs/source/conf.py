@@ -111,7 +111,7 @@ client_rst_path = os.path.join(
 )
 
 api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api")
-
+os.makedirs(api_path, exist_ok=True)
 content = read(client_rst_path)
 
 content = content.replace("{client_methods}", client_methods)
