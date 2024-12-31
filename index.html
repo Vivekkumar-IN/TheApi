@@ -275,16 +275,48 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="welcome-to-theapix">
-<h1>Welcome to TheApix<a class="headerlink" href="#welcome-to-theapix" title="Link to this heading">¶</a></h1>
+          <section id="welcome-to-theapix-documentation">
+<h1>Welcome to TheApix Documentation<a class="headerlink" href="#welcome-to-theapix-documentation" title="Link to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>TheApix is designed to integrate multiple API keys and provide a unified interface for various functionalities. This documentation will guide you through the installation, configuration, and usage of TheApi.</p>
+</section>
+<section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 </div>
-<section id="directives">
-<h2>Directives<a class="headerlink" href="#directives" title="Link to this heading">¶</a></h2>
-<p>This document showcases various Sphinx directives for notes, warnings, tips, and more.</p>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>To install TheApix, you can use pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>TheApix
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>To start using TheApix, follow these steps:</p>
+<ol class="arabic">
+<li><p>Import the Client module and initialize the client:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">TheApi</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>Use the client to make requests to the integrated APIs:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Radhe Radhe&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>All methods of the Client can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This project is under active development.</p>
+<p>This project is under active development. Expect frequent updates and improvements.</p>
 </div>
 </section>
 </section>
@@ -338,8 +370,11 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Welcome to TheApix</a><ul>
-<li><a class="reference internal" href="#directives">Directives</a></li>
+<li><a class="reference internal" href="#">Welcome to TheApix Documentation</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#contents">Contents</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
 </ul>
 </li>
 </ul>
