@@ -1,4 +1,4 @@
-Client.avatar
+avatar
 =============
 
 .. automethod:: TheApi.Client.avatar
