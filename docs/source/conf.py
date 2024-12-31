@@ -86,12 +86,8 @@ method = [
     if not name.startswith("_")
 ]
 
-methods = [
-    f"Client.{name}" for name in method
-]
-method_toctree = [
-    f"api/{name}" for name in method
-]
+methods = [f"Client.{name}" for name in method]
+method_toctree = [f"api/{name}" for name in method]
 
 client_methods = "\n    ".join(methods)
 
