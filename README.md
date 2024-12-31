@@ -112,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "I\u2019d rather fight and regret it than not fight and regret it.",
+    "content": "If she lost because of a difference in ability, it can\u2019t be helped. If she worked hard and didn\u2019t get what she wants, she can just work harder next time. If she gave her all for this, it\u2019s acceptable even if she lost.",
     "anime": {
-        "id": 664,
-        "name": "Legend of the Galactic Heroes",
-        "altName": "Ginga Eiyuu Densetsu"
+        "id": 386,
+        "name": "Baka & Test - Summon the Beasts",
+        "altName": "Baka to Test to Shoukanjuu"
     },
     "character": {
-        "id": 1416,
-        "name": "Reinhard von Lohengramm"
+        "id": 574,
+        "name": "Yoshii Akihisa"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "party-crasher",
+    "file_name": "gym-manager",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/party-crasher.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/gym-manager.jpg"
 }
 ```
 
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_spBMH8ZZ.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_CskxXSCT.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_3x21RQ85.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_w6VVNBSt.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/MTg1MTYwNg.jpg
+https://cdn2.thecatapi.com/images/akc.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/65a6d063-a9d2-4bd0-97cc-87d2b3bb84e3.jpg
+https://random.dog/a2dc4397-4c15-4ee6-937e-ac25ff83de5c.mp4
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=41
+https://randomfox.ca/?i=90
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/BSEv7nCY_qr.png
+/home/runner/work/TheApi/TheApi/downloads/bxsi2Fil_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-If you can't do anything about it, there's no point in worrying about it.
+Everything matters, but nothing matters that much.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "89,889.899",
-        "rate_float": 89889.899,
+        "rate": "88,712.262",
+        "rate_float": 88712.2616,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "74,721.246",
-        "rate_float": 74721.2462,
+        "rate": "73,742.332",
+        "rate_float": 73742.3316,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "93,696.702",
-        "rate_float": 93696.7023,
+        "rate": "92,469.192",
+        "rate_float": 92469.1924,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "47104 Connelly Camp Suite 065",
-            "streetName": "Wolff Avenue",
-            "buildingNumber": "23340",
-            "city": "Kertzmannville",
-            "zipcode": "00566",
-            "country": "St. Barth\u00e9lemy",
-            "country_code": "BL",
-            "latitude": -38.568804,
-            "longitude": -81.791529
+            "street": "44218 Schmeler Dam",
+            "streetName": "Sandy Throughway",
+            "buildingNumber": "72526",
+            "city": "North Arthurborough",
+            "zipcode": "63357",
+            "country": "Uzbekistan",
+            "country_code": "UZ",
+            "latitude": -86.815421,
+            "longitude": -71.949859
         }
     ]
 }
@@ -537,10 +537,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "MasterCard",
-            "number": "4916084382785045",
-            "expiration": "06/26",
-            "owner": "Kaitlyn Lockman"
+            "type": "JCB",
+            "number": "5313792189301958",
+            "expiration": "09/26",
+            "owner": "Ian Lehner"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Iure omnis repellendus eaque.",
-            "description": "Unde repellendus quam cum praesentium ratione ut. Nihil officiis sed illum eum.",
+            "title": "Ut commodi enim cum.",
+            "description": "Quis aut tenetur quisquam sed fugiat aut magni. Et maiores dolore dolor et mollitia. Pariatur iure neque illo sunt atque omnis architecto modi. Qui est ut harum minus voluptate ut.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-बड़े दिनों बाद हिचकियाँ आयीं है आज ऐसा लगा मानो किसी ने आई लव यू टू कहा हो
+उसकी कुछ ख्वाहिशें अधूरी थीं, दूरियां भी तो ज़रूरी थीं, यूँ न बेवफा कहो उसे दुनियावालों, क्योंकि … सोनम गुप्ता की भी कुछ मजबूरियाँ थी।﻿
 ```
 
 ### 19. Get Jokes
@@ -629,7 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-The generation of random numbers is too important to be left to chance.
+Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says "Do you get the reference?" But Java didn't.
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-Most Egyptians died by the time they were 30 about 300 years ago,
+Humans are the only primates that don`t have pigment in the palms of their hands.
 ```
 
 ### 21. Get Word Definitions
@@ -708,16 +708,16 @@ print(result)
 #### Expected Output
 
 ```text
-Elite
-Grout
-Rupture
-Support
-Everyone
-Crept
-Cogwheel
-Suitcase
-Cobalt
-Equinox
+Decorator
+Muzzle
+Paralyze
+Commerce
+Dipping
+Sterility
+Flatterer
+Stump
+Mammal
+Powdering
 ```
 
 ### 23. Github Search
@@ -759,7 +759,7 @@ print(result)
         "description": "\ud83c\udf0f Live visualization of all the pokemon in your area... and more! (shutdown)",
         "url": "https://github.com/AHAAAAAAA/PokemonGo-Map",
         "language": null,
-        "stargazers_count": 7526,
+        "stargazers_count": 7525,
         "forks_count": 2815
     },
     {
@@ -768,8 +768,8 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4840,
-        "forks_count": 2830
+        "stargazers_count": 4842,
+        "forks_count": 2829
     },
     {
         "name": "PokemonGo-Bot",
@@ -801,7 +801,7 @@ print(result)
 #### Expected Output
 
 ```text
-ज़िंदगी का सफ़र मानो तो मौज है वरना समस्या तो रोज है।
+यदी आप सच कहते हैं, तो आपको कुछ याद रखने की जरूरत नहीं रहती..
 ```
 
 ### 25. Hug
@@ -830,8 +830,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Princess Connect! Re:Dive",
-        "url": "https://nekos.best/api/v2/hug/f7246b64-e9ae-4ebd-a1d0-bb934fd1418e.gif"
+        "anime_name": "Happy Sugar Life",
+        "url": "https://nekos.best/api/v2/hug/1613322e-52e3-44a6-8dd7-a57b6dac48ba.gif"
     }
 ]
 ```
@@ -854,7 +854,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/u1gucoxjfv9e1.png?width=1080&crop=smart&auto=webp&s=557f8517d8ff14ead88aaa194b3783edfa5c1b27
+https://preview.redd.it/a43zcmdlzu9e1.png?width=640&crop=smart&auto=webp&s=e37bfcee0e8d5880344ed2adc51f7d9c3d6850b5
 ```
 
 ### 27. Neko
@@ -894,22 +894,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/46994695",
-            "artist_name": "\u6843\u7a1a\u3061\u3042",
-            "source_url": "https://www.pixiv.net/en/artworks/92250862",
-            "url": "https://nekos.best/api/v2/neko/478b1c25-dbbc-4be4-9bb9-02934c709346.png"
+            "artist_href": "https://www.pixiv.net/en/users/19731971",
+            "artist_name": "\u30d4\u30ed\u30ea\u83cc",
+            "source_url": "https://www.pixiv.net/en/artworks/91088436",
+            "url": "https://nekos.best/api/v2/neko/c8d6e977-8170-48e4-881f-1a46cf2d5803.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/63820186",
-            "artist_name": "Hisiya",
-            "source_url": "https://www.pixiv.net/en/artworks/94654399",
-            "url": "https://nekos.best/api/v2/neko/d35f6ae2-576c-4d2f-a182-ab078cd8b73a.png"
+            "artist_href": "https://www.pixiv.net/en/users/16441986",
+            "artist_name": "zky",
+            "source_url": "https://www.pixiv.net/en/artworks/89205090",
+            "url": "https://nekos.best/api/v2/neko/609284b6-87b7-48d0-8c76-715ef78303ec.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/52767182",
-            "artist_name": "\u306f\u308b",
-            "source_url": "https://www.pixiv.net/en/artworks/102974118",
-            "url": "https://nekos.best/api/v2/neko/2113aba7-a767-4864-b35d-ae6e20d14cb6.png"
+            "artist_href": "https://www.pixiv.net/en/users/37889769",
+            "artist_name": "\u30bf\u30f3\u5869",
+            "source_url": "https://www.pixiv.net/en/artworks/96538052",
+            "url": "https://nekos.best/api/v2/neko/808c040d-0c81-4b07-90c2-99de5b6ee6b3.png"
         }
     ]
 }
@@ -985,9 +985,9 @@ print(result)
 #### Expected Output
 
 ```text
-Work while you have the light. You are responsible for the talent that has been entrusted to you.
+A friend is what the heart needs all the time.
 
-author - Henri-Frédéric Amiel
+author - Henry van Dyke Jr.
 ```
 
 ### 30. Riddle
@@ -1009,8 +1009,8 @@ print(result)
 
 ```json
 {
-    "riddle": "what has six legs but olny walks with 4?",
-    "answer": "a horse and his rider!"
+    "riddle": "While on my way to St. Ives, I saw a man with 7 wives. Each wife had 7 sacks. Each sack had 7 cats. Each cat had 7 kittens. Kitten, cats, sacks, wives, How many were going to St. Ives?",
+    "answer": "Just one, me"
 }
 ```
 
@@ -1082,7 +1082,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32710,
+        "view_count": 32711,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1109,7 +1109,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2039,
+        "view_count": 2040,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1171,7 +1171,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's primary target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's primary target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -1202,7 +1202,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_7BsgUsYN.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_u64qWCiF.jpg
 ```
 
 
