@@ -1,5 +1,5 @@
-Class Methods
-=============
+Class
+=====
 
 TheApi
 ------
@@ -8,11 +8,3 @@ TheApi
 
 .. autoclass:: Client
    :exclude-members: __new__
-
-Methods
--------
-
-.. toctree::
-   :hidden:
-
-   api/avatar
