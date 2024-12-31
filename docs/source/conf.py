@@ -72,9 +72,11 @@ html_theme_options = {
     ],
 }
 
+
 def write(path, content):
     with open(path, "w") as file:
         file.write(content)
+
 
 def read(path):
     with open(path, "f") as file:
