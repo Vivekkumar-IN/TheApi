@@ -88,7 +88,7 @@ client_methods = [
 
 client_methods = "\n    ".join(client_methods)
 
-client_rst_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'client.rst')
+client_rst_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "client.rst")
 
 with open(client_rst_path, "r") as file:
     content = file.read()
