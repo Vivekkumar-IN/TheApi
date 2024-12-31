@@ -17,10 +17,7 @@ jobs:
         with:
           python-version: "3.10.x"
       - name: Install Formatting Tools
-        run: pip install autopep8 autoflake isort black
-      - name: Run autopep8 Formatter
-        run: |
-          autopep8 --verbose --in-place --recursive --aggressive *.py
+        run: pip install autoflake isort black
       - name: Clean Imports
         run: |
           isort .
@@ -38,13 +35,3 @@ jobs:
             commit_user_name: "github-actions[bot]"
             commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
             commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
-
-
-      - name: Delete old workflow run
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          retain_days: 0
-          keep_minimum_runs: 0
-          #delete_workflow_pattern: "Upadte Docs"
