@@ -60,4 +60,6 @@ jobs:
 
         git add .
         git commit --allow-empty -m "Deploy Sphinx documentation"
-        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" gh-pages:gh-pages
+        git push --force origin gh-pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
