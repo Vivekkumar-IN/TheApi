@@ -7,10 +7,10 @@ Hi hello
 Method Summary
 --------------
 
-.. currentmodule:: TheApi
+.. currentmodule:: TheApi.api
 
 .. autosummary::
-   :toctree: _autosummary
+   :toctree: TheApi
    :members:
 
    TheApi
