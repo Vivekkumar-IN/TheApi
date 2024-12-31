@@ -109,7 +109,7 @@ for meth in methods:
     heading = "=" * len(method_name)
     text += f"{heading}\n\n"
 
-    text += f".. current-module:: TheApi\n\n"
+    text += f".. currentmodule:: TheApi\n\n"
 
     text += f".. automethod:: {meth}\n\n"
 
