@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath("../.."))
 
-from TheApi import __version__, Client
+from TheApi import Client, __version__
 
 
 project = "TheApix"
@@ -80,7 +80,8 @@ napoleon_use_rtype = False
 autodoc_class_signature = "separated"
 
 client_methods = [
-    f"TheApi.Client.{name}" for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
+    f"TheApi.Client.{name}"
+    for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
     if not name.startswith("_")
 ]
 
