@@ -4,9 +4,10 @@ Class
 TheApi
 ------
 
-.. current-module:: TheApi
+.. currentmodule:: TheApi
 
-.. autoclass:: TheApi.Client
+
+.. autoclass:: Client
    :exclude-members: __new__
 
 Methods
