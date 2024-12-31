@@ -86,7 +86,7 @@ methods = [
 ]
 
 
-client_methods = "\n    ".join(client_methods)
+client_methods = "\n    ".join(methods)
 
 client_rst_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "client.rst")
 
@@ -100,3 +100,15 @@ content = content.replace("{client_methods}", client_methods)
 
 with open(client_rst_path, "w") as file:
     file.write(content)
+
+
+for meth in methods:
+    with open(f"{api_path}/{meth}.rst", "w") as f:
+        met = meth.split(".")[-1]
+        text = f"{met}\n"
+        heading = ["=" for i in range(len(met))]
+        text += f"{heading}\n\n"
+        text += f".. automethod:: {meth}\n\n"
+        f.write(text)
+
+    
