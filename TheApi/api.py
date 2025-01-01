@@ -122,6 +122,8 @@ class Client:
             locale (``str``, *optional*):
                 Locale for the data (default: 'en_US').
                 `See valid locales <https://fakerapi.it/#params_locale>`_
+            **kwargs (``dict``, *optional*):
+                Additional parameters passed to the API request. These can include any other valid query parameters accepted by the FakerAPI.
 
         Returns:
             ``dict``:
@@ -293,18 +295,22 @@ class Client:
         """
         return await self.fakerapi("CreditCards", quantity=quantity, locale=locale)
 
-    async def get_fake_addresses(self, quantity: int = 1, locale: str = "en_US"):
+    async def get_fake_addresses(self, quantity: int = 1, locale: str = "en_US", country_code: str = None):
         """
         Fetch fake address data from the FakerAPI.
 
         Args:
             quantity (``int``, *optional*): Number of address entries to fetch (default: 1).
             locale (``str``, *optional*): Locale for the address data (default: "en_US"), `See Valid locale <https://fakerapi.it/#params_locale>`_.
+            country_code (``str``, *optional*): force the country of response's adresses. ISO 3166-1 Two-letter format or locale format like en_US (default: ``None``).
 
         Returns:
             ``dict``: Response data from the API.
         """
-        return await self.fakerapi("addresses", quantity=quantity, locale=locale)
+        kwargs = {}
+        if country_code:
+            kwargs["_country_code"] = country_code
+        return await self.fakerapi("addresses", quantity=quantity, locale=locale, **kwargs)
 
     async def get_advice(self):
         """
