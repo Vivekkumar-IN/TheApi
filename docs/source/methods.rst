@@ -4,7 +4,7 @@ Methods
 .. currentmodule:: TheApi
 
 
-The following methods are available in `TheApi.Client`:
+The following methods are available in :meth:`TheApi.Client`:
 
 .. autosummary::
     :nosignatures:
