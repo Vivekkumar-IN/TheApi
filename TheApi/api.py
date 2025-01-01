@@ -68,17 +68,6 @@ class Client:
     async def _create_file(
         self, contents: bytes, ext: str, name: Optional[str] = None
     ) -> str:
-        """
-        Creates a file in the downloads directory, writes the contents to the file, and returns the file path.
-
-        Args:
-            contents (bytes): The content to write to the file.
-            ext (str): The file extension (e.g., 'txt', 'pdf').
-            name (str, optional): The base name for the file. Defaults to None.
-
-        Returns:
-            str: The file path where the contents were written.
-        """
         file_name = f"{name or 'file'}_{self._rnd_str()}.{ext}"
         file_path = os.path.join(self.downloads_dir, file_name)
 
@@ -123,7 +112,8 @@ class Client:
         """
         Fetch data from the FakerAPI using aiohttp.
 
-        :param endpoint: The resource endpoint. Valid endpoints are:
+        Args:
+            endpoint(``str``): The resource endpoint. Valid endpoints are:
             - companies
             - addresses
             - books
@@ -134,17 +124,14 @@ class Client:
             - products
             - texts
             - users
-        :type endpoint: str
 
-        :param quantity: Number of rows to fetch (default: 3, max: 1000).
-        :type quantity: int, optional
+        quantity(``int``): Number of rows to fetch (default: 3, max: 1000).
 
-        :param locale: Locale for the data (default: 'en_US').
-                       [See Valid locale](https://fakerapi.it/#params_locale)
-        :type locale: str, optional
+        Locale (``str``): Locale for the data (default: 'en_US').  
+                          `See Valid locale <https://fakerapi.it/#params_locale>`_
 
-        :returns: Response data from the API.
-        :rtype: dict
+        Return:
+            ``dict``: Response data from the API.
         """
         valid_endpoints = [
             "companies",
@@ -272,25 +259,23 @@ class Client:
         """
         Fetch fake image data from the FakerAPI.
 
-        :param quantity: Number of images to fetch (default: 1).
-        :type quantity: int, optional
+        Args:
+            quantity (``int``, *optional*): Number of images to fetch. Defaults to 1.
+            
+            locale (``str``, *optional*): Locale for the images. Defaults to "en_US".
+                `See Valid locale <https://fakerapi.it/#params_locale>`_
 
-        :param locale: Locale for the images (default: "en_US").
-                       [See Valid locale](https://fakerapi.it/#params_locale)
-        :type locale: str, optional
+            type (``st``r, *optional*): Type of image (e.g., 'any', 'animals', 'business', etc.). 
+                Defaults to "any".
+                
+            width (``int``, *optional*): Width of the images. Defaults to 640.
+            
+            height (``int``, *optional*): Height of the images. Defaults to 480.
 
-        :param type: Type of image (e.g., 'any', 'animals', 'business', etc.; default: "any").
-        :type type: str, optional
-
-        :param width: Width of the images (default: 640).
-        :type width: int, optional
-
-        :param height: Height of the images (default: 480).
-        :type height: int, optional
-
-        :returns: Response data from the API.
-        :rtype: dict
+        Returns:
+            ``dict``: Response data from the API.
         """
+
 
         return await self.fakerapi(
             "images",
@@ -306,11 +291,11 @@ class Client:
         Fetch fake credit card data from the FakerAPI.
 
         Args:
-            locale (str, optional): Locale for the credit card data (default: "en_US"), [ See Valid locale ](https://fakerapi.it/#params_locale).
-            amount (int, optional): Number of credit card entries to fetch (default: 1).
+            locale (``str``, *optional*): Locale for the credit card data (default: "en_US"), `See Valid locale <https://fakerapi.it/#params_locale>`_.
+            amount (``int``, *optional*): Number of credit card entries to fetch (default: 1).
 
         Returns:
-            dict: Response data from the API.
+            ``dict``: Response data from the API.
         """
         return await self.fakerapi("CreditCards", quantity=quantity, locale=locale)
 
@@ -319,11 +304,11 @@ class Client:
         Fetch fake address data from the FakerAPI.
 
         Args:
-            quantity (int, optional): Number of address entries to fetch (default: 1).
-            locale (str, optional): Locale for the address data (default: "en_US"), [ See Valid locale ](https://fakerapi.it/#params_locale).
+            quantity (``int``, *optional*): Number of address entries to fetch (default: 1).
+            locale (``str``, *optional*): Locale for the address data (default: "en_US"), `See Valid locale <https://fakerapi.it/#params_locale>`_.
 
         Returns:
-            dict: Response data from the API.
+            ``dict``: Response data from the API.
         """
         return await self.fakerapi("addresses", quantity=quantity, locale=locale)
 
@@ -332,7 +317,7 @@ class Client:
         Fetches a random piece of advice.
 
         Returns:
-            str: A random advice message.
+            ``str``: A random advice message.
         """
         response = await self.request.get(self.base_urls["advice"])
         return response.json()["slip"]["advice"]
@@ -342,11 +327,11 @@ class Client:
         Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.
 
         Args:
-            currency (str, optional): The currency code (e.g., 'eur', 'usd', 'gbp').
+            currency (``str``, *optional*): The currency code (e.g., 'eur', 'usd', 'gbp').
                                       If None, fetches BTC value for all currencies.
 
         Returns:
-            dict: The response containing BTC value(s) for the specified currency or all currencies.
+            ``dict``: The response containing BTC value(s) for the specified currency or all currencies.
 
         Raises:
             ValueError: If the provided currency is invalid or the request fails.
