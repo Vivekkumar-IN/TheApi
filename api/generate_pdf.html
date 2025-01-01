@@ -220,6 +220,7 @@
 <li class="toctree-l2"><a class="reference internal" href="get_fake_addresses.html">get_fake_addresses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_fake_credit_cards.html">get_fake_credit_cards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_fake_images.html">get_fake_images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_fake_persons.html">get_fake_persons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_hindi_jokes.html">get_hindi_jokes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_jokes.html">get_jokes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_uselessfact.html">get_uselessfact</a></li>
@@ -284,12 +285,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<em>str</em>) – The URL of the website (if <cite>from_url=True</cite>) or the HTML string (if <cite>from_url=False</cite>).</p></li>
-<li><p><strong>from_url</strong> (<em>bool, optional</em>) – Whether to generate the PDF from a URL (True) or an HTML string (False).</p></li>
+<li><p><strong>source</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – The URL of the website (if <cite>from_url=True</cite>) or the HTML string (if <cite>from_url=False</cite>).</p></li>
+<li><p><strong>from_url</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <a href="#id1"><span class="problematic" id="id2">*</span></a>optional”) – Whether to generate the PDF from a URL (True) or an HTML string (False).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><em>FilePath</em> – The file path where the PDF was saved.</p>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">str</span></code> – The file path where the PDF was saved.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>ValueError</strong> – If <cite>from_url</cite> is True and <cite>source</cite> is not a valid URL.</p>

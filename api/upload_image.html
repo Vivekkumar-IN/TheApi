@@ -220,6 +220,7 @@
 <li class="toctree-l2"><a class="reference internal" href="get_fake_addresses.html">get_fake_addresses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_fake_credit_cards.html">get_fake_credit_cards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_fake_images.html">get_fake_images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_fake_persons.html">get_fake_persons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_hindi_jokes.html">get_hindi_jokes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_jokes.html">get_jokes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_uselessfact.html">get_uselessfact</a></li>
@@ -283,22 +284,19 @@
 <dd><p>Uploads an image to <a class="reference external" href="https://envs.sh">https://envs.sh</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file_path</strong> (<em>Union[str, bytes, BytesIO]</em>) – The image file to upload.
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="docutils literal notranslate"><span class="pre">BytesIO</span></code>) – The image file to upload.
 Can be a file path (str), binary data (bytes), or a BytesIO object.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><p><em>str</em> –</p>
+<dd class="field-even"><p><p><code class="docutils literal notranslate"><span class="pre">str</span></code> –</p>
 <dl class="simple">
 <dt>The URL or confirmation message of the uploaded image if the upload is successful.</dt><dd><p>Returns “Unexpected response format” if the response format is not as expected.</p>
 </dd>
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ValueError</strong> – If the file is not found, the input type is invalid,
-    or the upload request fails.</p>
-</dd>
 </dl>
+<p>Raises:</p>
 </dd></dl>
 
 </section>
