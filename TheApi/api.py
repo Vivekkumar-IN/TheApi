@@ -108,31 +108,26 @@ class Client:
 
     async def fakerapi(
         self, endpoint: str, quantity: int = 3, locale: str = "en_US", **kwargs
-    ):  # gh-actions Don't Add it's example, ignore it.
+    ): 
         """
         Fetch data from the FakerAPI using aiohttp.
-
+        
         Args:
-            endpoint(``str``): The resource endpoint. Valid endpoints are:
-            - companies
-            - addresses
-            - books
-            - CreditCards
-            - images
-            - persons
-            - places
-            - products
-            - texts
-            - users
+            endpoint (``str``): 
+                The resource endpoint. Valid endpoints are:
+                *companies*, *addresses*, *books*, *CreditCards*, *images*, 
+                *persons*, *places*, *products*, *texts*.
+            quantity (``int``, *optional*): 
+                Number of rows to fetch (default: 3, max: 1000).
+            locale (``str``, *optional*): 
+                Locale for the data (default: 'en_US'). 
+                `See valid locales <https://fakerapi.it/#params_locale>`_
 
-        quantity(``int``): Number of rows to fetch (default: 3, max: 1000).
-
-        Locale (``str``): Locale for the data (default: 'en_US').
-                          `See Valid locale <https://fakerapi.it/#params_locale>`_
-
-        Return:
-            ``dict``: Response data from the API.
+        Returns:
+            ``dict``: 
+                Response data from the API.
         """
+        
         valid_endpoints = [
             "companies",
             "addresses",
