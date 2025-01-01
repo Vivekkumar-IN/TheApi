@@ -75,7 +75,7 @@ html_theme_options = {
 }
 
 pygments_style = "default"
-pygments_dark_style = "native"
+#pygments_dark_style = "native"
 
 napoleon_include_special_with_doc = False
 napoleon_use_rtype = False
