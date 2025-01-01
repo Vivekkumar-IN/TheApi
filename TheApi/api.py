@@ -902,15 +902,22 @@ class Client:
     async def blackpink(self, query, color="#ff94e0", border_color=None):
         """
         Creates a stylized "Blackpink"-themed image with custom text, color, and optional border.
+
         Args:
-            query (str): The text to display on the image.
-            color (str, optional): The primary color of the text and gradient background in hex format.
+            query (``str``): 
+                The text to display on the image.
+            color (``str``, *optional*): 
+                The primary color of the text and gradient background in hex format. 
                 Defaults to "#ff94e0" (a pink shade).
-            border_color (str, optional): The color of the image border in hex format.
-                If not provided, defaults to the value of `color`.
+            border_color (``str``, *optional*): 
+                The color of the image border in hex format. 
+                If not provided, defaults to the value of ``color``.
+
         Returns:
-            FilePath: The file path of the generated image with delete attribute.
+            ``str``: 
+                The file path of the generated image.
         """
+
         text = query
         font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
         initial_font_size = 100
