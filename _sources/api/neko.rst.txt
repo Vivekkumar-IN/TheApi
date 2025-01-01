@@ -1,0 +1,7 @@
+neko
+====
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.neko
+
