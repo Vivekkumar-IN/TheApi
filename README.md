@@ -112,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "If she lost because of a difference in ability, it can\u2019t be helped. If she worked hard and didn\u2019t get what she wants, she can just work harder next time. If she gave her all for this, it\u2019s acceptable even if she lost.",
+    "content": "[about the inefficacy of his attack against Tsunade] Did it not penetrate deep enough because of her fat breasts?",
     "anime": {
-        "id": 386,
-        "name": "Baka & Test - Summon the Beasts",
-        "altName": "Baka to Test to Shoukanjuu"
+        "id": 266,
+        "name": "Naruto",
+        "altName": "Naruto (2023)"
     },
     "character": {
-        "id": 574,
-        "name": "Yoshii Akihisa"
+        "id": 2487,
+        "name": "Kabuto Yakushi"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "gym-manager",
+    "file_name": "ben-prenderghast",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/gym-manager.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/ben-prenderghast.jpg"
 }
 ```
 
@@ -172,8 +172,8 @@ print(result)
 #### Expected Output
 
 ```text
+https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2022/11/pokemon-journey-ash-and-pikachu-feature-image-2.jpg
 https://staticg.sportskeeda.com/editor/2023/02/394a3-16769313907566-1920.jpg
-http://www.animextremist.com/imagenes/pokemon/pokemon103.jpg
 https://images5.alphacoders.com/130/thumb-1920-1308338.jpg
 ```
 
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_CskxXSCT.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_QJkXXIYY.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_w6VVNBSt.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_p2LqnxhW.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/akc.jpg
+https://cdn2.thecatapi.com/images/cu1.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/a2dc4397-4c15-4ee6-937e-ac25ff83de5c.mp4
+https://random.dog/4b7e6067-b030-490b-9b55-2bb7e38fb2fc.jpg
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=90
+https://randomfox.ca/?i=93
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/bxsi2Fil_qr.png
+/home/runner/work/TheApi/TheApi/downloads/d8QSrkGk_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Everything matters, but nothing matters that much.
+Drink a glass of water before meals.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "88,712.262",
-        "rate_float": 88712.2616,
+        "rate": "90,489.747",
+        "rate_float": 90489.7466,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "73,742.332",
-        "rate_float": 73742.3316,
+        "rate": "75,219.871",
+        "rate_float": 75219.8712,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "92,469.192",
-        "rate_float": 92469.1924,
+        "rate": "94,321.953",
+        "rate_float": 94321.9532,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "44218 Schmeler Dam",
-            "streetName": "Sandy Throughway",
-            "buildingNumber": "72526",
-            "city": "North Arthurborough",
-            "zipcode": "63357",
-            "country": "Uzbekistan",
-            "country_code": "UZ",
-            "latitude": -86.815421,
-            "longitude": -71.949859
+            "street": "9514 Klein Islands Apt. 869",
+            "streetName": "Prosacco Gardens",
+            "buildingNumber": "908",
+            "city": "North Bettie",
+            "zipcode": "51577-2909",
+            "country": "Bolivia",
+            "country_code": "BO",
+            "latitude": -26.949397,
+            "longitude": -179.530331
         }
     ]
 }
@@ -537,10 +537,10 @@ print(result)
     "total": 1,
     "data": [
         {
-            "type": "JCB",
-            "number": "5313792189301958",
-            "expiration": "09/26",
-            "owner": "Ian Lehner"
+            "type": "MasterCard",
+            "number": "4929039655006508",
+            "expiration": "01/26",
+            "owner": "Travon Mayert"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Ut commodi enim cum.",
-            "description": "Quis aut tenetur quisquam sed fugiat aut magni. Et maiores dolore dolor et mollitia. Pariatur iure neque illo sunt atque omnis architecto modi. Qui est ut harum minus voluptate ut.",
+            "title": "Beatae et sunt omnis.",
+            "description": "Vitae consequuntur a enim ut dolores vel. Consequuntur sed debitis quaerat ut enim sed. Inventore dolores aut ut eos magni odio. Eum harum quia rem quia.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-उसकी कुछ ख्वाहिशें अधूरी थीं, दूरियां भी तो ज़रूरी थीं, यूँ न बेवफा कहो उसे दुनियावालों, क्योंकि … सोनम गुप्ता की भी कुछ मजबूरियाँ थी।﻿
+विवाह क्या है ? ... विवाह एक ऐसा गठबंधन है जिसमे में 2 लोग मिलकर उन समस्याओं को सुलझाने का जीवन भर प्रयास करते है जो पहले कभी थी ही नहीं 😂😂😂
 ```
 
 ### 19. Get Jokes
@@ -629,7 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says "Do you get the reference?" But Java didn't.
+// This line doesn't actually do anything, but the code stops working when I delete it.
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-Humans are the only primates that don`t have pigment in the palms of their hands.
+If done perfectly, a rubix cube combination can be solved in 17 turns.
 ```
 
 ### 21. Get Word Definitions
@@ -708,16 +708,16 @@ print(result)
 #### Expected Output
 
 ```text
-Decorator
-Muzzle
-Paralyze
-Commerce
-Dipping
-Sterility
-Flatterer
-Stump
-Mammal
-Powdering
+Stranger
+Igloo
+Daybreak
+Pacifist
+Cargo
+Tracing
+Secluded
+Explain
+Ludicrous
+Degraded
 ```
 
 ### 23. Github Search
@@ -768,7 +768,7 @@ print(result)
         "description": "Pok\u00e9mon battle simulator.",
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
-        "stargazers_count": 4842,
+        "stargazers_count": 4843,
         "forks_count": 2829
     },
     {
@@ -801,7 +801,7 @@ print(result)
 #### Expected Output
 
 ```text
-यदी आप सच कहते हैं, तो आपको कुछ याद रखने की जरूरत नहीं रहती..
+ज़िंदगी सँवारने को तो ज़िंदगी पड़ी है, वो लम्हाँ सँवार लो जहाँ ज़िंदगी खड़ी है।
 ```
 
 ### 25. Hug
@@ -830,8 +830,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Happy Sugar Life",
-        "url": "https://nekos.best/api/v2/hug/1613322e-52e3-44a6-8dd7-a57b6dac48ba.gif"
+        "anime_name": "Princess Connect! Re:Dive",
+        "url": "https://nekos.best/api/v2/hug/7aadc12d-90e2-4e2e-933b-aa72313ccc10.gif"
     }
 ]
 ```
@@ -854,7 +854,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/a43zcmdlzu9e1.png?width=640&crop=smart&auto=webp&s=e37bfcee0e8d5880344ed2adc51f7d9c3d6850b5
+https://preview.redd.it/01osuuey4w9e1.gif?width=320&crop=smart&format=png8&s=d30eb8e0630ba7258b3cd55173c20107f2c0dce0
 ```
 
 ### 27. Neko
@@ -894,22 +894,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/19731971",
-            "artist_name": "\u30d4\u30ed\u30ea\u83cc",
-            "source_url": "https://www.pixiv.net/en/artworks/91088436",
-            "url": "https://nekos.best/api/v2/neko/c8d6e977-8170-48e4-881f-1a46cf2d5803.png"
+            "artist_href": "https://www.pixiv.net/en/users/13414359",
+            "artist_name": "\u30af\u30ea\u30b0\u30e9",
+            "source_url": "https://www.pixiv.net/en/artworks/62976421",
+            "url": "https://nekos.best/api/v2/neko/69713c17-528e-4db1-9028-4d33c0d24cae.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/16441986",
-            "artist_name": "zky",
-            "source_url": "https://www.pixiv.net/en/artworks/89205090",
-            "url": "https://nekos.best/api/v2/neko/609284b6-87b7-48d0-8c76-715ef78303ec.png"
+            "artist_href": "https://www.pixiv.net/en/users/3036679",
+            "artist_name": "\u7518\u57ce\u306a\u3064\u304d",
+            "source_url": "https://www.pixiv.net/en/artworks/76315148",
+            "url": "https://nekos.best/api/v2/neko/9b326889-c428-4097-8d94-a23ce31d255d.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/37889769",
-            "artist_name": "\u30bf\u30f3\u5869",
-            "source_url": "https://www.pixiv.net/en/artworks/96538052",
-            "url": "https://nekos.best/api/v2/neko/808c040d-0c81-4b07-90c2-99de5b6ee6b3.png"
+            "artist_href": "https://www.pixiv.net/en/users/10678435",
+            "artist_name": "\u72d0\u5df3\u591c",
+            "source_url": "https://www.pixiv.net/en/artworks/93283477",
+            "url": "https://nekos.best/api/v2/neko/1b79a7fd-9809-4468-90ab-6573f08dfa94.png"
         }
     ]
 }
@@ -985,9 +985,9 @@ print(result)
 #### Expected Output
 
 ```text
-A friend is what the heart needs all the time.
+I never considered a difference of opinion in politics, in religion, in philosophy, as cause for withdrawing from a friend.
 
-author - Henry van Dyke Jr.
+author - Thomas Jefferson
 ```
 
 ### 30. Riddle
@@ -1009,8 +1009,8 @@ print(result)
 
 ```json
 {
-    "riddle": "While on my way to St. Ives, I saw a man with 7 wives. Each wife had 7 sacks. Each sack had 7 cats. Each cat had 7 kittens. Kitten, cats, sacks, wives, How many were going to St. Ives?",
-    "answer": "Just one, me"
+    "riddle": "I am that which is hunted, and this panes me. Do you dig, Stone? What am I?",
+    "answer": "Quarry"
 }
 ```
 
@@ -1082,7 +1082,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32711,
+        "view_count": 32712,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1171,7 +1171,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's primary target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's primary target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -1202,7 +1202,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_u64qWCiF.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_6pTty321.jpg
 ```
 
 
