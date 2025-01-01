@@ -123,7 +123,7 @@ class Client:
                 Locale for the data (default: 'en_US').
                 `See valid locales <https://fakerapi.it/#params_locale>`_
             **kwargs (``dict``, *optional*):
-                Additional parameters passed to the API request. These can include any other valid query parameters accepted by the FakerAPI.
+                Additional parameters passed to the API request. These can include any other valid query parameters accepted by the `FakerAPI <https://fakerapi.it/>`_ .
 
         Returns:
             ``dict``:
