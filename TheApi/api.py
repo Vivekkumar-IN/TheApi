@@ -256,7 +256,7 @@ class Client:
         type: str = "any",
         width: int = 640,
         height: int = 480,
-        seed; int = None,
+        seed: int = None,
     ):
         """
         Fetch fake image data from the `FakerAPI <https://fakerapi.it/>`_ .
@@ -291,7 +291,7 @@ class Client:
             _height=height,
         )
 
-    async def get_fake_credit_cards(self, locale: str = "en_US", quantity: int = 7, seed; int = None):
+    async def get_fake_credit_cards(self, locale: str = "en_US", quantity: int = 7, seed: int = None):
         """
         Fetch fake credit card data from the `FakerAPI <https://fakerapi.it/>`_ .
 
@@ -306,7 +306,7 @@ class Client:
         return await self.fakerapi("CreditCards", quantity=quantity, locale=locale, seed=seed)
 
     async def get_fake_addresses(
-        self, quantity: int = 7, locale: str = "en_US", country_code: str = None, seed; int = None
+        self, quantity: int = 7, locale: str = "en_US", country_code: str = None, seed: int = None
     ):
         """
         Fetch fake address data from the `FakerAPI <https://fakerapi.it/>`_ .
@@ -329,7 +329,7 @@ class Client:
         )
 
     async def get_fake_persons(
-        self, quantity: int = 7, locale: str = "en_US", gender: str = None, birthday_start: str = None, birthday_end: str = None, seed; int = None,
+        self, quantity: int = 7, locale: str = "en_US", gender: str = None, birthday_start: str = None, birthday_end: str = None, seed: int = None,
     ):
         """
         Fetch fake persons details from the `FakerAPI <https://fakerapi.it/>`_ .
