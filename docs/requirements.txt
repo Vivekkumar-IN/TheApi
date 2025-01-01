@@ -5,5 +5,4 @@ httpx
 aiofiles
 pillow
 
-python_docs_theme
 sphinx_rtd_theme
