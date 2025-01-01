@@ -904,17 +904,17 @@ class Client:
         Creates a stylized "Blackpink"-themed image with custom text, color, and optional border.
 
         Args:
-            query (``str``): 
+            query (``str``):
                 The text to display on the image.
-            color (``str``, *optional*): 
-                The primary color of the text and gradient background in hex format. 
+            color (``str``, *optional*):
+                The primary color of the text and gradient background in hex format.
                 Defaults to "#ff94e0" (a pink shade).
-            border_color (``str``, *optional*): 
-                The color of the image border in hex format. 
+            border_color (``str``, *optional*):
+                The color of the image border in hex format.
                 If not provided, defaults to the value of ``color``.
 
         Returns:
-            ``str``: 
+            ``str``:
                 The file path of the generated image.
         """
 
