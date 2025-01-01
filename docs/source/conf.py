@@ -1,7 +1,7 @@
 import os
 import sys
 import inspect
-
+import datetime
 
 sys.path.insert(0, os.path.abspath("../.."))
 
@@ -11,7 +11,8 @@ from TheApi import Client, __version__
 project = "TheApix"
 author = "VivekKumar-IN"
 version = __version__
-copyright = f"2025, {author}"
+copyright = f"{datetime.date.today().year}, {author}"
+
 autosummary_generate = True
 
 extensions = [
@@ -31,7 +32,9 @@ html_copy_source = True
 html_static_path = ["_static"]
 html_css_files = ["css/pyrogram.css"]
 html_favicon = html_static_path[0] + "/img/TheApix.ico"
-
+html_last_updated_fmt = (
+    f"{datetime.datetime.now(tz=datetime.UTC).strftime('%d/%m/%Y, %H:%M:%S')} UTC"
+)
 
 html_theme_options = {
     "navigation_with_keys": True,
