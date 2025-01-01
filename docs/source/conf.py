@@ -81,6 +81,7 @@ napoleon_include_special_with_doc = False
 napoleon_use_rtype = False
 napoleon_use_param = False
 
+
 def write(path, content):
     with open(path, "w") as file:
         file.write(content)
@@ -89,6 +90,7 @@ def write(path, content):
 def read(path):
     with open(path, "r") as file:
         return file.read()
+
 
 method = [
     name
