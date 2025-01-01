@@ -295,7 +295,9 @@ class Client:
         """
         return await self.fakerapi("CreditCards", quantity=quantity, locale=locale)
 
-    async def get_fake_addresses(self, quantity: int = 1, locale: str = "en_US", country_code: str = None):
+    async def get_fake_addresses(
+        self, quantity: int = 1, locale: str = "en_US", country_code: str = None
+    ):
         """
         Fetch fake address data from the FakerAPI.
 
@@ -310,7 +312,9 @@ class Client:
         kwargs = {}
         if country_code:
             kwargs["_country_code"] = country_code
-        return await self.fakerapi("addresses", quantity=quantity, locale=locale, **kwargs)
+        return await self.fakerapi(
+            "addresses", quantity=quantity, locale=locale, **kwargs
+        )
 
     async def get_advice(self):
         """
