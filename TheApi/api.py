@@ -127,7 +127,7 @@ class Client:
 
         quantity(``int``): Number of rows to fetch (default: 3, max: 1000).
 
-        Locale (``str``): Locale for the data (default: 'en_US').  
+        Locale (``str``): Locale for the data (default: 'en_US').
                           `See Valid locale <https://fakerapi.it/#params_locale>`_
 
         Return:
@@ -261,21 +261,20 @@ class Client:
 
         Args:
             quantity (``int``, *optional*): Number of images to fetch. Defaults to 1.
-            
+
             locale (``str``, *optional*): Locale for the images. Defaults to "en_US".
                 `See Valid locale <https://fakerapi.it/#params_locale>`_
 
-            type (``st``r, *optional*): Type of image (e.g., 'any', 'animals', 'business', etc.). 
+            type (``st``r, *optional*): Type of image (e.g., 'any', 'animals', 'business', etc.).
                 Defaults to "any".
-                
+
             width (``int``, *optional*): Width of the images. Defaults to 640.
-            
+
             height (``int``, *optional*): Height of the images. Defaults to 480.
 
         Returns:
             ``dict``: Response data from the API.
         """
-
 
         return await self.fakerapi(
             "images",
