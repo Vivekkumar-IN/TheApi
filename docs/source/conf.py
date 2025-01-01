@@ -25,7 +25,7 @@ templates_path = ["_templates"]
 exclude_patterns = []
 
 html_title = f"TheApix v{version}"
-html_theme = "python-docs-theme"
+#html_theme = "python-docs-theme"
 html_copy_source = False
 html_static_path = ["_static"]
 html_css_files = ["css/pyrogram.css"]
