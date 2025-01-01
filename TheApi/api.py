@@ -107,7 +107,7 @@ class Client:
         return response.json()["data"]
 
     async def fakerapi(
-        self, endpoint: str, quantity: int = 3, locale: str = "en_US", **kwargs
+        self, endpoint: str, quantity: int = 3, locale: str = "en_US", seed: int = None, **kwargs
     ):
         """
         Fetch data from the FakerAPI using aiohttp.
@@ -122,6 +122,8 @@ class Client:
             locale (``str``, *optional*):
                 Locale for the data (default: 'en_US').
                 `See valid locales <https://fakerapi.it/#params_locale>`_
+            seed (``int``, *optional*):
+                This parameter accept an integer and allows to get always the same results. So, executing the same request with seed parameter set to the same value (ex. 12345) the results will never change (Defaults to ``None``).
             **kwargs (``dict``, *optional*):
                 Additional parameters passed to the API request. These can include any other valid query parameters accepted by the `FakerAPI <https://fakerapi.it/>`_ .
 
@@ -240,6 +242,8 @@ class Client:
             "_locale": locale,
             **kwargs,
         }
+        if seed:
+            params["_seed"] = seed
         url = f"{self.base_urls['faker']}{endpoint}"
 
         result = await self.request.get(url, params=params)
@@ -252,9 +256,10 @@ class Client:
         type: str = "any",
         width: int = 640,
         height: int = 480,
+        seed; int = None,
     ):
         """
-        Fetch fake image data from the FakerAPI.
+        Fetch fake image data from the `FakerAPI <https://fakerapi.it/>`_ .
 
         Args:
             quantity (``int``, *optional*): Number of images to fetch. Defaults to 1.
@@ -269,6 +274,9 @@ class Client:
 
             height (``int``, *optional*): Height of the images. Defaults to 480.
 
+            seed (``int``, *optional*): This parameter accept an integer and allows to get always the same results. So, executing the same request with seed parameter set to the same value (ex. 12345) the results will never change (Defaults to ``None``).
+           
+
         Returns:
             ``dict``: Response data from the API.
         """
@@ -277,34 +285,38 @@ class Client:
             "images",
             quantity=quantity,
             locale=locale,
+            seed=seed,
             _type=type,
             _width=width,
             _height=height,
         )
 
-    async def get_fake_credit_cards(self, locale: str = "en_US", quantity: int = 1):
+    async def get_fake_credit_cards(self, locale: str = "en_US", quantity: int = 7, seed; int = None):
         """
-        Fetch fake credit card data from the FakerAPI.
+        Fetch fake credit card data from the `FakerAPI <https://fakerapi.it/>`_ .
 
         Args:
             locale (``str``, *optional*): Locale for the credit card data (default: "en_US"), `See Valid locale <https://fakerapi.it/#params_locale>`_.
-            amount (``int``, *optional*): Number of credit card entries to fetch (default: 1).
-
+            amount (``int``, *optional*): Number of credit card entries to fetch (default: 7).
+            seed (``int``, *optional*): This parameter accept an integer and allows to get always the same results. So, executing the same request with seed parameter set to the same value (ex. 12345) the results will never change (Defaults to ``None``).
+           
         Returns:
             ``dict``: Response data from the API.
         """
-        return await self.fakerapi("CreditCards", quantity=quantity, locale=locale)
+        return await self.fakerapi("CreditCards", quantity=quantity, locale=locale, seed=seed)
 
     async def get_fake_addresses(
-        self, quantity: int = 1, locale: str = "en_US", country_code: str = None
+        self, quantity: int = 7, locale: str = "en_US", country_code: str = None, seed; int = None
     ):
         """
-        Fetch fake address data from the FakerAPI.
+        Fetch fake address data from the `FakerAPI <https://fakerapi.it/>`_ .
 
         Args:
-            quantity (``int``, *optional*): Number of address entries to fetch (default: 1).
+            quantity (``int``, *optional*): Number of address entries to fetch (default: 7).
             locale (``str``, *optional*): Locale for the address data (default: "en_US"), `See Valid locale <https://fakerapi.it/#params_locale>`_.
             country_code (``str``, *optional*): force the country of response's adresses. ISO 3166-1 Two-letter format or locale format like en_US (default: ``None``).
+            seed (``int``, *optional*): This parameter accept an integer and allows to get always the same results. So, executing the same request with seed parameter set to the same value (ex. 12345) the results will never change (Defaults to ``None``).
+           
 
         Returns:
             ``dict``: Response data from the API.
@@ -313,9 +325,37 @@ class Client:
         if country_code:
             kwargs["_country_code"] = country_code
         return await self.fakerapi(
-            "addresses", quantity=quantity, locale=locale, **kwargs
+            "addresses", quantity=quantity, locale=locale, seed=seed **kwargs
         )
 
+    async def get_fake_persons(
+        self, quantity: int = 7, locale: str = "en_US", gender: str = None, birthday_start: str = None, birthday_end: str = None, seed; int = None,
+    ):
+        """
+        Fetch fake persons details from the `FakerAPI <https://fakerapi.it/>`_ .
+
+        Args:
+            quantity (``int``, *optional*): Number of address entries to fetch (default: 7).
+            locale (``str``, *optional*): Locale for the address data (default: "en_US"), `See Valid locale <https://fakerapi.it/#params_locale>`_.
+            gender (``str``, *optional*): Gender of the person can be ``male`` or ``female``.
+            birthday_start (``str``, *optional*): Birthday starting date of person in format Y-m-d (default: FakerApi Keeps *90 years*)
+            birthday_end (``str``, *optional*): Birthday ending date of person  in format Y-m-d (default: FakerApi keeps *now*)
+            seed (``int``, *optional*): This parameter accept an integer and allows to get always the same results. So, executing the same request with seed parameter set to the same value (ex. 12345) the results will never change (Defaults to ``None``).
+           
+        Returns:
+            ``dict``: Response data from the API.
+        """
+        kwargs = {}
+        if birthday_start:
+            kwargs["_birthday_start"] = birthday_start
+        if birthday_end:
+            kwargs["_birthday_end"] = birthday_end
+        if gender:
+            kwargs["_gender"] = gender
+        return await self.fakerapi(
+            "persons", quantity=quantity, locale=locale, seed=seed, **kwargs
+        )
+        
     async def get_advice(self):
         """
         Fetches a random piece of advice.
@@ -363,11 +403,11 @@ class Client:
         Fetches a specified number of jokes.
 
         Args:
-            amount (int, optional): The number of jokes to retrieve. Defaults to 1.
+            amount (``int``, *optional*): The number of jokes to retrieve. Defaults to 1.
 
         Returns:
-            str: A single joke if `amount` is 1.
-            list: If `amount` > 1, returns numbered jokes.
+            ``str``: A single joke if `amount` is 1.
+            ``list``: If `amount` > 1, returns numbered jokes.
         """
         url = self.base_urls["jokes"]
         params = {"type": "single", "amount": amount}
@@ -384,7 +424,7 @@ class Client:
         Fetches a random Hindi joke.
 
         Returns:
-            str: A random Hindi joke if available, or "No joke found" if not available.
+            ``str``: A random Hindi joke if available, or "No joke found" if not available.
         """
         response = await self.request.get(self.base_urls["hindi_jokes"])
         response = response.json()
@@ -394,16 +434,16 @@ class Client:
         self,
         source: str,
         from_url: bool = True,
-    ) -> str:  # gh-actions Don't Add it's example, ignore it.
+    ) -> str:
         """
         Generates a PDF from a URL or an HTML string and saves it to a file.
 
         Args:
-            source (str): The URL of the website (if `from_url=True`) or the HTML string (if `from_url=False`).
-            from_url (bool, optional): Whether to generate the PDF from a URL (True) or an HTML string (False).
+            source (``str``): The URL of the website (if `from_url=True`) or the HTML string (if `from_url=False`).
+            from_url (``bool``, *optional"): Whether to generate the PDF from a URL (True) or an HTML string (False).
 
         Returns:
-            FilePath: The file path where the PDF was saved.
+            ``str``: The file path where the PDF was saved.
 
         Raises:
             ValueError: If `from_url` is True and `source` is not a valid URL.
@@ -440,13 +480,13 @@ class Client:
         Generate a QR code using api.qrserver.com and save it as a PNG file.
 
         Args:
-            data (str): The content for the QR code.
-            size (str): The size of the QR code in the format 'WIDTHxHEIGHT' (default: '150x150').
-            foreground_color (str): The color of the QR code (default: '000000' - black).
-            background_color (str): The background color of the QR code (default: 'FFFFFF' - white).
+            data (``str``): The content for the QR code.
+            size (``str``, *optional*): The size of the QR code in the format 'WIDTHxHEIGHT' (default: '150x150').
+            foreground_color (``str``, *optional*): The color of the QR code (default: '000000' - black).
+            background_color (``str``, *optional*): The background color of the QR code (default: 'FFFFFF' - white).
 
         Returns:
-            FilePath: The file path where the QR code was saved.
+            str: The file path where the QR code was saved.
         """
 
         url = f"{self.base_urls['qr_gen']}/create-qr-code/"
@@ -466,7 +506,7 @@ class Client:
         Fetches a random useless fact.
 
         Returns:
-            str: A random useless fact.
+            ``str``: A random useless fact.
         """
         response = await self.request.get(self.base_urls["useless_fact"])
         response = response.json()
@@ -477,7 +517,7 @@ class Client:
         Fetches a random quote.
 
         Returns:
-            str: The content of a random quote followed by the author's name.
+            ``str``: The content of a random quote followed by the author's name.
         """
         response = await self.request.get(self.base_urls["quote"], verify=False)
         data = response.json()
@@ -488,7 +528,7 @@ class Client:
         Fetches a random Hindi quote.
 
         Returns:
-            str: The content of a random Hindi quote.
+            ``str``: The content of a random Hindi quote.
         """
         response = await self.request.get(self.base_urls["hindi_quote"])
         response = response.json()
@@ -500,14 +540,12 @@ class Client:
         and uploads the image after generation.
 
         Args:
-            text (str): The text to be written on the image. Text exceeding 55 characters
+            text (``str``): The text to be written on the image. Text exceeding 55 characters
                         per line will be wrapped, with up to 25 lines displayed.
 
         Returns:
-            str: The URL of the uploaded image.
-
-        Notes:
-            A temporary image file is created, saved, and removed after uploading.
+            ``str``: The URL of the uploaded image.
+            
         """
         tryimg = "https://graph.org/file/1f8d00177ac2429b101b9.jpg"
         tryresp = await self.request.get(tryimg)
@@ -553,10 +591,10 @@ class Client:
         uploads it, and returns the URL of the uploaded image.
 
         Args:
-            query (str): The code snippet to be rendered as an image.
+            query (``str``): The code snippet to be rendered as an image.
 
         Returns:
-            FilePath: The file path of the saved image.
+            ``str``: The file path of the saved image.
         """
         response = await self.request.post(
             "https://carbonara.solopov.dev/api/cook",
@@ -572,10 +610,10 @@ class Client:
         Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.
 
         Args:
-            query (str): The search term to look up on Wikipedia.
+            query (``str``): The search term to look up on Wikipedia.
 
         Returns:
-            dict: A dictionary containing information about the top search result, with keys:
+            ``dict``: A dictionary containing information about the top search result, with keys:
                 - title (str): The title of the Wikipedia article.
                 - summary (str): A brief summary of the article's content.
                 - url (str): The URL link to the full Wikipedia article.
@@ -626,8 +664,8 @@ class Client:
         Searches GitHub for various types of content.
 
         Args:
-            query (str): The search query.
-            search_type (str, optional): The type of search. Can be one of:
+            query (``str``): The search query.
+            search_type (``str``, *optional*): The type of search. Can be one of:
                 - "repositories"
                 - "users"
                 - "organizations"
@@ -637,10 +675,10 @@ class Client:
                 - "topics"
 
                 Defaults to "repositories".
-            max_results (int, optional): The maximum number of results to return. Defaults to 3.
+            max_results (``int``, *optional*): The maximum number of results to return. Defaults to 3.
 
         Returns:
-            list: A list of search results or an error message.
+            ``list``: A list of search results or an error message.
         """
         valid_search_types = [
             "repositories",
@@ -756,13 +794,13 @@ class Client:
         Fetch random words from the Random Word API.
 
         Args:
-            words (int): Number of words to generate (default is 10).
-            letter (str): First letter of the words (optional).
-            word_type (str): Type of words (lowercase, uppercase, capitalized; default is capitalized).
-            alphabetize (bool): Whether to alphabetize the result (default is False).
+            words (``int``): Number of words to generate (default is 10).
+            letter (``str``): First letter of the words (optional).
+            word_type (``str``): Type of words (lowercase, uppercase, capitalized; default is capitalized).
+            alphabetize (``bool``): Whether to alphabetize the result (default is False).
 
         Returns:
-            list: A list of random words or an error message.
+            ``list``: A list of random words or an error message.
         """
         params = {
             "words": words,
@@ -780,7 +818,7 @@ class Client:
         Fetches a random cat image URL.
 
         Returns:
-            str or None: The URL of a random cat image if available; None if no response is received.
+            ``str`` or ``None``: The URL of a random cat image if available; None if no response is received.
         """
         response = await self.request.get(self.base_urls["cat"])
         response = response.json()
@@ -791,7 +829,7 @@ class Client:
         Fetches a random dog image URL.
 
         Returns:
-            str or None: The URL of a random dog image if available; None if no response is received.
+            ``str`` or None: The URL of a random dog image if available; None if no response is received.
         """
         response = await self.request.get(self.base_urls["dog"])
         response = response.json()
@@ -802,10 +840,10 @@ class Client:
         Retrieves metadata information about a specified Python package from the PyPI API.
 
         Args:
-            package_name (str): The name of the package to search for on PyPI.
+            package_name (``str``): The name of the package to search for on PyPI.
 
         Returns:
-            dict or None: A dictionary with relevant package information if found.
+            ``dict`` or ``None``: A dictionary with relevant package information if found.
             Returns None if the package is not found or there is an error.
         """
         url = f"{self.base_urls['pypi']}/{package_name}/json"
@@ -821,7 +859,7 @@ class Client:
         Fetches a random meme image URL.
 
         Returns:
-            str or None: The URL of the meme image if available, otherwise None.
+            ``str`` or ``None``: The URL of the meme image if available, otherwise None.
         """
         response = await self.request.get(self.base_urls["meme"])
         response = response.json()
@@ -832,22 +870,22 @@ class Client:
         Fetches a random fox image URL.
 
         Returns:
-            str or None: The URL of the fox image if available, otherwise None.
+            ``str`` : The URL of the fox image if available.
         """
         response = await self.request.get(self.base_urls["fox"])
         response = response.json()
-        return response["link"] if response else None
+        return response["link"]
 
     async def bing_image(self, query: str, limit: int = 3):
         """
         Searches Bing for images based on a query and retrieves image URLs.
 
         Args:
-            query (str): The search query string for finding images.
-            limit (int, optional): The maximum number of image URLs to return. Defaults to 3.
+            query (``str``): The search query string for finding images.
+            limit (``int``, *optional*): The maximum number of image URLs to return. Defaults to 3.
 
         Returns:
-            list: A list of image URLs retrieved from the Bing search results.
+            ``list``: A list of image URLs retrieved from the Bing search results.
         """
         data = {
             "q": query,
@@ -1003,16 +1041,14 @@ class Client:
         Uploads an image to https://envs.sh.
 
         Args:
-            file_path (Union[str, bytes, BytesIO]): The image file to upload.
+            file_path (``str``, ``bytes``, ``BytesIO``): The image file to upload.
                 Can be a file path (str), binary data (bytes), or a BytesIO object.
 
         Returns:
-            str: The URL or confirmation message of the uploaded image if the upload is successful.
+            ``str``: The URL or confirmation message of the uploaded image if the upload is successful.
                 Returns "Unexpected response format" if the response format is not as expected.
 
         Raises:
-            ValueError: If the file is not found, the input type is invalid,
-                or the upload request fails.
         """
         if isinstance(file_path, str):
             try:
@@ -1053,7 +1089,7 @@ class Client:
         Fetches a random riddle from the Riddles API.
 
         Returns:
-            dict: The riddle data in JSON format.
+            ``dict``: The riddle data in JSON format.
         """
         response = await self.request.get(self.base_urls["riddle"])
         return response.json()
@@ -1062,10 +1098,10 @@ class Client:
         """Fetches a specified number hug gif from the Nekos.Best API.
 
         Args:
-            amount (int): The number of neko images to fetch. Defaults to 1.
+            amount (``int``): The number of neko images to fetch. Defaults to 1.
 
         Returns:
-            list: A list of dictionaries containing information about each fetched neko image or GIF.
+            ``list``: A list of dictionaries containing information about each fetched neko image or GIF.
                   Each dictionary typically includes:
                   - anime_name (str): The name of the anime.
                   - url (str): The URL of the GIF.
@@ -1078,7 +1114,7 @@ class Client:
         """Fetches a specified number of neko images or GIFs from the Nekos.Best API.
 
         Args:
-            endpoint (str): The endpoint category to fetch content from. Default is "neko".
+            endpoint (``str``): The endpoint category to fetch content from. Default is "neko".
                 Valid image endpoints:
                 - "husbando", "kitsune", "neko", "waifu"
                 Valid GIF endpoints:
@@ -1087,14 +1123,11 @@ class Client:
                   "kiss", "laugh", "lurk", "nod", "nom", "nope", "pat", "peck", "poke",
                   "pout", "punch", "shoot", "shrug", "slap", "sleep", "smile", "smug",
                   "stare", "think", "thumbsup", "tickle", "wave", "wink", "yawn", "yeet"
-            amount (int): The number of items to fetch. Default is 3.
+            amount (``int``): The number of items to fetch. Default is 3.
 
         Returns:
-            dict: A dictionary containing the results of the request. The dictionary has a key `"results"`,
+            ``dict``: A dictionary containing the results of the request. The dictionary has a key `"results"`,
                   which holds a list of items.
-
-        Raises:
-            ValueError: If the endpoint is not a valid category.
         """
         valid_categories = [
             "husbando",
@@ -1160,11 +1193,11 @@ class Client:
         """Fetches domain information from the DomainsDB API.
 
         Args:
-            domain (str): The domain name to search for (e.g., "facebook").
-            zone (str): The domain zone to search within (e.g., "com").Default is "com".
+            domain (``str``): The domain name to search for (e.g., "facebook").
+            zone (``str``): The domain zone to search within (e.g., "com").Default is "com".
 
         Returns:
-            dict: A dictionary containing the results of the domain search.
+            ``dict``: A dictionary containing the results of the domain search.
         """
         url = self.base_urls["domain"].format(domain=domain, zone=zone)
 
@@ -1177,13 +1210,11 @@ class Client:
         Fetch definitions for a word from the Dictionary API.
 
         Args:
-            word (str): The word to fetch definitions for.
+            word (``str``): The word to fetch definitions for.
 
         Returns:
             ``list``: A list of dictionaries containing the word definitions.
-
-        Raises:
-            ``ValueError``: If the `word` is not provided or the API request fails.
+            
         """
         url = self.base_urls["word_info"].format(word=word)
         response = await self.request.get(url)
