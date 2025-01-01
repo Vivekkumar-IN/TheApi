@@ -284,28 +284,16 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>endpoint</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – The resource endpoint. Valid endpoints are:</p></li>
-<li><p><strong>- companies</strong></p></li>
-<li><p><strong>- addresses</strong></p></li>
-<li><p><strong>- books</strong></p></li>
-<li><p><strong>- CreditCards</strong></p></li>
-<li><p><strong>- images</strong></p></li>
-<li><p><strong>- persons</strong></p></li>
-<li><p><strong>- places</strong></p></li>
-<li><p><strong>- products</strong></p></li>
-<li><p><strong>- texts</strong></p></li>
-<li><p><strong>- users</strong></p></li>
+<li><p><strong>endpoint</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – The resource endpoint. Valid endpoints are:
+<em>companies</em>, <em>addresses</em>, <em>books</em>, <em>CreditCards</em>, <em>images</em>,
+<em>persons</em>, <em>places</em>, <em>products</em>, <em>texts</em>.</p></li>
+<li><p><strong>quantity</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>, <em>optional</em>) – Number of rows to fetch (default: 3, max: 1000).</p></li>
+<li><p><strong>locale</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – Locale for the data (default: ‘en_US’).
+<a class="reference external" href="https://fakerapi.it/#params_locale">See valid locales</a></p></li>
 </ul>
 </dd>
-</dl>
-<p>quantity(<code class="docutils literal notranslate"><span class="pre">int</span></code>): Number of rows to fetch (default: 3, max: 1000).</p>
-<dl class="simple">
-<dt>Locale (<code class="docutils literal notranslate"><span class="pre">str</span></code>): Locale for the data (default: ‘en_US’).</dt><dd><p><a class="reference external" href="https://fakerapi.it/#params_locale">See Valid locale</a></p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">dict</span></code> – Response data from the API.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">dict</span></code> –     Response data from the API.</p>
 </dd>
 </dl>
 </dd></dl>
