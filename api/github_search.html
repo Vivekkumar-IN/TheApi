@@ -282,11 +282,11 @@
 <dt class="sig sig-object py" id="TheApi.Client.github_search">
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">github_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'repositories'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_results</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.Client.github_search" title="Link to this definition">¶</a></dt>
 <dd><p>Searches GitHub for various types of content.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<dd class="field-odd"><ul>
 <li><p><strong>query</strong> (<em>str</em>) – The search query.</p></li>
-<li><p><strong>search_type</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>The type of search. Can be one of:
+<li><p><strong>search_type</strong> (<em>str, optional</em>) – The type of search. Can be one of:
 - “repositories”
 - “users”
 - “organizations”
@@ -295,8 +295,8 @@
 - “commits”
 - “topics”</p>
 <p>Defaults to “repositories”.</p>
-</p></li>
-<li><p><strong>max_results</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum number of results to return. Defaults to 3.</p></li>
+</li>
+<li><p><strong>max_results</strong> (<em>int, optional</em>) – The maximum number of results to return. Defaults to 3.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
