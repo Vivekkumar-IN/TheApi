@@ -107,7 +107,12 @@ class Client:
         return response.json()["data"]
 
     async def fakerapi(
-        self, endpoint: str, quantity: int = 3, locale: str = "en_US", seed: int = None, **kwargs
+        self,
+        endpoint: str,
+        quantity: int = 3,
+        locale: str = "en_US",
+        seed: int = None,
+        **kwargs,
     ):
         """
         Fetch data from the FakerAPI using aiohttp.
@@ -275,7 +280,7 @@ class Client:
             height (``int``, *optional*): Height of the images. Defaults to 480.
 
             seed (``int``, *optional*): This parameter accept an integer and allows to get always the same results. So, executing the same request with seed parameter set to the same value (ex. 12345) the results will never change (Defaults to ``None``).
-           
+
 
         Returns:
             ``dict``: Response data from the API.
@@ -291,7 +296,9 @@ class Client:
             _height=height,
         )
 
-    async def get_fake_credit_cards(self, locale: str = "en_US", quantity: int = 7, seed: int = None):
+    async def get_fake_credit_cards(
+        self, locale: str = "en_US", quantity: int = 7, seed: int = None
+    ):
         """
         Fetch fake credit card data from the `FakerAPI <https://fakerapi.it/>`_ .
 
@@ -299,14 +306,20 @@ class Client:
             locale (``str``, *optional*): Locale for the credit card data (default: "en_US"), `See Valid locale <https://fakerapi.it/#params_locale>`_.
             amount (``int``, *optional*): Number of credit card entries to fetch (default: 7).
             seed (``int``, *optional*): This parameter accept an integer and allows to get always the same results. So, executing the same request with seed parameter set to the same value (ex. 12345) the results will never change (Defaults to ``None``).
-           
+
         Returns:
             ``dict``: Response data from the API.
         """
-        return await self.fakerapi("CreditCards", quantity=quantity, locale=locale, seed=seed)
+        return await self.fakerapi(
+            "CreditCards", quantity=quantity, locale=locale, seed=seed
+        )
 
     async def get_fake_addresses(
-        self, quantity: int = 7, locale: str = "en_US", country_code: str = None, seed: int = None
+        self,
+        quantity: int = 7,
+        locale: str = "en_US",
+        country_code: str = None,
+        seed: int = None,
     ):
         """
         Fetch fake address data from the `FakerAPI <https://fakerapi.it/>`_ .
@@ -316,7 +329,7 @@ class Client:
             locale (``str``, *optional*): Locale for the address data (default: "en_US"), `See Valid locale <https://fakerapi.it/#params_locale>`_.
             country_code (``str``, *optional*): force the country of response's adresses. ISO 3166-1 Two-letter format or locale format like en_US (default: ``None``).
             seed (``int``, *optional*): This parameter accept an integer and allows to get always the same results. So, executing the same request with seed parameter set to the same value (ex. 12345) the results will never change (Defaults to ``None``).
-           
+
 
         Returns:
             ``dict``: Response data from the API.
@@ -325,11 +338,17 @@ class Client:
         if country_code:
             kwargs["_country_code"] = country_code
         return await self.fakerapi(
-            "addresses", quantity=quantity, locale=locale, seed=seed **kwargs
+            "addresses", quantity=quantity, locale=locale, seed=seed**kwargs
         )
 
     async def get_fake_persons(
-        self, quantity: int = 7, locale: str = "en_US", gender: str = None, birthday_start: str = None, birthday_end: str = None, seed: int = None,
+        self,
+        quantity: int = 7,
+        locale: str = "en_US",
+        gender: str = None,
+        birthday_start: str = None,
+        birthday_end: str = None,
+        seed: int = None,
     ):
         """
         Fetch fake persons details from the `FakerAPI <https://fakerapi.it/>`_ .
@@ -341,7 +360,7 @@ class Client:
             birthday_start (``str``, *optional*): Birthday starting date of person in format Y-m-d (default: FakerApi Keeps *90 years*)
             birthday_end (``str``, *optional*): Birthday ending date of person  in format Y-m-d (default: FakerApi keeps *now*)
             seed (``int``, *optional*): This parameter accept an integer and allows to get always the same results. So, executing the same request with seed parameter set to the same value (ex. 12345) the results will never change (Defaults to ``None``).
-           
+
         Returns:
             ``dict``: Response data from the API.
         """
@@ -355,7 +374,7 @@ class Client:
         return await self.fakerapi(
             "persons", quantity=quantity, locale=locale, seed=seed, **kwargs
         )
-        
+
     async def get_advice(self):
         """
         Fetches a random piece of advice.
@@ -545,7 +564,7 @@ class Client:
 
         Returns:
             ``str``: The URL of the uploaded image.
-            
+
         """
         tryimg = "https://graph.org/file/1f8d00177ac2429b101b9.jpg"
         tryresp = await self.request.get(tryimg)
@@ -1214,7 +1233,7 @@ class Client:
 
         Returns:
             ``list``: A list of dictionaries containing the word definitions.
-            
+
         """
         url = self.base_urls["word_info"].format(word=word)
         response = await self.request.get(url)
