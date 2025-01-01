@@ -74,6 +74,12 @@ html_theme_options = {
     ],
 }
 
+pygments_style = "default"
+pygments_dark_style = "native"
+
+napoleon_include_special_with_doc = False
+napoleon_use_rtype = False
+napoleon_use_param = False
 
 def write(path, content):
     with open(path, "w") as file:
@@ -83,14 +89,6 @@ def write(path, content):
 def read(path):
     with open(path, "r") as file:
         return file.read()
-
-
-pygments_style = "default"
-pygments_dark_style = "native"
-
-napoleon_include_special_with_doc = False
-napoleon_use_rtype = False
-
 
 method = [
     name
