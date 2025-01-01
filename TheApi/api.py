@@ -108,26 +108,26 @@ class Client:
 
     async def fakerapi(
         self, endpoint: str, quantity: int = 3, locale: str = "en_US", **kwargs
-    ): 
+    ):
         """
         Fetch data from the FakerAPI using aiohttp.
-        
+
         Args:
-            endpoint (``str``): 
+            endpoint (``str``):
                 The resource endpoint. Valid endpoints are:
-                *companies*, *addresses*, *books*, *CreditCards*, *images*, 
+                *companies*, *addresses*, *books*, *CreditCards*, *images*,
                 *persons*, *places*, *products*, *texts*.
-            quantity (``int``, *optional*): 
+            quantity (``int``, *optional*):
                 Number of rows to fetch (default: 3, max: 1000).
-            locale (``str``, *optional*): 
-                Locale for the data (default: 'en_US'). 
+            locale (``str``, *optional*):
+                Locale for the data (default: 'en_US').
                 `See valid locales <https://fakerapi.it/#params_locale>`_
 
         Returns:
-            ``dict``: 
+            ``dict``:
                 Response data from the API.
         """
-        
+
         valid_endpoints = [
             "companies",
             "addresses",
