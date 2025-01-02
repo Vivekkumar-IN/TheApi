@@ -1,0 +1,7 @@
+get_jokes
+=========
+
+.. currentmodule:: TheApi
+
+.. automethod:: get_jokes
+

@@ -1,0 +1,7 @@
+fox
+===
+
+.. currentmodule:: TheApi
+
+.. automethod:: fox
+

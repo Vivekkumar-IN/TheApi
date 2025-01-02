@@ -1,0 +1,7 @@
+fakerapi
+========
+
+.. currentmodule:: TheApi
+
+.. automethod:: fakerapi
+

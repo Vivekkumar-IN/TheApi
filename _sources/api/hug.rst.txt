@@ -1,0 +1,7 @@
+hug
+===
+
+.. currentmodule:: TheApi
+
+.. automethod:: hug
+

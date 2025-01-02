@@ -1,0 +1,7 @@
+quote
+=====
+
+.. currentmodule:: TheApi
+
+.. automethod:: quote
+

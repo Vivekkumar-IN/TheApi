@@ -1,0 +1,7 @@
+get_fake_persons
+================
+
+.. currentmodule:: TheApi
+
+.. automethod:: get_fake_persons
+

@@ -1,0 +1,7 @@
+get_advice
+==========
+
+.. currentmodule:: TheApi
+
+.. automethod:: get_advice
+

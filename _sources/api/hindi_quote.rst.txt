@@ -1,0 +1,7 @@
+hindi_quote
+===========
+
+.. currentmodule:: TheApi
+
+.. automethod:: hindi_quote
+

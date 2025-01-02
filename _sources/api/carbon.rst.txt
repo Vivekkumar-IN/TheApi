@@ -1,0 +1,7 @@
+carbon
+======
+
+.. currentmodule:: TheApi
+
+.. automethod:: carbon
+

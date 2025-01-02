@@ -1,0 +1,7 @@
+generate_pdf
+============
+
+.. currentmodule:: TheApi
+
+.. automethod:: generate_pdf
+

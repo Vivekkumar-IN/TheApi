@@ -1,0 +1,7 @@
+upload_image
+============
+
+.. currentmodule:: TheApi
+
+.. automethod:: upload_image
+

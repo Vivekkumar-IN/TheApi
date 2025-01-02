@@ -1,0 +1,7 @@
+get_fake_images
+===============
+
+.. currentmodule:: TheApi
+
+.. automethod:: get_fake_images
+

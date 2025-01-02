@@ -1,0 +1,7 @@
+get_uselessfact
+===============
+
+.. currentmodule:: TheApi
+
+.. automethod:: get_uselessfact
+

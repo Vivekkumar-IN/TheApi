@@ -1,0 +1,7 @@
+get_fake_addresses
+==================
+
+.. currentmodule:: TheApi
+
+.. automethod:: get_fake_addresses
+
