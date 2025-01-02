@@ -1,2 +1,1 @@
-.. meta::
-   :refresh: 0; url=/index.html
+.. include:: index.rst
