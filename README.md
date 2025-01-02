@@ -112,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "[about the inefficacy of his attack against Tsunade] Did it not penetrate deep enough because of her fat breasts?",
+    "content": "All of the disadvantage in this world stems from a person's lack of ability.",
     "anime": {
-        "id": 266,
-        "name": "Naruto",
-        "altName": "Naruto (2023)"
+        "id": 281,
+        "name": "Tokyo Ghoul",
+        "altName": "Tokyo Ghoul"
     },
     "character": {
-        "id": 2487,
-        "name": "Kabuto Yakushi"
+        "id": 999,
+        "name": "Rize Kamishiro"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "ben-prenderghast",
+    "file_name": "will",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/ben-prenderghast.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/will.jpg"
 }
 ```
 
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_QJkXXIYY.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_v6JYm5Cv.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_p2LqnxhW.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_TFKTVakV.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/cu1.jpg
+https://cdn2.thecatapi.com/images/9jg.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/4b7e6067-b030-490b-9b55-2bb7e38fb2fc.jpg
+https://random.dog/75107177-e4ff-4577-9f5d-e79dd13f59c3.jpg
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=93
+https://randomfox.ca/?i=58
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/d8QSrkGk_qr.png
+/home/runner/work/TheApi/TheApi/downloads/e3D7cJWs_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Drink a glass of water before meals.
+Don't be afraid to ask questions.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "90,489.747",
-        "rate_float": 90489.7466,
+        "rate": "91,637.657",
+        "rate_float": 91637.6567,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "75,219.871",
-        "rate_float": 75219.8712,
+        "rate": "76,174.075",
+        "rate_float": 76174.075,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "94,321.953",
-        "rate_float": 94321.9532,
+        "rate": "95,518.477",
+        "rate_float": 95518.4769,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "9514 Klein Islands Apt. 869",
-            "streetName": "Prosacco Gardens",
-            "buildingNumber": "908",
-            "city": "North Bettie",
-            "zipcode": "51577-2909",
-            "country": "Bolivia",
-            "country_code": "BO",
-            "latitude": -26.949397,
-            "longitude": -179.530331
+            "street": "2558 Weber Springs Apt. 267",
+            "streetName": "Monahan Freeway",
+            "buildingNumber": "4085",
+            "city": "New Leopold",
+            "zipcode": "46814-6567",
+            "country": "Argentina",
+            "country_code": "AR",
+            "latitude": -48.591366,
+            "longitude": -17.000169
         }
     ]
 }
@@ -538,9 +538,9 @@ print(result)
     "data": [
         {
             "type": "MasterCard",
-            "number": "4929039655006508",
+            "number": "2337918152582485",
             "expiration": "01/26",
-            "owner": "Travon Mayert"
+            "owner": "Johnnie Mertz"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Beatae et sunt omnis.",
-            "description": "Vitae consequuntur a enim ut dolores vel. Consequuntur sed debitis quaerat ut enim sed. Inventore dolores aut ut eos magni odio. Eum harum quia rem quia.",
+            "title": "Quo et eos vitae asperiores.",
+            "description": "Ad voluptatem suscipit atque. Quis velit aut magni aspernatur delectus. Aut minus aliquam laudantium fuga molestiae.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,7 @@ print(result)
 #### Expected Output
 
 ```text
-विवाह क्या है ? ... विवाह एक ऐसा गठबंधन है जिसमे में 2 लोग मिलकर उन समस्याओं को सुलझाने का जीवन भर प्रयास करते है जो पहले कभी थी ही नहीं 😂😂😂
+बरसात के इस सुहाने मौसम में singles – सपने देखते हैं couples – date करते है शादीशुदा : ये कपड़े कहाँ सूखने डालूँ ? 😂😂
 ```
 
 ### 19. Get Jokes
@@ -629,7 +629,7 @@ print(result)
 #### Expected Output
 
 ```text
-// This line doesn't actually do anything, but the code stops working when I delete it.
+Dark humor is like food, not everyone gets it.
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +650,7 @@ print(result)
 #### Expected Output
 
 ```text
-If done perfectly, a rubix cube combination can be solved in 17 turns.
+Thomas Edison, acclaimed inventor of the light bulb, was afraid of the dark.
 ```
 
 ### 21. Get Word Definitions
@@ -708,16 +708,16 @@ print(result)
 #### Expected Output
 
 ```text
-Stranger
-Igloo
-Daybreak
-Pacifist
-Cargo
-Tracing
-Secluded
-Explain
-Ludicrous
-Degraded
+Renderer
+Shoplift
+Charger
+Jackknife
+Frightful
+Drizzly
+Sharper
+Vineyard
+Chevron
+Vivacious
 ```
 
 ### 23. Github Search
@@ -760,7 +760,7 @@ print(result)
         "url": "https://github.com/AHAAAAAAA/PokemonGo-Map",
         "language": null,
         "stargazers_count": 7525,
-        "forks_count": 2815
+        "forks_count": 2814
     },
     {
         "name": "pokemon-showdown",
@@ -769,7 +769,7 @@ print(result)
         "url": "https://github.com/smogon/pokemon-showdown",
         "language": "TypeScript",
         "stargazers_count": 4843,
-        "forks_count": 2829
+        "forks_count": 2830
     },
     {
         "name": "PokemonGo-Bot",
@@ -801,7 +801,7 @@ print(result)
 #### Expected Output
 
 ```text
-ज़िंदगी सँवारने को तो ज़िंदगी पड़ी है, वो लम्हाँ सँवार लो जहाँ ज़िंदगी खड़ी है।
+अगर नियत अच्छी हो तो नसीब कभी बुरा नहीं होता..!
 ```
 
 ### 25. Hug
@@ -830,8 +830,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Princess Connect! Re:Dive",
-        "url": "https://nekos.best/api/v2/hug/7aadc12d-90e2-4e2e-933b-aa72313ccc10.gif"
+        "anime_name": "Suisei no Gargantia",
+        "url": "https://nekos.best/api/v2/hug/40142a6f-83c4-450e-a477-ca7c89787623.gif"
     }
 ]
 ```
@@ -854,7 +854,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/01osuuey4w9e1.gif?width=320&crop=smart&format=png8&s=d30eb8e0630ba7258b3cd55173c20107f2c0dce0
+https://preview.redd.it/g6bwvd3vr5ae1.gif?width=320&crop=smart&format=png8&s=53044cc9f7070980e0d256a7ef318477f56bfaa9
 ```
 
 ### 27. Neko
@@ -894,22 +894,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/13414359",
-            "artist_name": "\u30af\u30ea\u30b0\u30e9",
-            "source_url": "https://www.pixiv.net/en/artworks/62976421",
-            "url": "https://nekos.best/api/v2/neko/69713c17-528e-4db1-9028-4d33c0d24cae.png"
-        },
-        {
             "artist_href": "https://www.pixiv.net/en/users/3036679",
             "artist_name": "\u7518\u57ce\u306a\u3064\u304d",
-            "source_url": "https://www.pixiv.net/en/artworks/76315148",
-            "url": "https://nekos.best/api/v2/neko/9b326889-c428-4097-8d94-a23ce31d255d.png"
+            "source_url": "https://yande.re/post/show/610749",
+            "url": "https://nekos.best/api/v2/neko/eea9d1d9-a9ec-4767-b46c-ec0ee74f45a2.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/10678435",
-            "artist_name": "\u72d0\u5df3\u591c",
-            "source_url": "https://www.pixiv.net/en/artworks/93283477",
-            "url": "https://nekos.best/api/v2/neko/1b79a7fd-9809-4468-90ab-6573f08dfa94.png"
+            "artist_href": "https://twitter.com/ryohka_jp",
+            "artist_name": "yohka_jp",
+            "source_url": "https://twitter.com/i/web/status/1108527474416050176",
+            "url": "https://nekos.best/api/v2/neko/535eb098-72f0-4c08-97d5-ba75fd871500.png"
+        },
+        {
+            "artist_href": "https://www.pixiv.net/en/users/43054314",
+            "artist_name": "\u9234\u5d0e",
+            "source_url": "https://www.pixiv.net/en/artworks/95732697",
+            "url": "https://nekos.best/api/v2/neko/73a827e8-e019-486f-a765-4c4ac8f9992b.png"
         }
     ]
 }
@@ -985,9 +985,9 @@ print(result)
 #### Expected Output
 
 ```text
-I never considered a difference of opinion in politics, in religion, in philosophy, as cause for withdrawing from a friend.
+Here is one quality that one must possess to win, and that is definiteness of purpose, the knowledge of what one wants, and a burning desire to possess it.
 
-author - Thomas Jefferson
+author - Napoleon Hill
 ```
 
 ### 30. Riddle
@@ -1009,8 +1009,8 @@ print(result)
 
 ```json
 {
-    "riddle": "I am that which is hunted, and this panes me. Do you dig, Stone? What am I?",
-    "answer": "Quarry"
+    "riddle": "Joe bets Tony $100 that he can predict the score of the football game before it starts. Tony agrees, but loses the bet. Why did Tony lose the bet?",
+    "answer": "Joe said the score would be 0-0 and he was right. \u201cBefore\u201dany football game starts, the score is always 0-0"
 }
 ```
 
@@ -1082,7 +1082,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32712,
+        "view_count": 32714,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1171,7 +1171,7 @@ print(result)
 ```json
 {
     "title": "Pok\u00e9mon",
-    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's primary target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.",
+    "summary": "Pok\u00e9mon is a Japanese media franchise consisting of video games, animated series and films, a trading card game, and other related media. The franchise takes place in a shared universe in which humans co-exist with creatures known as Pok\u00e9mon, a large variety of species endowed with special powers. The franchise's primary target audience is children aged 5 to 12, but it is known to attract people of all ages.\nThe franchise originated as a pair of role-playing games developed by Game Freak, from an original concept by its founder, Satoshi Tajiri. Released on the Game Boy on February 27, 1996, the games became sleeper hits and were followed by manga series, a trading card game, and anime series and films. From 1998 to 2000, Pok\u00e9mon was exported to the rest of the world, creating an unprecedented global phenomenon dubbed \"Pok\u00e9mania\". By 2002, the craze had ended, after which Pok\u00e9mon became a fixture in popular culture, with new products being released to this day. In the summer of 2016, the franchise spawned a second craze with the release of Pok\u00e9mon Go, an augmented reality game developed by Niantic. Pok\u00e9mon has since been estimated to be the world's highest-grossing media franchise and one of the best-selling video game franchises.\nPok\u00e9mon has an uncommon ownership structure. Unlike most IPs, which are owned by one company, Pok\u00e9mon is jointly owned by three: Nintendo, Game Freak, and Creatures. Game Freak develops the core series role-playing games, which are published by Nintendo exclusively for their consoles, while Creatures manages the trading card game and related merchandise, occasionally developing spin-off titles. The three companies established The Pok\u00e9mon Company (TPC) in 1998 to manage the Pok\u00e9mon property within Asia. The Pok\u00e9mon anime series and films are co-owned by Shogakukan. Since 2009, The Pok\u00e9mon Company International (TPCi), a subsidiary of TPC, has managed the franchise in all regions outside of Asia.\n\n",
     "url": "https://en.wikipedia.org/?curid=23745",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png"
 }
@@ -1202,7 +1202,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_6pTty321.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_IXQiHfwW.jpg
 ```
 
 
