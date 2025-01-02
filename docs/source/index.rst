@@ -11,7 +11,7 @@ TheApix is designed to integrate multiple API keys and provide a unified interfa
    :caption: Contents:
 
    client
-   api
+   api/index
 
 
 Installation
