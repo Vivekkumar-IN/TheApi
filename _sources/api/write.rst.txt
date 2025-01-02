@@ -1,4 +1,4 @@
-write
+Client.write
 =====
 
 .. currentmodule:: TheApi

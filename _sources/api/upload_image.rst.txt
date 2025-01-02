@@ -1,4 +1,4 @@
-upload_image
+Client.upload_image
 ============
 
 .. currentmodule:: TheApi

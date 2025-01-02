@@ -1,4 +1,4 @@
-meme
+Client.meme
 ====
 
 .. currentmodule:: TheApi

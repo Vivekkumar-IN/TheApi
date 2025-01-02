@@ -1,4 +1,4 @@
-riddle
+Client.riddle
 ======
 
 .. currentmodule:: TheApi

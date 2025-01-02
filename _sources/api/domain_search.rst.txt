@@ -1,4 +1,4 @@
-domain_search
+Client.domain_search
 =============
 
 .. currentmodule:: TheApi

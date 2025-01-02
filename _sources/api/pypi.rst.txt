@@ -1,4 +1,4 @@
-pypi
+Client.pypi
 ====
 
 .. currentmodule:: TheApi

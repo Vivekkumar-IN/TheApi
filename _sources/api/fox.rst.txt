@@ -1,4 +1,4 @@
-fox
+Client.fox
 ===
 
 .. currentmodule:: TheApi

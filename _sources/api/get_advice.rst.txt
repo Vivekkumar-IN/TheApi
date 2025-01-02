@@ -1,4 +1,4 @@
-get_advice
+Client.get_advice
 ==========
 
 .. currentmodule:: TheApi

@@ -1,4 +1,4 @@
-get_words
+Client.get_words
 =========
 
 .. currentmodule:: TheApi

@@ -1,4 +1,4 @@
-get_hindi_jokes
+Client.get_hindi_jokes
 ===============
 
 .. currentmodule:: TheApi

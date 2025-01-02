@@ -1,4 +1,4 @@
-avatar
+Client.avatar
 ======
 
 .. currentmodule:: TheApi

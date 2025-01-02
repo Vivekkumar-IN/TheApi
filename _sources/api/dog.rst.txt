@@ -1,4 +1,4 @@
-dog
+Client.dog
 ===
 
 .. currentmodule:: TheApi

@@ -1,4 +1,4 @@
-blackpink
+Client.blackpink
 =========
 
 .. currentmodule:: TheApi

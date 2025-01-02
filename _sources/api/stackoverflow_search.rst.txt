@@ -1,4 +1,4 @@
-stackoverflow_search
+Client.stackoverflow_search
 ====================
 
 .. currentmodule:: TheApi

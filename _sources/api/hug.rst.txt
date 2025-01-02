@@ -1,4 +1,4 @@
-hug
+Client.hug
 ===
 
 .. currentmodule:: TheApi

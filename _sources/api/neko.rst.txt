@@ -1,4 +1,4 @@
-neko
+Client.neko
 ====
 
 .. currentmodule:: TheApi

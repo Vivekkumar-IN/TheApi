@@ -1,4 +1,4 @@
-get_uselessfact
+Client.get_uselessfact
 ===============
 
 .. currentmodule:: TheApi

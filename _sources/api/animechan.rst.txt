@@ -1,4 +1,4 @@
-animechan
+Client.animechan
 =========
 
 .. currentmodule:: TheApi

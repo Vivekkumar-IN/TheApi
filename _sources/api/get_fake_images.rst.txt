@@ -1,4 +1,4 @@
-get_fake_images
+Client.get_fake_images
 ===============
 
 .. currentmodule:: TheApi

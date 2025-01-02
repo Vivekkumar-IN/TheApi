@@ -1,4 +1,4 @@
-gen_qr
+Client.gen_qr
 ======
 
 .. currentmodule:: TheApi

@@ -1,4 +1,4 @@
-quote
+Client.quote
 =====
 
 .. currentmodule:: TheApi

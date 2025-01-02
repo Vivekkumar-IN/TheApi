@@ -1,4 +1,4 @@
-get_word_definitions
+Client.get_word_definitions
 ====================
 
 .. currentmodule:: TheApi

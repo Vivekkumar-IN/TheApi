@@ -1,4 +1,4 @@
-hindi_quote
+Client.hindi_quote
 ===========
 
 .. currentmodule:: TheApi

@@ -1,4 +1,4 @@
-github_search
+Client.github_search
 =============
 
 .. currentmodule:: TheApi

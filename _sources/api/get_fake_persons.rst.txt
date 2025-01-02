@@ -1,4 +1,4 @@
-get_fake_persons
+Client.get_fake_persons
 ================
 
 .. currentmodule:: TheApi

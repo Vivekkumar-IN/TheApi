@@ -1,4 +1,4 @@
-generate_pdf
+Client.generate_pdf
 ============
 
 .. currentmodule:: TheApi
