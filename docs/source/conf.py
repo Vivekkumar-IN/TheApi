@@ -94,6 +94,7 @@ def read(path):
     with open(path, "r") as file:
         return file.read()
 
+
 method = [
     name
     for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
