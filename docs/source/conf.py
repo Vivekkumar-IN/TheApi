@@ -115,7 +115,7 @@ write(methods_rst, content)
 
 for method_name in method:
     method_rst_path = os.path.join(api_path, f"{method_name}.rst")
-    text = f"{method_name}\n"
+    text = f"Client.{method_name}\n"
     heading = "=" * len(method_name)
     text += f"{heading}\n\n"
     text += f".. currentmodule:: TheApi\n\n"
