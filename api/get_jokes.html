@@ -180,7 +180,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -236,7 +236,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -244,21 +244,6 @@
         <article role="main" id="furo-main-content">
           <section id="get-jokes">
 <h1>get_jokes<a class="headerlink" href="#get-jokes" title="Link to this heading">¶</a></h1>
-<dl class="py method">
-<dt class="sig sig-object py" id="TheApi.Client.get_jokes">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">get_jokes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.Client.get_jokes" title="Link to this definition">¶</a></dt>
-<dd><p>Fetches a specified number of jokes.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>amount</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>, <em>optional</em>) – The number of jokes to retrieve. Defaults to 1.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">str</span></code> – A single joke if <cite>amount</cite> is 1.
-<code class="docutils literal notranslate"><span class="pre">list</span></code>: If <cite>amount</cite> &gt; 1, returns numbered jokes.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </section>
 
         </article>
@@ -290,27 +275,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">get_jokes</a><ul>
-<li><a class="reference internal" href="#TheApi.Client.get_jokes"><code class="docutils literal notranslate"><span class="pre">Client.get_jokes()</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
