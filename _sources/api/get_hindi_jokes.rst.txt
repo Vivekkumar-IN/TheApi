@@ -1,7 +1,7 @@
-Client.get_hindi_jokes
+get_hindi_jokes
 ===============
 
 .. currentmodule:: TheApi
 
-.. automethod:: get_hindi_jokes
+.. automethod:: Client.get_hindi_jokes
 

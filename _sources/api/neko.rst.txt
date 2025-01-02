@@ -1,7 +1,7 @@
-Client.neko
+neko
 ====
 
 .. currentmodule:: TheApi
 
-.. automethod:: neko
+.. automethod:: Client.neko
 

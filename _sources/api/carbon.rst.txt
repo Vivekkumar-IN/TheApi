@@ -1,7 +1,7 @@
-Client.carbon
+carbon
 ======
 
 .. currentmodule:: TheApi
 
-.. automethod:: carbon
+.. automethod:: Client.carbon
 

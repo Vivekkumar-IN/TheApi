@@ -1,7 +1,7 @@
-Client.gen_qr
+gen_qr
 ======
 
 .. currentmodule:: TheApi
 
-.. automethod:: gen_qr
+.. automethod:: Client.gen_qr
 

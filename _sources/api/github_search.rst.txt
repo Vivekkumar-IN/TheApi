@@ -1,7 +1,7 @@
-Client.github_search
+github_search
 =============
 
 .. currentmodule:: TheApi
 
-.. automethod:: github_search
+.. automethod:: Client.github_search
 

@@ -1,7 +1,7 @@
-Client.avatar
+avatar
 ======
 
 .. currentmodule:: TheApi
 
-.. automethod:: avatar
+.. automethod:: Client.avatar
 

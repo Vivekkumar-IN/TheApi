@@ -1,7 +1,7 @@
-Client.blackpink
+blackpink
 =========
 
 .. currentmodule:: TheApi
 
-.. automethod:: blackpink
+.. automethod:: Client.blackpink
 

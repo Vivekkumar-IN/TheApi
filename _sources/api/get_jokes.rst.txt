@@ -1,7 +1,7 @@
-Client.get_jokes
+get_jokes
 =========
 
 .. currentmodule:: TheApi
 
-.. automethod:: get_jokes
+.. automethod:: Client.get_jokes
 

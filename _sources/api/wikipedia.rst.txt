@@ -1,7 +1,7 @@
-Client.wikipedia
+wikipedia
 =========
 
 .. currentmodule:: TheApi
 
-.. automethod:: wikipedia
+.. automethod:: Client.wikipedia
 

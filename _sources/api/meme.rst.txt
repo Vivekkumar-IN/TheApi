@@ -1,7 +1,7 @@
-Client.meme
+meme
 ====
 
 .. currentmodule:: TheApi
 
-.. automethod:: meme
+.. automethod:: Client.meme
 

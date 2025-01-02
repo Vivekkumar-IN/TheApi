@@ -1,7 +1,7 @@
-Client.write
+write
 =====
 
 .. currentmodule:: TheApi
 
-.. automethod:: write
+.. automethod:: Client.write
 

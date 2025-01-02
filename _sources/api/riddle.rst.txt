@@ -1,7 +1,7 @@
-Client.riddle
+riddle
 ======
 
 .. currentmodule:: TheApi
 
-.. automethod:: riddle
+.. automethod:: Client.riddle
 

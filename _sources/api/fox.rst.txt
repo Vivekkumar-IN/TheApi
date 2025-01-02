@@ -1,7 +1,7 @@
-Client.fox
+fox
 ===
 
 .. currentmodule:: TheApi
 
-.. automethod:: fox
+.. automethod:: Client.fox
 

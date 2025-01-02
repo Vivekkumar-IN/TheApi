@@ -1,7 +1,7 @@
-Client.get_words
+get_words
 =========
 
 .. currentmodule:: TheApi
 
-.. automethod:: get_words
+.. automethod:: Client.get_words
 

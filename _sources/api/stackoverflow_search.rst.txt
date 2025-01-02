@@ -1,7 +1,7 @@
-Client.stackoverflow_search
+stackoverflow_search
 ====================
 
 .. currentmodule:: TheApi
 
-.. automethod:: stackoverflow_search
+.. automethod:: Client.stackoverflow_search
 

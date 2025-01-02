@@ -1,7 +1,7 @@
-Client.fakerapi
+fakerapi
 ========
 
 .. currentmodule:: TheApi
 
-.. automethod:: fakerapi
+.. automethod:: Client.fakerapi
 

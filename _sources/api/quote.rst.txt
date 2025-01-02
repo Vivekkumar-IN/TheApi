@@ -1,7 +1,7 @@
-Client.quote
+quote
 =====
 
 .. currentmodule:: TheApi
 
-.. automethod:: quote
+.. automethod:: Client.quote
 

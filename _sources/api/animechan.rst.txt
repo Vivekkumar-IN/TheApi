@@ -1,7 +1,7 @@
-Client.animechan
+animechan
 =========
 
 .. currentmodule:: TheApi
 
-.. automethod:: animechan
+.. automethod:: Client.animechan
 

@@ -1,7 +1,7 @@
-Client.hug
+hug
 ===
 
 .. currentmodule:: TheApi
 
-.. automethod:: hug
+.. automethod:: Client.hug
 

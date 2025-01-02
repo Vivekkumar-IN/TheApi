@@ -1,7 +1,7 @@
-Client.get_advice
+get_advice
 ==========
 
 .. currentmodule:: TheApi
 
-.. automethod:: get_advice
+.. automethod:: Client.get_advice
 

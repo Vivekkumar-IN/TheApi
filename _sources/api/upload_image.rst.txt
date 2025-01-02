@@ -1,7 +1,7 @@
-Client.upload_image
+upload_image
 ============
 
 .. currentmodule:: TheApi
 
-.. automethod:: upload_image
+.. automethod:: Client.upload_image
 

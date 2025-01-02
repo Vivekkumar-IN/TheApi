@@ -1,7 +1,7 @@
-Client.get_fake_addresses
+get_fake_addresses
 ==================
 
 .. currentmodule:: TheApi
 
-.. automethod:: get_fake_addresses
+.. automethod:: Client.get_fake_addresses
 

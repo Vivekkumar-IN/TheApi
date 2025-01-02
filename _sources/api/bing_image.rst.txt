@@ -1,7 +1,7 @@
-Client.bing_image
+bing_image
 ==========
 
 .. currentmodule:: TheApi
 
-.. automethod:: bing_image
+.. automethod:: Client.bing_image
 
