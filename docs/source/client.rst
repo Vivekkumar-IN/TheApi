@@ -4,9 +4,6 @@ TheApix Client
 .. currentmodule:: TheApi
 
 
-Details
--------
-
 .. autoclass:: Client
    :exclude-members: __new__
 
