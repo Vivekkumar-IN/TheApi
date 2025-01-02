@@ -6,4 +6,3 @@ aiofiles
 pillow
 
 #sphinx_rtd_theme
-sphinx-notfound-page
