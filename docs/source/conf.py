@@ -24,7 +24,7 @@ extensions = [
     "notfound.extension",
 ]
 
-notfound_urls_prefix = None
+notfound_urls_prefix = ""
 
 templates_path = ["_templates"]
 exclude_patterns = []
