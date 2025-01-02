@@ -94,7 +94,6 @@ def read(path):
     with open(path, "r") as file:
         return file.read()
 
-
 method = [
     name
     for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
@@ -102,32 +101,22 @@ method = [
 ]
 
 method_toctree = "\n    ".join([f"api/{name}" for name in method])
-
 client_methods = "\n    ".join([f"Client.{name}" for name in method])
 
 api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api")
-
 os.makedirs(api_path, exist_ok=True)
 
 methods_rst = os.path.join(api_path, "index.rst")
 content = read(methods_rst)
-
 content = content.replace("{client_methods}", client_methods)
 content = content.replace("{method_toctree}", method_toctree)
-
 write(methods_rst, content)
 
-for meth in methods:
-    method_name = meth.split(".")[-1]
-
+for method_name in method:
     method_rst_path = os.path.join(api_path, f"{method_name}.rst")
-
     text = f"{method_name}\n"
     heading = "=" * len(method_name)
     text += f"{heading}\n\n"
-
     text += f".. currentmodule:: TheApi\n\n"
-
-    text += f".. automethod:: {meth}\n\n"
-
+    text += f".. automethod:: {method_name}\n\n"
     write(method_rst_path, text)
