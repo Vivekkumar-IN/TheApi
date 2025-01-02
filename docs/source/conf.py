@@ -101,7 +101,7 @@ method = [
     if not name.startswith("_")
 ]
 
-method_toctree = "\n    ".join([f"api/{name}" for name in method])
+method_toctree = "\n    ".join(method)
 client_methods = "\n    ".join([f"Client.{name}" for name in method])
 
 api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api")
