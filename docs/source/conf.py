@@ -22,7 +22,6 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx_copybutton",
     "notfound.extension",
-
 ]
 
 notfound_urls_prefix = None
