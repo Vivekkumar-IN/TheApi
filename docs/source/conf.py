@@ -135,3 +135,5 @@ for meth in methods:
     text += f".. automethod:: {meth}\n\n"
 
     write(method_rst_path, text)
+
+write("api/index.rst", read("methods.rst"))
