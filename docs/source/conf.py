@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.abspath("../.."))
 from TheApi import Client, __version__
 
 
-notfound_urls_prefix = "/"
+notfound_urls_prefix = None
 
 project = "TheApix"
 author = "VivekKumar-IN"
