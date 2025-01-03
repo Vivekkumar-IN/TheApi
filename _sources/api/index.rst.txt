@@ -7,7 +7,7 @@ Methods
 The following methods are available in :obj:`~TheApi.Client`:
 
 .. autosummary::
-    :nosignatures:
+   :nosignatures:
 
    Client.animechan
    Client.avatar
@@ -47,8 +47,8 @@ The following methods are available in :obj:`~TheApi.Client`:
 
 
 .. toctree::
-    :hidden:
-    :maxdepth: 1
+   :hidden:
+   :maxdepth: 1
 
    animechan
    avatar
