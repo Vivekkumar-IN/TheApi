@@ -103,7 +103,7 @@ napoleon_use_rtype = False
 napoleon_use_param = False
 
 
-docs = os.path.join(os.getcwd(), "docs")
+docs = os.getcwd()
 
 log(f"dics dir is {docs}\n")
 
