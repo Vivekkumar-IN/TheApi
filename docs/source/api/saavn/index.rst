@@ -14,3 +14,8 @@ SaavnAPI
 
    api = SaavnAPI()
    await api.search("Fuck Millionaire")
+
+.. toctree::
+   :hidden:
+
+   api/saavn/methods
