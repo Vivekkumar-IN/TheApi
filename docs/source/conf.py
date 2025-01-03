@@ -8,7 +8,6 @@ sys.path.insert(0, os.path.abspath("../.."))
 
 from TheApi import Client, SaavnAPI, __version__
 
-
 project = "TheApix"
 author = "VivekKumar-IN"
 version = __version__
