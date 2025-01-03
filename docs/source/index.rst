@@ -43,6 +43,17 @@ To start using TheApix, follow these steps:
       response = await api.write("Radhe Radhe")
       print(response)
 
+3. You can use the :obj:`~TheApi.SaavnAPI` for making request for endpoint of saavn.dev
+
+   .. code-block:: python 
+
+      from TheApi import SaavnAPI
+
+      api = SaavnAPI()
+
+      r = await api.search("Fuck Millionaire")
+      
+      print(r)
 
 .. important :: 
 
