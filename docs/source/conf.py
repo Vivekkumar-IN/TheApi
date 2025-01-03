@@ -6,7 +6,7 @@ import datetime
 
 sys.path.insert(0, os.path.abspath("../.."))
 
-from TheApi import Client, SaavnAPI_methods, __version__
+from TheApi import Client, SaavnAPI, __version__
 
 
 project = "TheApix"
