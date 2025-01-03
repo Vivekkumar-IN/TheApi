@@ -6,6 +6,12 @@ Overview
 
 TheApix is designed to integrate multiple API keys and provide a unified interface for various functionalities. This documentation will guide you through the installation, configuration, and usage of TheApi.
 
+
+.. attention ::
+
+   This project is under active development. Expect frequent updates and improvements.
+
+
 .. toctree::
    :hidden:
    :caption: Contents:
@@ -58,7 +64,3 @@ To start using TheApix, follow these steps:
 .. important :: 
 
    All methods of the :obj:`~TheApi.Client` can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
-
-.. attention ::
-
-   This project is under active development. Expect frequent updates and improvements.
