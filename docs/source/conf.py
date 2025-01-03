@@ -123,7 +123,7 @@ for root, _, files in os.walk(docs):
                         )
                      ]
                   )
-                 content = content.replace(
+                content = content.replace(
                      f"{{{cla}_toctree}}", method_list
                    )
 
