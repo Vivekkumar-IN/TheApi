@@ -13,12 +13,6 @@ TheApix is designed to integrate multiple API keys and provide a unified interfa
    client
    api/index
 
-.. toctree::
-   :hidden:
-   :caption: JioSaavn:
-
-   api/saavn/index
-   api/saavn/methods
 
 
 Installation
