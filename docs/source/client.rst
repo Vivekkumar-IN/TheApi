@@ -1,4 +1,4 @@
-TheApix Client
+Client
 ==============
 
 .. currentmodule:: TheApi
@@ -14,3 +14,8 @@ TheApix Client
 
    api = Client(...)
    await api.write("Hello World")
+
+.. toctree::
+   :hidden:
+
+   api/index
