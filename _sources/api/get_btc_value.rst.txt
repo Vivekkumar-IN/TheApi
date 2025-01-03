@@ -1,0 +1,6 @@
+get_btc_value
+=============
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.get_btc_value

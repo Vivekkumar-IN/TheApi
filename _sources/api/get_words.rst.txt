@@ -1,0 +1,6 @@
+get_words
+=========
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.get_words

@@ -1,0 +1,6 @@
+hindi_quote
+===========
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.hindi_quote

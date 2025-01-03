@@ -1,0 +1,6 @@
+get_word_definitions
+====================
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.get_word_definitions

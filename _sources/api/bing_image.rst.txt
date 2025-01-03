@@ -1,0 +1,6 @@
+bing_image
+==========
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.bing_image

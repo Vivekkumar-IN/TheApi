@@ -1,0 +1,6 @@
+blackpink
+=========
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.blackpink

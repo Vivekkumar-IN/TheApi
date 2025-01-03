@@ -1,0 +1,6 @@
+get_album
+=========
+
+.. currentmodule:: TheApi
+
+.. automethod:: SaavnAPI.get_album

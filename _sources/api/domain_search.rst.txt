@@ -1,0 +1,6 @@
+domain_search
+=============
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.domain_search

@@ -1,0 +1,6 @@
+search_albums
+=============
+
+.. currentmodule:: TheApi
+
+.. automethod:: SaavnAPI.search_albums

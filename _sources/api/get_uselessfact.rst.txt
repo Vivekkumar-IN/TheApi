@@ -1,0 +1,6 @@
+get_uselessfact
+===============
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.get_uselessfact

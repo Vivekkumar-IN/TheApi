@@ -1,0 +1,6 @@
+dog
+===
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.dog

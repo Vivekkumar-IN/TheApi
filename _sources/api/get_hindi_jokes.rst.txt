@@ -1,0 +1,6 @@
+get_hindi_jokes
+===============
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.get_hindi_jokes

@@ -1,0 +1,6 @@
+get_advice
+==========
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.get_advice
