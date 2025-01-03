@@ -106,6 +106,8 @@ for root, _, files in os.walk(docs):
                 content = f.read()
 
             cls_to_replace = re.findall(r"\{(\w+)_methods\}", content)
+            print(cls_to_replace)
+            print(file_path)
             for cla in cls_to_replace:
                 cls = getattr(TheApi, cla)
                 methods = inspect.getmembers(cls, predicate=inspect.isfunction)
@@ -113,6 +115,8 @@ for root, _, files in os.walk(docs):
                 content = content.replace(f"{{{cla}_methods}}", method_list)
 
             toctrees = re.findall(r"\{(\w+)_toctree\}", content)
+            print(toctrees)
+            print(file_path)
             for cla in toctrees:
                 cls = getattr(TheApi, cla)
                 method_list = "\n   ".join(
