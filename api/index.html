@@ -260,6 +260,111 @@
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.animechan</span></code>()</p></td>
+<td><p>Fetches a random anime quote from the AnimeChan API.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.avatar</span></code>()</p></td>
+<td><p>Fetches a random avatar from the thedobby.club API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.bing_image</span></code>(query[, limit])</p></td>
+<td><p>Searches Bing for images based on a query and retrieves image URLs.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.blackpink</span></code>(query[, color, border_color])</p></td>
+<td><p>Creates a stylized &quot;Blackpink&quot;-themed image with custom text, color, and optional border.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.carbon</span></code>(query)</p></td>
+<td><p>Generates a code snippet image using the Carbon API, saves it to the downloads folder, uploads it, and returns the URL of the uploaded image.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.cat</span></code>()</p></td>
+<td><p>Fetches a random cat image URL.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.dog</span></code>()</p></td>
+<td><p>Fetches a random dog image URL.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.domain_search</span></code>(domain[, zone])</p></td>
+<td><p>Fetches domain information from the DomainsDB API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.fakerapi</span></code>(endpoint[, quantity, ...])</p></td>
+<td><p>Fetch data from the FakerAPI using aiohttp.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.fox</span></code>()</p></td>
+<td><p>Fetches a random fox image URL.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.gen_qr</span></code>(data[, size, ...])</p></td>
+<td><p>Generate a QR code using api.qrserver.com and save it as a PNG file.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.generate_pdf</span></code>(source[, from_url])</p></td>
+<td><p>Generates a PDF from a URL or an HTML string and saves it to a file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_advice</span></code>()</p></td>
+<td><p>Fetches a random piece of advice.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_btc_value</span></code>([currency])</p></td>
+<td><p>Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_fake_addresses</span></code>([quantity, ...])</p></td>
+<td><p>Fetch fake address data from the <a class="reference external" href="https://fakerapi.it/">FakerAPI</a> .</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_fake_credit_cards</span></code>([locale, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_fake_images</span></code>([quantity, locale, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_fake_persons</span></code>([quantity, locale, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_hindi_jokes</span></code>()</p></td>
+<td><p>Fetches a random Hindi joke.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_jokes</span></code>([amount])</p></td>
+<td><p>Fetches a specified number of jokes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_uselessfact</span></code>()</p></td>
+<td><p>Fetches a random useless fact.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_word_definitions</span></code>(word)</p></td>
+<td><p>Fetch definitions for a word from the Dictionary API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.get_words</span></code>([words, letter, word_type, ...])</p></td>
+<td><p>Fetch random words from the Random Word API.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.github_search</span></code>(query[, search_type, ...])</p></td>
+<td><p>Searches GitHub for various types of content.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.hindi_quote</span></code>()</p></td>
+<td><p>Fetches a random Hindi quote.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.hug</span></code>([amount])</p></td>
+<td><p>Fetches a specified number hug gif from the Nekos.Best API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.meme</span></code>()</p></td>
+<td><p>Fetches a random meme image URL.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.neko</span></code>([endpoint, amount])</p></td>
+<td><p>Fetches a specified number of neko images or GIFs from the Nekos.Best API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.pypi</span></code>(package_name)</p></td>
+<td><p>Retrieves metadata information about a specified Python package from the PyPI API.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.quote</span></code>()</p></td>
+<td><p>Fetches a random quote.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.riddle</span></code>()</p></td>
+<td><p>Fetches a random riddle from the Riddles API.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.stackoverflow_search</span></code>(query[, ...])</p></td>
+<td><p>Searches Stack Overflow for questions based on a query, returning results sorted by relevance or another specified criteria.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.upload_image</span></code>(file_path)</p></td>
+<td><p>Uploads an image to <a class="reference external" href="https://envs.sh">https://envs.sh</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.wikipedia</span></code>(query)</p></td>
+<td><p>Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Client.write</span></code>(text)</p></td>
+<td><p>Creates an image with text written on it, using a predefined template and font, and uploads the image after generation.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
