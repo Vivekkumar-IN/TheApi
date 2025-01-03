@@ -2,7 +2,17 @@ from ._request import Request
 
 
 class SaavnAPI:
+    """
+    A class for interacting with the Saavn API.
+
+    This class provides methods for searching songs, albums, artists, and playlists
+    globally on the Saavn platform.
+    """
+
     def __init__(self):
+        """
+        Initializes the SaavnAPI instance with the base URL for the Saavn API.
+        """
         self.base_url = "https://saavn.dev"
 
     async def search(self, query: str):
@@ -10,13 +20,21 @@ class SaavnAPI:
         Searches globally for songs, albums, artists, and playlists.
 
         Args:
-            query (str): The search query.
+            query (str): The search query. This can be a song name, album name,
+                         artist name, or playlist name.
 
         Returns:
-            dict: The search results.
+            dict: The search results containing information about the songs, 
+                  albums, artists, and playlists matching the query.
+
+        Example:
+            response = await api.search("Despacito")
+            print(response)
         """
         url = f"{self.base_url}/api/search"
         return await Request.get(url, params={"query": query})
+
+
 
     async def search_songs(self, query: str, page: int = 0, limit: int = 10):
         """
