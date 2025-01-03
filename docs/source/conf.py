@@ -32,6 +32,7 @@ html_title = f"TheApix v{version}"
 html_theme = "furo"
 html_copy_source = True
 html_static_path = ["_static"]
+html_extra_path = ["_templates"]
 html_css_files = ["css/pyrogram.css"]
 html_favicon = html_static_path[0] + "/img/TheApix.ico"
 
