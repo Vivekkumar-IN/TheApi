@@ -3,12 +3,12 @@ import re
 import sys
 import inspect
 import datetime
-import importlib
 
 
 sys.path.insert(0, os.path.abspath("../.."))
 
 import TheApi
+
 
 project = "TheApix"
 author = "VivekKumar-IN"
@@ -107,25 +107,23 @@ for root, _, files in os.walk(docs):
 
             cls_to_replace = re.findall(r"\{(\w+)_methods\}", content)
             for cla in cls_to_replace:
-                 cls = getattr(TheApi, cla)
-                 methods = inspect.getmembers(cls, predicate=inspect.isfunction)
-                 method_list = "\n   ".join([name for name, _ in methods])
-                 content = content.replace(f"{{{cla}_methods}}", method_list)
+                cls = getattr(TheApi, cla)
+                methods = inspect.getmembers(cls, predicate=inspect.isfunction)
+                method_list = "\n   ".join([name for name, _ in methods])
+                content = content.replace(f"{{{cla}_methods}}", method_list)
 
             toctrees = re.findall(r"\{(\w+)_toctree\}", content)
             for cla in toctrees:
                 cls = getattr(TheApi, cla)
                 method_list = "\n   ".join(
-                     [
-                         name
-                         for name, _ in inspect.getmembers(
-                         cls, predicate=inspect.isfunction
+                    [
+                        name
+                        for name, _ in inspect.getmembers(
+                            cls, predicate=inspect.isfunction
                         )
-                     ]
-                  )
-                content = content.replace(
-                     f"{{{cla}_toctree}}", method_list
-                   )
+                    ]
+                )
+                content = content.replace(f"{{{cla}_toctree}}", method_list)
 
             with open(file_path, "w") as f:
                 f.write(content)
