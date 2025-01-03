@@ -2,12 +2,15 @@ import os
 import re
 import sys
 import inspect
-import datetime
 import logging
+import datetime
+
 
 sys.path.insert(0, os.path.abspath("../.."))
 
 import TheApi
+
+
 logging.basicConfig(level=logging.INFO)
 
 log = loggin.info
