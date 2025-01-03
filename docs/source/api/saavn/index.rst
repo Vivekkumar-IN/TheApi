@@ -18,4 +18,4 @@ SaavnAPI
 .. toctree::
    :hidden:
 
-   api/saavn/methods
+   methods
