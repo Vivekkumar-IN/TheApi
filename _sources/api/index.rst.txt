@@ -9,7 +9,7 @@ The following methods are available in :obj:`~TheApi.Client`:
 .. autosummary::
     :nosignatures:
 
-    Client.animechan
+   Client.animechan
    Client.avatar
    Client.bing_image
    Client.blackpink
@@ -50,7 +50,7 @@ The following methods are available in :obj:`~TheApi.Client`:
     :hidden:
     :maxdepth: 1
 
-    animechan
+   animechan
    avatar
    bing_image
    blackpink
