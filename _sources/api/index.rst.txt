@@ -9,56 +9,48 @@ The following methods are available in :obj:`~TheApi.Client`:
 .. autosummary::
     :nosignatures:
 
-    __init__
-   _create_file
-   _handle_error
-   _rnd_str
-   animechan
-   avatar
-   bing_image
-   blackpink
-   carbon
-   cat
-   dog
-   domain_search
-   fakerapi
-   fox
-   gen_qr
-   generate_pdf
-   get_advice
-   get_btc_value
-   get_fake_addresses
-   get_fake_credit_cards
-   get_fake_images
-   get_fake_persons
-   get_hindi_jokes
-   get_jokes
-   get_uselessfact
-   get_word_definitions
-   get_words
-   github_search
-   hindi_quote
-   hug
-   meme
-   neko
-   pypi
-   quote
-   riddle
-   stackoverflow_search
-   upload_image
-   wikipedia
-   write
+    Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
+   Client.name
 
 
 .. toctree::
     :hidden:
     :maxdepth: 1
 
-    __init__
-   _create_file
-   _handle_error
-   _rnd_str
-   animechan
+    animechan
    avatar
    bing_image
    blackpink
