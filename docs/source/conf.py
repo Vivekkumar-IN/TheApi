@@ -123,7 +123,7 @@ for root, _, files in os.walk(docs):
                 cls = getattr(TheApi, cla)
                 methods = inspect.getmembers(cls, predicate=inspect.isfunction)
                 method_list = "\n   ".join(
-                    [f"{cla}.name" for name, _ in methods if not name.startswith("_")]
+                    [f"{cla}.{name}" for name, _ in methods if not name.startswith("_")]
                 )
                 content = content.replace(f"{{{cla}_methods}}", method_list)
 
