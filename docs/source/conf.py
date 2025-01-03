@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 
 log = logging.info
 
-log("Hello")
+log("\n\n\n\n\n\n\n\n\n\n\n")
 
 project = "TheApix"
 author = "VivekKumar-IN"
@@ -105,18 +105,20 @@ napoleon_use_param = False
 
 docs = os.path.join(os.getcwd(), "docs")
 
+log(f"dics dir is {docs}\n")
+
 for root, _, files in os.walk(docs):
-    print(files)
+    log(files)
     for file in files:
         if file.endswith(".rst"):
-            print(f"found {file}")
+            log(f"found {file}")
             file_path = os.path.join(root, file)
             with open(file_path, "r") as f:
                 content = f.read()
 
             cls_to_replace = re.findall(r"\{(\w+)_methods\}", content)
-            print(cls_to_replace)
-            print(file_path)
+            log(cls_to_replace)
+            log(file_path)
             for cla in cls_to_replace:
                 cls = getattr(TheApi, cla)
                 methods = inspect.getmembers(cls, predicate=inspect.isfunction)
@@ -124,8 +126,8 @@ for root, _, files in os.walk(docs):
                 content = content.replace(f"{{{cla}_methods}}", method_list)
 
             toctrees = re.findall(r"\{(\w+)_toctree\}", content)
-            print(toctrees)
-            print(file_path)
+            log(toctrees)
+            log(file_path)
             for cla in toctrees:
                 cls = getattr(TheApi, cla)
                 method_list = "\n   ".join(
@@ -140,3 +142,5 @@ for root, _, files in os.walk(docs):
 
             with open(file_path, "w") as f:
                 f.write(content)
+
+log("\n\n\n\n\n\n\n\n\n\n\n")
