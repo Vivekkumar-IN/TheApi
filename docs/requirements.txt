@@ -5,4 +5,4 @@ httpx
 aiofiles
 pillow
 
-sphinx_rtd_theme
+sphinx-rtd-theme
