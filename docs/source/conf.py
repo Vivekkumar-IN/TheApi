@@ -6,7 +6,7 @@ import datetime
 
 sys.path.insert(0, os.path.abspath("../.."))
 
-from TheApi import Client, __version__
+from TheApi import Client, __version__, SaavnAPI_methods
 
 
 project = "TheApix"
@@ -131,3 +131,31 @@ for method_name in method:
     text += f".. currentmodule:: TheApi\n\n"
     text += f".. automethod:: Client.{method_name}\n\n"
     write(method_rst_path, text)
+
+methods = [
+    name
+    for name, func in inspect.getmembers(SaavnAPI, predicate=inspect.isfunction)
+    if not name.startswith("_")
+]
+
+SaavnAPI_methods = "\n    ".join([f"SaavnAPI.{name}" for name in methods])
+SaavnAPI_toctree = "\n    ".join(methods)
+
+api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api", "saavn")
+os.makedirs(api_path, exist_ok=True)
+
+methods_rst = os.path.join(api_path, "methods.rst")
+content = read(methods_rst)
+content = content.replace("{SaavnAPI_methods}", SaavnAPI_methods)
+content = content.replace("{SaavnAPI_toctree}", SaavnAPI_toctree)
+write(methods_rst, content)
+
+for method_name in methods:
+    method_rst_path = os.path.join(api_path, f"{method_name}.rst")
+    text = f"{method_name}\n"
+    heading = "=" * len(method_name)
+    text += f"{heading}\n\n"
+    text += f".. currentmodule:: TheApi\n\n"
+    text += f".. automethod:: SaavnAPI.{method_name}\n\n"
+    write(method_rst_path, text)
+
