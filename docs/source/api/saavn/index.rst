@@ -13,4 +13,4 @@ SaavnAPI
    from TheApi import SaavnAPI
 
    api = SaavnAPI()
-   await api.meth(...)
+   await api.search("Fuck Millionaire")
