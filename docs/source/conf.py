@@ -122,7 +122,7 @@ for root, _, files in os.walk(docs):
             for cla in cls_to_replace:
                 cls = getattr(TheApi, cla)
                 methods = inspect.getmembers(cls, predicate=inspect.isfunction)
-                method_list = "\n   ".join([name for name, _ in methods])
+                method_list = "\n   ".join([f"{cla}.name" for name, _ in methods if not name.startswith("_")])
                 content = content.replace(f"{{{cla}_methods}}", method_list)
 
             toctrees = re.findall(r"\{(\w+)_toctree\}", content)
@@ -136,6 +136,7 @@ for root, _, files in os.walk(docs):
                         for name, _ in inspect.getmembers(
                             cls, predicate=inspect.isfunction
                         )
+                        if not name.startswith("_")
                     ]
                 )
                 content = content.replace(f"{{{cla}_toctree}}", method_list)
