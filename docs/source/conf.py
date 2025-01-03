@@ -1,13 +1,14 @@
 import os
+import re
 import sys
 import inspect
 import datetime
-import re
 import importlib
+
 
 sys.path.insert(0, os.path.abspath("../.."))
 
-from TheApi import Client, SaavnAPI, __version__
+from TheApi import __version__
 
 
 project = "TheApix"
@@ -126,9 +127,16 @@ for root, _, files in os.walk(directory):
                     module = importlib.import_module(module_name)
                     cls = getattr(module, class_name)
                     method_list = "\n   ".join(
-                        [f"{name}" for name, _ in inspect.getmembers(cls, predicate=inspect.isfunction)]
+                        [
+                            f"{name}"
+                            for name, _ in inspect.getmembers(
+                                cls, predicate=inspect.isfunction
+                            )
+                        ]
                     )
-                    content = content.replace(f"{{{cls_placeholder}_toctree}}", method_list)
+                    content = content.replace(
+                        f"{{{cls_placeholder}_toctree}}", method_list
+                    )
                 except (ModuleNotFoundError, AttributeError):
                     pass
 
