@@ -40,6 +40,7 @@ To start using TheApix, follow these steps:
    .. code-block:: python
 
       from TheApi import Client
+
       api = Client()
 
 2. Use the Client to make requests to the integrated APIs:
@@ -47,6 +48,7 @@ To start using TheApix, follow these steps:
    .. code-block:: python
 
       response = await api.write("Radhe Radhe")
+
       print(response)
 
 3. You can use the :obj:`~TheApi.SaavnAPI` for making request for endpoint of saavn.dev
