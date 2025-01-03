@@ -35,6 +35,15 @@ html_static_path = ["_static"]
 html_extra_path = ["_templates"]
 html_css_files = ["css/pyrogram.css"]
 html_favicon = html_static_path[0] + "/img/TheApix.ico"
+html_meta = {
+    'charset': 'utf-8',
+    'viewport': 'width=device-width, initial-scale=1',
+    'title': 'TheApix',
+    'description': 'A python library that build with interacting many public apis',
+    'author': 'VivekKumar-In',
+    'copyright': '2025, VivekKumar-IN',
+    'robots': 'index, follow'
+}
 
 html_theme_options = {
     "navigation_with_keys": True,
