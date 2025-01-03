@@ -3,13 +3,7 @@ from ._request import Request
 
 class SaavnAPI:
     def __init__(self):
-        """
-        Initializes the JioSaavnAPI with a base URL.
-
-        Args:
-            base_url (str): The base URL for the JioSaavn API.
-        """
-        self.base_url = base_url
+        self.base_url = "https://saavn.dev"
 
     async def search(self, query: str):
         """
