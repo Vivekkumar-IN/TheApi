@@ -9,11 +9,37 @@ The following methods are available in :obj:`~TheApi.SaavnAPI`:
 .. autosummary::
     :nosignatures:
 
-    {SaavnAPI_methods}
+    __init__
+   get_album
+   get_artist
+   get_artist_albums
+   get_artist_songs
+   get_playlist
+   get_song_by_id
+   get_song_lyrics
+   get_song_suggestions
+   search
+   search_albums
+   search_artists
+   search_playlists
+   search_songs
 
 
 .. toctree::
     :hidden:
     :maxdepth: 1
 
-    {SaavnAPI_toctree}
+    __init__
+   get_album
+   get_artist
+   get_artist_albums
+   get_artist_songs
+   get_playlist
+   get_song_by_id
+   get_song_lyrics
+   get_song_suggestions
+   search
+   search_albums
+   search_artists
+   search_playlists
+   search_songs
