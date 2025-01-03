@@ -6,7 +6,7 @@ import datetime
 
 sys.path.insert(0, os.path.abspath("../.."))
 
-from TheApi import Client, __version__, SaavnAPI_methods
+from TheApi import Client, SaavnAPI_methods, __version__
 
 
 project = "TheApix"
@@ -158,4 +158,3 @@ for method_name in methods:
     text += f".. currentmodule:: TheApi\n\n"
     text += f".. automethod:: SaavnAPI.{method_name}\n\n"
     write(method_rst_path, text)
-
