@@ -7,9 +7,9 @@ Methods
 The following methods are available in :obj:`~TheApi.SaavnAPI`:
 
 .. autosummary::
-    :nosignatures:
+   :nosignatures:
 
-    SaavnAPI.get_album
+   SaavnAPI.get_album
    SaavnAPI.get_artist
    SaavnAPI.get_artist_albums
    SaavnAPI.get_artist_songs
@@ -25,10 +25,10 @@ The following methods are available in :obj:`~TheApi.SaavnAPI`:
 
 
 .. toctree::
-    :hidden:
-    :maxdepth: 1
+   :hidden:
+   :maxdepth: 1
 
-    get_album
+   get_album
    get_artist
    get_artist_albums
    get_artist_songs
