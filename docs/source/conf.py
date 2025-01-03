@@ -36,8 +36,8 @@ templates_path = ["_templates"]
 exclude_patterns = []
 
 html_title = f"TheApix v{version}"
-html_theme = "sphinx_rtd_theme"
-# html_theme = "furo"
+#html_theme = "sphinx_rtd_theme"
+html_theme = "furo"
 html_copy_source = True
 html_static_path = ["_static"]
 html_extra_path = ["_templates"]
