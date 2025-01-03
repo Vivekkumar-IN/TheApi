@@ -13,7 +13,7 @@ import TheApi
 
 logging.basicConfig(level=logging.INFO)
 
-log = loggin.info
+log = logging.info
 
 log("Hello")
 
