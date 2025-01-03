@@ -41,7 +41,7 @@ html_meta = {
     "title": "TheApix",
     "description": "A python library that build with interacting many public apis",
     "author": "VivekKumar-In",
-    "copyright": "2025, VivekKumar-IN",
+    "copyright": copyright,
     "robots": "index, follow",
 }
 
