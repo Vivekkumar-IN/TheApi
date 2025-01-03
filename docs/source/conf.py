@@ -9,6 +9,7 @@ sys.path.insert(0, os.path.abspath("../.."))
 
 import TheApi
 
+print("Hello")
 
 project = "TheApix"
 author = "VivekKumar-IN"
@@ -99,6 +100,7 @@ napoleon_use_param = False
 docs = os.path.join(os.getcwd(), "docs")
 
 for root, _, files in os.walk(docs):
+    print(files)
     for file in files:
         if file.endswith(".rst"):
             print(f"found {file}")
