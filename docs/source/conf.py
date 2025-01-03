@@ -3,14 +3,16 @@ import re
 import sys
 import inspect
 import datetime
-
+import logging
 
 sys.path.insert(0, os.path.abspath("../.."))
 
 import TheApi
+logging.basicConfig(level=logging.INFO)
 
+log = loggin.info
 
-print("Hello")
+log("Hello")
 
 project = "TheApix"
 author = "VivekKumar-IN"
