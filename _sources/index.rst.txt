@@ -33,6 +33,11 @@ To install TheApix, you can use pip:
 Usage
 -----
 
+
+.. important :: 
+
+   All methods of the :obj:`~TheApi.Client` or :obj:`~TheApi.SaavnAPI` can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
+
 To start using TheApix, follow these steps:
 
 1. Import the Client module and initialize the client:
@@ -62,7 +67,3 @@ To start using TheApix, follow these steps:
       r = await api.search("Fuck Millionaire")
       
       print(r)
-
-.. important :: 
-
-   All methods of the :obj:`~TheApi.Client` can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
