@@ -1,7 +1,0 @@
-cat
-===
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.cat
-

@@ -1,7 +1,0 @@
-get_artist
-==========
-
-.. currentmodule:: TheApi
-
-.. automethod:: SaavnAPI.get_artist
-

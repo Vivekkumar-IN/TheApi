@@ -1,7 +1,0 @@
-search
-======
-
-.. currentmodule:: TheApi
-
-.. automethod:: SaavnAPI.search
-
