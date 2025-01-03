@@ -130,6 +130,8 @@ for root, _, files in os.walk(docs):
             toctrees = re.findall(r"\{(\w+)_toctree\}", content)
             log(toctrees)
             log(file_path)
+            log(f"The root is {root}")
+            log(f"_ is {_}")
             for cla in toctrees:
                 cls = getattr(TheApi, cla)
                 method_list = "\n   ".join(
