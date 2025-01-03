@@ -112,15 +112,15 @@ print(result)
 
 ```json
 {
-    "content": "All of the disadvantage in this world stems from a person's lack of ability.",
+    "content": "You - Idiot! Go ahead and cry! When I'm with you, you don't have to hold back. *Usagi runs into his arms, sobbing*",
     "anime": {
-        "id": 281,
-        "name": "Tokyo Ghoul",
-        "altName": "Tokyo Ghoul"
+        "id": 417,
+        "name": "Sailor Moon",
+        "altName": "Bishoujo Senshi Sailor Moon"
     },
     "character": {
-        "id": 999,
-        "name": "Rize Kamishiro"
+        "id": 2231,
+        "name": "Mamoru Chiba"
     }
 }
 ```
@@ -144,9 +144,9 @@ print(result)
 
 ```json
 {
-    "file_name": "will",
+    "file_name": "elena",
     "file_type": "image/jpeg",
-    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/will.jpg"
+    "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/elena.jpg"
 }
 ```
 
@@ -200,7 +200,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/blackpink_v6JYm5Cv.jpg
+/home/runner/work/TheApi/TheApi/downloads/blackpink_8wOpzC5c.jpg
 ```
 
 ### 5. Carbon
@@ -224,7 +224,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/carbon_TFKTVakV.png
+/home/runner/work/TheApi/TheApi/downloads/carbon_vjwQFROk.png
 ```
 
 ### 6. Cat
@@ -245,7 +245,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://cdn2.thecatapi.com/images/9jg.jpg
+https://cdn2.thecatapi.com/images/71m.jpg
 ```
 
 ### 7. Dog
@@ -266,7 +266,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://random.dog/75107177-e4ff-4577-9f5d-e79dd13f59c3.jpg
+https://random.dog/20418866-ec07-4ac9-99b6-af7563ac9167.mp4
 ```
 
 ### 8. Domain Search
@@ -341,7 +341,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://randomfox.ca/?i=58
+https://randomfox.ca/?i=62
 ```
 
 ### 11. Gen Qr
@@ -370,7 +370,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/e3D7cJWs_qr.png
+/home/runner/work/TheApi/TheApi/downloads/I5iOH3V7_qr.png
 ```
 
 ### 12. Generate Pdf
@@ -409,7 +409,7 @@ print(result)
 #### Expected Output
 
 ```text
-Don't be afraid to ask questions.
+If you can't do anything about it, there's no point in worrying about it.
 ```
 
 ### 14. Get Btc Value
@@ -441,22 +441,22 @@ print(result)
     "EUR": {
         "code": "EUR",
         "description": "Euro",
-        "rate": "91,637.657",
-        "rate_float": 91637.6567,
+        "rate": "94,104.482",
+        "rate_float": 94104.4817,
         "symbol": "&euro;"
     },
     "GBP": {
         "code": "GBP",
         "description": "British Pound Sterling",
-        "rate": "76,174.075",
-        "rate_float": 76174.075,
+        "rate": "78,224.631",
+        "rate_float": 78224.6306,
         "symbol": "&pound;"
     },
     "USD": {
         "code": "USD",
         "description": "United States Dollar",
-        "rate": "95,518.477",
-        "rate_float": 95518.4769,
+        "rate": "98,089.771",
+        "rate_float": 98089.771,
         "symbol": "&#36;"
     }
 }
@@ -493,15 +493,15 @@ print(result)
     "data": [
         {
             "id": 1,
-            "street": "2558 Weber Springs Apt. 267",
-            "streetName": "Monahan Freeway",
-            "buildingNumber": "4085",
-            "city": "New Leopold",
-            "zipcode": "46814-6567",
-            "country": "Argentina",
-            "country_code": "AR",
-            "latitude": -48.591366,
-            "longitude": -17.000169
+            "street": "408 Eudora Pike",
+            "streetName": "Frieda Island",
+            "buildingNumber": "494",
+            "city": "North Camylle",
+            "zipcode": "10341",
+            "country": "Cameroon",
+            "country_code": "CM",
+            "latitude": -6.583266,
+            "longitude": -161.486668
         }
     ]
 }
@@ -538,9 +538,9 @@ print(result)
     "data": [
         {
             "type": "MasterCard",
-            "number": "2337918152582485",
-            "expiration": "01/26",
-            "owner": "Johnnie Mertz"
+            "number": "347812461428203",
+            "expiration": "03/26",
+            "owner": "Skye Terry"
         }
     ]
 }
@@ -579,8 +579,8 @@ print(result)
     "total": 1,
     "data": [
         {
-            "title": "Quo et eos vitae asperiores.",
-            "description": "Ad voluptatem suscipit atque. Quis velit aut magni aspernatur delectus. Aut minus aliquam laudantium fuga molestiae.",
+            "title": "Tempora et hic dolor.",
+            "description": "Est reiciendis sequi veniam quia dignissimos delectus. Quaerat impedit harum sed aut. Qui nemo ut rerum quaerat.",
             "url": "https://picsum.photos/640/480"
         }
     ]
@@ -605,7 +605,8 @@ print(result)
 #### Expected Output
 
 ```text
-बरसात के इस सुहाने मौसम में singles – सपने देखते हैं couples – date करते है शादीशुदा : ये कपड़े कहाँ सूखने डालूँ ? 😂😂
+पत्नि : सुनो मेरे मुहं मे मच्छर चला गया, अब क्या करू..?  
+पति : पगली ऑल आउट पी ले, 6 सेकेंड में काम शुरू। 😂😂😂
 ```
 
 ### 19. Get Jokes
@@ -629,7 +630,7 @@ print(result)
 #### Expected Output
 
 ```text
-Dark humor is like food, not everyone gets it.
+If you're here for the yodeling lesson, please form an orderly orderly orderly queue.
 ```
 
 ### 20. Get Uselessfact
@@ -650,7 +651,7 @@ print(result)
 #### Expected Output
 
 ```text
-Thomas Edison, acclaimed inventor of the light bulb, was afraid of the dark.
+February 1865 is the only month in recorded history not to have a full moon.
 ```
 
 ### 21. Get Word Definitions
@@ -708,16 +709,16 @@ print(result)
 #### Expected Output
 
 ```text
-Renderer
-Shoplift
-Charger
-Jackknife
-Frightful
-Drizzly
-Sharper
-Vineyard
-Chevron
-Vivacious
+Abstract
+Unlovely
+Sulfate
+Unplanned
+Phoney
+Unpiloted
+Outmatch
+Treadmill
+Repeal
+Gag
 ```
 
 ### 23. Github Search
@@ -801,7 +802,7 @@ print(result)
 #### Expected Output
 
 ```text
-अगर नियत अच्छी हो तो नसीब कभी बुरा नहीं होता..!
+समय वो है जिसे हम सबसे ज्यादा चाहते है पर जिसे हम सबसे गलत तरीके से उपयोग करते है।
 ```
 
 ### 25. Hug
@@ -830,8 +831,8 @@ print(result)
 ```json
 [
     {
-        "anime_name": "Suisei no Gargantia",
-        "url": "https://nekos.best/api/v2/hug/40142a6f-83c4-450e-a477-ca7c89787623.gif"
+        "anime_name": "Idolish Seven: Third Beat!",
+        "url": "https://nekos.best/api/v2/hug/bfe6226c-f254-4c9c-ae10-a587233e381b.gif"
     }
 ]
 ```
@@ -854,7 +855,7 @@ print(result)
 #### Expected Output
 
 ```text
-https://preview.redd.it/g6bwvd3vr5ae1.gif?width=320&crop=smart&format=png8&s=53044cc9f7070980e0d256a7ef318477f56bfaa9
+https://preview.redd.it/vm81a99ycdae1.gif?width=320&crop=smart&format=png8&s=b9bed4b73297ae3578b876d16e9cae80ef9ad6a3
 ```
 
 ### 27. Neko
@@ -894,22 +895,22 @@ print(result)
 {
     "results": [
         {
-            "artist_href": "https://www.pixiv.net/en/users/3036679",
-            "artist_name": "\u7518\u57ce\u306a\u3064\u304d",
-            "source_url": "https://yande.re/post/show/610749",
-            "url": "https://nekos.best/api/v2/neko/eea9d1d9-a9ec-4767-b46c-ec0ee74f45a2.png"
+            "artist_href": "https://www.pixiv.net/en/users/4882349",
+            "artist_name": "\u4e08\u3086\u304d\u307f",
+            "source_url": "https://www.pixiv.net/en/artworks/97469047",
+            "url": "https://nekos.best/api/v2/neko/b76c9aed-e8e6-43ad-8b6c-be9a36ca2a0b.png"
         },
         {
-            "artist_href": "https://twitter.com/ryohka_jp",
-            "artist_name": "yohka_jp",
-            "source_url": "https://twitter.com/i/web/status/1108527474416050176",
-            "url": "https://nekos.best/api/v2/neko/535eb098-72f0-4c08-97d5-ba75fd871500.png"
+            "artist_href": "https://www.pixiv.net/en/users/5776001",
+            "artist_name": "\u304b\u304f\u3055\u3068\u3046",
+            "source_url": "https://www.pixiv.net/en/artworks/78656458",
+            "url": "https://nekos.best/api/v2/neko/d21517de-4dbe-4c1b-a95c-0bdd77e22357.png"
         },
         {
-            "artist_href": "https://www.pixiv.net/en/users/43054314",
-            "artist_name": "\u9234\u5d0e",
-            "source_url": "https://www.pixiv.net/en/artworks/95732697",
-            "url": "https://nekos.best/api/v2/neko/73a827e8-e019-486f-a765-4c4ac8f9992b.png"
+            "artist_href": "https://www.pixiv.net/en/users/1688942",
+            "artist_name": "\u767d\u6ca2\u98fe\u97f3",
+            "source_url": "https://www.pixiv.net/en/artworks/74694844",
+            "url": "https://nekos.best/api/v2/neko/8c0580f5-91f1-4c44-bb8e-da8fec981cd0.png"
         }
     ]
 }
@@ -985,9 +986,9 @@ print(result)
 #### Expected Output
 
 ```text
-Here is one quality that one must possess to win, and that is definiteness of purpose, the knowledge of what one wants, and a burning desire to possess it.
+Life a culmination of the past, an awareness of the present, an indication of the future beyond knowledge, the quality that gives a touch of divinity to matter.
 
-author - Napoleon Hill
+author - Charles Lindbergh
 ```
 
 ### 30. Riddle
@@ -1009,8 +1010,8 @@ print(result)
 
 ```json
 {
-    "riddle": "Joe bets Tony $100 that he can predict the score of the football game before it starts. Tony agrees, but loses the bet. Why did Tony lose the bet?",
-    "answer": "Joe said the score would be 0-0 and he was right. \u201cBefore\u201dany football game starts, the score is always 0-0"
+    "riddle": "Three people check into a hotel. They pay $30 to the manager and go to their room. The manager suddenly remembers that the room rate is $25 and gives $5 to the bellboy to return to the people. On the way to the room the bellboy reasons that $5 would be difficult to share among three people so he pockets $2 and gives $1 to each person. Now each person paid $10 and got back $1. So they paid $9 each, totalling $27. The bellboy has $2, totalling $29. Where is the missing $1?",
+    "answer": "We have to be careful what we are adding together. Originally, they paid $30, they each received back $1, thus they now have only paid $27. Of this $27, $25 went to the manager for the room and $2 went to the bellboy"
 }
 ```
 
@@ -1082,7 +1083,7 @@ print(result)
             "link": "https://stackoverflow.com/users/951797/brian"
         },
         "is_answered": true,
-        "view_count": 32714,
+        "view_count": 32715,
         "accepted_answer_id": 7942409,
         "answer_count": 3,
         "score": 3,
@@ -1109,7 +1110,7 @@ print(result)
             "link": "https://stackoverflow.com/users/13028884/giegie"
         },
         "is_answered": false,
-        "view_count": 2040,
+        "view_count": 2041,
         "answer_count": 2,
         "score": 0,
         "last_activity_date": 1652730812,
@@ -1202,7 +1203,7 @@ print(result)
 #### Expected Output
 
 ```text
-/home/runner/work/TheApi/TheApi/downloads/write_IXQiHfwW.jpg
+/home/runner/work/TheApi/TheApi/downloads/write_6gIiqhpm.jpg
 ```
 
 
