@@ -24,7 +24,7 @@ class SaavnAPI:
                          artist name, or playlist name.
 
         Returns:
-            dict: The search results containing information about the songs, 
+            dict: The search results containing information about the songs,
                   albums, artists, and playlists matching the query.
 
         Example:
@@ -33,8 +33,6 @@ class SaavnAPI:
         """
         url = f"{self.base_url}/api/search"
         return await Request.get(url, params={"query": query})
-
-
 
     async def search_songs(self, query: str, page: int = 0, limit: int = 10):
         """
