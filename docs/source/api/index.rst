@@ -7,13 +7,13 @@ Methods
 The following methods are available in :obj:`~TheApi.Client`:
 
 .. autosummary::
-    :nosignatures:
+   :nosignatures:
 
    {Client_methods}
 
 
 .. toctree::
-    :hidden:
-    :maxdepth: 1
+   :hidden:
+   :maxdepth: 1
 
    {Client_toctree}
