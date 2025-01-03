@@ -105,20 +105,14 @@ napoleon_use_param = False
 
 docs = os.getcwd()
 
-log(f"dics dir is {docs}\n")
-
 for root, _, files in os.walk(docs):
-    log(files)
     for file in files:
         if file.endswith(".rst"):
-            log(f"found {file}")
             file_path = os.path.join(root, file)
             with open(file_path, "r") as f:
                 content = f.read()
 
             cls_to_replace = re.findall(r"\{(\w+)_methods\}", content)
-            log(cls_to_replace)
-            log(file_path)
             for cla in cls_to_replace:
                 cls = getattr(TheApi, cla)
                 methods = inspect.getmembers(cls, predicate=inspect.isfunction)
@@ -128,8 +122,6 @@ for root, _, files in os.walk(docs):
                 content = content.replace(f"{{{cla}_methods}}", method_list)
 
             toctrees = re.findall(r"\{(\w+)_toctree\}", content)
-            log(toctrees)
-            log(file_path)
             log(f"The root is {root}")
             log(f"_ is {_}")
             for cla in toctrees:
