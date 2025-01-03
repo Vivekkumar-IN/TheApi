@@ -2,7 +2,8 @@ import os
 import sys
 import inspect
 import datetime
-
+import re
+import importlib
 
 sys.path.insert(0, os.path.abspath("../.."))
 
@@ -95,66 +96,41 @@ napoleon_use_rtype = False
 napoleon_use_param = False
 
 
-def write(path, content):
-    with open(path, "w") as file:
-        file.write(content)
+directory = "docs"
 
+for root, _, files in os.walk(directory):
+    for file in files:
+        if file.endswith(".rst"):
+            file_path = os.path.join(root, file)
+            with open(file_path, "r") as f:
+                content = f.read()
 
-def read(path):
-    with open(path, "r") as file:
-        return file.read()
+            placeholders = re.findall(r"\{(\w+)_methods\}", content)
+            for placeholder in placeholders:
+                try:
+                    module_name = "TheApi"
+                    class_name = placeholder
+                    module = importlib.import_module(module_name)
+                    cls = getattr(module, class_name)
+                    methods = inspect.getmembers(cls, predicate=inspect.isfunction)
+                    method_list = "\n   ".join([f"{name}" for name, _ in methods])
+                    content = content.replace(f"{{{placeholder}_methods}}", method_list)
+                except (ModuleNotFoundError, AttributeError):
+                    pass
 
+            toctree_placeholder = re.findall(r"\{(\w+)_toctree\}", content)
+            for cls_placeholder in toctree_placeholder:
+                try:
+                    module_name = "TheApi"
+                    class_name = cls_placeholder
+                    module = importlib.import_module(module_name)
+                    cls = getattr(module, class_name)
+                    method_list = "\n   ".join(
+                        [f"{name}" for name, _ in inspect.getmembers(cls, predicate=inspect.isfunction)]
+                    )
+                    content = content.replace(f"{{{cls_placeholder}_toctree}}", method_list)
+                except (ModuleNotFoundError, AttributeError):
+                    pass
 
-method = [
-    name
-    for name, func in inspect.getmembers(Client, predicate=inspect.isfunction)
-    if not name.startswith("_")
-]
-
-method_toctree = "\n    ".join(method)
-client_methods = "\n    ".join([f"Client.{name}" for name in method])
-
-api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api")
-os.makedirs(api_path, exist_ok=True)
-
-methods_rst = os.path.join(api_path, "index.rst")
-content = read(methods_rst)
-content = content.replace("{client_methods}", client_methods)
-content = content.replace("{method_toctree}", method_toctree)
-write(methods_rst, content)
-
-for method_name in method:
-    method_rst_path = os.path.join(api_path, f"{method_name}.rst")
-    text = f"{method_name}\n"
-    heading = "=" * len(method_name)
-    text += f"{heading}\n\n"
-    text += f".. currentmodule:: TheApi\n\n"
-    text += f".. automethod:: Client.{method_name}\n\n"
-    write(method_rst_path, text)
-
-methods = [
-    name
-    for name, func in inspect.getmembers(SaavnAPI, predicate=inspect.isfunction)
-    if not name.startswith("_")
-]
-
-SaavnAPI_methods = "\n    ".join([f"SaavnAPI.{name}" for name in methods])
-SaavnAPI_toctree = "\n    ".join(methods)
-
-api_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "api", "saavn")
-os.makedirs(api_path, exist_ok=True)
-
-methods_rst = os.path.join(api_path, "methods.rst")
-content = read(methods_rst)
-content = content.replace("{SaavnAPI_methods}", SaavnAPI_methods)
-content = content.replace("{SaavnAPI_toctree}", SaavnAPI_toctree)
-write(methods_rst, content)
-
-for method_name in methods:
-    method_rst_path = os.path.join(api_path, f"{method_name}.rst")
-    text = f"{method_name}\n"
-    heading = "=" * len(method_name)
-    text += f"{heading}\n\n"
-    text += f".. currentmodule:: TheApi\n\n"
-    text += f".. automethod:: SaavnAPI.{method_name}\n\n"
-    write(method_rst_path, text)
+            with open(file_path, "w") as f:
+                f.write(content)
