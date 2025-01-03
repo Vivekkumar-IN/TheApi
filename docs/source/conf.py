@@ -5,9 +5,11 @@ import inspect
 import logging
 import datetime
 
+
 sys.path.insert(0, os.path.abspath("../.."))
 
 import TheApi
+
 
 logging.basicConfig(level=logging.INFO)
 log = logging.info
