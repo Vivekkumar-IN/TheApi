@@ -8,12 +8,11 @@ import importlib
 
 sys.path.insert(0, os.path.abspath("../.."))
 
-from TheApi import __version__
-
+import TheApi
 
 project = "TheApix"
 author = "VivekKumar-IN"
-version = __version__
+version = TheApi.__version__
 copyright = f"{datetime.date.today().year}, {author}"
 
 autosummary_generate = True
@@ -97,48 +96,36 @@ napoleon_use_rtype = False
 napoleon_use_param = False
 
 
-directory = "docs"
+docs = os.path.join(os.getcwd(), "docs")
 
-for root, _, files in os.walk(directory):
+for root, _, files in os.walk(docs):
     for file in files:
         if file.endswith(".rst"):
             file_path = os.path.join(root, file)
             with open(file_path, "r") as f:
                 content = f.read()
 
-            placeholders = re.findall(r"\{(\w+)_methods\}", content)
-            for placeholder in placeholders:
-                try:
-                    module_name = "TheApi"
-                    class_name = placeholder
-                    module = importlib.import_module(module_name)
-                    cls = getattr(module, class_name)
-                    methods = inspect.getmembers(cls, predicate=inspect.isfunction)
-                    method_list = "\n   ".join([f"{name}" for name, _ in methods])
-                    content = content.replace(f"{{{placeholder}_methods}}", method_list)
-                except (ModuleNotFoundError, AttributeError):
-                    pass
+            cls_to_replace = re.findall(r"\{(\w+)_methods\}", content)
+            for cla in cls_to_replace:
+                 cls = getattr(TheApi, cla)
+                 methods = inspect.getmembers(cls, predicate=inspect.isfunction)
+                 method_list = "\n   ".join([name for name, _ in methods])
+                 content = content.replace(f"{{{cla}_methods}}", method_list)
 
-            toctree_placeholder = re.findall(r"\{(\w+)_toctree\}", content)
-            for cls_placeholder in toctree_placeholder:
-                try:
-                    module_name = "TheApi"
-                    class_name = cls_placeholder
-                    module = importlib.import_module(module_name)
-                    cls = getattr(module, class_name)
-                    method_list = "\n   ".join(
-                        [
-                            f"{name}"
-                            for name, _ in inspect.getmembers(
-                                cls, predicate=inspect.isfunction
-                            )
-                        ]
-                    )
-                    content = content.replace(
-                        f"{{{cls_placeholder}_toctree}}", method_list
-                    )
-                except (ModuleNotFoundError, AttributeError):
-                    pass
+            toctrees = re.findall(r"\{(\w+)_toctree\}", content)
+            for cla in toctrees:
+                cls = getattr(TheApi, cla)
+                method_list = "\n   ".join(
+                     [
+                         name
+                         for name, _ in inspect.getmembers(
+                         cls, predicate=inspect.isfunction
+                        )
+                     ]
+                  )
+                 content = content.replace(
+                     f"{{{cla}_toctree}}", method_list
+                   )
 
             with open(file_path, "w") as f:
                 f.write(content)
