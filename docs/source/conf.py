@@ -101,6 +101,7 @@ docs = os.path.join(os.getcwd(), "docs")
 for root, _, files in os.walk(docs):
     for file in files:
         if file.endswith(".rst"):
+            print(f"found {file}")
             file_path = os.path.join(root, file)
             with open(file_path, "r") as f:
                 content = f.read()
