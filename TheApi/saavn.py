@@ -33,7 +33,7 @@ class SaavnAPI:
             print(response)
         """
         url = f"{self.base_url}/api/search"
-        r =  await self.req.get(url, params={"query": query})
+        r = await self.req.get(url, params={"query": query})
         return r.json()
 
     async def search_songs(self, query: str, page: int = 0, limit: int = 10):
