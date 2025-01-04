@@ -581,7 +581,7 @@ strong {
 }
 
 .toc-tree li.scroll-current>.reference:before {
-	content: "➣ "
+	content: "➤ "
 }
 
 table.hlist {
