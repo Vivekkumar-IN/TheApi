@@ -14,6 +14,7 @@ class SaavnAPI:
         Initializes the SaavnAPI instance with the base URL for the Saavn API.
         """
         self.base_url = "https://saavn.dev"
+        self.req = Request()
 
     async def search(self, query: str):
         """
@@ -32,7 +33,7 @@ class SaavnAPI:
             print(response)
         """
         url = f"{self.base_url}/api/search"
-        return await Request.get(url, params={"query": query})
+        return await self.req.get(url, params={"query": query})
 
     async def search_songs(self, query: str, page: int = 0, limit: int = 10):
         """
@@ -47,7 +48,7 @@ class SaavnAPI:
             dict: The search results for songs.
         """
         url = f"{self.base_url}/api/search/songs"
-        return await Request.get(
+        return await self.req.get(
             url, params={"query": query, "page": page, "limit": limit}
         )
 
@@ -64,7 +65,7 @@ class SaavnAPI:
             dict: The search results for albums.
         """
         url = f"{self.base_url}/api/search/albums"
-        return await Request.get(
+        return await self.req.get(
             url, params={"query": query, "page": page, "limit": limit}
         )
 
@@ -81,7 +82,7 @@ class SaavnAPI:
             dict: The search results for artists.
         """
         url = f"{self.base_url}/api/search/artists"
-        return await Request.get(
+        return await self.req.get(
             url, params={"query": query, "page": page, "limit": limit}
         )
 
@@ -98,7 +99,7 @@ class SaavnAPI:
             dict: The search results for playlists.
         """
         url = f"{self.base_url}/api/search/playlists"
-        return await Request.get(
+        return await self.req.get(
             url, params={"query": query, "page": page, "limit": limit}
         )
 
@@ -113,7 +114,7 @@ class SaavnAPI:
             dict: The song details.
         """
         url = f"{self.base_url}/api/songs/{song_id}"
-        return await Request.get(url)
+        return await self.req.get(url)
 
     async def get_song_lyrics(self, song_id: str):
         """
@@ -126,7 +127,7 @@ class SaavnAPI:
             dict: The song lyrics.
         """
         url = f"{self.base_url}/api/songs/{song_id}/lyrics"
-        return await Request.get(url)
+        return await self.req.get(url)
 
     async def get_song_suggestions(self, song_id: str, limit: int = 10):
         """
@@ -140,7 +141,7 @@ class SaavnAPI:
             dict: The song suggestions.
         """
         url = f"{self.base_url}/api/songs/{song_id}/suggestions"
-        return await Request.get(url, params={"limit": limit})
+        return await self.req.get(url, params={"limit": limit})
 
     async def get_album(self, album_id: str = None, album_link: str = None):
         """
@@ -159,7 +160,7 @@ class SaavnAPI:
             params["id"] = album_id
         if album_link:
             params["link"] = album_link
-        return await Request.get(url, params=params)
+        return await self.req.get(url, params=params)
 
     async def get_playlist(
         self,
@@ -186,7 +187,7 @@ class SaavnAPI:
             params["id"] = playlist_id
         if playlist_link:
             params["link"] = playlist_link
-        return await Request.get(url, params=params)
+        return await self.req.get(url, params=params)
 
     async def get_artist(
         self,
@@ -219,7 +220,7 @@ class SaavnAPI:
             "sortBy": sort_by,
             "sortOrder": sort_order,
         }
-        return await Request.get(url, params=params)
+        return await self.req.get(url, params=params)
 
     async def get_artist_albums(
         self,
@@ -242,7 +243,7 @@ class SaavnAPI:
         """
         url = f"{self.base_url}/api/artists/{artist_id}/albums"
         params = {"page": page, "sortBy": sort_by, "sortOrder": sort_order}
-        return await Request.get(url, params=params)
+        return await self.req.get(url, params=params)
 
     async def get_artist_songs(
         self,
@@ -265,4 +266,4 @@ class SaavnAPI:
         """
         url = f"{self.base_url}/api/artists/{artist_id}/songs"
         params = {"page": page, "sortBy": sort_by, "sortOrder": sort_order}
-        return await Request.get(url, params=params)
+        return await self.req.get(url, params=params)
