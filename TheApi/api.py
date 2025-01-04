@@ -902,7 +902,7 @@ class Client:
         Args:
             query (``str``): The search query string for finding images.
             limit (``int``, *optional*): The maximum number of image URLs to return. Defaults to 3.
-            adlt (``str``, *optional*): The level of adult content filtering to apply. 
+            adlt (``str``, *optional*): The level of adult content filtering to apply.
                 The available options are:
                 "off", which disables filtering for adult content.
                 "moderate" (default), which filters explicit images but may include related content.
@@ -924,7 +924,6 @@ class Client:
             if response
             else []
         )
-
 
     async def stackoverflow_search(self, query, max_results=3, sort_type="relevance"):
         """
