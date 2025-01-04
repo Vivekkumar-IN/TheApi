@@ -573,7 +573,7 @@ strong {
 }
 
 .sidebar-tree .current>.reference::before {
-	content: "➤ "
+	content: "➣ "
 }
 
 .toc-tree .reference::before {
@@ -581,7 +581,7 @@ strong {
 }
 
 .toc-tree li.scroll-current>.reference:before {
-	content: "➤ "
+	content: "➣ "
 }
 
 table.hlist {
