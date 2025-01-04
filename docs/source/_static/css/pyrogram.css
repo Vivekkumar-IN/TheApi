@@ -1,3 +1,9 @@
+/* 
+To make the documentation of TheApix resemble Pyrogram's documentation style, 
+we have adapted this CSS directly from Pyrogram's design. 
+Credits to the Pyrogram project.
+*/
+
 @import "https://fonts.googleapis.com/css2?family=Bitter:wght@400;600&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 
 @font-face {
