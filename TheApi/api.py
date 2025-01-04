@@ -895,13 +895,18 @@ class Client:
         response = response.json()
         return response["link"]
 
-    async def bing_image(self, query: str, limit: int = 3):
+    async def bing_image(self, query: str, limit: int = 3, adlt: str = "moderate"):
         """
         Searches Bing for images based on a query and retrieves image URLs.
 
         Args:
             query (``str``): The search query string for finding images.
             limit (``int``, *optional*): The maximum number of image URLs to return. Defaults to 3.
+            adlt (``str``, *optional*): The level of adult content filtering to apply. 
+                The available options are:
+                "off", which disables filtering for adult content.
+                "moderate" (default), which filters explicit images but may include related content.
+                "strict", which enforces strict filtering, excluding all adult content.
 
         Returns:
             ``list``: A list of image URLs retrieved from the Bing search results.
@@ -910,7 +915,7 @@ class Client:
             "q": query,
             "first": 0,
             "count": limit,
-            "adlt": "off",
+            "adlt": adlt,
             "qft": "",
         }
         response = await self.request.get(self.base_urls["bing_image"], params=data)
@@ -919,6 +924,7 @@ class Client:
             if response
             else []
         )
+
 
     async def stackoverflow_search(self, query, max_results=3, sort_type="relevance"):
         """
