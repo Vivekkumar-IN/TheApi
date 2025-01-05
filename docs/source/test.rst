@@ -8,8 +8,9 @@ This Script for testing some sphnix external or internal modules
 
 
 .. exec_code::
+   :linenos_output:
    :language_output: json
-   :caption: Expected Output
+   :caption_output: Expected Output
 
    # hide: start
    from TheApi import SaavnAPI
