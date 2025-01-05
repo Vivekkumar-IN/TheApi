@@ -20,9 +20,8 @@ log("\n\n\n\n\n\n\n\n\n\n\n")
 project = "TheApix"
 author = "VivekKumar-IN"
 version = TheApi.__version__
-url = "https://github.com/Vivekkumar-IN/TheApi/blob/main/LICENSE"
-copyright = (
-    f'<a href="{url}" target="_blank">© {datetime.date.today().year}, {author}</a>'
+#copyright = (
+    f'{datetime.date.today().year}, {author}'
 )
 
 autosummary_generate = True
@@ -50,6 +49,8 @@ html_favicon = html_static_path[0] + "/img/TheApix.ico"
 
 html_theme_options = {
     "navigation_with_keys": True,
+    "footer_text": f'<a href="https://github.com/Vivekkumar-IN/TheApi/blob/main/LICENSE" '
+                   f'target="_blank">© {datetime.date.today().year}, {author}</a>',
     "footer_icons": [
         {
             # Telegram channel logo
