@@ -3,6 +3,5 @@ furo
 sphinx-copybutton
 sphinx-exec-code
 
-httpx
-aiofiles
-pillow
+
+git+https://github.com/Vivekkumar-IN/TheApi@dev
