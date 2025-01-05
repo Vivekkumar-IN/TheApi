@@ -20,7 +20,8 @@ log("\n\n\n\n\n\n\n\n\n\n\n")
 project = "TheApix"
 author = "VivekKumar-IN"
 version = TheApi.__version__
-copyright = f"{datetime.date.today().year}, {author}"
+url = "https://github.com/Vivekkumar-IN/TheApi/blob/main/LICENSE"
+copyright = f'<a href="{url}" target="_blank">© {datetime.date.today().year}, {author}</a>'
 
 autosummary_generate = True
 
