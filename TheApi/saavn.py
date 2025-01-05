@@ -31,8 +31,31 @@ class SaavnAPI:
         Example:
             .. code-block:: python
 
-               response = await api.search("Despacito")
+               from TheApi import SaavnAPI
+
+               api = SaavnAPI()
+
+               response = await api.search("Jannat Ve")
+
                print(response)
+
+           .. exec_code::
+              :language_output: json
+              :caption: Expected Output
+
+              # hide: start
+              from TheApi import SaavnAPI
+              import json
+
+              import asyncio
+
+              async def m():
+
+                  h = await SaavnAPI().search("Jannat Ve")
+                  print(json.dumps(h))
+
+              asyncio.run(m())
+              # hide: stop
         """
         url = f"{self.base_url}/api/search"
         r = await self.req.get(url, params={"query": query})
