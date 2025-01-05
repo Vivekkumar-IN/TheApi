@@ -43,15 +43,7 @@ html_static_path = ["_static"]
 html_extra_path = ["_templates"]
 html_css_files = ["css/pyrogram.css"]
 html_favicon = html_static_path[0] + "/img/TheApix.ico"
-"""html_meta = {
-    "charset": "utf-8",
-    "viewport": "width=device-width, initial-scale=1",
-    "title": "TheApix",
-    "description": "A python library that build with interacting many public apis",
-    "author": "VivekKumar-In",
-    "copyright": copyright,
-    "robots": "index, follow",
-}"""
+
 
 html_theme_options = {
     "navigation_with_keys": True,
@@ -100,7 +92,7 @@ pygments_style = "default"
 
 napoleon_include_special_with_doc = False
 napoleon_use_rtype = False
-napoleon_use_param = False
+napoleon_use_param = True
 
 docs = os.getcwd()
 
