@@ -20,9 +20,7 @@ log("\n\n\n\n\n\n\n\n\n\n\n")
 project = "TheApix"
 author = "VivekKumar-IN"
 version = TheApi.__version__
-copyright = (
-    f'{datetime.date.today().year}, {author}'
-)
+copyright = f"{datetime.date.today().year}, {author}"
 
 autosummary_generate = True
 
