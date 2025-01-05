@@ -59,7 +59,8 @@ def generate_method_docs(cls, method_name, file_path):
 
 from TheApi import SaavnAPI
 
-file_path = os.path.join(os.path.abspath(os.sep), 'docs', 'source', 'test.rst')
+
+file_path = os.path.join(os.path.abspath(os.sep), "docs", "source", "test.rst")
 print(file_path)
 
 generate_method_docs(SaavnAPI, "search", file_path)
