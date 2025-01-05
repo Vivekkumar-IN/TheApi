@@ -9,6 +9,7 @@ This Script for testing some sphnix external or internal modules
 
 .. exec_code::
    :language: python
+   :language_output: json
    :caption: Expected Output
 
    from TheApi import SaavnAPI
