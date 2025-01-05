@@ -1,7 +1,7 @@
 sphinx
 furo
 sphinx-copybutton
-sphinx_exec_code
+sphinx-exec-code
 
 httpx
 aiofiles
