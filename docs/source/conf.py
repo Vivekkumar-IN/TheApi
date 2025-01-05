@@ -50,7 +50,7 @@ html_favicon = html_static_path[0] + "/img/TheApix.ico"
 html_theme_options = {
     "navigation_with_keys": True,
     "footer_text": f'<a href="https://github.com/Vivekkumar-IN/TheApi/blob/main/LICENSE" '
-                   f'target="_blank">© {datetime.date.today().year}, {author}</a>',
+    f'target="_blank">© {datetime.date.today().year}, {author}</a>',
     "footer_icons": [
         {
             # Telegram channel logo
