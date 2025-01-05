@@ -1,8 +1,8 @@
 sphinx
 furo
 sphinx-copybutton
+sphinx_exec_code
+
 httpx
 aiofiles
 pillow
-
-sphinx-rtd-theme
