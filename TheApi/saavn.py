@@ -29,8 +29,8 @@ class SaavnAPI:
                   albums, artists, and playlists matching the query.
 
         Example:
-            response = await api.search("Despacito")
-            print(response)
+            {response = await api.search("Despacito")
+            print(response)}
         """
         url = f"{self.base_url}/api/search"
         r = await self.req.get(url, params={"query": query})
