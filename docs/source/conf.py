@@ -29,7 +29,8 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx_copybutton",
-    "sphinx_exec_code",
+    # "sphinx_exec_code",
+    "c",
 ]
 
 
