@@ -1,11 +1,15 @@
-import inspect
 import os
+import inspect
+
 import docstring_parser
+
 
 def generate_method_docs(cls, method_name, file_path):
     method = getattr(cls, method_name, None)
     if method is None:
-        raise ValueError(f"The method '{method_name}' does not exist in class '{cls.__name__}'.")
+        raise ValueError(
+            f"The method '{method_name}' does not exist in class '{cls.__name__}'."
+        )
 
     is_async = inspect.iscoroutinefunction(method)
     func_type = "async" if is_async else "sync"
@@ -53,8 +57,7 @@ def generate_method_docs(cls, method_name, file_path):
     print(f"Documentation written to {file_path}")
 
 
-
-
 from TheApi import SaavnAPI
+
 
 generate_method_docs(SaavnAPI, "search", "test/test.rst")
