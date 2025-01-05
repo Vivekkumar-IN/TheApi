@@ -1,15 +1,16 @@
-import ast
-import inspect
 import subprocess
-from sphinx.ext.autodoc import between
+
 
 def execute_code_block(code: str):
     """Executes a given code block and returns its output."""
     try:
-        result = subprocess.check_output(["python", "-c", code], stderr=subprocess.STDOUT)
+        result = subprocess.check_output(
+            ["python", "-c", code], stderr=subprocess.STDOUT
+        )
         return result.decode("utf-8")
     except subprocess.CalledProcessError as e:
         return f"Error: {e.output.decode('utf-8')}"
+
 
 def process_docstring(app, what, name, obj, options, lines):
     """Custom handler to execute `.. exec-code::` blocks in docstrings."""
@@ -34,6 +35,7 @@ def process_docstring(app, what, name, obj, options, lines):
             new_lines.append(line)
 
     lines[:] = new_lines
+
 
 def setup(app):
     app.connect("autodoc-process-docstring", process_docstring)
