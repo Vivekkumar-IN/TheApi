@@ -13,11 +13,14 @@ This Script for testing some sphnix external or internal modules
 
    # hide: start
    from TheApi import SaavnAPI
+   import json
 
    import asyncio
 
    async def m():
 
-       print(await SaavnAPI().search("Fuck Millionaire")) 
+       h = await SaavnAPI().search("Fuck Millionaire")
+       print(json.dumps(h))
+
    asyncio.run(m())
    # hide: stop
