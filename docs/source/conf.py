@@ -47,10 +47,12 @@ html_css_files = ["css/pyrogram.css"]
 html_favicon = html_static_path[0] + "/img/TheApix.ico"
 
 
+html_context = {
+    "copyright_html": f'<a href="https://github.com/Vivekkumar-IN/TheApi/blob/main/LICENSE" target="_blank">© {datetime.date.today().year}, {author}</a>',
+}
+
 html_theme_options = {
     "navigation_with_keys": True,
-    "footer_text": f'<a href="https://github.com/Vivekkumar-IN/TheApi/blob/main/LICENSE" '
-    f'target="_blank">© {datetime.date.today().year}, {author}</a>',
     "footer_icons": [
         {
             # Telegram channel logo
