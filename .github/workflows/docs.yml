@@ -31,6 +31,7 @@ jobs:
       - name: Build documentation
         run: |
           cd docs
+          python source/a.py
           make html
 
       - name: Deploy 🚀
