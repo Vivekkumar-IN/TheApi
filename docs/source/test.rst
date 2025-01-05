@@ -8,17 +8,17 @@ This Script for testing some sphnix external or internal modules
 
 
 .. exec_code::
+   :language: json
+   :caption: Expected Output
 
-   print('Easy!')
-
-
-.. exec_code::
-  
    from TheApi import SaavnAPI
 
+   # --- hide: start ---
    import asyncio
 
    async def m():
+   # ---- hide: toggle ---
        print(await SaavnAPI().search("Fuck Millionaire")) 
+   # --- hide: start ---
    asyncio.run(m())
-
+   # --- hide: stop ---
