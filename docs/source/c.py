@@ -60,4 +60,4 @@ def generate_method_docs(cls, method_name, file_path):
 from TheApi import SaavnAPI
 
 
-generate_method_docs(SaavnAPI, "search", "test/test.rst")
+generate_method_docs(SaavnAPI, "search", "docs/source/test/test.rst")
