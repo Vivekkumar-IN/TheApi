@@ -21,7 +21,9 @@ project = "TheApix"
 author = "VivekKumar-IN"
 version = TheApi.__version__
 url = "https://github.com/Vivekkumar-IN/TheApi/blob/main/LICENSE"
-copyright = f'<a href="{url}" target="_blank">© {datetime.date.today().year}, {author}</a>'
+copyright = (
+    f'<a href="{url}" target="_blank">© {datetime.date.today().year}, {author}</a>'
+)
 
 autosummary_generate = True
 
