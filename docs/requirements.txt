@@ -5,3 +5,4 @@ sphinx-exec-code
 
 
 git+https://github.com/Vivekkumar-IN/TheApi@dev
+docstring_parser
