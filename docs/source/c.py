@@ -1,5 +1,6 @@
 import os
 import inspect
+
 import docstring_parser
 
 
@@ -56,6 +57,7 @@ def generate_method_docs(cls, method_name, file_path):
 
 
 from TheApi import SaavnAPI
+
 
 file_path = "source/test.rst"
 generate_method_docs(SaavnAPI, "search", file_path)
