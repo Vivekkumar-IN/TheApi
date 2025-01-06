@@ -163,10 +163,10 @@ class Client:
             window_theme (``str``, *optional*): Style of the window controls. Options: ``"none"``, ``"sharp"``, ``"bw"``, ``"boxy"``. Default is ``"none"``.
 
         Returns:
-            A dictionary containing either the file path to the generated image or an error message. 
+            A dictionary containing either the file path to the generated image or an error message.
             If successful, the dictionary will contain **"success": True** and **"result"**: the file path where the generated image is saved.
             If failed, the dictionary will contain **"success": False** and **"error"**: a string describing the error that occurred.
-    
+
         Example:
             .. code-block:: python
 
@@ -658,24 +658,24 @@ class Client:
         region: str = None,
     ) -> dict:
         """
-        Perform an asynchronous search on Google and return a list of results.
+         Perform an asynchronous search on Google and return a list of results.
 
-        This method sends an HTTP request to Google with the specified query and retrieves the search results.
-        The results are then returned in a dictionary format containing the URLs, titles, and descriptions.
+         This method sends an HTTP request to Google with the specified query and retrieves the search results.
+         The results are then returned in a dictionary format containing the URLs, titles, and descriptions.
 
-        Args:
-            query (str): The search query (e.g., "Python programming").
-            limit (int, optional): The maximum number of results to return. Defaults to 10.
-            lang (str, optional): The language for the search results. Defaults to "en".
-            timeout (int, optional): The time to wait for a response in seconds. Defaults to 5.
-            adlt (str, optional): The safe search setting. Can be "active" or "off". Defaults to "active".
-            region (str, optional): The region to filter search results. Defaults to None.
+         Args:
+             query (str): The search query (e.g., "Python programming").
+             limit (int, optional): The maximum number of results to return. Defaults to 10.
+             lang (str, optional): The language for the search results. Defaults to "en".
+             timeout (int, optional): The time to wait for a response in seconds. Defaults to 5.
+             adlt (str, optional): The safe search setting. Can be "active" or "off". Defaults to "active".
+             region (str, optional): The region to filter search results. Defaults to None.
 
 
-       Returns:
-            dict: A dictionary containing the success status and either the result or an error message.
-                If successful, the dictionary will contain **"success": True** and **"result"**: the file path where the generated image is saved.
-                If failed, the dictionary will contain **"success": False** and **"error"**: a string describing the error that occurred.
+        Returns:
+             dict: A dictionary containing the success status and either the result or an error message.
+                 If successful, the dictionary will contain **"success": True** and **"result"**: the file path where the generated image is saved.
+                 If failed, the dictionary will contain **"success": False** and **"error"**: a string describing the error that occurred.
 
         """
         _useragent_list = [
@@ -812,7 +812,7 @@ class Client:
 
         return file_path
 
-    async def wikipedia(self, query):        
+    async def wikipedia(self, query):
         """
         Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.
 
@@ -1247,9 +1247,7 @@ class Client:
 
         return file_path
 
-    async def upload_image(
-        self, file_path: Union[str, bytes, BytesIO]
-    ) -> str:        
+    async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> str:
         """
         Uploads an image to https://envs.sh.
 
@@ -1331,17 +1329,17 @@ class Client:
                 Valid image endpoints:
                 **"husbando"**, **"kitsune"**, **"neko"**, **"waifu"**
                 Valid GIF endpoints:
-                **"baka"**, **"bite"**, **"blush"**, **"bored"**, **"cry"**, **"cuddle"**, 
-                **"dance"**, **"facepalm"**, **"feed"**, **"handhold"**, **"handshake"**, 
-                **"happy"**, **"highfive"**, **"hug"**, **"kick"**, **"kiss"**, **"laugh"**, 
-                **"lurk"**, **"nod"**, **"nom"**, **"nope"**, **"pat"**, **"peck"**, **"poke"**, 
-                **"pout"**, **"punch"**, **"shoot"**, **"shrug"**, **"slap"**, **"sleep"**, 
-                **"smile"**, **"smug"**, **"stare"**, **"think"**, **"thumbsup"**, **"tickle"**, 
+                **"baka"**, **"bite"**, **"blush"**, **"bored"**, **"cry"**, **"cuddle"**,
+                **"dance"**, **"facepalm"**, **"feed"**, **"handhold"**, **"handshake"**,
+                **"happy"**, **"highfive"**, **"hug"**, **"kick"**, **"kiss"**, **"laugh"**,
+                **"lurk"**, **"nod"**, **"nom"**, **"nope"**, **"pat"**, **"peck"**, **"poke"**,
+                **"pout"**, **"punch"**, **"shoot"**, **"shrug"**, **"slap"**, **"sleep"**,
+                **"smile"**, **"smug"**, **"stare"**, **"think"**, **"thumbsup"**, **"tickle"**,
                 **"wave"**, **"wink"**, **"yawn"**, **"yeet"**
             amount (``int``): The number of items to fetch. Default is 3.
 
         Returns:
-            ``dict``: A dictionary containing the results of the request. The dictionary has a key 
+            ``dict``: A dictionary containing the results of the request. The dictionary has a key
             **"results"**, which holds a list of items.
         """
 
