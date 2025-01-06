@@ -20,6 +20,7 @@ dependencies = [
     "aiofiles",
     "pillow",
     "httpx",
+    "beautifulsoup4",
 ]
 
 [project.urls]
