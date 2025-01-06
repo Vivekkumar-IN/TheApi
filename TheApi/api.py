@@ -5,9 +5,9 @@ import string
 import textwrap
 from io import BytesIO
 from typing import List, Union, Optional
-from bs4 import BeautifulSoup
 
 import aiofiles
+from bs4 import BeautifulSoup
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 from ._request import Request
@@ -652,11 +652,19 @@ class Client:
         response = response.json()
         return response["text"]
 
-    async def google(self, query: str, limit: int = 10, lang: str = "en", timeout: int = 5, adlt: str = "active", region: str = None) -> dict:
+    async def google(
+        self,
+        query: str,
+        limit: int = 10,
+        lang: str = "en",
+        timeout: int = 5,
+        adlt: str = "active",
+        region: str = None,
+    ) -> dict:
         """
         Perform an asynchronous search on Google and return a list of results.
 
-        This method sends an HTTP request to Google with the specified query and retrieves the search results. 
+        This method sends an HTTP request to Google with the specified query and retrieves the search results.
         The results are then returned in a dictionary format containing the URLs, titles, and descriptions.
 
         Args:
@@ -668,38 +676,42 @@ class Client:
             region (str, optional): The region to filter search results. Defaults to None.
 
         Returns:
-            dict: A dictionary containing the success status and a list of results. 
+            dict: A dictionary containing the success status and a list of results.
                   Each result is a dictionary with the following keys:
                   - "url": The URL of the search result.
                   - "title": The title of the search result.
                   - "desc": The description of the search result.
-                  
+
         """
         _useragent_list = [
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.62',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0'
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.62",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0",
         ]
         start, fetched_results, fetched_links = 0, 0, set()
         all_results = []
 
         while fetched_results < limit:
             params = {
-                    "q": query,
-                    "num": limit + 2,
-                    "hl": lang,
-                    "start": start,
-                    "safe": adlt,
-                    "gl": region,
-              
+                "q": query,
+                "num": limit + 2,
+                "hl": lang,
+                "start": start,
+                "safe": adlt,
+                "gl": region,
             }
             headers = {"User-Agent": random.choice(_useragent_list)}
 
-            resp = await self.request.get("https://www.google.com/search", params=params, headers=headers, timeout=timeout)
+            resp = await self.request.get(
+                "https://www.google.com/search",
+                params=params,
+                headers=headers,
+                timeout=timeout,
+            )
             resp.raise_for_status()
             soup = BeautifulSoup(resp.text, "html.parser")
 
@@ -715,11 +727,9 @@ class Client:
                 fetched_links.add(link)
 
                 fetched_results += 1
-                all_results.append({
-                        "url": link,
-                        "title": title_tag.text,
-                        "desc": description_box.text
-                    })
+                all_results.append(
+                    {"url": link, "title": title_tag.text, "desc": description_box.text}
+                )
 
                 if fetched_results >= limit:
                     return {"success": True, "result": all_results}
@@ -731,7 +741,6 @@ class Client:
 
     return {"success": True, "result": all_results}
 
-    
     async def quote(self) -> str:
         """
         Fetches a random quote.
