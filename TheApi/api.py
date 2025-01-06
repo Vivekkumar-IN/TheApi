@@ -163,14 +163,10 @@ class Client:
             window_theme (``str``, *optional*): Style of the window controls. Options: ``"none"``, ``"sharp"``, ``"bw"``, ``"boxy"``. Default is ``"none"``.
 
         Returns:
-            ``dict``: A dictionary containing either the file path to the generated image or an error message.
-
-               If successful:
-                  - ``result``: The file path where the generated image is saved.
-
-               If failed:
-                  - ``error``: A string describing the error that occurred.
-
+            A dictionary containing either the file path to the generated image or an error message. 
+            If successful, the dictionary will contain **"success": True** and **"result"**: the file path where the generated image is saved.
+            If failed, the dictionary will contain **"success": False** and **"error"**: a string describing the error that occurred.
+    
         Example:
             .. code-block:: python
 
@@ -182,7 +178,7 @@ class Client:
                     language="python"
                 )
 
-                if response.get("result"):
+                if response['success']:
 
                     print(f"Code image saved as '{response['result']}'.")
 
@@ -223,9 +219,9 @@ class Client:
                 response.content, ext="png", name="carbon"
             )
 
-            return {"result": file_path}
+            return {"success": True, "result": file_path}
         except Exception as e:
-            return {"error": str(e)}
+            return {"success": False, "error": str(e)}
 
     async def fakerapi(
         self,
@@ -652,7 +648,7 @@ class Client:
         response = response.json()
         return response["text"]
 
-    async def google(
+    async def google_search(
         self,
         query: str,
         limit: int = 10,
@@ -675,12 +671,11 @@ class Client:
             adlt (str, optional): The safe search setting. Can be "active" or "off". Defaults to "active".
             region (str, optional): The region to filter search results. Defaults to None.
 
-        Returns:
-            dict: A dictionary containing the success status and a list of results.
-                  Each result is a dictionary with the following keys:
-                  - "url": The URL of the search result.
-                  - "title": The title of the search result.
-                  - "desc": The description of the search result.
+
+       Returns:
+            dict: A dictionary containing the success status and either the result or an error message.
+                If successful, the dictionary will contain **"success": True** and **"result"**: the file path where the generated image is saved.
+                If failed, the dictionary will contain **"success": False** and **"error"**: a string describing the error that occurred.
 
         """
         _useragent_list = [
@@ -706,13 +701,16 @@ class Client:
             }
             headers = {"User-Agent": random.choice(_useragent_list)}
 
-            resp = await self.request.get(
-                "https://www.google.com/search",
-                params=params,
-                headers=headers,
-                timeout=timeout,
-            )
-            resp.raise_for_status()
+            try:
+                resp = await self.request.get(
+                    "https://www.google.com/search",
+                    params=params,
+                    headers=headers,
+                    timeout=timeout,
+                )
+                resp.raise_for_status()
+            except Exception as e:
+                return {"success": False, "error": str(e)}
             soup = BeautifulSoup(resp.text, "html.parser")
 
             for result in soup.find_all("div", class_="g"):
@@ -814,7 +812,7 @@ class Client:
 
         return file_path
 
-    async def wikipedia(self, query):
+    async def wikipedia(self, query):        
         """
         Searches Wikipedia for a given query and retrieves the top result's summary, URL, and image.
 
@@ -823,13 +821,14 @@ class Client:
 
         Returns:
             ``dict``: A dictionary containing information about the top search result, with keys:
-                - title (str): The title of the Wikipedia article.
-                - summary (str): A brief summary of the article's content.
-                - url (str): The URL link to the full Wikipedia article.
-                - image_url (str): The URL of the article's thumbnail image, or "No image available" if none exists.
+                **"title"** (**str**): The title of the Wikipedia article.
+                **"summary"** (**str**): A brief summary of the article's content.
+                **"url"** (**str**): The URL link to the full Wikipedia article.
+                **"image_url"** (**str**): The URL of the article's thumbnail image, or **"No image available"** if none exists.
 
-            If no results are found, returns a dictionary with an "error" key.
+            If no results are found, returns a dictionary with an **"error"** key.
         """
+
         search_url = self.base_urls["wikipedia_search"]
 
         params = {
@@ -1250,20 +1249,19 @@ class Client:
 
     async def upload_image(
         self, file_path: Union[str, bytes, BytesIO]
-    ) -> str:  # gh-actions Don't Add it's example, ignore it.
+    ) -> str:        
         """
         Uploads an image to https://envs.sh.
 
         Args:
             file_path (``str``, ``bytes``, ``BytesIO``): The image file to upload.
-                Can be a file path (str), binary data (bytes), or a BytesIO object.
+                Can be a file path (**str**), binary data (**bytes**), or a **BytesIO** object.
 
         Returns:
             ``str``: The URL or confirmation message of the uploaded image if the upload is successful.
-                Returns "Unexpected response format" if the response format is not as expected.
-
-        Raises:
+                Returns **"Unexpected response format"** if the response format is not as expected.
         """
+
         if isinstance(file_path, str):
             try:
                 async with aiofiles.open(file_path, "rb") as f:
@@ -1316,9 +1314,10 @@ class Client:
 
         Returns:
             ``list``: A list of dictionaries containing information about each fetched neko image or GIF.
-                  Each dictionary typically includes:
-                  - anime_name (str): The name of the anime.
-                  - url (str): The URL of the GIF.
+                      Each dictionary will typically include:
+                      **"anime_name"** (str): The name of the anime.
+                      **"url"** (str): The URL of the GIF.
+
         """
         response = await self.request.get(self.base_urls["neko_hug"].format(amount))
 
@@ -1330,19 +1329,22 @@ class Client:
         Args:
             endpoint (``str``): The endpoint category to fetch content from. Default is "neko".
                 Valid image endpoints:
-                - "husbando", "kitsune", "neko", "waifu"
+                **"husbando"**, **"kitsune"**, **"neko"**, **"waifu"**
                 Valid GIF endpoints:
-                - "baka", "bite", "blush", "bored", "cry", "cuddle", "dance", "facepalm",
-                  "feed", "handhold", "handshake", "happy", "highfive", "hug", "kick",
-                  "kiss", "laugh", "lurk", "nod", "nom", "nope", "pat", "peck", "poke",
-                  "pout", "punch", "shoot", "shrug", "slap", "sleep", "smile", "smug",
-                  "stare", "think", "thumbsup", "tickle", "wave", "wink", "yawn", "yeet"
+                **"baka"**, **"bite"**, **"blush"**, **"bored"**, **"cry"**, **"cuddle"**, 
+                **"dance"**, **"facepalm"**, **"feed"**, **"handhold"**, **"handshake"**, 
+                **"happy"**, **"highfive"**, **"hug"**, **"kick"**, **"kiss"**, **"laugh"**, 
+                **"lurk"**, **"nod"**, **"nom"**, **"nope"**, **"pat"**, **"peck"**, **"poke"**, 
+                **"pout"**, **"punch"**, **"shoot"**, **"shrug"**, **"slap"**, **"sleep"**, 
+                **"smile"**, **"smug"**, **"stare"**, **"think"**, **"thumbsup"**, **"tickle"**, 
+                **"wave"**, **"wink"**, **"yawn"**, **"yeet"**
             amount (``int``): The number of items to fetch. Default is 3.
 
         Returns:
-            ``dict``: A dictionary containing the results of the request. The dictionary has a key `"results"`,
-                  which holds a list of items.
+            ``dict``: A dictionary containing the results of the request. The dictionary has a key 
+            **"results"**, which holds a list of items.
         """
+
         valid_categories = [
             "husbando",
             "kitsune",
