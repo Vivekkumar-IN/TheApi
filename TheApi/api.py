@@ -106,6 +106,119 @@ class Client:
         response = await self.request.get(self.base_urls["animechan"])
         return response.json()["data"]
 
+    async def carbon(
+        self,
+        code,
+        background_color="rgba(171, 184, 195, 1)",
+        drop_shadow=True,
+        drop_shadow_blur_radius="68px",
+        drop_shadow_offset_y="20px",
+        export_size="2x",
+        font_custom="",
+        font_size="14px",
+        font_family="Hack",
+        first_line_number=1,
+        language="auto",
+        line_height="133%",
+        line_numbers=False,
+        padding_horizontal="56px",
+        padding_vertical="56px",
+        prettify=False,
+        selected_lines="",
+        theme="seti",
+        watermark=False,
+        width=536,
+        width_adjustment=True,
+        window_controls=True,
+        window_theme="none"
+    ):
+        """
+        Generate an image of a code snippet using the `Carbonara API` <https://github.com/petersolopov/carbonara/>_.
+    
+
+        Args:
+            code (``str``): **Required.** The code snippet to generate an image for.
+            background_color (``str``, *optional*): Background color of the image. Can be in ``rgba`` or ``hex`` format. Default is ``"rgba(171, 184, 195, 1)"``.
+            drop_shadow (``bool``, *optional*): Whether to enable the shadow effect. Default is ``True``.
+            drop_shadow_blur_radius (``str``, *optional*): The blur radius of the shadow. Default is ``"68px"``.
+            drop_shadow_offset_y (``str``, *optional*): The vertical offset of the shadow. Default is ``"20px"``.
+            export_size (``str``, *optional*): Resolution of the exported image, such as ``"1x"``, ``"2x"``, or ``"3x"``. Default is ``"2x"``.
+            font_custom (``str``, *optional*): Custom font in Base64 format. Leave empty for default fonts. Default is an empty string.
+            font_size (``str``, *optional*): The size of the font in the code snippet. Default is ``"14px"``.
+            font_family (``str``, *optional*): Font family for the code snippet. Examples: ``"Hack"``, ``"JetBrains Mono"``, ``"Fira Code"``. Default is ``"Hack"``.
+            first_line_number (``int``, *optional*): The line number to start with in the snippet. Default is ``1``.
+            language (``str``, *optional*): Programming language for syntax highlighting. Default is ``"auto"``. Example: Use ``"python"``, ``"javascript"``, or ``"application/x-sh"`` for bash.
+            line_height (``str``, *optional*): Line height for the text in the snippet. Default is ``"133%"``.
+            line_numbers (``bool``, *optional*): Whether to display line numbers in the snippet. Default is ``False``.
+            padding_horizontal (``str``, *optional*): Horizontal padding around the code block. Default is ``"56px"``.
+            padding_vertical (``str``, *optional*): Vertical padding around the code block. Default is ``"56px"``.
+            prettify (``bool``, *optional*): Automatically format JavaScript code using Prettier. Default is ``False``.
+            selected_lines (``str``, *optional*): Specific lines to highlight, as a comma-separated string. Example: ``"3,4,6"``. Default is an empty string.
+            theme (``str``, *optional*): The theme for the code snippet. Examples: ``"seti"``, ``"dracula"``. Default is ``"seti"``.
+            watermark (``bool``, *optional*): Whether to include the Carbon watermark. Default is ``False``.
+            width (``int``, *optional*): Width of the image in pixels. Default is ``536``.
+            width_adjustment (``bool``, *optional*): Automatically adjusts width based on content. Default is ``True``.
+            window_controls (``bool``, *optional*): Show or hide window controls (close, minimize, maximize buttons). Default is ``True``.
+            window_theme (``str``, *optional*): Style of the window controls. Options: ``"none"``, ``"sharp"``, ``"bw"``, ``"boxy"``. Default is ``"none"``.
+            
+        Returns:
+            dict: A dictionary containing either the file path to the generated image or an error message.
+
+            If successful:
+                - ``result``: The file path where the generated image is saved.
+
+            If failed:
+                - ``error``: A string describing the error that occurred.
+
+        Example:
+            .. code-block:: python
+
+                code_snippet = "print('Hello, World!')"
+                response = await api.carbon(
+                    code_snippet, 
+                    theme="dracula", 
+                    language="python"
+                )
+                if response.get("result"):
+                    print(f"Code image saved as '{response['result']}'.")
+                else:
+                    print(f"Error: {response['error']}")
+        """
+
+        payload = {
+            "code": code,
+            "backgroundColor": background_color,
+            "dropShadow": drop_shadow,
+            "dropShadowBlurRadius": drop_shadow_blur_radius,
+            "dropShadowOffsetY": drop_shadow_offset_y,
+            "exportSize": export_size,
+            "fontCustom": font_custom,
+            "fontSize": font_size,
+            "fontFamily": font_family,
+            "firstLineNumber": first_line_number,
+            "language": language,
+            "lineHeight": line_height,
+            "lineNumbers": line_numbers,
+            "paddingHorizontal": padding_horizontal,
+            "paddingVertical": padding_vertical,
+            "prettify": prettify,
+            "selectedLines": selected_lines,
+            "theme": theme,
+            "watermark": watermark,
+            "width": width,
+            "widthAdjustment": width_adjustment,
+            "windowControls": window_controls,
+            "windowTheme": window_theme,
+        }
+        try:
+            response = await self.request.post(self.base_urls["carbon"], json=payload)
+            response.raise_for_status()
+            file_path = await self._create_file(response.content, ext="png", name="carbon")
+
+            return { "result": file_path }
+        except Exception as e:
+            return { "error": str(e) }
+        
     async def fakerapi(
         self,
         endpoint: str,
@@ -601,26 +714,6 @@ class Client:
         file_path = os.path.join(self.downloads_dir, f"write_{self._rnd_str()}.jpg")
 
         img.save(file_path)
-
-        return file_path
-
-    async def carbon(self, query):
-        """
-        Generates a code snippet image using the Carbon API, saves it to the downloads folder,
-        uploads it, and returns the URL of the uploaded image.
-
-        Args:
-            query (``str``): The code snippet to be rendered as an image.
-
-        Returns:
-            ``str``: The file path of the saved image.
-        """
-        response = await self.request.post(
-            "https://carbonara.solopov.dev/api/cook",
-            json={"code": query},
-            headers={"Content-Type": "application/json"},
-        )
-        file_path = await self._create_file(response.content, ext="png", name="carbon")
 
         return file_path
 
