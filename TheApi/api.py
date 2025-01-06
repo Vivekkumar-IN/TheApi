@@ -130,11 +130,11 @@ class Client:
         width=536,
         width_adjustment=True,
         window_controls=True,
-        window_theme="none"
+        window_theme="none",
     ):
         """
         Generate an image of a code snippet using the `Carbonara API` <https://github.com/petersolopov/carbonara/>_.
-    
+
 
         Args:
             code (``str``): **Required.** The code snippet to generate an image for.
@@ -160,7 +160,7 @@ class Client:
             width_adjustment (``bool``, *optional*): Automatically adjusts width based on content. Default is ``True``.
             window_controls (``bool``, *optional*): Show or hide window controls (close, minimize, maximize buttons). Default is ``True``.
             window_theme (``str``, *optional*): Style of the window controls. Options: ``"none"``, ``"sharp"``, ``"bw"``, ``"boxy"``. Default is ``"none"``.
-            
+
         Returns:
             dict: A dictionary containing either the file path to the generated image or an error message.
 
@@ -175,8 +175,8 @@ class Client:
 
                 code_snippet = "print('Hello, World!')"
                 response = await api.carbon(
-                    code_snippet, 
-                    theme="dracula", 
+                    code_snippet,
+                    theme="dracula",
                     language="python"
                 )
                 if response.get("result"):
@@ -213,12 +213,14 @@ class Client:
         try:
             response = await self.request.post(self.base_urls["carbon"], json=payload)
             response.raise_for_status()
-            file_path = await self._create_file(response.content, ext="png", name="carbon")
+            file_path = await self._create_file(
+                response.content, ext="png", name="carbon"
+            )
 
-            return { "result": file_path }
+            return {"result": file_path}
         except Exception as e:
-            return { "error": str(e) }
-        
+            return {"error": str(e)}
+
     async def fakerapi(
         self,
         endpoint: str,
