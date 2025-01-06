@@ -1,6 +1,6 @@
 [project]
 name = "TheApix"
-version = "1.2.8.dev3"
+version = "1.0.0"
 authors = [
     { name = "Vivek Kumar" }
 ]
