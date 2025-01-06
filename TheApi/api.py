@@ -133,7 +133,7 @@ class Client:
         window_theme="none",
     ):
         """
-        Generate an image of a code snippet using the `Carbonara API` <https://github.com/petersolopov/carbonara/>_.
+        Generate an image of a code snippet using the `Carbonara API <https://github.com/petersolopov/carbonara>`_.
 
 
         Args:
@@ -162,26 +162,31 @@ class Client:
             window_theme (``str``, *optional*): Style of the window controls. Options: ``"none"``, ``"sharp"``, ``"bw"``, ``"boxy"``. Default is ``"none"``.
 
         Returns:
-            dict: A dictionary containing either the file path to the generated image or an error message.
+            ``dict``: A dictionary containing either the file path to the generated image or an error message.
 
-            If successful:
-                - ``result``: The file path where the generated image is saved.
+               If successful:
+                  - ``result``: The file path where the generated image is saved.
 
-            If failed:
-                - ``error``: A string describing the error that occurred.
+               If failed:
+                  - ``error``: A string describing the error that occurred.
 
         Example:
             .. code-block:: python
 
                 code_snippet = "print('Hello, World!')"
+                
                 response = await api.carbon(
                     code_snippet,
                     theme="dracula",
                     language="python"
                 )
+                
                 if response.get("result"):
+                
                     print(f"Code image saved as '{response['result']}'.")
+                    
                 else:
+                
                     print(f"Error: {response['error']}")
         """
 
@@ -230,7 +235,7 @@ class Client:
         **kwargs,
     ):
         """
-        Fetch data from the FakerAPI using aiohttp.
+        Fetch data from the FakerAPI
 
         Args:
             endpoint (``str``):
