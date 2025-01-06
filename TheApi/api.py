@@ -739,7 +739,7 @@ class Client:
 
             start += 10
 
-    return {"success": True, "result": all_results}
+        return {"success": True, "result": all_results}
 
     async def quote(self) -> str:
         """
