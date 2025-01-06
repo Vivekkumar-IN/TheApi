@@ -174,19 +174,19 @@ class Client:
             .. code-block:: python
 
                 code_snippet = "print('Hello, World!')"
-                
+
                 response = await api.carbon(
                     code_snippet,
                     theme="dracula",
                     language="python"
                 )
-                
+
                 if response.get("result"):
-                
+
                     print(f"Code image saved as '{response['result']}'.")
-                    
+
                 else:
-                
+
                     print(f"Error: {response['error']}")
         """
 
