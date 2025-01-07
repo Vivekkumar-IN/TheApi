@@ -1,0 +1,6 @@
+wikipedia
+=========
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.wikipedia

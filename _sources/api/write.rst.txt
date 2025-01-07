@@ -1,0 +1,6 @@
+write
+=====
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.write

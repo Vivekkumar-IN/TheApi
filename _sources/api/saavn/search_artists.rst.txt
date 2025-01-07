@@ -1,0 +1,6 @@
+search_artists
+==============
+
+.. currentmodule:: TheApi
+
+.. automethod:: SaavnAPI.search_artists

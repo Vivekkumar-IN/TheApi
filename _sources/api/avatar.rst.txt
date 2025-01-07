@@ -1,0 +1,6 @@
+avatar
+======
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.avatar

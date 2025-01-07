@@ -1,0 +1,6 @@
+get_playlist
+============
+
+.. currentmodule:: TheApi
+
+.. automethod:: SaavnAPI.get_playlist

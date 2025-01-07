@@ -1,0 +1,6 @@
+get_song_suggestions
+====================
+
+.. currentmodule:: TheApi
+
+.. automethod:: SaavnAPI.get_song_suggestions

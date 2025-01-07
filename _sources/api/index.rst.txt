@@ -1,0 +1,89 @@
+Methods
+=======
+
+.. currentmodule:: TheApi
+
+
+The following methods are available in :obj:`~TheApi.Client`:
+
+.. autosummary::
+   :nosignatures:
+
+   Client.animechan
+   Client.avatar
+   Client.bing_image
+   Client.blackpink
+   Client.carbon
+   Client.cat
+   Client.dog
+   Client.domain_search
+   Client.fakerapi
+   Client.fox
+   Client.gen_qr
+   Client.generate_pdf
+   Client.get_advice
+   Client.get_btc_value
+   Client.get_fake_addresses
+   Client.get_fake_credit_cards
+   Client.get_fake_images
+   Client.get_fake_persons
+   Client.get_hindi_jokes
+   Client.get_jokes
+   Client.get_uselessfact
+   Client.get_word_definitions
+   Client.get_words
+   Client.github_search
+   Client.google_search
+   Client.hindi_quote
+   Client.hug
+   Client.meme
+   Client.neko
+   Client.pypi
+   Client.quote
+   Client.riddle
+   Client.stackoverflow_search
+   Client.upload_image
+   Client.wikipedia
+   Client.write
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   animechan
+   avatar
+   bing_image
+   blackpink
+   carbon
+   cat
+   dog
+   domain_search
+   fakerapi
+   fox
+   gen_qr
+   generate_pdf
+   get_advice
+   get_btc_value
+   get_fake_addresses
+   get_fake_credit_cards
+   get_fake_images
+   get_fake_persons
+   get_hindi_jokes
+   get_jokes
+   get_uselessfact
+   get_word_definitions
+   get_words
+   github_search
+   google_search
+   hindi_quote
+   hug
+   meme
+   neko
+   pypi
+   quote
+   riddle
+   stackoverflow_search
+   upload_image
+   wikipedia
+   write

@@ -1,0 +1,6 @@
+get_artist_albums
+=================
+
+.. currentmodule:: TheApi
+
+.. automethod:: SaavnAPI.get_artist_albums

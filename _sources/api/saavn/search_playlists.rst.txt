@@ -1,0 +1,6 @@
+search_playlists
+================
+
+.. currentmodule:: TheApi
+
+.. automethod:: SaavnAPI.search_playlists

@@ -1,0 +1,6 @@
+carbon
+======
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.carbon

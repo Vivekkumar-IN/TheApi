@@ -1,0 +1,6 @@
+riddle
+======
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.riddle

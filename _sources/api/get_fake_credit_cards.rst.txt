@@ -1,0 +1,6 @@
+get_fake_credit_cards
+=====================
+
+.. currentmodule:: TheApi
+
+.. automethod:: Client.get_fake_credit_cards

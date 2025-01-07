@@ -1,0 +1,43 @@
+Methods
+=======
+
+.. currentmodule:: TheApi
+
+
+The following methods are available in :obj:`~TheApi.SaavnAPI`:
+
+.. autosummary::
+   :nosignatures:
+
+   SaavnAPI.get_album
+   SaavnAPI.get_artist
+   SaavnAPI.get_artist_albums
+   SaavnAPI.get_artist_songs
+   SaavnAPI.get_playlist
+   SaavnAPI.get_song_by_id
+   SaavnAPI.get_song_lyrics
+   SaavnAPI.get_song_suggestions
+   SaavnAPI.search
+   SaavnAPI.search_albums
+   SaavnAPI.search_artists
+   SaavnAPI.search_playlists
+   SaavnAPI.search_songs
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   get_album
+   get_artist
+   get_artist_albums
+   get_artist_songs
+   get_playlist
+   get_song_by_id
+   get_song_lyrics
+   get_song_suggestions
+   search
+   search_albums
+   search_artists
+   search_playlists
+   search_songs

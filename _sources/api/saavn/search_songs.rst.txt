@@ -1,0 +1,6 @@
+search_songs
+============
+
+.. currentmodule:: TheApi
+
+.. automethod:: SaavnAPI.search_songs
