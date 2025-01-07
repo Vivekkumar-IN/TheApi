@@ -1,0 +1,56 @@
+name: Create Tag and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'The new version number'
+        required: true
+        default: ''
+      prerelease:
+        description: 'Whether this release is a pre-release'
+        required: true
+        type: boolean
+        default: false
+
+jobs:
+  create_tag_and_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update version in __init__.py and pyproject.toml
+        run: |
+          sed -i 's/__version__ = "[^"]*"/__version__ = "${{ github.event.inputs.version }}"/' TheApi/__init__.py
+          sed -i 's/version = "[^"]*"/version = "${{ github.event.inputs.version }}"/' pyproject.toml
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git add TheApi/__init__.py pyproject.toml
+          git commit -m "Update version to ${{ github.event.inputs.version }}"
+          git push origin ${{ github.ref_name }}
+
+      - name: Create Git Tag
+        run: |
+          tag_name="v${{ github.event.inputs.version }}"
+          git tag $tag_name ${{ github.ref_name }}
+          git push origin $tag_name
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          release_name="Release v${{ github.event.inputs.version }}"
+          prerelease_status="${{ github.event.inputs.prerelease }}"
+          curl -s -X POST https://api.github.com/repos/${{ github.repository }}/releases \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "tag_name": "v${{ github.event.inputs.version }}",
+            "target_commitish": "'"${{ github.ref_name }}"'",
+            "name": "'"${release_name}"'",
+            "body": "Release based on branch: ${{ github.ref_name }}",
+            "draft": false,
+            "prerelease": '"$prerelease_status"'
+          }'

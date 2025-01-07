@@ -1,0 +1,34 @@
+[project]
+name = "TheApix"
+version = "1.0.0"
+authors = [
+    { name = "Vivek Kumar" }
+]
+description = "TheApix is a Python library for asynchronous interactions with various public APIs, enabling diverse functionalities and data retrieval."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License"
+]
+license = { text = "MIT" }
+
+dependencies = [
+    "aiofiles",
+    "pillow",
+    "httpx",
+    "beautifulsoup4",
+]
+
+[project.urls]
+Issues = "https://github.com/Vivekkumar-IN/TheApi/issues"
+Source = "https://github.com/Vivekkumar-IN/TheApi"
+Community = "https://t.me/TheTeamVivek"
+Documentation = "https://vivekkumar-in.github.io/TheApi/"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
