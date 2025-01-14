@@ -155,7 +155,37 @@ class Client:
             padding_vertical (``str``, *optional*): Vertical padding around the code block. Default is ``"56px"``.
             prettify (``bool``, *optional*): Automatically format JavaScript code using Prettier. Default is ``False``.
             selected_lines (``str``, *optional*): Specific lines to highlight, as a comma-separated string. Example: ``"3,4,6"``. Default is an empty string.
-            theme (``str``, *optional*): The theme for the code snippet. Examples: ``"seti"``, ``"dracula"``. Default is ``"seti"``.
+            theme (``str``, *optional*): The theme for the code snippet. Available themes:
+                - "3024-night"
+                - "a11y-dark"
+                - "blackboard"
+                - "base16-dark"
+                - "base16-light"
+                - "cobalt"
+                - "duotone-dark"
+                - "dracula-pro"
+                - "hopscotch"
+                - "lucario"
+                - "material"
+                - "monokai"
+                - "nightowl"
+                - "nord"
+                - "oceanic-next"
+                - "one-light"
+                - "one-dark"
+                - "panda-syntax"
+                - "parasio-dark"
+                - "seti"
+                - "shades-of-purple"
+                - "solarized+dark"
+                - "solarized+light"
+                - "synthwave-84"
+                - "twilight"
+                - "verminal"
+                - "vscode"
+                - "yeti"
+                - "zenburn"
+                Default is ``"seti"``.
             watermark (``bool``, *optional*): Whether to include the Carbon watermark. Default is ``False``.
             width (``int``, *optional*): Width of the image in pixels. Default is ``536``.
             width_adjustment (``bool``, *optional*): Automatically adjusts width based on content. Default is ``True``.
