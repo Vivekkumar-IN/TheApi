@@ -40,7 +40,7 @@ exclude_patterns = []
 html_title = f"TheApix v{version}"
 # html_theme = "sphinx_rtd_theme"
 html_theme = "furo"
-html_copy_source = True
+html_copy_source = False
 html_static_path = ["_static"]
 html_extra_path = ["_templates"]
 html_css_files = ["css/pyrogram.css"]
@@ -70,7 +70,7 @@ html_theme_options = {
         },
         {  # Github logo
             "name": "GitHub",
-            "url": f"https://github.com/Vivekkumar-IN/TheApi/tree/dev",
+            "url": f"https://github.com/Vivekkumar-IN/TheApi",
             "html": (
                 '<svg stroke="currentColor" fill="currentColor" stroke-width="0" '
                 'viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 '
