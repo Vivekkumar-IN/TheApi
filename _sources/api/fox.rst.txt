@@ -1,6 +1,0 @@
-fox
-===
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.fox

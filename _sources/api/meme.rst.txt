@@ -1,6 +1,0 @@
-meme
-====
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.meme

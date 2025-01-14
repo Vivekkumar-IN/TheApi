@@ -1,6 +1,0 @@
-fakerapi
-========
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.fakerapi

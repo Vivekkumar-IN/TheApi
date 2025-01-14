@@ -1,6 +1,0 @@
-get_fake_images
-===============
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.get_fake_images

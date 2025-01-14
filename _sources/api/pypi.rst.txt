@@ -1,6 +1,0 @@
-pypi
-====
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.pypi

@@ -1,6 +1,0 @@
-animechan
-=========
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.animechan

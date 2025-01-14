@@ -1,6 +1,0 @@
-gen_qr
-======
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.gen_qr

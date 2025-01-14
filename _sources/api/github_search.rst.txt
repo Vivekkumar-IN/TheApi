@@ -1,6 +1,0 @@
-github_search
-=============
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.github_search

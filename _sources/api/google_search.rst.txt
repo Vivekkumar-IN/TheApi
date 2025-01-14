@@ -1,6 +1,0 @@
-google_search
-=============
-
-.. currentmodule:: TheApi
-
-.. automethod:: Client.google_search
