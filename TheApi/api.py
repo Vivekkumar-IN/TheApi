@@ -807,7 +807,7 @@ class Client:
                 hashtags = hashtags.strip().split(" ")
 
         return hashtags
-        
+
     async def quote(self) -> str:
         """
         Fetches a random quote.
