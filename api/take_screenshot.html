@@ -328,6 +328,15 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 <dl class="simple">
 <dt>Screens:</dt><dd><p>Predefined screen names and their resolutions:</p>
 <ul class="simple">
+<li><p><strong>Commons:</strong>
+- “meta_thumbnail”: 1200×628
+- “desktop”: 1440×1024
+- “mackbook_pro”: 1152×700
+- “surface_book”: 1500×1000
+- “imac”: 1280×720
+- “androvalue”: 480×1024
+- “ipad”: 414×736
+- “iphone”: 480×1024</p></li>
 <li><p><strong>Desktop and Laptop:</strong>
 - “24_desktop”: 1920×1200
 - “23_desktop”: 1920×1080
@@ -356,14 +365,26 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="k">await</span> <span class="n">generate_screenshot</span><span class="p">(</span>
-    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
-    <span class="n">screen</span><span class="o">=</span><span class="s2">&quot;ipad_pro&quot;</span><span class="p">,</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">take_screenshot</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://github.com/vivekkumar-in&quot;</span><span class="p">,</span>
+    <span class="n">screen</span><span class="o">=</span><span class="s2">&quot;iphone&quot;</span><span class="p">,</span>
     <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;png&quot;</span><span class="p">,</span>
     <span class="n">full</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Screenshot saved as </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>If you are using tweet URLs, then only the “Format” setting will work; the “Set” option will be ignored.</p></li>
+<li><p>There is a 10-second timeout; if the screenshot job takes more than 10 seconds, it will fail.</p></li>
+<li><p>Use JPG in most cases; PNG will cause errors in many instances.</p></li>
+<li><p>If using full screen, only use JPG; PNG will cause errors.</p></li>
+<li><p>If trying to screenshot a slow website, the time limit will cause an error.</p></li>
+<li><p>If the website has ads, the chances of failure are high.</p></li>
+<li><p>Use HD Quality only on small screen sizes.</p></li>
+</ul>
 </div>
 </dd></dl>
 
