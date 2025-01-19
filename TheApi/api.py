@@ -1504,7 +1504,6 @@ class Client:
         response = await self.request.get(url)
         return response.json()
 
-
     async def take_screenshot(
         url: str,
         screen: str = "desktop",
@@ -1516,8 +1515,8 @@ class Client:
 
         Args:
             url (str): The URL of the webpage to capture.
-            screen (str, optional): The screen resolution or preset to use. 
-                Can be a predefined name listed in the **Screens** section (e.g., "desktop", "24_desktop") 
+            screen (str, optional): The screen resolution or preset to use.
+                Can be a predefined name listed in the **Screens** section (e.g., "desktop", "24_desktop")
                 or a custom resolution in the format "width×height". Defaults to "desktop".
             format (str, optional): The image format for the screenshot ("jpeg" or "png"). Defaults to "jpeg".
             full (bool, optional): Whether to capture the full page. Defaults to False.
@@ -1558,7 +1557,7 @@ class Client:
 
             - **Default:**
               - "desktop": 1440×1024
-              
+
         EXAMPLE:
             .. code-block:
 
@@ -1610,7 +1609,9 @@ class Client:
             try:
                 width, height = map(int, screen.split("×"))
             except ValueError:
-                raise ValueError("Invalid custom resolution format. Use 'width×height'.")
+                raise ValueError(
+                    "Invalid custom resolution format. Use 'width×height'."
+                )
         else:
             resolution = screens.get(screen)
             if not resolution:
@@ -1625,9 +1626,10 @@ class Client:
             "full": full,
         }
 
-        response = await self.request.post("https://webscreenshot.vercel.app/api", json=payload).json()
-        base64_string = response['image'].split(',')[1]
+        response = await self.request.post(
+            "https://webscreenshot.vercel.app/api", json=payload
+        ).json()
+        base64_string = response["image"].split(",")[1]
         base64_decoded = b64decode(base64_string)
-        path = await self._create_file(base64_decoded, ext = format, name = "webshot")
+        path = await self._create_file(base64_decoded, ext=format, name="webshot")
         return path
-
