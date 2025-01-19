@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="get_btc_value" href="get_btc_value.html" /><link rel="prev" title="generate_pdf" href="generate_pdf.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="fakerapi" href="fakerapi.html" /><link rel="prev" title="domain_search" href="domain_search.html" />
 
     <link rel="shortcut icon" href="../_static/TheApix.ico"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>get_advice - TheApix v1.0</title>
+        <title>emoji - TheApix v1.0</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -212,12 +212,12 @@
 <li class="toctree-l3"><a class="reference internal" href="cat.html">cat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dog.html">dog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="domain_search.html">domain_search</a></li>
-<li class="toctree-l3"><a class="reference internal" href="emoji.html">emoji</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">emoji</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fakerapi.html">fakerapi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fox.html">fox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gen_qr.html">gen_qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generate_pdf.html">generate_pdf</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">get_advice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_advice.html">get_advice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_btc_value.html">get_btc_value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_dare.html">get_dare</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_fake_addresses.html">get_fake_addresses</a></li>
@@ -308,17 +308,82 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="get-advice">
-<h1>get_advice<a class="headerlink" href="#get-advice" title="Link to this heading">¶</a></h1>
+          <section id="emoji">
+<h1>emoji<a class="headerlink" href="#emoji" title="Link to this heading">¶</a></h1>
 <dl class="py method">
-<dt class="sig sig-object py" id="TheApi.Client.get_advice">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">get_advice</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.Client.get_advice" title="Link to this definition">¶</a></dt>
-<dd><p>Fetches a random piece of advice.</p>
+<dt class="sig sig-object py" id="TheApi.Client.emoji">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">emoji</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span></span></span><a class="headerlink" href="#TheApi.Client.emoji" title="Link to this definition">¶</a></dt>
+<dd><p>Fetch emojis from the <a class="reference external" href="https://github.com/cheatsnake/emojihub#-api-documentation">EmojiHub API</a> based on the specified endpoint, category, and group.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">str</span></code> – A random advice message.</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – <p>The base API endpoint. Defaults to “random”.
+Options are:</p>
+<blockquote>
+<div><ul>
+<li><p><strong>”random”</strong>: Fetch a random emoji.</p></li>
+<li><p><strong>”all”</strong>: Fetch all emojis.</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+<li><p><strong>category</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – <dl class="simple">
+<dt>The category of emojis to filter by.</dt><dd><dl class="simple">
+<dt>Available categories:</dt><dd><ul>
+<li><p>”smileys-and-people”</p></li>
+<li><p>”animals-and-nature”</p></li>
+<li><p>”food-and-drink”</p></li>
+<li><p>”travel-and-places”</p></li>
+<li><p>”activities”</p></li>
+<li><p>”objects”</p></li>
+<li><p>”symbols”</p></li>
+<li><p>”flags”</p></li>
+</ul>
 </dd>
 </dl>
+</dd>
+<dt>group (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>): The group within a category to filter by.</dt><dd><dl class="simple">
+<dt>Available groups:</dt><dd><ul>
+<li><dl class="simple">
+<dt><strong>Smileys and People</strong>: “body”, “cat-face”, “clothing”, “creature-face”, “emotion”, “face-negative”,</dt><dd><p>”face-neutral”, “face-positive”, “face-role”, “face-sick”, “family”, “monkey-face”, “person”,
+“person-activity”, “person-gesture”, “person-role”, “skin-tone”</p>
+</dd>
+</dl>
+</li>
+<li><p><strong>Animals and Nature</strong>: “animal-amphibian”, “animal-bird”, “animal-bug”, “animal-mammal”,
+“animal-marine”, “animal-reptile”, “plant-flower”, “plant-other”</p></li>
+<li><p><strong>Food and Drink</strong>: “dishware”, “drink”, “food-asian”, “food-fruit”, “food-prepared”,
+“food-sweet”, “food-vegetable”</p></li>
+<li><p><strong>Travel and Places</strong>: “travel-and-places”</p></li>
+<li><p><strong>Activities</strong>: “activities”</p></li>
+<li><p><strong>Objects</strong>: “objects”</p></li>
+<li><p><strong>Symbols</strong>: “symbols”</p></li>
+<li><p><strong>Flags</strong>: “flags”</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">Union[Dict,</span> <span class="pre">List]</span></code> – Parsed JSON response containing the requested emoji data.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">random_emoji</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">emoji</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random Emoji:&quot;</span><span class="p">,</span> <span class="n">random_emoji</span><span class="p">)</span>
+
+<span class="c1"># Fetch all emojis in the &quot;food-and-drink&quot; category</span>
+<span class="n">food_emojis</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">emoji</span><span class="p">(</span><span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s2">&quot;food-and-drink&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Food Emojis:&quot;</span><span class="p">,</span> <span class="n">food_emojis</span><span class="p">)</span>
+
+<span class="c1"># Fetch a random emoji from the &quot;face-positive&quot; group</span>
+<span class="n">face_positive_emoji</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">emoji</span><span class="p">(</span><span class="n">group</span><span class="o">=</span><span class="s2">&quot;face-positive&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Face Positive Emoji:&quot;</span><span class="p">,</span> <span class="n">face_positive_emoji</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more information, <a class="reference external" href="https://github.com/cheatsnake/emojihub">visit EmojiHub</a>:</p>
 </dd></dl>
 
 </section>
@@ -328,23 +393,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="get_btc_value.html">
+          <a class="next-page" href="fakerapi.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">get_btc_value</div>
+                <div class="title">fakerapi</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="generate_pdf.html">
+          <a class="prev-page" href="domain_search.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">generate_pdf</div>
+                <div class="title">domain_search</div>
                 
               </div>
             </a>
@@ -382,8 +447,8 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">get_advice</a><ul>
-<li><a class="reference internal" href="#TheApi.Client.get_advice"><code class="docutils literal notranslate"><span class="pre">Client.get_advice()</span></code></a></li>
+<li><a class="reference internal" href="#">emoji</a><ul>
+<li><a class="reference internal" href="#TheApi.Client.emoji"><code class="docutils literal notranslate"><span class="pre">Client.emoji()</span></code></a></li>
 </ul>
 </li>
 </ul>
