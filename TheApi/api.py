@@ -5,7 +5,7 @@ import string
 import textwrap
 from io import BytesIO
 from base64 import b64decode
-from typing import List, Union, Optional
+from typing import Dict, List, Union, Optional
 
 import aiofiles
 from bs4 import BeautifulSoup
