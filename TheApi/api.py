@@ -1543,7 +1543,7 @@ class Client:
               - "iphone": 480×1024
 
             - **Desktop and Laptop**:
-            
+
               - "24_desktop": 1920×1200
               - "23_desktop": 1920×1080
               - "22_desktop": 1680×1050
@@ -1554,7 +1554,7 @@ class Client:
               - "10_notebook": 1024×600
 
             - **Tablets**:
-            
+
               - "ipad_pro": 1024×1366
               - "ipad_mini_air": 768×1024
               - "samsung_galaxy_10": 800×1280
@@ -1562,7 +1562,7 @@ class Client:
               - "nexus_9": 768×1024
 
             - **Mobile Devices**:
-            
+
               - "google_pixel": 411×731
               - "iphone_x": 375×812
               - "iphone_6_plus": 414×736
