@@ -1532,7 +1532,7 @@ class Client:
             Predefined screen names and their resolutions:
 
             - **Commons:**
-            
+
               - "meta_thumbnail": 1200×628
               - "desktop": 1440×1024
               - "mackbook_pro": 1152×700
