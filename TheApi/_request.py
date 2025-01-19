@@ -40,7 +40,7 @@ class Request:
         allow_redirects: bool = True,
         verify: Optional[bool] = None,
     ) -> Response:
-        return await self._request(
+        r = await self._request(
             "GET",
             url,
             headers=headers,
@@ -49,6 +49,7 @@ class Request:
             allow_redirects=allow_redirects,
             verify=verify,
         )
+        return r
 
     async def post(
         self,
@@ -62,7 +63,7 @@ class Request:
         allow_redirects: bool = True,
         verify: Optional[bool] = None,
     ) -> Response:
-        return await self._request(
+        r = await self._request(
             "POST",
             url,
             headers=headers,
@@ -74,49 +75,4 @@ class Request:
             allow_redirects=allow_redirects,
             verify=verify,
         )
-
-    async def put(
-        self,
-        url: str,
-        headers: Optional[Dict[str, str]] = None,
-        params: Optional[Dict[str, str]] = None,
-        data: Optional[Union[Dict[str, Any], bytes]] = None,
-        json: Optional[Dict[str, Any]] = None,
-        timeout: Optional[int] = None,
-        allow_redirects: bool = True,
-        ssl: Optional[bool] = None,
-    ) -> Response:
-        return await self._request(
-            "PUT",
-            url,
-            headers=headers,
-            params=params,
-            data=data,
-            json=json,
-            timeout=timeout,
-            allow_redirects=allow_redirects,
-            verify=verify,
-        )
-
-    async def delete(
-        self,
-        url: str,
-        headers: Optional[Dict[str, str]] = None,
-        params: Optional[Dict[str, str]] = None,
-        data: Optional[Union[Dict[str, Any], bytes]] = None,
-        json: Optional[Dict[str, Any]] = None,
-        timeout: Optional[int] = None,
-        allow_redirects: bool = True,
-        ssl: Optional[bool] = None,
-    ) -> Response:
-        return await self._request(
-            "DELETE",
-            url,
-            headers=headers,
-            params=params,
-            data=data,
-            json=json,
-            timeout=timeout,
-            allow_redirects=allow_redirects,
-            verify=verify,
-        )
+        return r
