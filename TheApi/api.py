@@ -1293,7 +1293,7 @@ class Client:
         else:
             return None
 
-        async def meme(self) -> dict:
+    async def meme(self) -> dict:
         """
         Fetches a random meme image URL.
 
