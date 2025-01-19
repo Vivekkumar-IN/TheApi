@@ -1591,7 +1591,7 @@ class Client:
            - If the website has ads, the chances of failure are high.
            - Use HD Quality only on small screen sizes.
         """
-        
+
         url_regex = re.compile(
             r"^(https?:\/\/)?(([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}(:\d+)?(\/[-a-z\d%_.~+]*)*(\?[;&a-z\d%_.~+=-]*)?(\#[-a-z\d_]*)?$",
             re.IGNORECASE,
