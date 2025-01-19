@@ -1505,6 +1505,7 @@ class Client:
         return response.json()
 
     async def take_screenshot(
+        self,
         url: str,
         screen: str = "desktop",
         format: str = "jpeg",
@@ -1560,7 +1561,7 @@ class Client:
 
         Example:
 
-            .. code-block:
+            .. code-block:: python
 
                filename = await generate_screenshot(
                    url="https://example.com",
