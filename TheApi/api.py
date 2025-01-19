@@ -1558,7 +1558,8 @@ class Client:
             - **Default:**
               - "desktop": 1440×1024
 
-        EXAMPLE:
+        Example:
+        
             .. code-block:
 
                filename = await generate_screenshot(
