@@ -1531,6 +1531,16 @@ class Client:
         Screens:
             Predefined screen names and their resolutions:
 
+            - **Commons:**
+              - "meta_thumbnail": 1200×628
+              - "desktop": 1440×1024
+              - "mackbook_pro": 1152×700
+              - "surface_book": 1500×1000
+              - "imac": 1280×720
+              - "androvalue": 480×1024
+              - "ipad": 414×736
+              - "iphone": 480×1024
+              
             - **Desktop and Laptop:**
               - "24_desktop": 1920×1200
               - "23_desktop": 1920×1080
@@ -1563,13 +1573,23 @@ class Client:
 
             .. code-block:: python
 
-               filename = await generate_screenshot(
-                   url="https://example.com",
-                   screen="ipad_pro",
+               filename = await api.take_screenshot(
+                   url="https://github.com/vivekkumar-in",
+                   screen="iphone",
                    format="png",
                    full=True
                )
                print(f"Screenshot saved as {filename}")
+               
+        .. note::
+        
+           - If you are using tweet URLs, then only the "Format" setting will work; the "Set" option will be ignored.
+           - There is a 10-second timeout; if the screenshot job takes more than 10 seconds, it will fail.
+           - Use JPG in most cases; PNG will cause errors in many instances.
+           - If using full screen, only use JPG; PNG will cause errors.
+           - If trying to screenshot a slow website, the time limit will cause an error.
+           - If the website has ads, the chances of failure are high.
+           - Use HD Quality only on small screen sizes.
         """
         url_regex = re.compile(
             r"^(https?:\/\/)?(([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}(:\d+)?(\/[-a-z\d%_.~+]*)*(\?[;&a-z\d%_.~+=-]*)?(\#[-a-z\d_]*)?$",
@@ -1581,6 +1601,15 @@ class Client:
             url = "https://" + url
 
         screens = {
+            # common
+            "meta_thumbnail": (1200, 628),
+            "desktop": (1440, 1024),
+            "mackbook_pro": (1152, 700),
+            "surface_book": (1500, 1000),
+            "imac": (1280, 720),
+            "androvalue": (480, 1024),
+            "ipad": (414, 736),
+            "iphone": (480, 1024),
             # Desktop and Laptop Resolutions
             "24_desktop": (1920, 1200),
             "23_desktop": (1920, 1080),
