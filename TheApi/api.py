@@ -1540,7 +1540,7 @@ class Client:
               - "androvalue": 480×1024
               - "ipad": 414×736
               - "iphone": 480×1024
-              
+
             - **Desktop and Laptop:**
               - "24_desktop": 1920×1200
               - "23_desktop": 1920×1080
@@ -1580,9 +1580,9 @@ class Client:
                    full=True
                )
                print(f"Screenshot saved as {filename}")
-               
+
         .. note::
-        
+
            - If you are using tweet URLs, then only the "Format" setting will work; the "Set" option will be ignored.
            - There is a 10-second timeout; if the screenshot job takes more than 10 seconds, it will fail.
            - Use JPG in most cases; PNG will cause errors in many instances.
