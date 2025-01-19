@@ -254,6 +254,77 @@ class Client:
         except Exception as e:
             return {"success": False, "error": str(e)}
 
+
+    async def emoji(
+        endpoint: str = "random",
+        category: Optional[str] = None,
+        group: Optional[str] = None,
+    ) -> Union[Dict, List]:
+        """
+        Fetch emojis from the `EmojiHub API <https://github.com/cheatsnake/emojihub#-api-documentation>`_ based on the specified endpoint, category, and group.
+
+        Args:
+           endpoint (``str``, *optional*): The base API endpoint. Defaults to "random".
+             Options are:
+               - **"random"**: Fetch a random emoji.
+               - **"all"**: Fetch all emojis.
+           category (``str``, *optional*): The category of emojis to filter by.
+             Available categories:
+               - "smileys-and-people"
+               - "animals-and-nature"
+               - "food-and-drink"
+               - "travel-and-places"
+               - "activities"
+               - "objects"
+               - "symbols"
+               - "flags"
+            group (``str``, *optional*): The group within a category to filter by.
+              Available groups:
+                - **Smileys and People**: "body", "cat-face", "clothing", "creature-face", "emotion", "face-negative",
+                   "face-neutral", "face-positive", "face-role", "face-sick", "family", "monkey-face", "person",
+                   "person-activity", "person-gesture", "person-role", "skin-tone"
+                - **Animals and Nature**: "animal-amphibian", "animal-bird", "animal-bug", "animal-mammal",
+                  "animal-marine", "animal-reptile", "plant-flower", "plant-other"
+                - **Food and Drink**: "dishware", "drink", "food-asian", "food-fruit", "food-prepared",
+                  "food-sweet", "food-vegetable"
+                - **Travel and Places**: "travel-and-places"
+                - **Activities**: "activities"
+                - **Objects**: "objects"
+                - **Symbols**: "symbols"
+                - **Flags**: "flags"
+
+        Returns:
+            ``Union[Dict, List]``: Parsed JSON response containing the requested emoji data.
+
+        Examples:
+            .. code:: python
+
+               random_emoji = await api.emoji()
+               print("Random Emoji:", random_emoji)
+
+               # Fetch all emojis in the "food-and-drink" category
+               food_emojis = await api.emoji(endpoint="all", category="food-and-drink")
+               print("Food Emojis:", food_emojis)
+
+               # Fetch a random emoji from the "face-positive" group
+               face_positive_emoji = await api.emoji(group="face-positive")
+               print("Face Positive Emoji:", face_positive_emoji)
+
+        For more information, `visit EmojiHub <https://github.com/cheatsnake/emojihub>`_:
+        """
+        api_url = "https://emojihub.yurace.pro/api"
+
+        if endpoint not in ["random", "all"]:
+            raise ValueError("Invalid endpoint. Choose 'random' or 'all'.")
+
+        url = f"{api_url}/{endpoint}"
+        if category:
+            url += f"/category/{category}"
+        if group:
+            url += f"/group/{group}"
+
+        response = await self.requests.get(url)
+        return response.json()
     async def fakerapi(
         self,
         endpoint: str,
@@ -770,6 +841,86 @@ class Client:
 
         return {"success": True, "result": all_results}
 
+    async def get_truth(self, rating: str = None) -> dict:
+        """
+        Fetches a truth question from the `API <https://docs.truthordarebot.xyz/api-docs>`_ .
+
+        Args:
+            rating (``str``, *optional*): The rating of the question. Must be "pg", "pg13", or "r".
+
+        Returns:
+            ``dict``: The JSON response containing the truth question.
+        """
+        params = {"rating": rating} if rating else {}
+        response = await self.request.get(
+            "https://api.truthordarebot.xyz/v1/truth", params=params
+        )
+        return response.json()
+
+    async def get_dare(self, rating: str = None) -> dict:
+        """
+        Fetches a dare question from the `API <https://docs.truthordarebot.xyz/api-docs>`_ .
+
+        Args:
+            rating (``str``, *optional*): The rating of the question. Must be "pg", "pg13", or "r".
+
+        Returns:
+            ``dict``: The JSON response containing the dare question.
+        """
+        params = {"rating": rating} if rating else {}
+        response = await self.request.get(
+            "https://api.truthordarebot.xyz/v1/dare", params=params
+        )
+        return response.json()
+
+    async def get_wyr(self, rating: str = None) -> dict:
+        """
+        Fetches a Would You Rather question from the `API <https://docs.truthordarebot.xyz/api-docs>`_ .
+
+        Args:
+            rating (``str``, *optional*): The rating of the question. Must be "pg", "pg13", or "r".
+
+        Returns:
+            ``dict``: The JSON response containing the Would You Rather question.
+        """
+        params = {"rating": rating} if rating else {}
+        response = await self.request.get(
+            "https://api.truthordarebot.xyz/v1/wyr", params=params
+        )
+        return response.json()
+
+    async def get_nhie(self, rating: str = None) -> dict:
+        """
+        Fetches a Never Have I Ever question from the `API <https://docs.truthordarebot.xyz/api-docs>`_ .
+
+        Args:
+            rating (``str``, *optional*): The rating of the question. Must be "pg", "pg13", or "r".
+
+        Returns:
+            ``dict``: The JSON response containing the Never Have I Ever question.
+        """
+        params = {"rating": rating} if rating else {}
+        response = await self.request.get(
+            "https://api.truthordarebot.xyz/v1/nhie", params=params
+        )
+        return response.json()
+
+    async def get_paranoia(self, rating: str = None) -> dict:
+        """
+        Fetches a Paranoia question from the `API <https://docs.truthordarebot.xyz/api-docs>`_ .
+
+        Args:
+            rating (``str``, *optional*): The rating of the question. Must be "pg", "pg13", or "r".
+
+        Returns:
+            ``dict``: The JSON response containing the Paranoia question.
+        """
+        params = {"rating": rating} if rating else {}
+        response = await self.request.get(
+            "https://api.truthordarebot.xyz/v1/paranoia", params=params
+        )
+        return response.json()
+        
     async def hashtag(self, query: str, country: str = None) -> list:
         """
         Fetches hashtags based on the given query. If a country code is provided,
@@ -793,7 +944,7 @@ class Client:
                ['#pythonindia', '#codingindia', '#programmingindia', '#developerindia']
         """
         if country:
-            page = await self.requests.get(
+            page = await self.request.get(
                 f"https://www.tagsfinder.com/en-{country}/related/{query}/"
             )
             soup = BeautifulSoup(page.content, "html.parser")
@@ -820,6 +971,16 @@ class Client:
         data = response.json()
         return f"{data['content']}\n\nauthor - {data['author']}"
 
+    async def random_user(self) -> dict:
+        """
+        Fetch a random user details from the `Random API <https://randomuser.me/>`_ .
+
+        Returns:
+            ``dict``: Parsed JSON response with user details.
+        """
+        response = await self.request.get("https://randomuser.me/api/")
+        return response.json()
+        
     async def hindi_quote(self) -> str:
         """
         Fetches a random Hindi quote.
@@ -1132,17 +1293,41 @@ class Client:
         else:
             return None
 
-    async def meme(self):
+        async def meme(self) -> dict:
         """
         Fetches a random meme image URL.
 
         Returns:
-            ``str`` or ``None``: The URL of the meme image if available, otherwise None.
-        """
-        response = await self.request.get(self.base_urls["meme"])
-        response = response.json()
-        return response["preview"][-1] if response else None
+            ``dict``: A dict containing the results.
 
+        Example:
+            .. code-block:: python
+
+               result = await api.meme()
+               print(result)
+
+            .. code-block:: json
+
+               {
+                  "postLink": "https://redd.it/1i1fqhq",
+                  "subreddit": "dankmemes",
+                  "title": "Our beloved half reptile, half cyborg",
+                  "url": "https://i.redd.it/pjg18sljr0de1.png",
+                  "nsfw": false,
+                  "spoiler": false,
+                  "author": "Techno-Xenos",
+                  "ups": 189,
+                  "preview": [
+                    "https://preview.redd.it/pjg18sljr0de1.png?width=108&crop=smart&auto=webp&s=eb4141c3ac83bb2e9847fc598a5f676a9bf5425b",
+                    "https://preview.redd.it/pjg18sljr0de1.png?width=216&crop=smart&auto=webp&s=28ba33960f084eeeb8218c1aab36a51cd80cbc0d",
+                    "https://preview.redd.it/pjg18sljr0de1.png?width=320&crop=smart&auto=webp&s=87f0748cbaa3082160c13c453352c805010cd7d6"
+                  ]
+               }
+        """
+
+        response = await self.request.get("https://meme-api.com/gimme")
+        return response.json()
+        
     async def fox(self):
         """
         Fetches a random fox image URL.
