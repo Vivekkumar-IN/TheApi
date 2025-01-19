@@ -1661,8 +1661,8 @@ class Client:
 
         response = await self.request.post(
             "https://webscreenshot.vercel.app/api", json=payload
-        ).json()
-        base64_string = response["image"].split(",")[1]
+        )
+        base64_string = response.json()["image"].split(",")[1]
         base64_decoded = b64decode(base64_string)
         path = await self._create_file(base64_decoded, ext=format, name="webshot")
         return path
