@@ -1531,8 +1531,7 @@ class Client:
         Screens:
             Predefined screen names and their resolutions:
 
-            - **Commons:**
-
+            - **Commons**:
               - "meta_thumbnail": 1200×628
               - "desktop": 1440×1024
               - "mackbook_pro": 1152×700
@@ -1542,7 +1541,7 @@ class Client:
               - "ipad": 414×736
               - "iphone": 480×1024
 
-            - **Desktop and Laptop:**
+            - **Desktop and Laptop**:
               - "24_desktop": 1920×1200
               - "23_desktop": 1920×1080
               - "22_desktop": 1680×1050
@@ -1552,14 +1551,14 @@ class Client:
               - "13_notebook": 1024×800
               - "10_notebook": 1024×600
 
-            - **Tablets:**
+            - **Tablets**:
               - "ipad_pro": 1024×1366
               - "ipad_mini_air": 768×1024
               - "samsung_galaxy_10": 800×1280
               - "nexus_7": 600×960
               - "nexus_9": 768×1024
 
-            - **Mobile Devices:**
+            - **Mobile Devices**:
               - "google_pixel": 411×731
               - "iphone_x": 375×812
               - "iphone_6_plus": 414×736
@@ -1567,7 +1566,7 @@ class Client:
               - "iphone_5": 320×568
               - "iphone_4_3": 320×480
 
-            - **Default:**
+            - **Default**:
               - "desktop": 1440×1024
 
         Example:
@@ -1592,6 +1591,7 @@ class Client:
            - If the website has ads, the chances of failure are high.
            - Use HD Quality only on small screen sizes.
         """
+        
         url_regex = re.compile(
             r"^(https?:\/\/)?(([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}(:\d+)?(\/[-a-z\d%_.~+]*)*(\?[;&a-z\d%_.~+=-]*)?(\#[-a-z\d_]*)?$",
             re.IGNORECASE,
