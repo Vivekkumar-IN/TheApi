@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="generate_pdf" href="generate_pdf.html" /><link rel="prev" title="fox" href="fox.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="upload_image" href="upload_image.html" /><link rel="prev" title="stackoverflow_search" href="stackoverflow_search.html" />
 
     <link rel="shortcut icon" href="../_static/TheApix.ico"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>gen_qr - TheApix v1.0</title>
+        <title>take_screenshot - TheApix v1.0</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -214,7 +214,7 @@
 <li class="toctree-l3"><a class="reference internal" href="domain_search.html">domain_search</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fakerapi.html">fakerapi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fox.html">fox</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">gen_qr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gen_qr.html">gen_qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generate_pdf.html">generate_pdf</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_advice.html">get_advice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_btc_value.html">get_btc_value</a></li>
@@ -238,7 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="quote.html">quote</a></li>
 <li class="toctree-l3"><a class="reference internal" href="riddle.html">riddle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stackoverflow_search.html">stackoverflow_search</a></li>
-<li class="toctree-l3"><a class="reference internal" href="take_screenshot.html">take_screenshot</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">take_screenshot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="upload_image.html">upload_image</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wikipedia.html">wikipedia</a></li>
 <li class="toctree-l3"><a class="reference internal" href="write.html">write</a></li>
@@ -301,25 +301,61 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="gen-qr">
-<h1>gen_qr<a class="headerlink" href="#gen-qr" title="Link to this heading">¶</a></h1>
+          <section id="take-screenshot">
+<h1>take_screenshot<a class="headerlink" href="#take-screenshot" title="Link to this heading">¶</a></h1>
 <dl class="py method">
-<dt class="sig sig-object py" id="TheApi.Client.gen_qr">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">gen_qr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'150x150'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">foreground_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'000000'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FFFFFF'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#TheApi.Client.gen_qr" title="Link to this definition">¶</a></dt>
-<dd><p>Generate a QR code using api.qrserver.com and save it as a PNG file.</p>
+<dt class="sig sig-object py" id="TheApi.Client.take_screenshot">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">take_screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'desktop'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'jpeg'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#TheApi.Client.take_screenshot" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a screenshot of a webpage using the given parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – The content for the QR code.</p></li>
-<li><p><strong>size</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – The size of the QR code in the format ‘WIDTHxHEIGHT’ (default: ‘150x150’).</p></li>
-<li><p><strong>foreground_color</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – The color of the QR code (default: ‘000000’ - black).</p></li>
-<li><p><strong>background_color</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – The background color of the QR code (default: ‘FFFFFF’ - white).</p></li>
+<li><p><strong>url</strong> (<em>str</em>) – The URL of the webpage to capture.</p></li>
+<li><p><strong>screen</strong> (<em>str</em><em>, </em><em>optional</em>) – The screen resolution or preset to use.
+Can be a predefined name listed in the <strong>Screens</strong> section (e.g., “desktop”, “24_desktop”)
+or a custom resolution in the format “width×height”. Defaults to “desktop”.</p></li>
+<li><p><strong>format</strong> (<em>str</em><em>, </em><em>optional</em>) – The image format for the screenshot (“jpeg” or “png”). Defaults to “jpeg”.</p></li>
+<li><p><strong>full</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to capture the full page. Defaults to False.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><em>str</em> – The file path where the QR code was saved.</p>
+<dd class="field-even"><p><em>str</em> – The filename of the saved screenshot.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the URL or screen resolution is invalid.</p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Screens:</dt><dd><p>Predefined screen names and their resolutions:</p>
+<ul class="simple">
+<li><p><strong>Desktop and Laptop:</strong>
+- “24_desktop”: 1920×1200
+- “23_desktop”: 1920×1080
+- “22_desktop”: 1680×1050
+- “20_desktop”: 1600×900
+- “19_desktop”: 1440×900
+- “15_notebook”: 1366×768
+- “13_notebook”: 1024×800
+- “10_notebook”: 1024×600</p></li>
+<li><p><strong>Tablets:</strong>
+- “ipad_pro”: 1024×1366
+- “ipad_mini_air”: 768×1024
+- “samsung_galaxy_10”: 800×1280
+- “nexus_7”: 600×960
+- “nexus_9”: 768×1024</p></li>
+<li><p><strong>Mobile Devices:</strong>
+- “google_pixel”: 411×731
+- “iphone_x”: 375×812
+- “iphone_6_plus”: 414×736
+- “iphone_7_8_6”: 375×667
+- “iphone_5”: 320×568
+- “iphone_4_3”: 320×480</p></li>
+<li><p><strong>Default:</strong>
+- “desktop”: 1440×1024</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
 </dd></dl>
 
 </section>
@@ -329,23 +365,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="generate_pdf.html">
+          <a class="next-page" href="upload_image.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">generate_pdf</div>
+                <div class="title">upload_image</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="fox.html">
+          <a class="prev-page" href="stackoverflow_search.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">fox</div>
+                <div class="title">stackoverflow_search</div>
                 
               </div>
             </a>
@@ -383,8 +419,8 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">gen_qr</a><ul>
-<li><a class="reference internal" href="#TheApi.Client.gen_qr"><code class="docutils literal notranslate"><span class="pre">Client.gen_qr()</span></code></a></li>
+<li><a class="reference internal" href="#">take_screenshot</a><ul>
+<li><a class="reference internal" href="#TheApi.Client.take_screenshot"><code class="docutils literal notranslate"><span class="pre">Client.take_screenshot()</span></code></a></li>
 </ul>
 </li>
 </ul>
