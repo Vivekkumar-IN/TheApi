@@ -4,6 +4,7 @@ import random
 import string
 import textwrap
 from io import BytesIO
+from base64 import b64decode
 from typing import List, Union, Optional
 
 import aiofiles
@@ -785,10 +786,10 @@ class Client:
         Examples:
             .. code-block:: python
 
-               >>> get_hashtags('python')
+               >>> await api.hashtag('python')
                ['#python', '#coding', '#programming', '#developer']
 
-               >>> get_hashtags('python', 'IN')
+               >>> await api.hashtag('python', 'IN')
                ['#pythonindia', '#codingindia', '#programmingindia', '#developerindia']
         """
         if country:
@@ -1502,3 +1503,131 @@ class Client:
         url = self.base_urls["word_info"].format(word=word)
         response = await self.request.get(url)
         return response.json()
+
+
+    async def take_screenshot(
+        url: str,
+        screen: str = "desktop",
+        format: str = "jpeg",
+        full: bool = False,
+    ) -> str:
+        """
+        Generate a screenshot of a webpage using the given parameters.
+
+        Args:
+            url (str): The URL of the webpage to capture.
+            screen (str, optional): The screen resolution or preset to use. 
+                Can be a predefined name listed in the **Screens** section (e.g., "desktop", "24_desktop") 
+                or a custom resolution in the format "width×height". Defaults to "desktop".
+            format (str, optional): The image format for the screenshot ("jpeg" or "png"). Defaults to "jpeg".
+            full (bool, optional): Whether to capture the full page. Defaults to False.
+
+        Returns:
+            str: The filename of the saved screenshot.
+
+        Raises:
+            ValueError: If the URL or screen resolution is invalid.
+
+        Screens:
+            Predefined screen names and their resolutions:
+
+            - **Desktop and Laptop:**
+              - "24_desktop": 1920×1200
+              - "23_desktop": 1920×1080
+              - "22_desktop": 1680×1050
+              - "20_desktop": 1600×900
+              - "19_desktop": 1440×900
+              - "15_notebook": 1366×768
+              - "13_notebook": 1024×800
+              - "10_notebook": 1024×600
+
+            - **Tablets:**
+              - "ipad_pro": 1024×1366
+              - "ipad_mini_air": 768×1024
+              - "samsung_galaxy_10": 800×1280
+              - "nexus_7": 600×960
+              - "nexus_9": 768×1024
+
+            - **Mobile Devices:**
+              - "google_pixel": 411×731
+              - "iphone_x": 375×812
+              - "iphone_6_plus": 414×736
+              - "iphone_7_8_6": 375×667
+              - "iphone_5": 320×568
+              - "iphone_4_3": 320×480
+
+            - **Default:**
+              - "desktop": 1440×1024
+              
+        EXAMPLE:
+            .. code-block:
+
+               filename = await generate_screenshot(
+                   url="https://example.com",
+                   screen="ipad_pro",
+                   format="png",
+                   full=True
+               )
+               print(f"Screenshot saved as {filename}")
+        """
+        url_regex = re.compile(
+            r"^(https?:\/\/)?(([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}(:\d+)?(\/[-a-z\d%_.~+]*)*(\?[;&a-z\d%_.~+=-]*)?(\#[-a-z\d_]*)?$",
+            re.IGNORECASE,
+        )
+        if not re.match(url_regex, url):
+            raise ValueError("Invalid URL provided.")
+        if not url.startswith(("http://", "https://")):
+            url = "https://" + url
+
+        screens = {
+            # Desktop and Laptop Resolutions
+            "24_desktop": (1920, 1200),
+            "23_desktop": (1920, 1080),
+            "22_desktop": (1680, 1050),
+            "20_desktop": (1600, 900),
+            "19_desktop": (1440, 900),
+            "15_notebook": (1366, 768),
+            "13_notebook": (1024, 800),
+            "10_notebook": (1024, 600),
+            # iPad/Tablets Resolutions
+            "ipad_pro": (1024, 1366),
+            "ipad_mini_air": (768, 1024),
+            "samsung_galaxy_10": (800, 1280),
+            "nexus_7": (600, 960),
+            "nexus_9": (768, 1024),
+            # Mobile Resolutions
+            "google_pixel": (411, 731),
+            "iphone_x": (375, 812),
+            "iphone_6_plus": (414, 736),
+            "iphone_7_8_6": (375, 667),
+            "iphone_5": (320, 568),
+            "iphone_4_3": (320, 480),
+            # Default
+            "desktop": (1440, 1024),
+        }
+
+        if "×" in screen:
+            try:
+                width, height = map(int, screen.split("×"))
+            except ValueError:
+                raise ValueError("Invalid custom resolution format. Use 'width×height'.")
+        else:
+            resolution = screens.get(screen)
+            if not resolution:
+                raise ValueError(f"Invalid screen value: {screen}")
+            width, height = resolution
+
+        payload = {
+            "url": url,
+            "width": width,
+            "height": height,
+            "format": format,
+            "full": full,
+        }
+
+        response = await self.request.post("https://webscreenshot.vercel.app/api", json=payload).json()
+        base64_string = response['image'].split(',')[1]
+        base64_decoded = b64decode(base64_string)
+        path = await self._create_file(base64_decoded, ext = format, name = "webshot")
+        return path
+
