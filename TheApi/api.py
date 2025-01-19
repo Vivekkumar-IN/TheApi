@@ -254,7 +254,6 @@ class Client:
         except Exception as e:
             return {"success": False, "error": str(e)}
 
-
     async def emoji(
         endpoint: str = "random",
         category: Optional[str] = None,
@@ -325,6 +324,7 @@ class Client:
 
         response = await self.requests.get(url)
         return response.json()
+
     async def fakerapi(
         self,
         endpoint: str,
@@ -920,7 +920,7 @@ class Client:
             "https://api.truthordarebot.xyz/v1/paranoia", params=params
         )
         return response.json()
-        
+
     async def hashtag(self, query: str, country: str = None) -> list:
         """
         Fetches hashtags based on the given query. If a country code is provided,
@@ -980,7 +980,7 @@ class Client:
         """
         response = await self.request.get("https://randomuser.me/api/")
         return response.json()
-        
+
     async def hindi_quote(self) -> str:
         """
         Fetches a random Hindi quote.
@@ -1327,7 +1327,7 @@ class Client:
 
         response = await self.request.get("https://meme-api.com/gimme")
         return response.json()
-        
+
     async def fox(self):
         """
         Fetches a random fox image URL.
