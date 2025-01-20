@@ -91,6 +91,8 @@ class Client:
 
                results = await api.avatar()
 
+               print(results)
+
             .. code-block:: JSON
 
                {
@@ -116,7 +118,7 @@ class Client:
 
                >> await api.animechan()
 
-            .. code-block:: python
+            .. code-block:: JSON
 
                {
                    "content": "Those who hate themselves, cannot love or trust others.",
