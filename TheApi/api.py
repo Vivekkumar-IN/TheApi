@@ -115,7 +115,7 @@ class Client:
             .. code-block:: python
 
                >> await api.animechan()
-               
+
             .. code-block:: python
 
                {
