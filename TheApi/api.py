@@ -27,8 +27,6 @@ class Client:
 
         self.base_urls = {
             "advice": "https://api.adviceslip.com/advice",
-            "animechan": "https://animechan.io/api/v1/quotes/random",
-            "avatar": "https://thedobby.club/api/avatars/random/",
             "btc_value": "https://api.stakdek.de/api/btc/",
             "bing_image": "https://www.bing.com/images/async",
             "carbon": "https://carbonara.solopov.dev/api/cook",
@@ -92,9 +90,17 @@ class Client:
             .. code-block:: python
 
                results = await api.avatar()
+
+            .. code-block:: JSON
+
+               {
+                   "file_name": "vicky",
+                   "file_type": "image/jpeg",
+                   "file_url": "https://cofuvfbkdyfchroaxcvi.supabase.co/storage/v1/object/public/avatars/vicky.jpg"
+               }
         """
 
-        response = await self.request.get(self.base_urls["avatar"])
+        response = await self.request.get("https://thedobby.club/api/avatars/random/")
 
         return response.json()
 
@@ -104,8 +110,28 @@ class Client:
 
         Returns:
             ``dict``: Contains the quote content, anime name, and character details.
+
+        Example:
+            .. code-block:: python
+
+               >> await api.animechan()
+               
+            .. code-block:: python
+
+               {
+                   "content": "Those who hate themselves, cannot love or trust others.",
+                   "anime": {
+                       "id": 649,
+                       "name": "Neon Genesis Evangelion",
+                       "altName": "Neon Genesis Evangelion"
+                   },
+                   "character": {
+                       "id": 2111,
+                       "name": "Rei Ayanami"
+                    }
+              }
         """
-        response = await self.request.get(self.base_urls["animechan"])
+        response = await self.request.get("https://animechan.io/api/v1/quotes/random")
         return response.json()["data"]
 
     async def carbon(
