@@ -45,7 +45,7 @@ html_static_path = ["_static"]
 html_extra_path = ["_templates"]
 html_css_files = ["css/pyrogram.css"]
 html_favicon = html_static_path[0] + "/img/TheApix.ico"
-
+html_show_sphinx = False
 html_theme_options = {
     "navigation_with_keys": True,
     "footer_icons": [
