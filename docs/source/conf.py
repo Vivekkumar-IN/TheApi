@@ -41,6 +41,7 @@ html_title = f"TheApix v{version}"
 # html_theme = "sphinx_rtd_theme"
 html_theme = "furo"
 html_copy_source = False
+html_show_copyright = False
 html_static_path = ["_static"]
 html_extra_path = ["_templates"]
 html_css_files = ["css/pyrogram.css"]
@@ -55,7 +56,8 @@ html_theme_options = {
             "url": "https://t.me/TheTeamVivek",
             "html": (
                 '<svg stroke="currentColor" fill="currentColor" stroke-width="0" '
-                'viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">'
+                'viewBox="0 0 16 16" style="width: 1.8em; height: 1.8em;" '
+                'xmlns="http://www.w3.org/2000/svg">'
                 '<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994'
                 "-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133."
                 "958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.0"
@@ -70,10 +72,11 @@ html_theme_options = {
         },
         {  # Github logo
             "name": "GitHub",
-            "url": f"https://github.com/Vivekkumar-IN/TheApi",
+            "url": "https://github.com/Vivekkumar-IN/TheApi",
             "html": (
                 '<svg stroke="currentColor" fill="currentColor" stroke-width="0" '
-                'viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 '
+                'viewBox="0 0 16 16" style="width: 1.8em; height: 1.8em;">'
+                '<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 '
                 "2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.4"
                 "9-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23"
                 ".82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 "
@@ -85,9 +88,9 @@ html_theme_options = {
             ),
             "class": "",
         },
+        
     ],
 }
-
 pygments_style = "default"
 # pygments_dark_style = "native"
 
