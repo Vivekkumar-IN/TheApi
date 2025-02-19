@@ -56,7 +56,7 @@ html_theme_options = {
             "url": "https://t.me/TheTeamVivek",
             "html": (
                 '<svg stroke="currentColor" fill="#0088cc" stroke-width="0" '
-                'viewBox="0 0 16 16" style="width: 1.8em; height: 1.8em;" '
+                'viewBox="0 0 16 16" style="width: 2em; height: 2em;" '
                 'xmlns="http://www.w3.org/2000/svg">'
                 '<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994'
                 "-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133."
@@ -75,7 +75,7 @@ html_theme_options = {
             "url": "https://github.com/Vivekkumar-IN/TheApi",
             "html": (
                 '<svg stroke="currentColor" fill="currentColor" stroke-width="0" '
-                'viewBox="0 0 16 16" style="width: 1.8em; height: 1.8em;">'
+                'viewBox="0 0 16 16" style="width: 2em; height: 2em;">'
                 '<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 '
                 "2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.4"
                 "9-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23"
