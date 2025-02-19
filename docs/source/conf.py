@@ -55,7 +55,7 @@ html_theme_options = {
             "name": "Telegram Channel",
             "url": "https://t.me/TheTeamVivek",
             "html": (
-                '<svg stroke="currentColor" fill="currentColor" stroke-width="0" '
+                '<svg stroke="currentColor" fill="#0088cc" stroke-width="0" '
                 'viewBox="0 0 16 16" style="width: 1.8em; height: 1.8em;" '
                 'xmlns="http://www.w3.org/2000/svg">'
                 '<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994'
