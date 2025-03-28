@@ -1294,7 +1294,7 @@ class Client(UploadMedia):
         Returns:
             ``str`` or ``None``: The URL of a random cat image if available; None if no response is received.
 
-        
+
         Example:
             .. code-block:: python
 
@@ -1303,7 +1303,7 @@ class Client(UploadMedia):
             .. code-block:: text
 
                 https://cdn2.thecatapi.com/images/baf.jpg
-            
+
         """
         response = await self.request.get(self.base_urls["cat"])
         response = response.json()
@@ -1315,7 +1315,7 @@ class Client(UploadMedia):
 
         Returns:
             ``str`` or None: The URL of a random dog image if available; None if no response is received.
-        
+
         Example:
             .. code-block:: python
 
@@ -1324,7 +1324,7 @@ class Client(UploadMedia):
             .. code-block:: text
 
                 https://random.dog/914e15e9-ddf2-4b7a-b380-0aa9ff7458e7.PNG
-            
+
         """
         response = await self.request.get(self.base_urls["dog"])
         response = response.json()
@@ -1800,17 +1800,17 @@ class Client(UploadMedia):
             .. code-block:: python
 
                 response = await api.domain_search("github")
-                
+
                 domains = response.get("domains")
 
                 print(domains)
-                
+
                 if domains:
                     print(f"Found a  total of {response["total"]} domains.
 
             .. code-block:: JSON
 
-                
+
                 {
                     "domains": [
                         {
