@@ -11,8 +11,9 @@ import aiofiles
 from bs4 import BeautifulSoup
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
-from ._request import Request
 from ._upload import UploadMedia
+from ._request import Request
+
 
 class Client(UploadMedia):
     """
