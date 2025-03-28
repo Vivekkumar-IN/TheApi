@@ -1,1 +1,2 @@
-class Upload: pass
+class Upload:
+    pass
