@@ -1,6 +1,5 @@
 import os
 import re
-import math
 import random
 import string
 import textwrap
@@ -1528,30 +1527,29 @@ class Client:
 
         return file_path
 
-    
     async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> dict:
         """
         Uploads an image to `Envs.sh <https://envs.sh>`_.
 
         Args:
-            file_path (Union[str, bytes, BytesIO]): The image file to upload. 
-            
+            file_path (Union[str, bytes, BytesIO]): The image file to upload.
+
                 - str: Local file path (e.g., "image.png").
                 - bytes: Raw binary data of the file.
                 - BytesIO: File-like object containing binary data.
 
         Returns:
-            dict: 
-            
+            dict:
+
                 - {"success": True, "url": "<file_url>", "retention": "<days> days"} (on successful upload)
                 - {"success": False, "error": "<error_message>"} (if upload fails)
-                
+
             Retention period is calculated based on file size, ranging from 30 to 90 days.
 
         Example:
 
             .. code-block:: python
-            
+
                 # Upload an image from a file path
                 x = await api.upload_image("image.png")
                 print(x)
@@ -1559,24 +1557,24 @@ class Client:
                     print(f"Your uploaded file link is {x["url"]} and this will deleted in {x["retention"]}.
 
             .. code-block:: JSON
-            
+
                 {
-                    "success": True, 
-                    "url": "https://envs.sh/abc.png", 
+                    "success": True,
+                    "url": "https://envs.sh/abc.png",
                     "retention": "85 days"
                 }
 
             .. code-block::
 
                Your uploaded file link is https://envs.sh/abc.png and this will deleted in 85 days.
-               
+
             .. code-block:: python
-            
+
                 # Upload an image from binary data
                 with open("image.png", "rb") as f:
                     x = await api.upload_image(f.read())
                 print(x)
-                
+
                 # Output: {"success": True, "url": "https://envs.sh/def.png", "retention": "78 days"}
 
                 # Upload an image from BytesIO
@@ -1602,7 +1600,9 @@ class Client:
             except FileNotFoundError:
                 return {"success": False, "error": f"File not found: '{file_path}'"}
         elif isinstance(file_path, (bytes, BytesIO)):
-            image_bytes = file_path if isinstance(file_path, bytes) else file_path.getvalue()
+            image_bytes = (
+                file_path if isinstance(file_path, bytes) else file_path.getvalue()
+            )
         else:
             return {"success": False, "error": "Invalid input type"}
 
@@ -1616,7 +1616,11 @@ class Client:
 
         try:
             response = await self.request.post(url=url, files=files)
-            return {"success": True, "url": response.text.strip(), "retention": f"{round(retention)} days"}
+            return {
+                "success": True,
+                "url": response.text.strip(),
+                "retention": f"{round(retention)} days",
+            }
         except Exception as e:
             return {"success": False, "error": str(e)}
 
