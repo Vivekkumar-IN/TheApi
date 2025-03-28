@@ -114,7 +114,7 @@ class Client(UploadMedia):
         Example:
             .. code-block:: python
 
-               >> await api.animechan()
+               >>> await api.animechan()
 
             .. code-block:: JSON
 
@@ -1293,6 +1293,17 @@ class Client(UploadMedia):
 
         Returns:
             ``str`` or ``None``: The URL of a random cat image if available; None if no response is received.
+
+        
+        Example:
+            .. code-block:: python
+
+               >>> await api.cat()
+
+            .. code-block:: text
+
+                https://cdn2.thecatapi.com/images/baf.jpg
+            
         """
         response = await self.request.get(self.base_urls["cat"])
         response = response.json()
@@ -1304,6 +1315,16 @@ class Client(UploadMedia):
 
         Returns:
             ``str`` or None: The URL of a random dog image if available; None if no response is received.
+        
+        Example:
+            .. code-block:: python
+
+               >>> await api.dog()
+
+            .. code-block:: text
+
+                https://random.dog/914e15e9-ddf2-4b7a-b380-0aa9ff7458e7.PNG
+            
         """
         response = await self.request.get(self.base_urls["dog"])
         response = response.json()
@@ -1773,6 +1794,70 @@ class Client(UploadMedia):
 
         Returns:
             ``dict``: A dictionary containing the results of the domain search.
+
+        Example:
+
+            .. code-block:: python
+
+                response = await api.domain_search("github")
+                
+                domains = response.get("domains")
+
+                print(domains)
+                
+                if domains:
+                    print(f"Found a  total of {response["total"]} domains.
+
+            .. code-block:: JSON
+
+                
+                {
+                    "domains": [
+                        {
+                            "domain": "xngithub-ou3lv93ce3f.com",
+                            "create_date": "2025-03-21T15:48:02.308178",
+                            "update_date": "2025-03-21T15:48:02.308180",
+                            "country": null,
+                            "isDead": "False",
+                            "A": null,
+                            "NS": null,
+                            "CNAME": null,
+                            "MX": null,
+                            "TXT": null
+                        },
+                        {
+                            "domain": "github-security-login.com",
+                            "create_date": "2025-03-14T16:06:36.281306",
+                            "update_date": "2025-03-14T16:06:36.281308",
+                            "country": null,
+                            "isDead": "False",
+                            "A": null,
+                            "NS": null,
+                            "CNAME": null,
+                            "MX": null,
+                            "TXT": null
+                        },
+                        {
+                            "domain": "github-azure-app.com",
+                            "create_date": "2025-03-13T06:43:49.541243",
+                            "update_date": "2025-03-13T06:43:49.541244",
+                            "country": null,
+                            "isDead": "False",
+                            "A": null,
+                            "NS": null,
+                            "CNAME": null,
+                            "MX": null,
+                            "TXT": null
+                        }
+                        ...
+                    ],
+                    "total": 96,
+                    "time": "4",
+                    "next_page": null
+                 }
+            .. code-block::
+
+                Found a total of 96 domains.
         """
         url = self.base_urls["domain"].format(domain=domain, zone=zone)
 
