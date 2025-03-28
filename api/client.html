@@ -1242,8 +1242,8 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="literal-block-wrapper docutils container" id="id16">
-<div class="code-block-caption"><span class="caption-text">Upload an image from a file path</span><a class="headerlink" href="#id16" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">Upload an image from a file path</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
  <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;success&quot;</span><span class="p">]:</span>
@@ -1261,8 +1261,8 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Your uploaded file link is https://envs.sh/abc.png and this will be deleted in 85 days.
 </pre></div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id17">
-<div class="code-block-caption"><span class="caption-text">Upload an image from binary data</span><a class="headerlink" href="#id17" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">Upload an image from binary data</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
      <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -1270,8 +1270,8 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id18">
-<div class="code-block-caption"><span class="caption-text">Upload an image from BytesIO</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">Upload an image from BytesIO</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
  <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;image binary data&quot;</span><span class="p">))</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -1279,19 +1279,244 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id19">
-<div class="code-block-caption"><span class="caption-text">Invalid input example</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">Invalid input example</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
  <span class="c1"># Output: {&quot;success&quot;: false, &quot;error&quot;: &quot;Invalid input type&quot;}</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id20">
-<div class="code-block-caption"><span class="caption-text">File not found error</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">File not found error</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="s2">&quot;non_existent_file.png&quot;</span><span class="p">)</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
  <span class="c1"># Output: {&quot;success&quot;: false, &quot;error&quot;: &quot;File not found: &#39;non_existent_file.png&#39;&quot;}</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.Client.upload_to_0x0">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">upload_to_0x0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">BytesIO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expires</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#TheApi.Client.upload_to_0x0" title="Link to this definition">¶</a></dt>
+<dd><p>Uploads a file to 0x0.st and returns the uploaded file URL along with retention details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>bytes</em><em>, </em><em>BytesIO</em><em>]</em>) – The media file to uploaded.</p></li>
+<li><p><strong>secret</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, generates a longer, hard-to-guess URL (default: False).</p></li>
+<li><p><strong>expires</strong> (<em>int</em><em>, </em><em>optional</em>) – Sets the maximum file lifetime in hours or the expiration time in
+milliseconds since the UNIX epoch (default: None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>A dictionary containing:</dt><dd><ul class="simple">
+<li><p>”success” (bool): True if the upload was successful, False otherwise.</p></li>
+<li><p>”url” (str, optional): The URL of the uploaded file if successful.</p></li>
+<li><p>”retention” (str, optional): The estimated retention period of the file.</p></li>
+<li><p>”error” (str, optional): The error message if the upload fails.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl>
+<dt>Successful upload:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_0x0</span><span class="p">(</span><span class="s2">&quot;example.jpg&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">{&#39;success&#39;: True, &#39;url&#39;: &#39;https://0x0.st/abcd&#39;, &#39;retention&#39;: &#39;30 days&#39;}</span>
+</pre></div>
+</div>
+</dd>
+<dt>Successful upload with expiration:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_0x0</span><span class="p">(</span><span class="s2">&quot;example.jpg&quot;</span><span class="p">,</span> <span class="n">expires</span><span class="o">=</span><span class="mi">48</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">{&#39;success&#39;: True, &#39;url&#39;: &#39;https://0x0.st/abcd&#39;, &#39;retention&#39;: &#39;48 hours&#39;}</span>
+</pre></div>
+</div>
+</dd>
+<dt>Failed upload (e.g., file not found):</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_0x0</span><span class="p">(</span><span class="s2">&quot;invalid.jpg&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">{&#39;success&#39;: False, &#39;error&#39;: &#39;File not found&#39;}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.Client.upload_to_catbox">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">upload_to_catbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">BytesIO</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.Client.upload_to_catbox" title="Link to this definition">¶</a></dt>
+<dd><p>Uploads a file to <a class="reference external" href="https://catbox.moe">Catbox.moe</a> and Get the uploaded file URL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>bytes</em><em>, </em><em>BytesIO</em><em>]</em>) – <p>The media file to upload. Can be one of:</p>
+<ul class="simple">
+<li><p>str: Local file path (e.g., “image.png”).</p></li>
+<li><p>bytes: Raw binary data of the file.</p></li>
+<li><p>BytesIO: File-like object containing binary data.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>A dictionary containing:</dt><dd><ul class="simple">
+<li><p>”success” (bool): True if the upload was successful, False otherwise.</p></li>
+<li><p>”url” (str, optional): The URL of the uploaded file if successful.</p></li>
+<li><p>”error” (Exception, optional): The error message if the upload fails.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">Successful upload</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_catbox</span><span class="p">(</span><span class="s2">&quot;example.jpg&quot;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+ <span class="c1"># {&#39;success&#39;: True, &#39;url&#39;: &#39;https://files.catbox.moe/abcd1234.jpg&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">Failed upload (e.g., file not found)</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_catbox</span><span class="p">(</span><span class="s2">&quot;invalid.jpg&quot;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+ <span class="c1"># {&#39;success&#39;: False, &#39;error&#39;: FileNotFoundError(&quot;File not found&quot;)}</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.Client.upload_to_envsh">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">upload_to_envsh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">BytesIO</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#TheApi.Client.upload_to_envsh" title="Link to this definition">¶</a></dt>
+<dd><p>Uploads an image to <a class="reference external" href="https://envs.sh">Envs.sh</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>bytes</em><em>, </em><em>BytesIO</em><em>]</em>) – <p>The media file to upload. Can be one of:</p>
+<ul class="simple">
+<li><p>str: Local file path (e.g., “image.png”).</p></li>
+<li><p>bytes: Raw binary data of the file.</p></li>
+<li><p>BytesIO: File-like object containing binary data.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p><em>dict</em> –</p>
+<dl>
+<dt>A dictionary containing the upload result:</dt><dd><ul class="simple">
+<li><p>On success: {“success”: true, “url”: “&lt;file_url&gt;”, “retention”: “&lt;days&gt; days”}</p></li>
+<li><p>On failure: {“success”: false, “error”: “&lt;error_message&gt;”}</p></li>
+</ul>
+<p>Retention period is calculated based on file size, ranging from 30 to 90 days.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">Upload an image from a file path</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+ <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;success&quot;</span><span class="p">]:</span>
+     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Your uploaded file link is </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2"> and this will be deleted in </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;retention&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://envs.sh/abc.png&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;retention&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;85 days&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Your uploaded file link is https://envs.sh/abc.png and this will be deleted in 85 days.
+</pre></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-text">Upload an image from binary data</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+     <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+ <span class="c1"># Output: {&quot;success&quot;: true, &quot;url&quot;: &quot;https://envs.sh/def.png&quot;, &quot;retention&quot;: &quot;78 days&quot;}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-text">Upload an image from BytesIO</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
+ <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;image binary data&quot;</span><span class="p">))</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+ <span class="c1"># Output: {&quot;success&quot;: true, &quot;url&quot;: &quot;https://envs.sh/ghi.png&quot;, &quot;retention&quot;: &quot;82 days&quot;}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-text">Invalid input example</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+ <span class="c1"># Output: {&quot;success&quot;: false, &quot;error&quot;: &quot;Invalid input type&quot;}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-text">File not found error</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="s2">&quot;non_existent_file.png&quot;</span><span class="p">)</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+ <span class="c1"># Output: {&quot;success&quot;: false, &quot;error&quot;: &quot;File not found: &#39;non_existent_file.png&#39;&quot;}</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.Client.upload_to_pomf">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">upload_to_pomf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">BytesIO</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.Client.upload_to_pomf" title="Link to this definition">¶</a></dt>
+<dd><p>Uploads a file to <a class="reference external" href="https://catbox.moe">Catbox.moe</a> and Get the uploaded file URL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>bytes</em><em>, </em><em>BytesIO</em><em>]</em>) – <p>The media file to upload. Can be one of:</p>
+<ul class="simple">
+<li><p>str: Local file path (e.g., “image.png”).</p></li>
+<li><p>bytes: Raw binary data of the file.</p></li>
+<li><p>BytesIO: File-like object containing binary data.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>A dictionary containing:</dt><dd><ul class="simple">
+<li><p>”success” (bool): True if the upload was successful, False otherwise.</p></li>
+<li><p>”url” (str, optional): The URL of the uploaded file if successful.</p></li>
+<li><p>”error” (Exception, optional): The error message if the upload fails.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-text">Successful upload</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_pomf</span><span class="p">(</span><span class="s2">&quot;example.jpg&quot;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+ <span class="c1"># {&#39;success&#39;: True, &#39;url&#39;: &#39;https://pomf2.lain.la/f/abcd.jpg&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-text">Failed upload (e.g., file not found)</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_pomf</span><span class="p">(</span><span class="s2">&quot;invalid.jpg&quot;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+ <span class="c1"># {&#39;success&#39;: False, &#39;error&#39;: FileNotFoundError(&quot;File not found&quot;)}</span>
 </pre></div>
 </div>
 </div>
@@ -1440,6 +1665,10 @@ per line will be wrapped, with up to 25 lines displayed.</p>
 <li><a class="reference internal" href="#TheApi.Client.stackoverflow_search"><code class="docutils literal notranslate"><span class="pre">Client.stackoverflow_search()</span></code></a></li>
 <li><a class="reference internal" href="#TheApi.Client.take_screenshot"><code class="docutils literal notranslate"><span class="pre">Client.take_screenshot()</span></code></a></li>
 <li><a class="reference internal" href="#TheApi.Client.upload_image"><code class="docutils literal notranslate"><span class="pre">Client.upload_image()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.Client.upload_to_0x0"><code class="docutils literal notranslate"><span class="pre">Client.upload_to_0x0()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.Client.upload_to_catbox"><code class="docutils literal notranslate"><span class="pre">Client.upload_to_catbox()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.Client.upload_to_envsh"><code class="docutils literal notranslate"><span class="pre">Client.upload_to_envsh()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.Client.upload_to_pomf"><code class="docutils literal notranslate"><span class="pre">Client.upload_to_pomf()</span></code></a></li>
 <li><a class="reference internal" href="#TheApi.Client.wikipedia"><code class="docutils literal notranslate"><span class="pre">Client.wikipedia()</span></code></a></li>
 <li><a class="reference internal" href="#TheApi.Client.write"><code class="docutils literal notranslate"><span class="pre">Client.write()</span></code></a></li>
 </ul>
