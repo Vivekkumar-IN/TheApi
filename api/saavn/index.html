@@ -372,6 +372,248 @@
 <dd><p>A class for interacting with the Saavn API.</p>
 <p>This class provides methods for searching songs, albums, artists, and playlists
 globally on the Saavn platform.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.get_album">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_album</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">album_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">album_link</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.get_album" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves an album by its ID or link.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>album_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The ID of the album.</p></li>
+<li><p><strong>album_link</strong> (<em>str</em><em>, </em><em>optional</em>) – The link to the album.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The album details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.get_artist">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_artist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artist_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">song_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">album_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'popularity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'desc'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.get_artist" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves an artist by their ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artist_id</strong> (<em>str</em>) – The ID of the artist.</p></li>
+<li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – The page number to retrieve. Defaults to 0.</p></li>
+<li><p><strong>song_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of songs to retrieve. Defaults to 10.</p></li>
+<li><p><strong>album_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of albums to retrieve. Defaults to 10.</p></li>
+<li><p><strong>sort_by</strong> (<em>str</em><em>, </em><em>optional</em>) – The sorting criteria. Defaults to “popularity”.</p></li>
+<li><p><strong>sort_order</strong> (<em>str</em><em>, </em><em>optional</em>) – The sorting order. Defaults to “desc”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The artist details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.get_artist_albums">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_artist_albums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artist_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'popularity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'desc'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.get_artist_albums" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves a list of albums for a given artist by their ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artist_id</strong> (<em>str</em>) – The ID of the artist.</p></li>
+<li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – The page number to retrieve. Defaults to 0.</p></li>
+<li><p><strong>sort_by</strong> (<em>str</em><em>, </em><em>optional</em>) – The sorting criteria. Defaults to “popularity”.</p></li>
+<li><p><strong>sort_order</strong> (<em>str</em><em>, </em><em>optional</em>) – The sorting order. Defaults to “desc”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The list of albums for the artist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.get_artist_songs">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_artist_songs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artist_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'popularity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'desc'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.get_artist_songs" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves a list of songs for a given artist by their ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artist_id</strong> (<em>str</em>) – The ID of the artist.</p></li>
+<li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – The page number to retrieve. Defaults to 0.</p></li>
+<li><p><strong>sort_by</strong> (<em>str</em><em>, </em><em>optional</em>) – The sorting criteria. Defaults to “popularity”.</p></li>
+<li><p><strong>sort_order</strong> (<em>str</em><em>, </em><em>optional</em>) – The sorting order. Defaults to “desc”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The list of songs for the artist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.get_playlist">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_playlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">playlist_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">playlist_link</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.get_playlist" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves a playlist by its ID or link.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>playlist_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The ID of the playlist.</p></li>
+<li><p><strong>playlist_link</strong> (<em>str</em><em>, </em><em>optional</em>) – The link to the playlist.</p></li>
+<li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – The page number to retrieve. Defaults to 0.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of results per page. Defaults to 10.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The playlist details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.get_song_by_id">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_song_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">song_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.get_song_by_id" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves a song by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>song_id</strong> (<em>str</em>) – The ID of the song.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The song details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.get_song_lyrics">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_song_lyrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">song_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.get_song_lyrics" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves lyrics for a song by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>song_id</strong> (<em>str</em>) – The ID of the song.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The song lyrics.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.get_song_suggestions">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_song_suggestions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">song_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.get_song_suggestions" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves song suggestions based on the given song ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>song_id</strong> (<em>str</em>) – The ID of the song.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of suggestions to retrieve. Defaults to 10.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The song suggestions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.search">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.search" title="Link to this definition">¶</a></dt>
+<dd><p>Searches globally for songs, albums, artists, and playlists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>str</em>) – The search query. This can be a song name, album name,
+artist name, or playlist name.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>The search results containing information about the songs,</dt><dd><p>albums, artists, and playlists matching the query.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">TheApi</span><span class="w"> </span><span class="kn">import</span> <span class="n">SaavnAPI</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">SaavnAPI</span><span class="p">()</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;Jannat Ve&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.search_albums">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">search_albums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.search_albums" title="Link to this definition">¶</a></dt>
+<dd><p>Searches for albums.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – The search query.</p></li>
+<li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – The page number to retrieve. Defaults to 0.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of results per page. Defaults to 10.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The search results for albums.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.search_artists">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">search_artists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.search_artists" title="Link to this definition">¶</a></dt>
+<dd><p>Searches for artists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – The search query.</p></li>
+<li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – The page number to retrieve. Defaults to 0.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of results per page. Defaults to 10.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The search results for artists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.search_playlists">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">search_playlists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.search_playlists" title="Link to this definition">¶</a></dt>
+<dd><p>Searches for playlists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – The search query.</p></li>
+<li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – The page number to retrieve. Defaults to 0.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of results per page. Defaults to 10.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The search results for playlists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TheApi.SaavnAPI.search_songs">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">search_songs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.SaavnAPI.search_songs" title="Link to this definition">¶</a></dt>
+<dd><p>Searches for songs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – The search query.</p></li>
+<li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – The page number to retrieve. Defaults to 0.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of results per page. Defaults to 10.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> – The search results for songs.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">TheApi</span><span class="w"> </span><span class="kn">import</span> <span class="n">SaavnAPI</span>
@@ -440,7 +682,22 @@ globally on the Saavn platform.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">SaavnAPI</a><ul>
-<li><a class="reference internal" href="#TheApi.SaavnAPI"><code class="docutils literal notranslate"><span class="pre">SaavnAPI</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI"><code class="docutils literal notranslate"><span class="pre">SaavnAPI</span></code></a><ul>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.get_album"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.get_album()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.get_artist"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.get_artist()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.get_artist_albums"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.get_artist_albums()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.get_artist_songs"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.get_artist_songs()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.get_playlist"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.get_playlist()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.get_song_by_id"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.get_song_by_id()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.get_song_lyrics"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.get_song_lyrics()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.get_song_suggestions"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.get_song_suggestions()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.search"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.search()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.search_albums"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.search_albums()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.search_artists"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.search_artists()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.search_playlists"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.search_playlists()</span></code></a></li>
+<li><a class="reference internal" href="#TheApi.SaavnAPI.search_songs"><code class="docutils literal notranslate"><span class="pre">SaavnAPI.search_songs()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
