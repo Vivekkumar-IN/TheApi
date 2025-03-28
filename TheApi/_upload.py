@@ -26,7 +26,7 @@ class UploadMedia:
         """Uploads an image to `Envs.sh <https://envs.sh>`_.
 
         Args:
-            file_path (Union[str, bytes, BytesIO]): The image file to upload. Can be one of:
+            file_path (Union[str, bytes, BytesIO]): The media file to upload. Can be one of:
                 - str: Local file path (e.g., "image.png").
                 - bytes: Raw binary data of the file.
                 - BytesIO: File-like object containing binary data.
@@ -113,7 +113,38 @@ class UploadMedia:
         except Exception as e:
             return {"success": False, "error": str(e)}
 
-    async def upload_to_catbox(self, file_path):
+    async def upload_to_catbox(self, file_path: Union[str, bytes, BytesIO]):
+        """
+        Uploads a file to `Catbox.moe <https://catbox.moe>`_ and Get the uploaded file URL.
+
+        Args:
+            file_path (Union[str, bytes, BytesIO]): The media file to upload. Can be one of:
+                - str: Local file path (e.g., "image.png").
+                - bytes: Raw binary data of the file.
+                - BytesIO: File-like object containing binary data.
+
+        Returns:
+            dict: A dictionary containing:
+                - "success" (bool): True if the upload was successful, False otherwise.
+                - "url" (str, optional): The URL of the uploaded file if successful.
+                - "error" (Exception, optional): The error message if the upload fails.
+
+        Example:
+
+            .. code-block:: python
+               :caption: Successful upload
+
+                >>> result = await api.upload_to_catbox("example.jpg")
+                >>> print(result)
+                # {'success': True, 'url': 'https://files.catbox.moe/abcd1234.jpg'}
+
+            .. code-block:: python
+               :caption: Failed upload (e.g., file not found)
+
+                >>> result = await api.upload_to_catbox("invalid.jpg")
+                >>> print(result)
+                # {'success': False, 'error': FileNotFoundError("File not found")}
+        """
         err, raw = await self._get_bytes(file_path)
         if err:
             return {"success": False, "error": err}
@@ -129,7 +160,40 @@ class UploadMedia:
 
         return {"success": True, "url": response.text}
 
-    async def upload_to_pomf(self, file_path):
+
+    async def upload_to_pomf(self, file_path: Union[str, bytes, BytesIO]):
+        """
+        Uploads a file to `Catbox.moe <https://catbox.moe>`_ and Get the uploaded file URL.
+
+        Args:
+            file_path (Union[str, bytes, BytesIO]): The media file to upload. Can be one of:
+                - str: Local file path (e.g., "image.png").
+                - bytes: Raw binary data of the file.
+                - BytesIO: File-like object containing binary data.
+
+        Returns:
+            dict: A dictionary containing:
+                - "success" (bool): True if the upload was successful, False otherwise.
+                - "url" (str, optional): The URL of the uploaded file if successful.
+                - "error" (Exception, optional): The error message if the upload fails.
+
+        Example:
+
+            .. code-block:: python
+               :caption: Successful upload
+
+                >>> result = await api.upload_to_pomf("example.jpg")
+                >>> print(result)
+                # {'success': True, 'url': 'https://pomf2.lain.la/f/abcd.jpg'}
+
+            .. code-block:: python
+               :caption: Failed upload (e.g., file not found)
+
+                >>> result = await api.upload_to_pomf("invalid.jpg")
+                >>> print(result)
+                # {'success': False, 'error': FileNotFoundError("File not found")}
+        """
+
         err, raw = await self._get_bytes(file_path)
         if err:
             return {"success": False, "error": err}
@@ -144,9 +208,42 @@ class UploadMedia:
 
         return {"success": True, "url": response.json()["files"][0]["url"]}
 
+
     async def upload_to_0x0(
-        file_path: bytes, secret: bool = False, expires: int = None
+        file_path: , secret: bool = False, expires: int = None
     ) -> dict:
+        """
+        Uploads a file to 0x0.st and returns the uploaded file URL along with retention details.
+
+        Args:
+            file_path (Union[str, bytes, BytesIO]): The media file to uploaded.
+            secret (bool, optional): If True, generates a longer, hard-to-guess URL (default: False).
+            expires (int, optional): Sets the maximum file lifetime in hours or the expiration time in 
+                                     milliseconds since the UNIX epoch (default: None).
+
+        Returns:
+            dict: A dictionary containing:
+                - "success" (bool): True if the upload was successful, False otherwise.
+                - "url" (str, optional): The URL of the uploaded file if successful.
+                - "retention" (str, optional): The estimated retention period of the file.
+                - "error" (str, optional): The error message if the upload fails.
+
+        Example:
+            Successful upload:
+                >>> result = await api.upload_to_0x0("example.jpg")
+                >>> print(result)
+                {'success': True, 'url': 'https://0x0.st/abcd', 'retention': '30 days'}
+
+            Successful upload with expiration:
+                >>> result = await api.upload_to_0x0("example.jpg", expires=48)
+                >>> print(result)
+                {'success': True, 'url': 'https://0x0.st/abcd', 'retention': '48 hours'}
+
+            Failed upload (e.g., file not found):
+                >>> result = await api.upload_to_0x0("invalid.jpg")
+                >>> print(result)
+                {'success': False, 'error': 'File not found'}
+        """
         url = "https://0x0.st"
         files = {"file": file_bytes}
         data = {}
