@@ -325,6 +325,19 @@ The available options are:
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">list</span></code> – A list of image URLs retrieved from the Bing search results.</p>
 </dd>
 </dl>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">bing_image</span><span class="p">(</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;https://cdn.custom-cursor.com/collections/129/cover-pokemon-preview.png&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;https://images.pexels.com/photos/9560277/pexels-photo-9560277.jpeg?cs=srgb&amp;dl=pexels-erik-mclean-9560277.jpg&amp;fm=jpg&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;https://images.pexels.com/photos/9661257/pexels-photo-9661257.jpeg?cs=srgb&amp;dl=pexels-erik-mclean-9661257.jpg&amp;fm=jpg&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -417,19 +430,15 @@ If failed, the dictionary will contain <strong>“success”: False</strong> and
 </dl>
 <p class="rubric">Example</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">code_snippet</span> <span class="o">=</span> <span class="s2">&quot;print(&#39;Hello, World!&#39;)&quot;</span>
-
 <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">carbon</span><span class="p">(</span>
     <span class="n">code_snippet</span><span class="p">,</span>
     <span class="n">theme</span><span class="o">=</span><span class="s2">&quot;dracula&quot;</span><span class="p">,</span>
     <span class="n">language</span><span class="o">=</span><span class="s2">&quot;python&quot;</span>
 <span class="p">)</span>
-
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;success&#39;</span><span class="p">]:</span>
-
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Code image saved as &#39;</span><span class="si">{</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
-
 <span class="k">else</span><span class="p">:</span>
-
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
