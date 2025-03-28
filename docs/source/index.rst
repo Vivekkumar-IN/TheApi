@@ -17,7 +17,7 @@ TheApix is designed to integrate multiple API keys and provide a unified interfa
    :caption: Contents:
 
    client
-   api/saavn/index
+   api/saavn
    api/index
 
 
