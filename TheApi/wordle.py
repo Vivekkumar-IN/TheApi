@@ -191,7 +191,8 @@ class Wordle:
                 {
                     "status": "success",
                     "message": "This is your 1st hint: The 3️⃣ character of the word is `L`",
-                    "hints_left": 2}
+                    "hints_left": 2
+                }
         """
         if key not in self.active_games:
             return {"status": "error", "message": "No active game!"}
