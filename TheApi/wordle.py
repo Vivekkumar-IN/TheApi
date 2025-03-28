@@ -31,7 +31,7 @@ class Wordle:
            print(result)
 
 
-        ..code-block:: JSON
+        .. code-block:: JSON
            :caption: Expected Outputs
 
            {'status': 'success', 'message': 'Game started! Guess a 5-letter word.', 'rules': {...}, 'hints_left': 3, 'attempts_left': 5}
@@ -57,12 +57,12 @@ class Wordle:
 
         Example:
 
-            ..code-block:: python
+            .. code-block:: python
 
                 result = await api.start(key=1234, hint_limit=3, attempt_limit=5)
                 print(result)
 
-            ..code-block:: JSON
+            .. code-block:: JSON
                :caption: Expected Output
 
                {
@@ -123,13 +123,13 @@ class Wordle:
 
         Example:
 
-            ..code-block:: python
+            .. code-block:: python
                :caption: Example Usage
 
                 result = await api.guess(key=1234, word="apple")
                 print(result)
 
-            ..code-block:: JSON
+            .. code-block:: JSON
                :caption: Expected Output
 
                 {
@@ -177,13 +177,13 @@ class Wordle:
 
         Example:
 
-            ..code-block :: python
+            .. code-block :: python
 
                 result = await api.hint(key=1234)
 
                 print(result)
 
-            ..code-block :: JSON
+            .. code-block :: JSON
                :caption: Expected Output
 
                 {'status': 'success', 'message': 'This is your 1st hint: The 3️⃣ character of the word is `L`', 'hints_left': 2}
@@ -223,12 +223,12 @@ class Wordle:
             dict: Game result and correct answer.
 
         Example:
-            ..code-block :: python
+            .. code-block :: python
 
                 result = await api.end(key=1234)
                 print(result)
 
-            ..code-block :: JSON
+            .. code-block :: JSON
                :caption: Expected Output
 
                 {'status': 'ended', 'message': 'Game ended. The word was "melon".'}
