@@ -189,8 +189,8 @@ class Wordle:
                :caption: Expected Output
 
                 {
-                    "status": "success", 
-                    "message": "This is your 1st hint: The 3️⃣ character of the word is `L`", 
+                    "status": "success",
+                    "message": "This is your 1st hint: The 3️⃣ character of the word is `L`",
                     "hints_left": 2}
         """
         if key not in self.active_games:
@@ -237,7 +237,7 @@ class Wordle:
                :caption: Expected Output
 
                 {
-                    "status": "ended", 
+                    "status": "ended",
                     "message": "Game ended. The word was 'melon'."
                 }
         """
