@@ -8,35 +8,36 @@ class Wordle:
     The game allows a user to guess a 5-letter word, providing feedback on correct and incorrect letters.
     Hints reveal specific letters in a structured manner.
 
-    .. code-block:: python
-       :caption: Example Usage
+    Example:
 
-        api = Wordle()
+        .. code-block:: python
 
-        # Start a game
-        result = await api.start(key=1234, hint_limit=3, attempt_limit=5)
-        print(result)
+            api = Wordle()
 
-        # Make a guess
-        result = await api.guess(key=1234, word="apple")
-        print(result)
+            # Start a game
+            result = await api.start(key=1234, hint_limit=3, attempt_limit=5)
+            print(result)
 
-        # Request a hint
-        result = await api.hint(key=1234)
-        print(result)
+            # Make a guess
+            result = await api.guess(key=1234, word="apple")
+            print(result)
 
-        # End the game
-        result = await api.end(key=1234)
-        print(result)
+            # Request a hint
+            result = await api.hint(key=1234)
+            print(result)
+
+            # End the game
+            result = await api.end(key=1234)
+            print(result)
 
 
-    ..code-block:: JSON
-       :caption: Expected Outputs
+        ..code-block:: JSON
+           :caption: Expected Outputs
 
-        {'status': 'success', 'message': 'Game started! Guess a 5-letter word.', 'rules': {...}, 'hints_left': 3, 'attempts_left': 5}
-        {'status': 'continue', 'hint': '🟩⬛🟨⬛⬛', 'attempts_left': 4}
-        {'status': 'success', 'message': 'This is your 1st hint: The 3️⃣ character of the word is `L`', 'hints_left': 2}
-        {'status': 'ended', 'message': 'Game ended. The word was "melon".'}
+            {'status': 'success', 'message': 'Game started! Guess a 5-letter word.', 'rules': {...}, 'hints_left': 3, 'attempts_left': 5}
+            {'status': 'continue', 'hint': '🟩⬛🟨⬛⬛', 'attempts_left': 4}
+            {'status': 'success', 'message': 'This is your 1st hint: The 3️⃣ character of the word is `L`', 'hints_left': 2}
+            {'status': 'ended', 'message': 'Game ended. The word was "melon".'}
     """
 
     def __init__(self):
