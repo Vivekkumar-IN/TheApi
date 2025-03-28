@@ -144,7 +144,7 @@ class UploadMedia:
 
         return {"success": True, "url": response.json()["files"][0]["url"]}
 
-    async def gige(file_path: bytes, secret: bool = False, expires: int = None) -> dict:
+    async def upload_to_0x0(file_path: bytes, secret: bool = False, expires: int = None) -> dict:
         url = "https://0x0.st"
         files = {"file": file_bytes}
         data = {}
