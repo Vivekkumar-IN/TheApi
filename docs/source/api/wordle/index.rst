@@ -6,6 +6,7 @@ Wordle Game
 
 .. autoclass:: Wordle
    :exclude-members: __new__
+   :members:
 
 
 
