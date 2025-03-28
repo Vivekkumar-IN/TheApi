@@ -27,6 +27,7 @@ class UploadMedia:
 
         Args:
             file_path (Union[str, bytes, BytesIO]): The media file to upload. Can be one of:
+
                 - str: Local file path (e.g., "image.png").
                 - bytes: Raw binary data of the file.
                 - BytesIO: File-like object containing binary data.
@@ -119,6 +120,7 @@ class UploadMedia:
 
         Args:
             file_path (Union[str, bytes, BytesIO]): The media file to upload. Can be one of:
+
                 - str: Local file path (e.g., "image.png").
                 - bytes: Raw binary data of the file.
                 - BytesIO: File-like object containing binary data.
@@ -166,6 +168,7 @@ class UploadMedia:
 
         Args:
             file_path (Union[str, bytes, BytesIO]): The media file to upload. Can be one of:
+
                 - str: Local file path (e.g., "image.png").
                 - bytes: Raw binary data of the file.
                 - BytesIO: File-like object containing binary data.
