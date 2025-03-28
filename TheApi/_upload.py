@@ -22,6 +22,9 @@ class UploadMedia:
             err = "Invalid input type"
         return err, data
 
+    async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> dict:
+        return await self.upload_to_envsh(file_path)
+
     async def upload_to_envsh(self, file_path: Union[str, bytes, BytesIO]) -> dict:
         """Uploads an image to `Envs.sh <https://envs.sh>`_.
 
