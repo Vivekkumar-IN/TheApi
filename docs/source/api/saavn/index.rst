@@ -6,7 +6,7 @@ SaavnAPI
 
 .. autoclass:: SaavnAPI
    :exclude-members: __new__
-
+   :members:
 
 .. code-block:: python
 
