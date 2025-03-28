@@ -39,7 +39,7 @@ class Wordle:
            {"status": "success", "message": "Game started! Guess a 5-letter word.", "rules": {...}, "hints_left": 3, "attempts_left": 5}
            {"status": "continue", "hint": "🟩⬛🟨⬛⬛", "attempts_left": 4}
            {"status": "success", "message": "This is your 1st hint: The 3️⃣ character of the word is `L`", "hints_left": 2}
-           {"status": "ended", "message": 'Game ended. The word was 'melon'."}
+           {"status": "ended", "message": "Game ended. The word was 'melon'."}
     """
 
     def __init__(self):
