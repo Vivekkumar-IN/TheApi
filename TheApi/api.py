@@ -240,7 +240,7 @@ class Client(UploadMedia):
                 else:
                     print(f"Error: {response['error']}")
 
-            .. code-block JSON
+            .. code-block:: JSON
                :caption: output
 
                 {
@@ -248,7 +248,7 @@ class Client(UploadMedia):
                     "result": "downloads/carbon_Z6b6oUv7.png"
                 }
 
-            .. code-block text
+            .. code-block:: text
 
                 Code image saved as 'downloads/carbon_Z6b6oUv7.png'.
         """
