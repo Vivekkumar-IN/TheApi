@@ -117,9 +117,9 @@ class Wordle:
             dict: Feedback on the guess or game end status.
 
         Color Explanation:
-        - 🟩 (``Green``): Correct letter in the correct position.
-        - 🟨 (``Yellow``): Correct letter in the wrong position.
-        - ⬛ (``Black``): Letter is not in the word.
+            - 🟩 (``Green``): Correct letter in the correct position.
+            - 🟨 (``Yellow``): Correct letter in the wrong position.
+            - ⬛ (``Black``): Letter is not in the word.
 
         Example:
 
