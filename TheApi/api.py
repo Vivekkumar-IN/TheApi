@@ -12,9 +12,9 @@ from bs4 import BeautifulSoup
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 from ._request import Request
+from ._upload import UploadMedia
 
-
-class Client:
+class Client(UploadMedia):
     """
     A class to interact with various APIs and perform operations like fetching data and generating files.
 
