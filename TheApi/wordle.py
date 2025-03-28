@@ -1,5 +1,6 @@
 import random
 
+
 class Wordle:
     """
     A Wordle-style word guessing game Class.
@@ -30,7 +31,7 @@ class Wordle:
 
     ..code-block:: JSON
        :caption: Expected Outputs
-       
+
         {'status': 'success', 'message': 'Game started! Guess a 5-letter word.', 'rules': {...}, 'hints_left': 3, 'attempts_left': 5}
         {'status': 'continue', 'hint': '🟩⬛🟨⬛⬛', 'attempts_left': 4}
         {'status': 'success', 'message': 'This is your 1st hint: The 3️⃣ character of the word is `L`', 'hints_left': 2}
@@ -53,21 +54,21 @@ class Wordle:
             dict: Game start details.
 
         Example:
-        
+
             ..code-block:: python
-        
+
                 result = await api.start(key=1234, hint_limit=3, attempt_limit=5)
                 print(result)
-            
+
             ..code-block:: JSON
                :caption: Expected Output
-           
+
                {
                     'status': 'success',
                     'message': 'Game started! Guess a 5-letter word.',
                     'rules': {
-                        '🟩': 'Correct letter in correct position', 
-                        '🟨': 'Correct letter in wrong position', 
+                        '🟩': 'Correct letter in correct position',
+                        '🟨': 'Correct letter in wrong position',
                         '⬛': 'Incorrect letter'
                      },
                     'hints_left': 3,
@@ -76,8 +77,9 @@ class Wordle:
         """
         if key in self.active_games:
             return {"status": "error", "message": "Game already in progress!"}
-                
+
         from .api import Client
+
         words = await Client().get_words()
         secret_word = random.choice(words)
         self.active_games[key] = {
@@ -111,26 +113,26 @@ class Wordle:
 
         Returns:
             dict: Feedback on the guess or game end status.
-            
+
         Color Explanation:
         - 🟩 (``Green``): Correct letter in the correct position.
         - 🟨 (``Yellow``): Correct letter in the wrong position.
         - ⬛ (``Black``): Letter is not in the word.
-        
+
         Example:
-        
-            ..code-block:: python 
+
+            ..code-block:: python
                :caption: Example Usage
-           
+
                 result = await api.guess(key=1234, word="apple")
                 print(result)
-        
-            ..code-block:: JSON 
+
+            ..code-block:: JSON
                :caption: Expected Output
-           
+
                 {
-                    'status': 'continue', 
-                    'hint': '🟩⬛🟨⬛⬛', 
+                    'status': 'continue',
+                    'hint': '🟩⬛🟨⬛⬛',
                    'attempts_left': 4
                 }
         """
@@ -140,7 +142,10 @@ class Wordle:
         game = self.active_games[key]
 
         if len(word) != 5 or not word.isalpha():
-            return {"status": "error", "message": "Guess must be a valid 5-letter word!"}
+            return {
+                "status": "error",
+                "message": "Guess must be a valid 5-letter word!",
+            }
 
         game["attempts"] += 1
 
@@ -167,18 +172,18 @@ class Wordle:
 
         Returns:
             dict: A structured hint message or an error if no hints remain.
-            
+
         Example:
-        
+
             ..code-block :: python
-        
+
                 result = await api.hint(key=1234)
-            
+
                 print(result)
-        
+
             ..code-block :: JSON
                :caption: Expected Output
-        
+
                 {'status': 'success', 'message': 'This is your 1st hint: The 3️⃣ character of the word is `L`', 'hints_left': 2}
         """
         if key not in self.active_games:
@@ -189,7 +194,9 @@ class Wordle:
         if game["hints_used"] >= game["hint_limit"]:
             return {"status": "error", "message": "You've used all hints!"}
 
-        hint_text, game["hint_positions"] = self._get_incremental_hint(game["word"], game["hint_positions"])
+        hint_text, game["hint_positions"] = self._get_incremental_hint(
+            game["word"], game["hint_positions"]
+        )
 
         if hint_text:
             game["hints_used"] += 1
@@ -215,13 +222,13 @@ class Wordle:
 
         Example:
             ..code-block :: python
-        
+
                 result = await api.end(key=1234)
                 print(result)
-          
+
             ..code-block :: JSON
                :caption: Expected Output
-           
+
                 {'status': 'ended', 'message': 'Game ended. The word was "melon".'}
         """
         if key in self.active_games:
@@ -229,10 +236,16 @@ class Wordle:
             del self.active_games[key]
 
             if win:
-                return {"status": "win", "message": f"You guessed it! The word was '{word}'."}
-            
+                return {
+                    "status": "win",
+                    "message": f"You guessed it! The word was '{word}'.",
+                }
+
             if exceeded:
-                return {"status": "lost", "message": f"You exceeded your limit! The correct word was '{word}'."}
+                return {
+                    "status": "lost",
+                    "message": f"You exceeded your limit! The correct word was '{word}'.",
+                }
 
             return {"status": "ended", "message": f"Game ended. The word was '{word}'."}
 
