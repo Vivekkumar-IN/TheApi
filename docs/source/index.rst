@@ -16,7 +16,7 @@ TheApix is designed to integrate multiple API keys and provide a unified interfa
    :hidden:
    :caption: Contents:
 
-   client
+   api/client
    api/saavn
    api/wordle
 
