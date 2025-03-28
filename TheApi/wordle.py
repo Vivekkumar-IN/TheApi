@@ -37,9 +37,9 @@ class Wordle:
            :caption: Expected Outputs
 
            {"status": "success", "message": "Game started! Guess a 5-letter word.", "rules": {...}, "hints_left": 3, "attempts_left": 5}
-           {'status': 'continue', 'hint': '🟩⬛🟨⬛⬛', 'attempts_left': 4}
-           {'status': 'success', 'message': 'This is your 1st hint: The 3️⃣ character of the word is `L`', 'hints_left': 2}
-           {'status': 'ended', 'message': 'Game ended. The word was "melon".'}
+           {"status": "continue", "hint": '🟩⬛🟨⬛⬛", "attempts_left": 4}
+           {"status": "success", "message": "This is your 1st hint: The 3️⃣ character of the word is `L`", "hints_left": 2}
+           {"status": "ended", "message": 'Game ended. The word was 'melon'."}
     """
 
     def __init__(self):
@@ -68,15 +68,15 @@ class Wordle:
                :caption: Expected Output
 
                {
-                    'status': 'success',
-                    'message': 'Game started! Guess a 5-letter word.',
-                    'rules': {
-                        '🟩': 'Correct letter in correct position',
-                        '🟨': 'Correct letter in wrong position',
-                        '⬛': 'Incorrect letter'
+                    "status": "success",
+                    "message": "Game started! Guess a 5-letter word.",
+                    "rules": {
+                        "🟩": "Correct letter in correct position",
+                        "🟨": "Correct letter in wrong position",
+                        "⬛": "Incorrect letter"
                      },
-                    'hints_left': 3,
-                    'attempts_left': 5
+                    "hints_left": 3,
+                    "attempts_left": 5
                 }
         """
         if key in self.active_games:
@@ -135,9 +135,9 @@ class Wordle:
                :caption: Expected Output
 
                 {
-                    'status': 'continue',
-                    'hint': '🟩⬛🟨⬛⬛',
-                   'attempts_left': 4
+                    "status": "continue",
+                    "hint": "🟩⬛🟨⬛⬛",
+                    "attempts_left": 4
                 }
         """
         if key not in self.active_games:
@@ -188,7 +188,7 @@ class Wordle:
             .. code-block :: JSON
                :caption: Expected Output
 
-                {'status': 'success', 'message': 'This is your 1st hint: The 3️⃣ character of the word is `L`', 'hints_left': 2}
+                {"status": "success", "message": "This is your 1st hint: The 3️⃣ character of the word is `L`", 'hints_left': 2}
         """
         if key not in self.active_games:
             return {"status": "error", "message": "No active game!"}
@@ -233,7 +233,7 @@ class Wordle:
             .. code-block :: JSON
                :caption: Expected Output
 
-                {'status': 'ended', 'message': 'Game ended. The word was "melon".'}
+                {"status": "ended", "message": "Game ended. The word was 'melon'."}
         """
         if key in self.active_games:
             word = self.active_games[key]["word"]
