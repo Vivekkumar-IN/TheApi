@@ -1,5 +1,6 @@
 import os
 import re
+import math
 import random
 import string
 import textwrap
@@ -20,11 +21,9 @@ class Client:
 
     Args:
         downloads_dir (``str``, *optional*): Directory to save downloaded files. Defaults to "downloads".
-        quiet (``bool``, *optional*): Whether to suppress error messages. Defaults to False.
     """
 
     def __init__(self, downloads_dir: str = "downloads", quiet: bool = False):
-
         self.base_urls = {
             "advice": "https://api.adviceslip.com/advice",
             "btc_value": "https://api.stakdek.de/api/btc/",
@@ -52,7 +51,6 @@ class Client:
             "wikipedia_search": "https://en.wikipedia.org/w/api.php",
             "words": "https://random-word-api.vercel.app/api",
             "word_info": "https://api.dictionaryapi.dev/api/v2/entries/en/{word}",
-            "upload": "https://envs.sh/",
         }
         self.request = Request()
         self.downloads_dir = downloads_dir
@@ -1530,52 +1528,97 @@ class Client:
 
         return file_path
 
-    async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> str:
+    
+    async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> dict:
         """
-        Uploads an image to https://envs.sh.
+        Uploads an image to `Envs.sh <https://envs.sh>`_.
 
         Args:
-            file_path (``str``, ``bytes``, ``BytesIO``): The image file to upload.
-                Can be a file path (**str**), binary data (**bytes**), or a **BytesIO** object.
+            file_path (Union[str, bytes, BytesIO]): The image file to upload. 
+            
+                - str: Local file path (e.g., "image.png").
+                - bytes: Raw binary data of the file.
+                - BytesIO: File-like object containing binary data.
 
         Returns:
-            ``str``: The URL or confirmation message of the uploaded image if the upload is successful.
-                Returns **"Unexpected response format"** if the response format is not as expected.
-        """
+            dict: 
+            
+                - {"success": True, "url": "<file_url>", "retention": "<days> days"} (on successful upload)
+                - {"success": False, "error": "<error_message>"} (if upload fails)
+                
+            Retention period is calculated based on file size, ranging from 30 to 90 days.
 
+        Example:
+
+            .. code-block:: python
+            
+                # Upload an image from a file path
+                x = await api.upload_image("image.png")
+                print(x)
+                if x["success"]:
+                    print(f"Your uploaded file link is {x["url"]} and this will deleted in {x["retention"]}.
+
+            .. code-block:: JSON
+            
+                {
+                    "success": True, 
+                    "url": "https://envs.sh/abc.png", 
+                    "retention": "85 days"
+                }
+
+            .. code-block::
+
+               Your uploaded file link is https://envs.sh/abc.png and this will deleted in 85 days.
+               
+            .. code-block:: python
+            
+                # Upload an image from binary data
+                with open("image.png", "rb") as f:
+                    x = await api.upload_image(f.read())
+                print(x)
+                
+                # Output: {"success": True, "url": "https://envs.sh/def.png", "retention": "78 days"}
+
+                # Upload an image from BytesIO
+                from io import BytesIO
+                x = await api.upload_image(BytesIO(b"image binary data"))
+                print(x)
+                # Output: {"success": True, "url": "https://envs.sh/ghi.png", "retention": "82 days"}
+
+                # Invalid input example (wrong format)
+                x = await api.upload_image(12345)
+                print(x)
+                # Output: {"success": False, "error": "Invalid input type"}
+
+                # File not found error
+                x = await api.upload_image("non_existent_file.png")
+                print(x)
+                # Output: {"success": False, "error": "File not found: 'non_existent_file.png'"}
+        """
         if isinstance(file_path, str):
             try:
                 async with aiofiles.open(file_path, "rb") as f:
                     image_bytes = await f.read()
             except FileNotFoundError:
-                return self._handle_error(
-                    ValueError(
-                        f"File not found: '{file_path}' - Ensure the file path is correct."
-                    )
-                )
-        elif isinstance(file_path, bytes) or isinstance(file_path, BytesIO):
-            image_bytes = (
-                file_path if isinstance(file_path, bytes) else file_path.getvalue()
-            )
+                return {"success": False, "error": f"File not found: '{file_path}'"}
+        elif isinstance(file_path, (bytes, BytesIO)):
+            image_bytes = file_path if isinstance(file_path, bytes) else file_path.getvalue()
         else:
-            return self._handle_error(
-                ValueError(
-                    "Invalid input type - Expected a file path (str), binary data (bytes), or BytesIO object."
-                )
-            )
+            return {"success": False, "error": "Invalid input type"}
 
-        url = self.base_urls["upload"]
-        files = {"file": image_bytes}
+        file_size = len(image_bytes)
+        max_size, min_age, max_age = 512 * 1024 * 1024, 30, 90
+        retention = min_age + (-max_age + min_age) * pow((file_size / max_size - 1), 3)
+        retention = max(min_age, min(max_age, retention))
+
+        url = "https://envs.sh"
+        files = {"file": ("upload.png", image_bytes, "image/png")}
 
         try:
             response = await self.request.post(url=url, files=files)
-            return (
-                response.text.strip()
-                if isinstance(response, str)
-                else "Unexpected response format"
-            )
-        except ValueError as e:
-            return self._handle_error(ValueError(f"Upload failed: {str(e)}"))
+            return {"success": True, "url": response.text.strip(), "retention": f"{round(retention)} days"}
+        except Exception as e:
+            return {"success": False, "error": str(e)}
 
     async def riddle(self) -> dict:
         """
