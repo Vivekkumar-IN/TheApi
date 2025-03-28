@@ -442,6 +442,18 @@ If failed, the dictionary will contain <strong>“success”: False</strong> and
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">output</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;downloads/carbon_Z6b6oUv7.png&quot;</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Code image saved as &#39;downloads/carbon_Z6b6oUv7.png&#39;.
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1251,8 +1263,8 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="literal-block-wrapper docutils container" id="id18">
-<div class="code-block-caption"><span class="caption-text">Upload an image from a file path</span><a class="headerlink" href="#id18" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">Upload an image from a file path</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
  <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;success&quot;</span><span class="p">]:</span>
@@ -1270,8 +1282,8 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Your uploaded file link is https://envs.sh/abc.png and this will be deleted in 85 days.
 </pre></div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id19">
-<div class="code-block-caption"><span class="caption-text">Upload an image from binary data</span><a class="headerlink" href="#id19" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">Upload an image from binary data</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
      <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -1279,8 +1291,8 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id20">
-<div class="code-block-caption"><span class="caption-text">Upload an image from BytesIO</span><a class="headerlink" href="#id20" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">Upload an image from BytesIO</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
  <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;image binary data&quot;</span><span class="p">))</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -1288,16 +1300,16 @@ or a custom resolution in the format “width×height”. Defaults to “desktop
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id21">
-<div class="code-block-caption"><span class="caption-text">Invalid input example</span><a class="headerlink" href="#id21" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">Invalid input example</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
  <span class="c1"># Output: {&quot;success&quot;: false, &quot;error&quot;: &quot;Invalid input type&quot;}</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id22">
-<div class="code-block-caption"><span class="caption-text">File not found error</span><a class="headerlink" href="#id22" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">File not found error</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="s2">&quot;non_existent_file.png&quot;</span><span class="p">)</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
  <span class="c1"># Output: {&quot;success&quot;: false, &quot;error&quot;: &quot;File not found: &#39;non_existent_file.png&#39;&quot;}</span>
@@ -1384,16 +1396,16 @@ milliseconds since the UNIX epoch (default: None).</p></li>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="literal-block-wrapper docutils container" id="id23">
-<div class="code-block-caption"><span class="caption-text">Successful upload</span><a class="headerlink" href="#id23" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">Successful upload</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_catbox</span><span class="p">(</span><span class="s2">&quot;example.jpg&quot;</span><span class="p">)</span>
  <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
  <span class="c1"># {&#39;success&#39;: True, &#39;url&#39;: &#39;https://files.catbox.moe/abcd1234.jpg&#39;}</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id24">
-<div class="code-block-caption"><span class="caption-text">Failed upload (e.g., file not found)</span><a class="headerlink" href="#id24" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">Failed upload (e.g., file not found)</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_catbox</span><span class="p">(</span><span class="s2">&quot;invalid.jpg&quot;</span><span class="p">)</span>
  <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
  <span class="c1"># {&#39;success&#39;: False, &#39;error&#39;: FileNotFoundError(&quot;File not found&quot;)}</span>
@@ -1430,8 +1442,8 @@ milliseconds since the UNIX epoch (default: None).</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="literal-block-wrapper docutils container" id="id25">
-<div class="code-block-caption"><span class="caption-text">Upload an image from a file path</span><a class="headerlink" href="#id25" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-text">Upload an image from a file path</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
  <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;success&quot;</span><span class="p">]:</span>
@@ -1449,8 +1461,8 @@ milliseconds since the UNIX epoch (default: None).</p></li>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Your uploaded file link is https://envs.sh/abc.png and this will be deleted in 85 days.
 </pre></div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id26">
-<div class="code-block-caption"><span class="caption-text">Upload an image from binary data</span><a class="headerlink" href="#id26" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-text">Upload an image from binary data</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
      <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -1458,8 +1470,8 @@ milliseconds since the UNIX epoch (default: None).</p></li>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id27">
-<div class="code-block-caption"><span class="caption-text">Upload an image from BytesIO</span><a class="headerlink" href="#id27" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-text">Upload an image from BytesIO</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
  <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;image binary data&quot;</span><span class="p">))</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -1467,16 +1479,16 @@ milliseconds since the UNIX epoch (default: None).</p></li>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id28">
-<div class="code-block-caption"><span class="caption-text">Invalid input example</span><a class="headerlink" href="#id28" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-text">Invalid input example</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
  <span class="c1"># Output: {&quot;success&quot;: false, &quot;error&quot;: &quot;Invalid input type&quot;}</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id29">
-<div class="code-block-caption"><span class="caption-text">File not found error</span><a class="headerlink" href="#id29" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-text">File not found error</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">x</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_image</span><span class="p">(</span><span class="s2">&quot;non_existent_file.png&quot;</span><span class="p">)</span>
  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
  <span class="c1"># Output: {&quot;success&quot;: false, &quot;error&quot;: &quot;File not found: &#39;non_existent_file.png&#39;&quot;}</span>
@@ -1513,16 +1525,16 @@ milliseconds since the UNIX epoch (default: None).</p></li>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="literal-block-wrapper docutils container" id="id30">
-<div class="code-block-caption"><span class="caption-text">Successful upload</span><a class="headerlink" href="#id30" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-text">Successful upload</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_pomf</span><span class="p">(</span><span class="s2">&quot;example.jpg&quot;</span><span class="p">)</span>
  <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
  <span class="c1"># {&#39;success&#39;: True, &#39;url&#39;: &#39;https://pomf2.lain.la/f/abcd.jpg&#39;}</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id31">
-<div class="code-block-caption"><span class="caption-text">Failed upload (e.g., file not found)</span><a class="headerlink" href="#id31" title="Link to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-text">Failed upload (e.g., file not found)</span><a class="headerlink" href="#id32" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">upload_to_pomf</span><span class="p">(</span><span class="s2">&quot;invalid.jpg&quot;</span><span class="p">)</span>
  <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
  <span class="c1"># {&#39;success&#39;: False, &#39;error&#39;: FileNotFoundError(&quot;File not found&quot;)}</span>
