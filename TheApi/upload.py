@@ -1,8 +1,10 @@
 from io import BytesIO
+
 import aiofiles
 
+
 class UploadMedia:
-    
+
     async def _get_bytes(self, file_input):
         data, err = None, None
         try:
@@ -17,11 +19,9 @@ class UploadMedia:
             return err, data
         if not data:
             err = "Invalid input type"
-        return err, data    
-
+        return err, data
 
     async def upload_to_envsh(self, file_path: Union[str, bytes, BytesIO]) -> dict:
-        
         """Uploads an image to `Envs.sh <https://envs.sh>`_.
 
         Args:
@@ -110,35 +110,39 @@ class UploadMedia:
                 "retention": f"{round(retention)} days",
             }
         except Exception as e:
-            return {"success": False, "error": str(e)}    
-                
+            return {"success": False, "error": str(e)}
+
     async def upload_to_catbox(self, file_path):
         err, raw = await self._get_bytes(file_path)
         if err:
             return {"success": False, "error": err}
-                
+
         files = {"fileToUpload": raw}
         data = {"reqtype": "fileupload", "userhash": ""}
-        try:    
-            response = await self.request.post("https://catbox.moe/user/api.php", data=data, files=files)
+        try:
+            response = await self.request.post(
+                "https://catbox.moe/user/api.php", data=data, files=files
+            )
         except Exception as e:
             return {"success": False, "error": e}
 
         return {"success": True, "url": response.text}
-            
+
     async def upload_to_pomf(self, file_path):
         err, raw = await self._get_bytes(file_path)
         if err:
             return {"success": False, "error": err}
-                
+
         files = {"files[]": raw}
-        try:    
-            response = await self.request.post("https://pomf.lain.la/upload.php", files=files)
+        try:
+            response = await self.request.post(
+                "https://pomf.lain.la/upload.php", files=files
+            )
         except Exception as e:
             return {"success": False, "error": e}
 
-        return {"success": True, "url": response.json()['files'][0]['url']}
-            
+        return {"success": True, "url": response.json()["files"][0]["url"]}
+
     async def gige(file_path: bytes, secret: bool = False, expires: int = None) -> dict:
         url = "https://0x0.st"
         files = {"file": file_bytes}
@@ -151,23 +155,33 @@ class UploadMedia:
         err, file_bytes = await self._get_bytes(file_path)
         if err:
             return {"success": False, "error": err}
-                 
+
         file_size_mb = len(file_bytes) / (1024 * 1024)
         min_age, max_age, max_size = 30, 365, 512.0
 
         if expires is not None:
-            retention_days = f"{expires} hours" if expires <= 8760 else f"{round(expires / 24, 2)} days"
+            retention_days = (
+                f"{expires} hours"
+                if expires <= 8760
+                else f"{round(expires / 24, 2)} days"
+            )
         else:
             if file_size_mb >= max_size:
                 retention_days = f"{min_age} days"
             else:
-                retention = min_age + (min_age - max_age) * ((file_size_mb / max_size - 1) ** 3)
+                retention = min_age + (min_age - max_age) * (
+                    (file_size_mb / max_size - 1) ** 3
+                )
                 retention_days = f"{max(min_age, round(retention, 2))} days"
 
         try:
             response = self.request.post(url, files=files, data=data)
             response.raise_for_status()
-            return {"success": True, "url": response.text.strip(), "retention": retention_days}
+            return {
+                "success": True,
+                "url": response.text.strip(),
+                "retention": retention_days,
+            }
 
         except Exception as e:
-            return {"success": False, "error": str(e)}              
+            return {"success": False, "error": str(e)}
