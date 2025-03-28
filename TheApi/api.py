@@ -228,21 +228,30 @@ class Client(UploadMedia):
             .. code-block:: python
 
                 code_snippet = "print('Hello, World!')"
-
                 response = await api.carbon(
                     code_snippet,
                     theme="dracula",
                     language="python"
                 )
-
+                print(response)
                 if response['success']:
-
                     print(f"Code image saved as '{response['result']}'.")
-
                 else:
-
                     print(f"Error: {response['error']}")
+
+            .. code-block JSON
+               :caption: output
+               
+                {
+                    "success": true, 
+                    "result": "downloads/carbon_Z6b6oUv7.png"
+                }
+
+            .. code-block text
+
+                Code image saved as 'downloads/carbon_Z6b6oUv7.png'.
         """
+        
 
         payload = {
             "code": code,
@@ -1380,7 +1389,25 @@ class Client(UploadMedia):
 
         Returns:
             ``list``: A list of image URLs retrieved from the Bing search results.
+
+        Example:
+
+            .. code-block:: python
+
+                res = await api.bing_image("Pokemon")
+
+                print(res)
+
+            .. code-block:: JSON
+
+            
+                [
+                    "https://cdn.custom-cursor.com/collections/129/cover-pokemon-preview.png", 
+                    "https://images.pexels.com/photos/9560277/pexels-photo-9560277.jpeg?cs=srgb&dl=pexels-erik-mclean-9560277.jpg&fm=jpg",
+                    "https://images.pexels.com/photos/9661257/pexels-photo-9661257.jpeg?cs=srgb&dl=pexels-erik-mclean-9661257.jpg&fm=jpg"
+                ]
         """
+    
         data = {
             "q": query,
             "first": 0,
