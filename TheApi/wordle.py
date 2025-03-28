@@ -29,6 +29,7 @@ class Wordle:
         result = await api.end(key=1234)
         print(result)
 
+
     ..code-block:: JSON
        :caption: Expected Outputs
 
