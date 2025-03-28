@@ -15,3 +15,9 @@ The following methods are available in :obj:`~TheApi.Wordle`:
    :nosignatures:
 
    {Wordle_methods}
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   {Wordle_toctree}
