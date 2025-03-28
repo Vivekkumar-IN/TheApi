@@ -18,6 +18,7 @@ TheApix is designed to integrate multiple API keys and provide a unified interfa
 
    client
    api/saavn/index
+   api/wordle/index
 
 
 
