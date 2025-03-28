@@ -1528,70 +1528,73 @@ class Client:
         return file_path
 
     async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> dict:
-        """
-        Uploads an image to `Envs.sh <https://envs.sh>`_.
+        """Uploads an image to `Envs.sh <https://envs.sh>`_.
 
         Args:
-            file_path (Union[str, bytes, BytesIO]): The image file to upload.
-
+            file_path (Union[str, bytes, BytesIO]): The image file to upload. Can be one of:
                 - str: Local file path (e.g., "image.png").
                 - bytes: Raw binary data of the file.
                 - BytesIO: File-like object containing binary data.
 
         Returns:
-            dict:
+            dict: A dictionary containing the upload result:
+                - On success: {"success": true, "url": "<file_url>", "retention": "<days> days"}
+                - On failure: {"success": false, "error": "<error_message>"}
+                Retention period is calculated based on file size, ranging from 30 to 90 days.
 
-                - {"success": True, "url": "<file_url>", "retention": "<days> days"} (on successful upload)
-                - {"success": False, "error": "<error_message>"} (if upload fails)
-
-            Retention period is calculated based on file size, ranging from 30 to 90 days.
-
-        Example:
-
+        Examples:
+        
             .. code-block:: python
+               :caption: Upload an image from a file path
 
-                # Upload an image from a file path
                 x = await api.upload_image("image.png")
                 print(x)
                 if x["success"]:
-                    print(f"Your uploaded file link is {x["url"]} and this will deleted in {x["retention"]}.
+                    print(f"Your uploaded file link is {x["url"]} and this will be deleted in {x["retention"]}")
 
-            .. code-block:: JSON
+
+            .. code-block:: json
 
                 {
-                    "success": True,
+                    "success": true,
                     "url": "https://envs.sh/abc.png",
                     "retention": "85 days"
                 }
+                
+            .. code-block:: text
 
-            .. code-block::
+                Your uploaded file link is https://envs.sh/abc.png and this will be deleted in 85 days.
 
-               Your uploaded file link is https://envs.sh/abc.png and this will deleted in 85 days.
-
+        
             .. code-block:: python
+               :caption: Upload an image from binary data
 
-                # Upload an image from binary data
                 with open("image.png", "rb") as f:
                     x = await api.upload_image(f.read())
                 print(x)
+                # Output: {"success": true, "url": "https://envs.sh/def.png", "retention": "78 days"}
 
-                # Output: {"success": True, "url": "https://envs.sh/def.png", "retention": "78 days"}
+            .. code-block:: python
+               :caption: Upload an image from BytesIO
 
-                # Upload an image from BytesIO
                 from io import BytesIO
                 x = await api.upload_image(BytesIO(b"image binary data"))
                 print(x)
-                # Output: {"success": True, "url": "https://envs.sh/ghi.png", "retention": "82 days"}
+                # Output: {"success": true, "url": "https://envs.sh/ghi.png", "retention": "82 days"}
 
-                # Invalid input example (wrong format)
+            .. code-block:: python
+               :caption: Invalid input example
+
                 x = await api.upload_image(12345)
                 print(x)
-                # Output: {"success": False, "error": "Invalid input type"}
+                # Output: {"success": false, "error": "Invalid input type"}
 
-                # File not found error
+            .. code-block:: python
+               :caption: File not found error
+
                 x = await api.upload_image("non_existent_file.png")
                 print(x)
-                # Output: {"success": False, "error": "File not found: 'non_existent_file.png'"}
+                # Output: {"success": false, "error": "File not found: 'non_existent_file.png'"}
         """
         if isinstance(file_path, str):
             try:
