@@ -1543,7 +1543,7 @@ class Client:
                 Retention period is calculated based on file size, ranging from 30 to 90 days.
 
         Examples:
-        
+
             .. code-block:: python
                :caption: Upload an image from a file path
 
@@ -1560,12 +1560,12 @@ class Client:
                     "url": "https://envs.sh/abc.png",
                     "retention": "85 days"
                 }
-                
+
             .. code-block:: text
 
                 Your uploaded file link is https://envs.sh/abc.png and this will be deleted in 85 days.
 
-        
+
             .. code-block:: python
                :caption: Upload an image from binary data
 
