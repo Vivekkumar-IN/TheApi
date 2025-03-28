@@ -160,7 +160,6 @@ class UploadMedia:
 
         return {"success": True, "url": response.text}
 
-
     async def upload_to_pomf(self, file_path: Union[str, bytes, BytesIO]):
         """
         Uploads a file to `Catbox.moe <https://catbox.moe>`_ and Get the uploaded file URL.
@@ -208,17 +207,19 @@ class UploadMedia:
 
         return {"success": True, "url": response.json()["files"][0]["url"]}
 
-
     async def upload_to_0x0(
-    self, file_path: Union[str, bytes, BytesIO], secret: bool = False, expires: int = None
-) -> dict:
+        self,
+        file_path: Union[str, bytes, BytesIO],
+        secret: bool = False,
+        expires: int = None,
+    ) -> dict:
         """
         Uploads a file to 0x0.st and returns the uploaded file URL along with retention details.
 
         Args:
             file_path (Union[str, bytes, BytesIO]): The media file to uploaded.
             secret (bool, optional): If True, generates a longer, hard-to-guess URL (default: False).
-            expires (int, optional): Sets the maximum file lifetime in hours or the expiration time in 
+            expires (int, optional): Sets the maximum file lifetime in hours or the expiration time in
                                      milliseconds since the UNIX epoch (default: None).
 
         Returns:
