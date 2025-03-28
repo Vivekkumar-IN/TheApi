@@ -225,7 +225,7 @@ class Client(UploadMedia):
             If failed, the dictionary will contain **"success": False** and **"error"**: a string describing the error that occurred.
 
         Example:
-        
+
             .. code-block:: python
 
                 code_snippet = "print('Hello, World!')"
