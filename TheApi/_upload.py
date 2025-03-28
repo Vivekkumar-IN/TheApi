@@ -210,8 +210,8 @@ class UploadMedia:
 
 
     async def upload_to_0x0(
-        file_path: , secret: bool = False, expires: int = None
-    ) -> dict:
+    self, file_path: Union[str, bytes, BytesIO], secret: bool = False, expires: int = None
+) -> dict:
         """
         Uploads a file to 0x0.st and returns the uploaded file URL along with retention details.
 
