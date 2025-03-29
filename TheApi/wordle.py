@@ -84,7 +84,8 @@ class Wordle:
 
         from .api import Client
 
-        words = await Client().get_words()
+        words = await Client().get_words(limit=5, length=5)
+print(r)
         secret_word = random.choice(words)
         self.active_games[key] = {
             "word": secret_word,
