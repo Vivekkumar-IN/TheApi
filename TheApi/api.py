@@ -1262,25 +1262,59 @@ class Client(UploadMedia):
             return self._handle_error(ValueError(f"Unexpected error: {e}"))
 
     async def get_words(
-        self, words=10, letter=None, word_type="capitalized", alphabetize=False
+        self, 
+        limit=10, 
+        length=None,
+        letter=None, 
+        alphabetize=False
     ):
         """
         Fetch random words from the Random Word API.
 
         Args:
-            words (``int``): Number of words to generate (default is 10).
+            limit (``int``): Number of words to generate (default is 10).
+            length (``int``): Length limit of the word (default is None).
             letter (``str``): First letter of the words (optional).
-            word_type (``str``): Type of words (lowercase, uppercase, capitalized; default is capitalized).
             alphabetize (``bool``): Whether to alphabetize the result (default is False).
 
         Returns:
             ``list``: A list of random words or an error message.
+
+        Example:
+
+            .. code-block:: python
+
+                r = await api.get_words()
+                print(r)
+                
+                r = await api.get_words(limit=4)
+                print(r)
+
+                r = await api.get_words(limit=2, length=3)
+                print(r)
+
+            .. code-block:: JSON
+
+                [ 
+                    "Comic", "Thirsting", "Uncover", "Justice", "Unroasted",
+                    "Emphatic", "Agonize", "Upside", "Unmasking", "Limpness
+                ]
+
+            .. code:: JSON
+
+                [ "Dayroom", "Native", "Grudging", "Bagel" ]
+
+            .. code-block:: JSON
+
+                ["jot", "opt"]
         """
         params = {
-            "words": words,
-            "type": word_type,
+            "words": limit,
+            "type": "capitalized",
             "alphabetize": str(alphabetize).lower(),
         }
+        if limit:
+            params["limit"] = length
         if letter:
             params["letter"] = letter
 
