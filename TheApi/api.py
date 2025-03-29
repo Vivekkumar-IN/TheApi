@@ -1261,13 +1261,7 @@ class Client(UploadMedia):
         except Exception as e:
             return self._handle_error(ValueError(f"Unexpected error: {e}"))
 
-    async def get_words(
-        self, 
-        limit=10, 
-        length=None,
-        letter=None, 
-        alphabetize=False
-    ):
+    async def get_words(self, limit=10, length=None, letter=None, alphabetize=False):
         """
         Fetch random words from the Random Word API.
 
@@ -1286,7 +1280,7 @@ class Client(UploadMedia):
 
                 r = await api.get_words()
                 print(r)
-                
+
                 r = await api.get_words(limit=4)
                 print(r)
 
@@ -1295,7 +1289,7 @@ class Client(UploadMedia):
 
             .. code-block:: JSON
 
-                [ 
+                [
                     "Comic", "Thirsting", "Uncover", "Justice", "Unroasted",
                     "Emphatic", "Agonize", "Upside", "Unmasking", "Limpness
                 ]
