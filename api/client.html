@@ -940,14 +940,14 @@ Defaults to “any”.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="TheApi.Client.get_words">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">words</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">letter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'capitalized'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alphabetize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.Client.get_words" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">letter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alphabetize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TheApi.Client.get_words" title="Link to this definition">¶</a></dt>
 <dd><p>Fetch random words from the Random Word API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>words</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – Number of words to generate (default is 10).</p></li>
+<li><p><strong>limit</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – Number of words to generate (default is 10).</p></li>
+<li><p><strong>length</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – Length limit of the word (default is None).</p></li>
 <li><p><strong>letter</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – First letter of the words (optional).</p></li>
-<li><p><strong>word_type</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Type of words (lowercase, uppercase, capitalized; default is capitalized).</p></li>
 <li><p><strong>alphabetize</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) – Whether to alphabetize the result (default is False).</p></li>
 </ul>
 </dd>
@@ -955,6 +955,29 @@ Defaults to “any”.</p></li>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">list</span></code> – A list of random words or an error message.</p>
 </dd>
 </dl>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">get_words</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">get_words</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">get_words</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;Comic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Thirsting&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Uncover&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Justice&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Unroasted&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Emphatic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Agonize&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Upside&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Unmasking&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;Limpness</span>
+<span class="err">]</span>
+</pre></div>
+</div>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;Dayroom&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Native&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Grudging&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bagel&quot;</span><span class="w"> </span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;jot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;opt&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
