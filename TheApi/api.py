@@ -1291,7 +1291,7 @@ class Client(UploadMedia):
 
                 [
                     "Comic", "Thirsting", "Uncover", "Justice", "Unroasted",
-                    "Emphatic", "Agonize", "Upside", "Unmasking", "Limpness
+                    "Emphatic", "Agonize", "Upside", "Unmasking", "Limpness"
                 ]
 
             .. code:: JSON
