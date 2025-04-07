@@ -153,7 +153,6 @@ p.admonition-title:before {
 } */
 .related-pages {
     display: flex;
-    justify-content: space-between;
     gap: 8px;
     flex-wrap: wrap;
     margin-top: 2rem;
