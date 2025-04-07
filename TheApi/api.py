@@ -289,76 +289,112 @@ class Client(UploadMedia):
         except Exception as e:
             return {"success": False, "error": str(e)}
 
-    async def emoji(
-        endpoint: str = "random",
-        category: Optional[str] = None,
-        group: Optional[str] = None,
-    ) -> Union[Dict, List]:
+    async def get_emoji(self, endpoint: str = "random", category: str = None, group: str = None) -> dict:
         """
-        Fetch emojis from the `EmojiHub API <https://github.com/cheatsnake/emojihub#-api-documentation>`_ based on the specified endpoint, category, and group.
+        Fetch emoji data from EmojiHub API.
+    
+        This function allows fetching:
+            - Random emoji
+            - Random emoji by category or group
+            - All emojis
+            - All emojis by category or group
 
         Args:
-           endpoint (``str``, *optional*): The base API endpoint. Defaults to "random".
-             Options are:
-               - **"random"**: Fetch a random emoji.
-               - **"all"**: Fetch all emojis.
-           category (``str``, *optional*): The category of emojis to filter by.
-             Available categories:
-               - "smileys-and-people"
-               - "animals-and-nature"
-               - "food-and-drink"
-               - "travel-and-places"
-               - "activities"
-               - "objects"
-               - "symbols"
-               - "flags"
-            group (``str``, *optional*): The group within a category to filter by.
-              Available groups:
-                - **Smileys and People**: "body", "cat-face", "clothing", "creature-face", "emotion", "face-negative",
-                   "face-neutral", "face-positive", "face-role", "face-sick", "family", "monkey-face", "person",
-                   "person-activity", "person-gesture", "person-role", "skin-tone"
-                - **Animals and Nature**: "animal-amphibian", "animal-bird", "animal-bug", "animal-mammal",
-                  "animal-marine", "animal-reptile", "plant-flower", "plant-other"
-                - **Food and Drink**: "dishware", "drink", "food-asian", "food-fruit", "food-prepared",
-                  "food-sweet", "food-vegetable"
-                - **Travel and Places**: "travel-and-places"
-                - **Activities**: "activities"
-                - **Objects**: "objects"
-                - **Symbols**: "symbols"
-                - **Flags**: "flags"
+            endpoint (str, optional): API endpoint to use.
+                Options:
+                    - "random" : Get a random emoji (default)
+                    - "all"    : Get all available emojis
 
-        Returns:
-            ``Union[Dict, List]``: Parsed JSON response containing the requested emoji data.
+            category (str, optional): Filter emojis by category.
+                Available Categories:
+                    - "smileys-and-people"
+                    - "animals-and-nature"
+                    - "food-and-drink"
+                    - "travel-and-places"
+                    - "activities"
+                    - "objects"
+                    - "symbols"
+                    - "flags"
 
-        Examples:
-            .. code:: python
+            group (str, optional): Filter emojis by group.
+                Available Groups:
+                    - For "smileys-and-people": 
+                      "body", "cat-face", "clothing", "creature-face", "emotion", "face-negative", 
+                      "face-neutral", "face-positive", "face-role", "face-sick", "family", 
+                      "monkey-face", "person", "person-activity", "person-gesture", 
+                      "person-role", "skin-tone"
+                    
+                    - For "animals-and-nature":
+                      "animal-amphibian", "animal-bird", "animal-bug", "animal-mammal", 
+                      "animal-marine", "animal-reptile", "plant-flower", "plant-other"
+                    
+                    - For "food-and-drink":
+                      "dishware", "drink", "food-asian", "food-fruit", "food-prepared", 
+                      "food-sweet", "food-vegetable"
+                
+                    - Other Categories:
+                      Groups are usually same as category name like: 
+                      "travel-and-places", "activities", "objects", "symbols", "flags"
 
-               random_emoji = await api.emoji()
-               print("Random Emoji:", random_emoji)
+    Returns:
+        dict: JSON response containing emoji data or error message.
 
-               # Fetch all emojis in the "food-and-drink" category
-               food_emojis = await api.emoji(endpoint="all", category="food-and-drink")
-               print("Food Emojis:", food_emojis)
+        Example Success Response:
+        
+            .. code-block:: JSON
+        
+                {
+                    "success": true,
+                    result: {
+                        "name": "hugging face",
+                        "category": "smileys and people",
+                        "group": "face positive",
+                        "htmlCode": ["&#129303;"],
+                        "unicode": ["U+1F917"]
+                    }
+                }
 
-               # Fetch a random emoji from the "face-positive" group
-               face_positive_emoji = await api.emoji(group="face-positive")
-               print("Face Positive Emoji:", face_positive_emoji)
+        Example Error Response:
+        
+            .. code-block:: JSON
+            
+                {
+                    "success": false, "error": "Failed to fetch emoji"
+                }
 
-        For more information, `visit EmojiHub <https://github.com/cheatsnake/emojihub>`_:
-        """
-        api_url = "https://emojihub.yurace.pro/api"
+    Example:
 
-        if endpoint not in ["random", "all"]:
-            raise ValueError("Invalid endpoint. Choose 'random' or 'all'.")
+    .. code-block:: python
+    
+        # Get a random emoji
+        emoji = await api.get_emoji()
 
-        url = f"{api_url}/{endpoint}"
-        if category:
-            url += f"/category/{category}"
-        if group:
-            url += f"/group/{group}"
+        # Get random emoji from a specific group
+        emoji = await api.get_emoji(endpoint="random", group="face-positive")
 
-        response = await self.requests.get(url)
-        return response.json()
+        # Get all emojis from a specific category
+        emoji = await api.get_emoji(endpoint="all", category="food-and-drink")
+
+        # Get all emojis
+        emoji = await api.get_emoji(endpoint="all")
+    """
+    base = "https://emojihub.yurace.pro/api"
+    
+    url = f"{base}/{endpoint}"
+    
+    if category:
+        url += f"/category/{category}"
+    if group:
+        url += f"/group/{group}"
+    
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url)
+        
+        if response.status_code == 200:
+            return {"success": False, "result": response.json()}
+        
+        return {"success": False, "error": "Failed to fetch emoji"}
+
 
     async def fakerapi(
         self,
