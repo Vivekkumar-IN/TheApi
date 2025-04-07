@@ -35,7 +35,7 @@ Usage
 -----
 
 
-.. important :: 
+.. note :: 
 
    All methods of the :obj:`~TheApi.Client` can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
 
