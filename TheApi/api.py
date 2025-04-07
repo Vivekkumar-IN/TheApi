@@ -381,21 +381,21 @@ class Client(UploadMedia):
             emoji = await api.get_emoji(endpoint="all")
         """
 
-    base = "https://emojihub.yurace.pro/api"
+        base = "https://emojihub.yurace.pro/api"
 
-    url = f"{base}/{endpoint}"
+        url = f"{base}/{endpoint}"
 
-    if category:
-        url += f"/category/{category}"
-    if group:
-        url += f"/group/{group}"
+        if category:
+            url += f"/category/{category}"
+        if group:
+            url += f"/group/{group}"
 
-    response = await self.request.get(url)
+        response = await self.request.get(url)
 
-    if response.status_code == 200:
-        return {"success": False, "result": response.json()}
+        if response.status_code == 200:
+            return {"success": False, "result": response.json()}
 
-    return {"success": False, "error": "Failed to fetch emoji"}
+        return {"success": False, "error": "Failed to fetch emoji"}
 
     async def fakerapi(
         self,
