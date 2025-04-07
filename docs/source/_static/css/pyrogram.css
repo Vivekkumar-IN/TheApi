@@ -115,7 +115,7 @@ h6 {
 
 article[role=main] .highlight pre {
     font-family: monospace;
-    font-size: 1em;
+    font-size: 0.90em;
     line-height: 1.2;
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
