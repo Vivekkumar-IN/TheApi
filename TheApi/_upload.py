@@ -22,10 +22,10 @@ class UploadMedia:
             err = "Invalid input type"
         return err, data
 
-    async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> dict:
+    async def upload_image(self, file_path: str | bytes | BytesIO) -> dict:
         return await self.upload_to_envsh(file_path)
 
-    async def upload_to_envsh(self, file_path: Union[str, bytes, BytesIO]) -> dict:
+    async def upload_to_envsh(self, file_path: str | bytes | BytesIO) -> dict:
         """Uploads an image to `Envs.sh <https://envs.sh>`_.
 
         Args:
@@ -117,7 +117,7 @@ class UploadMedia:
         except Exception as e:
             return {"success": False, "error": str(e)}
 
-    async def upload_to_catbox(self, file_path: Union[str, bytes, BytesIO]):
+    async def upload_to_catbox(self, file_path: str | bytes | BytesIO):
         """
         Uploads a file to `Catbox.moe <https://catbox.moe>`_ and Get the uploaded file URL.
 
@@ -165,7 +165,7 @@ class UploadMedia:
 
         return {"success": True, "url": response.text}
 
-    async def upload_to_pomf(self, file_path: Union[str, bytes, BytesIO]):
+    async def upload_to_pomf(self, file_path: str | bytes | BytesIO):
         """
         Uploads a file to `Catbox.moe <https://catbox.moe>`_ and Get the uploaded file URL.
 
@@ -215,7 +215,7 @@ class UploadMedia:
 
     async def upload_to_0x0(
         self,
-        file_path: Union[str, bytes, BytesIO],
+        file_path: str | bytes | BytesIO,
         secret: bool = False,
         expires: int = None,
     ) -> dict:

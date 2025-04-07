@@ -1,6 +1,6 @@
-from typing import Any, Dict, Union, Optional
+from typing import Any, Dict, Optional, Union
 
-from httpx import Response, AsyncClient
+from httpx import AsyncClient, Response
 
 
 class Request:
@@ -8,14 +8,14 @@ class Request:
         self,
         method: str,
         url: str,
-        headers: Optional[Dict[str, str]] = None,
-        params: Optional[Dict[str, str]] = None,
-        data: Optional[Union[Dict[str, Any], bytes]] = None,
-        json: Optional[Dict[str, Any]] = None,
-        files: Optional[Dict[str, bytes]] = None,
-        timeout: Optional[int] = None,
+        headers: dict[str, str] | None = None,
+        params: dict[str, str] | None = None,
+        data: dict[str, Any] | bytes | None = None,
+        json: dict[str, Any] | None = None,
+        files: dict[str, bytes] | None = None,
+        timeout: int | None = None,
         allow_redirects: bool = True,
-        verify: Optional[bool] = None,
+        verify: bool | None = None,
     ) -> Response:
         async with AsyncClient(verify=verify) as client:
             response = await client.request(
@@ -34,11 +34,11 @@ class Request:
     async def get(
         self,
         url: str,
-        headers: Optional[Dict[str, str]] = None,
-        params: Optional[Dict[str, str]] = None,
-        timeout: Optional[int] = None,
+        headers: dict[str, str] | None = None,
+        params: dict[str, str] | None = None,
+        timeout: int | None = None,
         allow_redirects: bool = True,
-        verify: Optional[bool] = None,
+        verify: bool | None = None,
     ) -> Response:
         r = await self._request(
             "GET",
@@ -54,14 +54,14 @@ class Request:
     async def post(
         self,
         url: str,
-        headers: Optional[Dict[str, str]] = None,
-        params: Optional[Dict[str, str]] = None,
-        data: Optional[Union[Dict[str, Any], bytes]] = None,
-        json: Optional[Dict[str, Any]] = None,
-        files: Optional[Dict[str, bytes]] = None,
-        timeout: Optional[int] = None,
+        headers: dict[str, str] | None = None,
+        params: dict[str, str] | None = None,
+        data: dict[str, Any] | bytes | None = None,
+        json: dict[str, Any] | None = None,
+        files: dict[str, bytes] | None = None,
+        timeout: int | None = None,
         allow_redirects: bool = True,
-        verify: Optional[bool] = None,
+        verify: bool | None = None,
     ) -> Response:
         r = await self._request(
             "POST",

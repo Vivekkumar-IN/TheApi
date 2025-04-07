@@ -1,18 +1,18 @@
 import os
-import re
 import random
+import re
 import string
 import textwrap
-from io import BytesIO
 from base64 import b64decode
-from typing import List, Union, Optional
+from io import BytesIO
+from typing import List, Optional, Union
 
 import aiofiles
 from bs4 import BeautifulSoup
-from PIL import Image, ImageOps, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-from ._upload import UploadMedia
 from ._request import Request
+from ._upload import UploadMedia
 
 
 class Client(UploadMedia):
@@ -58,13 +58,13 @@ class Client(UploadMedia):
 
         os.makedirs(self.downloads_dir, exist_ok=True)
 
-    def _handle_error(self, error: Exception) -> Union[dict, Exception]:
+    def _handle_error(self, error: Exception) -> dict | Exception:
         if self.quiet:
             return {"error": True, "message": str(error)}
         raise error
 
     async def _create_file(
-        self, contents: bytes, ext: str, name: Optional[str] = None
+        self, contents: bytes, ext: str, name: str | None = None
     ) -> str:
         file_name = f"{name or 'file'}_{self._rnd_str()}.{ext}"
         file_path = os.path.join(self.downloads_dir, file_name)
@@ -676,7 +676,7 @@ class Client(UploadMedia):
         response = await self.request.get(self.base_urls["advice"])
         return response.json()["slip"]["advice"]
 
-    async def get_btc_value(self, currency: Optional[str] = None) -> dict:
+    async def get_btc_value(self, currency: str | None = None) -> dict:
         """
         Fetches the current value of Bitcoin (BTC) for the specified currency or all currencies.
 
@@ -1103,7 +1103,7 @@ class Client(UploadMedia):
 
         umm = lines[:25]
 
-        line_height = font.getbbox("hg")[3]
+        font.getbbox("hg")[3]
         linespacing = 41
         for line in umm:
             draw.text((x, y), line, fill=(1, 22, 55), font=font)
@@ -1641,7 +1641,7 @@ class Client(UploadMedia):
 
         return file_path
 
-    async def upload_image(self, file_path: Union[str, bytes, BytesIO]) -> dict:
+    async def upload_image(self, file_path: str | bytes | BytesIO) -> dict:
         """Uploads an image to `Envs.sh <https://envs.sh>`_.
 
         Args:
@@ -1930,7 +1930,7 @@ class Client(UploadMedia):
 
         return response.json()
 
-    async def get_word_definitions(self, word: str) -> List[dict]:
+    async def get_word_definitions(self, word: str) -> list[dict]:
         """
         Fetch definitions for a word from the Dictionary API.
 
