@@ -34,11 +34,15 @@ jobs:
           cd docs
           make html
 
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./docs/build/html
+          token: ${{ secrets.GIT_TOKEN }}
+          branch: "master"
           #single-commit: true
+          repository-name: "Vivekkumar-IN/Vivekkumar-in.github.io"
           git-config-name: "github-actions[bot]"
           git-config-email: "41898282+github-actions[bot]@users.noreply.github.com"
           commit-message: "Deploy to gh-pages"
