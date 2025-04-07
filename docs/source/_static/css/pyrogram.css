@@ -17,8 +17,8 @@ body {
     --color-background-border: #dddddd;
     --color-guilabel-background: #f3f2f1;
     --color-guilabel-border: #dddddd;
-    //--color-admonition-title--note: #93774b;
-    //--color-admonition-title-background--note: #e4e0d7;
+    /*--color-admonition-title--note: #93774b;
+    --color-admonition-title-background--note: #e4e0d7;*/
     --color-admonition-title--seealso: #93774b;
     --color-admonition-title-background--seealso: #e4e0d7;
     --color-border: #dddddd;
@@ -56,8 +56,8 @@ body {
         --color-table-border: #707070;
         --color-guilabel-background: #1a1a1a;
         --color-guilabel-border: #2a2a2a;
-        //--color-admonition-title--note: #b7a280;
-        //--color-admonition-title-background--note: #1a1a1a;
+        /*--color-admonition-title--note: #b7a280;
+        --color-admonition-title-background--note: #1a1a1a;*/
         --color-admonition-title--seealso: #b7a280;
         --color-admonition-title-background--seealso: #1a1a1a;
         --color-border: #2a2a2a;
