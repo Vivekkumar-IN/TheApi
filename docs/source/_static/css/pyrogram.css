@@ -40,7 +40,7 @@ body {
         --color-brand-primary: #bfbcb9;
         --color-brand-content: #b7a280;
         --color-background-primary: #000000;
-        --color-background-secondary: #0a0a0a;
+        --color-background-secondary: #0d0d0d;
         --color-table-border: #707070;
         --color-guilabel-background: #1a1a1a;
         --color-guilabel-border: #2a2a2a;
@@ -54,8 +54,6 @@ body {
         --color-carbon-ads-poweredby: #505050;
         --color-carbon-ads-background: #1a1a1a;
         --color-carbon-ads-border: #2a2a2a;
-        --color-pyrogram-text: #b9b9b9;
-        --color-support-pyrogram: #999999;
         --color-strong: #cfccc9;
         --color-green: green;
         --color-red: red;
