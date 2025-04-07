@@ -390,7 +390,7 @@ class Client(UploadMedia):
     if group:
         url += f"/group/{group}"
 
-    response = await await self.request.get(url)
+    response = await self.request.get(url)
 
     if response.status_code == 200:
         return {"success": False, "result": response.json()}
