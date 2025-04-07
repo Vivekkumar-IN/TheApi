@@ -37,7 +37,7 @@ Usage
 
 .. important :: 
 
-   All methods of the :obj:`~TheApi.Client` or :obj:`~TheApi.SaavnAPI` can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
+   All methods of the :obj:`~TheApi.Client` can be used asynchronously, allowing for non-blocking operations and improved performance in asynchronous environments.
 
 To start using TheApix, follow these steps:
 
@@ -56,15 +56,3 @@ To start using TheApix, follow these steps:
       response = await api.write("Radhe Radhe")
 
       print(response)
-
-3. You can use the :obj:`~TheApi.SaavnAPI` for making request for endpoint of saavn.dev
-
-   .. code-block:: python 
-
-      from TheApi import SaavnAPI
-
-      api = SaavnAPI()
-
-      r = await api.search("Fuck Millionaire")
-      
-      print(r)
