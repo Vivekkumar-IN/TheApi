@@ -9,10 +9,9 @@ body {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --color-brand-primary: #404040;
     --color-brand-content: #93774b;
-    --color-foreground-primary: #404040;
+    /*--color-foreground-primary: #404040;
     --color-background-primary: #f9f8f7;
-    --color-background-secondary: #f3f2f1;
-    --color-admonition-background: #eeeeee;
+    --color-background-secondary: #f3f2f1;*/
     --color-table-border: #e1e4e5;
     --color-background-border: #dddddd;
     --color-guilabel-background: #f3f2f1;
@@ -43,10 +42,9 @@ body {
     body:not([data-theme=light]) {
         --color-brand-primary: #bfbcb9;
         --color-brand-content: #b7a280;
-        --color-foreground-primary: #bfbcb9;
+        /*--color-foreground-primary: #bfbcb9;
         --color-background-primary: #000000;
-        --color-background-secondary: #000000;
-        --color-admonition-background: #101010;
+        --color-background-secondary: #000000;*/
         --color-table-border: #707070;
         --color-guilabel-background: #1a1a1a;
         --color-guilabel-border: #2a2a2a;
