@@ -293,50 +293,50 @@ class Client(UploadMedia):
         self, endpoint: str = "random", category: str = None, group: str = None
     ) -> dict:
         """
-            Fetch emoji data from EmojiHub API.
+        Fetch emoji data from EmojiHub API.
 
-            This function allows fetching:
-                - Random emoji
-                - Random emoji by category or group
-                - All emojis
-                - All emojis by category or group
+        This function allows fetching:
+             - Random emoji
+             - Random emoji by category or group
+             - All emojis
+             - All emojis by category or group
 
-            Args:
-                endpoint (str, optional): API endpoint to use.
-                    Options:
-                        - "random" : Get a random emoji (default)
-                        - "all"    : Get all available emojis
+        Args:
+            endpoint (str, optional): API endpoint to use.
+                Options:
+                    - "random" : Get a random emoji (default)
+                    - "all"    : Get all available emojis
 
-                category (str, optional): Filter emojis by category.
-                    Available Categories:
-                        - "smileys-and-people"
-                        - "animals-and-nature"
-                        - "food-and-drink"
-                        - "travel-and-places"
-                        - "activities"
-                        - "objects"
-                        - "symbols"
-                        - "flags"
+            category (str, optional): Filter emojis by category.
+                Available Categories:
+                    - "smileys-and-people"
+                    - "animals-and-nature"
+                    - "food-and-drink"
+                    - "travel-and-places"
+                    - "activities"
+                    - "objects"
+                    - "symbols"
+                    - "flags"
 
-                group (str, optional): Filter emojis by group.
-                    Available Groups:
-                        - For "smileys-and-people":
-                          "body", "cat-face", "clothing", "creature-face", "emotion", "face-negative",
-                          "face-neutral", "face-positive", "face-role", "face-sick", "family",
-                          "monkey-face", "person", "person-activity", "person-gesture",
-                          "person-role", "skin-tone"
+            group (str, optional): Filter emojis by group.
+                Available Groups:
+                    - For "smileys-and-people":
+                        "body", "cat-face", "clothing", "creature-face", "emotion", "face-negative",
+                        "face-neutral", "face-positive", "face-role", "face-sick", "family",
+                        "monkey-face", "person", "person-activity", "person-gesture",
+                        "person-role", "skin-tone"
 
-                        - For "animals-and-nature":
-                          "animal-amphibian", "animal-bird", "animal-bug", "animal-mammal",
-                          "animal-marine", "animal-reptile", "plant-flower", "plant-other"
+                    - For "animals-and-nature":
+                        "animal-amphibian", "animal-bird", "animal-bug", "animal-mammal",
+                        "animal-marine", "animal-reptile", "plant-flower", "plant-other"
 
-                        - For "food-and-drink":
-                          "dishware", "drink", "food-asian", "food-fruit", "food-prepared",
-                          "food-sweet", "food-vegetable"
+                    - For "food-and-drink":
+                        "dishware", "drink", "food-asian", "food-fruit", "food-prepared",
+                        "food-sweet", "food-vegetable"
 
-                        - Other Categories:
-                          Groups are usually same as category name like:
-                          "travel-and-places", "activities", "objects", "symbols", "flags"
+                    - Other Categories:
+                        Groups are usually same as category name like:
+                        "travel-and-places", "activities", "objects", "symbols", "flags"
 
         Returns:
             dict: JSON response containing emoji data or error message.
@@ -390,13 +390,12 @@ class Client(UploadMedia):
     if group:
         url += f"/group/{group}"
 
-    async with httpx.AsyncClient() as client:
-        response = await client.get(url)
+    response = await await self.request.get(url)
 
-        if response.status_code == 200:
-            return {"success": False, "result": response.json()}
+    if response.status_code == 200:
+        return {"success": False, "result": response.json()}
 
-        return {"success": False, "error": "Failed to fetch emoji"}
+    return {"success": False, "error": "Failed to fetch emoji"}
 
     async def fakerapi(
         self,
