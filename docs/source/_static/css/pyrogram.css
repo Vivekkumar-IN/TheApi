@@ -162,7 +162,6 @@ p.admonition-title:before {
 .related-pages a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 8px;
 
     padding: 8px 12px;
